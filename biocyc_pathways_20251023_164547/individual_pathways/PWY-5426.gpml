@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="betaxanthin biosynthesis" organism="TAX-46348, TAX-3568" source="PlantCyc">
+  <Description>&lt;b&gt;General background&lt;/b&gt;: Betaxanthins represent a subclass of betalains, the nitrogen-containing compounds that replace the anthocyanins in the order of Caryophyllales and some higher fungi |CITS: [12620337]| |CITS: [16212790]|. These pigments are biosynthesized by the condensation of betalamic acid (|FRAME:PWY-5394|) and amino acids/amines forming a Schiff-base that causes the yellow to orange colors (&amp;lambda; &lt;sub&gt;max&lt;/sub&gt; 470-486 nm) |CITS: [Christinet04]|. &lt;b&gt;About the pathway&lt;/b&gt;: It has been demonstrated that the conjugation of a broad variety of amino acids (see |FRAME:PWY-5404|) and amino acid derivatives (e.g. 3-methoxytyramine - this pathway) with betalamic acid results in the corresponding betaxanthins |CITS: [TREZZINI91]|. This condensation is the decisive step in the biosynthesis of betaxanthins and has been established as a non-enzymatic reaction |CITS: [10198080]|. The only exception of this general reaction pattern is the formation of vulgaxanthin II, the condensation product of glutamate and betalamic acid |CITS: [HEMPEL97]|. Despite the feeding of glutamate vulgaxanthin II is only produced in traces, instead the biosynthesis of vulgaxanthin I (glutamine as amino acid moiety) is favored. This finding has been explained with the high metabolism of glutamate in other pathways and the suitability of the amino acid as reaction partner, which however does not contradict the spontaneous condensation itself |CITS: [15231409]|. The first enzymatic step in the pathway is the decarboxylation of aromatic amino acids such as tyrosine or DOPA to form the corresponding amines tyramine and dopamine, respectively. An enzyme, |FRAME: MONOMER-8382| (TYDC), capable of catalyzing this reaction has been isolated from |FRAME: TAX-3469| |CITS: [7929401]| |CITS: [12242361]| and its molecular function has been confirmed by heterologous expression in &lt;i&gt;E. coli&lt;/i&gt;. But, no comparable enzyme has been characterized within the |FRAME:TAX-3568| to date.. The catechol methyltransferase forming 3-methoxytyramine has not yet been identified in plants and the crucial step finalizing the formation of the individual betaxanthin occurs spontaneously as described above.</Description>
+  <Authors>
+    <Author name="THE-ARABIDOPSIS-INFORMATION-RESOURCE" />
+    <Author name="hartmut" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-5426" />
+  <Property key="Type" value="BETALAIN-ALKALOIDS" />
+  <Property key="ReactionCount" value="3" />
+  <Property key="ReactionIDs" value="RXN-8567, RXN6666-7, RXN66-221" />
+  <Property key="PredecessorCount" value="3" />
+  <Property key="PrimaryCompoundCount" value="3" />
+  <Property key="PathwayLinks" value="(L-DIHYDROXY-PHENYLALANINE PWY-5394)" />
+  <Property key="Organism" value="TAX-46348, TAX-3568" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_cit_12620337" />
+  <CitationRef elementRef="citation_cit_16212790" />
+  <CitationRef elementRef="citation_CHRISTINET04" />
+  <CitationRef elementRef="citation_TREZZINI91" />
+  <CitationRef elementRef="citation_cit_10198080" />
+  <CitationRef elementRef="citation_HEMPEL97" />
+  <CitationRef elementRef="citation_cit_15231409" />
+  <CitationRef elementRef="citation_cit_7929401" />
+  <CitationRef elementRef="citation_cit_12242361" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="G-9777" textLabel="TYDC2" type="GeneProduct">
+      <Xref identifier="U08598" dataSource="Entrez Gene" />
+      <Graphics centerX="892.5465698242188" centerY="50.0" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="G-9777" />
+      <Property key="AlternativeId_Entrez" value="U08598" />
+      <Property key="Product" value="MONOMER-12764" />
+      <Property key="GeneType" value="Genes" />
+    </DataNode>
+    <DataNode elementId="G-6362" textLabel="TYDC1" type="GeneProduct">
+      <Xref identifier="U08597" dataSource="Entrez Gene" />
+      <Graphics centerX="550.49853515625" centerY="1200.1168212890625" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>The Genbank accession numbers for the four other TYDC isoforms areU08598, U08599, U08660, and U16804</Comment>
+      <Property key="UniqueID" value="G-6362" />
+      <Property key="AlternativeId_Entrez" value="U08597" />
+      <Property key="Product" value="MONOMER-8382" />
+      <Property key="GeneType" value="Genes" />
+      <CitationRef elementRef="citation_FACCHINI94" />
+      <CitationRef elementRef="citation_MALDONADO96" />
+    </DataNode>
+    <DataNode elementId="MONOMER-8382" textLabel="MONOMER-8382" type="Protein">
+      <Xref identifier="MONOMER-8382" dataSource="plantcyc" />
+      <Graphics centerX="1600.0" centerY="524.263427734375" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>Tyrosine/dopa decarboxylase (TYDC) is encoded by a family of 10-15 genes in Opium poppy. Although the genes are differentially expressed in tissue and temporal manners, the catalytic activities of the different isoforms are similar. TYDC1, TYDC2 and TYDC5 expressed in &lt;i&gt;E.coli&lt;/i&gt; have specific enzymatic activities towards dopa and tyrosine, whereas tryptophan and phenylalanine are not accepted. In poppy plants, the highest transcripts level and enzyme activities are in mature roots.</Comment>
+      <Property key="UniqueID" value="MONOMER-8382" />
+      <Property key="MolecularWeightSeq" value="57." />
+      <Property key="MolecularWeightKD" value="57." />
+      <Property key="Gene" value="G-6362" />
+      <Property key="Catalyzes" value="RXN-8563, RXN-8562" />
+      <Property key="CatalyzesCount" value="2" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="TAX-3469" />
+      <CitationRef elementRef="citation_FACCHINI94" />
+      <CitationRef elementRef="citation_MALDONADO96" />
+    </DataNode>
+    <DataNode elementId="MONOMER-12764" textLabel="MONOMER-12764" type="Protein">
+      <Xref identifier="MONOMER-12764" dataSource="plantcyc" />
+      <Graphics centerX="1029.4510498046875" centerY="1093.6396484375" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>The cDNA encoding a tyrosine/dopa decarboxylase (TYDC2) has been identified in &lt;i&gt;Papaver somniferum&lt;/i&gt; |CITS: [7929401]| and partially characterized. TYDC2 represents a member of two isoform gene subclasses (compare |FRAME:G-6362|) that differ in more than 25% of the amino acid sequence but express a very similar catalytic activity. The molecular function of dopa decarboxylase has been confirmed by recombinant expression of the enzyme in &lt;i&gt;E. coli&lt;/i&gt;. Although the dopa decarboxylase is involved in the restricted biosynthesis of isoquinoline alkaloids for certain plant families (see also |FRAME:PWY-5290|) TYDC activities are widely found across the plant kingdom (Facchini et al. 1995 - 7766394). The TYDC2 gene was mostly expressed in stems of &lt;i&gt;Papaver somniferum&lt;/i&gt; in contrast to TYDC1 being expressed in roots |CITS: [12242361]|. TYDC2 accepted both tyrosine and dopa and converted them with equal efficiency to tyramine and dopamine, respectively. However, TYDC2 showed a somewhat lower specific activity than TYDC1 resulting in a lower accumulation of both products when expressed in bacterial cultures |CITS: [7766394]|.</Comment>
+      <Property key="UniqueID" value="MONOMER-12764" />
+      <Property key="MolecularWeightSeq" value="59.3" />
+      <Property key="MolecularWeightKD" value="59.3" />
+      <Property key="Gene" value="G-9777" />
+      <Property key="Catalyzes" value="RXN-13828, RXN-13531" />
+      <Property key="CatalyzesCount" value="2" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="TAX-3469" />
+      <CitationRef elementRef="citation_cit_7929401" />
+      <CitationRef elementRef="citation_cit_7766394" />
+      <CitationRef elementRef="citation_cit_12242361" />
+    </DataNode>
+    <DataNode elementId="ADENOSYL-HOMO-CYS" textLabel="S-adenosyl-L-homocysteine" type="Metabolite">
+      <Xref identifier="ZJUKTBDSGOFHSH-WFMPWKQPSA-N" dataSource="InChIKey" />
+      <Graphics centerX="100.0" centerY="977.4963989257812" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ADENOSYL-HOMO-CYS" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004228232" />
+      <Property key="AlternativeId_Seed" value="cpd00019" />
+      <Property key="AlternativeId_Metanetx" value="MNXM19" />
+      <Property key="AlternativeId_Pubchem" value="25246222" />
+      <Property key="AlternativeId_Refmet" value="S-Adenosylhomocysteine" />
+      <Property key="AlternativeId_Bigg" value="ahcys" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57856" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00939" />
+      <Property key="AlternativeId_Chebi" value="57856" />
+      <Property key="AlternativeId_LigandCpd" value="C00021" />
+      <Property key="AlternativeId_Cas" value="979-92-0" />
+      <Property key="Synonym_1" value="S-adenosyl-L-homocysteine" />
+      <Property key="Synonym_2" value="SAH" />
+      <Property key="Synonym_3" value="S-adenosylhomocysteine" />
+      <Property key="Synonym_4" value="2-S-adenosyl-L-homocysteine" />
+      <Property key="Synonym_5" value="AdoHcy" />
+      <Property key="Synonym_6" value="2-&lt;i&gt;S&lt;/i&gt;-adenosyl-L-homocysteine" />
+      <Property key="Synonym_7" value="&lt;i&gt;S&lt;/i&gt;-adenosyl-homocysteine" />
+      <Property key="Synonym_8" value="&lt;i&gt;S&lt;/i&gt;-adenosylhomocysteine" />
+      <Property key="Synonym_9" value="adenosyl-homo-cys" />
+      <Property key="Synonym_10" value="adenosylhomocysteine" />
+      <Property key="Synonym_11" value="adenosylhomo-cys" />
+      <Property key="Synonym_12" value="&lt;i&gt;S&lt;/i&gt;-(5&apos;-adenosyl)-homocysteine" />
+      <Property key="MolecularWeight" value="384.409" />
+      <Property key="MonoisotopicWeight" value="384.1215884737" />
+      <Property key="ChemicalFormula" value="(C 14)(H 20)(N 6)(O 5)(S 1)" />
+      <Property key="InChI" value="InChI=1S/C14H20N6O5S/c15-6(14(23)24)1-2-26-3-7-9(21)10(22)13(25-7)20-5-19-8-11(16)17-4-18-12(8)20/h4-7,9-10,13,21-22H,1-3,15H2,(H,23,24)(H2,16,17,18)/t6-,7+,9+,10+,13+/m0/s1" />
+      <Property key="InChIKey" value="InChIKey=ZJUKTBDSGOFHSH-WFMPWKQPSA-N" />
+      <Property key="SMILES" value="C(SC[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3))C[C@@H](C(=O)[O-])[NH3+]" />
+      <Property key="GibbsFreeEnergy" value="84.0534" />
+      <Property key="CompoundType" value="Modified-Amino-Acids" />
+      <Property key="AbbreviatedName" value="SAH" />
+    </DataNode>
+    <DataNode elementId="CARBON-DIOXIDE" textLabel="CO₂" type="Metabolite">
+      <Xref identifier="CURLTUGMZLYLDI-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1133.402099609375" centerY="419.1385498046875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CARBON-DIOXIDE" />
+      <Property key="AlternativeId_Metanetx" value="MNXM13" />
+      <Property key="AlternativeId_Seed" value="cpd00011" />
+      <Property key="AlternativeId_Bigg" value="33506" />
+      <Property key="AlternativeId_UmBbdCpd" value="c0131" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01967" />
+      <Property key="AlternativeId_LigandCpd" value="C00011" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC16526" />
+      <Property key="AlternativeId_Chemspider" value="274" />
+      <Property key="AlternativeId_Chebi" value="16526" />
+      <Property key="AlternativeId_Pubchem" value="280" />
+      <Property key="AlternativeId_Cas" value="124-38-9" />
+      <Property key="Synonym_1" value="carbonic anhydride" />
+      <Property key="Synonym_2" value="carbonic acid gas" />
+      <Property key="Synonym_3" value="carbon dioxide" />
+      <Property key="MolecularWeight" value="44.01" />
+      <Property key="MonoisotopicWeight" value="43.989829244199996" />
+      <Property key="ChemicalFormula" value="(C 1)(O 2)" />
+      <Property key="InChI" value="InChI=1S/CO2/c2-1-3" />
+      <Property key="InChIKey" value="InChIKey=CURLTUGMZLYLDI-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="C(=O)=O" />
+      <Property key="GibbsFreeEnergy" value="-92.26" />
+      <Property key="CompoundType" value="Compounds" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1596.676025390625" centerY="1094.776123046875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicWeight" value="1.0078250321" />
+      <Property key="InChI" value="InChI=1S/p+1" />
+      <Property key="InChIKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="[H+]" />
+      <Property key="GibbsFreeEnergy" value="0.42906138" />
+      <Property key="CompoundType" value="Subatomic-Particles, Monovalent-Inorganic-Cations" />
+    </DataNode>
+    <DataNode elementId="WATER" textLabel="H₂O" type="Metabolite">
+      <Xref identifier="XLYOFNOQVPJJNP-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="787.8114013671875" centerY="875.0135498046875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="WATER" />
+      <Property key="AlternativeId_Bigg" value="33474" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15377" />
+      <Property key="AlternativeId_Hmdb" value="HMDB02111" />
+      <Property key="AlternativeId_Chemspider" value="937" />
+      <Property key="AlternativeId_Chebi" value="15377" />
+      <Property key="AlternativeId_Pubchem" value="962" />
+      <Property key="AlternativeId_LigandCpd" value="C00001" />
+      <Property key="AlternativeId_Cas" value="7732-18-5" />
+      <Property key="Synonym_1" value="H&lt;sub&gt;2&lt;/sub&gt;0" />
+      <Property key="Synonym_2" value="H2O" />
+      <Property key="Synonym_3" value="H20" />
+      <Property key="Synonym_4" value="hydrogen oxide" />
+      <Property key="Synonym_5" value="water" />
+      <Property key="MolecularWeight" value="18.015" />
+      <Property key="MonoisotopicWeight" value="18.0105646863" />
+      <Property key="ChemicalFormula" value="(H 2)(O 1)" />
+      <Property key="InChI" value="InChI=1S/H2O/h1H2" />
+      <Property key="InChIKey" value="InChIKey=XLYOFNOQVPJJNP-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="O" />
+      <Property key="GibbsFreeEnergy" value="-36.144756" />
+      <Property key="CompoundType" value="Compounds" />
+    </DataNode>
+    <DataNode elementId="DOPAMINE" textLabel="dopamine" type="Metabolite">
+      <Xref identifier="VYFYYTLLBUKUHU-UHFFFAOYSA-O" dataSource="InChIKey" />
+      <Graphics centerX="521.8265991210938" centerY="670.1297607421875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>Dopamine is an amine compound synthesized in plants and most animals. In the brain, dopamine functions as a neurotransmitter - a chemical released by neurons (nerve cells) to send signals to other nerve cells. Outside the central nervous system, dopamine functions primarily as a local paracrine messenger. In blood vessels, it inhibits norepinephrine release and acts as a vasodilator (at normal concentrations); in the kidneys, it increases sodium excretion and urine output; in the pancreas, it reduces insulin production; in the digestive system, it reduces gastrointestinal motility and protects intestinal mucosa; and in the immune system, it reduces the activity of lymphocytes. With the exception of the blood vessels, dopamine in each of these peripheral systems is synthesized locally and exerts its effects near the cells that release it. Many plants synthesize dopamine, with the highest concentrations observed in bananas. The functions of plant catecholamines have not been clearly established, but there is evidence that they play a role in the response to stressors such as bacterial infection, act as growth-promoting factors in some situations, and modify the way that sugars are metabolized. Dopamine has been detected in some types of bacteria, and homologs of all the enzymes used by animals to synthesize dopamine have been detected in some bacteria.</Comment>
+      <Property key="UniqueID" value="DOPAMINE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000000033882" />
+      <Property key="AlternativeId_Seed" value="cpd02357" />
+      <Property key="AlternativeId_Metanetx" value="MNXM205" />
+      <Property key="AlternativeId_Refmet" value="Dopamine" />
+      <Property key="AlternativeId_Bigg" value="dopa" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC59905" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00073" />
+      <Property key="AlternativeId_Chemspider" value="2944843" />
+      <Property key="AlternativeId_Chebi" value="59905" />
+      <Property key="AlternativeId_Pubchem" value="3713609" />
+      <Property key="AlternativeId_LigandCpd" value="C03758" />
+      <Property key="AlternativeId_Cas" value="51-61-6" />
+      <Property key="Synonym_1" value="deoxyepinephrine" />
+      <Property key="Synonym_2" value="hydroxytyramine" />
+      <Property key="Synonym_3" value="3,4-dihydroxyphenethylamine" />
+      <Property key="Synonym_4" value="intropin" />
+      <Property key="Synonym_5" value="2-(3,4-dihydroxyphenyl)ethylamine" />
+      <Property key="Synonym_6" value="4-(2-aminoethyl)benzene-1,2-diol" />
+      <Property key="Synonym_7" value="3-hydroxytyramine" />
+      <Property key="MolecularWeight" value="154.188" />
+      <Property key="MonoisotopicWeight" value="153.0789786025" />
+      <Property key="ChemicalFormula" value="(C 8)(H 12)(N 1)(O 2)" />
+      <Property key="InChI" value="InChI=1S/C8H11NO2/c9-4-3-6-1-2-7(10)8(11)5-6/h1-2,5,10-11H,3-4,9H2/p+1" />
+      <Property key="InChIKey" value="InChIKey=VYFYYTLLBUKUHU-UHFFFAOYSA-O" />
+      <Property key="SMILES" value="C(CC1(\C=C(C(/O)=C\C=1)\O))[NH3+]" />
+      <Property key="GibbsFreeEnergy" value="72.57139" />
+      <Property key="CompoundType" value="Catechols, Neurotransmitters, Primary-Amines" />
+    </DataNode>
+    <DataNode elementId="CPD-8757" textLabel="betaxanthin" type="Metabolite">
+      <Xref identifier="SBHOSQZNRDXQAX-WSESCXGKSA-L" dataSource="InChIKey" />
+      <Graphics centerX="985.3734130859375" centerY="1550.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-8757" />
+      <Property key="AlternativeId_Pubchem" value="135926572" />
+      <Property key="AlternativeId_Zinc" value="ZINC000056874780" />
+      <Property key="AlternativeId_Seed" value="cpd17851" />
+      <Property key="AlternativeId_Chebi" value="81319" />
+      <Property key="AlternativeId_Metanetx" value="MNXM10820" />
+      <Property key="AlternativeId_LigandCpd" value="C17754" />
+      <Property key="Synonym_1" value="3-methoxytyramine betaxanthin" />
+      <Property key="MolecularWeight" value="358.35" />
+      <Property key="MonoisotopicWeight" value="360.13213638499997" />
+      <Property key="ChemicalFormula" value="(C 18)(H 18)(N 2)(O 6)" />
+      <Property key="InChI" value="InChI=1S/C18H20N2O6/c1-26-16-10-11(2-3-15(16)21)4-6-19-7-5-12-8-13(17(22)23)20-14(9-12)18(24)25/h2-3,5,7-8,10,14,20-21H,4,6,9H2,1H3,(H,22,23)(H,24,25)/p-2/b12-5-,19-7-/t14-/m0/s1" />
+      <Property key="InChIKey" value="InChIKey=SBHOSQZNRDXQAX-WSESCXGKSA-L" />
+      <Property key="SMILES" value="COC2(\C(\O)=C/C=C(CC\N=C/C=C1(C[C@H](NC(/C(=O)[O-])=C/1)C([O-])=O))\C=2)" />
+      <Property key="GibbsFreeEnergy" value="36.261948" />
+      <Property key="CompoundType" value="ALKALOID" />
+    </DataNode>
+    <DataNode elementId="S-ADENOSYLMETHIONINE" textLabel="S-adenosyl-L-methionine" type="Metabolite">
+      <Xref identifier="MEFKEPWMEQBLKI-FCKMPRQPSA-O" dataSource="InChIKey" />
+      <Graphics centerX="315.0116271972656" centerY="278.3103942871094" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: S-ADENOSYLMETHIONINE| (AdoMet, SAM) is a sulfonium compound in which each of the carbons attached to the sulfur is activated toward nucleophilic attack. It is the most common methyl group donor for methyltransferase enzymes. In addition, AdoMet is cleaved reductively by a large number of iron-sulfur cluster-containing enzymes (known as radical SAM or radical AdoMet enzymes) to produce |FRAME: CPD-15400|, which they use to activate their substrates. Another major role of AdoMet is in polyamine biosynthesis, where it is decarboxylated by |FRAME: EC-4.1.1.50|, to form |FRAME: S-ADENOSYLMETHIONINAMINE|, which serves as a propylamine group donor. AdoMet is formed by |FRAME: EC-2.5.1.6| and bears an &lt;i&gt;S&lt;/i&gt; configuration at the sulfur atom. The chiral sulfonium of AdoMet spontaneously racemizes under physiological conditions to form a mixture of &lt;i&gt;S&lt;/i&gt; and &lt;i&gt;R&lt;/i&gt; isomers. This results in reduced activity, as the |FRAME: CPD0-2554 &quot;&lt;i&gt;R&lt;/i&gt; isomer&quot;| is not accepted as a substrate for AdoMet-dependent methyltransferases |CITS: [12419350]|.</Comment>
+      <Property key="UniqueID" value="S-ADENOSYLMETHIONINE" />
+      <Property key="AlternativeId_Pubchem" value="24762165" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004214738" />
+      <Property key="AlternativeId_Seed" value="cpd00017" />
+      <Property key="AlternativeId_Metanetx" value="MNXM16" />
+      <Property key="AlternativeId_Refmet" value="S-adenosyl-L-methioninate" />
+      <Property key="AlternativeId_Bigg" value="amet" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC59789" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01185" />
+      <Property key="AlternativeId_Chebi" value="59789" />
+      <Property key="AlternativeId_LigandCpd" value="C00019" />
+      <Property key="AlternativeId_Cas" value="29908-03-0" />
+      <Property key="Synonym_1" value="(&lt;i&gt;S&lt;/i&gt;)-S-adenosyl-L-methionine" />
+      <Property key="Synonym_2" value="AdoMet" />
+      <Property key="Synonym_3" value="SAM" />
+      <Property key="Synonym_4" value="2-&lt;i&gt;S&lt;/i&gt;-adenosyl-L-methionine" />
+      <Property key="Synonym_5" value="&lt;i&gt;S&lt;/i&gt;-adenosyl-methionine" />
+      <Property key="Synonym_6" value="adenosylmethionine" />
+      <Property key="Synonym_7" value="&lt;i&gt;S&lt;/i&gt;-adenosylmethionine" />
+      <Property key="MolecularWeight" value="399.444" />
+      <Property key="MonoisotopicWeight" value="400.1528886021" />
+      <Property key="ChemicalFormula" value="(C 15)(H 23)(N 6)(O 5)(S 1)" />
+      <Property key="InChI" value="InChI=1S/C15H22N6O5S/c1-27(3-2-7(16)15(24)25)4-8-10(22)11(23)14(26-8)21-6-20-9-12(17)18-5-19-13(9)21/h5-8,10-11,14,22-23H,2-4,16H2,1H3,(H2-,17,18,19,24,25)/p+1/t7-,8+,10+,11+,14+,27-/m0/s1" />
+      <Property key="InChIKey" value="InChIKey=MEFKEPWMEQBLKI-FCKMPRQPSA-O" />
+      <Property key="SMILES" value="C[S+](C[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3))CC[C@@H](C(=O)[O-])[NH3+]" />
+      <Property key="GibbsFreeEnergy" value="124.03472" />
+      <Property key="CompoundType" value="Cofactors, Methylated-methyl-acceptors" />
+      <Property key="AbbreviatedName" value="SAM" />
+      <CitationRef elementRef="citation_cit_12419350" />
+    </DataNode>
+    <DataNode elementId="L-DIHYDROXY-PHENYLALANINE" textLabel="L-dopa" type="Metabolite">
+      <Xref identifier="WTDRDQBEARUVNC-LURJTMIESA-N" dataSource="InChIKey" />
+      <Graphics centerX="884.3910522460938" centerY="781.5811767578125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="L-DIHYDROXY-PHENYLALANINE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000000895199" />
+      <Property key="AlternativeId_Seed" value="cpd00291" />
+      <Property key="AlternativeId_Metanetx" value="MNXM279" />
+      <Property key="AlternativeId_Refmet" value="DOPA" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57504" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00181" />
+      <Property key="AlternativeId_Chebi" value="57504" />
+      <Property key="AlternativeId_Pubchem" value="6971033" />
+      <Property key="AlternativeId_Nci" value="118381" />
+      <Property key="AlternativeId_Cas" value="59-92-7" />
+      <Property key="AlternativeId_LigandCpd" value="C00355" />
+      <Property key="Synonym_1" value="DOPA" />
+      <Property key="Synonym_2" value="3-hydroxytyrosine" />
+      <Property key="Synonym_3" value="3,4-dihydroxy-L-phenylalanine" />
+      <Property key="Synonym_4" value="dihydroxyphenylalanine" />
+      <Property key="Synonym_5" value="L-dihydroxy-phenylalanine" />
+      <Property key="Synonym_6" value="levodopa" />
+      <Property key="MolecularWeight" value="197.19" />
+      <Property key="MonoisotopicWeight" value="197.0688078467" />
+      <Property key="ChemicalFormula" value="(C 9)(H 11)(N 1)(O 4)" />
+      <Property key="InChI" value="InChI=1S/C9H11NO4/c10-6(9(13)14)3-5-1-2-7(11)8(12)4-5/h1-2,4,6,11-12H,3,10H2,(H,13,14)/t6-/m0/s1" />
+      <Property key="InChIKey" value="InChIKey=WTDRDQBEARUVNC-LURJTMIESA-N" />
+      <Property key="SMILES" value="C([C@H](CC1(\C=C/C(/O)=C(\C=1)/O))[NH3+])(=O)[O-]" />
+      <Property key="GibbsFreeEnergy" value="-17.02767" />
+      <Property key="CompoundType" value="Catechols, Non-standard-amino-acids" />
+    </DataNode>
+    <DataNode elementId="CPD-8651" textLabel="betalamate" type="Metabolite">
+      <Xref identifier="YQDKULBMDMPFLH-FSRBREEPSA-L" dataSource="InChIKey" />
+      <Graphics centerX="863.065185546875" centerY="636.1422729492188" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-8651" />
+      <Property key="AlternativeId_Zinc" value="ZINC000100067807" />
+      <Property key="AlternativeId_Seed" value="cpd05445" />
+      <Property key="AlternativeId_Metanetx" value="MNXM2104" />
+      <Property key="AlternativeId_Chebi" value="27483" />
+      <Property key="AlternativeId_Hmdb" value="HMDB29842" />
+      <Property key="AlternativeId_Pubchem" value="25246067" />
+      <Property key="AlternativeId_LigandCpd" value="C08538" />
+      <Property key="Synonym_1" value="betalamic acid" />
+      <Property key="Synonym_2" value="(2S,4E)-4-(2-oxoethylidene)-1,2,3,4-tetrahydropyridine-2,6-dicarboxylate" />
+      <Property key="MolecularWeight" value="209.158" />
+      <Property key="MonoisotopicWeight" value="211.04807240460002" />
+      <Property key="ChemicalFormula" value="(C 9)(H 7)(N 1)(O 5)" />
+      <Property key="InChI" value="InChI=1S/C9H9NO5/c11-2-1-5-3-6(8(12)13)10-7(4-5)9(14)15/h1-3,7,10H,4H2,(H,12,13)(H,14,15)/p-2/b5-1-/t7-/m0/s1" />
+      <Property key="InChIKey" value="InChIKey=YQDKULBMDMPFLH-FSRBREEPSA-L" />
+      <Property key="SMILES" value="C(/C=C1(C[C@H](NC(/C(=O)[O-])=C/1)C([O-])=O))=O" />
+      <Property key="GibbsFreeEnergy" value="-86.710396" />
+      <Property key="CompoundType" value="ALKALOID" />
+    </DataNode>
+    <DataNode elementId="CPD-7650" textLabel="3-methoxytyramine" type="Metabolite">
+      <Xref identifier="DIVQKHQLANKJQO-UHFFFAOYSA-O" dataSource="InChIKey" />
+      <Graphics centerX="1114.3775634765625" centerY="798.1170654296875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-7650" />
+      <Property key="AlternativeId_Chebi" value="192089" />
+      <Property key="AlternativeId_Zinc" value="ZINC000000119675" />
+      <Property key="AlternativeId_Seed" value="cpd03316" />
+      <Property key="AlternativeId_Metanetx" value="MNXM3848" />
+      <Property key="AlternativeId_Refmet" value="3-Methoxytyramine" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00022" />
+      <Property key="AlternativeId_Chemspider" value="5301447" />
+      <Property key="AlternativeId_Pubchem" value="6927014" />
+      <Property key="AlternativeId_LigandCpd" value="C05587" />
+      <Property key="Synonym_1" value="methoxytyramine" />
+      <Property key="MolecularWeight" value="168.215" />
+      <Property key="MonoisotopicWeight" value="167.0946286667" />
+      <Property key="ChemicalFormula" value="(C 9)(H 14)(N 1)(O 2)" />
+      <Property key="InChI" value="InChI=1S/C9H13NO2/c1-12-9-6-7(4-5-10)2-3-8(9)11/h2-3,6,11H,4-5,10H2,1H3/p+1" />
+      <Property key="InChIKey" value="InChIKey=DIVQKHQLANKJQO-UHFFFAOYSA-O" />
+      <Property key="SMILES" value="COC1(\C(\O)=C/C=C(CC[NH3+])\C=1)" />
+      <Property key="GibbsFreeEnergy" value="107.763626" />
+      <Property key="CompoundType" value="Guaiacols" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="937.5465698242188" y="50.0" elementRef="G-9777" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="984.4510498046875" y="1093.6396484375" elementRef="MONOMER-12764" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_1_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_1_0_0" x="595.49853515625" y="1200.1168212890625" elementRef="G-6362" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_1_0_0" arrowHead="TranscriptionTranslation" x="1555.0" y="524.263427734375" elementRef="MONOMER-8382" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-8567">
+      <Xref identifier="RXN-8567" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-8567_start" x="1159.3775634765625" y="798.1170654296875" elementRef="CPD-7650" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-8567_end" arrowHead="Conversion" x="940.3734130859375" y="1550.0" elementRef="CPD-8757" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-8567_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-8567" />
+      <Property key="Spontaneous" value="T" />
+      <Property key="Pathways" value="PWY-5426" />
+      <Property key="ReactionEquation" value="CPD-7650 + CPD-8651 =&gt; PROTON + CPD-8757 + WATER" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+    </Interaction>
+    <Interaction elementId="RXN-8567_anchor_reactant_1">
+      <Xref identifier="RXN-8567" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-8567_anchor_reactant_start_1" x="908.065185546875" y="636.1422729492188" elementRef="CPD-8651" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-8567_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-8567_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-8567_anchor_product_0">
+      <Xref identifier="RXN-8567" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-8567_anchor_product_start_0" x="0" y="0" elementRef="RXN-8567_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-8567_anchor_product_end_0" arrowHead="Conversion" x="1551.676025390625" y="1094.776123046875" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-8567_anchor_product_2">
+      <Xref identifier="RXN-8567" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-8567_anchor_product_start_2" x="0" y="0" elementRef="RXN-8567_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-8567_anchor_product_end_2" arrowHead="Conversion" x="742.8114013671875" y="875.0135498046875" elementRef="WATER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN6666-7">
+      <Xref identifier="EC-2.1.1.6" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN6666-7_start" x="566.8265991210938" y="670.1297607421875" elementRef="DOPAMINE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN6666-7_end" arrowHead="Conversion" x="1069.3775634765625" y="798.1170654296875" elementRef="CPD-7650" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN6666-7_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN6666-7" />
+      <Property key="EC_Number" value="EC-2.1.1.6" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-5426" />
+      <Property key="ReactionEquation" value="S-ADENOSYLMETHIONINE + DOPAMINE =&gt; PROTON + ADENOSYL-HOMO-CYS + CPD-7650" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+    </Interaction>
+    <Interaction elementId="RXN6666-7_anchor_reactant_0">
+      <Xref identifier="EC-2.1.1.6" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN6666-7_anchor_reactant_start_0" x="360.0116271972656" y="278.3103942871094" elementRef="S-ADENOSYLMETHIONINE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN6666-7_anchor_reactant_end_0" x="0" y="0" elementRef="RXN6666-7_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN6666-7_anchor_product_0">
+      <Xref identifier="EC-2.1.1.6" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN6666-7_anchor_product_start_0" x="0" y="0" elementRef="RXN6666-7_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN6666-7_anchor_product_end_0" arrowHead="Conversion" x="1551.676025390625" y="1094.776123046875" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN6666-7_anchor_product_1">
+      <Xref identifier="EC-2.1.1.6" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN6666-7_anchor_product_start_1" x="0" y="0" elementRef="RXN6666-7_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN6666-7_anchor_product_end_1" arrowHead="Conversion" x="55.0" y="977.4963989257812" elementRef="ADENOSYL-HOMO-CYS" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN66-221">
+      <Xref identifier="12272" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="RXN66-221_start" x="929.3910522460938" y="781.5811767578125" elementRef="L-DIHYDROXY-PHENYLALANINE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN66-221_end" arrowHead="Conversion" x="476.82659912109375" y="670.1297607421875" elementRef="DOPAMINE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN66-221_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Comment source="BioCyc">A pyridoxal-phosphate protein. The enzyme also acts on some other aromatic L-amino acids, including L-tryptophan |CITS:[4536745][14466899][13462983]|.</Comment>
+      <Property key="AlternativeId_Rhea" value="12272" />
+      <Property key="UniqueID" value="RXN66-221" />
+      <Property key="EC_Number" value="EC-4.1.1.28" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-3581, PWY-5403, PWY-5426" />
+      <Property key="PathwayCount" value="3" />
+      <Property key="ReactionEquation" value="PROTON + L-DIHYDROXY-PHENYLALANINE =&gt; DOPAMINE + CARBON-DIOXIDE" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXN-13531, ENZRXN-8563" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+    </Interaction>
+    <Interaction elementId="RXN66-221_ENZRXN-13531">
+      <Waypoints>
+        <Point elementId="RXN66-221_ENZRXN-13531_start" x="1029.4510498046875" y="1106.1396484375" elementRef="MONOMER-12764" relX="0.0" relY="1.0" />
+        <Point elementId="RXN66-221_ENZRXN-13531_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN66-221_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN66-221_ENZRXN-8563">
+      <Waypoints>
+        <Point elementId="RXN66-221_ENZRXN-8563_start" x="1600.0" y="536.763427734375" elementRef="MONOMER-8382" relX="0.0" relY="1.0" />
+        <Point elementId="RXN66-221_ENZRXN-8563_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN66-221_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN66-221_anchor_reactant_0">
+      <Xref identifier="12272" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="RXN66-221_anchor_reactant_start_0" x="1641.676025390625" y="1094.776123046875" elementRef="PROTON" relX="1.0" relY="0.0" />
+        <Point elementId="RXN66-221_anchor_reactant_end_0" x="0" y="0" elementRef="RXN66-221_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN66-221_anchor_product_1">
+      <Xref identifier="12272" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="RXN66-221_anchor_product_start_1" x="0" y="0" elementRef="RXN66-221_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN66-221_anchor_product_end_1" arrowHead="Conversion" x="1088.402099609375" y="419.1385498046875" elementRef="CARBON-DIOXIDE" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_cit_7766394">
+      <Xref identifier="7766394" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_TREZZINI91">
+      <Xref identifier="PUB-TREZZINI91 | Characterization of some natural and semi-synthetic betaxanthins (Trezzini GF, Zryd J-P, 1991)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_cit_12242361">
+      <Xref identifier="12242361" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_MALDONADO96">
+      <Xref identifier="PUB-MALDONADO96 | Molecular analysis of a new member of the Opium poppy tyrosine/3,4-dihydroxyphenylalanine decarboxyl... (Maldonado-Mendoza, Ignacio, Lopez-Meyer, Melina, Galef, Jennifer et al.)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_FACCHINI94">
+      <Xref identifier="PUB-FACCHINI94 | Differential and tissue-specific expression of a gene family for tyrosine/dopa decarboxylase in Opiu... (Facchini, Peter, De Luca, Vincenzo)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_cit_7929401">
+      <Xref identifier="7929401" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_16212790">
+      <Xref identifier="16212790" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_HEMPEL97">
+      <Xref identifier="PUB-HEMPEL97 | Betaxanthin pattern of hairy roots from &lt;i&gt;Beta vulgaris&lt;/i&gt; var. &lt;i&gt;lutea&lt;/i&gt; and its alteration by... (Hempel J, Bohm H, 1997)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_cit_10198080">
+      <Xref identifier="10198080" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_12620337">
+      <Xref identifier="12620337" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_12419350">
+      <Xref identifier="12419350" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_CHRISTINET04">
+      <Xref identifier="PUB-CHRISTINET04 | Characterization and functional identification of a novel plant extradiol 4,5-dioxygenase involved i... (Christinet L, 2004)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_cit_15231409">
+      <Xref identifier="15231409" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

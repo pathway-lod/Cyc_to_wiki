@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="(+)-camphor biosynthesis" organism="TAX-38868" source="PlantCyc">
+  <Description>|FRAME: Camphor Camphor| is a bicyclic monoterpene with a characteristic pungent odor and taste. Two enantiomers occur naturally - |FRAME: CPD-862 (+)-camphor|, which is produced by several trees, including the camphor tree (|FRAME: TAX-13429 &lt;i&gt;Cinnamomum camphora&lt;/i&gt;|), and |FRAME: --CAMPHOR (-)-camphor|, which is found in essential oils of several plants (see |FRAME: PWY-6991 (-)-camphor biosynthesis|). |FRAME: CPD-862 (+)-camphor| is one of the major components of the volatile oil of sage (|FRAME: TAX-38868 &lt;i&gt;Salvia officinalis&lt;/i&gt;|), where it appears to function as a phytotoxin inhibiting the growth of competing grasses. Immature sage leaves synthesize and accumulate camphor most rapidly, and the camphor content of the leaves increases as they expand |CITS: [16661761]|. The first proposal for a pathway for |FRAME: CPD-862 (+)-camphor| biosynthesis suggested that |FRAME: CPD-461 neryl diphosphate| was converted to |FRAME: CPD-1903 (+)-borneol|, which was then dehydrogenated to camphor |CITS: [10906]|. Subsequent studies showed that a cyclic pyrophosphate intermediate was involved |CITS: [921300]| and that the preferred precursor was |FRAME: GERANYL-PP geranyl diphosphate|, rather than |FRAME: CPD-461 neryl diphosphate| |CITS: [42356]|, leading to the pathway described here. The first pathway enzyme to be partially purifed and characterized was |FRAME: MONOMER-17127 (+)-borneol dehydrogenase|, which catalyzes the last step in the pathway |CITS: [677891]|. This was followed by a partial purification of |FRAME: MONOMER-17128 (+)-bornyl-diphosphate diphosphatase| |CITS: [42357]| and |FRAME: CPLX-8430 (+)-bornyl diphosphate synthase| |CITS: [42356][9614092]|.</Description>
+  <Authors>
+    <Author name="SRI" />
+    <Author name="caspi" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-6990" />
+  <Property key="Type" value="Camphor-Biosynthesis" />
+  <Property key="ReactionCount" value="3" />
+  <Property key="ReactionIDs" value="GERANYL-DIPHOSPHATE-CYCLASE-RXN, RXN-13046, +-BORNEOL-DEHYDROGENASE-RXN" />
+  <Property key="PredecessorCount" value="2" />
+  <Property key="PathwayLinks" value="(GERANYL-PP PWY-5122)" />
+  <Property key="Organism" value="TAX-38868" />
+  <Property key="TaxonomicRange_1" value="TAX-33090" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_cit_3310901" />
+  <CitationRef elementRef="citation_cit_16661761" />
+  <CitationRef elementRef="citation_cit_10906" />
+  <CitationRef elementRef="citation_cit_921300" />
+  <CitationRef elementRef="citation_cit_42356" />
+  <CitationRef elementRef="citation_cit_677891" />
+  <CitationRef elementRef="citation_cit_42357" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="MONOMER-17128" textLabel="(+)-bornyl-pyrophosphate diphosphatase" type="Protein">
+      <Xref identifier="MONOMER-17128" dataSource="plantcyc" />
+      <Graphics centerX="925.16162109375" centerY="595.4088134765625" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="SRI, caspi">Two enzymes with (+)-bornyl-diphosphate diphosphatase activity were partially purified from sage (|FRAME: TAX-38868 &lt;i&gt;Salvia officinalis&lt;/i&gt;|). While one of the enzymes appeared to prefer phosphate or pyrophosphate esters of primary allylic alcohols as substrate, the other had a preference for pytophosphate esters of |FRAME: CPD-215 (+)-bornyl-diphosphate| and other cyclic monoterpenols |CITS: [42357]|. The enzyme, which was partially purified 52-fold, had a molecular weighht of about 20 kDa and an optimal pH of 7.6. Activity was slightly stimulated with addition of 10 mM Mg&lt;sup&gt;2+&lt;/sup&gt;.</Comment>
+      <Property key="UniqueID" value="MONOMER-17128" />
+      <Property key="MolecularWeightExp" value="20." />
+      <Property key="MolecularWeightKD" value="20." />
+      <Property key="Catalyzes" value="RXN-19986" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="TAX-38868" />
+      <CitationRef elementRef="citation_cit_42357" />
+    </DataNode>
+    <DataNode elementId="MONOMER-17127" textLabel="(+)-borneol dehydrogenase" type="Protein">
+      <Xref identifier="MONOMER-17127" dataSource="plantcyc" />
+      <Graphics centerX="1138.2791748046875" centerY="835.8812255859375" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="SRI, caspi">The enzyme was purified 150-fold from sage (|FRAME: TAX-38868 &lt;i&gt;Salvia officinalis&lt;/i&gt;|) leaf homogenate, and catalyzed the reaction at a rate of 65 nmol/h/mg protein. The reaction was slightly reversible at the optimal pH of 8.0. Activity was soluble, and was highest at shoot tips |CITS: [677891]| Acyclic and monocyclic monoterpenols were not readily oxidized, but the enzyme has a very high activity with |FRAME: CPD-14065 (-)-thujan-3-ol| |CITS: [677891]|. It has been shown that the enzyme can not accept |FRAME: -CIS-SABINOL (+)-cis-sabinol| |CITS: [3310901]|.</Comment>
+      <Property key="UniqueID" value="MONOMER-17127" />
+      <Property key="MolecularWeightExp" value="91." />
+      <Property key="MolecularWeightKD" value="91." />
+      <Property key="Catalyzes" value="RXN-19984" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="TAX-38868" />
+      <CitationRef elementRef="citation_cit_677891" />
+      <CitationRef elementRef="citation_cit_3310901" />
+    </DataNode>
+    <DataNode elementId="MONOMER-13764" textLabel="MONOMER-13764" type="Protein" groupRef="CPLX-8430">
+      <Xref identifier="O81192" dataSource="uniprot" />
+      <Graphics centerX="615.9423828125" centerY="233.54481506347656" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="O-27, pujar">A cDNA clone was isolated from Sage Salvia emerging leaves. The cDNA was recombinantly expressed in E. coli and the molecular weight of the protein was determined at 69.2 kDa |CITS: [9614092]|. The protein catalyzed the cyclization of GPP and formed the bornyl phosphate as the major product. In addition it also catalyzed significant amounts of alpha-pinene, camphene and limonene. The enzyme is translated as a preproteins bearing an amino-terminal plastid-targeting sequence |CITS: [9614092]|. This study suggests that this enzyme might represent both bornyl phosphate and pinene synthase which in previous studies have been reported as distinct enzymes. The X-ray crystal structure BPPS shows it to be a a homodimer |CITS: [12432096]|.</Comment>
+      <Property key="UniqueID" value="MONOMER-13764" />
+      <Property key="AlternativeId_Pdb" value="1N24" />
+      <Property key="AlternativeId_Uniprot" value="O81192" />
+      <Property key="AlternativeId_Pid" value="AAC26017" />
+      <Property key="Synonym_1" value="(+)-bornyl diphosphate synthase" />
+      <Property key="MolecularWeightExp" value="69.2" />
+      <Property key="MolecularWeightKD" value="69.2" />
+      <Property key="Gene" value="G-10498" />
+      <Property key="ComponentOf" value="CPLX-8430" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="GOTerm" value="GO:0043693" />
+      <Property key="Species" value="TAX-38868" />
+    </DataNode>
+    <DataNode elementId="GERANYL-PP" textLabel="geranyl pyrophosphate" type="Metabolite">
+      <Xref identifier="GVVPGTZRZFNKDS-JXMROGBWSA-K" dataSource="InChIKey" />
+      <Graphics centerX="882.69873046875" centerY="786.853515625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="GERANYL-PP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000008215849" />
+      <Property key="AlternativeId_ReactomeCpd" value="191409" />
+      <Property key="AlternativeId_Metanetx" value="MNXM100" />
+      <Property key="AlternativeId_Bigg" value="grdp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC58057" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01285" />
+      <Property key="AlternativeId_Chemspider" value="14211068" />
+      <Property key="AlternativeId_Chebi" value="58057" />
+      <Property key="AlternativeId_Knapsack" value="C00000846" />
+      <Property key="AlternativeId_Pubchem" value="19379894" />
+      <Property key="AlternativeId_LigandCpd" value="C00341" />
+      <Property key="Synonym_1" value="&amp;omega;,E-geranyl diphosphate" />
+      <Property key="Synonym_2" value="geranyl pyrophosphate" />
+      <Property key="Synonym_3" value="geranyl-diphosphate" />
+      <Property key="Synonym_4" value="GPP" />
+      <Property key="Synonym_5" value="geranyl-PP" />
+      <Property key="Synonym_6" value="geranyl-pyrophosphate" />
+      <Property key="MolecularWeight" value="311.188" />
+      <Property key="MonoisotopicWeight" value="314.0684260167" />
+      <Property key="ChemicalFormula" value="(C 10)(H 17)(O 7)(P 2)" />
+      <Property key="InChI" value="InChI=1S/C10H20O7P2/c1-9(2)5-4-6-10(3)7-8-16-19(14,15)17-18(11,12)13/h5,7H,4,6,8H2,1-3H3,(H,14,15)(H2,11,12,13)/p-3/b10-7+" />
+      <Property key="InChIKey" value="InChIKey=GVVPGTZRZFNKDS-JXMROGBWSA-K" />
+      <Property key="SMILES" value="CC(C)=CCCC(\C)=C/COP([O-])(OP(=O)([O-])[O-])=O" />
+      <Property key="GibbsFreeEnergy" value="-239.2895" />
+      <Property key="CompoundType" value="Monoterpenyl-Diphosphates, Polyisoprenyl-Diphosphates" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1162.22607421875" centerY="50.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicWeight" value="1.0078250321" />
+      <Property key="InChI" value="InChI=1S/p+1" />
+      <Property key="InChIKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="[H+]" />
+      <Property key="GibbsFreeEnergy" value="0.42906138" />
+      <Property key="CompoundType" value="Subatomic-Particles, Monovalent-Inorganic-Cations" />
+    </DataNode>
+    <DataNode elementId="NADH" textLabel="NADH" type="Metabolite">
+      <Xref identifier="BOPGDPNILDQYTO-NNYOXOHSSA-L" dataSource="InChIKey" />
+      <Graphics centerX="277.49188232421875" centerY="1256.724609375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: NAD| and |FRAME: NADP| are dinucleotides containing one |FRAME: NIACINAMIDE| base and one |FRAME: ADENINE| base. Each nucleotide is connected to a ribose sugar at position 1, and the two riboses are connected at their 5 position via a diphosphate. The only difference between the two is that in NADP there is an additional phosphate group at the 2&apos; position of the ribose that carries the adenine moiety. These molecules are biological carriers of reductive equivalents (i.e. high potential electrons). Most of the time they function as cosubstrates, and in some cases they function as |FRAME: Cofactors cofactors|. They are often referred to by the obsolete term &quot;coenzymes&quot;. The most common function of |FRAME: NAD| is to accept two electrons and a proton (a hydride ion) from a substrate that is being oxidized. This reduction converts |FRAME: NAD| to |FRAME: NADH|, the reduced form. NADH then diffuses or is transported to a terminal oxidase, where the electrons are passed on, regenerating the oxidized form. |FRAME: NADPH|, on the other hand, is mostly involved in biosynthetic reactions, where it serves as an electron donor. NADPH is formed by reduction of |FRAME: NADP|, which occurs by different mechanisms in different types of organisms. In photosynthetic organisms |FRAME: NADP| is reduced by |FRAME: CPLX-84|. In heterotrophic organisms it is reduced by central metabolism processes such as the pentose phosphate pathway (see |FRAME: OXIDATIVEPENT-PWY|).</Comment>
+      <Property key="UniqueID" value="NADH" />
+      <Property key="AlternativeId_Seed" value="cpd00004" />
+      <Property key="AlternativeId_Metanetx" value="MNXM10" />
+      <Property key="AlternativeId_Refmet" value="NADH" />
+      <Property key="AlternativeId_Bigg" value="nadh" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57945" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01487" />
+      <Property key="AlternativeId_Chemspider" value="10239197" />
+      <Property key="AlternativeId_Chebi" value="57945" />
+      <Property key="AlternativeId_Pubchem" value="21604869" />
+      <Property key="AlternativeId_Cas" value="58-68-4" />
+      <Property key="AlternativeId_LigandCpd" value="C00004" />
+      <Property key="Synonym_1" value="NADH&lt;sub&gt;2&lt;/sub&gt;" />
+      <Property key="Synonym_2" value="NADH2" />
+      <Property key="Synonym_3" value="dihydrodiphosphopyridine nucleotide" />
+      <Property key="Synonym_4" value="diphosphopyridine nucleotide reduced" />
+      <Property key="Synonym_5" value="dihydronicotinamide adenine dinucleotide" />
+      <Property key="Synonym_6" value="nicotinamide adenine dinucleotide reduced" />
+      <Property key="Synonym_7" value="NAD-reduced" />
+      <Property key="Synonym_8" value="NADH+H+" />
+      <Property key="Synonym_9" value="DPNH" />
+      <Property key="Synonym_10" value="&amp;beta;-NADH" />
+      <Property key="Synonym_11" value="&amp;beta;-nicotinamide adenine dinucleotide, reduced" />
+      <Property key="MolecularWeight" value="663.43" />
+      <Property key="MonoisotopicWeight" value="665.1247716966999" />
+      <Property key="ChemicalFormula" value="(C 21)(H 27)(N 7)(O 14)(P 2)" />
+      <Property key="InChI" value="InChI=1S/C21H29N7O14P2/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(32)14(30)11(41-21)6-39-44(36,37)42-43(34,35)38-5-10-13(29)15(31)20(40-10)27-3-1-2-9(4-27)18(23)33/h1,3-4,7-8,10-11,13-16,20-21,29-32H,2,5-6H2,(H2,23,33)(H,34,35)(H,36,37)(H2,22,24,25)/p-2/t10-,11-,13-,14-,15-,16-,20-,21-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=BOPGDPNILDQYTO-NNYOXOHSSA-L" />
+      <Property key="SMILES" value="C1(/N(\C=C/CC(/C(N)=O)=1)[C@@H]5(O[C@H](COP(OP(OC[C@H]4(O[C@@H](N2(C3(\C(\N=C/2)=C(N)/N=C\N=3)))[C@H](O)[C@H](O)4))(=O)[O-])(=O)[O-])[C@@H](O)[C@@H](O)5))" />
+      <Property key="GibbsFreeEnergy" value="-325.20697" />
+      <Property key="CompoundType" value="NADH-P-OR-NOP" />
+    </DataNode>
+    <DataNode elementId="WATER" textLabel="H₂O" type="Metabolite">
+      <Xref identifier="XLYOFNOQVPJJNP-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="917.6902465820312" centerY="1550.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="WATER" />
+      <Property key="AlternativeId_Bigg" value="33474" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15377" />
+      <Property key="AlternativeId_Hmdb" value="HMDB02111" />
+      <Property key="AlternativeId_Chemspider" value="937" />
+      <Property key="AlternativeId_Chebi" value="15377" />
+      <Property key="AlternativeId_Pubchem" value="962" />
+      <Property key="AlternativeId_LigandCpd" value="C00001" />
+      <Property key="AlternativeId_Cas" value="7732-18-5" />
+      <Property key="Synonym_1" value="H&lt;sub&gt;2&lt;/sub&gt;0" />
+      <Property key="Synonym_2" value="H2O" />
+      <Property key="Synonym_3" value="H20" />
+      <Property key="Synonym_4" value="hydrogen oxide" />
+      <Property key="Synonym_5" value="water" />
+      <Property key="MolecularWeight" value="18.015" />
+      <Property key="MonoisotopicWeight" value="18.0105646863" />
+      <Property key="ChemicalFormula" value="(H 2)(O 1)" />
+      <Property key="InChI" value="InChI=1S/H2O/h1H2" />
+      <Property key="InChIKey" value="InChIKey=XLYOFNOQVPJJNP-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="O" />
+      <Property key="GibbsFreeEnergy" value="-36.144756" />
+      <Property key="CompoundType" value="Compounds" />
+    </DataNode>
+    <DataNode elementId="_-bornyl-diphosphate" textLabel="(+)-bornyl-pyrophosphate" type="Metabolite">
+      <Xref identifier="VZPAJODTZAAANV-UHFFFAOYSA-K" dataSource="InChIKey" />
+      <Graphics centerX="1521.139892578125" centerY="1219.484619140625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="+-bornyl-diphosphate" />
+      <Property key="AlternativeId_Chebi" value="15395" />
+      <Property key="AlternativeId_Pubchem" value="25202170" />
+      <Property key="AlternativeId_LigandCpd" value="C03190" />
+      <Property key="MolecularWeight" value="311.188" />
+      <Property key="MonoisotopicWeight" value="314.0684260167" />
+      <Property key="ChemicalFormula" value="(C 10)(H 17)(O 7)(P 2)" />
+      <Property key="InChI" value="InChI=1S/C10H20O7P2/c1-9(2)7-4-5-10(9,3)8(6-7)16-19(14,15)17-18(11,12)13/h7-8H,4-6H2,1-3H3,(H,14,15)(H2,11,12,13)/p-3" />
+      <Property key="InChIKey" value="InChIKey=VZPAJODTZAAANV-UHFFFAOYSA-K" />
+      <Property key="SMILES" value="CC2(C1(C)(CCC(CC(OP(OP([O-])([O-])=O)([O-])=O)1)2))C" />
+      <Property key="GibbsFreeEnergy" value="-287.24948" />
+      <Property key="CompoundType" value="Bornane-Monoterpenoids, Monoterpenyl-Diphosphates" />
+    </DataNode>
+    <DataNode elementId="CPD-1903" textLabel="(+)-borneol" type="Metabolite">
+      <Xref identifier="DTGKSKDOIYIVQL-SHTILUHOSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1600.0" centerY="537.4297485351562" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-1903" />
+      <Property key="AlternativeId_Chebi" value="15393" />
+      <Property key="AlternativeId_Zinc" value="ZINC000000968099" />
+      <Property key="AlternativeId_Hmdb" value="HMDB35818" />
+      <Property key="AlternativeId_Pubchem" value="657014" />
+      <Property key="AlternativeId_LigandCpd" value="C01765" />
+      <Property key="Synonym_1" value="d-borneol" />
+      <Property key="Synonym_2" value="borneocamphor" />
+      <Property key="Synonym_3" value="endo-2-bornanol" />
+      <Property key="Synonym_4" value="sumatra camphor" />
+      <Property key="Synonym_5" value="(1R,2S,4R)-(+)-borneol" />
+      <Property key="MolecularWeight" value="154.252" />
+      <Property key="MonoisotopicWeight" value="154.1357651999" />
+      <Property key="ChemicalFormula" value="(C 10)(H 18)(O 1)" />
+      <Property key="InChI" value="InChI=1S/C10H18O/c1-9(2)7-4-5-10(9,3)8(11)6-7/h7-8,11H,4-6H2,1-3H3/t7-,8?,10+/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=DTGKSKDOIYIVQL-SHTILUHOSA-N" />
+      <Property key="SMILES" value="CC1(C)([C@H]2(CC[C@](C)1C(O)C2))" />
+      <Property key="GibbsFreeEnergy" value="147.27019" />
+      <Property key="CompoundType" value="Monoterpenols" />
+    </DataNode>
+    <DataNode elementId="PPI" textLabel="pyrophosphate" type="Metabolite">
+      <Xref identifier="XPPKVPWEQAFLFU-UHFFFAOYSA-K" dataSource="InChIKey" />
+      <Graphics centerX="617.195556640625" centerY="778.5057983398438" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PPI" />
+      <Property key="AlternativeId_Chebi" value="33019" />
+      <Property key="AlternativeId_Pubchem" value="4097574" />
+      <Property key="AlternativeId_Bigg" value="ppi" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC33019" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00250" />
+      <Property key="AlternativeId_Drugbank" value="DB04160" />
+      <Property key="AlternativeId_Chemspider" value="996" />
+      <Property key="AlternativeId_LigandCpd" value="C00013" />
+      <Property key="AlternativeId_Cas" value="2466-09-3" />
+      <Property key="Synonym_1" value="PPi" />
+      <Property key="Synonym_2" value="PP" />
+      <Property key="Synonym_3" value="pyrophosphate" />
+      <Property key="MolecularWeight" value="174.951" />
+      <Property key="MonoisotopicWeight" value="177.9432255031" />
+      <Property key="ChemicalFormula" value="(H 1)(O 7)(P 2)" />
+      <Property key="InChI" value="InChI=1S/H4O7P2/c1-8(2,3)7-9(4,5)6/h(H2,1,2,3)(H2,4,5,6)/p-3" />
+      <Property key="InChIKey" value="InChIKey=XPPKVPWEQAFLFU-UHFFFAOYSA-K" />
+      <Property key="SMILES" value="O=P(O)(OP([O-])([O-])=O)[O-]" />
+      <Property key="GibbsFreeEnergy" value="-473.4674" />
+      <Property key="CompoundType" value="Polyphosphates" />
+      <CitationRef elementRef="citation_cit_18493048" />
+    </DataNode>
+    <DataNode elementId="CPD-862" textLabel="(R)-camphor" type="Metabolite">
+      <Xref identifier="DSSYKIVIOFKYAU-XCBNKYQSSA-N" dataSource="InChIKey" />
+      <Graphics centerX="850.3519897460938" centerY="1025.885986328125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="SRI, caspi">Camphor is a white, crystalline solid ketone with a characteristic pungent odor and taste. The natural variety, Japan camphor, is obtained by steam distillation of the wood of the camphor tree (|FRAME: TAX-13429|). Camphor is also synthesized from |FRAME: Alpha-pinene &quot;&amp;alpha;-pinene&quot;|, which is obtained from oil of turpentine.</Comment>
+      <Property key="UniqueID" value="CPD-862" />
+      <Property key="AlternativeId_Zinc" value="ZINC000000967520" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15396" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59838" />
+      <Property key="AlternativeId_Chemspider" value="139902" />
+      <Property key="AlternativeId_Pubchem" value="159055" />
+      <Property key="AlternativeId_Chebi" value="15396" />
+      <Property key="AlternativeId_LigandCpd" value="C00808" />
+      <Property key="AlternativeId_UmBbdCpd" value="c0407" />
+      <Property key="AlternativeId_Cas" value="464-49-3" />
+      <Property key="Synonym_1" value="(+)-bornan-2-one" />
+      <Property key="Synonym_2" value="(+)-camphor" />
+      <Property key="Synonym_3" value="(1&lt;i&gt;R&lt;/i&gt;)-(+)-camphor" />
+      <Property key="Synonym_4" value="(&lt;i&gt;R&lt;/i&gt;)-(+)-camphor" />
+      <Property key="Synonym_5" value="D-camphor" />
+      <Property key="Synonym_6" value="(1&lt;i&gt;&lt;/i&gt;R,4&lt;i&gt;R&lt;/i&gt;)-camphor" />
+      <Property key="MolecularWeight" value="152.236" />
+      <Property key="MonoisotopicWeight" value="152.1201151357" />
+      <Property key="ChemicalFormula" value="(C 10)(H 16)(O 1)" />
+      <Property key="InChI" value="InChI=1S/C10H16O/c1-9(2)7-4-5-10(9,3)8(11)6-7/h7H,4-6H2,1-3H3/t7-,10+/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=DSSYKIVIOFKYAU-XCBNKYQSSA-N" />
+      <Property key="SMILES" value="CC1(C)([C@@H]2(CC[C@]1(C)C(=O)C2))" />
+      <Property key="GibbsFreeEnergy" value="149.52794" />
+      <Property key="CompoundType" value="Camphor" />
+      <Property key="SystematicName" value="(1R,4R)-1,7,7-trimethylbicyclo[2.2.1]heptan-2-one" />
+    </DataNode>
+    <DataNode elementId="NAD" textLabel="NAD⁺" type="Metabolite">
+      <Xref identifier="BAWFJGJZGIEFAR-NNYOXOHSSA-M" dataSource="InChIKey" />
+      <Graphics centerX="100.0" centerY="525.5509643554688" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: NAD| and |FRAME: NADP| are dinucleotides containing one |FRAME: NIACINAMIDE| base and one |FRAME: ADENINE| base. Each nucleotide is connected to a ribose sugar at position 1, and the two riboses are connected at their 5 position via a diphosphate. The only difference between the two is that in NADP there is an additional phosphate group at the 2&apos; position of the ribose that carries the adenine moiety. These molecules are biological carriers of reductive equivalents (i.e. high potential electrons). Most of the time they function as cosubstrates, and in some cases they function as |FRAME: Cofactors cofactors|. They are often referred to by the obsolete term &quot;coenzymes&quot;. The most common function of |FRAME: NAD| is to accept two electrons and a proton (a hydride ion) from a substrate that is being oxidized. This reduction converts |FRAME: NAD| to |FRAME: NADH|, the reduced form. NADH then diffuses or is transported to a terminal oxidase, where the electrons are passed on, regenerating the oxidized form. |FRAME: NADPH|, on the other hand, is mostly involved in biosynthetic reactions, where it serves as an electron donor. NADPH is formed by reduction of |FRAME: NADP|, which occurs by different mechanisms in different types of organisms. In photosynthetic organisms |FRAME: NADP| is reduced by |FRAME: CPLX-84|. In heterotrophic organisms it is reduced by central metabolism processes such as the pentose phosphate pathway (see |FRAME: OXIDATIVEPENT-PWY|).</Comment>
+      <Property key="UniqueID" value="NAD" />
+      <Property key="AlternativeId_Mediadb" value="compounds/3/" />
+      <Property key="AlternativeId_Seed" value="cpd00003" />
+      <Property key="AlternativeId_Metanetx" value="MNXM8" />
+      <Property key="AlternativeId_Refmet" value="NAD+" />
+      <Property key="AlternativeId_Bigg" value="nad" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57540" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00902" />
+      <Property key="AlternativeId_Chemspider" value="10239196" />
+      <Property key="AlternativeId_Chebi" value="57540" />
+      <Property key="AlternativeId_Pubchem" value="15938971" />
+      <Property key="AlternativeId_LigandCpd" value="C00003" />
+      <Property key="AlternativeId_Cas" value="53-84-9" />
+      <Property key="Synonym_1" value="NAD+" />
+      <Property key="Synonym_2" value="beta-nicotinamide adenine dinucleotide" />
+      <Property key="Synonym_3" value="coenzyme I" />
+      <Property key="Synonym_4" value="diphosphopyridine nucleotide" />
+      <Property key="Synonym_5" value="diphosphopyridine nucleotide oxidized" />
+      <Property key="Synonym_6" value="nicotinamide adenine dinucleotide" />
+      <Property key="Synonym_7" value="nicotinamide adenine dinucleotide oxidized" />
+      <Property key="Synonym_8" value="NAD-oxidized" />
+      <Property key="Synonym_9" value="NAD-ox" />
+      <Property key="Synonym_10" value="DPN+" />
+      <Property key="Synonym_11" value="DPN-ox" />
+      <Property key="Synonym_12" value="DPN" />
+      <Property key="Synonym_13" value="&amp;beta;-nicotinamide adenine dinucleotide" />
+      <Property key="Synonym_14" value="NAD" />
+      <Property key="Synonym_15" value="&amp;beta;-NAD&lt;sup&gt;+&lt;/sup&gt;" />
+      <Property key="MolecularWeight" value="662.422" />
+      <Property key="MonoisotopicWeight" value="665.1247716966999" />
+      <Property key="ChemicalFormula" value="(C 21)(H 26)(N 7)(O 14)(P 2)" />
+      <Property key="InChI" value="InChI=1S/C21H27N7O14P2/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(32)14(30)11(41-21)6-39-44(36,37)42-43(34,35)38-5-10-13(29)15(31)20(40-10)27-3-1-2-9(4-27)18(23)33/h1-4,7-8,10-11,13-16,20-21,29-32H,5-6H2,(H5-,22,23,24,25,33,34,35,36,37)/p-1/t10-,11-,13-,14-,15-,16-,20-,21-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=BAWFJGJZGIEFAR-NNYOXOHSSA-M" />
+      <Property key="SMILES" value="C5(/C(/C(N)=O)=C\C=C/[N+](/[C@@H]4(O[C@H](COP(OP(OC[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3))(=O)[O-])(=O)[O-])[C@@H](O)[C@@H](O)4))=5)" />
+      <Property key="GibbsFreeEnergy" value="-338.38196" />
+      <Property key="CompoundType" value="NAD-P-OR-NOP" />
+    </DataNode>
+    <DataNode elementId="PHMB" textLabel="p-hydroxymercuribenzoate" type="Metabolite">
+      <Xref identifier="WMHRYLDWLOGHSG-UHFFFAOYSA-L" dataSource="InChIKey" />
+      <Graphics centerX="1051.9193115234375" centerY="953.1690673828125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PHMB" />
+      <Property key="AlternativeId_Metanetx" value="MNXM66210" />
+      <Property key="AlternativeId_Chemspider" value="15605527" />
+      <Property key="AlternativeId_Pubchem" value="3647458" />
+      <Property key="Synonym_1" value="(p-carboxyphenyl)hydroxymercury" />
+      <Property key="Synonym_2" value="p-hydroxymercuribenzoic acid" />
+      <Property key="Synonym_3" value="PHMB" />
+      <Property key="MolecularWeight" value="337.705" />
+      <Property key="MonoisotopicWeight" value="340.0023200589" />
+      <Property key="ChemicalFormula" value="(C 7)(H 5)(O 3)(HG 1)" />
+      <Property key="InChI" value="InChI=1S/C7H5O2.Hg.H2O/c8-7(9)6-4-2-1-3-5-6;;/h2-5H,(H,8,9);;1H2/q;+1;/p-2" />
+      <Property key="InChIKey" value="InChIKey=WMHRYLDWLOGHSG-UHFFFAOYSA-L" />
+      <Property key="SMILES" value="C1(=C/C=C(\C=C/1)/C(=O)[O-])[Hg]O" />
+      <Property key="GibbsFreeEnergy" value="-41.486458" />
+      <Property key="CompoundType" value="Compounds" />
+    </DataNode>
+    <DataNode elementId="DIISOPROPYL-FLUOROPHOSPHATE" textLabel="diisopropyl fluorophosphate" type="Metabolite">
+      <Xref identifier="MUCZHBLJLSDCSD-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1051.9193115234375" centerY="953.1690673828125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="DIISOPROPYL-FLUOROPHOSPHATE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000008214587" />
+      <Property key="AlternativeId_Seed" value="cpd00174" />
+      <Property key="AlternativeId_Metanetx" value="MNXM4574" />
+      <Property key="AlternativeId_Refmet" value="Isoflurophate" />
+      <Property key="AlternativeId_Hmdb" value="HMDB14815" />
+      <Property key="AlternativeId_Drugbank" value="DB00677" />
+      <Property key="AlternativeId_Chemspider" value="5723" />
+      <Property key="AlternativeId_Pubchem" value="5936" />
+      <Property key="AlternativeId_Chebi" value="17941" />
+      <Property key="AlternativeId_LigandCpd" value="C00202" />
+      <Property key="MolecularWeight" value="184.147" />
+      <Property key="MonoisotopicWeight" value="184.06645902570003" />
+      <Property key="ChemicalFormula" value="(C 6)(H 14)(O 3)(F 1)(P 1)" />
+      <Property key="InChI" value="InChI=1S/C6H14FO3P/c1-5(2)9-11(7,8)10-6(3)4/h5-6H,1-4H3" />
+      <Property key="InChIKey" value="InChIKey=MUCZHBLJLSDCSD-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="CC(C)OP(=O)(F)OC(C)C" />
+      <Property key="GibbsFreeEnergy" value="60.15568" />
+      <Property key="CompoundType" value="Compounds" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="GERANYL-DIPHOSPHATE-CYCLASE-RXN">
+      <Xref identifier="EC-5.5.1.8" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="GERANYL-DIPHOSPHATE-CYCLASE-RXN_start" x="927.69873046875" y="786.853515625" elementRef="GERANYL-PP" relX="1.0" relY="0.0" />
+        <Point elementId="GERANYL-DIPHOSPHATE-CYCLASE-RXN_end" arrowHead="Conversion" x="1476.139892578125" y="1219.484619140625" elementRef="_-bornyl-diphosphate" relX="-1.0" relY="0.0" />
+        <Anchor elementId="GERANYL-DIPHOSPHATE-CYCLASE-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Comment source="BioCyc">Requires Mg&lt;sup&gt;2+&lt;/sup&gt;. The enzyme from |FRAME: TAX-38868 &lt;i&gt;Salvia officinalis&lt;/i&gt;| (sage) can also use (3R)-linalyl diphosphate or more slowly neryl diphosphate &lt;i&gt;in vitro&lt;/i&gt; |CITS: [3759972]|. The reaction proceeds via isomeration of geranyl diphosphate to (3R)-linalyl diphosphate. The oxygen and phosphorus directly linked to C-1 of geranyl diphosphate is also linked to C-2 of |FRAME: CPD-215 (+)-bornyl-diphosphate| |CITS: [3759972]|. cf. |FRAME: RXN-13002 &quot;EC 5.5.1.f [(-)-bornyl diphosphate synthase]&quot;|.</Comment>
+      <Property key="UniqueID" value="GERANYL-DIPHOSPHATE-CYCLASE-RXN" />
+      <Property key="EC_Number" value="EC-5.5.1.8" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-6990, PWY-5813" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="GERANYL-PP =&gt; +-bornyl-pyrophosphate" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-14701" />
+      <Property key="Synonym_1" value="Bornyl pyrophosphate synthase" />
+      <Property key="Synonym_2" value="Bornyl diphosphate synthase" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <CitationRef elementRef="citation_cit_3759972" />
+    </Interaction>
+    <Interaction elementId="GERANYL-DIPHOSPHATE-CYCLASE-RXN_ENZRXN-14701">
+      <Waypoints>
+        <Point elementId="GERANYL-DIPHOSPHATE-CYCLASE-RXN_ENZRXN-14701_start" x="615.9423828125" y="246.04481506347656" elementRef="MONOMER-13764" relX="0.0" relY="1.0" />
+        <Point elementId="GERANYL-DIPHOSPHATE-CYCLASE-RXN_ENZRXN-14701_end" arrowHead="Catalysis" x="0" y="0" elementRef="GERANYL-DIPHOSPHATE-CYCLASE-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-13046">
+      <Xref identifier="EC-3.1.3" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-13046_start" x="1566.139892578125" y="1219.484619140625" elementRef="_-bornyl-diphosphate" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-13046_end" arrowHead="Conversion" x="1555.0" y="537.4297485351562" elementRef="CPD-1903" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-13046_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-13046" />
+      <Property key="ReactionName" value="(+)-bornyl diphosphate hydrolase" />
+      <Property key="EC_Number" value="EC-3.1.3" />
+      <Property key="Pathways" value="PWY-6990" />
+      <Property key="ReactionEquation" value="+-bornyl-pyrophosphate + WATER =&gt; CPD-1903 + PPI" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-19986" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <CitationRef elementRef="citation_cit_5532413" />
+      <CitationRef elementRef="citation_cit_42357" />
+    </Interaction>
+    <Interaction elementId="RXN-13046_ENZRXN-19986">
+      <Waypoints>
+        <Point elementId="RXN-13046_ENZRXN-19986_start" x="925.16162109375" y="607.9088134765625" elementRef="MONOMER-17128" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-13046_ENZRXN-19986_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-13046_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-13046_anchor_reactant_1">
+      <Xref identifier="EC-3.1.3" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-13046_anchor_reactant_start_1" x="962.6902465820312" y="1550.0" elementRef="WATER" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-13046_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-13046_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-13046_anchor_product_1">
+      <Xref identifier="EC-3.1.3" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-13046_anchor_product_start_1" x="0" y="0" elementRef="RXN-13046_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-13046_anchor_product_end_1" arrowHead="Conversion" x="572.195556640625" y="778.5057983398438" elementRef="PPI" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_-BORNEOL-DEHYDROGENASE-RXN">
+      <Xref identifier="EC-1.1.1.198" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_-BORNEOL-DEHYDROGENASE-RXN_start" x="1645.0" y="537.4297485351562" elementRef="CPD-1903" relX="1.0" relY="0.0" />
+        <Point elementId="_-BORNEOL-DEHYDROGENASE-RXN_end" arrowHead="Conversion" x="805.3519897460938" y="1025.885986328125" elementRef="CPD-862" relX="-1.0" relY="0.0" />
+        <Anchor elementId="_-BORNEOL-DEHYDROGENASE-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="+-BORNEOL-DEHYDROGENASE-RXN" />
+      <Property key="EC_Number" value="EC-1.1.1.198" />
+      <Property key="Pathways" value="PWY-6990" />
+      <Property key="ReactionEquation" value="CPD-1903 + NAD &lt;=&gt; CPD-862 + NADH + PROTON" />
+      <Property key="ReactionDirection" value="REVERSIBLE" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-19984" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+    </Interaction>
+    <Interaction elementId="_-BORNEOL-DEHYDROGENASE-RXN_ENZRXN-19984">
+      <Waypoints>
+        <Point elementId="_-BORNEOL-DEHYDROGENASE-RXN_ENZRXN-19984_start" x="1138.2791748046875" y="848.3812255859375" elementRef="MONOMER-17127" relX="0.0" relY="1.0" />
+        <Point elementId="_-BORNEOL-DEHYDROGENASE-RXN_ENZRXN-19984_end" arrowHead="Catalysis" x="0" y="0" elementRef="_-BORNEOL-DEHYDROGENASE-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_-BORNEOL-DEHYDROGENASE-RXN_anchor_reactant_1">
+      <Xref identifier="EC-1.1.1.198" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_-BORNEOL-DEHYDROGENASE-RXN_anchor_reactant_start_1" x="145.0" y="525.5509643554688" elementRef="NAD" relX="1.0" relY="0.0" />
+        <Point elementId="_-BORNEOL-DEHYDROGENASE-RXN_anchor_reactant_end_1" x="0" y="0" elementRef="_-BORNEOL-DEHYDROGENASE-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_-BORNEOL-DEHYDROGENASE-RXN_anchor_product_1">
+      <Xref identifier="EC-1.1.1.198" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_-BORNEOL-DEHYDROGENASE-RXN_anchor_product_start_1" x="0" y="0" elementRef="_-BORNEOL-DEHYDROGENASE-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="_-BORNEOL-DEHYDROGENASE-RXN_anchor_product_end_1" arrowHead="Conversion" x="232.49188232421875" y="1256.724609375" elementRef="NADH" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_-BORNEOL-DEHYDROGENASE-RXN_anchor_product_2">
+      <Xref identifier="EC-1.1.1.198" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_-BORNEOL-DEHYDROGENASE-RXN_anchor_product_start_2" x="0" y="0" elementRef="_-BORNEOL-DEHYDROGENASE-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="_-BORNEOL-DEHYDROGENASE-RXN_anchor_product_end_2" arrowHead="Conversion" x="1117.22607421875" y="50.0" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="GERANYL-DIPHOSPHATE-CYCLASE-RXN_regulation_0">
+      <Waypoints>
+        <Point elementId="GERANYL-DIPHOSPHATE-CYCLASE-RXN_regulation_start_0" x="1096.9193115234375" y="953.1690673828125" elementRef="PHMB" relX="1.0" relY="0.0" />
+        <Point elementId="GERANYL-DIPHOSPHATE-CYCLASE-RXN_regulation_end_0" arrowHead="Inhibition" x="1201.9193115234375" y="1003.1690673828125" elementRef="GERANYL-DIPHOSPHATE-CYCLASE-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-13564" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="Mechanism" value=":OTHER" />
+      <Property key="RegulatedEntity" value="ENZRXN-14701" />
+      <Property key="Regulator" value="PHMB" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <CitationRef elementRef="citation_cit_42356" />
+    </Interaction>
+    <Interaction elementId="GERANYL-DIPHOSPHATE-CYCLASE-RXN_regulation_1">
+      <Waypoints>
+        <Point elementId="GERANYL-DIPHOSPHATE-CYCLASE-RXN_regulation_start_1" x="1096.9193115234375" y="953.1690673828125" elementRef="DIISOPROPYL-FLUOROPHOSPHATE" relX="1.0" relY="0.0" />
+        <Point elementId="GERANYL-DIPHOSPHATE-CYCLASE-RXN_regulation_end_1" arrowHead="Inhibition" x="1201.9193115234375" y="1003.1690673828125" elementRef="GERANYL-DIPHOSPHATE-CYCLASE-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-13563" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="Mechanism" value=":OTHER" />
+      <Property key="RegulatedEntity" value="ENZRXN-14701" />
+      <Property key="Regulator" value="DIISOPROPYL-FLUOROPHOSPHATE" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <CitationRef elementRef="citation_cit_42356" />
+    </Interaction>
+    <Interaction elementId="_-BORNEOL-DEHYDROGENASE-RXN_regulation_0">
+      <Waypoints>
+        <Point elementId="_-BORNEOL-DEHYDROGENASE-RXN_regulation_start_0" x="1096.9193115234375" y="953.1690673828125" elementRef="PHMB" relX="1.0" relY="0.0" />
+        <Point elementId="_-BORNEOL-DEHYDROGENASE-RXN_regulation_end_0" arrowHead="Inhibition" x="1225.176025390625" y="781.6578369140625" elementRef="_-BORNEOL-DEHYDROGENASE-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-13562" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="Mechanism" value=":OTHER" />
+      <Property key="RegulatedEntity" value="ENZRXN-19984" />
+      <Property key="Regulator" value="PHMB" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <CitationRef elementRef="citation_cit_677891" />
+    </Interaction>
+  </Interactions>
+  <Groups>
+    <Group elementId="CPLX-8430" textLabel="(+)-bornyl pyrophosphate synthase" type="Complex">
+      <Xref identifier="CPLX-8430" dataSource="plantcyc" />
+      <Graphics centerX="615.9423828125" centerY="233.54481506347656" width="140" height="100" textColor="666666" fontName="Arial" fontSize="10" borderColor="9900CC" borderStyle="Dashed" borderWidth="2.0" fillColor="F5E6FF" shapeType="Rectangle" zOrder="-1" />
+      <Comment source="O-28, hartmut, SRI, caspi">The first characterization of the enzyme was done in 1979, when the enzyme was partially purified from sage (|FRAME: TAX-38868 &lt;i&gt;Salvia officinalis&lt;/i&gt;|) leaves |CITS: [42356]|. The enzyme, whose molecular weight was estimated as 95 kDa, had a strong (20 fold) preference for |FRAME: GERANYL-PP geranyl diphosphate| over |FRAME: CPD-461 neryl diphosphate|, and required Mg&lt;sup&gt;2+&lt;/sup&gt; for activity. In a much later study, a cDNA clone encoding a monoterpene synthase that produces |FRAME: CPD-215 (+)-bornyl-diphosphate| was isolated from sage, recombinantly expressed in &lt;i&gt;E. coli&lt;/i&gt;, and purified |CITS: [9614092]|. The recombinant protein (SBS), which had a molecular weight of 69.2 kDa, catalyzed the cyclization of |FRAME: GERANYL-PP geranyl diphosphate| and formed |FRAME: CPD-215 (+)-bornyl-diphosphate| as the major product. In addition it also catalyzed significant amounts of |FRAME: CPD-8754 (+)-&amp;alpha;-pinene|, |FRAME: CPD-8767 (+)-camphene| and |FRAME: Limonenes limonene|. The authors suggested that the enzyme may represent both bornyl diphosphate synthase and (+)-&amp;alpha;-pinene synthase, which were considered as distinct enzymes in previous studies. The enzyme is translated as a preprotein bearing an amino-terminal plastid-targeting sequence |CITS: [9614092]|. The X-ray crystal structure, which was determined at a resolution of 2.0 &amp;Aring;, suggests that the enzyme is a homodimer. Each monomer contains two &amp;alpha;-helical domains; the C-terminal domain catalyzes the cyclization of geranyl diphosphate. The role of the N-terminal domain is not defined |CITS: [12432096]|.</Comment>
+      <Property key="UniqueID" value="CPLX-8430" />
+      <Property key="ComplexComponents" value="MONOMER-13764" />
+      <Property key="ComponentCount" value="1" />
+      <Property key="IsComplex" value="true" />
+      <Property key="MolecularWeightExp" value="120." />
+      <Property key="MolecularWeightKD" value="120." />
+      <Property key="Catalyzes" value="RXN-14701" />
+      <Property key="ProteinType" value="Protein-Complexes" />
+      <Property key="Species" value="TAX-38868" />
+      <CitationRef elementRef="citation_cit_42356" />
+      <CitationRef elementRef="citation_cit_9614092" />
+      <CitationRef elementRef="citation_cit_12432096" />
+    </Group>
+  </Groups>
+  <Citations>
+    <Citation elementId="citation_cit_12432096">
+      <Xref identifier="12432096" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_3310901">
+      <Xref identifier="3310901" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_16661761">
+      <Xref identifier="16661761" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_5532413">
+      <Xref identifier="5532413" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_677891">
+      <Xref identifier="677891" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_18493048">
+      <Xref identifier="18493048" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_42357">
+      <Xref identifier="42357" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_9614092">
+      <Xref identifier="9614092" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_921300">
+      <Xref identifier="921300" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_42356">
+      <Xref identifier="42356" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_10906">
+      <Xref identifier="10906" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_3759972">
+      <Xref identifier="3759972" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

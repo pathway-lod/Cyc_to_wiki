@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="galactolipid biosynthesis I" organism="ORG-5993" source="PlantCyc">
+  <Xref identifier="PWY-401" dataSource="MetaCyc" />
+  <Description>&lt;B&gt;General Info &lt;/B&gt; Phosphoglycerides (phospholipids) are major membrane lipids found in nature which have phosphate as their hydrophilic heads. In contrast, the plant plastid (including chloroplast) membrane only has phosphoglycerides as a minor constituent. Instead, glycosylglycerides (glycolipids) are the main membrane lipids, which have sugars as their hydrophilic heads. There are three important glycosylglycerides: monogalactosyldiacylglycerol (MGDG), digalactosyldiacylglycerol (DGDG), and sulfoquinovosyldiacylglycerol (SQDG, see |FRAME: PWYQT-4427 sulfolipid biosynthesis|). Both MGDG and DGDG have galactose as the sugar group and are also known as galactolipids. SQDG has sulfoquinovose as the sugar group and is thus known as sulfolipid. All these glycosylglycerides are synthesized within the chloroplast using diacylglycerol (DAG) as the substrate. In plants, DAG and DAG-derived glycosylglycerides are classified as either prokaryotic or eukaryotic. The prokaryotic pathway uses fatty acids synthesized de novo in plastids. Because of the substrate specificity of plastid acyltransferases, the DAG pool made from the prokaryotic pathway has 16-carbon fatty acids at the sn-2 position of glycerol backbone, and 18-carbon at the sn-1 position. The C18/C16 structure is similar to that of cyanobacteria glycerolipids and is called prokaryotic. In the eukaryotic pathway, fatty acids synthesized in plastids are exported to cytosol, and are used in endoplasmic reticulum for the synthesis of DAG. Because of the substrate specificity of ER isozyme acyltransferases, the DAG pool is highly enriched with 18-carbon fatty acids at sn-1 and sn-2 positions. The C18/C18 structure is only found in eukaryotic lipids, and is thus called eukaryotic. &lt;B&gt;About this pathway &lt;/B&gt; In Arabidopsis, MGD1 and DGD1 are responsible for the bulk of MGDG and DGDG biosynthesis, respectively. MGD2, MGD3 and DGD2 are of conditional importance in glycolipid biosynthesis when the plants are under phosphate deprivation. In addition to MGDG and DGDG, under certain circumstances, plants can synthesize higher galactosylated forms of galactoglycerolipids by a galactolipid:galactolipid galactosyltransferase (GGGT). The GGGT activity is not detectable in plants under normal growth conditions. Since GGGT activity also generates a DAG molecule, by providing DAG, it is postulated to be involved in remodeling of MGDG or triacylglycerol biosynthesis in extreme conditions.</Description>
+  <Authors>
+    <Author name="xue" />
+    <Author name="zhang" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-401" />
+  <Property key="Type" value="Glycolipids-Biosynthesis" />
+  <Property key="ReactionCount" value="5" />
+  <Property key="ReactionIDs" value="RXN-16635, RXN-9721, RXN-1226, RXN-1225, 2.4.1.46-RXN" />
+  <Property key="PredecessorCount" value="4" />
+  <Property key="PrimaryCompoundCount" value="5" />
+  <Property key="PathwayLinks" value="(|Galactosyl-galactosyl-diacyl-glycerols| PWY-782), (|D-Galactosyl-12-diacyl-glycerols| (PWY-782 . :OUTGOING))" />
+  <Property key="Organism" value="ORG-5993" />
+  <Property key="TaxonomicRange_1" value="TAX-3193" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation__PLANTBIOCHEMISTRY97_" />
+  <CitationRef elementRef="citation__arabidopsis94_" />
+  <CitationRef elementRef="citation__11553816_" />
+  <CitationRef elementRef="citation_cit_15590685" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="AT5G20410" textLabel="MGD2" type="GeneProduct">
+      <Xref identifier="AT5G20410" dataSource="TAIR" />
+      <Graphics centerX="775.0809326171875" centerY="839.1292724609375" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT5G20410" />
+      <Property key="Synonym_1" value="At5g20410" />
+      <Property key="Product" value="AT5G20410-MONOMER" />
+      <Property key="StartPosition" value="6896578" />
+      <Property key="EndPosition" value="6898785" />
+      <Property key="GeneType" value="Genes" />
+    </DataNode>
+    <DataNode elementId="AT4G31780" textLabel="MGD1" type="GeneProduct">
+      <Xref identifier="AT4G31780" dataSource="TAIR" />
+      <Graphics centerX="1282.195068359375" centerY="296.6466064453125" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT4G31780" />
+      <Property key="Synonym_1" value="UGT81A1" />
+      <Property key="Product" value="AT4G31780-MONOMER" />
+      <Property key="StartPosition" value="15374005" />
+      <Property key="EndPosition" value="15377140" />
+      <Property key="GeneType" value="Genes" />
+    </DataNode>
+    <DataNode elementId="G-14491" textLabel="MGD" type="GeneProduct">
+      <Xref identifier="G-14491" dataSource="plantcyc" />
+      <Graphics centerX="942.2257080078125" centerY="525.533935546875" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="G-14491" />
+      <Property key="Product" value="MONOMER-16633" />
+      <Property key="GeneType" value="Genes" />
+    </DataNode>
+    <DataNode elementId="AT4G00550" textLabel="DGD2" type="GeneProduct">
+      <Xref identifier="AT4G00550" dataSource="TAIR" />
+      <Graphics centerX="1600.0" centerY="558.4661254882812" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT4G00550" />
+      <Property key="Product" value="AT4G00550-MONOMER" />
+      <Property key="GeneType" value="Genes" />
+    </DataNode>
+    <DataNode elementId="AT3G06510" textLabel="AT3G06510" type="GeneProduct">
+      <Xref identifier="AT3G06510" dataSource="TAIR" />
+      <Graphics centerX="100.0" centerY="837.2996826171875" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT3G06510" />
+      <Property key="Synonym_1" value="SFR2" />
+      <Property key="Product" value="AT3G06510-MONOMER" />
+      <Property key="StartPosition" value="2016443" />
+      <Property key="EndPosition" value="2019680" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+    </DataNode>
+    <DataNode elementId="AT2G11810" textLabel="MGD3" type="GeneProduct">
+      <Xref identifier="AT2G11810" dataSource="TAIR" />
+      <Graphics centerX="870.8804931640625" centerY="807.4910888671875" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT2G11810" />
+      <Property key="Synonym_1" value="At2g11810" />
+      <Property key="Product" value="AT2G11810-MONOMER" />
+      <Property key="StartPosition" value="4750404" />
+      <Property key="EndPosition" value="4753859" />
+      <Property key="GeneType" value="Genes" />
+    </DataNode>
+    <DataNode elementId="AT3G11670" textLabel="DGD1" type="GeneProduct">
+      <Xref identifier="AT3G11670" dataSource="TAIR" />
+      <Graphics centerX="1004.7877197265625" centerY="1550.0" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT3G11670" />
+      <Property key="Product" value="AT3G11670-MONOMER" />
+      <Property key="GeneType" value="Genes" />
+    </DataNode>
+    <DataNode elementId="AT4G31780-MONOMER" textLabel="UDP-galactose:DAG galactosyltransferase" type="Protein">
+      <Xref identifier="AT4G31780.3" dataSource="TAIR" />
+      <Graphics centerX="549.4439697265625" centerY="942.689697265625" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">MGD1 is also known as the type A MGDG synthase. In Arabidopsis, MGD1 and DGD1 are responsible for the bulk of MGDG and DGDG biosynthesis, respectively. MGD2, MGD3 and DGD2 are of conditional importance in glycolipid biosynthesis when the plants are under phosphate deprivation.</Comment>
+      <Property key="UniqueID" value="AT4G31780-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT4G31780.3" />
+      <Property key="Synonym_1" value="AT4G31780.3" />
+      <Property key="Synonym_2" value="1,2-diacylglycerol 3-beta-galactosyltransferase" />
+      <Property key="Synonym_3" value="MGDG synthase" />
+      <Property key="Synonym_4" value="MGD1" />
+      <Property key="MolecularWeightSeq" value="46.87" />
+      <Property key="MolecularWeightExp" value="[&apos;46.87&apos;, &apos;46.87&apos;]" />
+      <Property key="MolecularWeightKD" value="[&apos;46.87&apos;, &apos;46.87&apos;, &apos;46.87&apos;]" />
+      <Property key="Gene" value="AT4G31780" />
+      <Property key="Catalyzes" value="RXN-1364" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_cit_15590685" />
+      <CitationRef elementRef="citation__10869420_" />
+      <CitationRef elementRef="citation__11553816_" />
+      <CitationRef elementRef="citation_cit_10848996" />
+    </DataNode>
+    <DataNode elementId="AT3G06510-MONOMER" textLabel="hydrolase, hydrolyzing O-glycosyl compounds" type="Protein">
+      <Xref identifier="Q93Y07" dataSource="uniprot" />
+      <Graphics centerX="617.0108642578125" centerY="1404.8111572265625" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">galactolipid:galactolipid galactosyltransferase (GGGT) activity, which is not detectable under normal growth conditions, was detected in the Arabidopsis tgd1 mutant. Under certain circumstances, plants can synthesize higher galactosylated forms of galactoglycerolipids. UDP-galactose is not the galactosyl donor. The galactosyl linkages are all in beta form.</Comment>
+      <Property key="UniqueID" value="AT3G06510-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT3G06510.2" />
+      <Property key="AlternativeId_Uniprot" value="Q93Y07" />
+      <Property key="Synonym_1" value="GGGT" />
+      <Property key="Gene" value="AT3G06510" />
+      <Property key="Catalyzes" value="RXN-15363, RXN-ARA-21, RXN-15364" />
+      <Property key="CatalyzesCount" value="3" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_cit_12743031" />
+    </DataNode>
+    <DataNode elementId="AT5G20410-MONOMER" textLabel="UDP-galactose:DAG galactosyltransferase" type="Protein">
+      <Xref identifier="AT5G20410.1" dataSource="TAIR" />
+      <Graphics centerX="358.141845703125" centerY="239.46925354003906" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">MGD2 is a type B MGDG synthase. In Arabidopsis, MGD1 and DGD1 are responsible for the bulk of MGDG and DGDG biosynthesis, respectively. MGD2, MGD3 and DGD2 are of conditional importance in glycolipid biosynthesis when the plants are under phosphate deprivation.</Comment>
+      <Property key="UniqueID" value="AT5G20410-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT5G20410.1" />
+      <Property key="Synonym_1" value="1,2-diacylglycerol 3-beta-galactosyltransferase" />
+      <Property key="Synonym_2" value="MGDG synthase" />
+      <Property key="Synonym_3" value="MGD2" />
+      <Property key="MolecularWeightExp" value="[&apos;52.7&apos;, &apos;52.7&apos;]" />
+      <Property key="MolecularWeightKD" value="[&apos;52.7&apos;, &apos;52.7&apos;]" />
+      <Property key="Gene" value="AT5G20410" />
+      <Property key="Catalyzes" value="RXN-2.4.1.46-2" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_cit_15590685" />
+      <CitationRef elementRef="citation__11553816_" />
+    </DataNode>
+    <DataNode elementId="AT4G00550-MONOMER" textLabel="digalactosyldiacylglycerol synthase" type="Protein">
+      <Xref identifier="AT4G00550.1" dataSource="TAIR" />
+      <Graphics centerX="1139.1781005859375" centerY="668.4796752929688" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">In Arabidopsis, MGD1 and DGD1 are responsible for the bulk of MGDG and DGDG biosynthesis, respectively. MGD2, MGD3 and DGD2 are of conditional importance in glycolipid biosynthesis when the plants are under phosphate deprivation.</Comment>
+      <Property key="UniqueID" value="AT4G00550-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT4G00550.1" />
+      <Property key="Synonym_1" value="DGDG synthase" />
+      <Property key="Gene" value="AT4G00550" />
+      <Property key="Catalyzes" value="RXN-ARA-770, RXN-1385" />
+      <Property key="CatalyzesCount" value="2" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_cit_15590685" />
+      <CitationRef elementRef="citation__10973486_" />
+    </DataNode>
+    <DataNode elementId="AT3G11670-MONOMER" textLabel="AT3G11670-MONOMER" type="Protein">
+      <Xref identifier="AT3G11670.1" dataSource="TAIR" />
+      <Graphics centerX="706.8753051757812" centerY="681.266845703125" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT3G11670-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT3G11670.1" />
+      <Property key="Synonym_1" value="DGDG synthase" />
+      <Property key="MolecularWeightExp" value="90." />
+      <Property key="MolecularWeightKD" value="90." />
+      <Property key="Gene" value="AT3G11670" />
+      <Property key="Catalyzes" value="RXN-10738, RXN-15362" />
+      <Property key="CatalyzesCount" value="2" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation__11429410_" />
+    </DataNode>
+    <DataNode elementId="AT2G11810-MONOMER" textLabel="UDP-galactose:DAG galactosyltransferase" type="Protein">
+      <Xref identifier="AT2G11810.1" dataSource="TAIR" />
+      <Graphics centerX="275.9146728515625" centerY="1236.7305908203125" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">MGD3 is a type B MGDG synthase. In Arabidopsis, MGD1 and DGD1 are responsible for the bulk of MGDG and DGDG biosynthesis, respectively. MGD2, MGD3 and DGD2 are of conditional importance in glycolipid biosynthesis when the plants are under phosphate deprivation.</Comment>
+      <Property key="UniqueID" value="AT2G11810-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT2G11810.1" />
+      <Property key="Synonym_1" value="1,2-diacylglycerol 3-beta-galactosyltransferase" />
+      <Property key="Synonym_2" value="MGDG synthase" />
+      <Property key="Synonym_3" value="MGD3" />
+      <Property key="MolecularWeightExp" value="[&apos;52.8&apos;, &apos;52.8&apos;]" />
+      <Property key="MolecularWeightKD" value="[&apos;52.8&apos;, &apos;52.8&apos;]" />
+      <Property key="Gene" value="AT2G11810" />
+      <Property key="Catalyzes" value="RXN-2.4.1.46-3" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_cit_15590685" />
+      <CitationRef elementRef="citation__11553816_" />
+    </DataNode>
+    <DataNode elementId="MONOMER-16633" textLabel="MONOMER-16633" type="Protein">
+      <Xref identifier="Q7XZR6" dataSource="uniprot" />
+      <Graphics centerX="390.8833312988281" centerY="622.4443969726562" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="MONOMER-16633" />
+      <Property key="AlternativeId_Cazy" value="GT28" />
+      <Property key="AlternativeId_Pid" value="BAC77638" />
+      <Property key="AlternativeId_Uniprot" value="Q7XZR6" />
+      <Property key="MolecularWeightSeq" value="39.9" />
+      <Property key="MolecularWeightKD" value="39.9" />
+      <Property key="Gene" value="G-14491" />
+      <Property key="Catalyzes" value="RXN-19224" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="TAX-39947" />
+    </DataNode>
+    <DataNode elementId="Tetragalactosyldiacylglycerol" textLabel="a tetragalactosyldiacylglycerol" type="Metabolite">
+      <Xref identifier="MNXM148850" dataSource="MetaNetX" />
+      <Graphics centerX="709.33154296875" centerY="368.6467590332031" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="Tetragalactosyldiacylglycerol" />
+      <Property key="AlternativeId_Metanetx" value="MNXM148850" />
+      <Property key="Synonym_1" value="a (&amp;beta;-D-galactosyl-(1-&gt;6)-(&amp;beta;-D-galactosyl-(1-&gt;6)-&amp;beta;-D-galactosyl-(1-&gt;6)-&amp;beta;-D-galactosyl)-1,2-diacyl-&lt;i&gt;sn&lt;/i&gt;-glycerol" />
+      <Property key="Synonym_2" value="TetGDG" />
+      <Property key="SMILES" value="C(O)[C@H]4(O[C@@H](OC[C@H]1(O[C@H]([C@H](O)[C@@H](O)[C@@H](O)1)OC[C@H]2(O[C@H]([C@H](O)[C@@H](O)[C@@H](O)2)OC[C@H]3(O[C@@H](OC[C@@H](COC(=O)[R1])OC(=O)[R2])[C@H](O)[C@@H](O)[C@@H](O)3))))[C@H](O)[C@@H](O)[C@@H](O)4)" />
+      <Property key="CompoundType" value="Galactolipids" />
+    </DataNode>
+    <DataNode elementId="UDP" textLabel="UDP" type="Metabolite">
+      <Xref identifier="XCCTYIAWTASOJW-XVFCMESISA-K" dataSource="InChIKey" />
+      <Graphics centerX="904.383056640625" centerY="742.4490966796875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="UDP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004490939" />
+      <Property key="AlternativeId_Seed" value="cpd00014" />
+      <Property key="AlternativeId_Metanetx" value="MNXM17" />
+      <Property key="AlternativeId_Refmet" value="UDP" />
+      <Property key="AlternativeId_Bigg" value="udp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC58223" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00295" />
+      <Property key="AlternativeId_Chemspider" value="16739715" />
+      <Property key="AlternativeId_Pubchem" value="20056717" />
+      <Property key="AlternativeId_Chebi" value="58223" />
+      <Property key="AlternativeId_Knapsack" value="C00007313" />
+      <Property key="AlternativeId_LigandCpd" value="C00015" />
+      <Property key="AlternativeId_Cas" value="58-98-0" />
+      <Property key="Synonym_1" value="uridine-diphosphate" />
+      <Property key="Synonym_2" value="uridine-5&apos;-diphosphate" />
+      <Property key="MolecularWeight" value="401.14" />
+      <Property key="MonoisotopicWeight" value="404.002196945" />
+      <Property key="ChemicalFormula" value="(C 9)(H 11)(N 2)(O 12)(P 2)" />
+      <Property key="InChI" value="InChI=1S/C9H14N2O12P2/c12-5-1-2-11(9(15)10-5)8-7(14)6(13)4(22-8)3-21-25(19,20)23-24(16,17)18/h1-2,4,6-8,13-14H,3H2,(H,19,20)(H,10,12,15)(H2,16,17,18)/p-3/t4-,6-,7-,8-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=XCCTYIAWTASOJW-XVFCMESISA-K" />
+      <Property key="SMILES" value="C(OP(=O)([O-])OP(=O)([O-])[O-])[C@@H]2([C@H]([C@H]([C@H](N1(\C=C/C(=O)NC1=O))O2)O)O)" />
+      <Property key="GibbsFreeEnergy" value="-504.6063" />
+      <Property key="CompoundType" value="Pyrimidines" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1145.172119140625" centerY="1200.48974609375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicWeight" value="1.0078250321" />
+      <Property key="InChI" value="InChI=1S/p+1" />
+      <Property key="InChIKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="[H+]" />
+      <Property key="GibbsFreeEnergy" value="0.42906138" />
+      <Property key="CompoundType" value="Subatomic-Particles, Monovalent-Inorganic-Cations" />
+    </DataNode>
+    <DataNode elementId="DIACYLGLYCEROL" textLabel="a 1,2-diacyl-sn-glycerol" type="Metabolite">
+      <Xref identifier="17815" dataSource="ChEBI" />
+      <Graphics centerX="807.5901489257812" centerY="1119.928955078125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="DIACYLGLYCEROL" />
+      <Property key="AlternativeId_Metanetx" value="MNXM59" />
+      <Property key="AlternativeId_Bigg" value="1" />
+      <Property key="AlternativeId_Chebi" value="17815" />
+      <Property key="AlternativeId_LigandCpd" value="C00641" />
+      <Property key="Synonym_1" value="a D-1,2-diglyceride" />
+      <Property key="Synonym_2" value="a 1,2-diacylglycerol" />
+      <Property key="Synonym_3" value="a D-1,2-diacylglycerol" />
+      <Property key="Synonym_4" value="DAG" />
+      <Property key="SMILES" value="C(O)[C@@H](COC(=O)[R1])OC(=O)[R2]" />
+      <Property key="CompoundType" value="1-2-Diglycerides" />
+    </DataNode>
+    <DataNode elementId="CPD-10363" textLabel="a 1,2-diacyl-3-O-[β-D-galactosyl-(1→6)-β-D-galactosyl]-sn-glycerol" type="Metabolite">
+      <Xref identifier="87082" dataSource="ChEBI" />
+      <Graphics centerX="1394.440185546875" centerY="876.157958984375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>Note, this is different from the most commonly found DGDG, the &amp;alpha;-D-galactosyl-(1-&gt;6)-&amp;beta;-D-galactosyl)-1,2-diacyl-&lt;i&gt;sn&lt;/i&gt;-glycerol (|FRAME: Galactosyl-galactosyl-diacyl-glycerols|).</Comment>
+      <Property key="UniqueID" value="CPD-10363" />
+      <Property key="AlternativeId_Seed" value="cpd22651" />
+      <Property key="AlternativeId_Chebi" value="87082" />
+      <Property key="AlternativeId_Metanetx" value="MNXM149901" />
+      <Property key="AlternativeId_LigandCpd" value="C20991" />
+      <Property key="Synonym_1" value="a (&amp;beta;-D-galactosyl-(1-&gt;6)-&amp;beta;-D-galactosyl)-1,2-diacyl-&lt;i&gt;sn&lt;/i&gt;-glycerol" />
+      <Property key="Synonym_2" value="an &amp;beta;-D-galactosyl-&amp;beta;-D-galactosyldiacylglycerol" />
+      <Property key="Synonym_3" value="DGDG" />
+      <Property key="Synonym_4" value="a &amp;beta;,&amp;beta; digalactosyldiacylglycerol" />
+      <Property key="SMILES" value="C(O)[C@H]1(O[C@H]([C@H](O)[C@@H](O)[C@@H](O)1)OC[C@H]2(O[C@@H](OC[C@@H](COC(=O)[R1])OC(=O)[R2])[C@H](O)[C@@H](O)[C@@H](O)2))" />
+      <Property key="CompoundType" value="DGDG" />
+      <CitationRef elementRef="citation_cit_15590685" />
+    </DataNode>
+    <DataNode elementId="CPD-14553" textLabel="UDP-α-D-galactose" type="Metabolite">
+      <Xref identifier="HSCJRCZFDFQWRP-ABVWGUQPSA-L" dataSource="InChIKey" />
+      <Graphics centerX="935.69775390625" centerY="50.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-14553" />
+      <Property key="AlternativeId_Zinc" value="ZINC000008551104" />
+      <Property key="AlternativeId_Metanetx" value="MNXM89795" />
+      <Property key="AlternativeId_Bigg" value="udpgal" />
+      <Property key="AlternativeId_Chebi" value="66914" />
+      <Property key="AlternativeId_Pubchem" value="9549262" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC66914" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00302" />
+      <Property key="AlternativeId_Chemspider" value="17069" />
+      <Property key="AlternativeId_Cas" value="2956-16-3" />
+      <Property key="AlternativeId_LigandCpd" value="C00052" />
+      <Property key="Synonym_1" value="UDP-&amp;alpha;-D-galactopyranose" />
+      <Property key="Synonym_2" value="UDP-galactose" />
+      <Property key="Synonym_3" value="UDP-Gal" />
+      <Property key="MolecularWeight" value="564.289" />
+      <Property key="MonoisotopicWeight" value="566.0550203765" />
+      <Property key="ChemicalFormula" value="(C 15)(H 22)(N 2)(O 17)(P 2)" />
+      <Property key="InChI" value="InChI=1S/C15H24N2O17P2/c18-3-5-8(20)10(22)12(24)14(32-5)33-36(28,29)34-35(26,27)30-4-6-9(21)11(23)13(31-6)17-2-1-7(19)16-15(17)25/h1-2,5-6,8-14,18,20-24H,3-4H2,(H,26,27)(H,28,29)(H,16,19,25)/p-2/t5-,6-,8+,9-,10+,11-,12-,13-,14-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=HSCJRCZFDFQWRP-ABVWGUQPSA-L" />
+      <Property key="SMILES" value="C(O)[C@@H]1([C@H](O)[C@H](O)[C@@H](O)[C@H](O1)OP(OP(OC[C@@H]3([C@H]([C@H]([C@H](N2(\C=C/C(=O)NC2=O))O3)O)O))(=O)[O-])(=O)[O-])" />
+      <Property key="GibbsFreeEnergy" value="-566.8436" />
+      <Property key="CompoundType" value="Alpha-D-Galactosides, UDP-sugar" />
+    </DataNode>
+    <DataNode elementId="CPD-10364" textLabel="a trigalactosyldiacylglycerol" type="Metabolite">
+      <Xref identifier="C06036" dataSource="KEGG Compound" />
+      <Graphics centerX="895.595947265625" centerY="906.205322265625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-10364" />
+      <Property key="AlternativeId_Seed" value="cpd12812" />
+      <Property key="AlternativeId_Metanetx" value="MNXM16859" />
+      <Property key="AlternativeId_LigandCpd" value="C06036" />
+      <Property key="Synonym_1" value="a (&amp;beta;-D-galactosyl-(1-&gt;6)-&amp;beta;-D-galactosyl-(1-&gt;6)-&amp;beta;-D-galactosyl)-1,2-diacyl-&lt;i&gt;sn&lt;/i&gt;-glycerol" />
+      <Property key="Synonym_2" value="TGDG" />
+      <Property key="Synonym_3" value="1,2-Diacyl-3-O-(beta-D-galactosyl(1-&gt;6)-O-beta-D-galactosyl(1-&gt;6)-O-beta-D-galactosyl)-sn-glycerol" />
+      <Property key="SMILES" value="C(O)[C@H]1(O[C@H]([C@H](O)[C@@H](O)[C@@H](O)1)OC[C@H]2(O[C@H]([C@H](O)[C@@H](O)[C@@H](O)2)OC[C@H]3(O[C@@H](OC[C@@H](COC(=O)[R1])OC(=O)[R2])[C@H](O)[C@@H](O)[C@@H](O)3)))" />
+      <Property key="CompoundType" value="Galactolipids" />
+      <CitationRef elementRef="citation_cit_15590685" />
+    </DataNode>
+    <DataNode elementId="D-Galactosyl-12-diacyl-glycerols" textLabel="a 1,2-diacyl-3-O-(β-D-galactopyranosyl)-sn-glycerol" type="Metabolite">
+      <Xref identifier="17615" dataSource="ChEBI" />
+      <Graphics centerX="1549.2113037109375" centerY="1218.860107421875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="D-Galactosyl-12-diacyl-glycerols" />
+      <Property key="AlternativeId_Seed" value="cpd12371" />
+      <Property key="AlternativeId_Metanetx" value="MNXM910" />
+      <Property key="AlternativeId_Chebi" value="17615" />
+      <Property key="AlternativeId_LigandCpd" value="C03692" />
+      <Property key="Synonym_1" value="a monogalactosyl-diacylglycerol" />
+      <Property key="Synonym_2" value="a monogalactosyldiacylglycerol" />
+      <Property key="Synonym_3" value="a D-galactosyldiacylglycerol" />
+      <Property key="Synonym_4" value="a 3-(&amp;beta;-D-galactosyl)-1,2-diacyl-&lt;i&gt;sn&lt;/i&gt;-glycerol" />
+      <Property key="Synonym_5" value="a 3-&amp;beta;-D-galactosyl-1,2-diacylglycerol" />
+      <Property key="Synonym_6" value="a monogalactosyldiglyceride" />
+      <Property key="Synonym_7" value="MGDG" />
+      <Property key="Synonym_8" value="a Gal&amp;beta;1-&gt;3acyl2Gro" />
+      <Property key="Synonym_9" value="a mono-&amp;beta;-D-galactosyldiacylglycerol" />
+      <Property key="Synonym_10" value="a 1,2-diacyl-3-&amp;beta;-D-galactosyl-&lt;i&gt;sn&lt;/i&gt;-glycerol" />
+      <Property key="Synonym_11" value="a &amp;beta;-monogalactosyldiacylglycerol" />
+      <Property key="Synonym_12" value="a 1,2-diacyl-3-O-(&amp;beta;-D-galactosyl)-&lt;i&gt;sn&lt;/i&gt;-glycerol" />
+      <Property key="SMILES" value="C(OC(=O)[R1])[C@H](CO[C@@H]1(O[C@H](CO)[C@H](O)[C@H](O)[C@@H](O)1))OC(=O)[R2]" />
+      <Property key="CompoundType" value="Galactolipids" />
+    </DataNode>
+    <DataNode elementId="Galactosyl-galactosyl-diacyl-glycerols" textLabel="an α,β-digalactosyldiacylglycerol" type="Metabolite">
+      <Xref identifier="28396" dataSource="ChEBI" />
+      <Graphics centerX="1063.742431640625" centerY="891.643798828125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="Galactosyl-galactosyl-diacyl-glycerols" />
+      <Property key="AlternativeId_Seed" value="cpd12594" />
+      <Property key="AlternativeId_Metanetx" value="MNXM96195" />
+      <Property key="AlternativeId_LigandCpd" value="C06037" />
+      <Property key="AlternativeId_Chebi" value="28396" />
+      <Property key="Synonym_1" value="an (&amp;alpha;-D-galactosyl-(1-&gt;6)-&amp;beta;-D-galactosyl)-1,2-diacyl-&lt;i&gt;sn&lt;/i&gt;-glycerol" />
+      <Property key="Synonym_2" value="a 3(&amp;alpha;-D-galactosyl-(1-&gt;6)-&amp;beta;-D-galactosyl)-1,2-diacyl-&lt;i&gt;sn&lt;/i&gt;-glycerol" />
+      <Property key="Synonym_3" value="DGDG" />
+      <Property key="Synonym_4" value="an &amp;alpha;-D-galactosyl-&amp;beta;-D-galactosyldiacylglycerol" />
+      <Property key="SMILES" value="C(O)[C@H]1(O[C@@H]([C@H](O)[C@@H](O)[C@@H](O)1)OC[C@H]2(O[C@@H](OC[C@@H](COC(=O)[R1])OC(=O)[R2])[C@H](O)[C@@H](O)[C@@H](O)2))" />
+      <Property key="CompoundType" value="DGDG" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="820.0809326171875" y="839.1292724609375" elementRef="AT5G20410" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="313.141845703125" y="239.46925354003906" elementRef="AT5G20410-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_1_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_1_0_0" x="1327.195068359375" y="296.6466064453125" elementRef="AT4G31780" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_1_0_0" arrowHead="TranscriptionTranslation" x="504.4439697265625" y="942.689697265625" elementRef="AT4G31780-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_2_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_2_0_0" x="987.2257080078125" y="525.533935546875" elementRef="G-14491" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_2_0_0" arrowHead="TranscriptionTranslation" x="345.8833312988281" y="622.4443969726562" elementRef="MONOMER-16633" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_3_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_3_0_0" x="1645.0" y="558.4661254882812" elementRef="AT4G00550" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_3_0_0" arrowHead="TranscriptionTranslation" x="1094.1781005859375" y="668.4796752929688" elementRef="AT4G00550-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_4_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_4_0_0" x="145.0" y="837.2996826171875" elementRef="AT3G06510" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_4_0_0" arrowHead="TranscriptionTranslation" x="572.0108642578125" y="1404.8111572265625" elementRef="AT3G06510-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_5_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_5_0_0" x="915.8804931640625" y="807.4910888671875" elementRef="AT2G11810" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_5_0_0" arrowHead="TranscriptionTranslation" x="230.9146728515625" y="1236.7305908203125" elementRef="AT2G11810-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_6_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_6_0_0" x="1049.7877197265625" y="1550.0" elementRef="AT3G11670" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_6_0_0" arrowHead="TranscriptionTranslation" x="661.8753051757812" y="681.266845703125" elementRef="AT3G11670-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-16635">
+      <Xref identifier="EC-2.4.1.184" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-16635_start" x="1594.2113037109375" y="1218.860107421875" elementRef="D-Galactosyl-12-diacyl-glycerols" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-16635_end" arrowHead="Conversion" x="664.33154296875" y="368.6467590332031" elementRef="Tetragalactosyldiacylglycerol" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-16635_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-16635" />
+      <Property key="EC_Number" value="EC-2.4.1.184" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-401" />
+      <Property key="ReactionEquation" value="D-Galactosyl-12-diacyl-glycerols + CPD-10364 =&gt; Tetragalactosyldiacylglycerol + DIACYLGLYCEROL" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Chemical-Reactions, Small-Molecule-Reactions" />
+    </Interaction>
+    <Interaction elementId="RXN-16635_anchor_reactant_1">
+      <Xref identifier="EC-2.4.1.184" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-16635_anchor_reactant_start_1" x="940.595947265625" y="906.205322265625" elementRef="CPD-10364" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-16635_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-16635_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-16635_anchor_product_1">
+      <Xref identifier="EC-2.4.1.184" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-16635_anchor_product_start_1" x="0" y="0" elementRef="RXN-16635_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-16635_anchor_product_end_1" arrowHead="Conversion" x="762.5901489257812" y="1119.928955078125" elementRef="DIACYLGLYCEROL" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9721">
+      <Xref identifier="EC-2.4.1.184" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-9721_start" x="1594.2113037109375" y="1218.860107421875" elementRef="D-Galactosyl-12-diacyl-glycerols" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9721_end" arrowHead="Conversion" x="850.595947265625" y="906.205322265625" elementRef="CPD-10364" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9721_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9721" />
+      <Property key="EC_Number" value="EC-2.4.1.184" />
+      <Property key="Pathways" value="PWY-401" />
+      <Property key="ReactionEquation" value="D-Galactosyl-12-diacyl-glycerols + CPD-10363 =&gt; CPD-10364 + DIACYLGLYCEROL" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-15364" />
+      <Property key="Synonym_1" value="&amp;beta;,&amp;beta; digalactosyldiacylglycerol galactosyltransferase" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+    </Interaction>
+    <Interaction elementId="RXN-9721_ENZRXN-15364">
+      <Waypoints>
+        <Point elementId="RXN-9721_ENZRXN-15364_start" x="617.0108642578125" y="1417.3111572265625" elementRef="AT3G06510-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-9721_ENZRXN-15364_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-9721_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9721_anchor_reactant_1">
+      <Xref identifier="EC-2.4.1.184" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-9721_anchor_reactant_start_1" x="1439.440185546875" y="876.157958984375" elementRef="CPD-10363" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9721_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-9721_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9721_anchor_product_1">
+      <Xref identifier="EC-2.4.1.184" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-9721_anchor_product_start_1" x="0" y="0" elementRef="RXN-9721_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-9721_anchor_product_end_1" arrowHead="Conversion" x="762.5901489257812" y="1119.928955078125" elementRef="DIACYLGLYCEROL" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-1226">
+      <Xref identifier="EC-2.4.1.184" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-1226_start" x="1594.2113037109375" y="1218.860107421875" elementRef="D-Galactosyl-12-diacyl-glycerols" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-1226_end" arrowHead="Conversion" x="762.5901489257812" y="1119.928955078125" elementRef="DIACYLGLYCEROL" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-1226_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Comment source="BioCyc">This reaction is catalyzed by enzyme DGD1 in Arabidopsis chloroplast. It provides the predominate source of DGDG found in chloroplast membrane.</Comment>
+      <Property key="UniqueID" value="RXN-1226" />
+      <Property key="EC_Number" value="EC-2.4.1.184" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-401" />
+      <Property key="ReactionEquation" value="D-Galactosyl-12-diacyl-glycerols =&gt; DIACYLGLYCEROL + CPD-10363" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-15363" />
+      <Property key="Synonym_1" value="Galactolipid:galactolipid galactosyltransferase" />
+      <Property key="ReactionTypes" value="Chemical-Reactions, Small-Molecule-Reactions" />
+      <CitationRef elementRef="citation__8535135_" />
+    </Interaction>
+    <Interaction elementId="RXN-1226_ENZRXN-15363">
+      <Waypoints>
+        <Point elementId="RXN-1226_ENZRXN-15363_start" x="617.0108642578125" y="1417.3111572265625" elementRef="AT3G06510-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-1226_ENZRXN-15363_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-1226_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-1226_anchor_product_1">
+      <Xref identifier="EC-2.4.1.184" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-1226_anchor_product_start_1" x="0" y="0" elementRef="RXN-1226_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-1226_anchor_product_end_1" arrowHead="Conversion" x="1349.440185546875" y="876.157958984375" elementRef="CPD-10363" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-1225">
+      <Xref identifier="EC-2.4.1.241" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-1225_start" x="1594.2113037109375" y="1218.860107421875" elementRef="D-Galactosyl-12-diacyl-glycerols" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-1225_end" arrowHead="Conversion" x="1018.742431640625" y="891.643798828125" elementRef="Galactosyl-galactosyl-diacyl-glycerols" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-1225_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Comment source="BioCyc">Diacylglycerol cannot serve as an acceptor molecule for galactosylation as in the reaction catalyzed by EC 2.4.1.46. When phosphate is limiting, phospholipids in plant membranes are reduced but these are replaced, at least in part, by the glycolipids digalactosyldiacylglycerol (DGDG) and sulfoquinovosyldiacylglycerol. While both DGD1 and DGD2 are increased under phosphate-limiting conditions, DGD2 does not contribute significantly under optimal growth conditions. DGD2 is responsible for the synthesis of DGDG molecular species that are rich in C16 fatty acids at sn-1 of diacylglycerol whereas DGD1 leads to molecular species rich in C18 fatty acids. The enzyme has been localized to the outer side of chloroplast envelope membranes. This is DGD1-independent galactolipids biosynthesis which synthesizes extra-plastids DGDG. It only occurs under specific growth conditions, such as phosphate limitation. Diacylglycerol cannot serve as an acceptor molecule for galactosylation as in the reaction catalyzed by EC 2.4.1.46. When phosphate is limiting, phospholipids in plant membranes are reduced but these are replaced, at least in part, by the glycolipids digalactosyldiacylglycerol (DGDG) and sulfoquinovosyldiacylglycerol. While both DGD1 and DGD2 are increased under phosphate-limiting conditions, DGD2 does not contribute significantly under optimal growth conditions. DGD2 is responsible for the synthesis of DGDG molecular species that are rich in C16 fatty acids at sn-1 of diacylglycerol whereas DGD1 leads to molecular species rich in C18 fatty acids. The enzyme has been localized to the outer side of chloroplast envelope membranes. This is DGD1-independent galactolipids biosynthesis which synthesizes extra-plastids DGDG. It only occurs under specific growth conditions, such as phosphate limitation.</Comment>
+      <Property key="UniqueID" value="RXN-1225" />
+      <Property key="EC_Number" value="EC-2.4.1.241" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-401" />
+      <Property key="ReactionEquation" value="CPD-14553 + D-Galactosyl-12-diacyl-glycerols =&gt; Galactosyl-galactosyl-diacyl-glycerols + UDP + PROTON" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXNARA-770, ENZRXNQT-10738, ENZRXN-15362, ENZRXN-1385" />
+      <Property key="EnzymaticReactionCount" value="4" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <CitationRef elementRef="citation__11696551_" />
+      <CitationRef elementRef="citation__10973486_" />
+    </Interaction>
+    <Interaction elementId="RXN-1225_ENZRXNARA-770">
+      <Waypoints>
+        <Point elementId="RXN-1225_ENZRXNARA-770_start" x="1139.1781005859375" y="680.9796752929688" elementRef="AT4G00550-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-1225_ENZRXNARA-770_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-1225_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-1225_ENZRXN-1385">
+      <Waypoints>
+        <Point elementId="RXN-1225_ENZRXN-1385_start" x="1139.1781005859375" y="680.9796752929688" elementRef="AT4G00550-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-1225_ENZRXN-1385_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-1225_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-1225_ENZRXNQT-10738">
+      <Waypoints>
+        <Point elementId="RXN-1225_ENZRXNQT-10738_start" x="706.8753051757812" y="693.766845703125" elementRef="AT3G11670-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-1225_ENZRXNQT-10738_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-1225_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-1225_ENZRXN-15362">
+      <Waypoints>
+        <Point elementId="RXN-1225_ENZRXN-15362_start" x="706.8753051757812" y="693.766845703125" elementRef="AT3G11670-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-1225_ENZRXN-15362_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-1225_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-1225_anchor_reactant_0">
+      <Xref identifier="EC-2.4.1.241" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-1225_anchor_reactant_start_0" x="980.69775390625" y="50.0" elementRef="CPD-14553" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-1225_anchor_reactant_end_0" x="0" y="0" elementRef="RXN-1225_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-1225_anchor_product_1">
+      <Xref identifier="EC-2.4.1.241" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-1225_anchor_product_start_1" x="0" y="0" elementRef="RXN-1225_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-1225_anchor_product_end_1" arrowHead="Conversion" x="859.383056640625" y="742.4490966796875" elementRef="UDP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-1225_anchor_product_2">
+      <Xref identifier="EC-2.4.1.241" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-1225_anchor_product_start_2" x="0" y="0" elementRef="RXN-1225_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-1225_anchor_product_end_2" arrowHead="Conversion" x="1100.172119140625" y="1200.48974609375" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.4.1.46-RXN">
+      <Xref identifier="EC-2.4.1.46" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_2.4.1.46-RXN_start" x="852.5901489257812" y="1119.928955078125" elementRef="DIACYLGLYCEROL" relX="1.0" relY="0.0" />
+        <Point elementId="_2.4.1.46-RXN_end" arrowHead="Conversion" x="1504.2113037109375" y="1218.860107421875" elementRef="D-Galactosyl-12-diacyl-glycerols" relX="-1.0" relY="0.0" />
+        <Anchor elementId="_2.4.1.46-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Comment source="BioCyc">3-&amp;beta;-D-Galactosyl-1,2-diacylglycerol (monogalactosyldiacylglycerol, MGDG, MGD) is the most abundant chloroplast membrane lipid. There are three known isozymes catalyze the biosynthesis of MGDG in Arabidopsis. MGD1 is the predominate MGDG synthase and it synthesizes both prokaryotic and eukaryotic MGDG with no substrate preference. Whereas MGD2 and MGD3 have higher affinity for eukaryotic diacylglycerol (DAG).</Comment>
+      <Property key="AlternativeId_Uniprot" value="O81770" />
+      <Property key="AlternativeId_Pir" value="T05092" />
+      <Property key="UniqueID" value="2.4.1.46-RXN" />
+      <Property key="EC_Number" value="EC-2.4.1.46" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-401" />
+      <Property key="ReactionEquation" value="CPD-14553 + DIACYLGLYCEROL =&gt; D-Galactosyl-12-diacyl-glycerols + UDP + PROTON" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXN-19224, ENZRXN-1364, ENZRXN-2.4.1.46-2, ENZRXN-2.4.1.46-3" />
+      <Property key="EnzymaticReactionCount" value="4" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <CitationRef elementRef="citation__11553816_" />
+      <CitationRef elementRef="citation__10869420_" />
+    </Interaction>
+    <Interaction elementId="_2.4.1.46-RXN_ENZRXN-19224">
+      <Waypoints>
+        <Point elementId="_2.4.1.46-RXN_ENZRXN-19224_start" x="390.8833312988281" y="634.9443969726562" elementRef="MONOMER-16633" relX="0.0" relY="1.0" />
+        <Point elementId="_2.4.1.46-RXN_ENZRXN-19224_end" arrowHead="Catalysis" x="0" y="0" elementRef="_2.4.1.46-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.4.1.46-RXN_ENZRXN-1364">
+      <Waypoints>
+        <Point elementId="_2.4.1.46-RXN_ENZRXN-1364_start" x="549.4439697265625" y="955.189697265625" elementRef="AT4G31780-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="_2.4.1.46-RXN_ENZRXN-1364_end" arrowHead="Catalysis" x="0" y="0" elementRef="_2.4.1.46-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.4.1.46-RXN_ENZRXN-2.4.1.46-3">
+      <Waypoints>
+        <Point elementId="_2.4.1.46-RXN_ENZRXN-2.4.1.46-3_start" x="275.9146728515625" y="1249.2305908203125" elementRef="AT2G11810-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="_2.4.1.46-RXN_ENZRXN-2.4.1.46-3_end" arrowHead="Catalysis" x="0" y="0" elementRef="_2.4.1.46-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.4.1.46-RXN_ENZRXN-2.4.1.46-2">
+      <Waypoints>
+        <Point elementId="_2.4.1.46-RXN_ENZRXN-2.4.1.46-2_start" x="358.141845703125" y="251.96925354003906" elementRef="AT5G20410-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="_2.4.1.46-RXN_ENZRXN-2.4.1.46-2_end" arrowHead="Catalysis" x="0" y="0" elementRef="_2.4.1.46-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.4.1.46-RXN_anchor_reactant_0">
+      <Xref identifier="EC-2.4.1.46" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_2.4.1.46-RXN_anchor_reactant_start_0" x="980.69775390625" y="50.0" elementRef="CPD-14553" relX="1.0" relY="0.0" />
+        <Point elementId="_2.4.1.46-RXN_anchor_reactant_end_0" x="0" y="0" elementRef="_2.4.1.46-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.4.1.46-RXN_anchor_product_1">
+      <Xref identifier="EC-2.4.1.46" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_2.4.1.46-RXN_anchor_product_start_1" x="0" y="0" elementRef="_2.4.1.46-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="_2.4.1.46-RXN_anchor_product_end_1" arrowHead="Conversion" x="859.383056640625" y="742.4490966796875" elementRef="UDP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.4.1.46-RXN_anchor_product_2">
+      <Xref identifier="EC-2.4.1.46" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_2.4.1.46-RXN_anchor_product_start_2" x="0" y="0" elementRef="_2.4.1.46-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="_2.4.1.46-RXN_anchor_product_end_2" arrowHead="Conversion" x="1100.172119140625" y="1200.48974609375" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation__PLANTBIOCHEMISTRY97_">
+      <Xref identifier="[PLANTBIOCHEMISTRY97]" dataSource="PlantCyc" />
+    </Citation>
+    <Citation elementId="citation_cit_12743031">
+      <Xref identifier="12743031" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation__11696551_">
+      <Xref identifier="[11696551]" dataSource="PlantCyc" />
+    </Citation>
+    <Citation elementId="citation_cit_10848996">
+      <Xref identifier="10848996" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation__10869420_">
+      <Xref identifier="[10869420]" dataSource="PlantCyc" />
+    </Citation>
+    <Citation elementId="citation__arabidopsis94_">
+      <Xref identifier="[arabidopsis94]" dataSource="PlantCyc" />
+    </Citation>
+    <Citation elementId="citation__8535135_">
+      <Xref identifier="[8535135]" dataSource="PlantCyc" />
+    </Citation>
+    <Citation elementId="citation__10973486_">
+      <Xref identifier="[10973486]" dataSource="PlantCyc" />
+    </Citation>
+    <Citation elementId="citation__11553816_">
+      <Xref identifier="[11553816]" dataSource="PlantCyc" />
+    </Citation>
+    <Citation elementId="citation_cit_15590685">
+      <Xref identifier="15590685" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation__11429410_">
+      <Xref identifier="[11429410]" dataSource="PlantCyc" />
+    </Citation>
+  </Citations>
+</Pathway>

@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="hydroxycinnamate sugar acid ester biosynthesis" organism="TAX-103475, TAX-4550" source="PlantCyc">
+  <Description>Hydroxycinnamate (HCA) esters are frequently found in a broad array across the plant kingdom and can form, for instance up to 20 different HCA conjugates in &lt;i&gt;Secale cereale&lt;/i&gt; |CITS:[Strack86]|. The formation of HCA esters may proceed via three different routes, one of them includes the utilization of HCA-CoA thioesters and the other one exploits HCA-glucosides such as |FRAME:P-COUMAROYL-COA 4-coumaryl-CoA|, |FRAME:FERULOYL-COA feruloyl-CoA| and |FRAME:SINAPOYL-COA sinapoyl-CoA| (this pathway), whereas the third route proceeds via HCA-quinate such as |FRAME:CAFFEOYLQUINATE &lt;i&gt;trans&lt;/i&gt;-5-O-caffeoyl-D-quinate| (see |FRAME:PWY-6673 caffeoylglucarate biosynthesis|). The pathway depicted above points out that both biosynthetic routes may occur within one plant, i.e. &lt;i&gt;Cestrum elegans&lt;/i&gt; forming the exact same product (|FRAME: O-SINAPOYLGLUCARATE O-sinapoylglucarate|) |CITS:[Strack88a]|. It might be reasonable to assume that the formed HCA conjugates accumulate outside the protoplast in the cell walls as HCA conjugates have not been found within mesophyll protoplasts |CITS:[Schulz86]| and are known to form aggregates with cell wall bound carbohydrates |CITS:[Harris80]|. The pathway describes the formation of HCA conjugates, i.e. (|FRAME: O-SINAPOYLGLUCARATE O-sinapoylglucarate| and (|FRAME: O-SINAPOYLGLUCAROLACTONE O-sinapoylglucarolactone| using various activated sugar acids such as |FRAME:SINAPOYL-COA sinapoyl-CoA| and |FRAME:1-O-SINAPOYL-BETA-D-GLUCOSE 1-&lt;i&gt;O&lt;/i&gt;-sinapoyl-&amp;beta;-D-glucose| as acyl donors. It should be noted that the enzymes of the pathway accept |FRAME:P-COUMAROYL-COA 4-coumaryl-CoA| and |FRAME:FERULOYL-COA feruloyl-CoA| with a comparable turnover rate but are more specific towards their acyl-acceptors such as |FRAME:D-GLUCARATE D-glucarate| and |FRAME:CPD-12595 glucarolactone| which results in the observed variety of HCA conjugates in the respective plants |CITS:[Strack87a] [Strack88a]|.</Description>
+  <Authors>
+    <Author name="O-28" />
+    <Author name="hartmut" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-7461" />
+  <Property key="Type" value="CINNAMATE-SYN" />
+  <Property key="ReactionCount" value="4" />
+  <Property key="ReactionIDs" value="RXN-10919, RXN-15361, 2.3.1.132-RXN, 2.3.1.131-RXN" />
+  <Property key="PredecessorCount" value="4" />
+  <Property key="PrimaryCompoundCount" value="3" />
+  <Property key="PathwayLinks" value="(1-O-SINAPOYL-BETA-D-GLUCOSE PWY-3301)" />
+  <Property key="Organism" value="TAX-103475, TAX-4550" />
+  <Property key="TaxonomicRange_1" value="TAX-3398" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_SCHULZ86" />
+  <CitationRef elementRef="citation_HARRIS80" />
+  <CitationRef elementRef="citation_STRACK86" />
+  <CitationRef elementRef="citation_STRACK88A" />
+  <CitationRef elementRef="citation_Strack_87a" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="MONOMER-18564" textLabel="glucarate acyltransferase (acyl-glucose dependent)" type="Protein">
+      <Xref identifier="MONOMER-18564" dataSource="plantcyc" />
+      <Graphics centerX="820.23095703125" centerY="793.5639038085938" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="O-28, hartmut">The enzymatic activity of an acyl-glucose dependent glucarate sinapoyltransferase was identified, partially purified from young leaves of &lt;i&gt;Cestrum elegans&lt;/i&gt; and characterized in terms of substrate specificity. The enzyme was shown to accept |FRAME:1-O-SINAPOYL-BETA-D-GLUCOSE 1-&lt;i&gt;O&lt;/i&gt;-sinapoyl-&amp;beta;-D-glucose| as acyl donor and transferred the |FRAME:SINAPATE sinapate| moiety to |FRAME:D-GLUCARATE D-glucarate| forming |FRAME: O-SINAPOYLGLUCARATE O-sinapoylglucarate| in the process |CITS:[Strack88a]|.</Comment>
+      <Property key="UniqueID" value="MONOMER-18564" />
+      <Property key="Catalyzes" value="RXN-22653" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="TAX-103475" />
+    </DataNode>
+    <DataNode elementId="MONOMER-18562" textLabel="sinapoyl-CoA: glucarate sinapoyltransferase" type="Protein">
+      <Xref identifier="MONOMER-18562" dataSource="plantcyc" />
+      <Graphics centerX="924.0947265625" centerY="50.0" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="O-28, hartmut">The enzymatic activity of a sinapoyl-CoA: glucarate sinapoyltransferase was identified, partially purified from caryopses of &lt;i&gt;Secale cereale&lt;/i&gt; and biochemically characterized. The enzyme was shown to accept |FRAME:SINAPOYL-COA sinapoyl-CoA| as acyl donor and transferred the |FRAME:SINAPATE sinapate| moiety to |FRAME:D-GLUCARATE D-glucarate| forming |FRAME: O-SINAPOYLGLUCARATE O-sinapoylglucarate| in the process. Besides |FRAME:SINAPOYL-COA sinapoyl-CoA| other thio-esters such as |FRAME:P-COUMAROYL-COA 4-coumaryl-CoA| and |FRAME:FERULOYL-COA feruloyl-CoA| were also suitable acetyl-donors but the enzyme demonstrated a strict specificity towards its acceptor molecule |FRAME:D-GLUCARATE D-glucarate|. The measured activities of the sinapoyl-CoA: glucarate sinapoyltransferase during cotyledone development were in sync with the accumulation pattern of its product, i.e. |FRAME: O-SINAPOYLGLUCARATE O-sinapoylglucarate| |CITS:[Strack87a]|.</Comment>
+      <Property key="UniqueID" value="MONOMER-18562" />
+      <Property key="Catalyzes" value="RXN-22651" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="TAX-4550" />
+    </DataNode>
+    <DataNode elementId="MONOMER-18563" textLabel="sinapoyl-CoA: glucarolactone sinapoyltransferase" type="Protein">
+      <Xref identifier="MONOMER-18563" dataSource="plantcyc" />
+      <Graphics centerX="1297.2874755859375" centerY="1062.01953125" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="O-28, hartmut">The enzymatic activity of a sinapoyl-CoA: glucarolactone sinapoyltransferase was identified, partially purified from caryopses of &lt;i&gt;Secale cereale&lt;/i&gt; and biochemically characterized. The enzyme was shown to accept |FRAME:SINAPOYL-COA sinapoyl-CoA| as acyl donor and transferred the |FRAME:SINAPATE sinapate| moiety to |FRAME:CPD-12595 glucarolactone| forming |FRAME: O-SINAPOYLGLUCAROLACTONE O-sinapoylglucarolactone| in the process. Besides |FRAME:SINAPOYL-COA sinapoyl-CoA| other thio-esters such as |FRAME:P-COUMAROYL-COA 4-coumaryl-CoA| and |FRAME:FERULOYL-COA feruloyl-CoA| were also suitable acetyl-donors but the enzyme demonstrated a strict specificity towards its acceptor molecule |FRAME:CPD-12595 glucarolactone|. The measured activities of the sinapoyl-CoA: glucarolactone sinapoyltransferase during cotyledon development were in sync with the accumulation pattern of its product, i.e. |FRAME: O-SINAPOYLGLUCARATE O-sinapoylglucarate| |CITS:[Strack87a]|.</Comment>
+      <Property key="UniqueID" value="MONOMER-18563" />
+      <Property key="Catalyzes" value="RXN-22652" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="TAX-4550" />
+    </DataNode>
+    <DataNode elementId="SINAPATE" textLabel="sinapate" type="Metabolite">
+      <Xref identifier="PCMORTLOPMLEFB-ONEGZZNKSA-M" dataSource="InChIKey" />
+      <Graphics centerX="891.4937133789062" centerY="1150.3841552734375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="SINAPATE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000000153654" />
+      <Property key="AlternativeId_Seed" value="cpd00373" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1120" />
+      <Property key="AlternativeId_Refmet" value="Sinapic acid" />
+      <Property key="AlternativeId_Hmdb" value="HMDB32616" />
+      <Property key="AlternativeId_Chemspider" value="4573878" />
+      <Property key="AlternativeId_Pubchem" value="54710960" />
+      <Property key="AlternativeId_Chebi" value="30023" />
+      <Property key="AlternativeId_LigandCpd" value="C00482" />
+      <Property key="AlternativeId_Nci" value="59261" />
+      <Property key="AlternativeId_Cas" value="530-59-6" />
+      <Property key="Synonym_1" value="3,5-dimethoxy-4-hydroxycinnamate" />
+      <Property key="Synonym_2" value="sinapinate" />
+      <Property key="Synonym_3" value="sinapinic acid" />
+      <Property key="Synonym_4" value="sinapic acid" />
+      <Property key="Synonym_5" value="3,5-dimethoxy-4-hydroxycinnamic acid" />
+      <Property key="Synonym_6" value="4-hydroxy-3,5-dimethoxycinnamate" />
+      <Property key="MolecularWeight" value="223.205" />
+      <Property key="MonoisotopicWeight" value="224.0684734957" />
+      <Property key="ChemicalFormula" value="(C 11)(H 11)(O 5)" />
+      <Property key="InChI" value="InChI=1S/C11H12O5/c1-15-8-5-7(3-4-10(12)13)6-9(16-2)11(8)14/h3-6,14H,1-2H3,(H,12,13)/p-1/b4-3+" />
+      <Property key="InChIKey" value="InChIKey=PCMORTLOPMLEFB-ONEGZZNKSA-M" />
+      <Property key="SMILES" value="COC1(\C(\O)=C(C=C(/C=C/C(=O)[O-])/C=1)\OC)" />
+      <Property key="GibbsFreeEnergy" value="-8.739745" />
+      <Property key="CompoundType" value="Guaiacols, ORGANOSULFUR, Phenylpropanoids" />
+    </DataNode>
+    <DataNode elementId="Glucopyranose" textLabel="D-glucopyranose" type="Metabolite">
+      <Xref identifier="WQZGKKKJIJFFOK-GASJEMHNSA-N" dataSource="InChIKey" />
+      <Graphics centerX="483.9380187988281" centerY="1489.05615234375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="SRI, caspi">This compound stands for a mixture of |FRAME: ALPHA-GLUCOSE| and |FRAME: GLC|. In most cases, each of these compounds mutarotates quickly to form a mixture of the two, and thus it is the general rule to use this non-specific form in reactions unless it is specifically known that an enzyme can accept only one of the forms.</Comment>
+      <Property key="UniqueID" value="Glucopyranose" />
+      <Property key="AlternativeId_Bigg" value="glc__D" />
+      <Property key="AlternativeId_Metanetx" value="MNXM41" />
+      <Property key="AlternativeId_LigandCpd" value="C00031" />
+      <Property key="AlternativeId_Chebi" value="4167" />
+      <Property key="Synonym_1" value="6-(hydroxymethyl)tetrahydropyran-2,3,4,5-tetraol" />
+      <Property key="MolecularWeight" value="180.157" />
+      <Property key="MonoisotopicWeight" value="180.0633881178" />
+      <Property key="ChemicalFormula" value="(C 6)(H 12)(O 6)" />
+      <Property key="InChI" value="InChI=1S/C6H12O6/c7-1-2-3(8)4(9)5(10)6(11)12-2/h2-11H,1H2/t2-,3-,4+,5-,6?/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=WQZGKKKJIJFFOK-GASJEMHNSA-N" />
+      <Property key="SMILES" value="C([C@@H]1([C@H]([C@@H]([C@H](C(O1)O)O)O)O))O" />
+      <Property key="GibbsFreeEnergy" value="-95.02656" />
+      <Property key="CompoundType" value="D-Glucose, D-aldopyranoses" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="798.333740234375" centerY="622.1215209960938" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicWeight" value="1.0078250321" />
+      <Property key="InChI" value="InChI=1S/p+1" />
+      <Property key="InChIKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="[H+]" />
+      <Property key="GibbsFreeEnergy" value="0.42906138" />
+      <Property key="CompoundType" value="Subatomic-Particles, Monovalent-Inorganic-Cations" />
+    </DataNode>
+    <DataNode elementId="ATP" textLabel="ATP" type="Metabolite">
+      <Xref identifier="ZKHQWZAMYRWXGA-KQYNXXCUSA-J" dataSource="InChIKey" />
+      <Graphics centerX="1600.0" centerY="720.4365844726562" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ATP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004261765" />
+      <Property key="AlternativeId_Mediadb" value="compounds/2/" />
+      <Property key="AlternativeId_Seed" value="cpd00002" />
+      <Property key="AlternativeId_Metanetx" value="MNXM3" />
+      <Property key="AlternativeId_Refmet" value="ATP" />
+      <Property key="AlternativeId_Bigg" value="atp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC30616" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00538" />
+      <Property key="AlternativeId_Chemspider" value="4574455" />
+      <Property key="AlternativeId_Chebi" value="30616" />
+      <Property key="AlternativeId_Pubchem" value="5461108" />
+      <Property key="AlternativeId_LigandCpd" value="C00002" />
+      <Property key="AlternativeId_Cas" value="56-65-5" />
+      <Property key="Synonym_1" value="adenylpyrophosphate" />
+      <Property key="Synonym_2" value="adenosine-triphosphate" />
+      <Property key="Synonym_3" value="adenosine-5&apos;-triphosphate" />
+      <Property key="MolecularWeight" value="503.152" />
+      <Property key="MonoisotopicWeight" value="506.99574515689994" />
+      <Property key="ChemicalFormula" value="(C 10)(H 12)(N 5)(O 13)(P 3)" />
+      <Property key="InChI" value="InChI=1S/C10H16N5O13P3/c11-8-5-9(13-2-12-8)15(3-14-5)10-7(17)6(16)4(26-10)1-25-30(21,22)28-31(23,24)27-29(18,19)20/h2-4,6-7,10,16-17H,1H2,(H,21,22)(H,23,24)(H2,11,12,13)(H2,18,19,20)/p-4/t4-,6-,7-,10-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=ZKHQWZAMYRWXGA-KQYNXXCUSA-J" />
+      <Property key="SMILES" value="C(OP(=O)([O-])OP(=O)([O-])OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3)" />
+      <Property key="GibbsFreeEnergy" value="-553.6995" />
+      <Property key="CompoundType" value="Purine-ribonucleosides-5-PPP" />
+    </DataNode>
+    <DataNode elementId="CPD-12595" textLabel="D-glucaro-1,5-lactone" type="Metabolite">
+      <Xref identifier="YLKFQNUGXOLRNI-QDQPNEQZSA-M" dataSource="InChIKey" />
+      <Graphics centerX="885.278564453125" centerY="867.5921630859375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-12595" />
+      <Property key="AlternativeId_Zinc" value="ZINC000013548849" />
+      <Property key="AlternativeId_Seed" value="cpd23489" />
+      <Property key="AlternativeId_Metanetx" value="MNXM18123" />
+      <Property key="AlternativeId_LigandCpd" value="C20890" />
+      <Property key="AlternativeId_Chebi" value="83384" />
+      <Property key="AlternativeId_Pubchem" value="46926210" />
+      <Property key="Synonym_1" value="glucaro-1,5-lactone" />
+      <Property key="Synonym_2" value="1,5-glucarolactone" />
+      <Property key="Synonym_3" value="glucaro-&amp;delta;-lactone" />
+      <Property key="Synonym_4" value="&amp;delta;-glucarolactone" />
+      <Property key="Synonym_5" value="D-glucaro-&amp;delta;-lactone" />
+      <Property key="MolecularWeight" value="191.117" />
+      <Property key="MonoisotopicWeight" value="192.0270026115" />
+      <Property key="ChemicalFormula" value="(C 6)(H 7)(O 7)" />
+      <Property key="InChI" value="InChI=1S/C6H8O7/c7-1-2(8)4(5(10)11)13-6(12)3(1)9/h1-4,7-9H,(H,10,11)/p-1/t1-,2-,3+,4-/m0/s1" />
+      <Property key="InChIKey" value="InChIKey=YLKFQNUGXOLRNI-QDQPNEQZSA-M" />
+      <Property key="SMILES" value="C([C@@H]1([C@H]([C@@H]([C@H](C(O1)=O)O)O)O))([O-])=O" />
+      <Property key="GibbsFreeEnergy" value="-187.65424" />
+      <Property key="CompoundType" value="Delta-lactones" />
+    </DataNode>
+    <DataNode elementId="_1-O-SINAPOYL-BETA-D-GLUCOSE" textLabel="1-O-sinapoyl-β-D-glucose" type="Metabolite">
+      <Xref identifier="XRKBRPFTFKKHEF-DGDBGZAXSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1264.08642578125" centerY="341.2349853515625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="1-O-SINAPOYL-BETA-D-GLUCOSE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004095571" />
+      <Property key="AlternativeId_Seed" value="cpd00865" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1304" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC16546" />
+      <Property key="AlternativeId_Chemspider" value="4444086" />
+      <Property key="AlternativeId_Pubchem" value="5280406" />
+      <Property key="AlternativeId_LigandCpd" value="C01175" />
+      <Property key="AlternativeId_Chebi" value="16546" />
+      <Property key="Synonym_1" value="1-O-sinapoyl &amp;beta;-D-glucoside" />
+      <Property key="MolecularWeight" value="386.355" />
+      <Property key="MonoisotopicWeight" value="386.1212969272" />
+      <Property key="ChemicalFormula" value="(C 17)(H 22)(O 10)" />
+      <Property key="InChI" value="InChI=1S/C17H22O10/c1-24-9-5-8(6-10(25-2)13(9)20)3-4-12(19)27-17-16(23)15(22)14(21)11(7-18)26-17/h3-6,11,14-18,20-23H,7H2,1-2H3/b4-3+/t11-,14-,15+,16-,17+/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=XRKBRPFTFKKHEF-DGDBGZAXSA-N" />
+      <Property key="SMILES" value="COC2(\C(\O)=C(C=C(/C=C/C(=O)O[C@H]1([C@H](O)[C@H]([C@@H]([C@H](O1)CO)O)O))/C=2)\OC)" />
+      <Property key="GibbsFreeEnergy" value="-64.425385" />
+      <Property key="CompoundType" value="Phenylpropanoids" />
+    </DataNode>
+    <DataNode elementId="O-SINAPOYLGLUCARATE" textLabel="2-O-sinapoyl-D-glucarate" type="Metabolite">
+      <Xref identifier="XQQYFEOTBHJJDK-GRRSETRSSA-L" dataSource="InChIKey" />
+      <Graphics centerX="1041.8255615234375" centerY="684.0226440429688" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="O-SINAPOYLGLUCARATE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000064624823" />
+      <Property key="AlternativeId_Seed" value="cpd01842" />
+      <Property key="AlternativeId_Metanetx" value="MNXM5479" />
+      <Property key="AlternativeId_Chebi" value="58793" />
+      <Property key="AlternativeId_Pubchem" value="45479593" />
+      <Property key="AlternativeId_LigandCpd" value="C02866" />
+      <Property key="Synonym_1" value="6-[4-(2-carboxyvinyl)-2,6-dimethoxy-phenoxy]-2,3,4,5- tetrahydroxy-6-oxo-hexanoic acid" />
+      <Property key="Synonym_2" value="2-&lt;i&gt;O&lt;/i&gt;-[(&lt;i&gt;E&lt;/i&gt;)-sinapoyl]-D-glucarate" />
+      <Property key="MolecularWeight" value="414.322" />
+      <Property key="MonoisotopicWeight" value="416.0954761072" />
+      <Property key="ChemicalFormula" value="(C 17)(H 18)(O 12)" />
+      <Property key="InChI" value="InChI=1S/C17H20O12/c1-27-8-5-7(6-9(28-2)11(8)19)3-4-10(18)29-15(17(25)26)13(21)12(20)14(22)16(23)24/h3-6,12-15,19-22H,1-2H3,(H,23,24)(H,25,26)/p-2/b4-3+/t12-,13-,14-,15+/m0/s1" />
+      <Property key="InChIKey" value="InChIKey=XQQYFEOTBHJJDK-GRRSETRSSA-L" />
+      <Property key="SMILES" value="COC1(/C=C(/C=C(C(\O)=1)/OC)/C=C/C(=O)O[C@@H](C(=O)[O-])[C@@H](O)[C@H](O)[C@H](O)C(=O)[O-])" />
+      <Property key="GibbsFreeEnergy" value="-200.35806" />
+      <Property key="CompoundType" value="Compounds" />
+      <Property key="SystematicName" value="2-O-[(2E)-3-(4-hydroxy-3,5-dimethoxyphenyl)prop-2-enoyl]-D-glucarate" />
+    </DataNode>
+    <DataNode elementId="O-SINAPOYLGLUCAROLACTONE" textLabel="O-sinapoylglucarolactone" type="Metabolite">
+      <Xref identifier="UWTYNMLWDGHWKX-XAAJGCANSA-N" dataSource="InChIKey" />
+      <Graphics centerX="551.8201293945312" centerY="683.7205810546875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="O-SINAPOYLGLUCAROLACTONE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000095661332" />
+      <Property key="AlternativeId_Seed" value="cpd02223" />
+      <Property key="AlternativeId_Metanetx" value="MNXM93727" />
+      <Property key="AlternativeId_Pubchem" value="46926117" />
+      <Property key="AlternativeId_Chebi" value="60076" />
+      <Property key="AlternativeId_LigandCpd" value="C03526" />
+      <Property key="Synonym_1" value="3-(4-hydroxy-3,5-dimethoxy-phenyl)acrylic acid (3,4,5- trihydroxy-6-oxo-tetrahydropyran-2-yl)methyl ester" />
+      <Property key="MolecularWeight" value="398.323" />
+      <Property key="MonoisotopicWeight" value="398.08491142089997" />
+      <Property key="ChemicalFormula" value="(C 17)(H 18)(O 11)" />
+      <Property key="InChI" value="InChI=1S/C17H18O11/c1-25-8-5-7(6-9(26-2)11(8)19)3-4-10(18)27-17(24)15-13(21)12(20)14(22)16(23)28-15/h3-6,12-15,19-22H,1-2H3/b4-3+/t12-,13-,14+,15-/m0/s1" />
+      <Property key="InChIKey" value="InChIKey=UWTYNMLWDGHWKX-XAAJGCANSA-N" />
+      <Property key="SMILES" value="COC1(\C(\O)=C(C=C(/C=1)/C=C/C(OC(=O)[C@@H]2([C@H]([C@@H]([C@@H](O)C(=O)O2)O)O))=O)\OC)" />
+      <Property key="GibbsFreeEnergy" value="-121.96983" />
+      <Property key="CompoundType" value="Delta-lactones" />
+    </DataNode>
+    <DataNode elementId="D-GLUCARATE" textLabel="D-glucarate" type="Metabolite">
+      <Xref identifier="DSLZVSRJTYRBFB-LLEIAEIESA-L" dataSource="InChIKey" />
+      <Graphics centerX="1100.6424560546875" centerY="1550.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="D-GLUCARATE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000005783661" />
+      <Property key="AlternativeId_Mediadb" value="compounds/754/" />
+      <Property key="AlternativeId_Metanetx" value="MNXM744" />
+      <Property key="AlternativeId_Refmet" value="Glucaric acid" />
+      <Property key="AlternativeId_Bigg" value="glcr" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC30612" />
+      <Property key="AlternativeId_Hmdb" value="HMDB29881" />
+      <Property key="AlternativeId_Chemspider" value="4450583" />
+      <Property key="AlternativeId_Chebi" value="30612" />
+      <Property key="AlternativeId_Pubchem" value="5288393" />
+      <Property key="AlternativeId_Cas" value="87-73-0" />
+      <Property key="AlternativeId_LigandCpd" value="C00818" />
+      <Property key="Synonym_1" value="glucarate" />
+      <Property key="Synonym_2" value="D-glucaric acid" />
+      <Property key="Synonym_3" value="L-gularic acid" />
+      <Property key="Synonym_4" value="D-saccharic acid" />
+      <Property key="Synonym_5" value="D-glucosaccharic acid" />
+      <Property key="Synonym_6" value="saccharate" />
+      <Property key="Synonym_7" value="(&lt;i&gt;D&lt;/i&gt;)-glucarate" />
+      <Property key="Synonym_8" value="D-saccharate" />
+      <Property key="Synonym_9" value="saccharic acid" />
+      <Property key="MolecularWeight" value="208.124" />
+      <Property key="MonoisotopicWeight" value="210.0375672978" />
+      <Property key="ChemicalFormula" value="(C 6)(H 8)(O 8)" />
+      <Property key="InChI" value="InChI=1S/C6H10O8/c7-1(3(9)5(11)12)2(8)4(10)6(13)14/h1-4,7-10H,(H,11,12)(H,13,14)/p-2/t1-,2-,3-,4+/m0/s1" />
+      <Property key="InChIKey" value="InChIKey=DSLZVSRJTYRBFB-LLEIAEIESA-L" />
+      <Property key="SMILES" value="C(=O)([C@H](O)[C@@H](O)[C@H](O)[C@H](O)C(=O)[O-])[O-]" />
+      <Property key="GibbsFreeEnergy" value="-230.95929" />
+      <Property key="CompoundType" value="Hexaric-Acids" />
+    </DataNode>
+    <DataNode elementId="PPI" textLabel="pyrophosphate" type="Metabolite">
+      <Xref identifier="XPPKVPWEQAFLFU-UHFFFAOYSA-K" dataSource="InChIKey" />
+      <Graphics centerX="100.0" centerY="518.2261352539062" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PPI" />
+      <Property key="AlternativeId_Chebi" value="33019" />
+      <Property key="AlternativeId_Pubchem" value="4097574" />
+      <Property key="AlternativeId_Bigg" value="ppi" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC33019" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00250" />
+      <Property key="AlternativeId_Drugbank" value="DB04160" />
+      <Property key="AlternativeId_Chemspider" value="996" />
+      <Property key="AlternativeId_LigandCpd" value="C00013" />
+      <Property key="AlternativeId_Cas" value="2466-09-3" />
+      <Property key="Synonym_1" value="PPi" />
+      <Property key="Synonym_2" value="PP" />
+      <Property key="Synonym_3" value="pyrophosphate" />
+      <Property key="MolecularWeight" value="174.951" />
+      <Property key="MonoisotopicWeight" value="177.9432255031" />
+      <Property key="ChemicalFormula" value="(H 1)(O 7)(P 2)" />
+      <Property key="InChI" value="InChI=1S/H4O7P2/c1-8(2,3)7-9(4,5)6/h(H2,1,2,3)(H2,4,5,6)/p-3" />
+      <Property key="InChIKey" value="InChIKey=XPPKVPWEQAFLFU-UHFFFAOYSA-K" />
+      <Property key="SMILES" value="O=P(O)(OP([O-])([O-])=O)[O-]" />
+      <Property key="GibbsFreeEnergy" value="-473.4674" />
+      <Property key="CompoundType" value="Polyphosphates" />
+      <CitationRef elementRef="citation_cit_18493048" />
+    </DataNode>
+    <DataNode elementId="SINAPOYL-COA" textLabel="sinapoyl-CoA" type="Metabolite">
+      <Xref identifier="RBFUWESMWRUGFY-GSNIOFLCSA-J" dataSource="InChIKey" />
+      <Graphics centerX="507.3695068359375" centerY="209.42410278320312" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="SINAPOYL-COA" />
+      <Property key="AlternativeId_Seed" value="cpd00326" />
+      <Property key="AlternativeId_Metanetx" value="MNXM953" />
+      <Property key="AlternativeId_Chebi" value="57393" />
+      <Property key="AlternativeId_Pubchem" value="44229225" />
+      <Property key="AlternativeId_LigandCpd" value="C00411" />
+      <Property key="Synonym_1" value="sinapinoyl-CoA" />
+      <Property key="MolecularWeight" value="969.7" />
+      <Property key="MonoisotopicWeight" value="973.1731171749999" />
+      <Property key="ChemicalFormula" value="(C 32)(H 42)(N 7)(O 20)(P 3)(S 1)" />
+      <Property key="InChI" value="InChI=1S/C32H46N7O20P3S/c1-32(2,27(44)30(45)35-8-7-21(40)34-9-10-63-22(41)6-5-17-11-18(53-3)24(42)19(12-17)54-4)14-56-62(51,52)59-61(49,50)55-13-20-26(58-60(46,47)48)25(43)31(57-20)39-16-38-23-28(33)36-15-37-29(23)39/h5-6,11-12,15-16,20,25-27,31,42-44H,7-10,13-14H2,1-4H3,(H,34,40)(H,35,45)(H,49,50)(H,51,52)(H2,33,36,37)(H2,46,47,48)/p-4/b6-5+/t20-,25-,26-,27+,31-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=RBFUWESMWRUGFY-GSNIOFLCSA-J" />
+      <Property key="SMILES" value="CC(C)(COP(OP([O-])(OC[C@@H]1([C@@H](OP([O-])([O-])=O)[C@@H](O)[C@@H](O1)N2(C3(\N=C/N=C(C(\N=C/2)=3)/N))))=O)([O-])=O)[C@@H](O)C(=O)NCCC(=O)NCCSC(=O)/C=C/C4(/C=C(C(\O)=C(C=4)\OC)/OC)" />
+      <Property key="GibbsFreeEnergy" value="-459.35492" />
+      <Property key="CompoundType" value="All-Coas, Phenylpropanoids" />
+    </DataNode>
+    <DataNode elementId="AMP" textLabel="AMP" type="Metabolite">
+      <Xref identifier="UDMBCSSLTHHNCD-KQYNXXCUSA-L" dataSource="InChIKey" />
+      <Graphics centerX="650.2091064453125" centerY="953.399658203125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AMP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000003860156" />
+      <Property key="AlternativeId_Refmet" value="AMP" />
+      <Property key="AlternativeId_Bigg" value="amp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC456215" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00045" />
+      <Property key="AlternativeId_Chemspider" value="10239183" />
+      <Property key="AlternativeId_Chebi" value="456215" />
+      <Property key="AlternativeId_Pubchem" value="15938965" />
+      <Property key="AlternativeId_LigandCpd" value="C00020" />
+      <Property key="AlternativeId_Cas" value="61-19-8" />
+      <Property key="AlternativeId_Nci" value="20264" />
+      <Property key="Synonym_1" value="5&apos;-AMP" />
+      <Property key="Synonym_2" value="adenosine-monophosphate" />
+      <Property key="Synonym_3" value="adenylic acid" />
+      <Property key="Synonym_4" value="adenosine 5&apos;-phosphate" />
+      <Property key="Synonym_5" value="adenosine 5&apos;-monophosphate" />
+      <Property key="Synonym_6" value="adenylate" />
+      <Property key="Synonym_7" value="5&apos;-adenylic acid" />
+      <Property key="Synonym_8" value="5&apos;-adenosine monophosphate" />
+      <Property key="Synonym_9" value="adenine ribotide" />
+      <Property key="MolecularWeight" value="345.208" />
+      <Property key="MonoisotopicWeight" value="347.0630843401" />
+      <Property key="ChemicalFormula" value="(C 10)(H 12)(N 5)(O 7)(P 1)" />
+      <Property key="InChI" value="InChI=1S/C10H14N5O7P/c11-8-5-9(13-2-12-8)15(3-14-5)10-7(17)6(16)4(22-10)1-21-23(18,19)20/h2-4,6-7,10,16-17H,1H2,(H2,11,12,13)(H2,18,19,20)/p-2/t4-,6-,7-,10-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=UDMBCSSLTHHNCD-KQYNXXCUSA-L" />
+      <Property key="SMILES" value="C(OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3)" />
+      <Property key="GibbsFreeEnergy" value="-135.89479" />
+      <Property key="CompoundType" value="Purine-ribonucleosides-5-P" />
+    </DataNode>
+    <DataNode elementId="CO-A" textLabel="coenzyme A" type="Metabolite">
+      <Xref identifier="RGJOEKWQDUBAIZ-IBOSZNHHSA-J" dataSource="InChIKey" />
+      <Graphics centerX="205.83229064941406" centerY="1052.6748046875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">Coenzyme A (CoA) is a ubiquitous compound found in archaea, bacteria, plants, and animals. It is a common acyl carrier in prokaryotic and eukaryotic cells, and is required for a multitude of reactions for both biosynthetic and degradative pathways, including the oxidation of fatty acids, carbohydrates, and amino acids |CITS: [16415216]|. While the name &quot;coenzyme A&quot; is well established, the correct name for the function of the compound in enzymatic reactions is &quot;cosubstrate&quot;.</Comment>
+      <Property key="UniqueID" value="CO-A" />
+      <Property key="AlternativeId_Metanetx" value="MNXM727276" />
+      <Property key="AlternativeId_Refmet" value="Coenzyme A" />
+      <Property key="AlternativeId_Bigg" value="33502" />
+      <Property key="AlternativeId_Pubchem" value="25113190" />
+      <Property key="AlternativeId_Wikipedia" value="Coenzyme_a" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57287" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01423" />
+      <Property key="AlternativeId_Chebi" value="57287" />
+      <Property key="AlternativeId_Knapsack" value="C00007258" />
+      <Property key="AlternativeId_Cas" value="85-61-0" />
+      <Property key="AlternativeId_LigandCpd" value="C00010" />
+      <Property key="Synonym_1" value="Co-A-SH" />
+      <Property key="Synonym_2" value="CoA" />
+      <Property key="Synonym_3" value="co-A-SH" />
+      <Property key="Synonym_4" value="co-enzyme-A" />
+      <Property key="Synonym_5" value="co-A" />
+      <Property key="Synonym_6" value="HS-CoA" />
+      <Property key="MolecularWeight" value="763.502" />
+      <Property key="MonoisotopicWeight" value="767.1152083656" />
+      <Property key="ChemicalFormula" value="(C 21)(H 32)(N 7)(O 16)(P 3)(S 1)" />
+      <Property key="InChI" value="InChI=1S/C21H36N7O16P3S/c1-21(2,16(31)19(32)24-4-3-12(29)23-5-6-48)8-41-47(38,39)44-46(36,37)40-7-11-15(43-45(33,34)35)14(30)20(42-11)28-10-27-13-17(22)25-9-26-18(13)28/h9-11,14-16,20,30-31,48H,3-8H2,1-2H3,(H,23,29)(H,24,32)(H,36,37)(H,38,39)(H2,22,25,26)(H2,33,34,35)/p-4/t11-,14-,15-,16+,20-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=RGJOEKWQDUBAIZ-IBOSZNHHSA-J" />
+      <Property key="SMILES" value="CC(C)(COP([O-])(=O)OP(OC[C@H]3(O[C@@H](N1(C2(\N=C/N=C(C(\N=C/1)=2)/N)))[C@H](O)[C@H](OP([O-])(=O)[O-])3))(=O)[O-])[C@@H](O)C(=O)NCCC(=O)NCCS" />
+      <Property key="GibbsFreeEnergy" value="-493.56613" />
+      <Property key="CompoundType" value="Non-Acylated-Acyl-Acceptors" />
+      <CitationRef elementRef="citation_cit_16415216" />
+    </DataNode>
+    <DataNode elementId="DITHIOTHREITOL" textLabel="L-dithiothreitol" type="Metabolite">
+      <Xref identifier="VHJLVAABSRFDPM-IMJSIDKUSA-N" dataSource="InChIKey" />
+      <Graphics centerX="379.5948486328125" centerY="396.57232666015625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="DITHIOTHREITOL" />
+      <Property key="AlternativeId_Zinc" value="ZINC000000895149" />
+      <Property key="AlternativeId_Seed" value="cpd00228" />
+      <Property key="AlternativeId_Metanetx" value="MNXM4221" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC42106" />
+      <Property key="AlternativeId_Hmdb" value="HMDB13593" />
+      <Property key="AlternativeId_Chemspider" value="388336" />
+      <Property key="AlternativeId_Wikipedia" value="Dithiothreitol" />
+      <Property key="AlternativeId_Pubchem" value="439196" />
+      <Property key="AlternativeId_Chebi" value="42106" />
+      <Property key="AlternativeId_LigandCpd" value="C00265" />
+      <Property key="AlternativeId_Cas" value="3483-12-3" />
+      <Property key="Synonym_1" value="L-DTT" />
+      <Property key="Synonym_2" value="L-threo-1,4-dimercapto-2,3-butanediol" />
+      <Property key="Synonym_3" value="L-1,4-disulfanylbutane-2,3-diol" />
+      <Property key="Synonym_4" value="L-1,4-dithiothreitol" />
+      <Property key="MolecularWeight" value="154.242" />
+      <Property key="MonoisotopicWeight" value="154.0122209452" />
+      <Property key="ChemicalFormula" value="(C 4)(H 10)(O 2)(S 2)" />
+      <Property key="InChI" value="InChI=1S/C4H10O2S2/c5-3(1-7)4(6)2-8/h3-8H,1-2H2/t3-,4-/m0/s1" />
+      <Property key="InChIKey" value="InChIKey=VHJLVAABSRFDPM-IMJSIDKUSA-N" />
+      <Property key="SMILES" value="C(S)[C@H](O)[C@@H](O)CS" />
+      <Property key="GibbsFreeEnergy" value="31.631197" />
+      <Property key="CompoundType" value="Thiols" />
+    </DataNode>
+    <DataNode elementId="EDTA" textLabel="EDTA" type="Metabolite">
+      <Xref identifier="KCXVZYZYPLLWCC-UHFFFAOYSA-L" dataSource="InChIKey" />
+      <Graphics centerX="624.5975341796875" centerY="396.723388671875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="EDTA" />
+      <Property key="AlternativeId_Zinc" value="ZINC000019364242" />
+      <Property key="AlternativeId_Mediadb" value="compounds/273/" />
+      <Property key="AlternativeId_Seed" value="cpd00240" />
+      <Property key="AlternativeId_Metanetx" value="MNXM155656" />
+      <Property key="AlternativeId_Chebi" value="64755" />
+      <Property key="AlternativeId_Pubchem" value="5246202" />
+      <Property key="AlternativeId_Refmet" value="Edetic Acid" />
+      <Property key="AlternativeId_Hmdb" value="HMDB15109" />
+      <Property key="AlternativeId_LigandCpd" value="C00284" />
+      <Property key="Synonym_1" value="ethylenediaminetetraacetic acid" />
+      <Property key="Synonym_2" value="ethylenediaminetetraacetate" />
+      <Property key="MolecularWeight" value="290.229" />
+      <Property key="MonoisotopicWeight" value="292.0906655008" />
+      <Property key="ChemicalFormula" value="(C 10)(H 14)(N 2)(O 8)" />
+      <Property key="InChI" value="InChI=1S/C10H16N2O8/c13-7(14)3-11(4-8(15)16)1-2-12(5-9(17)18)6-10(19)20/h1-6H2,(H,13,14)(H,15,16)(H,17,18)(H,19,20)/p-2" />
+      <Property key="InChIKey" value="InChIKey=KCXVZYZYPLLWCC-UHFFFAOYSA-L" />
+      <Property key="SMILES" value="C(C[NH+](CC([O-])=O)CC([O-])=O)[NH+](CC([O-])=O)CC([O-])=O" />
+      <Property key="GibbsFreeEnergy" value="-149.13254" />
+      <Property key="CompoundType" value="Non-Metabolic-Compounds" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="RXN-10919">
+      <Xref identifier="EC-6.2.1.12" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10919_start" x="936.4937133789062" y="1150.3841552734375" elementRef="SINAPATE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-10919_end" arrowHead="Conversion" x="462.3695068359375" y="209.42410278320312" elementRef="SINAPOYL-COA" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-10919_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-10919" />
+      <Property key="EC_Number" value="EC-6.2.1.12" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-7461" />
+      <Property key="ReactionEquation" value="SINAPATE + CO-A + ATP =&gt; SINAPOYL-COA + AMP + PPI" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-22235" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+    </Interaction>
+    <Interaction elementId="RXN-10919_anchor_reactant_1">
+      <Xref identifier="EC-6.2.1.12" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10919_anchor_reactant_start_1" x="250.83229064941406" y="1052.6748046875" elementRef="CO-A" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-10919_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-10919_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10919_anchor_reactant_2">
+      <Xref identifier="EC-6.2.1.12" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10919_anchor_reactant_start_2" x="1645.0" y="720.4365844726562" elementRef="ATP" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-10919_anchor_reactant_end_2" x="0" y="0" elementRef="RXN-10919_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10919_anchor_product_1">
+      <Xref identifier="EC-6.2.1.12" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10919_anchor_product_start_1" x="0" y="0" elementRef="RXN-10919_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-10919_anchor_product_end_1" arrowHead="Conversion" x="605.2091064453125" y="953.399658203125" elementRef="AMP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10919_anchor_product_2">
+      <Xref identifier="EC-6.2.1.12" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10919_anchor_product_start_2" x="0" y="0" elementRef="RXN-10919_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-10919_anchor_product_end_2" arrowHead="Conversion" x="55.0" y="518.2261352539062" elementRef="PPI" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-15361">
+      <Xref identifier="EC-2.3.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-15361_start" x="1309.08642578125" y="341.2349853515625" elementRef="_1-O-SINAPOYL-BETA-D-GLUCOSE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-15361_end" arrowHead="Conversion" x="996.8255615234375" y="684.0226440429688" elementRef="O-SINAPOYLGLUCARATE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-15361_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-15361" />
+      <Property key="ReactionName" value="sinapoyl glucose:glucarate sinapoyltransferase" />
+      <Property key="EC_Number" value="EC-2.3.1" />
+      <Property key="Pathways" value="PWY-7461" />
+      <Property key="ReactionEquation" value="1-O-SINAPOYL-BETA-D-GLUCOSE + D-GLUCARATE =&gt; O-SINAPOYLGLUCARATE + Glucopyranose" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-22653" />
+      <Property key="ReactionTypes" value="Chemical-Reactions, Small-Molecule-Reactions" />
+      <CitationRef elementRef="citation_STRACK88A" />
+    </Interaction>
+    <Interaction elementId="RXN-15361_ENZRXN-22653">
+      <Waypoints>
+        <Point elementId="RXN-15361_ENZRXN-22653_start" x="820.23095703125" y="806.0639038085938" elementRef="MONOMER-18564" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-15361_ENZRXN-22653_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-15361_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-15361_anchor_reactant_1">
+      <Xref identifier="EC-2.3.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-15361_anchor_reactant_start_1" x="1145.6424560546875" y="1550.0" elementRef="D-GLUCARATE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-15361_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-15361_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-15361_anchor_product_1">
+      <Xref identifier="EC-2.3.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-15361_anchor_product_start_1" x="0" y="0" elementRef="RXN-15361_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-15361_anchor_product_end_1" arrowHead="Conversion" x="438.9380187988281" y="1489.05615234375" elementRef="Glucopyranose" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.3.1.132-RXN">
+      <Xref identifier="14261" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="_2.3.1.132-RXN_start" x="552.3695068359375" y="209.42410278320312" elementRef="SINAPOYL-COA" relX="1.0" relY="0.0" />
+        <Point elementId="_2.3.1.132-RXN_end" arrowHead="Conversion" x="506.82012939453125" y="683.7205810546875" elementRef="O-SINAPOYLGLUCAROLACTONE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="_2.3.1.132-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Rhea" value="14261" />
+      <Property key="UniqueID" value="2.3.1.132-RXN" />
+      <Property key="EC_Number" value="EC-2.3.1.132" />
+      <Property key="Pathways" value="PWY-7461" />
+      <Property key="ReactionEquation" value="PROTON + SINAPOYL-COA + CPD-12595 =&gt; O-SINAPOYLGLUCAROLACTONE + CO-A" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-22652" />
+      <Property key="ReactionTypes" value="Chemical-Reactions, Small-Molecule-Reactions" />
+      <CitationRef elementRef="citation_STRACK87A" />
+      <CitationRef elementRef="citation_STRACK87B" />
+    </Interaction>
+    <Interaction elementId="_2.3.1.132-RXN_ENZRXN-22652">
+      <Waypoints>
+        <Point elementId="_2.3.1.132-RXN_ENZRXN-22652_start" x="1297.2874755859375" y="1074.51953125" elementRef="MONOMER-18563" relX="0.0" relY="1.0" />
+        <Point elementId="_2.3.1.132-RXN_ENZRXN-22652_end" arrowHead="Catalysis" x="0" y="0" elementRef="_2.3.1.132-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.3.1.132-RXN_anchor_reactant_0">
+      <Xref identifier="14261" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="_2.3.1.132-RXN_anchor_reactant_start_0" x="843.333740234375" y="622.1215209960938" elementRef="PROTON" relX="1.0" relY="0.0" />
+        <Point elementId="_2.3.1.132-RXN_anchor_reactant_end_0" x="0" y="0" elementRef="_2.3.1.132-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.3.1.132-RXN_anchor_reactant_2">
+      <Xref identifier="14261" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="_2.3.1.132-RXN_anchor_reactant_start_2" x="930.278564453125" y="867.5921630859375" elementRef="CPD-12595" relX="1.0" relY="0.0" />
+        <Point elementId="_2.3.1.132-RXN_anchor_reactant_end_2" x="0" y="0" elementRef="_2.3.1.132-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.3.1.132-RXN_anchor_product_1">
+      <Xref identifier="14261" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="_2.3.1.132-RXN_anchor_product_start_1" x="0" y="0" elementRef="_2.3.1.132-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="_2.3.1.132-RXN_anchor_product_end_1" arrowHead="Conversion" x="160.83229064941406" y="1052.6748046875" elementRef="CO-A" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.3.1.131-RXN">
+      <Xref identifier="23308" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="_2.3.1.131-RXN_start" x="552.3695068359375" y="209.42410278320312" elementRef="SINAPOYL-COA" relX="1.0" relY="0.0" />
+        <Point elementId="_2.3.1.131-RXN_end" arrowHead="Conversion" x="996.8255615234375" y="684.0226440429688" elementRef="O-SINAPOYLGLUCARATE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="_2.3.1.131-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Rhea" value="23308" />
+      <Property key="UniqueID" value="2.3.1.131-RXN" />
+      <Property key="EC_Number" value="EC-2.3.1.131" />
+      <Property key="Pathways" value="PWY-7461" />
+      <Property key="ReactionEquation" value="D-GLUCARATE + SINAPOYL-COA =&gt; O-SINAPOYLGLUCARATE + CO-A" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-22651" />
+      <Property key="ReactionTypes" value="Chemical-Reactions, Small-Molecule-Reactions" />
+    </Interaction>
+    <Interaction elementId="_2.3.1.131-RXN_ENZRXN-22651">
+      <Waypoints>
+        <Point elementId="_2.3.1.131-RXN_ENZRXN-22651_start" x="924.0947265625" y="62.5" elementRef="MONOMER-18562" relX="0.0" relY="1.0" />
+        <Point elementId="_2.3.1.131-RXN_ENZRXN-22651_end" arrowHead="Catalysis" x="0" y="0" elementRef="_2.3.1.131-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.3.1.131-RXN_anchor_reactant_0">
+      <Xref identifier="23308" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="_2.3.1.131-RXN_anchor_reactant_start_0" x="1145.6424560546875" y="1550.0" elementRef="D-GLUCARATE" relX="1.0" relY="0.0" />
+        <Point elementId="_2.3.1.131-RXN_anchor_reactant_end_0" x="0" y="0" elementRef="_2.3.1.131-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.3.1.131-RXN_anchor_product_1">
+      <Xref identifier="23308" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="_2.3.1.131-RXN_anchor_product_start_1" x="0" y="0" elementRef="_2.3.1.131-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="_2.3.1.131-RXN_anchor_product_end_1" arrowHead="Conversion" x="160.83229064941406" y="1052.6748046875" elementRef="CO-A" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.3.1.132-RXN_regulation_0">
+      <Waypoints>
+        <Point elementId="_2.3.1.132-RXN_regulation_start_0" x="424.5948486328125" y="396.57232666015625" elementRef="DITHIOTHREITOL" relX="1.0" relY="0.0" />
+        <Point elementId="_2.3.1.132-RXN_regulation_end_0" arrowHead="Stimulation" x="529.5948486328125" y="446.57232666015625" elementRef="_2.3.1.132-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-14725" />
+      <Property key="RegulationMode" value="+" />
+      <Property key="RegulationType" value="activation" />
+      <Property key="RegulatedEntity" value="ENZRXN-22652" />
+      <Property key="Regulator" value="DITHIOTHREITOL" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <CitationRef elementRef="citation_Strack_87a" />
+    </Interaction>
+    <Interaction elementId="_2.3.1.131-RXN_regulation_0">
+      <Waypoints>
+        <Point elementId="_2.3.1.131-RXN_regulation_start_0" x="669.5975341796875" y="396.723388671875" elementRef="EDTA" relX="1.0" relY="0.0" />
+        <Point elementId="_2.3.1.131-RXN_regulation_end_0" arrowHead="Stimulation" x="774.5975341796875" y="446.723388671875" elementRef="_2.3.1.131-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-14724" />
+      <Property key="RegulationMode" value="+" />
+      <Property key="RegulationType" value="activation" />
+      <Property key="RegulatedEntity" value="ENZRXN-22651" />
+      <Property key="Regulator" value="EDTA" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <CitationRef elementRef="citation_Strack_87a" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_HARRIS80">
+      <Xref identifier="PUB-HARRIS80 | Phenolic Constituents of the Cell Walls of Monocotyledons (Harris PJ, Hartley RD, 1980)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_STRACK87B">
+      <Xref identifier="PUB-STRACK87B | Accumulation and enzymatic synthesis of 2-&lt;i&gt;O&lt;/i&gt;-acetyl-3-&lt;i&gt;O&lt;/i&gt;-(p-coumaroyl)-&lt;i&gt;meso&lt;/i&gt;-tarta... (Strack D, Heilemann J, Boehnert B et al., 1987)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_cit_16415216">
+      <Xref identifier="16415216" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_Strack_87a">
+      <Xref identifier="Strack 87a" dataSource="PlantCyc" />
+    </Citation>
+    <Citation elementId="citation_STRACK86">
+      <Xref identifier="PUB-STRACK86 | Ferulic acid esters of sugar carboxylic acids from primary leaves of rye (&lt;i&gt;Secale cereale&lt;/i&gt;) (Strack D, Engel U, Weissenbock G et al., 1986)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_cit_18493048">
+      <Xref identifier="18493048" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_STRACK87A">
+      <Xref identifier="PUB-STRACK87A | Enzymatic synthesis of hydroxycinnamic acid esters of sugar acids and hydroaromatic acids by protein... (Strack D, Keller H, Weissenbock G, 1987)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_STRACK88A">
+      <Xref identifier="PUB-STRACK88A | Enzymic synthesis of hydroxycinnamic acid esters of glutaric acid and hydroaromatic acids from the r... (Strack D, Gross W, Heilemann J et al., 1988)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_SCHULZ86">
+      <Xref identifier="PUB-SCHULZ86 | Isolation and separation of epidermal and mesophyll protoplasts from rye primary leaves - Tissue-spe... (Schulz M, Weissenbock G, 1986)" dataSource="BioCyc" />
+    </Citation>
+  </Citations>
+</Pathway>

@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="NAD biosynthesis from nicotinamide" organism="TAX-3055" source="PlantCyc">
+  <Description>&lt;i&gt;Summary from MetaCyc:&lt;/i&gt; &lt;b&gt;General Background&lt;/b&gt; Nicotinamide adenine dinucleotide (NAD) and its phosphorylated derivative, nicotinamide adenine dinucleotide phosphate (NADP) are two of the most important coenzymes in redox reactions in the cell. Generally, NAD is involved in catabolic reactions, while NADP is involved in anabolic reactions. Because of the positive charge on the nitrogen atom in the nicotinamide ring, the oxidized forms of these compounds are often depicted as NAD&lt;sup&gt;+&lt;/sup&gt; and NADP&lt;sup&gt;+&lt;/sup&gt;, respectively. Most oxidation reactions in cells are accomplished by the removal of hydrogen atoms. In reactions where NAD or NADP participate, two hydrogen atoms are typically removed from the substrate. During the reduction of NAD&lt;sup&gt;+&lt;/sup&gt; (or NADP&lt;sup&gt;+&lt;/sup&gt;) the molecule acquires two electrons and one proton, while the second proton is released into the medium. Thus a typical reaction involving NAD is in the form: NAD&lt;sup&gt;+&lt;/sup&gt; + 2H -&gt; NADH + H&lt;sup&gt;+&lt;/sup&gt; Additional roles for NAD in the cell have been suggested, including involvement in transcriptional regulation, longevity, and age-associated diseases. In yeast, it has been shown that NAD affects longevity and transcriptional silencing through the regulation of the Sir2p family of NAD-dependent deacetylases |CITS: [12648681][14724176]|. NAD is synthesised via two major pathways in both prokaryotic and eukaryotic systems; the &lt;i&gt;de novo&lt;/i&gt; pathway, and the salvage pathway. In the prokaryotic &lt;i&gt;de novo&lt;/i&gt; pathway, the nicotinate moiety of NAD is synthesized from aspartate (see |FRAME: PYRIDNUCSYN-PWY NAD biosynthesis I (from aspartate)|, while in eukaryotes the &lt;i&gt;de novo&lt;/i&gt; pathway starts with tryptophan (|FRAME:NADSYN-PWY NAD biosynthesis II (from tryptophan)|). &lt;b&gt;About This Pathway&lt;/b&gt; Members of the family |FRAME:TAX-712 &lt;i&gt;Pasteurellaceae&lt;/i&gt;| do not poccess either the NAD &lt;i&gt;de novo&lt;/i&gt; biosynthesis pathway or the NAD salvage pathway, and rely on the presence of NAD or related compounds in the growth medium. They have been classified into two distinct classes based on their specific requirement: members of the so called &quot;V-factor-dependent&quot; class, which includes the pathogen |FRAME:TAX-727 &lt;i&gt;Haemophilus influenzae&lt;/i&gt;|, require supplements in which the pyridine nucleotide source must possess an intact pyridine-ribose bond and the pyridine-carbonyl group must be amidated. Thus, they require either NAD, nicotineamide mononucleotide (NMN) or nicotinamide riboside (NR). On the other hand, members of the &quot;V-factor-independent&quot; class possess the enzyme nicotinamide phosphoribosyl transferase, which converts nicotinamide (NAm) to NMN, and are able to to synthesize NAD from NAm as well |CITS: [2946387]|. In 1973 Kasarov and Moat reported the presence of |FRAME: MONOMER-8262 nicotinamide phosphoribosyltransferase| in |FRAME: TAX-733 &lt;i&gt;Haemophilus haemoglobinophilus&lt;/i&gt;| |CITS: [4356297]|. Almost three decades later, Martin et al were able to clone the gene encoding the enzyme from pNAD1, a plasmid of |FRAME: TAX-730 &lt;i&gt;[Haemophilus] ducreyi&lt;/i&gt;| which confers V-factor independence on that strain |CITS: [14742562][11157928]|. The presence of this gene, named |FRAME: G-6261 nadV|, was shown to confer V-factor independence on other strains, including |FRAME:TAX-727 &lt;i&gt;Haemophilus influenzae&lt;/i&gt;| and |FRAME: TAX-715 &lt;i&gt;Actinobacillus pleuropneumoniae&lt;/i&gt;| |CITS: [11157928]|. While a similar gene has not been found in |FRAME:TAX-562 &lt;i&gt;Escherichia coli&lt;/i&gt;| |CITS: [12446641]|, genes with significant sequence homology were found in many other organisms, including the human pre-B-cell colony enhancing factor PBEF and the bacterial species |FRAME:TAX-2097 &lt;i&gt;Mycoplasma genitalium&lt;/i&gt;|, &lt;i&gt;Mycoplasma pneumoniae&lt;/i&gt;, &lt;i&gt;Shewanella putrefaciens&lt;/i&gt;, &lt;i&gt;Synechocystis&lt;/i&gt; sp., |FRAME:TAX-1299 &lt;i&gt;Deinococcus radiodurans&lt;/i&gt;|, |FRAME:TAX-747 &lt;i&gt;Pasteurella multocida&lt;/i&gt;|, and &lt;i&gt;Actinobacillus actinomycetemcomitans&lt;/i&gt; |CITS: [11157928]|. The human pre-B-cell colony enhancing factor has been purifed and shown to be a nicotinamide phosphoribosyltransferase |CITS: [12555668][15381699]|. Unlike the reaction catalyzed by NadV, the second reaction in this pathway is not unique. It is part of an NAD salvage pathway found in many organsms including |FRAME:TAX-562 &lt;i&gt;Escherichia coli&lt;/i&gt;| (see |FRAME: NAD-BIOSYNTHESIS-II NAD salvage pathway III|). In these organisms the reaction is catalyzed by the fusion protein |FRAME: MONOMER-8322 nicotinamide mononucleotide adenylyltransferase / ribosylnicotineamide kinase| encoded by the |FRAME:G-6302 nadR| gene. In some cases, such as the case of |FRAME: TAX-730 &lt;i&gt;[Haemophilus] ducreyi&lt;/i&gt;|, both NadV and NadR exist simultaneously, and combined they catalyze this pathway |CITS: [12446641]|. Yet in other organisms the second reaction is catalyzed by a different protein, encoded by the &lt;i&gt;nadM&lt;/i&gt; gene which (in these organisms) is usually found in the same operon as the &lt;i&gt;nadV&lt;/i&gt; gene. &lt;i&gt;nadM&lt;/i&gt; encodes a bifunctional enzyme similar to both archaeal |FRAME: CPLX-7107 nicotinamide mononucleotide adenylyltransferase| and archaeal &apos;Nudix&apos; (nucleoside diphosphate linked moiety X) hydrolases (enzymes that catalyze the hydrolysis of a phosphate from ADP sugars, such as |FRAME:ADENOSINE_DIPHOSPHATE_RIBOSE ADP-D-ribose|). It has been suggested that in these organisms this pathway is responsible for the recycling of endogenous nicotinamide, which may be generated by the hydrolysis of NAD to nicotinamide and ADP-ribose by a documented but not characterized enzyme |CITS: [7768863][16585762]|. Such a pathway would provide an explanation for the Nudix hydrolase portion of the fusion protein.</Description>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="NAD-BIOSYNTHESIS-III" />
+  <Property key="Type" value="NAD-SYN" />
+  <Property key="ReactionCount" value="2" />
+  <Property key="ReactionIDs" value="2.7.7.1-RXN, 2.4.2.12-RXN" />
+  <Property key="Organism" value="TAX-3055" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_cit_20838591" />
+  <CitationRef elementRef="citation_cit_2946387" />
+  <CitationRef elementRef="citation_cit_4356297" />
+  <CitationRef elementRef="citation_cit_11157928" />
+  <CitationRef elementRef="citation_cit_12446641" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="AT5G55810" textLabel="AT5G55810" type="GeneProduct">
+      <Xref identifier="AT5G55810" dataSource="TAIR" />
+      <Graphics centerX="801.5799560546875" centerY="822.7086181640625" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT5G55810" />
+      <Property key="Synonym_1" value="NMNAT" />
+      <Property key="Product" value="AT5G55810-MONOMER" />
+      <Property key="StartPosition" value="22601234" />
+      <Property key="EndPosition" value="22603527" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+    </DataNode>
+    <DataNode elementId="GIO2-3180" textLabel="Cre14.g626950" type="GeneProduct">
+      <Xref identifier="GIO2-3180" dataSource="plantcyc" />
+      <Graphics centerX="536.0499267578125" centerY="1160.176513671875" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="GIO2-3180" />
+      <Property key="Product" value="GIO2-3180-MONOMER" />
+      <Property key="GeneType" value="ORFs" />
+    </DataNode>
+    <DataNode elementId="GIO2-1709" textLabel="Cre03.g188800" type="GeneProduct">
+      <Xref identifier="GIO2-1709" dataSource="plantcyc" />
+      <Graphics centerX="100.0" centerY="839.05859375" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="GIO2-1709" />
+      <Property key="Product" value="GIO2-1709-MONOMER" />
+      <Property key="GeneType" value="ORFs" />
+    </DataNode>
+    <DataNode elementId="AT5G55810-MONOMER" textLabel="nicotinamide-nucleotide adenylyltransferase//nicotinate-nucleotide adenylyltransferase" type="Protein">
+      <Xref identifier="AT5G55810.2" dataSource="TAIR" />
+      <Graphics centerX="1012.5147094726562" centerY="509.7969665527344" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT5G55810-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT5G55810.2" />
+      <Property key="Gene" value="AT5G55810" />
+      <Property key="Catalyzes" value="RXN-ARA-186, RXN-6541" />
+      <Property key="CatalyzesCount" value="2" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="ORG-5993" />
+    </DataNode>
+    <DataNode elementId="GIO2-1709-MONOMER" textLabel="Cre03.g188800.t1.2" type="Protein">
+      <Xref identifier="GIO2-1709-MONOMER" dataSource="plantcyc" />
+      <Graphics centerX="657.489990234375" centerY="569.3721923828125" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="GIO2-1709-MONOMER" />
+      <Property key="Synonym_1" value="Cre03.g188800.t1.1" />
+      <Property key="Gene" value="GIO2-1709" />
+      <Property key="Catalyzes" value="RXN-2160" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="TAX-3055" />
+    </DataNode>
+    <DataNode elementId="GIO2-3180-MONOMER" textLabel="Cre14.g626950.t1.2" type="Protein">
+      <Xref identifier="GIO2-3180-MONOMER" dataSource="plantcyc" />
+      <Graphics centerX="794.5136108398438" centerY="63.722618103027344" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="GIO2-3180-MONOMER" />
+      <Property key="Synonym_1" value="Cre14.g626950.t1.1" />
+      <Property key="Synonym_2" value="Cre14.g626950.t1.3" />
+      <Property key="Gene" value="GIO2-3180" />
+      <Property key="Catalyzes" value="RXN-4647, RXN-4927" />
+      <Property key="CatalyzesCount" value="2" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="TAX-3055" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1475.005126953125" centerY="50.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicWeight" value="1.0078250321" />
+      <Property key="InChI" value="InChI=1S/p+1" />
+      <Property key="InChIKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="[H+]" />
+      <Property key="GibbsFreeEnergy" value="0.42906138" />
+      <Property key="CompoundType" value="Subatomic-Particles, Monovalent-Inorganic-Cations" />
+    </DataNode>
+    <DataNode elementId="ATP" textLabel="ATP" type="Metabolite">
+      <Xref identifier="ZKHQWZAMYRWXGA-KQYNXXCUSA-J" dataSource="InChIKey" />
+      <Graphics centerX="1085.097412109375" centerY="917.4286499023438" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ATP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004261765" />
+      <Property key="AlternativeId_Mediadb" value="compounds/2/" />
+      <Property key="AlternativeId_Seed" value="cpd00002" />
+      <Property key="AlternativeId_Metanetx" value="MNXM3" />
+      <Property key="AlternativeId_Refmet" value="ATP" />
+      <Property key="AlternativeId_Bigg" value="atp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC30616" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00538" />
+      <Property key="AlternativeId_Chemspider" value="4574455" />
+      <Property key="AlternativeId_Chebi" value="30616" />
+      <Property key="AlternativeId_Pubchem" value="5461108" />
+      <Property key="AlternativeId_LigandCpd" value="C00002" />
+      <Property key="AlternativeId_Cas" value="56-65-5" />
+      <Property key="Synonym_1" value="adenylpyrophosphate" />
+      <Property key="Synonym_2" value="adenosine-triphosphate" />
+      <Property key="Synonym_3" value="adenosine-5&apos;-triphosphate" />
+      <Property key="MolecularWeight" value="503.152" />
+      <Property key="MonoisotopicWeight" value="506.99574515689994" />
+      <Property key="ChemicalFormula" value="(C 10)(H 12)(N 5)(O 13)(P 3)" />
+      <Property key="InChI" value="InChI=1S/C10H16N5O13P3/c11-8-5-9(13-2-12-8)15(3-14-5)10-7(17)6(16)4(26-10)1-25-30(21,22)28-31(23,24)27-29(18,19)20/h2-4,6-7,10,16-17H,1H2,(H,21,22)(H,23,24)(H2,11,12,13)(H2,18,19,20)/p-4/t4-,6-,7-,10-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=ZKHQWZAMYRWXGA-KQYNXXCUSA-J" />
+      <Property key="SMILES" value="C(OP(=O)([O-])OP(=O)([O-])OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3)" />
+      <Property key="GibbsFreeEnergy" value="-553.6995" />
+      <Property key="CompoundType" value="Purine-ribonucleosides-5-PPP" />
+    </DataNode>
+    <DataNode elementId="PRPP" textLabel="5-phospho-α-D-ribose 1-pyrophosphate" type="Metabolite">
+      <Xref identifier="PQGCEDQWHSBAJP-TXICZTDVSA-I" dataSource="InChIKey" />
+      <Graphics centerX="1600.0" centerY="1162.92041015625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: PRPP &quot;5-Phospho-&amp;alpha;-D-ribose 1-diphosphate&quot;| (PRPP) is an important metabolite required in the biosynthesis of purine and pyrimidine nucleotides, the amino acids |FRAME: HIS| and |FRAME: TRP|, and the cofactors NAD and NADP. It is utilized in the biosynthesis of |FRAME: THMPT| in certain archaeal species and in the biosynthesis of |FRAME: CPD1G-1531 &quot;mycolyl-arabinogalactan-peptidoglycan complex&quot;| in |FRAME: TAX-1773|. PRPP was discovered in the mid-1950s while searching for an enzyme that converted |FRAME: OROTATE| to |FRAME: UMP| |CITS: [14392173][13525411]|. The enzyme catalyzing the synthesis of PRPP, |FRAME: EC-2.7.6.1|, is ubiquitous among free-living organisms. So far, only certain obligate intracellular parasites such as some |FRAME: TAX-810| and |FRAME: TAX-780| species are known to lack the gene encoding it. Mammals contain three PRPP synthase-encoding genes, the yeast |FRAME: TAX-4932| contains five, and the plant |FRAME: TAX-3702| contains five genes as well |CITS: [28031352]|.</Comment>
+      <Property key="UniqueID" value="PRPP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000008215630" />
+      <Property key="AlternativeId_ReactomeCpd" value="73566" />
+      <Property key="AlternativeId_Seed" value="cpd00103" />
+      <Property key="AlternativeId_Metanetx" value="MNXM91" />
+      <Property key="AlternativeId_Refmet" value="Phosphoribosyl pyrophosphate" />
+      <Property key="AlternativeId_Bigg" value="prpp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC58017" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00280" />
+      <Property key="AlternativeId_Chemspider" value="20171339" />
+      <Property key="AlternativeId_Chebi" value="58017" />
+      <Property key="AlternativeId_Pubchem" value="20848918" />
+      <Property key="AlternativeId_LigandCpd" value="C00119" />
+      <Property key="AlternativeId_Cas" value="13270-65-0" />
+      <Property key="Synonym_1" value="5-phosphoribosyl 1-pyrophosphate" />
+      <Property key="Synonym_2" value="5-phosphoribosyl diphosphate" />
+      <Property key="Synonym_3" value="5-phosphoribosyl-1-PP" />
+      <Property key="Synonym_4" value="5-phosphoribosyl-PP" />
+      <Property key="Synonym_5" value="5-phosphoribosyl-1-pyrophosphate" />
+      <Property key="Synonym_6" value="5-phosphoribosylpyrophosphate" />
+      <Property key="Synonym_7" value="phosphoribosylpyrophosphate" />
+      <Property key="Synonym_8" value="5-phospho-ribosyl-pyrophosphate" />
+      <Property key="Synonym_9" value="&amp;alpha;-D-5-phosphoribosylPP" />
+      <Property key="Synonym_10" value="&amp;alpha;-D-5-P-RibosylPP" />
+      <Property key="MolecularWeight" value="385.031" />
+      <Property key="MonoisotopicWeight" value="389.9518146567" />
+      <Property key="ChemicalFormula" value="(C 5)(H 8)(O 14)(P 3)" />
+      <Property key="InChI" value="InChI=1S/C5H13O14P3/c6-3-2(1-16-20(8,9)10)17-5(4(3)7)18-22(14,15)19-21(11,12)13/h2-7H,1H2,(H,14,15)(H2,8,9,10)(H2,11,12,13)/p-5/t2-,3-,4-,5-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=PQGCEDQWHSBAJP-TXICZTDVSA-I" />
+      <Property key="SMILES" value="C(OP(=O)([O-])[O-])[C@@H]1([C@@H](O)[C@@H](O)[C@H](O1)OP(OP([O-])(=O)[O-])([O-])=O)" />
+      <Property key="GibbsFreeEnergy" value="-740.25256" />
+      <Property key="CompoundType" value="Sugar-Phosphate" />
+      <Property key="AbbreviatedName" value="PRPP" />
+      <CitationRef elementRef="citation_cit_28031352" />
+    </DataNode>
+    <DataNode elementId="NIACINAMIDE" textLabel="nicotinamide" type="Metabolite">
+      <Xref identifier="DFPAKSUCGFBDDF-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1448.2218017578125" centerY="624.7098999023438" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">Nicotinamide is one of three forms of vitamin B&lt;sub&gt;3&lt;/sub&gt;: |FRAME: NIACINE|, |FRAME: NIACINAMIDE|, and |FRAME: NICOTINAMIDE_RIBOSE &quot;nicotinamide riboside&quot;| [more accurately named 1-(&amp;beta;-D ribofuranosyl)nicotinamide]. These three forms are interchangeable, and are usually used for the biosynthesis of |FRAME: NAD| |CITS: [Elvehjem38][15137942]|. |FRAME: NICOTINAMIDE_RIBOSE| can be hydrolyzed to form |FRAME: NIACINAMIDE| by |FRAME: EC-3.2.2.3| |FRAME: RXN-8441| and |FRAME: NIACINAMIDE| can be hydrolyzed to |FRAME: NIACINE| by |FRAME: EC-3.5.1.19| (which is not present in humans) |FRAME: NICOTINAMID-RXN| Eukaryotes and prokaryotes produce NAD &lt;i&gt;de novo&lt;/i&gt; from |FRAME: TRP| and |FRAME: L-ASPARTATE|, respectively, by pathways that bypasses vitamin B3 compounds and instead proceed via |FRAME: NICOTINATE_NUCLEOTIDE| (see |FRAME: NADSYN-PWY| and |FRAME: PYRIDNUCSYN-PWY|). Vitamin B3 compounds are used in NAD salvage pathways such as |FRAME: PWY-5381| and |FRAME: PWY3O-4106| |CITS: [13563526][13563527][15137942]|. In populations with a tryptophan-poor diet the NAD &lt;i&gt;de novo&lt;/i&gt; biosynthesis pathway is not sufficient to produce the required NAD, making the salvage pathways that rely on vitamin B&lt;sub&gt;3&lt;/sub&gt; compounds the main source of NAD. Under these conditions a difficiency of vitamin B&lt;sub&gt;3&lt;/sub&gt; compounds can result in the disease pellagra.</Comment>
+      <Property key="UniqueID" value="NIACINAMIDE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000000005878" />
+      <Property key="AlternativeId_Mediadb" value="compounds/149/" />
+      <Property key="AlternativeId_Seed" value="cpd00133" />
+      <Property key="AlternativeId_Metanetx" value="MNXM216" />
+      <Property key="AlternativeId_Refmet" value="Niacinamide" />
+      <Property key="AlternativeId_Bigg" value="ncam" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC17154" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01406" />
+      <Property key="AlternativeId_Drugbank" value="DB02701" />
+      <Property key="AlternativeId_Chemspider" value="911" />
+      <Property key="AlternativeId_Chebi" value="17154" />
+      <Property key="AlternativeId_Pubchem" value="936" />
+      <Property key="AlternativeId_Knapsack" value="C00000209" />
+      <Property key="AlternativeId_LigandCpd" value="C00153" />
+      <Property key="AlternativeId_Cas" value="98-92-0" />
+      <Property key="Synonym_1" value="6-aminonicotinamide" />
+      <Property key="Synonym_2" value="vitamin PP" />
+      <Property key="Synonym_3" value="niacinamide" />
+      <Property key="Synonym_4" value="nicotinic acid amide" />
+      <Property key="Synonym_5" value="vitamin B&lt;sub&gt;3&lt;/sub&gt;" />
+      <Property key="MolecularWeight" value="122.126" />
+      <Property key="MonoisotopicWeight" value="122.04801282509999" />
+      <Property key="ChemicalFormula" value="(C 6)(H 6)(N 2)(O 1)" />
+      <Property key="InChI" value="InChI=1S/C6H6N2O/c7-6(9)5-2-1-3-8-4-5/h1-4H,(H2,7,9)" />
+      <Property key="InChIKey" value="InChIKey=DFPAKSUCGFBDDF-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="C1(\C=C/C(/C(=O)N)=C\N=1)" />
+      <Property key="GibbsFreeEnergy" value="48.306725" />
+      <Property key="CompoundType" value="Aliphatic-Amides, B-vitamins" />
+    </DataNode>
+    <DataNode elementId="PPI" textLabel="pyrophosphate" type="Metabolite">
+      <Xref identifier="XPPKVPWEQAFLFU-UHFFFAOYSA-K" dataSource="InChIKey" />
+      <Graphics centerX="886.9102783203125" centerY="703.9298095703125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PPI" />
+      <Property key="AlternativeId_Chebi" value="33019" />
+      <Property key="AlternativeId_Pubchem" value="4097574" />
+      <Property key="AlternativeId_Bigg" value="ppi" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC33019" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00250" />
+      <Property key="AlternativeId_Drugbank" value="DB04160" />
+      <Property key="AlternativeId_Chemspider" value="996" />
+      <Property key="AlternativeId_LigandCpd" value="C00013" />
+      <Property key="AlternativeId_Cas" value="2466-09-3" />
+      <Property key="Synonym_1" value="PPi" />
+      <Property key="Synonym_2" value="PP" />
+      <Property key="Synonym_3" value="pyrophosphate" />
+      <Property key="MolecularWeight" value="174.951" />
+      <Property key="MonoisotopicWeight" value="177.9432255031" />
+      <Property key="ChemicalFormula" value="(H 1)(O 7)(P 2)" />
+      <Property key="InChI" value="InChI=1S/H4O7P2/c1-8(2,3)7-9(4,5)6/h(H2,1,2,3)(H2,4,5,6)/p-3" />
+      <Property key="InChIKey" value="InChIKey=XPPKVPWEQAFLFU-UHFFFAOYSA-K" />
+      <Property key="SMILES" value="O=P(O)(OP([O-])([O-])=O)[O-]" />
+      <Property key="GibbsFreeEnergy" value="-473.4674" />
+      <Property key="CompoundType" value="Polyphosphates" />
+      <CitationRef elementRef="citation_cit_18493048" />
+    </DataNode>
+    <DataNode elementId="NAD" textLabel="NAD⁺" type="Metabolite">
+      <Xref identifier="BAWFJGJZGIEFAR-NNYOXOHSSA-M" dataSource="InChIKey" />
+      <Graphics centerX="216.89102172851562" centerY="175.37266540527344" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: NAD| and |FRAME: NADP| are dinucleotides containing one |FRAME: NIACINAMIDE| base and one |FRAME: ADENINE| base. Each nucleotide is connected to a ribose sugar at position 1, and the two riboses are connected at their 5 position via a diphosphate. The only difference between the two is that in NADP there is an additional phosphate group at the 2&apos; position of the ribose that carries the adenine moiety. These molecules are biological carriers of reductive equivalents (i.e. high potential electrons). Most of the time they function as cosubstrates, and in some cases they function as |FRAME: Cofactors cofactors|. They are often referred to by the obsolete term &quot;coenzymes&quot;. The most common function of |FRAME: NAD| is to accept two electrons and a proton (a hydride ion) from a substrate that is being oxidized. This reduction converts |FRAME: NAD| to |FRAME: NADH|, the reduced form. NADH then diffuses or is transported to a terminal oxidase, where the electrons are passed on, regenerating the oxidized form. |FRAME: NADPH|, on the other hand, is mostly involved in biosynthetic reactions, where it serves as an electron donor. NADPH is formed by reduction of |FRAME: NADP|, which occurs by different mechanisms in different types of organisms. In photosynthetic organisms |FRAME: NADP| is reduced by |FRAME: CPLX-84|. In heterotrophic organisms it is reduced by central metabolism processes such as the pentose phosphate pathway (see |FRAME: OXIDATIVEPENT-PWY|).</Comment>
+      <Property key="UniqueID" value="NAD" />
+      <Property key="AlternativeId_Mediadb" value="compounds/3/" />
+      <Property key="AlternativeId_Seed" value="cpd00003" />
+      <Property key="AlternativeId_Metanetx" value="MNXM8" />
+      <Property key="AlternativeId_Refmet" value="NAD+" />
+      <Property key="AlternativeId_Bigg" value="nad" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57540" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00902" />
+      <Property key="AlternativeId_Chemspider" value="10239196" />
+      <Property key="AlternativeId_Chebi" value="57540" />
+      <Property key="AlternativeId_Pubchem" value="15938971" />
+      <Property key="AlternativeId_LigandCpd" value="C00003" />
+      <Property key="AlternativeId_Cas" value="53-84-9" />
+      <Property key="Synonym_1" value="NAD+" />
+      <Property key="Synonym_2" value="beta-nicotinamide adenine dinucleotide" />
+      <Property key="Synonym_3" value="coenzyme I" />
+      <Property key="Synonym_4" value="diphosphopyridine nucleotide" />
+      <Property key="Synonym_5" value="diphosphopyridine nucleotide oxidized" />
+      <Property key="Synonym_6" value="nicotinamide adenine dinucleotide" />
+      <Property key="Synonym_7" value="nicotinamide adenine dinucleotide oxidized" />
+      <Property key="Synonym_8" value="NAD-oxidized" />
+      <Property key="Synonym_9" value="NAD-ox" />
+      <Property key="Synonym_10" value="DPN+" />
+      <Property key="Synonym_11" value="DPN-ox" />
+      <Property key="Synonym_12" value="DPN" />
+      <Property key="Synonym_13" value="&amp;beta;-nicotinamide adenine dinucleotide" />
+      <Property key="Synonym_14" value="NAD" />
+      <Property key="Synonym_15" value="&amp;beta;-NAD&lt;sup&gt;+&lt;/sup&gt;" />
+      <Property key="MolecularWeight" value="662.422" />
+      <Property key="MonoisotopicWeight" value="665.1247716966999" />
+      <Property key="ChemicalFormula" value="(C 21)(H 26)(N 7)(O 14)(P 2)" />
+      <Property key="InChI" value="InChI=1S/C21H27N7O14P2/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(32)14(30)11(41-21)6-39-44(36,37)42-43(34,35)38-5-10-13(29)15(31)20(40-10)27-3-1-2-9(4-27)18(23)33/h1-4,7-8,10-11,13-16,20-21,29-32H,5-6H2,(H5-,22,23,24,25,33,34,35,36,37)/p-1/t10-,11-,13-,14-,15-,16-,20-,21-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=BAWFJGJZGIEFAR-NNYOXOHSSA-M" />
+      <Property key="SMILES" value="C5(/C(/C(N)=O)=C\C=C/[N+](/[C@@H]4(O[C@H](COP(OP(OC[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3))(=O)[O-])(=O)[O-])[C@@H](O)[C@@H](O)4))=5)" />
+      <Property key="GibbsFreeEnergy" value="-338.38196" />
+      <Property key="CompoundType" value="NAD-P-OR-NOP" />
+    </DataNode>
+    <DataNode elementId="NICOTINAMIDE_NUCLEOTIDE" textLabel="β-nicotinamide D-ribonucleotide" type="Metabolite">
+      <Xref identifier="DAYLJWODMCOQEW-TURQNECASA-M" dataSource="InChIKey" />
+      <Graphics centerX="918.3116455078125" centerY="1550.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="NICOTINAMIDE_NUCLEOTIDE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004228273" />
+      <Property key="AlternativeId_Seed" value="cpd00355" />
+      <Property key="AlternativeId_Metanetx" value="MNXM355" />
+      <Property key="AlternativeId_Refmet" value="Nicotinamide ribotide" />
+      <Property key="AlternativeId_Bigg" value="nmn" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC14649" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00229" />
+      <Property key="AlternativeId_Chemspider" value="19954080" />
+      <Property key="AlternativeId_Chebi" value="14649" />
+      <Property key="AlternativeId_Pubchem" value="23617374" />
+      <Property key="AlternativeId_LigandCpd" value="C00455" />
+      <Property key="AlternativeId_Cas" value="1094-61-7" />
+      <Property key="Synonym_1" value="&amp;beta;-nicotinamide mononucleotide" />
+      <Property key="Synonym_2" value="&amp;beta;-nicotinamide ribonucleotide" />
+      <Property key="Synonym_3" value="&amp;beta;-nicotinamide nucleotide" />
+      <Property key="MolecularWeight" value="333.214" />
+      <Property key="MonoisotopicWeight" value="336.0722520429" />
+      <Property key="ChemicalFormula" value="(C 11)(H 14)(N 2)(O 8)(P 1)" />
+      <Property key="InChI" value="InChI=1S/C11H15N2O8P/c12-10(16)6-2-1-3-13(4-6)11-9(15)8(14)7(21-11)5-20-22(17,18)19/h1-4,7-9,11,14-15H,5H2,(H3-,12,16,17,18,19)/p-1/t7-,8-,9-,11-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=DAYLJWODMCOQEW-TURQNECASA-M" />
+      <Property key="SMILES" value="C(OP(=O)([O-])[O-])[C@@H]2([C@@H](O)[C@@H](O)[C@H]([N+]1(\C=C/C=C(/C=1)/C(=O)N))O2)" />
+      <Property key="GibbsFreeEnergy" value="-204.5264" />
+      <Property key="CompoundType" value="Nicotinamide-Mononucleotides" />
+      <Property key="AbbreviatedName" value="NMN" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="846.5799560546875" y="822.7086181640625" elementRef="AT5G55810" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="967.5147094726562" y="509.7969665527344" elementRef="AT5G55810-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_1_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_1_0_0" x="581.0499267578125" y="1160.176513671875" elementRef="GIO2-3180" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_1_0_0" arrowHead="TranscriptionTranslation" x="749.5136108398438" y="63.722618103027344" elementRef="GIO2-3180-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_2_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_2_0_0" x="145.0" y="839.05859375" elementRef="GIO2-1709" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_2_0_0" arrowHead="TranscriptionTranslation" x="612.489990234375" y="569.3721923828125" elementRef="GIO2-1709-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.7.7.1-RXN">
+      <Xref identifier="EC-2.7.7.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_2.7.7.1-RXN_start" x="963.3116455078125" y="1550.0" elementRef="NICOTINAMIDE_NUCLEOTIDE" relX="1.0" relY="0.0" />
+        <Point elementId="_2.7.7.1-RXN_end" arrowHead="Conversion" x="171.89102172851562" y="175.37266540527344" elementRef="NAD" relX="-1.0" relY="0.0" />
+        <Anchor elementId="_2.7.7.1-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="2.7.7.1-RXN" />
+      <Property key="EC_Number" value="EC-2.7.7.1" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="NAD-BIOSYNTHESIS-III" />
+      <Property key="ReactionEquation" value="PROTON + NICOTINAMIDE_NUCLEOTIDE + ATP =&gt; NAD + PPI" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXNIO2-4927, ENZRXNQT-6541" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+    </Interaction>
+    <Interaction elementId="_2.7.7.1-RXN_ENZRXNQT-6541">
+      <Waypoints>
+        <Point elementId="_2.7.7.1-RXN_ENZRXNQT-6541_start" x="1012.5147094726562" y="522.2969970703125" elementRef="AT5G55810-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="_2.7.7.1-RXN_ENZRXNQT-6541_end" arrowHead="Catalysis" x="0" y="0" elementRef="_2.7.7.1-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.7.7.1-RXN_ENZRXNIO2-4927">
+      <Waypoints>
+        <Point elementId="_2.7.7.1-RXN_ENZRXNIO2-4927_start" x="794.5136108398438" y="76.22261810302734" elementRef="GIO2-3180-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="_2.7.7.1-RXN_ENZRXNIO2-4927_end" arrowHead="Catalysis" x="0" y="0" elementRef="_2.7.7.1-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.7.7.1-RXN_anchor_reactant_0">
+      <Xref identifier="EC-2.7.7.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_2.7.7.1-RXN_anchor_reactant_start_0" x="1520.005126953125" y="50.0" elementRef="PROTON" relX="1.0" relY="0.0" />
+        <Point elementId="_2.7.7.1-RXN_anchor_reactant_end_0" x="0" y="0" elementRef="_2.7.7.1-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.7.7.1-RXN_anchor_reactant_2">
+      <Xref identifier="EC-2.7.7.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_2.7.7.1-RXN_anchor_reactant_start_2" x="1130.097412109375" y="917.4286499023438" elementRef="ATP" relX="1.0" relY="0.0" />
+        <Point elementId="_2.7.7.1-RXN_anchor_reactant_end_2" x="0" y="0" elementRef="_2.7.7.1-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.7.7.1-RXN_anchor_product_1">
+      <Xref identifier="EC-2.7.7.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_2.7.7.1-RXN_anchor_product_start_1" x="0" y="0" elementRef="_2.7.7.1-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="_2.7.7.1-RXN_anchor_product_end_1" arrowHead="Conversion" x="841.9102783203125" y="703.9298095703125" elementRef="PPI" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.4.2.12-RXN">
+      <Xref identifier="EC-2.4.2.12" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_2.4.2.12-RXN_start" x="1493.2218017578125" y="624.7098999023438" elementRef="NIACINAMIDE" relX="1.0" relY="0.0" />
+        <Point elementId="_2.4.2.12-RXN_end" arrowHead="Conversion" x="873.3116455078125" y="1550.0" elementRef="NICOTINAMIDE_NUCLEOTIDE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="_2.4.2.12-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="2.4.2.12-RXN" />
+      <Property key="EC_Number" value="EC-2.4.2.12" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="NAD-BIOSYNTHESIS-III" />
+      <Property key="ReactionEquation" value="NICOTINAMIDE_NUCLEOTIDE + PPI =&gt; NIACINAMIDE + PRPP + PROTON" />
+      <Property key="ReactionDirection" value="RIGHT-TO-LEFT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXNIO2-2160" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+    </Interaction>
+    <Interaction elementId="_2.4.2.12-RXN_ENZRXNIO2-2160">
+      <Waypoints>
+        <Point elementId="_2.4.2.12-RXN_ENZRXNIO2-2160_start" x="657.489990234375" y="581.8721923828125" elementRef="GIO2-1709-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="_2.4.2.12-RXN_ENZRXNIO2-2160_end" arrowHead="Catalysis" x="0" y="0" elementRef="_2.4.2.12-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.4.2.12-RXN_anchor_reactant_0">
+      <Xref identifier="EC-2.4.2.12" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_2.4.2.12-RXN_anchor_reactant_start_0" x="963.3116455078125" y="1550.0" elementRef="NICOTINAMIDE_NUCLEOTIDE" relX="1.0" relY="0.0" />
+        <Point elementId="_2.4.2.12-RXN_anchor_reactant_end_0" x="0" y="0" elementRef="_2.4.2.12-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.4.2.12-RXN_anchor_reactant_1">
+      <Xref identifier="EC-2.4.2.12" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_2.4.2.12-RXN_anchor_reactant_start_1" x="931.9102783203125" y="703.9298095703125" elementRef="PPI" relX="1.0" relY="0.0" />
+        <Point elementId="_2.4.2.12-RXN_anchor_reactant_end_1" x="0" y="0" elementRef="_2.4.2.12-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.4.2.12-RXN_anchor_product_0">
+      <Xref identifier="EC-2.4.2.12" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_2.4.2.12-RXN_anchor_product_start_0" x="0" y="0" elementRef="_2.4.2.12-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="_2.4.2.12-RXN_anchor_product_end_0" arrowHead="Conversion" x="1403.2218017578125" y="624.7098999023438" elementRef="NIACINAMIDE" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.4.2.12-RXN_anchor_product_1">
+      <Xref identifier="EC-2.4.2.12" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_2.4.2.12-RXN_anchor_product_start_1" x="0" y="0" elementRef="_2.4.2.12-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="_2.4.2.12-RXN_anchor_product_end_1" arrowHead="Conversion" x="1555.0" y="1162.92041015625" elementRef="PRPP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.4.2.12-RXN_anchor_product_2">
+      <Xref identifier="EC-2.4.2.12" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_2.4.2.12-RXN_anchor_product_start_2" x="0" y="0" elementRef="_2.4.2.12-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="_2.4.2.12-RXN_anchor_product_end_2" arrowHead="Conversion" x="1430.005126953125" y="50.0" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_cit_20838591">
+      <Xref identifier="20838591" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_2946387">
+      <Xref identifier="2946387" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_12446641">
+      <Xref identifier="12446641" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_18493048">
+      <Xref identifier="18493048" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_11157928">
+      <Xref identifier="11157928" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_4356297">
+      <Xref identifier="4356297" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_28031352">
+      <Xref identifier="28031352" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

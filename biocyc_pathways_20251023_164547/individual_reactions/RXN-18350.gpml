@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="RXN-18350" organism="TAX-3702" source="PlantCyc">
+  <Description>Single reaction view for RXN-18350: RXN-18350</Description>
+  <Authors>
+    <Author name="BioCyc" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from BioCyc single reaction data.</Comment>
+  <Property key="UniqueID" value="RXN-18350" />
+  <Graphics boardWidth="1200" boardHeight="800" />
+  <DataNodes>
+    <DataNode elementId="CPD-19723" textLabel="a (4S)-2,3-dehydroflavan-3,4-diol" type="Metabolite">
+      <Graphics centerX="200" centerY="210" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-19723" />
+      <Property key="SMILES" value="C1(=C(C(\[R5])=C(C(/[R1])=C([R2])/1)/C2(/OC3(\C(/[C@H](O)C(/O)=2)=C([R6])/C(\[R7])=C([R8])\C(/[R9])=3)))[R4])[R3]" />
+      <Property key="CompoundType" value="Flavanols" />
+    </DataNode>
+    <DataNode elementId="CPD-19724" textLabel="a 3,4-dehydro-3,4-flavan-diol" type="Metabolite">
+      <Graphics centerX="350" centerY="210" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-19724" />
+      <Property key="SMILES" value="C1(=C(C(\[R5])=C(C(/[R1])=C([R2])/1)/C2(C(\O)=C(C3(C(/O2)=C([R9])\C(/[R8])=C([R7])/C([R6])=3))\O))[R4])[R3]" />
+      <Property key="CompoundType" value="Flavanols" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="RXN-18350">
+      <Xref identifier="RXN-18350" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-18350_start" x="245.0" y="210" elementRef="CPD-19723" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-18350_end" arrowHead="Conversion" x="305.0" y="210" elementRef="CPD-19724" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-18350_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-18350" />
+      <Property key="Spontaneous" value="T" />
+      <Property key="ReactionEquation" value="CPD-19723 &lt;=&gt; CPD-19724" />
+      <Property key="ReactionDirection" value="REVERSIBLE" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Chemical-Reactions, Small-Molecule-Reactions" />
+    </Interaction>
+  </Interactions>
+</Pathway>

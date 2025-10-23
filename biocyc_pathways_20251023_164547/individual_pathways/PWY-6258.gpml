@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="patchoulol biosynthesis" organism="TAX-28511" source="PlantCyc">
+  <Description>The essential oil patchouli is obtained from the Pogostemon cablin plant. Which accumulates large amounts of it that can be extracted by steam distillation |CITS: [16970904]|. The pleasant fragrances in this oil makes it an important ingredient in commercial production of cosmetic products. The oil composition is complex and the main consitiuents are sesquiterpenoids. patchoulol and patcholene biosynthesis are depicted in the above pathway |CITS: [16970904]|.</Description>
+  <Authors>
+    <Author name="O-28" />
+    <Author name="pujar" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-6258" />
+  <Property key="Type" value="SESQUITERPENOID-SYN" />
+  <Property key="ReactionCount" value="5" />
+  <Property key="ReactionIDs" value="RXN-13522, RXN-10603, RXN-10602, RXN-10601, RXN-10600" />
+  <Property key="PredecessorCount" value="7" />
+  <Property key="PrimaryCompoundCount" value="5" />
+  <Property key="PathwayLinks" value="(FARNESYL-PP PWY-5123)" />
+  <Property key="Organism" value="TAX-28511" />
+  <Property key="TaxonomicRange_1" value="TAX-33090" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_cit_16970904" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="G-11325" textLabel="PatTps177" type="GeneProduct">
+      <Xref identifier="G-11325" dataSource="plantcyc" />
+      <Graphics centerX="1328.797607421875" centerY="268.5750732421875" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="G-11325" />
+      <Property key="Product" value="MONOMER-14859" />
+      <Property key="GeneType" value="Genes" />
+    </DataNode>
+    <DataNode elementId="MONOMER-14859" textLabel="MONOMER-14859" type="Protein">
+      <Xref identifier="Q49SP3" dataSource="uniprot" />
+      <Graphics centerX="397.913818359375" centerY="1550.0" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="O-28, pujar">A cDNA clone was isolated from pogostemon. The cDNA was recombinantly expressed in E.coli and the expressed protein was purified by affinity chromatography and characterized. The protein was shown to catalyze the conversion of FPP into patchoulol |CITS: [16970904]|.</Comment>
+      <Property key="UniqueID" value="MONOMER-14859" />
+      <Property key="AlternativeId_Pid" value="ABC87816" />
+      <Property key="AlternativeId_Uniprot" value="Q49SP3" />
+      <Property key="MolecularWeightSeq" value="64." />
+      <Property key="MolecularWeightExp" value="55." />
+      <Property key="MolecularWeightKD" value="[&apos;64.&apos;, &apos;55.&apos;]" />
+      <Property key="Gene" value="G-11325" />
+      <Property key="Catalyzes" value="RXN-16543" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="TAX-28511" />
+      <CitationRef elementRef="citation_cit_16970904" />
+    </DataNode>
+    <DataNode elementId="CPD-11414" textLabel="β-patchoulene" type="Metabolite">
+      <Xref identifier="CSKINCSXMLCMAR-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="834.7907104492188" centerY="816.3797607421875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-11414" />
+      <Property key="AlternativeId_Zinc" value="ZINC000059589088" />
+      <Property key="AlternativeId_Seed" value="cpd22944" />
+      <Property key="AlternativeId_Metanetx" value="MNXM22514" />
+      <Property key="AlternativeId_Hmdb" value="HMDB36736" />
+      <Property key="AlternativeId_Chemspider" value="91917" />
+      <Property key="AlternativeId_Pubchem" value="101731" />
+      <Property key="MolecularWeight" value="204.355" />
+      <Property key="MonoisotopicWeight" value="204.1878007704" />
+      <Property key="ChemicalFormula" value="(C 15)(H 24)" />
+      <Property key="InChI" value="InChI=1S/C15H24/c1-10-5-6-13-12(10)9-11-7-8-15(13,4)14(11,2)3/h10-11H,5-9H2,1-4H3" />
+      <Property key="InChIKey" value="InChIKey=CSKINCSXMLCMAR-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="CC2(CCC3(/C1(C)(C(C)(C)C(CC1)CC\2=3)))" />
+      <Property key="GibbsFreeEnergy" value="259.02692" />
+      <Property key="CompoundType" value="Sesquiterpenes" />
+    </DataNode>
+    <DataNode elementId="FARNESYL-PP" textLabel="(2E,6E)-farnesyl pyrophosphate" type="Metabolite">
+      <Xref identifier="VWFJDQUYCIWHTN-YFVJMOTDSA-K" dataSource="InChIKey" />
+      <Graphics centerX="1600.0" centerY="1031.1671142578125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">For polyisoprenols and polyisoprenyl phosphates nomenclature, see |FRAME: Polyisoprenoids|.</Comment>
+      <Property key="UniqueID" value="FARNESYL-PP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000012494625" />
+      <Property key="AlternativeId_Seed" value="cpd00350" />
+      <Property key="AlternativeId_Metanetx" value="MNXM34" />
+      <Property key="AlternativeId_Bigg" value="frdp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC175763" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00961" />
+      <Property key="AlternativeId_Chemspider" value="11633047" />
+      <Property key="AlternativeId_Chebi" value="175763" />
+      <Property key="AlternativeId_Knapsack" value="C00007268" />
+      <Property key="AlternativeId_Pubchem" value="15983959" />
+      <Property key="AlternativeId_LigandCpd" value="C00448" />
+      <Property key="AlternativeId_Cas" value="13058-04-3" />
+      <Property key="Synonym_1" value="2-&lt;i&gt;trans&lt;/i&gt;,6-&lt;i&gt;trans&lt;/i&gt;-farnesyl diphosphate" />
+      <Property key="Synonym_2" value="2-trans,6-trans-farnesyl diphosphate" />
+      <Property key="Synonym_3" value="FPP" />
+      <Property key="Synonym_4" value="&lt;i&gt;trans, trans&lt;/i&gt;-farnesyl diphosphate" />
+      <Property key="Synonym_5" value="farnesyl-PP" />
+      <Property key="Synonym_6" value="farnesyl pyrophosphate" />
+      <Property key="Synonym_7" value="&amp;omega;,&lt;i&gt;E,E&lt;/i&gt;-farnesyl diphosphate" />
+      <Property key="Synonym_8" value="farnesyl diphosphate" />
+      <Property key="Synonym_9" value="(&lt;i&gt;E,E&lt;/i&gt;)-farnesyl diphosphate" />
+      <Property key="Synonym_10" value="&lt;i&gt;all-trans&lt;/i&gt;-farnesyl diphosphate" />
+      <Property key="Synonym_11" value="C&lt;sub&gt;15&lt;/sub&gt;-PP" />
+      <Property key="MolecularWeight" value="379.306" />
+      <Property key="MonoisotopicWeight" value="382.1310262735" />
+      <Property key="ChemicalFormula" value="(C 15)(H 25)(O 7)(P 2)" />
+      <Property key="InChI" value="InChI=1S/C15H28O7P2/c1-13(2)7-5-8-14(3)9-6-10-15(4)11-12-21-24(19,20)22-23(16,17)18/h7,9,11H,5-6,8,10,12H2,1-4H3,(H,19,20)(H2,16,17,18)/p-3/b14-9+,15-11+" />
+      <Property key="InChIKey" value="InChIKey=VWFJDQUYCIWHTN-YFVJMOTDSA-K" />
+      <Property key="SMILES" value="CC(C)=CCCC(\C)=C/CCC(\C)=C/COP(OP([O-])(=O)[O-])(=O)[O-]" />
+      <Property key="GibbsFreeEnergy" value="-129.03052" />
+      <Property key="CompoundType" value="Methyl-Branched-Lipids, Sesquiterpenes, TRANS-POLYISOPRENYL-PP" />
+    </DataNode>
+    <DataNode elementId="CPD-11413" textLabel="α-patchoulene" type="Metabolite">
+      <Xref identifier="KVQOADNSNSUAJT-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="670.0719604492188" centerY="50.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-11413" />
+      <Property key="AlternativeId_Zinc" value="ZINC000085615026" />
+      <Property key="AlternativeId_Seed" value="cpd22943" />
+      <Property key="AlternativeId_Metanetx" value="MNXM22497" />
+      <Property key="AlternativeId_Chemspider" value="455083" />
+      <Property key="AlternativeId_Pubchem" value="521710" />
+      <Property key="MolecularWeight" value="204.355" />
+      <Property key="MonoisotopicWeight" value="204.1878007704" />
+      <Property key="ChemicalFormula" value="(C 15)(H 24)" />
+      <Property key="InChI" value="InChI=1S/C15H24/c1-10-7-8-15-11(2)5-6-12(9-13(10)15)14(15,3)4/h5,10,12-13H,6-9H2,1-4H3" />
+      <Property key="InChIKey" value="InChIKey=KVQOADNSNSUAJT-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="CC2(CCC13(C(C)(C(CC12)C\C=C(C)/3)C))" />
+      <Property key="GibbsFreeEnergy" value="279.0369" />
+      <Property key="CompoundType" value="Sesquiterpenes" />
+    </DataNode>
+    <DataNode elementId="CPD-11399" textLabel="(-)-patchoulol" type="Metabolite">
+      <Xref identifier="GGHMUJBZYLPWFD-DUNKBJDJSA-N" dataSource="InChIKey" />
+      <Graphics centerX="572.8299560546875" centerY="972.519287109375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-11399" />
+      <Property key="AlternativeId_Zinc" value="ZINC000100193248" />
+      <Property key="AlternativeId_Seed" value="cpd06598" />
+      <Property key="AlternativeId_Metanetx" value="MNXM168838" />
+      <Property key="AlternativeId_Chebi" value="7940" />
+      <Property key="AlternativeId_Chemspider" value="390832" />
+      <Property key="AlternativeId_Pubchem" value="442384" />
+      <Property key="AlternativeId_LigandCpd" value="C09705" />
+      <Property key="Synonym_1" value="patchouli alcohol" />
+      <Property key="MolecularWeight" value="222.37" />
+      <Property key="MonoisotopicWeight" value="222.1983654567" />
+      <Property key="ChemicalFormula" value="(C 15)(H 26)(O 1)" />
+      <Property key="InChI" value="InChI=1S/C15H26O/c1-10-5-8-15(16)13(2,3)11-6-7-14(15,4)12(10)9-11/h10-12,16H,5-9H2,1-4H3/t10-,11?,12?,14-,15?/m0/s1" />
+      <Property key="InChIKey" value="InChIKey=GGHMUJBZYLPWFD-DUNKBJDJSA-N" />
+      <Property key="SMILES" value="C[C@H]1(CCC3(O)(C(C)(C)C2(CC[C@@](C)(C1C2)3)))" />
+      <Property key="GibbsFreeEnergy" value="232.99913" />
+      <Property key="CompoundType" value="Sesquiterpenes" />
+    </DataNode>
+    <DataNode elementId="WATER" textLabel="H₂O" type="Metabolite">
+      <Xref identifier="XLYOFNOQVPJJNP-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1028.52685546875" centerY="1405.95751953125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="WATER" />
+      <Property key="AlternativeId_Bigg" value="33474" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15377" />
+      <Property key="AlternativeId_Hmdb" value="HMDB02111" />
+      <Property key="AlternativeId_Chemspider" value="937" />
+      <Property key="AlternativeId_Chebi" value="15377" />
+      <Property key="AlternativeId_Pubchem" value="962" />
+      <Property key="AlternativeId_LigandCpd" value="C00001" />
+      <Property key="AlternativeId_Cas" value="7732-18-5" />
+      <Property key="Synonym_1" value="H&lt;sub&gt;2&lt;/sub&gt;0" />
+      <Property key="Synonym_2" value="H2O" />
+      <Property key="Synonym_3" value="H20" />
+      <Property key="Synonym_4" value="hydrogen oxide" />
+      <Property key="Synonym_5" value="water" />
+      <Property key="MolecularWeight" value="18.015" />
+      <Property key="MonoisotopicWeight" value="18.0105646863" />
+      <Property key="ChemicalFormula" value="(H 2)(O 1)" />
+      <Property key="InChI" value="InChI=1S/H2O/h1H2" />
+      <Property key="InChIKey" value="InChIKey=XLYOFNOQVPJJNP-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="O" />
+      <Property key="GibbsFreeEnergy" value="-36.144756" />
+      <Property key="CompoundType" value="Compounds" />
+    </DataNode>
+    <DataNode elementId="CPD-14510" textLabel="seychellene" type="Metabolite">
+      <Xref identifier="QQWUXXGYAQMTAT-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="762.7890625" centerY="600.6002197265625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-14510" />
+      <Property key="AlternativeId_Metanetx" value="MNXM98930" />
+      <Property key="AlternativeId_Pubchem" value="519743" />
+      <Property key="MolecularWeight" value="204.355" />
+      <Property key="MonoisotopicWeight" value="204.1878007704" />
+      <Property key="ChemicalFormula" value="(C 15)(H 24)" />
+      <Property key="InChI" value="InChI=1S/C15H24/c1-10-5-7-14(3)11(2)12-6-8-15(14,4)13(10)9-12/h10,12-13H,2,5-9H2,1,3-4H3" />
+      <Property key="InChIKey" value="InChIKey=QQWUXXGYAQMTAT-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="CC3(C1(C2(C(C(C(C1)CC2)=C)(CC3)C)C))" />
+      <Property key="GibbsFreeEnergy" value="261.5869" />
+      <Property key="CompoundType" value="Sesquiterpenes" />
+    </DataNode>
+    <DataNode elementId="PPI" textLabel="pyrophosphate" type="Metabolite">
+      <Xref identifier="XPPKVPWEQAFLFU-UHFFFAOYSA-K" dataSource="InChIKey" />
+      <Graphics centerX="100.0" centerY="563.677490234375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PPI" />
+      <Property key="AlternativeId_Chebi" value="33019" />
+      <Property key="AlternativeId_Pubchem" value="4097574" />
+      <Property key="AlternativeId_Bigg" value="ppi" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC33019" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00250" />
+      <Property key="AlternativeId_Drugbank" value="DB04160" />
+      <Property key="AlternativeId_Chemspider" value="996" />
+      <Property key="AlternativeId_LigandCpd" value="C00013" />
+      <Property key="AlternativeId_Cas" value="2466-09-3" />
+      <Property key="Synonym_1" value="PPi" />
+      <Property key="Synonym_2" value="PP" />
+      <Property key="Synonym_3" value="pyrophosphate" />
+      <Property key="MolecularWeight" value="174.951" />
+      <Property key="MonoisotopicWeight" value="177.9432255031" />
+      <Property key="ChemicalFormula" value="(H 1)(O 7)(P 2)" />
+      <Property key="InChI" value="InChI=1S/H4O7P2/c1-8(2,3)7-9(4,5)6/h(H2,1,2,3)(H2,4,5,6)/p-3" />
+      <Property key="InChIKey" value="InChIKey=XPPKVPWEQAFLFU-UHFFFAOYSA-K" />
+      <Property key="SMILES" value="O=P(O)(OP([O-])([O-])=O)[O-]" />
+      <Property key="GibbsFreeEnergy" value="-473.4674" />
+      <Property key="CompoundType" value="Polyphosphates" />
+      <CitationRef elementRef="citation_cit_18493048" />
+    </DataNode>
+    <DataNode elementId="CPD-11415" textLabel="γ-patchoulene" type="Metabolite">
+      <Xref identifier="SLTLKLCDQWGISZ-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1044.56591796875" centerY="856.974609375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-11415" />
+      <Property key="AlternativeId_Zinc" value="ZINC000085618483" />
+      <Property key="AlternativeId_Seed" value="cpd22945" />
+      <Property key="AlternativeId_Metanetx" value="MNXM22520" />
+      <Property key="AlternativeId_Chemspider" value="454723" />
+      <Property key="AlternativeId_Pubchem" value="521302" />
+      <Property key="MolecularWeight" value="204.355" />
+      <Property key="MonoisotopicWeight" value="204.1878007704" />
+      <Property key="ChemicalFormula" value="(C 15)(H 24)" />
+      <Property key="InChI" value="InChI=1S/C15H24/c1-10-7-8-15-11(2)5-6-12(9-13(10)15)14(15,3)4/h10,12-13H,2,5-9H2,1,3-4H3" />
+      <Property key="InChIKey" value="InChIKey=SLTLKLCDQWGISZ-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="CC2(CCC13(C(C)(C)C(CC12)CCC3=C))" />
+      <Property key="GibbsFreeEnergy" value="289.55692" />
+      <Property key="CompoundType" value="Sesquiterpenes" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="1373.797607421875" y="268.5750732421875" elementRef="G-11325" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="352.913818359375" y="1550.0" elementRef="MONOMER-14859" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-13522">
+      <Xref identifier="EC-4.2.3" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-13522_start" x="1645.0" y="1031.1671142578125" elementRef="FARNESYL-PP" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-13522_end" arrowHead="Conversion" x="717.7890625" y="600.6002197265625" elementRef="CPD-14510" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-13522_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-13522" />
+      <Property key="ReactionName" value="seychellene synthase" />
+      <Property key="EC_Number" value="EC-4.2.3" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-6258" />
+      <Property key="ReactionEquation" value="FARNESYL-PP =&gt; CPD-14510 + PPI" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+    </Interaction>
+    <Interaction elementId="RXN-13522_anchor_product_1">
+      <Xref identifier="EC-4.2.3" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-13522_anchor_product_start_1" x="0" y="0" elementRef="RXN-13522_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-13522_anchor_product_end_1" arrowHead="Conversion" x="55.0" y="563.677490234375" elementRef="PPI" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10603">
+      <Xref identifier="EC-4.2.3" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10603_start" x="1645.0" y="1031.1671142578125" elementRef="FARNESYL-PP" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-10603_end" arrowHead="Conversion" x="625.0719604492188" y="50.0" elementRef="CPD-11413" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-10603_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-10603" />
+      <Property key="ReactionName" value="&amp;alpha;-patchoulene synthase" />
+      <Property key="EC_Number" value="EC-4.2.3" />
+      <Property key="Pathways" value="PWY-6258" />
+      <Property key="ReactionEquation" value="FARNESYL-PP =&gt; PPI + CPD-11413" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+    </Interaction>
+    <Interaction elementId="RXN-10603_anchor_product_0">
+      <Xref identifier="EC-4.2.3" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10603_anchor_product_start_0" x="0" y="0" elementRef="RXN-10603_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-10603_anchor_product_end_0" arrowHead="Conversion" x="55.0" y="563.677490234375" elementRef="PPI" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10602">
+      <Xref identifier="EC-4.2.3" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10602_start" x="1645.0" y="1031.1671142578125" elementRef="FARNESYL-PP" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-10602_end" arrowHead="Conversion" x="999.56591796875" y="856.974609375" elementRef="CPD-11415" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-10602_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-10602" />
+      <Property key="ReactionName" value="&amp;gamma;-patchoulene synthase" />
+      <Property key="EC_Number" value="EC-4.2.3" />
+      <Property key="Pathways" value="PWY-6258" />
+      <Property key="ReactionEquation" value="FARNESYL-PP =&gt; PPI + CPD-11415" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+    </Interaction>
+    <Interaction elementId="RXN-10602_anchor_product_0">
+      <Xref identifier="EC-4.2.3" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10602_anchor_product_start_0" x="0" y="0" elementRef="RXN-10602_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-10602_anchor_product_end_0" arrowHead="Conversion" x="55.0" y="563.677490234375" elementRef="PPI" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10601">
+      <Xref identifier="EC-4.2.3" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10601_start" x="1645.0" y="1031.1671142578125" elementRef="FARNESYL-PP" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-10601_end" arrowHead="Conversion" x="789.7907104492188" y="816.3797607421875" elementRef="CPD-11414" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-10601_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-10601" />
+      <Property key="ReactionName" value="&amp;beta;-patchoulene synthase" />
+      <Property key="EC_Number" value="EC-4.2.3" />
+      <Property key="Pathways" value="PWY-6258" />
+      <Property key="ReactionEquation" value="FARNESYL-PP =&gt; PPI + CPD-11414" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+    </Interaction>
+    <Interaction elementId="RXN-10601_anchor_product_0">
+      <Xref identifier="EC-4.2.3" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10601_anchor_product_start_0" x="0" y="0" elementRef="RXN-10601_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-10601_anchor_product_end_0" arrowHead="Conversion" x="55.0" y="563.677490234375" elementRef="PPI" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10600">
+      <Xref identifier="EC-4.2.3.70" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10600_start" x="1645.0" y="1031.1671142578125" elementRef="FARNESYL-PP" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-10600_end" arrowHead="Conversion" x="527.8299560546875" y="972.519287109375" elementRef="CPD-11399" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-10600_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-10600" />
+      <Property key="EC_Number" value="EC-4.2.3.70" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-6258" />
+      <Property key="ReactionEquation" value="FARNESYL-PP + WATER =&gt; PPI + CPD-11399" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-16543" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+    </Interaction>
+    <Interaction elementId="RXN-10600_ENZRXN-16543">
+      <Waypoints>
+        <Point elementId="RXN-10600_ENZRXN-16543_start" x="397.913818359375" y="1562.5" elementRef="MONOMER-14859" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-10600_ENZRXN-16543_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-10600_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10600_anchor_reactant_1">
+      <Xref identifier="EC-4.2.3.70" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10600_anchor_reactant_start_1" x="1073.52685546875" y="1405.95751953125" elementRef="WATER" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-10600_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-10600_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10600_anchor_product_0">
+      <Xref identifier="EC-4.2.3.70" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10600_anchor_product_start_0" x="0" y="0" elementRef="RXN-10600_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-10600_anchor_product_end_0" arrowHead="Conversion" x="55.0" y="563.677490234375" elementRef="PPI" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_cit_16970904">
+      <Xref identifier="16970904" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_18493048">
+      <Xref identifier="18493048" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

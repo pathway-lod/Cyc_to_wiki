@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="RXN-9023" organism="TAX-3702" source="PlantCyc">
+  <Description>Single reaction view for RXN-9023: RXN-9023</Description>
+  <Authors>
+    <Author name="BioCyc" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from BioCyc single reaction data.</Comment>
+  <Property key="UniqueID" value="RXN-9023" />
+  <Graphics boardWidth="1200" boardHeight="800" />
+  <DataNodes>
+    <DataNode elementId="AT2G40840" textLabel="AT2G40840" type="GeneProduct">
+      <Xref identifier="AT2G40840" dataSource="TAIR" />
+      <Graphics centerX="100" centerY="50" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT2G40840" />
+      <Property key="Synonym_1" value="DPE2" />
+      <Property key="Product" value="AT2G40840-MONOMER" />
+      <Property key="StartPosition" value="17052041" />
+      <Property key="EndPosition" value="17058025" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+    </DataNode>
+    <DataNode elementId="AT2G40840-MONOMER" textLabel="4-alpha-glucanotransferase" type="Protein">
+      <Xref identifier="Q8RXD9" dataSource="uniprot" />
+      <Graphics centerX="150" centerY="215" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">|FRAME: AT2G40840-MONOMER DPE2| (disproportionating enzyme 2) is a cytosolic enzyme involved in metabolizing maltose exported from the chloroplast during starch degradation. &lt;i&gt;dpe2&lt;/i&gt; mutant plants have higher levels of starch at the end of the night than wild type plants and they also have elevated levels of maltose and decreased levels of sucrose overall which is consistent with the proposed role for |FRAME: AT2G40840-MONOMER DPE2| in |FRAME: PWY-7238 sucrose biosynthesis| |CITS: [14996213]|. As an &amp;alpha;-glucanotransferase, |FRAME: AT2G40840-MONOMER DPE2| transfers a donor glycosyl unit to an acceptor, releasing glucose in the process. Early examinations of this enzyme showed that it could use the non-physiologically relevant glycogen as an acceptor |CITS: [14996213]|. Further &lt;i&gt;in vitro&lt;/i&gt; experiments show that it can use glucose, glycogen, and maltose as a glycosyl donor and can act on a wide variety of substrates including monosaccharides (such as |FRAME: Glucose glucose|, |FRAME: MANNOSE D-mannose| and |FRAME: D-Xylose D-xylose|) and maltodextrins such as |FRAME: MALTOTRIOSE maltotriose| |CITS: [16640603]|. However, several lines of evidence now suggest that the poorly defined class of compounds referred to as |FRAME: Soluble-Heteroglycans Soluble HeteroGlycans| (SHG) likely serve as the physiologically relevant acceptor of DPE2-donated glucosyl units in the cytosol |CITS: [16640603]|. And, there is also evidence that |FRAME: AT2G40840-MONOMER DPE2| uses the |FRAME: MALTOSE maltose| anomeric form of maltose produced from |FRAME: PWY-6724 starch degradation in the chloroplast| as its preferred substrate |CITS: [17028209]|.</Comment>
+      <Property key="UniqueID" value="AT2G40840-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT2G40840.1" />
+      <Property key="AlternativeId_Uniprot" value="Q8RXD9" />
+      <Property key="Gene" value="AT2G40840" />
+      <Property key="Catalyzes" value="RXN-21550, RXN-7347, RXN-10217, RXN-11734" />
+      <Property key="CatalyzesCount" value="4" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_cit_14996213" />
+      <CitationRef elementRef="citation_cit_16640603" />
+      <CitationRef elementRef="citation_cit_17028209" />
+    </DataNode>
+    <DataNode elementId="Truncated-Limit-Dextrins" textLabel="a α-limit dextrin with short branches" type="Metabolite">
+      <Xref identifier="MNXM13195" dataSource="MetaNetX" />
+      <Graphics centerX="200" centerY="400" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>|FRAME: Truncated-Limit-Dextrins &quot;An &amp;alpha;-limit dextrin with short branches&quot;| is formed when |FRAME: CPD0-971| is subjected to the |FRAME:ENZRXN-14616| activity of the |FRAME: YPR184W-MONOMER|. The enzyme shortens the branching chains, leaving only single glucose residues connected by an &amp;alpha;-1,6 bond to the main (&amp;alpha;-1,4)-glucan chain.</Comment>
+      <Property key="UniqueID" value="Truncated-Limit-Dextrins" />
+      <Property key="AlternativeId_Seed" value="cpd28281" />
+      <Property key="AlternativeId_Metanetx" value="MNXM13195" />
+      <Property key="SMILES" value="C([C@H]%12(O[C@H](OC[C@H]1(O[C@@H]([C@@H]([C@@H](O)[C@@H]1O[C@H]2(O[C@@H]([C@H]([C@@H]([C@H]2O)O)O[R1])CO))O)O[C@@H]3([C@H](O[C@@H]([C@@H]([C@@H](O)3)O)O[C@@H]4([C@H](O[C@@H]([C@@H]([C@@H](O)4)O)O[C@@H]5([C@H](O[C@@H]([C@@H]([C@@H](O)5)O)O[C@@H]6([C@H](O[C@@H]([C@@H]([C@@H](O)6)O)O[C@@H]%11([C@H](O[C@H](O[C@@H]%10([C@H](O[C@H](O[C@@H]8([C@H](O[C@H](O[C@@H]7([C@H](OC(O[R2])[C@@H]([C@H]7O)O)CO))[C@@H]([C@H]8O)O)CO[C@H]9(O[C@@H]([C@@H](O)[C@@H]([C@H]9O)O)CO)))[C@@H]([C@H]%10O)O)CO))[C@@H]([C@@H](O)%11)O)CO))CO))CO))CO))CO)))[C@@H]([C@@H](O)[C@@H]%12O)O))O" />
+      <Property key="GibbsFreeEnergy" value="-708.4834" />
+      <Property key="CompoundType" value="Dextrins" />
+    </DataNode>
+    <DataNode elementId="CPD0-971" textLabel="an α-limit dextrin" type="Metabolite">
+      <Xref identifier="146037391" dataSource="PubChem-compound" />
+      <Graphics centerX="350" centerY="400" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>|FRAME: CPD0-971 &quot;A limit dextrin&quot;| is the name given to the highly-branched core of the polysaccharide fragments remaining at the end (limit) of exhaustive hydrolysis of |FRAME: CPD-7043 amylopectin| or |FRAME: Glycogens glycogen| by &amp;alpha;-1,4-glucan hydrolase enzymes such as |FRAME: GLYCOPHOSPHORYL-CPLX| and |FRAME: MALDEXPHOSPHORYL-CPLX|. These enzymes shorten the chains, but are not able to hydrolyze the &amp;alpha;-1,6 bonds at branch points. Since the branching residues block the enzymes from getting close, the enzymes leave a tail of 4 &amp;alpha;-1,4-linked residues next to the branch points.</Comment>
+      <Property key="UniqueID" value="CPD0-971" />
+      <Property key="AlternativeId_Pubchem" value="146037391" />
+      <Property key="AlternativeId_Seed" value="cpd26551" />
+      <Property key="AlternativeId_Metanetx" value="MNXM8465" />
+      <Property key="Synonym_1" value="a glycogen phosphorylase-limit dextrin" />
+      <Property key="Synonym_2" value="a glycogen phosphorylase-limited dextrin" />
+      <Property key="ChemicalFormula" value="(C 156)(H 262)(O 131)" />
+      <Property key="SMILES" value="C([C@H]%26(O[C@H](O[C@@H]1([C@H](O[C@@H]([C@@H]([C@@H](O)1)O)O[C@@H]%25([C@H](O[C@H](O[C@@H]%24([C@H](O[C@H](OC[C@@H]%22([C@@H](O[C@H]%21(O[C@@H]([C@@H](O[C@H]%20(O[C@@H]([C@@H](O[C@H]%19(O[C@@H]([C@@H](O[C@H]%18(O[C@@H]([C@@H](O[C@H]%17(O[C@@H]([C@@H](O[C@H]%16(O[C@@H]([C@@H](O[C@H]3(O[C@@H]([C@@H](O[C@H]2(O[C@@H]([C@H]([C@@H]([C@H]2O)O)O)CO))[C@@H]([C@H]3O)O)CO[C@H]%15(O[C@@H]([C@@H](O[C@H]%14(O[C@@H]([C@@H](O[C@H]%13(O[C@@H]([C@@H](O[C@H]8(O[C@@H]([C@@H](O[C@H]7(O[C@@H]([C@@H](O[C@H]6(O[C@@H]([C@@H](O[C@H]5(O[C@@H]([C@@H](O[C@H]4(O[C@@H]([C@@H](O)[C@@H]([C@H]4O)O)CO))[C@@H]([C@H]5O)O)CO))[C@@H]([C@H]6O)O)CO))[C@@H]([C@H]7O)O)CO))[C@@H]([C@H]8O)O)CO[C@H]%12(O[C@@H]([C@@H](O[C@H]%11(O[C@@H]([C@@H](O[C@H]%10(O[C@@H]([C@@H](O[C@H]9(O[C@@H]([C@@H](O)[C@@H]([C@H]9O)O)CO))[C@@H]([C@H]%10O)O)CO))[C@@H]([C@H]%11O)O)CO))[C@@H]([C@H]%12O)O)CO)))[C@@H]([C@H]%13O)O)CO))[C@@H]([C@H]%14O)O)CO))[C@@H]([C@H]%15O)O)CO)))[C@@H]([C@H]%16O)O)CO))[C@@H]([C@H]%17O)O)CO))[C@@H]([C@H]%18O)O)CO))[C@@H]([C@H]%19O)O)CO))[C@@H]([C@H]%20O)O)CO))[C@@H]([C@@H](O)%21)O)CO))[C@@H]([C@@H](O)[C@H](O%22)O[C@@H]%23([C@H](OC(O)[C@@H]([C@H]%23O)O)CO))O))[C@@H]([C@@H](O)%24)O)CO))[C@@H]([C@@H](O)%25)O)CO))CO))[C@@H]([C@@H](O)[C@@H]%26O)O))O" />
+      <Property key="GibbsFreeEnergy" value="-1489.2467" />
+      <Property key="CompoundType" value="Dextrins" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="145.0" y="50" elementRef="AT2G40840" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="105.0" y="215" elementRef="AT2G40840-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9023">
+      <Xref identifier="EC-2.4.1.25" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-9023_start" x="395.0" y="400" elementRef="CPD0-971" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9023_end" arrowHead="Conversion" x="155.0" y="400" elementRef="Truncated-Limit-Dextrins" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9023_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9023" />
+      <Property key="EC_Number" value="EC-2.4.1.25" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="ReactionEquation" value="CPD0-971 &lt;=&gt; Truncated-Limit-Dextrins" />
+      <Property key="ReactionDirection" value="REVERSIBLE" />
+      <Property key="BalanceStatus" value=":UNBALANCED-UNFIXABLE" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXNQT-11734" />
+      <Property key="Synonym_1" value="1,4-a-D-glucan:1,4-a-D-glucan 4-a-D-glycosyltransferase" />
+      <Property key="Synonym_2" value="4-a-glucanotransferase" />
+      <Property key="Synonym_3" value="D-enzyme" />
+      <Property key="ReactionTypes" value="Chemical-Reactions, Small-Molecule-Reactions" />
+    </Interaction>
+    <Interaction elementId="RXN-9023_ENZRXNQT-11734">
+      <Waypoints>
+        <Point elementId="RXN-9023_ENZRXNQT-11734_start" x="150" y="227.5" elementRef="AT2G40840-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-9023_ENZRXNQT-11734_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-9023_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_cit_17028209">
+      <Xref identifier="17028209" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_16640603">
+      <Xref identifier="16640603" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_14996213">
+      <Xref identifier="14996213" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

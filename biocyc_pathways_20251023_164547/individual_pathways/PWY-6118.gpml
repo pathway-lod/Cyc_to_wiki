@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="glycerol-3-phosphate shuttle" organism="TAX-3055, ORG-5993" source="PlantCyc">
+  <Xref identifier="PWY-6118" dataSource="MetaCyc" />
+  <Description>The rates of oxidation and reduction of NAD and NADH must be balanced for the continuation of both catabolism and anabolism. NADH, produced in the cytosol during glycolysis, need to be oxidized to NAD+. The net NADH oxidation process in the cell occurs primarily via mitochondrial respiration. However, NADH cannot traverse the inner mitochondrial membrane |CITS: [16661409]|. Therefore, cytosolic reducing equivalents must be transferred to the mitochondria through metabolite shuttles that operate between the two compartments. One such shuttle is the |FRAME: PWY-6118 glycerol-3-phosphate shuttle| (G3P shuttle). This shuttle involves the combined actions of a |FRAME: CPLX-7723 cytoplasmic glycerol-3-phosphate dehydrogenase (NAD+)| (EC 1.1.1.8) and a FAD-dependent |FRAME: CPLX-7724 mitochondrial glycerol-3-phosphate dehydrogenase| (EC 1.1.5.3). The cytosolic enzyme consumes NADH during the conversion of |FRAME: DIHYDROXY-ACETONE-PHOSPHATE dihydroxyacetone phosphate| to |FRAME: GLYCEROL-3P &lt;i&gt;sn&lt;/i&gt;-glycerol-3-phosphate|, which can pass through the permeable mitochondrial outer membrane. |FRAME: GLYCEROL-3P &lt;i&gt;sn&lt;/i&gt;-glycerol-3-phosphate| is then reoxidized to |FRAME: DIHYDROXY-ACETONE-PHOSPHATE dihydroxyacetone phosphate| at the outer surface of the inner mitochondrial membrane by the mitochondrial FAD-dependent enzyme, which donates the electrons to the mitochondrial quinone pool. The |FRAME: DIHYDROXY-ACETONE-PHOSPHATE dihydroxyacetone phosphate| is subsequently channeled back to the cytosol. The shuttle operates in yeast, animals and plants |CITS: [16415206]|.</Description>
+  <Authors>
+    <Author name="xue" />
+    <Author name="SRI" />
+    <Author name="caspi" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-6118" />
+  <Property key="Type" value="Energy-Metabolism" />
+  <Property key="ReactionCount" value="2" />
+  <Property key="ReactionIDs" value="RXN-15745, 1.1.1.8-RXN" />
+  <Property key="PredecessorCount" value="2" />
+  <Property key="PathwayLinks" value="(DIHYDROXY-ACETONE-PHOSPHATE GLYCOLYSIS)" />
+  <Property key="Organism" value="TAX-3055, ORG-5993" />
+  <Property key="TaxonomicRange_1" value="TAX-2759" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_cit_2719977" />
+  <CitationRef elementRef="citation_cit_18599644" />
+  <CitationRef elementRef="citation_cit_16415206" />
+  <CitationRef elementRef="citation_cit_16661409" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="AT2G40690" textLabel="SFD1" type="GeneProduct">
+      <Xref identifier="AT2G40690" dataSource="TAIR" />
+      <Graphics centerX="801.5799560546875" centerY="822.7086181640625" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT2G40690" />
+      <Property key="Synonym_1" value="GLY1" />
+      <Property key="Product" value="AT2G40690-MONOMER" />
+      <Property key="StartPosition" value="16981070" />
+      <Property key="EndPosition" value="16983536" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+    </DataNode>
+    <DataNode elementId="AT5G40610" textLabel="GPDHp" type="GeneProduct">
+      <Xref identifier="AT5G40610" dataSource="TAIR" />
+      <Graphics centerX="536.0499267578125" centerY="1160.176513671875" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT5G40610" />
+      <Property key="Product" value="AT5G40610-MONOMER" />
+      <Property key="StartPosition" value="16282090" />
+      <Property key="EndPosition" value="16284582" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+    </DataNode>
+    <DataNode elementId="AT2G41540" textLabel="AT2G41540" type="GeneProduct">
+      <Xref identifier="AT2G41540" dataSource="TAIR" />
+      <Graphics centerX="100.0" centerY="839.05859375" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT2G41540" />
+      <Property key="Synonym_1" value="GPDHC1" />
+      <Property key="Synonym_2" value="GPDHc1" />
+      <Property key="Product" value="AT2G41540-MONOMER" />
+      <Property key="StartPosition" value="17333175" />
+      <Property key="EndPosition" value="17335980" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+    </DataNode>
+    <DataNode elementId="AT2G40690-MONOMER" textLabel="AT2G40690-MONOMER" type="Protein">
+      <Xref identifier="AT2G40690.1" dataSource="TAIR" />
+      <Graphics centerX="1012.5147094726562" centerY="509.7969665527344" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT2G40690-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT2G40690.1" />
+      <Property key="Gene" value="AT2G40690" />
+      <Property key="Catalyzes" value="RXN-5111" />
+      <Property key="Location" value="CCO-CHLOR-MEM" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="GOTerm" value="GO:0031969" />
+      <Property key="Species" value="ORG-5993" />
+    </DataNode>
+    <DataNode elementId="AT5G40610-MONOMER" textLabel="glycerol-3-phosphate dehydrogenase (NAD+)" type="Protein">
+      <Xref identifier="AT5G40610.1" dataSource="TAIR" />
+      <Graphics centerX="657.489990234375" centerY="569.3721923828125" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">GPDHp is one of the plastidic glycerol-3-phosphate dehydrogenases found in |FRAME: ORG-5993|. Its enzyme activity was confirmed through complementation of the gpsA mutant from E.coli and from in vitro enzymatic analyses |CITS: [WEI01]|. The N-terminal 55 amino acids of this protein were sufficient to direct a GFP fusion protein to the chloroplasts in mesophyll protoplasts |CITS: [WEI01]|.</Comment>
+      <Property key="UniqueID" value="AT5G40610-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT5G40610.1" />
+      <Property key="Gene" value="AT5G40610" />
+      <Property key="Catalyzes" value="RXN-19361, RXN-6624" />
+      <Property key="CatalyzesCount" value="2" />
+      <Property key="Location" value="CCO-CHLOROPLAST" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="GOTerms" value="GO:0009507, GO:0009536" />
+      <Property key="Species" value="ORG-5993" />
+    </DataNode>
+    <DataNode elementId="AT2G41540-MONOMER" textLabel="glycerol-3-phosphate dehydrogenase (NAD+)" type="Protein">
+      <Xref identifier="O22216" dataSource="uniprot" />
+      <Graphics centerX="794.5136108398438" centerY="63.722618103027344" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">A glycerol-3-P dehydrogenase (GPDH) cDNA was cloned from Arabidopsis in a complementation screening using an E. coli GPDH mutant. The cDNA was found to be encoded by At2G41540. T-DNA insertion mutants in this Arabidopsis gene (At2G41540, GPDHc1) was subsequently identified and characterized. Total cellular NAD-dependent GPDH activity was found reduced in the mutants, whereas no reduction of the enzyme activity was detected in any other subcellular compartments, indicating a cytosolic localization of the enzyme. Since the NAD-dependent GPDH reaction consumes NADH and regenerates NAD+, At2G41540 mutants, with the corresponding enzymatic activity blocked, exhibited increased NADH/NAD+ ratios compared with wild type plants, indicating a clear role of the NAD-dependent GPDH in maintaining cellular NADH/NAD+ homeostasis.</Comment>
+      <Property key="UniqueID" value="AT2G41540-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT2G41540.1" />
+      <Property key="AlternativeId_Uniprot" value="O22216" />
+      <Property key="Gene" value="AT2G41540" />
+      <Property key="Catalyzes" value="RXN-5040, RXN-17576" />
+      <Property key="CatalyzesCount" value="2" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_cit_16415206" />
+    </DataNode>
+    <DataNode elementId="ETR-Quinones" textLabel="an electron-transfer quinone" type="Metabolite">
+      <Xref identifier="MNXM2824" dataSource="MetaNetX" />
+      <Graphics centerX="1475.005126953125" centerY="50.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="SRI, caspi">This class holds |FRAME: Quinones quinones| that are involved in electron transfer within membranes. Quinones are organic compounds derived from aromatic compound, with two carbonyl groups incorporated into the ring structure with rearrangement of the double bonds where necessary. A classic example of a quinone is |FRAME: P-BENZOQUINONE|. Quinones are commonly named with a prefix that indicates the parent aromatic hydrocarbon (for example, &quot;benzo-&quot; for benzene, &quot;naphtho-&quot; for naphthalene, and &quot;anthra-&quot; for anthracene) with a &quot;-quinone&quot; suffix. Several types of quinones serve as electron acceptors in electron transport chains. Quinones can carry two electrons, and when fully reduced they are referred to as |FRAME: Reduced-Quinones quinols|. The addition of a single H atom to a quinone results in formation of a free radical called |FRAME: Semiquinones|. Many quinone derivatives often have other biological activities, such as |FRAME: CPD-11501 &quot;vitamin K&quot;|.</Comment>
+      <Property key="UniqueID" value="ETR-Quinones" />
+      <Property key="AlternativeId_Seed" value="cpd27012" />
+      <Property key="AlternativeId_Metanetx" value="MNXM2824" />
+      <Property key="SMILES" value="C1([R4])(=C([R3])C(=O)C(/[R3])=C([R1])/C(=O)1)" />
+      <Property key="CompoundType" value="Membrane-Electron-Carriers, Quinones" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1085.097412109375" centerY="917.4286499023438" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicWeight" value="1.0078250321" />
+      <Property key="InChI" value="InChI=1S/p+1" />
+      <Property key="InChIKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="[H+]" />
+      <Property key="GibbsFreeEnergy" value="0.42906138" />
+      <Property key="CompoundType" value="Subatomic-Particles, Monovalent-Inorganic-Cations" />
+    </DataNode>
+    <DataNode elementId="NADH" textLabel="NADH" type="Metabolite">
+      <Xref identifier="BOPGDPNILDQYTO-NNYOXOHSSA-L" dataSource="InChIKey" />
+      <Graphics centerX="1600.0" centerY="1162.92041015625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: NAD| and |FRAME: NADP| are dinucleotides containing one |FRAME: NIACINAMIDE| base and one |FRAME: ADENINE| base. Each nucleotide is connected to a ribose sugar at position 1, and the two riboses are connected at their 5 position via a diphosphate. The only difference between the two is that in NADP there is an additional phosphate group at the 2&apos; position of the ribose that carries the adenine moiety. These molecules are biological carriers of reductive equivalents (i.e. high potential electrons). Most of the time they function as cosubstrates, and in some cases they function as |FRAME: Cofactors cofactors|. They are often referred to by the obsolete term &quot;coenzymes&quot;. The most common function of |FRAME: NAD| is to accept two electrons and a proton (a hydride ion) from a substrate that is being oxidized. This reduction converts |FRAME: NAD| to |FRAME: NADH|, the reduced form. NADH then diffuses or is transported to a terminal oxidase, where the electrons are passed on, regenerating the oxidized form. |FRAME: NADPH|, on the other hand, is mostly involved in biosynthetic reactions, where it serves as an electron donor. NADPH is formed by reduction of |FRAME: NADP|, which occurs by different mechanisms in different types of organisms. In photosynthetic organisms |FRAME: NADP| is reduced by |FRAME: CPLX-84|. In heterotrophic organisms it is reduced by central metabolism processes such as the pentose phosphate pathway (see |FRAME: OXIDATIVEPENT-PWY|).</Comment>
+      <Property key="UniqueID" value="NADH" />
+      <Property key="AlternativeId_Seed" value="cpd00004" />
+      <Property key="AlternativeId_Metanetx" value="MNXM10" />
+      <Property key="AlternativeId_Refmet" value="NADH" />
+      <Property key="AlternativeId_Bigg" value="nadh" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57945" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01487" />
+      <Property key="AlternativeId_Chemspider" value="10239197" />
+      <Property key="AlternativeId_Chebi" value="57945" />
+      <Property key="AlternativeId_Pubchem" value="21604869" />
+      <Property key="AlternativeId_Cas" value="58-68-4" />
+      <Property key="AlternativeId_LigandCpd" value="C00004" />
+      <Property key="Synonym_1" value="NADH&lt;sub&gt;2&lt;/sub&gt;" />
+      <Property key="Synonym_2" value="NADH2" />
+      <Property key="Synonym_3" value="dihydrodiphosphopyridine nucleotide" />
+      <Property key="Synonym_4" value="diphosphopyridine nucleotide reduced" />
+      <Property key="Synonym_5" value="dihydronicotinamide adenine dinucleotide" />
+      <Property key="Synonym_6" value="nicotinamide adenine dinucleotide reduced" />
+      <Property key="Synonym_7" value="NAD-reduced" />
+      <Property key="Synonym_8" value="NADH+H+" />
+      <Property key="Synonym_9" value="DPNH" />
+      <Property key="Synonym_10" value="&amp;beta;-NADH" />
+      <Property key="Synonym_11" value="&amp;beta;-nicotinamide adenine dinucleotide, reduced" />
+      <Property key="MolecularWeight" value="663.43" />
+      <Property key="MonoisotopicWeight" value="665.1247716966999" />
+      <Property key="ChemicalFormula" value="(C 21)(H 27)(N 7)(O 14)(P 2)" />
+      <Property key="InChI" value="InChI=1S/C21H29N7O14P2/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(32)14(30)11(41-21)6-39-44(36,37)42-43(34,35)38-5-10-13(29)15(31)20(40-10)27-3-1-2-9(4-27)18(23)33/h1,3-4,7-8,10-11,13-16,20-21,29-32H,2,5-6H2,(H2,23,33)(H,34,35)(H,36,37)(H2,22,24,25)/p-2/t10-,11-,13-,14-,15-,16-,20-,21-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=BOPGDPNILDQYTO-NNYOXOHSSA-L" />
+      <Property key="SMILES" value="C1(/N(\C=C/CC(/C(N)=O)=1)[C@@H]5(O[C@H](COP(OP(OC[C@H]4(O[C@@H](N2(C3(\C(\N=C/2)=C(N)/N=C\N=3)))[C@H](O)[C@H](O)4))(=O)[O-])(=O)[O-])[C@@H](O)[C@@H](O)5))" />
+      <Property key="GibbsFreeEnergy" value="-325.20697" />
+      <Property key="CompoundType" value="NADH-P-OR-NOP" />
+    </DataNode>
+    <DataNode elementId="DIHYDROXY-ACETONE-PHOSPHATE" textLabel="glycerone phosphate" type="Metabolite">
+      <Xref identifier="GNGACRATGGDKBX-UHFFFAOYSA-L" dataSource="InChIKey" />
+      <Graphics centerX="1448.2218017578125" centerY="624.7098999023438" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="DIHYDROXY-ACETONE-PHOSPHATE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000024492326" />
+      <Property key="AlternativeId_Seed" value="cpd00095" />
+      <Property key="AlternativeId_Metanetx" value="MNXM77" />
+      <Property key="AlternativeId_Refmet" value="Dihydroxyacetone phosphate" />
+      <Property key="AlternativeId_Bigg" value="dhap" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57642" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01473" />
+      <Property key="AlternativeId_Chemspider" value="3833110" />
+      <Property key="AlternativeId_Chebi" value="57642" />
+      <Property key="AlternativeId_Pubchem" value="4643300" />
+      <Property key="AlternativeId_LigandCpd" value="C00111" />
+      <Property key="AlternativeId_Cas" value="57-04-5" />
+      <Property key="Synonym_1" value="dihydroxyacetone phosphate" />
+      <Property key="Synonym_2" value="dihydroxyacetone-P" />
+      <Property key="Synonym_3" value="di-OH-acetone-P" />
+      <Property key="Synonym_4" value="dihydroxy-acetone phosphate" />
+      <Property key="Synonym_5" value="3-hydroxy-2-oxopropyl phosphate" />
+      <Property key="MolecularWeight" value="168.043" />
+      <Property key="MonoisotopicWeight" value="169.9980244673" />
+      <Property key="ChemicalFormula" value="(C 3)(H 5)(O 6)(P 1)" />
+      <Property key="InChI" value="InChI=1S/C3H7O6P/c4-1-3(5)2-9-10(6,7)8/h4H,1-2H2,(H2,6,7,8)/p-2" />
+      <Property key="InChIKey" value="InChIKey=GNGACRATGGDKBX-UHFFFAOYSA-L" />
+      <Property key="SMILES" value="C(C(=O)CO)OP([O-])([O-])=O" />
+      <Property key="GibbsFreeEnergy" value="-267.48264" />
+      <Property key="CompoundType" value="Sugar-Phosphate" />
+      <Property key="AbbreviatedName" value="DHAP" />
+    </DataNode>
+    <DataNode elementId="ETR-Quinols" textLabel="an electron-transfer quinol" type="Metabolite">
+      <Xref identifier="MNXM162252" dataSource="MetaNetX" />
+      <Graphics centerX="886.9102783203125" centerY="703.9298095703125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="SRI, caspi">This class holds |FRAME: Reduced-Quinones quinols| that are involved in electron transfer within membranes.</Comment>
+      <Property key="UniqueID" value="ETR-Quinols" />
+      <Property key="AlternativeId_Seed" value="cpd27011" />
+      <Property key="AlternativeId_Metanetx" value="MNXM162252" />
+      <Property key="SMILES" value="C1([R1])(=C([R4])C(/O)=C([R3])\C(/[R2])=C1\O)" />
+      <Property key="CompoundType" value="Membrane-Electron-Carriers, Reduced-Quinones" />
+    </DataNode>
+    <DataNode elementId="NAD" textLabel="NAD⁺" type="Metabolite">
+      <Xref identifier="BAWFJGJZGIEFAR-NNYOXOHSSA-M" dataSource="InChIKey" />
+      <Graphics centerX="216.89102172851562" centerY="175.37266540527344" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: NAD| and |FRAME: NADP| are dinucleotides containing one |FRAME: NIACINAMIDE| base and one |FRAME: ADENINE| base. Each nucleotide is connected to a ribose sugar at position 1, and the two riboses are connected at their 5 position via a diphosphate. The only difference between the two is that in NADP there is an additional phosphate group at the 2&apos; position of the ribose that carries the adenine moiety. These molecules are biological carriers of reductive equivalents (i.e. high potential electrons). Most of the time they function as cosubstrates, and in some cases they function as |FRAME: Cofactors cofactors|. They are often referred to by the obsolete term &quot;coenzymes&quot;. The most common function of |FRAME: NAD| is to accept two electrons and a proton (a hydride ion) from a substrate that is being oxidized. This reduction converts |FRAME: NAD| to |FRAME: NADH|, the reduced form. NADH then diffuses or is transported to a terminal oxidase, where the electrons are passed on, regenerating the oxidized form. |FRAME: NADPH|, on the other hand, is mostly involved in biosynthetic reactions, where it serves as an electron donor. NADPH is formed by reduction of |FRAME: NADP|, which occurs by different mechanisms in different types of organisms. In photosynthetic organisms |FRAME: NADP| is reduced by |FRAME: CPLX-84|. In heterotrophic organisms it is reduced by central metabolism processes such as the pentose phosphate pathway (see |FRAME: OXIDATIVEPENT-PWY|).</Comment>
+      <Property key="UniqueID" value="NAD" />
+      <Property key="AlternativeId_Mediadb" value="compounds/3/" />
+      <Property key="AlternativeId_Seed" value="cpd00003" />
+      <Property key="AlternativeId_Metanetx" value="MNXM8" />
+      <Property key="AlternativeId_Refmet" value="NAD+" />
+      <Property key="AlternativeId_Bigg" value="nad" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57540" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00902" />
+      <Property key="AlternativeId_Chemspider" value="10239196" />
+      <Property key="AlternativeId_Chebi" value="57540" />
+      <Property key="AlternativeId_Pubchem" value="15938971" />
+      <Property key="AlternativeId_LigandCpd" value="C00003" />
+      <Property key="AlternativeId_Cas" value="53-84-9" />
+      <Property key="Synonym_1" value="NAD+" />
+      <Property key="Synonym_2" value="beta-nicotinamide adenine dinucleotide" />
+      <Property key="Synonym_3" value="coenzyme I" />
+      <Property key="Synonym_4" value="diphosphopyridine nucleotide" />
+      <Property key="Synonym_5" value="diphosphopyridine nucleotide oxidized" />
+      <Property key="Synonym_6" value="nicotinamide adenine dinucleotide" />
+      <Property key="Synonym_7" value="nicotinamide adenine dinucleotide oxidized" />
+      <Property key="Synonym_8" value="NAD-oxidized" />
+      <Property key="Synonym_9" value="NAD-ox" />
+      <Property key="Synonym_10" value="DPN+" />
+      <Property key="Synonym_11" value="DPN-ox" />
+      <Property key="Synonym_12" value="DPN" />
+      <Property key="Synonym_13" value="&amp;beta;-nicotinamide adenine dinucleotide" />
+      <Property key="Synonym_14" value="NAD" />
+      <Property key="Synonym_15" value="&amp;beta;-NAD&lt;sup&gt;+&lt;/sup&gt;" />
+      <Property key="MolecularWeight" value="662.422" />
+      <Property key="MonoisotopicWeight" value="665.1247716966999" />
+      <Property key="ChemicalFormula" value="(C 21)(H 26)(N 7)(O 14)(P 2)" />
+      <Property key="InChI" value="InChI=1S/C21H27N7O14P2/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(32)14(30)11(41-21)6-39-44(36,37)42-43(34,35)38-5-10-13(29)15(31)20(40-10)27-3-1-2-9(4-27)18(23)33/h1-4,7-8,10-11,13-16,20-21,29-32H,5-6H2,(H5-,22,23,24,25,33,34,35,36,37)/p-1/t10-,11-,13-,14-,15-,16-,20-,21-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=BAWFJGJZGIEFAR-NNYOXOHSSA-M" />
+      <Property key="SMILES" value="C5(/C(/C(N)=O)=C\C=C/[N+](/[C@@H]4(O[C@H](COP(OP(OC[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3))(=O)[O-])(=O)[O-])[C@@H](O)[C@@H](O)4))=5)" />
+      <Property key="GibbsFreeEnergy" value="-338.38196" />
+      <Property key="CompoundType" value="NAD-P-OR-NOP" />
+    </DataNode>
+    <DataNode elementId="GLYCEROL-3P" textLabel="sn-glycerol 3-phosphate" type="Metabolite">
+      <Xref identifier="AWUCVROLDVIAJX-GSVOUGTGSA-L" dataSource="InChIKey" />
+      <Graphics centerX="918.3116455078125" centerY="1550.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">The &quot;&lt;i&gt;sn&lt;/i&gt;&quot; in &lt;i&gt;sn&lt;/i&gt;-glycerol 3-phosphate stands for &quot;stereospecific numbering&quot;.</Comment>
+      <Property key="UniqueID" value="GLYCEROL-3P" />
+      <Property key="AlternativeId_Zinc" value="ZINC000003830896" />
+      <Property key="AlternativeId_Seed" value="cpd00080" />
+      <Property key="AlternativeId_Metanetx" value="MNXM66" />
+      <Property key="AlternativeId_Refmet" value="Glycerol 3-phosphate" />
+      <Property key="AlternativeId_Bigg" value="glyc3p" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57597" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00126" />
+      <Property key="AlternativeId_Pubchem" value="7048686" />
+      <Property key="AlternativeId_Chemspider" value="2939444" />
+      <Property key="AlternativeId_Chebi" value="57597" />
+      <Property key="AlternativeId_LigandCpd" value="C00093" />
+      <Property key="AlternativeId_Cas" value="57-03-4" />
+      <Property key="Synonym_1" value="L-&amp;alpha;-glycerophosphate" />
+      <Property key="Synonym_2" value="L-G3P" />
+      <Property key="Synonym_3" value="L-glycerol 3-phosphate" />
+      <Property key="Synonym_4" value="&amp;alpha;-glycerophosphoric acid" />
+      <Property key="Synonym_5" value="&amp;alpha;-glycerophosphate" />
+      <Property key="Synonym_6" value="D-glycerol 1-phosphate" />
+      <Property key="Synonym_7" value="glycerol 3-phosphate" />
+      <Property key="MolecularWeight" value="170.058" />
+      <Property key="MonoisotopicWeight" value="172.01367453150002" />
+      <Property key="ChemicalFormula" value="(C 3)(H 7)(O 6)(P 1)" />
+      <Property key="InChI" value="InChI=1S/C3H9O6P/c4-1-3(5)2-9-10(6,7)8/h3-5H,1-2H2,(H2,6,7,8)/p-2/t3-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=AWUCVROLDVIAJX-GSVOUGTGSA-L" />
+      <Property key="SMILES" value="C(OP([O-])(=O)[O-])[C@H](O)CO" />
+      <Property key="GibbsFreeEnergy" value="-258.0304" />
+      <Property key="CompoundType" value="Glycerol-1-phosphate, Glycerophosphodiesters" />
+      <Property key="SystematicName" value="(2R)-2,3-dihydroxypropyl phosphate" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="846.5799560546875" y="822.7086181640625" elementRef="AT2G40690" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="967.5147094726562" y="509.7969665527344" elementRef="AT2G40690-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_1_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_1_0_0" x="581.0499267578125" y="1160.176513671875" elementRef="AT5G40610" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_1_0_0" arrowHead="TranscriptionTranslation" x="612.489990234375" y="569.3721923828125" elementRef="AT5G40610-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_2_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_2_0_0" x="145.0" y="839.05859375" elementRef="AT2G41540" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_2_0_0" arrowHead="TranscriptionTranslation" x="749.5136108398438" y="63.722618103027344" elementRef="AT2G41540-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-15745">
+      <Xref identifier="EC-1.1.5.3" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-15745_start" x="963.3116455078125" y="1550.0" elementRef="GLYCEROL-3P" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-15745_end" arrowHead="Conversion" x="1403.2218017578125" y="624.7098999023438" elementRef="DIHYDROXY-ACETONE-PHOSPHATE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-15745_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-15745" />
+      <Property key="EC_Number" value="EC-1.1.5.3" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-4261, PWY-6118" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="ETR-Quinones + GLYCEROL-3P =&gt; ETR-Quinols + DIHYDROXY-ACETONE-PHOSPHATE" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Electron-Transfer-Reactions, Small-Molecule-Reactions" />
+    </Interaction>
+    <Interaction elementId="RXN-15745_anchor_reactant_0">
+      <Xref identifier="EC-1.1.5.3" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-15745_anchor_reactant_start_0" x="1520.005126953125" y="50.0" elementRef="ETR-Quinones" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-15745_anchor_reactant_end_0" x="0" y="0" elementRef="RXN-15745_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-15745_anchor_product_0">
+      <Xref identifier="EC-1.1.5.3" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-15745_anchor_product_start_0" x="0" y="0" elementRef="RXN-15745_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-15745_anchor_product_end_0" arrowHead="Conversion" x="841.9102783203125" y="703.9298095703125" elementRef="ETR-Quinols" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_1.1.1.8-RXN">
+      <Xref identifier="EC-1.1.1.8" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_1.1.1.8-RXN_start" x="1493.2218017578125" y="624.7098999023438" elementRef="DIHYDROXY-ACETONE-PHOSPHATE" relX="1.0" relY="0.0" />
+        <Point elementId="_1.1.1.8-RXN_end" arrowHead="Conversion" x="873.3116455078125" y="1550.0" elementRef="GLYCEROL-3P" relX="-1.0" relY="0.0" />
+        <Anchor elementId="_1.1.1.8-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Uniprot" value="P90593" />
+      <Property key="UniqueID" value="1.1.1.8-RXN" />
+      <Property key="EC_Number" value="EC-1.1.1.8" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-6118" />
+      <Property key="ReactionEquation" value="GLYCEROL-3P + NAD =&gt; DIHYDROXY-ACETONE-PHOSPHATE + NADH + PROTON" />
+      <Property key="ReactionDirection" value="PHYSIOL-RIGHT-TO-LEFT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXNQT-5040, ENZRXNQT-5111, ENZRXNQT-6624, ENZRXN-17576" />
+      <Property key="EnzymaticReactionCount" value="4" />
+      <Property key="Synonym_1" value="Glycerophosphate dehydrogenase (NAD)" />
+      <Property key="Synonym_2" value="NAD-dependent glycerol phosphate dehydrogenase" />
+      <Property key="Synonym_3" value="NAD-dependent glycerol-3-phosphate dehydrogenase" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+    </Interaction>
+    <Interaction elementId="_1.1.1.8-RXN_ENZRXNQT-5111">
+      <Waypoints>
+        <Point elementId="_1.1.1.8-RXN_ENZRXNQT-5111_start" x="1012.5147094726562" y="522.2969970703125" elementRef="AT2G40690-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="_1.1.1.8-RXN_ENZRXNQT-5111_end" arrowHead="Catalysis" x="0" y="0" elementRef="_1.1.1.8-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_1.1.1.8-RXN_ENZRXNQT-6624">
+      <Waypoints>
+        <Point elementId="_1.1.1.8-RXN_ENZRXNQT-6624_start" x="657.489990234375" y="581.8721923828125" elementRef="AT5G40610-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="_1.1.1.8-RXN_ENZRXNQT-6624_end" arrowHead="Catalysis" x="0" y="0" elementRef="_1.1.1.8-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_1.1.1.8-RXN_ENZRXNQT-5040">
+      <Waypoints>
+        <Point elementId="_1.1.1.8-RXN_ENZRXNQT-5040_start" x="794.5136108398438" y="76.22261810302734" elementRef="AT2G41540-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="_1.1.1.8-RXN_ENZRXNQT-5040_end" arrowHead="Catalysis" x="0" y="0" elementRef="_1.1.1.8-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_1.1.1.8-RXN_ENZRXN-17576">
+      <Waypoints>
+        <Point elementId="_1.1.1.8-RXN_ENZRXN-17576_start" x="794.5136108398438" y="76.22261810302734" elementRef="AT2G41540-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="_1.1.1.8-RXN_ENZRXN-17576_end" arrowHead="Catalysis" x="0" y="0" elementRef="_1.1.1.8-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_1.1.1.8-RXN_anchor_reactant_0">
+      <Xref identifier="EC-1.1.1.8" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_1.1.1.8-RXN_anchor_reactant_start_0" x="963.3116455078125" y="1550.0" elementRef="GLYCEROL-3P" relX="1.0" relY="0.0" />
+        <Point elementId="_1.1.1.8-RXN_anchor_reactant_end_0" x="0" y="0" elementRef="_1.1.1.8-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_1.1.1.8-RXN_anchor_reactant_1">
+      <Xref identifier="EC-1.1.1.8" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_1.1.1.8-RXN_anchor_reactant_start_1" x="261.8910217285156" y="175.37266540527344" elementRef="NAD" relX="1.0" relY="0.0" />
+        <Point elementId="_1.1.1.8-RXN_anchor_reactant_end_1" x="0" y="0" elementRef="_1.1.1.8-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_1.1.1.8-RXN_anchor_product_0">
+      <Xref identifier="EC-1.1.1.8" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_1.1.1.8-RXN_anchor_product_start_0" x="0" y="0" elementRef="_1.1.1.8-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="_1.1.1.8-RXN_anchor_product_end_0" arrowHead="Conversion" x="1403.2218017578125" y="624.7098999023438" elementRef="DIHYDROXY-ACETONE-PHOSPHATE" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_1.1.1.8-RXN_anchor_product_1">
+      <Xref identifier="EC-1.1.1.8" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_1.1.1.8-RXN_anchor_product_start_1" x="0" y="0" elementRef="_1.1.1.8-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="_1.1.1.8-RXN_anchor_product_end_1" arrowHead="Conversion" x="1555.0" y="1162.92041015625" elementRef="NADH" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_1.1.1.8-RXN_anchor_product_2">
+      <Xref identifier="EC-1.1.1.8" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_1.1.1.8-RXN_anchor_product_start_2" x="0" y="0" elementRef="_1.1.1.8-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="_1.1.1.8-RXN_anchor_product_end_2" arrowHead="Conversion" x="1040.097412109375" y="917.4286499023438" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_cit_16415206">
+      <Xref identifier="16415206" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_16661409">
+      <Xref identifier="16661409" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_2719977">
+      <Xref identifier="2719977" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_18599644">
+      <Xref identifier="18599644" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

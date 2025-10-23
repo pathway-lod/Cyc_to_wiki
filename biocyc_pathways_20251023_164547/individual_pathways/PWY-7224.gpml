@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="purine deoxyribonucleosides salvage" organism="TAX-511145, TAX-9606, ORG-5993" source="PlantCyc">
+  <Description>&lt;b&gt;General Background&lt;/b&gt; Deoxyribonucleotides are synthesised &lt;i&gt;de novo&lt;/i&gt; at the diphosphate level through reduction of the 2-hydroxyl group of the corresponding ribonucleotides (see |FRAME:PWY-7220 adenosine deoxyribonucleotides &lt;i&gt;de novo&lt;/i&gt; biosynthesis II| and |FRAME:PWY-7222 guanosine deoxyribonucleotides &lt;i&gt;de novo&lt;/i&gt; biosynthesis II|). This reduction is mediated by the key enzyme |FRAME: EC-1.17.4.1 &quot;ribonucleoside-diphosphate reductase&quot;|. The &lt;i&gt;de novo&lt;/i&gt; synthesis of ribonucleotides is very expensive, and organisms have adapted to salvage potential precursors from their environment. Since nucleotides can not be imported into the cell due to the negative charge of the phosphate groups, salvage is limited to free bases and nucleosides. Salvage is very important for many types of organisms and cells. It has been shown that in quiescent or terminally differentiated mammalian cells, resting in the G0 phase, ribonucleotide reductase is not produced due to a block during transcription and the cells rely on salvage for deoxyribonucleotides for DNA repair |CITS: [3044582][1696835]|. Similarly, the salvage pathway is the sole provider of deoxyribonucleotides to be used in DNA repair or mitochondrial DNA replication in G1 cells. The deoxyribonucleosides enter through the cell membrane by facilitated diffusion via a low affinity, high capacity, non-concentrative nucleoside carrier protein with a wide specificity, possessed by almost all animal cells |CITS: [3048401]|. The next step in the salvage pathway is the phosphorylation of the nucleosides to monophosphates. Once phosphorylation occurs, the nucleotides are trapped intracellularly due to their negative charge. &lt;b&gt;About This Pathway&lt;/b&gt; The salvage of purine deoxynucleosides to deoxynucleotides is common, but not universal. For example, the yeast |FRAME: TAX-4932 &lt;i&gt;Saccharomyces cerevisiae&lt;/i&gt;| does not have the enzymes that phosphorylate purine deoxynucleosides to deoxynucleoside monophopsphates, and thus is not able to utilize this salvage pathway. Mammalian cells contain four principal nucleoside kinase salvage enzymes, namely deoxycytidine kinase (|FRAME: HS08100 DCK|, |FRAME: EC-2.7.1.74 &quot;EC 2.7.1.74&quot;|), thymidine kinases 1 and 2 (|FRAME: HS09657 TK1| and |FRAME: HS09420 TK2|, |FRAME: EC-2.7.1.21 &quot;EC 2.7.1.21&quot;|), and deoxyguanosine kinase (|FRAME: HS03819 DGUOK|, |FRAME: EC-2.7.1.113 &quot;EC 2.7.1.113&quot;|). In addition, adenosine kinase (|FRAME: HS08097 ADK|, |FRAME: EC-2.7.1.20 &quot;EC 2.7.1.20&quot;|) should also be considered a deoxyribonucleoside salvage enzyme, because it is can phosphorylate |FRAME: DEOXYADENOSINE 2&apos;-deoxyadenosine|, although with much lower efficiency that the other enzymes |CITS: [7494863]|. The phosphorylation of purine deoxyribonucleosides in mammalian cells is mediated predominantly by two of these enzymes, the cytosolic deoxycytidine kinase (|FRAME: HS08100 DCK|) and the mitochondrial deoxyguanosine kinase (|FRAME: HS03819 DGUOK|). The |FRAME: CPLX-8620 mitochondrial deoxyguanosine kinase| is responsible for phosphorylation of purine deoxyribonucleosides in the mitochondrial matrix. It phosphorylate |FRAME: DEOXYGUANOSINE 2&apos;-deoxyguanosine| and |FRAME: DEOXYINOSINE 2&apos;-deoxyinosine| with high affinity (Km &lt; 25 &amp;mu;M) and |FRAME: DEOXYADENOSINE 2&apos;-deoxyadenosine| with lower affinity (Km &gt; 60 &amp;mu;M) |CITS: [6295492]|. Despite of its name, |FRAME: CPLX-8618 deoxycytidine kinase| catalyzes the phosphorylation of not only |FRAME: DEOXYCYTIDINE 2&apos;-deoxycytidine| but also |FRAME: DEOXYADENOSINE 2&apos;-deoxyadenosine| and |FRAME: DEOXYGUANOSINE 2&apos;-deoxyguanosine| |CITS: [3030413][7494863]|. The enzyme can utilize either ATP or UTP as phosphoryl donors, and based on comparison of &lt;i&gt;in vitro&lt;/i&gt; kinetic data of |FRAME: CPD-15099 cytarabine| phosphorylation by both compounds it has been suggested that UTP is the &lt;i&gt;in vivo&lt;/i&gt; relevant donor |CITS: [2021937][1406603]|. While there do not appear to exist dedicated enzymes that catalyze the phosphorylation of deoxyribonucleoside 5&apos;-monophosphates to the diphosphate form, the enzymes that catalyze the phosphorylation of ribonucleoside monophosphates, namely adenylate kinase (|FRAME: EC-2.7.4.3 &quot;EC 2.7.4.3&quot;|) and guanylate kinase (|FRAME: EC-2.7.4.8 &quot;EC 2.7.4.8&quot;|), appear to also catalyze the reaction with the deoxynucleotides in all species studied so far |CITS: [11008000]|. Once the diphosphate forms are generated, they are phosphorylated to the triphosphate forms by the broad-substrate range |FRAME: EC-2.7.4.6 &quot;nucleoside-diphosphate kinase (EC 2.7.4.6)&quot;| |CITS: [1659321][12009894]|.</Description>
+  <Authors>
+    <Author name="xue" />
+    <Author name="SRI" />
+    <Author name="caspi" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-7224" />
+  <Property key="Type_1" value="Metabolic-Clusters" />
+  <Property key="Type_2" value="Purine-Nucleotides-Salvage" />
+  <Property key="ReactionCount" value="6" />
+  <Property key="ReactionIDs" value="DADPKIN-RXN, DGDPKIN-RXN, DEOXYADENYLATE-KINASE-RXN, GMKALT-RXN, DEOXYADENOSINE-KINASE-RXN, DEOXYGUANOSINE-KINASE-RXN" />
+  <Property key="PredecessorCount" value="4" />
+  <Property key="PathwayLinks" value="(DEOXYADENOSINE (&quot;salvage&quot; . :INCOMING)), (DEOXYGUANOSINE (&quot;salvage&quot; . :INCOMING))" />
+  <Property key="Organism" value="TAX-511145, TAX-9606, ORG-5993" />
+  <Property key="TaxonomicRange_1" value="TAX-33208" />
+  <Property key="TaxonomicRange_2" value="TAX-33090" />
+  <Property key="TaxonomicRange_3" value="TAX-2" />
+  <Property key="TaxonomicRange_4" value="TAX-2157" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_cit_11008000" />
+  <CitationRef elementRef="citation_cit_3048401" />
+  <CitationRef elementRef="citation_cit_7494863" />
+  <CitationRef elementRef="citation_cit_6295492" />
+  <Graphics boardWidth="1800.0" boardHeight="1464.360107421875" />
+  <DataNodes>
+    <DataNode elementId="AT2G41880" textLabel="AGK1" type="GeneProduct">
+      <Xref identifier="AF204675" dataSource="Entrez Gene" />
+      <Graphics centerX="1398.9896240234375" centerY="1247.7022705078125" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT2G41880" />
+      <Property key="AlternativeId_Tair" value="AT2G41880" />
+      <Property key="AlternativeId_String" value="3702.AT2G41880.1" />
+      <Property key="AlternativeId_Entrez" value="AF204675" />
+      <Property key="Synonym_1" value="GK-1" />
+      <Property key="Product" value="AT2G41880-MONOMER" />
+      <Property key="StartPosition" value="17481697" />
+      <Property key="EndPosition" value="17484301" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+    </DataNode>
+    <DataNode elementId="AT5G60340" textLabel="AT5G60340" type="GeneProduct">
+      <Xref identifier="AT5G60340" dataSource="TAIR" />
+      <Graphics centerX="1396.2034912109375" centerY="302.59832763671875" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT5G60340" />
+      <Property key="Product" value="AT5G60340-MONOMER" />
+      <Property key="StartPosition" value="24291105" />
+      <Property key="EndPosition" value="24293117" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+    </DataNode>
+    <DataNode elementId="AT1G72040" textLabel="AT1G72040" type="GeneProduct">
+      <Xref identifier="3702.AT1G72040.1" dataSource="string" />
+      <Graphics centerX="1157.806396484375" centerY="622.1724853515625" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT1G72040" />
+      <Property key="AlternativeId_String" value="3702.AT1G72040.1" />
+      <Property key="Product" value="AT1G72040-MONOMER" />
+      <Property key="StartPosition" value="27115556" />
+      <Property key="EndPosition" value="27118004" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+    </DataNode>
+    <DataNode elementId="AT2G41880-MONOMER" textLabel="guanylate kinase" type="Protein">
+      <Xref identifier="P93757" dataSource="uniprot" />
+      <Graphics centerX="100.0" centerY="854.767333984375" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">The cDNA encoding a guanylate kinase (AGK) was isolated and partially characterized from &lt;i&gt;Arabidopsis thaliana&lt;/i&gt;. The gene (At2g41880, AGK-1) was expressed in all tissues investigated but found to be especially high in roots and leaves. The molecular function of catalyzing the reversible Mg2+-dependent transfer of the terminal phosphoryl group from ATP to GMP, or dGMP was confirmed by recombinant expression of the gene in &lt;i&gt;E. coli&lt;/i&gt;. In addition, the AGK-1 rescued a guanylate kinase deficient mutant of yeast |CITS: [10632732]|.</Comment>
+      <Property key="UniqueID" value="AT2G41880-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT2G41880.5" />
+      <Property key="AlternativeId_Smart" value="SM00072" />
+      <Property key="AlternativeId_Pride" value="P93757" />
+      <Property key="AlternativeId_Smr" value="P93757" />
+      <Property key="AlternativeId_Pfam" value="PF00625" />
+      <Property key="AlternativeId_Interpro" value="IPR011043" />
+      <Property key="AlternativeId_Prosite" value="PS50052" />
+      <Property key="AlternativeId_Uniprot" value="P93757" />
+      <Property key="Synonym_1" value="AT2G41880.5" />
+      <Property key="Gene" value="AT2G41880" />
+      <Property key="Catalyzes" value="RXN-7348, RXN-5207" />
+      <Property key="CatalyzesCount" value="2" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_cit_10632732" />
+    </DataNode>
+    <DataNode elementId="AT5G60340-MONOMER" textLabel="oxidoreductase" type="Protein">
+      <Xref identifier="Q9FJI1" dataSource="uniprot" />
+      <Graphics centerX="799.953125" centerY="694.3845825195312" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">Adenylate kinase (AK) is ubiquitous in the cells of all living organisms and plays a crucial role in adenine nucleotide metabolism, governing the equilibrium of adenylates &lt;i&gt;in vivo&lt;/i&gt;. In plants the enzyme&apos;s activity has profound consequences for photosynthetic |CITS: [11696011]| and respiratory metabolism |CITS: [14670601]|, as well as primary metabolism under low oxygen conditions (hypoxia and anoxia) |CITS: [21749322]|. Various isoforms of AK were found in different subcellular locations and with various functions in a wide range of plant species, such as |FRAME: TAX-4577 &lt;i&gt;Zea mays&lt;/i&gt;| |CITS: [16664952]|, |FRAME: TAX-4113 &lt;i&gt;Solanum tuberosum&lt;/i&gt;| |CITS: [18252705]|, and |FRAME: TAX-4530 &lt;i&gt;Oryza sativa&lt;/i&gt;| |CITS: [7766884]|. The |FRAME: TAX-3702 &lt;i&gt;Arabidopsis thaliana&lt;/i&gt;| genome contains 10 genes with an adenylate/cytidylate kinase signature, eight of which identified as putative adenylate kinases (AMK1 through AMK7 and AAK6). At least two members (AMK2 and AMK5) of this gene family are targeted to plastids, AMK3 and AMK4 are cytosolic, AMK7 is mitochondrial |CITS: [18162585]| and AAK6 is located in the nucleus |CITS: [23121860]|. The location of AMK1 is disputed. In one report a reduced adenylate kinase activity was observe in isolated chloroplasts from mutants with disruption of AMK1, leading to the conclusion that AMK1 is located in plastids |CITS: [15618410]|. However, later work using a stably transformed GFP-fusion with AMK1 revealed mitochondrial localization |CITS: [18162585]|. It is possible that this enzyme has dual targeting. Expression analysis found that AMK1 to AMK5 are much higher expressed than AMK6, and that AMK7 is expressed at the detection limit. Expression of AMK2 and AMK5 was positively correlated with the expression of genes involved in photosynthesis and major carbohydrate metabolism, and the expression of AMK3, AMK4, and AMK1 was negatively correlated with genes of photosynthesis and uncorrelated with genes of carbohydrate metabolism. A significant positive correlation was found for the expression of AMK1 with genes of light-independent energy metabolism |CITS: [18162585]|. The AAK6 gene has been cloned and expressed in |FRAME:TAX-562 &lt;i&gt;Escherichia coli&lt;/i&gt;|, and the recombinant protein was purified and characterized |CITS: [23121860]|. The enzyme has characteristic adenylate kinase properties, with ATP as the preferred phosphate donor and AMP as the best phosphate acceptor, although the enzyme can phosporylate a few other nucleotides, including dAMP. AAK6 T-DNA insertion mutants had decreased stem growth compared with wild-type plants, suggesting it is an essential growth factor in Arabidopsis |CITS: [23121860]|.</Comment>
+      <Property key="UniqueID" value="AT5G60340-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT5G60340.1" />
+      <Property key="AlternativeId_Uniprot" value="Q9FJI1" />
+      <Property key="Gene" value="AT5G60340" />
+      <Property key="Catalyzes" value="RXN-T9-2221, RXN-21479" />
+      <Property key="CatalyzesCount" value="2" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_cit_11696011" />
+      <CitationRef elementRef="citation_cit_14670601" />
+      <CitationRef elementRef="citation_cit_21749322" />
+      <CitationRef elementRef="citation_cit_16664952" />
+      <CitationRef elementRef="citation_cit_18252705" />
+      <CitationRef elementRef="citation_cit_7766884" />
+      <CitationRef elementRef="citation_cit_18162585" />
+      <CitationRef elementRef="citation_cit_23121860" />
+      <CitationRef elementRef="citation_cit_15618410" />
+    </DataNode>
+    <DataNode elementId="AT1G72040-MONOMER" textLabel="phosphotransferase, alcohol group as acceptor" type="Protein">
+      <Xref identifier="Q501D4" dataSource="uniprot" />
+      <Graphics centerX="850.054443359375" centerY="417.5010986328125" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">The |FRAME: TAX-3702 &lt;i&gt;Arabidopsis thaliana&lt;/i&gt;| genome contains a gene (|FRAME: AT1G72040 DNK|) predicted to encode an enzyme similar to the mammalian |FRAME: CPLX-8618 deoxycytidine kinase| (|FRAME: HS08100 DCK|) and the mitochondrial thymidine kinase (|FRAME: HS09420 TK2|). Sequence analysis suggests that this plant enzyme could be a &quot;living fossil&quot; resembling the progenitor of several related mammalian enzymes. The gene was cloned and overexpressed in |FRAME:TAX-562 &lt;i&gt;Escherichia coli&lt;/i&gt;|, and the recombinant protein was purified. While the enzyme could not phosphorylate |FRAME: THYMIDINE thymidine|, it could phosphorylate |FRAME: DEOXYADENOSINE 2&apos;-deoxyadenosine|, |FRAME: DEOXYGUANOSINE 2&apos;-deoxyguanosine|, |FRAME: DEOXYCYTIDINE 2&apos;-deoxycytidine|, and |FRAME: DEOXYURIDINE 2&apos;-deoxyuridine|. The enzyme has a substrate range almost as broad as the insect |FRAME: MONOMER-17889 deoxynucleoside kinase| (|FRAME: EC-2.7.1.145 &quot;EC 2.7.1.145&quot;|) |CITS: [18776467]|. In a subsequent study the recombinant enzyme was characterized for its kinetic parameters. It was shown that the Km for |FRAME: DEOXYURIDINE 2&apos;-deoxyuridine| was much higher (561 &amp;mu;M) than for the other three substrates (Kms in the range 14-26 &amp;mu;M) |CITS: [22897443]|.</Comment>
+      <Property key="UniqueID" value="AT1G72040-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT1G72040.1" />
+      <Property key="AlternativeId_Phylomedb" value="Q501D4" />
+      <Property key="AlternativeId_Panther" value="PTHR10513" />
+      <Property key="AlternativeId_Pride" value="Q501D4" />
+      <Property key="AlternativeId_Smr" value="Q501D4" />
+      <Property key="AlternativeId_Pfam" value="PF01712" />
+      <Property key="AlternativeId_Interpro" value="IPR031314" />
+      <Property key="AlternativeId_Uniprot" value="Q501D4" />
+      <Property key="Gene" value="AT1G72040" />
+      <Property key="Catalyzes" value="RXN-21359, RXN-21358, RXN-17616, RXN-21362" />
+      <Property key="CatalyzesCount" value="4" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_cit_18776467" />
+      <CitationRef elementRef="citation_cit_22897443" />
+    </DataNode>
+    <DataNode elementId="DATP" textLabel="dATP" type="Metabolite">
+      <Xref identifier="SUYVUBYJARFZHO-RRKCRQDMSA-J" dataSource="InChIKey" />
+      <Graphics centerX="845.3585205078125" centerY="791.9650268554688" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="DATP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000008215662" />
+      <Property key="AlternativeId_ReactomeCpd" value="110644" />
+      <Property key="AlternativeId_Seed" value="cpd00115" />
+      <Property key="AlternativeId_Metanetx" value="MNXM286" />
+      <Property key="AlternativeId_Refmet" value="dATP" />
+      <Property key="AlternativeId_Bigg" value="datp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC61404" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01532" />
+      <Property key="AlternativeId_Chebi" value="61404" />
+      <Property key="AlternativeId_Pubchem" value="25320183" />
+      <Property key="AlternativeId_LigandCpd" value="C00131" />
+      <Property key="AlternativeId_Cas" value="1927-31-7" />
+      <Property key="Synonym_1" value="2&apos;-deoxyATP" />
+      <Property key="Synonym_2" value="2&apos;-deoxyadenosine triphosphate" />
+      <Property key="Synonym_3" value="deoxy-ATP" />
+      <Property key="Synonym_4" value="deoxyadenosine-triphosphate" />
+      <Property key="Synonym_5" value="2&apos;-deoxyadenosine-5&apos;-triphosphate" />
+      <Property key="MolecularWeight" value="487.152" />
+      <Property key="MonoisotopicWeight" value="491.0008305348" />
+      <Property key="ChemicalFormula" value="(C 10)(H 12)(N 5)(O 12)(P 3)" />
+      <Property key="InChI" value="InChI=1S/C10H16N5O12P3/c11-9-8-10(13-3-12-9)15(4-14-8)7-1-5(16)6(25-7)2-24-29(20,21)27-30(22,23)26-28(17,18)19/h3-7,16H,1-2H2,(H,20,21)(H,22,23)(H2,11,12,13)(H2,17,18,19)/p-4/t5-,6+,7+/m0/s1" />
+      <Property key="InChIKey" value="InChIKey=SUYVUBYJARFZHO-RRKCRQDMSA-J" />
+      <Property key="SMILES" value="C(OP(=O)([O-])OP(=O)([O-])OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))C[C@H](O)3)" />
+      <Property key="GibbsFreeEnergy" value="-464.60852" />
+      <Property key="CompoundType" value="Purine-deoxyribonucleosides-5-PPP, All-Nucleosides" />
+    </DataNode>
+    <DataNode elementId="DGDP" textLabel="dGDP" type="Metabolite">
+      <Xref identifier="CIKGWCTVFSRMJU-KVQBGUIXSA-K" dataSource="InChIKey" />
+      <Graphics centerX="331.9205322265625" centerY="1264.360107421875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="DGDP" />
+      <Property key="AlternativeId_Pubchem" value="135398594" />
+      <Property key="AlternativeId_Zinc" value="ZINC000008215878" />
+      <Property key="AlternativeId_ReactomeCpd" value="500077" />
+      <Property key="AlternativeId_Seed" value="cpd00295" />
+      <Property key="AlternativeId_Metanetx" value="MNXM436" />
+      <Property key="AlternativeId_Refmet" value="dGDP" />
+      <Property key="AlternativeId_Bigg" value="dgdp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC58595" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00960" />
+      <Property key="AlternativeId_Chebi" value="58595" />
+      <Property key="AlternativeId_LigandCpd" value="C00361" />
+      <Property key="AlternativeId_Cas" value="102783-74-4" />
+      <Property key="Synonym_1" value="2&apos;-deoxyguanosine-5&apos;-diphosphate" />
+      <Property key="Synonym_2" value="deoxyguanosine-diphosphate" />
+      <Property key="MolecularWeight" value="424.18" />
+      <Property key="MonoisotopicWeight" value="427.0294147485" />
+      <Property key="ChemicalFormula" value="(C 10)(H 12)(N 5)(O 10)(P 2)" />
+      <Property key="InChI" value="InChI=1S/C10H15N5O10P2/c11-10-13-8-7(9(17)14-10)12-3-15(8)6-1-4(16)5(24-6)2-23-27(21,22)25-26(18,19)20/h3-6,16H,1-2H2,(H,21,22)(H2,18,19,20)(H3,11,13,14,17)/p-3/t4-,5+,6+/m0/s1" />
+      <Property key="InChIKey" value="InChIKey=CIKGWCTVFSRMJU-KVQBGUIXSA-K" />
+      <Property key="SMILES" value="C(OP(=O)([O-])OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\N=C(N)/NC(=O)C(\N=C/1)=2)))C[C@H](O)3)" />
+      <Property key="GibbsFreeEnergy" value="-399.69406" />
+      <Property key="CompoundType" value="Purine-deoxyribonucleosides-5-PP, All-Nucleosides" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1133.40380859375" centerY="965.7769775390625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicWeight" value="1.0078250321" />
+      <Property key="InChI" value="InChI=1S/p+1" />
+      <Property key="InChIKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="[H+]" />
+      <Property key="GibbsFreeEnergy" value="0.42906138" />
+      <Property key="CompoundType" value="Subatomic-Particles, Monovalent-Inorganic-Cations" />
+    </DataNode>
+    <DataNode elementId="ADP" textLabel="ADP" type="Metabolite">
+      <Xref identifier="XTWYTFMLZFPYCI-KQYNXXCUSA-K" dataSource="InChIKey" />
+      <Graphics centerX="791.88671875" centerY="1197.47021484375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ADP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000012360703" />
+      <Property key="AlternativeId_Seed" value="cpd00008" />
+      <Property key="AlternativeId_Metanetx" value="MNXM7" />
+      <Property key="AlternativeId_Refmet" value="ADP" />
+      <Property key="AlternativeId_Bigg" value="adp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC456216" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01341" />
+      <Property key="AlternativeId_Chemspider" value="5414423" />
+      <Property key="AlternativeId_Chebi" value="456216" />
+      <Property key="AlternativeId_Pubchem" value="7058055" />
+      <Property key="AlternativeId_LigandCpd" value="C00008" />
+      <Property key="AlternativeId_Cas" value="58-64-0" />
+      <Property key="Synonym_1" value="adenosine pyrophosphate" />
+      <Property key="Synonym_2" value="adenosine 5&apos;-pyrophosphate" />
+      <Property key="Synonym_3" value="adenosine-5&apos;-diphosphate" />
+      <Property key="Synonym_4" value="adenosine-diphosphate" />
+      <Property key="Synonym_5" value="adenosine-5-diphosphate" />
+      <Property key="MolecularWeight" value="424.18" />
+      <Property key="MonoisotopicWeight" value="427.0294147485" />
+      <Property key="ChemicalFormula" value="(C 10)(H 12)(N 5)(O 10)(P 2)" />
+      <Property key="InChI" value="InChI=1S/C10H15N5O10P2/c11-8-5-9(13-2-12-8)15(3-14-5)10-7(17)6(16)4(24-10)1-23-27(21,22)25-26(18,19)20/h2-4,6-7,10,16-17H,1H2,(H,21,22)(H2,11,12,13)(H2,18,19,20)/p-3/t4-,6-,7-,10-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=XTWYTFMLZFPYCI-KQYNXXCUSA-K" />
+      <Property key="SMILES" value="C(OP(=O)([O-])OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3)" />
+      <Property key="GibbsFreeEnergy" value="-344.92508" />
+      <Property key="CompoundType" value="All-Nucleosides" />
+    </DataNode>
+    <DataNode elementId="DEOXYADENOSINE" textLabel="2&apos;-deoxyadenosine" type="Metabolite">
+      <Xref identifier="OLXZPDWKRNYJJZ-RRKCRQDMSA-N" dataSource="InChIKey" />
+      <Graphics centerX="954.739501953125" centerY="790.38330078125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="DEOXYADENOSINE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001081581" />
+      <Property key="AlternativeId_Seed" value="cpd00438" />
+      <Property key="AlternativeId_Metanetx" value="MNXM625" />
+      <Property key="AlternativeId_Refmet" value="Deoxyadenosine" />
+      <Property key="AlternativeId_Bigg" value="dad_2" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC17256" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00101" />
+      <Property key="AlternativeId_Chemspider" value="13135" />
+      <Property key="AlternativeId_Chebi" value="17256" />
+      <Property key="AlternativeId_Pubchem" value="13730" />
+      <Property key="AlternativeId_LigandCpd" value="C00559" />
+      <Property key="AlternativeId_Cas" value="958-09-8" />
+      <Property key="Synonym_1" value="deoxyadenosine" />
+      <Property key="Synonym_2" value="2-deoxy-adenosine" />
+      <Property key="Synonym_3" value="adenine 2&apos;-deoxyriboside" />
+      <Property key="MolecularWeight" value="251.244" />
+      <Property key="MonoisotopicWeight" value="251.1018393096" />
+      <Property key="ChemicalFormula" value="(C 10)(H 13)(N 5)(O 3)" />
+      <Property key="InChI" value="InChI=1S/C10H13N5O3/c11-9-8-10(13-3-12-9)15(4-14-8)7-1-5(17)6(2-16)18-7/h3-7,16-17H,1-2H2,(H2,11,12,13)/t5-,6+,7+/m0/s1" />
+      <Property key="InChIKey" value="InChIKey=OLXZPDWKRNYJJZ-RRKCRQDMSA-N" />
+      <Property key="SMILES" value="C(O)[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))C[C@H](O)3)" />
+      <Property key="GibbsFreeEnergy" value="82.75557" />
+      <Property key="CompoundType" value="Nucleosides, Purine-Deoxyribonucleosides" />
+    </DataNode>
+    <DataNode elementId="DADP" textLabel="dADP" type="Metabolite">
+      <Xref identifier="DAEAPNUQQAICNR-RRKCRQDMSA-K" dataSource="InChIKey" />
+      <Graphics centerX="848.9591674804688" centerY="50.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="DADP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000008215728" />
+      <Property key="AlternativeId_ReactomeCpd" value="500087" />
+      <Property key="AlternativeId_Seed" value="cpd00177" />
+      <Property key="AlternativeId_Metanetx" value="MNXM374" />
+      <Property key="AlternativeId_Refmet" value="dADP" />
+      <Property key="AlternativeId_Bigg" value="dadp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57667" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01508" />
+      <Property key="AlternativeId_Chemspider" value="19992628" />
+      <Property key="AlternativeId_Chebi" value="57667" />
+      <Property key="AlternativeId_Pubchem" value="21125569" />
+      <Property key="AlternativeId_LigandCpd" value="C00206" />
+      <Property key="AlternativeId_Cas" value="2793-06-8" />
+      <Property key="Synonym_1" value="2&apos;-deoxyadenosine-5&apos;-diphosphate" />
+      <Property key="Synonym_2" value="deoxyadenosine-diphosphate" />
+      <Property key="Synonym_3" value="2&apos;-Deoxyadenosine 5&apos;-diphosphate" />
+      <Property key="MolecularWeight" value="408.18" />
+      <Property key="MonoisotopicWeight" value="411.0345001264" />
+      <Property key="ChemicalFormula" value="(C 10)(H 12)(N 5)(O 9)(P 2)" />
+      <Property key="InChI" value="InChI=1S/C10H15N5O9P2/c11-9-8-10(13-3-12-9)15(4-14-8)7-1-5(16)6(23-7)2-22-26(20,21)24-25(17,18)19/h3-7,16H,1-2H2,(H,20,21)(H2,11,12,13)(H2,17,18,19)/p-3/t5-,6+,7+/m0/s1" />
+      <Property key="InChIKey" value="InChIKey=DAEAPNUQQAICNR-RRKCRQDMSA-K" />
+      <Property key="SMILES" value="C(OP(=O)([O-])OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))C[C@H](O)3)" />
+      <Property key="GibbsFreeEnergy" value="-350.8241" />
+      <Property key="CompoundType" value="Purine-deoxyribonucleosides-5-PP, All-Nucleosides" />
+      <Property key="SystematicName" value="2&apos;-deoxyadenosine 5&apos;-(trihydrogen diphosphate)" />
+    </DataNode>
+    <DataNode elementId="ATP" textLabel="ATP" type="Metabolite">
+      <Xref identifier="ZKHQWZAMYRWXGA-KQYNXXCUSA-J" dataSource="InChIKey" />
+      <Graphics centerX="1600.0" centerY="793.4617919921875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ATP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004261765" />
+      <Property key="AlternativeId_Mediadb" value="compounds/2/" />
+      <Property key="AlternativeId_Seed" value="cpd00002" />
+      <Property key="AlternativeId_Metanetx" value="MNXM3" />
+      <Property key="AlternativeId_Refmet" value="ATP" />
+      <Property key="AlternativeId_Bigg" value="atp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC30616" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00538" />
+      <Property key="AlternativeId_Chemspider" value="4574455" />
+      <Property key="AlternativeId_Chebi" value="30616" />
+      <Property key="AlternativeId_Pubchem" value="5461108" />
+      <Property key="AlternativeId_LigandCpd" value="C00002" />
+      <Property key="AlternativeId_Cas" value="56-65-5" />
+      <Property key="Synonym_1" value="adenylpyrophosphate" />
+      <Property key="Synonym_2" value="adenosine-triphosphate" />
+      <Property key="Synonym_3" value="adenosine-5&apos;-triphosphate" />
+      <Property key="MolecularWeight" value="503.152" />
+      <Property key="MonoisotopicWeight" value="506.99574515689994" />
+      <Property key="ChemicalFormula" value="(C 10)(H 12)(N 5)(O 13)(P 3)" />
+      <Property key="InChI" value="InChI=1S/C10H16N5O13P3/c11-8-5-9(13-2-12-8)15(3-14-5)10-7(17)6(16)4(26-10)1-25-30(21,22)28-31(23,24)27-29(18,19)20/h2-4,6-7,10,16-17H,1H2,(H,21,22)(H,23,24)(H2,11,12,13)(H2,18,19,20)/p-4/t4-,6-,7-,10-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=ZKHQWZAMYRWXGA-KQYNXXCUSA-J" />
+      <Property key="SMILES" value="C(OP(=O)([O-])OP(=O)([O-])OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3)" />
+      <Property key="GibbsFreeEnergy" value="-553.6995" />
+      <Property key="CompoundType" value="Purine-ribonucleosides-5-PPP" />
+    </DataNode>
+    <DataNode elementId="DAMP" textLabel="dAMP" type="Metabolite">
+      <Xref identifier="KHWCHTKSEGGWEX-RRKCRQDMSA-L" dataSource="InChIKey" />
+      <Graphics centerX="231.28823852539062" centerY="328.75360107421875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="DAMP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001713574" />
+      <Property key="AlternativeId_Seed" value="cpd00294" />
+      <Property key="AlternativeId_Metanetx" value="MNXM432" />
+      <Property key="AlternativeId_Refmet" value="dAMP" />
+      <Property key="AlternativeId_Bigg" value="damp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC58245" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00905" />
+      <Property key="AlternativeId_Chemspider" value="18735032" />
+      <Property key="AlternativeId_Chebi" value="58245" />
+      <Property key="AlternativeId_Pubchem" value="22848660" />
+      <Property key="AlternativeId_Cas" value="653-63-4" />
+      <Property key="AlternativeId_LigandCpd" value="C00360" />
+      <Property key="Synonym_1" value="2&apos;-deoxyadenosine 5&apos;-phosphate" />
+      <Property key="Synonym_2" value="deoxyadenosine-phosphate" />
+      <Property key="Synonym_3" value="2&apos;-deoxyadenosine 5&apos;&apos;-monophosphate" />
+      <Property key="Synonym_4" value="2&apos;-dAMP" />
+      <Property key="MolecularWeight" value="329.208" />
+      <Property key="MonoisotopicWeight" value="331.068169718" />
+      <Property key="ChemicalFormula" value="(C 10)(H 12)(N 5)(O 6)(P 1)" />
+      <Property key="InChI" value="InChI=1S/C10H14N5O6P/c11-9-8-10(13-3-12-9)15(4-14-8)7-1-5(16)6(21-7)2-20-22(17,18)19/h3-7,16H,1-2H2,(H2,11,12,13)(H2,17,18,19)/p-2/t5-,6+,7+/m0/s1" />
+      <Property key="InChIKey" value="InChIKey=KHWCHTKSEGGWEX-RRKCRQDMSA-L" />
+      <Property key="SMILES" value="C(OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))C[C@H](O)3)" />
+      <Property key="GibbsFreeEnergy" value="-141.26382" />
+      <Property key="CompoundType" value="Purine-deoxyribonucleosides-5-P, All-Nucleosides" />
+    </DataNode>
+    <DataNode elementId="DEOXYGUANOSINE" textLabel="2&apos;-deoxyguanosine" type="Metabolite">
+      <Xref identifier="YKBGVTZYEHREMT-KVQBGUIXSA-N" dataSource="InChIKey" />
+      <Graphics centerX="568.3909912109375" centerY="877.5021362304688" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="DEOXYGUANOSINE" />
+      <Property key="AlternativeId_Pubchem" value="135398592" />
+      <Property key="AlternativeId_Zinc" value="ZINC000000010512" />
+      <Property key="AlternativeId_Seed" value="cpd00277" />
+      <Property key="AlternativeId_Metanetx" value="MNXM647" />
+      <Property key="AlternativeId_Refmet" value="Deoxyguanosine" />
+      <Property key="AlternativeId_Bigg" value="dgsn" />
+      <Property key="AlternativeId_Chebi" value="17172" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC17172" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00085" />
+      <Property key="AlternativeId_Chemspider" value="618" />
+      <Property key="AlternativeId_LigandCpd" value="C00330" />
+      <Property key="AlternativeId_Cas" value="961-07-9" />
+      <Property key="Synonym_1" value="deoxyguanosine" />
+      <Property key="Synonym_2" value="guanine 2&apos;-deoxyriboside" />
+      <Property key="MolecularWeight" value="267.244" />
+      <Property key="MonoisotopicWeight" value="267.0967539317" />
+      <Property key="ChemicalFormula" value="(C 10)(H 13)(N 5)(O 4)" />
+      <Property key="InChI" value="InChI=1S/C10H13N5O4/c11-10-13-8-7(9(18)14-10)12-3-15(8)6-1-4(17)5(2-16)19-6/h3-6,16-17H,1-2H2,(H3,11,13,14,18)/t4-,5+,6+/m0/s1" />
+      <Property key="InChIKey" value="InChIKey=YKBGVTZYEHREMT-KVQBGUIXSA-N" />
+      <Property key="SMILES" value="C(O)[C@H]3(O[C@@H](N1(C2(\N=C(N)/NC(=O)C(\N=C/1)=2)))C[C@H](O)3)" />
+      <Property key="GibbsFreeEnergy" value="33.885563" />
+      <Property key="CompoundType" value="Nucleosides, Purine-Deoxyribonucleosides" />
+    </DataNode>
+    <DataNode elementId="DGMP" textLabel="dGMP" type="Metabolite">
+      <Xref identifier="LTFMZDNNPPEQNG-KVQBGUIXSA-L" dataSource="InChIKey" />
+      <Graphics centerX="529.5927124023438" centerY="589.6336059570312" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="DGMP" />
+      <Property key="AlternativeId_Pubchem" value="135398596" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001730395" />
+      <Property key="AlternativeId_ReactomeCpd" value="500071" />
+      <Property key="AlternativeId_Seed" value="cpd00296" />
+      <Property key="AlternativeId_Metanetx" value="MNXM546" />
+      <Property key="AlternativeId_Refmet" value="dGMP" />
+      <Property key="AlternativeId_Bigg" value="dgmp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57673" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01044" />
+      <Property key="AlternativeId_Chemspider" value="5362940" />
+      <Property key="AlternativeId_Chebi" value="57673" />
+      <Property key="AlternativeId_LigandCpd" value="C00362" />
+      <Property key="AlternativeId_Cas" value="902-04-5" />
+      <Property key="Synonym_1" value="2&apos;-dG-5&apos;-MP" />
+      <Property key="Synonym_2" value="2&apos;-deoxyguanosine 5&apos;-monophosphate" />
+      <Property key="Synonym_3" value="vernine" />
+      <Property key="Synonym_4" value="2&apos;-deoxyguanosine 5&apos;-phosphate" />
+      <Property key="Synonym_5" value="deoxyguanosine-phosphate" />
+      <Property key="MolecularWeight" value="345.208" />
+      <Property key="MonoisotopicWeight" value="347.0630843401" />
+      <Property key="ChemicalFormula" value="(C 10)(H 12)(N 5)(O 7)(P 1)" />
+      <Property key="InChI" value="InChI=1S/C10H14N5O7P/c11-10-13-8-7(9(17)14-10)12-3-15(8)6-1-4(16)5(22-6)2-21-23(18,19)20/h3-6,16H,1-2H2,(H2,18,19,20)(H3,11,13,14,17)/p-2/t4-,5+,6+/m0/s1" />
+      <Property key="InChIKey" value="InChIKey=LTFMZDNNPPEQNG-KVQBGUIXSA-L" />
+      <Property key="SMILES" value="C(OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\N=C(N)/NC(=O)C(\N=C/1)=2)))C[C@H](O)3)" />
+      <Property key="GibbsFreeEnergy" value="-190.1338" />
+      <Property key="CompoundType" value="Purine-deoxyribonucleosides-5-P, All-Nucleosides" />
+    </DataNode>
+    <DataNode elementId="DGTP" textLabel="dGTP" type="Metabolite">
+      <Xref identifier="HAAZLUGHYHWQIW-KVQBGUIXSA-J" dataSource="InChIKey" />
+      <Graphics centerX="810.8675537109375" centerY="913.2462158203125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="DGTP" />
+      <Property key="AlternativeId_Pubchem" value="135398598" />
+      <Property key="AlternativeId_Zinc" value="ZINC000008215755" />
+      <Property key="AlternativeId_Seed" value="cpd00241" />
+      <Property key="AlternativeId_Metanetx" value="MNXM344" />
+      <Property key="AlternativeId_Refmet" value="dGTP" />
+      <Property key="AlternativeId_Bigg" value="dgtp" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01440" />
+      <Property key="AlternativeId_Chebi" value="61429" />
+      <Property key="AlternativeId_LigandCpd" value="C00286" />
+      <Property key="AlternativeId_Cas" value="2564-35-4" />
+      <Property key="Synonym_1" value="2&apos;-deoxyguanosine-5&apos;-triphosphate" />
+      <Property key="Synonym_2" value="deoxy-GTP" />
+      <Property key="Synonym_3" value="deoxyguanosine-triphosphate" />
+      <Property key="MolecularWeight" value="503.152" />
+      <Property key="MonoisotopicWeight" value="506.99574515689994" />
+      <Property key="ChemicalFormula" value="(C 10)(H 12)(N 5)(O 13)(P 3)" />
+      <Property key="InChI" value="InChI=1S/C10H16N5O13P3/c11-10-13-8-7(9(17)14-10)12-3-15(8)6-1-4(16)5(26-6)2-25-30(21,22)28-31(23,24)27-29(18,19)20/h3-6,16H,1-2H2,(H,21,22)(H,23,24)(H2,18,19,20)(H3,11,13,14,17)/p-4/t4-,5+,6+/m0/s1" />
+      <Property key="InChIKey" value="InChIKey=HAAZLUGHYHWQIW-KVQBGUIXSA-J" />
+      <Property key="SMILES" value="C(OP(=O)([O-])OP(=O)([O-])OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\N=C(N)/NC(=O)C(\N=C/1)=2)))C[C@H](O)3)" />
+      <Property key="GibbsFreeEnergy" value="-513.4785" />
+      <Property key="CompoundType" value="Purine-deoxyribonucleosides-5-PPP, All-Nucleosides" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="1443.9896240234375" y="1247.7022705078125" elementRef="AT2G41880" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="55.0" y="854.767333984375" elementRef="AT2G41880-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_1_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_1_0_0" x="1441.2034912109375" y="302.59832763671875" elementRef="AT5G60340" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_1_0_0" arrowHead="TranscriptionTranslation" x="754.953125" y="694.3845825195312" elementRef="AT5G60340-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_2_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_2_0_0" x="1202.806396484375" y="622.1724853515625" elementRef="AT1G72040" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_2_0_0" arrowHead="TranscriptionTranslation" x="805.054443359375" y="417.5010986328125" elementRef="AT1G72040-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DADPKIN-RXN">
+      <Xref identifier="27674" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DADPKIN-RXN_start" x="893.9591674804688" y="50.0" elementRef="DADP" relX="1.0" relY="0.0" />
+        <Point elementId="DADPKIN-RXN_end" arrowHead="Conversion" x="800.3585205078125" y="791.9650268554688" elementRef="DATP" relX="-1.0" relY="0.0" />
+        <Anchor elementId="DADPKIN-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Rhea" value="27674" />
+      <Property key="UniqueID" value="DADPKIN-RXN" />
+      <Property key="EC_Number" value="EC-2.7.4.6" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-7227, PWY-7224" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="DADP + ATP =&gt; DATP + ADP" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXNQT-7446" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+    </Interaction>
+    <Interaction elementId="DADPKIN-RXN_anchor_reactant_1">
+      <Xref identifier="27674" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DADPKIN-RXN_anchor_reactant_start_1" x="1645.0" y="793.4617919921875" elementRef="ATP" relX="1.0" relY="0.0" />
+        <Point elementId="DADPKIN-RXN_anchor_reactant_end_1" x="0" y="0" elementRef="DADPKIN-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DADPKIN-RXN_anchor_product_1">
+      <Xref identifier="27674" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DADPKIN-RXN_anchor_product_start_1" x="0" y="0" elementRef="DADPKIN-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="DADPKIN-RXN_anchor_product_end_1" arrowHead="Conversion" x="746.88671875" y="1197.47021484375" elementRef="ADP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DGDPKIN-RXN">
+      <Xref identifier="27690" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DGDPKIN-RXN_start" x="376.9205322265625" y="1264.360107421875" elementRef="DGDP" relX="1.0" relY="0.0" />
+        <Point elementId="DGDPKIN-RXN_end" arrowHead="Conversion" x="765.8675537109375" y="913.2462158203125" elementRef="DGTP" relX="-1.0" relY="0.0" />
+        <Anchor elementId="DGDPKIN-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Rhea" value="27690" />
+      <Property key="UniqueID" value="DGDPKIN-RXN" />
+      <Property key="EC_Number" value="EC-2.7.4.6" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-7226, PWY-7224" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="DGDP + ATP =&gt; DGTP + ADP" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXNQT-7445" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+    </Interaction>
+    <Interaction elementId="DGDPKIN-RXN_anchor_reactant_1">
+      <Xref identifier="27690" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DGDPKIN-RXN_anchor_reactant_start_1" x="1645.0" y="793.4617919921875" elementRef="ATP" relX="1.0" relY="0.0" />
+        <Point elementId="DGDPKIN-RXN_anchor_reactant_end_1" x="0" y="0" elementRef="DGDPKIN-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DGDPKIN-RXN_anchor_product_1">
+      <Xref identifier="27690" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DGDPKIN-RXN_anchor_product_start_1" x="0" y="0" elementRef="DGDPKIN-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="DGDPKIN-RXN_anchor_product_end_1" arrowHead="Conversion" x="746.88671875" y="1197.47021484375" elementRef="ADP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DEOXYADENYLATE-KINASE-RXN">
+      <Xref identifier="23100" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DEOXYADENYLATE-KINASE-RXN_start" x="276.2882385253906" y="328.75360107421875" elementRef="DAMP" relX="1.0" relY="0.0" />
+        <Point elementId="DEOXYADENYLATE-KINASE-RXN_end" arrowHead="Conversion" x="803.9591674804688" y="50.0" elementRef="DADP" relX="-1.0" relY="0.0" />
+        <Anchor elementId="DEOXYADENYLATE-KINASE-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Rhea" value="23100" />
+      <Property key="UniqueID" value="DEOXYADENYLATE-KINASE-RXN" />
+      <Property key="EC_Number_1" value="EC-2.7.4.13" />
+      <Property key="EC_Number_2" value="EC-2.7.4.11" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-7224" />
+      <Property key="ReactionEquation" value="ATP + DAMP =&gt; ADP + DADP" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-21479" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+    </Interaction>
+    <Interaction elementId="DEOXYADENYLATE-KINASE-RXN_ENZRXN-21479">
+      <Waypoints>
+        <Point elementId="DEOXYADENYLATE-KINASE-RXN_ENZRXN-21479_start" x="799.953125" y="706.8845825195312" elementRef="AT5G60340-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="DEOXYADENYLATE-KINASE-RXN_ENZRXN-21479_end" arrowHead="Catalysis" x="0" y="0" elementRef="DEOXYADENYLATE-KINASE-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DEOXYADENYLATE-KINASE-RXN_anchor_reactant_0">
+      <Xref identifier="23100" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DEOXYADENYLATE-KINASE-RXN_anchor_reactant_start_0" x="1645.0" y="793.4617919921875" elementRef="ATP" relX="1.0" relY="0.0" />
+        <Point elementId="DEOXYADENYLATE-KINASE-RXN_anchor_reactant_end_0" x="0" y="0" elementRef="DEOXYADENYLATE-KINASE-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DEOXYADENYLATE-KINASE-RXN_anchor_product_0">
+      <Xref identifier="23100" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DEOXYADENYLATE-KINASE-RXN_anchor_product_start_0" x="0" y="0" elementRef="DEOXYADENYLATE-KINASE-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="DEOXYADENYLATE-KINASE-RXN_anchor_product_end_0" arrowHead="Conversion" x="746.88671875" y="1197.47021484375" elementRef="ADP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="GMKALT-RXN">
+      <Xref identifier="12697" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="GMKALT-RXN_start" x="574.5927124023438" y="589.6336059570312" elementRef="DGMP" relX="1.0" relY="0.0" />
+        <Point elementId="GMKALT-RXN_end" arrowHead="Conversion" x="286.9205322265625" y="1264.360107421875" elementRef="DGDP" relX="-1.0" relY="0.0" />
+        <Anchor elementId="GMKALT-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Comment source="BioCyc">dTMP and dTDP can be used in place of dGMP and dGDP, respectively. dTMP and dAMP can act as acceptors; dATP can act as donor.</Comment>
+      <Property key="AlternativeId_Rhea" value="12697" />
+      <Property key="UniqueID" value="GMKALT-RXN" />
+      <Property key="EC_Number_1" value="EC-2.7.4.13" />
+      <Property key="EC_Number_2" value="EC-2.7.4.12" />
+      <Property key="Pathways" value="PWY-7224" />
+      <Property key="ReactionEquation" value="ATP + DGMP &lt;=&gt; ADP + DGDP" />
+      <Property key="ReactionDirection" value="REVERSIBLE" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXNQT-7348" />
+      <Property key="ReactionTypes" value="Chemical-Reactions, Small-Molecule-Reactions" />
+    </Interaction>
+    <Interaction elementId="GMKALT-RXN_ENZRXNQT-7348">
+      <Waypoints>
+        <Point elementId="GMKALT-RXN_ENZRXNQT-7348_start" x="100.0" y="867.267333984375" elementRef="AT2G41880-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="GMKALT-RXN_ENZRXNQT-7348_end" arrowHead="Catalysis" x="0" y="0" elementRef="GMKALT-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="GMKALT-RXN_anchor_reactant_0">
+      <Xref identifier="12697" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="GMKALT-RXN_anchor_reactant_start_0" x="1645.0" y="793.4617919921875" elementRef="ATP" relX="1.0" relY="0.0" />
+        <Point elementId="GMKALT-RXN_anchor_reactant_end_0" x="0" y="0" elementRef="GMKALT-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="GMKALT-RXN_anchor_product_0">
+      <Xref identifier="12697" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="GMKALT-RXN_anchor_product_start_0" x="0" y="0" elementRef="GMKALT-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="GMKALT-RXN_anchor_product_end_0" arrowHead="Conversion" x="746.88671875" y="1197.47021484375" elementRef="ADP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DEOXYADENOSINE-KINASE-RXN">
+      <Xref identifier="23452" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DEOXYADENOSINE-KINASE-RXN_start" x="999.739501953125" y="790.38330078125" elementRef="DEOXYADENOSINE" relX="1.0" relY="0.0" />
+        <Point elementId="DEOXYADENOSINE-KINASE-RXN_end" arrowHead="Conversion" x="186.28823852539062" y="328.75360107421875" elementRef="DAMP" relX="-1.0" relY="0.0" />
+        <Anchor elementId="DEOXYADENOSINE-KINASE-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Rhea" value="23452" />
+      <Property key="AlternativeId_Uniprot" value="Q59483" />
+      <Property key="UniqueID" value="DEOXYADENOSINE-KINASE-RXN" />
+      <Property key="EC_Number_1" value="EC-2.7.1.74" />
+      <Property key="EC_Number_2" value="EC-2.7.1.76" />
+      <Property key="EC_Number_3" value="EC-2.7.1.145" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-7224" />
+      <Property key="ReactionEquation" value="DEOXYADENOSINE + ATP =&gt; PROTON + DAMP + ADP" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-21358" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+    </Interaction>
+    <Interaction elementId="DEOXYADENOSINE-KINASE-RXN_ENZRXN-21358">
+      <Waypoints>
+        <Point elementId="DEOXYADENOSINE-KINASE-RXN_ENZRXN-21358_start" x="850.054443359375" y="430.0010986328125" elementRef="AT1G72040-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="DEOXYADENOSINE-KINASE-RXN_ENZRXN-21358_end" arrowHead="Catalysis" x="0" y="0" elementRef="DEOXYADENOSINE-KINASE-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DEOXYADENOSINE-KINASE-RXN_anchor_reactant_1">
+      <Xref identifier="23452" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DEOXYADENOSINE-KINASE-RXN_anchor_reactant_start_1" x="1645.0" y="793.4617919921875" elementRef="ATP" relX="1.0" relY="0.0" />
+        <Point elementId="DEOXYADENOSINE-KINASE-RXN_anchor_reactant_end_1" x="0" y="0" elementRef="DEOXYADENOSINE-KINASE-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DEOXYADENOSINE-KINASE-RXN_anchor_product_0">
+      <Xref identifier="23452" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DEOXYADENOSINE-KINASE-RXN_anchor_product_start_0" x="0" y="0" elementRef="DEOXYADENOSINE-KINASE-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="DEOXYADENOSINE-KINASE-RXN_anchor_product_end_0" arrowHead="Conversion" x="1088.40380859375" y="965.7769775390625" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DEOXYADENOSINE-KINASE-RXN_anchor_product_2">
+      <Xref identifier="23452" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DEOXYADENOSINE-KINASE-RXN_anchor_product_start_2" x="0" y="0" elementRef="DEOXYADENOSINE-KINASE-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="DEOXYADENOSINE-KINASE-RXN_anchor_product_end_2" arrowHead="Conversion" x="746.88671875" y="1197.47021484375" elementRef="ADP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DEOXYGUANOSINE-KINASE-RXN">
+      <Xref identifier="19201" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DEOXYGUANOSINE-KINASE-RXN_start" x="613.3909912109375" y="877.5021362304688" elementRef="DEOXYGUANOSINE" relX="1.0" relY="0.0" />
+        <Point elementId="DEOXYGUANOSINE-KINASE-RXN_end" arrowHead="Conversion" x="484.59271240234375" y="589.6336059570312" elementRef="DGMP" relX="-1.0" relY="0.0" />
+        <Anchor elementId="DEOXYGUANOSINE-KINASE-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Rhea" value="19201" />
+      <Property key="AlternativeId_Uniprot" value="Q16854" />
+      <Property key="UniqueID" value="DEOXYGUANOSINE-KINASE-RXN" />
+      <Property key="EC_Number_1" value="EC-2.7.1.74" />
+      <Property key="EC_Number_2" value="EC-2.7.1.113" />
+      <Property key="EC_Number_3" value="EC-2.7.1.145" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-7224" />
+      <Property key="ReactionEquation" value="DEOXYGUANOSINE + ATP =&gt; PROTON + DGMP + ADP" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-21359" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+    </Interaction>
+    <Interaction elementId="DEOXYGUANOSINE-KINASE-RXN_ENZRXN-21359">
+      <Waypoints>
+        <Point elementId="DEOXYGUANOSINE-KINASE-RXN_ENZRXN-21359_start" x="850.054443359375" y="430.0010986328125" elementRef="AT1G72040-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="DEOXYGUANOSINE-KINASE-RXN_ENZRXN-21359_end" arrowHead="Catalysis" x="0" y="0" elementRef="DEOXYGUANOSINE-KINASE-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DEOXYGUANOSINE-KINASE-RXN_anchor_reactant_1">
+      <Xref identifier="19201" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DEOXYGUANOSINE-KINASE-RXN_anchor_reactant_start_1" x="1645.0" y="793.4617919921875" elementRef="ATP" relX="1.0" relY="0.0" />
+        <Point elementId="DEOXYGUANOSINE-KINASE-RXN_anchor_reactant_end_1" x="0" y="0" elementRef="DEOXYGUANOSINE-KINASE-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DEOXYGUANOSINE-KINASE-RXN_anchor_product_0">
+      <Xref identifier="19201" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DEOXYGUANOSINE-KINASE-RXN_anchor_product_start_0" x="0" y="0" elementRef="DEOXYGUANOSINE-KINASE-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="DEOXYGUANOSINE-KINASE-RXN_anchor_product_end_0" arrowHead="Conversion" x="1088.40380859375" y="965.7769775390625" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DEOXYGUANOSINE-KINASE-RXN_anchor_product_2">
+      <Xref identifier="19201" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DEOXYGUANOSINE-KINASE-RXN_anchor_product_start_2" x="0" y="0" elementRef="DEOXYGUANOSINE-KINASE-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="DEOXYGUANOSINE-KINASE-RXN_anchor_product_end_2" arrowHead="Conversion" x="746.88671875" y="1197.47021484375" elementRef="ADP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_cit_3048401">
+      <Xref identifier="3048401" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_15618410">
+      <Xref identifier="15618410" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_10632732">
+      <Xref identifier="10632732" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_7494863">
+      <Xref identifier="7494863" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_18252705">
+      <Xref identifier="18252705" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_15465053">
+      <Xref identifier="15465053" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_22897443">
+      <Xref identifier="22897443" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_6295492">
+      <Xref identifier="6295492" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_18162585">
+      <Xref identifier="18162585" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_18776467">
+      <Xref identifier="18776467" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_11696011">
+      <Xref identifier="11696011" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_11008000">
+      <Xref identifier="11008000" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_21749322">
+      <Xref identifier="21749322" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_7766884">
+      <Xref identifier="7766884" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_14670601">
+      <Xref identifier="14670601" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_23121860">
+      <Xref identifier="23121860" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_16664952">
+      <Xref identifier="16664952" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

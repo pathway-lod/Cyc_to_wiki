@@ -1,0 +1,1056 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="D-galactose degradation I (Leloir pathway)" organism="TAX-3847, TAX-381124, ORG-5993" source="PlantCyc">
+  <Xref identifier="PWY-6317" dataSource="MetaCyc" />
+  <Description>&lt;i&gt;Summary from MetaCyc:&lt;/i&gt; The enzymes of the Leloir pathway (here named |FRAME: PWY-6317 galactose degradation I (Leloir pathway)|) catalyze the conversion of |FRAME: D-Galactose D-galactose| to the more metabolically versatile |FRAME: D-glucopyranose-6-phosphate D-glucopyranose 6-phosphate|. This pathway is required since galactose itself cannot be used for glycolysis directly. In most organisms five enzymes are required to catalyze this conversion: a |FRAME:ALDOSE1EPIM-ENZRXN galactose-1-epimerase|, a |FRAME: GALACTOKIN-MONOMER galactokinase|, a |FRAME: GALACTURIDYLYLTRANS-CPLX galactose-1-phosphate uridylyltransferase|, a |FRAME: UDPGLUCEPIM-CPLX UDP-glucose 4-epimerase|, and a |FRAME: MONOMER-5821 &amp;beta;-phosphoglucomutase|. |FRAME:ALDOSE1EPIM-ENZRXN &quot;Galactose-1-epimerase&quot;| participates by producing the galactokinase substrate |FRAME: ALPHA-D-GALACTOSE &amp;alpha;-D-galactose| from its &amp;beta;-anomer |CITS: [8647345]|. The only product of this pathway is |FRAME: GLC-6-P &amp;beta;-D-glucose 6-phosphate|. The other product, |FRAME: CPD-12575 UDP-&amp;alpha;-D-glucose|, is consumed by |FRAME: GALACTURIDYLYLTRANS-CPLX galactose-1-phosphate uridylyltransferase|, forming a cycle. The cycle requires an initial amount of |FRAME: CPD-12575 UDP-&amp;alpha;-D-glucose|, which is produced by |FRAME: EC-2.7.7.9 EC 2.7.7.9, UTP&amp;mdash;glucose-1-phosphate uridylyltransferase| |CITS: [COLISALII]|. The only difference between this pathway and the one described in |FRAME: PWY66-422 D-galactose degradation V (Leloir pathway)| is at the end of the pathway. Here |FRAME: GLC-1-P &amp;alpha;-D-glucose 1-phosphate| first mutarotates spontaneously to form |FRAME: CPD-448 &amp;beta;-D-glucose 1-phosphate|, which is converted to |FRAME: GLC-6-P &amp;beta;-D-glucose 6-phosphate| by |FRAME: EC-5.4.2.6 EC 5.4.2.6, &amp;beta;-phosphoglucomutase|. In |FRAME: PWY66-422 D-galactose degradation V (Leloir pathway)| |FRAME: GLC-1-P &amp;alpha;-D-glucose 1-phosphate| is converted directly to |FRAME: D-glucopyranose-6-phosphate D-glucopyranose 6-phosphate| by the action of |FRAME: EC-5.4.2.2 EC 5.4.2.2, phosphoglucomutase (&amp;alpha;-&lt;small&gt;D&lt;/small&gt;-glucose-1,6-bisphosphate-dependent)| or |FRAME: EC-5.4.2.5 EC 5.4.2.5, phosphoglucomutase (glucose-cofactor)|.</Description>
+  <Authors>
+    <Author name="SRI" />
+    <Author name="caspi" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-6317" />
+  <Property key="Type" value="GALACTOSE-DEGRADATION" />
+  <Property key="ReactionCount" value="5" />
+  <Property key="ReactionIDs" value="PHOSPHOGLUCMUT-RXN, ALDOSE1EPIM-RXN, UDPGLUCEPIM-RXN, GALACTURIDYLYLTRANS-RXN, GALACTOKIN-RXN" />
+  <Property key="PredecessorCount" value="5" />
+  <Property key="PathwayLinks" value="(GLC-6-P GLYCOLYSIS)" />
+  <Property key="Organism" value="TAX-3847, TAX-381124, ORG-5993" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_FEUSI99" />
+  <CitationRef elementRef="citation_PAZUR61" />
+  <CitationRef elementRef="citation_MAIN83" />
+  <CitationRef elementRef="citation_cit_8647345" />
+  <CitationRef elementRef="citation_cit_16666058" />
+  <Graphics boardWidth="1800.0" boardHeight="1697.49072265625" />
+  <DataNodes>
+    <DataNode elementId="AT3G06580" textLabel="AGK1" type="GeneProduct">
+      <Xref identifier="AT3G06580" dataSource="TAIR" />
+      <Graphics centerX="1509.9056396484375" centerY="576.30078125" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1">Gene isolated from &lt;i&gt;Arabidopsis thaliana&lt;/i&gt; L. erecta</Comment>
+      <Property key="UniqueID" value="AT3G06580" />
+      <Property key="Synonym_1" value="GalK" />
+      <Property key="Product" value="AT3G06580-MONOMER" />
+      <Property key="StartPosition" value="2048911" />
+      <Property key="EndPosition" value="2052031" />
+      <Property key="GeneType" value="Genes" />
+    </DataNode>
+    <DataNode elementId="G-12067" textLabel="UT" type="GeneProduct">
+      <Xref identifier="G-12067" dataSource="plantcyc" />
+      <Graphics centerX="881.891845703125" centerY="785.3839111328125" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="G-12067" />
+      <Property key="Product" value="MONOMER-15710" />
+      <Property key="GeneType" value="Genes" />
+      <CitationRef elementRef="citation_cit_16829585" />
+    </DataNode>
+    <DataNode elementId="AT5G51820" textLabel="PGM" type="GeneProduct">
+      <Xref identifier="AT5G51820" dataSource="TAIR" />
+      <Graphics centerX="1010.593505859375" centerY="1220.15576171875" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT5G51820" />
+      <Property key="AlternativeId_Tair" value="AT5G51820" />
+      <Property key="AlternativeId_String" value="3702.AT5G51820.1" />
+      <Property key="Product" value="AT5G51820-MONOMER" />
+      <Property key="StartPosition" value="21080594" />
+      <Property key="EndPosition" value="21085283" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+    </DataNode>
+    <DataNode elementId="G-12066" textLabel="GALK" type="GeneProduct">
+      <Xref identifier="G-12066" dataSource="plantcyc" />
+      <Graphics centerX="100.0" centerY="1040.34033203125" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="G-12066" />
+      <Property key="Product" value="MONOMER-15709" />
+      <Property key="GeneType" value="Genes" />
+    </DataNode>
+    <DataNode elementId="AT5G51820-MONOMER" textLabel="phosphoglucomutase" type="Protein">
+      <Xref identifier="Q9SCY0" dataSource="uniprot" />
+      <Graphics centerX="1024.3414306640625" centerY="822.00732421875" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT5G51820-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT5G51820.1" />
+      <Property key="AlternativeId_Uniprot" value="Q9SCY0" />
+      <Property key="AlternativeId_Smr" value="Q9SCY0" />
+      <Property key="AlternativeId_Prints" value="PR00509" />
+      <Property key="AlternativeId_Pride" value="Q9SCY0" />
+      <Property key="AlternativeId_Interpro" value="IPR005841" />
+      <Property key="AlternativeId_Pfam" value="PF00408" />
+      <Property key="AlternativeId_Phylomedb" value="Q9SCY0" />
+      <Property key="AlternativeId_Prosite" value="PS00710" />
+      <Property key="Gene" value="AT5G51820" />
+      <Property key="Catalyzes" value="RXN-6415" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="ORG-5993" />
+    </DataNode>
+    <DataNode elementId="MONOMER-8962" textLabel="UDP-galactose 4-epimerase" type="Protein">
+      <Xref identifier="MONOMER-8962" dataSource="plantcyc" />
+      <Graphics centerX="1213.2601318359375" centerY="710.1463012695312" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>UDP-glucose 4-epimerase catalyses the interconversion of the sugar nucleotides UDP-glucose and UDP-galactose via a UDP-4-keto-hexose intermediate. The enzyme was purified 800-fold from a crude extract of &lt;i&gt;Vicia faba&lt;/i&gt; to a final specific activity of 660 units/mg protein |CITS:[DEY84]|. The activity of the enzyme was shown to be dependent on NAD&lt;sup&gt;+&lt;/sup&gt; as a noncovalently bound cofactor. In its reduced NADH form, the cofactor was shown to inhibit that activity of the enzyme.</Comment>
+      <Property key="UniqueID" value="MONOMER-8962" />
+      <Property key="Synonym_1" value="UDP-glucose 4-epimerase" />
+      <Property key="MolecularWeightExp" value="78." />
+      <Property key="MolecularWeightKD" value="78." />
+      <Property key="Catalyzes" value="RXN-9122" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="TAX-3906" />
+    </DataNode>
+    <DataNode elementId="AT3G06580-MONOMER" textLabel="galactokinase" type="Protein">
+      <Xref identifier="Q9SEE5" dataSource="uniprot" />
+      <Graphics centerX="738.6005249023438" centerY="1166.7679443359375" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">Galactokinase is the first committed enzyme of the Leloir pathway of &lt;i&gt;D&lt;/i&gt;-galactose metabolism (|FRAME:GALACTMETAB-PWY|). It allows the conversion of galactose into galactose-1-phosphate. Galactose-1-phosphate is known to be interfere with the metabolism of &lt;i&gt;D&lt;/i&gt;-hexoses and is a possible cause of galactose toxicity in plants; it has therefore been proposed that galactokinase plays an important role in the regulation of hexose metabolism. The &lt;i&gt;Arabidopsis thaliana AGK1&lt;/i&gt; gene was shown to complement a &lt;i&gt;Saccharomyces cerevisiae&lt;/i&gt; &amp;Delta;&lt;i&gt;gal1&lt;/i&gt; galactokinase mutant |CITS:[9225860]| and its direct activit has been demonstrated &lt;i&gt;in vitro&lt;/i&gt; |CITS: [19509290]|.</Comment>
+      <Property key="UniqueID" value="AT3G06580-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT3G06580.1" />
+      <Property key="AlternativeId_Uniprot" value="Q9SEE5" />
+      <Property key="AlternativeId_Swissmodel" value="Q9SEE5" />
+      <Property key="AlternativeId_Modbase" value="Q9SEE5" />
+      <Property key="AlternativeId_Smr" value="Q9SEE5" />
+      <Property key="AlternativeId_String" value="Q9SEE5" />
+      <Property key="AlternativeId_Prints" value="PR00959" />
+      <Property key="AlternativeId_Pride" value="Q9SEE5" />
+      <Property key="AlternativeId_Interpro" value="IPR014721" />
+      <Property key="AlternativeId_Pfam" value="PF00288" />
+      <Property key="AlternativeId_Phylomedb" value="Q9SEE5" />
+      <Property key="AlternativeId_Prosite" value="PS00627" />
+      <Property key="MolecularWeightExp" value="50." />
+      <Property key="MolecularWeightKD" value="50." />
+      <Property key="IsoelectricPoint" value="6.18" />
+      <Property key="Gene" value="AT3G06580" />
+      <Property key="Catalyzes" value="RXN-5728, RXN-9103" />
+      <Property key="CatalyzesCount" value="2" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_cit_9225860" />
+      <CitationRef elementRef="citation_cit_19509290" />
+    </DataNode>
+    <DataNode elementId="MONOMER-15709" textLabel="MONOMER-15709" type="Protein">
+      <Xref identifier="B6V3B9" dataSource="uniprot" />
+      <Graphics centerX="708.1306762695312" centerY="782.6066284179688" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="O-28, pujar">A cDNA clone was isolated from melon fruits, the cDNA was heterologously expressed in E.coli. The cDNA encoded a gene that shares identity with plant galactokinase |CITS: [16829585]|. This enzyme catalyzes the first step of galactose metabolism by phosphorylating |FRAME: ALPHA-D-GALACTOSE &amp;alpha;-D-galactose| to |FRAME: GALACTOSE-1P &amp;alpha;-D-galactose 1-phosphate|.</Comment>
+      <Property key="UniqueID" value="MONOMER-15709" />
+      <Property key="AlternativeId_Uniprot" value="B6V3B9" />
+      <Property key="AlternativeId_Pid" value="ACJ04703" />
+      <Property key="MolecularWeightExp" value="54.6" />
+      <Property key="MolecularWeightKD" value="54.6" />
+      <Property key="Gene" value="G-12066" />
+      <Property key="Catalyzes" value="RXN-17912" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="TAX-3656" />
+      <CitationRef elementRef="citation_cit_16829585" />
+    </DataNode>
+    <DataNode elementId="MONOMER-9141" textLabel="galactose 1-phosphate uridyl transferase" type="Protein">
+      <Xref identifier="MONOMER-9141" dataSource="plantcyc" />
+      <Graphics centerX="1600.0" centerY="944.0799560546875" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="PMN, zhang">The existence of an enzyme with galactose 1-phosphate uridyl transferase activity has been proposed in &lt;i&gt;Glycine max&lt;/i&gt; through radiotracer experiments |CITS:[PAZUR61]|. Radioactivity was transfered from UDP-glucose to UDP-galactose in an assay using radiolabelled UDP-glucose in an enzymatic extract of soybean sprouts |CITS:[PAZUR61]|. The enzyme has not been purified and characterized.</Comment>
+      <Property key="UniqueID" value="MONOMER-9141" />
+      <Property key="Catalyzes" value="RXN-9301" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="TAX-3847" />
+    </DataNode>
+    <DataNode elementId="MONOMER-15710" textLabel="MONOMER-15710" type="Protein">
+      <Xref identifier="Q19TV7" dataSource="uniprot" />
+      <Graphics centerX="790.1043701171875" centerY="357.313232421875" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="O-28, pujar">A cDNA clone was isolated from fruits of melon |FRAME: TAX-3656 &lt;i&gt;Cucumis melo&lt;/i&gt;|. The cDNA was recombinantly expressed in E.coli, purified and characterized |CITS: [16829585]|. The encoded gene was an uridyltransferase (UT) that functions in the Leloir pathway, however, gene expression and enzyme activities have shown that gal-1-p flux is significant via the Leloir pathway utilizing UT.</Comment>
+      <Property key="UniqueID" value="MONOMER-15710" />
+      <Property key="AlternativeId_Uniprot" value="Q19TV7" />
+      <Property key="AlternativeId_Pid" value="ABD98821" />
+      <Property key="MolecularWeightExp" value="38.3" />
+      <Property key="MolecularWeightKD" value="38.3" />
+      <Property key="Gene" value="G-12067" />
+      <Property key="Catalyzes" value="RXN-17913" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="TAX-3656" />
+      <CitationRef elementRef="citation_cit_16829585" />
+    </DataNode>
+    <DataNode elementId="GLC-1-P" textLabel="α-D-glucopyranose 1-phosphate" type="Metabolite">
+      <Xref identifier="HXXFSFRBOHSIMQ-VFUOTHLCSA-L" dataSource="InChIKey" />
+      <Graphics centerX="722.408203125" centerY="621.613525390625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="GLC-1-P" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004073375" />
+      <Property key="AlternativeId_Refmet" value="Glucose-1-phosphate" />
+      <Property key="AlternativeId_Bigg" value="g1p" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC58601" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01586" />
+      <Property key="AlternativeId_Chemspider" value="5441206" />
+      <Property key="AlternativeId_Chebi" value="58601" />
+      <Property key="AlternativeId_Pubchem" value="7091266" />
+      <Property key="AlternativeId_Cas" value="59-56-3" />
+      <Property key="Synonym_1" value="glucose 1-phosphate" />
+      <Property key="Synonym_2" value="cori ester" />
+      <Property key="Synonym_3" value="D-glucose 1-phosphate" />
+      <Property key="Synonym_4" value="glucose-1P" />
+      <Property key="Synonym_5" value="&amp;alpha;-glucose-1-phosphate" />
+      <Property key="Synonym_6" value="D-glucose-&amp;alpha;-1-phosphate" />
+      <Property key="Synonym_7" value="&amp;alpha;-D-glucose-1-P" />
+      <Property key="Synonym_8" value="D-glucose-1-phosphate" />
+      <Property key="Synonym_9" value="&amp;alpha;-D-glucose 1-phosphate" />
+      <Property key="MolecularWeight" value="258.121" />
+      <Property key="MonoisotopicWeight" value="260.0297185262" />
+      <Property key="ChemicalFormula" value="(C 6)(H 11)(O 9)(P 1)" />
+      <Property key="InChI" value="InChI=1S/C6H13O9P/c7-1-2-3(8)4(9)5(10)6(14-2)15-16(11,12)13/h2-10H,1H2,(H2,11,12,13)/p-2/t2-,3-,4+,5-,6-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=HXXFSFRBOHSIMQ-VFUOTHLCSA-L" />
+      <Property key="SMILES" value="C(O)[C@H]1(O[C@H](OP(=O)([O-])[O-])[C@H](O)[C@@H](O)[C@H](O)1)" />
+      <Property key="GibbsFreeEnergy" value="-319.04593" />
+      <Property key="CompoundType" value="D-glucose-1-phosphates, Alpha-Hexose-1-Phosphates, Alpha-D-aldose-1-phosphates" />
+    </DataNode>
+    <DataNode elementId="D-glucopyranose-6-phosphate" textLabel="D-glucopyranose 6-phosphate" type="Metabolite">
+      <Xref identifier="NBSCHQHZLSJFNQ-GASJEMHNSA-L" dataSource="InChIKey" />
+      <Graphics centerX="816.6454467773438" centerY="872.2215576171875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="D-glucopyranose-6-phosphate" />
+      <Property key="AlternativeId_Mediadb" value="compounds/90/" />
+      <Property key="AlternativeId_ReactomeCpd" value="1629756" />
+      <Property key="AlternativeId_Metanetx" value="MNXM160" />
+      <Property key="AlternativeId_Chebi" value="4170" />
+      <Property key="AlternativeId_LigandCpd" value="C00092" />
+      <Property key="Synonym_1" value="D-glucopyranose-6-P" />
+      <Property key="MolecularWeight" value="258.121" />
+      <Property key="MonoisotopicWeight" value="260.0297185262" />
+      <Property key="ChemicalFormula" value="(C 6)(H 11)(O 9)(P 1)" />
+      <Property key="InChI" value="InChI=1S/C6H13O9P/c7-3-2(1-14-16(11,12)13)15-6(10)5(9)4(3)8/h2-10H,1H2,(H2,11,12,13)/p-2/t2-,3-,4+,5-,6?/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=NBSCHQHZLSJFNQ-GASJEMHNSA-L" />
+      <Property key="SMILES" value="C([C@H]1(OC([C@@H]([C@H]([C@@H]1O)O)O)O))OP([O-])([O-])=O" />
+      <Property key="GibbsFreeEnergy" value="-319.04593" />
+      <Property key="CompoundType" value="Glucose-6-phosphate" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="366.4351806640625" centerY="191.1387481689453" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicWeight" value="1.0078250321" />
+      <Property key="InChI" value="InChI=1S/p+1" />
+      <Property key="InChIKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="[H+]" />
+      <Property key="GibbsFreeEnergy" value="0.42906138" />
+      <Property key="CompoundType" value="Subatomic-Particles, Monovalent-Inorganic-Cations" />
+    </DataNode>
+    <DataNode elementId="ADP" textLabel="ADP" type="Metabolite">
+      <Xref identifier="XTWYTFMLZFPYCI-KQYNXXCUSA-K" dataSource="InChIKey" />
+      <Graphics centerX="414.73345947265625" centerY="1172.1171875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ADP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000012360703" />
+      <Property key="AlternativeId_Seed" value="cpd00008" />
+      <Property key="AlternativeId_Metanetx" value="MNXM7" />
+      <Property key="AlternativeId_Refmet" value="ADP" />
+      <Property key="AlternativeId_Bigg" value="adp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC456216" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01341" />
+      <Property key="AlternativeId_Chemspider" value="5414423" />
+      <Property key="AlternativeId_Chebi" value="456216" />
+      <Property key="AlternativeId_Pubchem" value="7058055" />
+      <Property key="AlternativeId_LigandCpd" value="C00008" />
+      <Property key="AlternativeId_Cas" value="58-64-0" />
+      <Property key="Synonym_1" value="adenosine pyrophosphate" />
+      <Property key="Synonym_2" value="adenosine 5&apos;-pyrophosphate" />
+      <Property key="Synonym_3" value="adenosine-5&apos;-diphosphate" />
+      <Property key="Synonym_4" value="adenosine-diphosphate" />
+      <Property key="Synonym_5" value="adenosine-5-diphosphate" />
+      <Property key="MolecularWeight" value="424.18" />
+      <Property key="MonoisotopicWeight" value="427.0294147485" />
+      <Property key="ChemicalFormula" value="(C 10)(H 12)(N 5)(O 10)(P 2)" />
+      <Property key="InChI" value="InChI=1S/C10H15N5O10P2/c11-8-5-9(13-2-12-8)15(3-14-5)10-7(17)6(16)4(24-10)1-23-27(21,22)25-26(18,19)20/h2-4,6-7,10,16-17H,1H2,(H,21,22)(H2,11,12,13)(H2,18,19,20)/p-3/t4-,6-,7-,10-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=XTWYTFMLZFPYCI-KQYNXXCUSA-K" />
+      <Property key="SMILES" value="C(OP(=O)([O-])OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3)" />
+      <Property key="GibbsFreeEnergy" value="-344.92508" />
+      <Property key="CompoundType" value="All-Nucleosides" />
+    </DataNode>
+    <DataNode elementId="GALACTOSE-1P" textLabel="α-D-galactose 1-phosphate" type="Metabolite">
+      <Xref identifier="HXXFSFRBOHSIMQ-FPRJBGLDSA-L" dataSource="InChIKey" />
+      <Graphics centerX="1258.199951171875" centerY="1026.2850341796875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="GALACTOSE-1P" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004096092" />
+      <Property key="AlternativeId_ReactomeCpd" value="30170" />
+      <Property key="AlternativeId_Metanetx" value="MNXM336" />
+      <Property key="AlternativeId_Refmet" value="Galactose-1-phosphate" />
+      <Property key="AlternativeId_Bigg" value="gal1p" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC58336" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00645" />
+      <Property key="AlternativeId_Chemspider" value="5447153" />
+      <Property key="AlternativeId_Chebi" value="58336" />
+      <Property key="AlternativeId_Pubchem" value="7098639" />
+      <Property key="AlternativeId_LigandCpd" value="C00446" />
+      <Property key="AlternativeId_Cas" value="2255-14-3" />
+      <Property key="Synonym_1" value="&amp;alpha;-D-Gal-1-P" />
+      <Property key="Synonym_2" value="&amp;alpha;-D-galactopyranose 1-phosphate" />
+      <Property key="Synonym_3" value="galactose-1-P" />
+      <Property key="Synonym_4" value="D-galactose-1-phosphate" />
+      <Property key="MolecularWeight" value="258.121" />
+      <Property key="MonoisotopicWeight" value="260.0297185262" />
+      <Property key="ChemicalFormula" value="(C 6)(H 11)(O 9)(P 1)" />
+      <Property key="InChI" value="InChI=1S/C6H13O9P/c7-1-2-3(8)4(9)5(10)6(14-2)15-16(11,12)13/h2-10H,1H2,(H2,11,12,13)/p-2/t2-,3+,4+,5-,6-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=HXXFSFRBOHSIMQ-FPRJBGLDSA-L" />
+      <Property key="SMILES" value="C(O)[C@H]1(O[C@H](OP(=O)([O-])[O-])[C@H](O)[C@@H](O)[C@@H](O)1)" />
+      <Property key="GibbsFreeEnergy" value="-319.04593" />
+      <Property key="CompoundType" value="D-galactose-1-phosphate, Alpha-Hexose-1-Phosphates" />
+      <Property key="SystematicName" value="alpha-D-galactopyranose, 1-(dihydrogen phosphate)" />
+    </DataNode>
+    <DataNode elementId="ATP" textLabel="ATP" type="Metabolite">
+      <Xref identifier="ZKHQWZAMYRWXGA-KQYNXXCUSA-J" dataSource="InChIKey" />
+      <Graphics centerX="841.3794555664062" centerY="814.1842041015625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ATP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004261765" />
+      <Property key="AlternativeId_Mediadb" value="compounds/2/" />
+      <Property key="AlternativeId_Seed" value="cpd00002" />
+      <Property key="AlternativeId_Metanetx" value="MNXM3" />
+      <Property key="AlternativeId_Refmet" value="ATP" />
+      <Property key="AlternativeId_Bigg" value="atp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC30616" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00538" />
+      <Property key="AlternativeId_Chemspider" value="4574455" />
+      <Property key="AlternativeId_Chebi" value="30616" />
+      <Property key="AlternativeId_Pubchem" value="5461108" />
+      <Property key="AlternativeId_LigandCpd" value="C00002" />
+      <Property key="AlternativeId_Cas" value="56-65-5" />
+      <Property key="Synonym_1" value="adenylpyrophosphate" />
+      <Property key="Synonym_2" value="adenosine-triphosphate" />
+      <Property key="Synonym_3" value="adenosine-5&apos;-triphosphate" />
+      <Property key="MolecularWeight" value="503.152" />
+      <Property key="MonoisotopicWeight" value="506.99574515689994" />
+      <Property key="ChemicalFormula" value="(C 10)(H 12)(N 5)(O 13)(P 3)" />
+      <Property key="InChI" value="InChI=1S/C10H16N5O13P3/c11-8-5-9(13-2-12-8)15(3-14-5)10-7(17)6(16)4(26-10)1-25-30(21,22)28-31(23,24)27-29(18,19)20/h2-4,6-7,10,16-17H,1H2,(H,21,22)(H,23,24)(H2,11,12,13)(H2,18,19,20)/p-4/t4-,6-,7-,10-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=ZKHQWZAMYRWXGA-KQYNXXCUSA-J" />
+      <Property key="SMILES" value="C(OP(=O)([O-])OP(=O)([O-])OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3)" />
+      <Property key="GibbsFreeEnergy" value="-553.6995" />
+      <Property key="CompoundType" value="Purine-ribonucleosides-5-PPP" />
+    </DataNode>
+    <DataNode elementId="ALPHA-D-GALACTOSE" textLabel="α-D-galactopyranose" type="Metabolite">
+      <Xref identifier="WQZGKKKJIJFFOK-PHYPRBDBSA-N" dataSource="InChIKey" />
+      <Graphics centerX="122.47381591796875" centerY="608.5374755859375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ALPHA-D-GALACTOSE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000000901155" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC28061" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00143" />
+      <Property key="AlternativeId_Chemspider" value="388480" />
+      <Property key="AlternativeId_LigandCpd" value="C00984" />
+      <Property key="AlternativeId_Chebi" value="28061" />
+      <Property key="AlternativeId_Pubchem" value="439357" />
+      <Property key="Synonym_1" value="6-(hydroxymethyl)tetrahydropyran-2,3,4,5-tetraol" />
+      <Property key="Synonym_2" value="&amp;alpha;-D-galactose" />
+      <Property key="Synonym_3" value="&amp;alpha;-D-Gal" />
+      <Property key="MolecularWeight" value="180.157" />
+      <Property key="MonoisotopicWeight" value="180.0633881178" />
+      <Property key="ChemicalFormula" value="(C 6)(H 12)(O 6)" />
+      <Property key="InChI" value="InChI=1S/C6H12O6/c7-1-2-3(8)4(9)5(10)6(11)12-2/h2-11H,1H2/t2-,3+,4+,5-,6+/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=WQZGKKKJIJFFOK-PHYPRBDBSA-N" />
+      <Property key="SMILES" value="C(O)[C@H]1(O[C@H](O)[C@H](O)[C@@H](O)[C@@H](O)1)" />
+      <Property key="GibbsFreeEnergy" value="-95.02656" />
+      <Property key="CompoundType" value="D-galactopyranose" />
+    </DataNode>
+    <DataNode elementId="CPD-14553" textLabel="UDP-α-D-galactose" type="Metabolite">
+      <Xref identifier="HSCJRCZFDFQWRP-ABVWGUQPSA-L" dataSource="InChIKey" />
+      <Graphics centerX="936.6397705078125" centerY="976.00146484375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-14553" />
+      <Property key="AlternativeId_Zinc" value="ZINC000008551104" />
+      <Property key="AlternativeId_Metanetx" value="MNXM89795" />
+      <Property key="AlternativeId_Bigg" value="udpgal" />
+      <Property key="AlternativeId_Chebi" value="66914" />
+      <Property key="AlternativeId_Pubchem" value="9549262" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC66914" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00302" />
+      <Property key="AlternativeId_Chemspider" value="17069" />
+      <Property key="AlternativeId_Cas" value="2956-16-3" />
+      <Property key="AlternativeId_LigandCpd" value="C00052" />
+      <Property key="Synonym_1" value="UDP-&amp;alpha;-D-galactopyranose" />
+      <Property key="Synonym_2" value="UDP-galactose" />
+      <Property key="Synonym_3" value="UDP-Gal" />
+      <Property key="MolecularWeight" value="564.289" />
+      <Property key="MonoisotopicWeight" value="566.0550203765" />
+      <Property key="ChemicalFormula" value="(C 15)(H 22)(N 2)(O 17)(P 2)" />
+      <Property key="InChI" value="InChI=1S/C15H24N2O17P2/c18-3-5-8(20)10(22)12(24)14(32-5)33-36(28,29)34-35(26,27)30-4-6-9(21)11(23)13(31-6)17-2-1-7(19)16-15(17)25/h1-2,5-6,8-14,18,20-24H,3-4H2,(H,26,27)(H,28,29)(H,16,19,25)/p-2/t5-,6-,8+,9-,10+,11-,12-,13-,14-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=HSCJRCZFDFQWRP-ABVWGUQPSA-L" />
+      <Property key="SMILES" value="C(O)[C@@H]1([C@H](O)[C@H](O)[C@@H](O)[C@H](O1)OP(OP(OC[C@@H]3([C@H]([C@H]([C@H](N2(\C=C/C(=O)NC2=O))O3)O)O))(=O)[O-])(=O)[O-])" />
+      <Property key="GibbsFreeEnergy" value="-566.8436" />
+      <Property key="CompoundType" value="Alpha-D-Galactosides, UDP-sugar" />
+    </DataNode>
+    <DataNode elementId="GALACTOSE" textLabel="β-D-galactopyranose" type="Metabolite">
+      <Xref identifier="WQZGKKKJIJFFOK-FPRJBGLDSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1322.3455810546875" centerY="224.9329376220703" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="GALACTOSE" />
+      <Property key="AlternativeId_Seed" value="cpd00709" />
+      <Property key="AlternativeId_Metanetx" value="MNXM112" />
+      <Property key="AlternativeId_Chebi" value="27667" />
+      <Property key="AlternativeId_Bigg" value="gal_bD" />
+      <Property key="AlternativeId_Hmdb" value="HMDB03449" />
+      <Property key="AlternativeId_Chemspider" value="388476" />
+      <Property key="AlternativeId_Cas" value="7296-64-2" />
+      <Property key="AlternativeId_LigandCpd" value="C00962" />
+      <Property key="AlternativeId_Pubchem" value="439353" />
+      <Property key="Synonym_1" value="&amp;beta;-D-galactose" />
+      <Property key="Synonym_2" value="cerebrose" />
+      <Property key="Synonym_3" value="6-(hydroxymethyl)tetrahydropyran-2,3,4,5-tetraol" />
+      <Property key="Synonym_4" value="&amp;beta;-D-Gal" />
+      <Property key="MolecularWeight" value="180.157" />
+      <Property key="MonoisotopicWeight" value="180.0633881178" />
+      <Property key="ChemicalFormula" value="(C 6)(H 12)(O 6)" />
+      <Property key="InChI" value="InChI=1S/C6H12O6/c7-1-2-3(8)4(9)5(10)6(11)12-2/h2-11H,1H2/t2-,3+,4+,5-,6-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=WQZGKKKJIJFFOK-FPRJBGLDSA-N" />
+      <Property key="SMILES" value="C(O)[C@H]1(O[C@@H](O)[C@H](O)[C@@H](O)[C@@H](O)1)" />
+      <Property key="GibbsFreeEnergy" value="-95.02656" />
+      <Property key="CompoundType" value="D-galactopyranose" />
+    </DataNode>
+    <DataNode elementId="CPD-12575" textLabel="UDP-α-D-glucose" type="Metabolite">
+      <Xref identifier="HSCJRCZFDFQWRP-JZMIEXBBSA-L" dataSource="InChIKey" />
+      <Graphics centerX="509.46337890625" centerY="1497.49072265625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue, SRI, caspi">UDP-glucose is an activated form of glucose that participates in a variety of enzymatic reactions, including: 1. Biosynthesis of glucose-containing compounds, such as polysaccharaides (glycogen, starch, laminarin and cellulose), disaccharides (sucrose, trehalose), &amp;beta;-glucosides, and glucosyl-ceramides. 2. Channeling galactose into the glycolytic pathway It has also been suggested that UDP-D-glucose can act as an extracellular signaling molecule |CITS: [12695547]|.</Comment>
+      <Property key="UniqueID" value="CPD-12575" />
+      <Property key="AlternativeId_Zinc" value="ZINC000008215472" />
+      <Property key="AlternativeId_Chebi" value="58885" />
+      <Property key="AlternativeId_Pubchem" value="16667346" />
+      <Property key="AlternativeId_Cas" value="133-89-1" />
+      <Property key="AlternativeId_Knapsack" value="C00001514" />
+      <Property key="AlternativeId_Hmdb" value="HMDB60079" />
+      <Property key="AlternativeId_Metanetx" value="MNXM722710" />
+      <Property key="AlternativeId_Bigg" value="udpg" />
+      <Property key="AlternativeId_LigandCpd" value="C00029" />
+      <Property key="AlternativeId_Chemspider" value="10239191" />
+      <Property key="Synonym_1" value="UDPG" />
+      <Property key="Synonym_2" value="UDP-glucose" />
+      <Property key="Synonym_3" value="UDP-D-glucose" />
+      <Property key="Synonym_4" value="UDP-&amp;alpha;-D-glucopyranose" />
+      <Property key="Synonym_5" value="uridine 5&apos;-diphosphoglucose" />
+      <Property key="MolecularWeight" value="564.289" />
+      <Property key="MonoisotopicWeight" value="566.0550203765" />
+      <Property key="ChemicalFormula" value="(C 15)(H 22)(N 2)(O 17)(P 2)" />
+      <Property key="InChI" value="InChI=1S/C15H24N2O17P2/c18-3-5-8(20)10(22)12(24)14(32-5)33-36(28,29)34-35(26,27)30-4-6-9(21)11(23)13(31-6)17-2-1-7(19)16-15(17)25/h1-2,5-6,8-14,18,20-24H,3-4H2,(H,26,27)(H,28,29)(H,16,19,25)/p-2/t5-,6-,8-,9-,10+,11-,12-,13-,14-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=HSCJRCZFDFQWRP-JZMIEXBBSA-L" />
+      <Property key="SMILES" value="C(O)[C@@H]1([C@@H](O)[C@H](O)[C@@H](O)[C@H](O1)OP(OP(OC[C@@H]3([C@H]([C@H]([C@H](N2(\C=C/C(=O)NC2=O))O3)O)O))(=O)[O-])(=O)[O-])" />
+      <Property key="GibbsFreeEnergy" value="-566.8436" />
+      <Property key="CompoundType" value="NDP-alpha-D-glucoses, NDP-glucoses, UDP-sugar" />
+      <Property key="AbbreviatedName" value="UDP-Glc" />
+      <Property key="SystematicName" value="Uridine 5&apos;-(trihydrogen diphosphate) alpha-D-gucopyranosyl ester" />
+      <CitationRef elementRef="citation_cit_12695547" />
+    </DataNode>
+    <DataNode elementId="NADH" textLabel="NADH" type="Metabolite">
+      <Xref identifier="BOPGDPNILDQYTO-NNYOXOHSSA-L" dataSource="InChIKey" />
+      <Graphics centerX="573.0515747070312" centerY="1186.74609375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: NAD| and |FRAME: NADP| are dinucleotides containing one |FRAME: NIACINAMIDE| base and one |FRAME: ADENINE| base. Each nucleotide is connected to a ribose sugar at position 1, and the two riboses are connected at their 5 position via a diphosphate. The only difference between the two is that in NADP there is an additional phosphate group at the 2&apos; position of the ribose that carries the adenine moiety. These molecules are biological carriers of reductive equivalents (i.e. high potential electrons). Most of the time they function as cosubstrates, and in some cases they function as |FRAME: Cofactors cofactors|. They are often referred to by the obsolete term &quot;coenzymes&quot;. The most common function of |FRAME: NAD| is to accept two electrons and a proton (a hydride ion) from a substrate that is being oxidized. This reduction converts |FRAME: NAD| to |FRAME: NADH|, the reduced form. NADH then diffuses or is transported to a terminal oxidase, where the electrons are passed on, regenerating the oxidized form. |FRAME: NADPH|, on the other hand, is mostly involved in biosynthetic reactions, where it serves as an electron donor. NADPH is formed by reduction of |FRAME: NADP|, which occurs by different mechanisms in different types of organisms. In photosynthetic organisms |FRAME: NADP| is reduced by |FRAME: CPLX-84|. In heterotrophic organisms it is reduced by central metabolism processes such as the pentose phosphate pathway (see |FRAME: OXIDATIVEPENT-PWY|).</Comment>
+      <Property key="UniqueID" value="NADH" />
+      <Property key="AlternativeId_Seed" value="cpd00004" />
+      <Property key="AlternativeId_Metanetx" value="MNXM10" />
+      <Property key="AlternativeId_Refmet" value="NADH" />
+      <Property key="AlternativeId_Bigg" value="nadh" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57945" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01487" />
+      <Property key="AlternativeId_Chemspider" value="10239197" />
+      <Property key="AlternativeId_Chebi" value="57945" />
+      <Property key="AlternativeId_Pubchem" value="21604869" />
+      <Property key="AlternativeId_Cas" value="58-68-4" />
+      <Property key="AlternativeId_LigandCpd" value="C00004" />
+      <Property key="Synonym_1" value="NADH&lt;sub&gt;2&lt;/sub&gt;" />
+      <Property key="Synonym_2" value="NADH2" />
+      <Property key="Synonym_3" value="dihydrodiphosphopyridine nucleotide" />
+      <Property key="Synonym_4" value="diphosphopyridine nucleotide reduced" />
+      <Property key="Synonym_5" value="dihydronicotinamide adenine dinucleotide" />
+      <Property key="Synonym_6" value="nicotinamide adenine dinucleotide reduced" />
+      <Property key="Synonym_7" value="NAD-reduced" />
+      <Property key="Synonym_8" value="NADH+H+" />
+      <Property key="Synonym_9" value="DPNH" />
+      <Property key="Synonym_10" value="&amp;beta;-NADH" />
+      <Property key="Synonym_11" value="&amp;beta;-nicotinamide adenine dinucleotide, reduced" />
+      <Property key="MolecularWeight" value="663.43" />
+      <Property key="MonoisotopicWeight" value="665.1247716966999" />
+      <Property key="ChemicalFormula" value="(C 21)(H 27)(N 7)(O 14)(P 2)" />
+      <Property key="InChI" value="InChI=1S/C21H29N7O14P2/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(32)14(30)11(41-21)6-39-44(36,37)42-43(34,35)38-5-10-13(29)15(31)20(40-10)27-3-1-2-9(4-27)18(23)33/h1,3-4,7-8,10-11,13-16,20-21,29-32H,2,5-6H2,(H2,23,33)(H,34,35)(H,36,37)(H2,22,24,25)/p-2/t10-,11-,13-,14-,15-,16-,20-,21-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=BOPGDPNILDQYTO-NNYOXOHSSA-L" />
+      <Property key="SMILES" value="C1(/N(\C=C/CC(/C(N)=O)=1)[C@@H]5(O[C@H](COP(OP(OC[C@H]4(O[C@@H](N2(C3(\C(\N=C/2)=C(N)/N=C\N=3)))[C@H](O)[C@H](O)4))(=O)[O-])(=O)[O-])[C@@H](O)[C@@H](O)5))" />
+      <Property key="GibbsFreeEnergy" value="-325.20697" />
+      <Property key="CompoundType" value="NADH-P-OR-NOP" />
+    </DataNode>
+    <DataNode elementId="CU_2" textLabel="Cu²⁺" type="Metabolite">
+      <Xref identifier="JPVYNHNXODAKFH-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="540.3369140625" centerY="767.4112548828125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CU+2" />
+      <Property key="AlternativeId_Mediadb" value="compounds/68/" />
+      <Property key="AlternativeId_Seed" value="cpd00058" />
+      <Property key="AlternativeId_Metanetx" value="MNXM632" />
+      <Property key="AlternativeId_LigandCpd" value="C00070" />
+      <Property key="AlternativeId_Bigg" value="cu2" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00657" />
+      <Property key="AlternativeId_Chemspider" value="25221" />
+      <Property key="AlternativeId_Pubchem" value="27099" />
+      <Property key="AlternativeId_Chebi" value="29036" />
+      <Property key="Synonym_1" value="Cu&lt;SUP&gt;++&lt;/SUP&gt;" />
+      <Property key="Synonym_2" value="cupric ion" />
+      <Property key="Synonym_3" value="cupric copper" />
+      <Property key="Synonym_4" value="copper(II)" />
+      <Property key="Synonym_5" value="Cu&lt;sup&gt;II&lt;/sup&gt;" />
+      <Property key="MolecularWeight" value="63.546" />
+      <Property key="MonoisotopicWeight" value="62.9296011" />
+      <Property key="InChI" value="InChI=1S/Cu/q+2" />
+      <Property key="InChIKey" value="InChIKey=JPVYNHNXODAKFH-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="[Cu+2]" />
+      <Property key="GibbsFreeEnergy" value="-1.2482376" />
+      <Property key="CompoundType" value="Transition-Metal-Cations, Divalent-Inorganic-Cations" />
+    </DataNode>
+    <DataNode elementId="MN_2" textLabel="Mn²⁺" type="Metabolite">
+      <Xref identifier="WAEMQWOKJMHJLA-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="540.3369140625" centerY="767.4112548828125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="MN+2" />
+      <Property key="AlternativeId_Mediadb" value="compounds/34/" />
+      <Property key="AlternativeId_Metanetx" value="MNXM2255" />
+      <Property key="AlternativeId_Bigg" value="mn2" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01333" />
+      <Property key="AlternativeId_Chemspider" value="25916" />
+      <Property key="AlternativeId_LigandCpd" value="C19610" />
+      <Property key="AlternativeId_Cas" value="16397-91-4" />
+      <Property key="AlternativeId_Pubchem" value="27854" />
+      <Property key="AlternativeId_Chebi" value="29035" />
+      <Property key="Synonym_1" value="Mn(II) (incorrect)" />
+      <Property key="Synonym_2" value="Mn&lt;SUP&gt;++&lt;/SUP&gt;" />
+      <Property key="Synonym_3" value="manganese(II)" />
+      <Property key="Synonym_4" value="Mn&lt;sup&gt;II&lt;/sup&gt;" />
+      <Property key="MolecularWeight" value="54.938" />
+      <Property key="MonoisotopicWeight" value="54.9380496" />
+      <Property key="InChI" value="InChI=1S/Mn/q+2" />
+      <Property key="InChIKey" value="InChIKey=WAEMQWOKJMHJLA-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="[Mn+2]" />
+      <Property key="GibbsFreeEnergy" value="-1.2482376" />
+      <Property key="CompoundType" value="Transition-Metal-Cations, Divalent-Inorganic-Cations" />
+    </DataNode>
+    <DataNode elementId="MG_2" textLabel="Mg²⁺" type="Metabolite">
+      <Xref identifier="JLVVSXFLKOJNIY-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="540.3369140625" centerY="767.4112548828125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">Many hundreds of enzymes require magnesium ions (Mg&lt;sup&gt;2+&lt;/sup&gt;) for their catalytic action, including all enzymes using or synthesizing ATP and those that use other nucleotides to synthesize DNA and RNA. The interaction between magnesium ions and phosphate makes magnesium essential to basic nucleic acid chemistry, and the common ATP molecule is normally found in a chelate with a magnesium ion. Photosynthetic organisms require Mg for the biosynthesis of chlorophyll, which is essential for photosynthesis. The function of magnesium in the center of the porphyrin ring in chlorophyll is similar to that of iron in the center of the porphyrin ring in heme. Mg is the fourth-most abundant element in the human body (Ca&lt;sup&gt;2+&lt;/sup&gt; &gt; K&lt;sup&gt;+&lt;/sup&gt; &gt; Na&lt;sup&gt;+&lt;/sup&gt; &gt; Mg&lt;sup&gt;2+&lt;/sup&gt;).</Comment>
+      <Property key="UniqueID" value="MG+2" />
+      <Property key="AlternativeId_Mediadb" value="compounds/292/" />
+      <Property key="AlternativeId_Seed" value="cpd00254" />
+      <Property key="AlternativeId_Metanetx" value="MNXM653" />
+      <Property key="AlternativeId_Bigg" value="mg2" />
+      <Property key="AlternativeId_Drugbank" value="DB01378" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00547" />
+      <Property key="AlternativeId_Chemspider" value="865" />
+      <Property key="AlternativeId_Pubchem" value="888" />
+      <Property key="AlternativeId_Chebi" value="18420" />
+      <Property key="AlternativeId_LigandCpd" value="C00305" />
+      <Property key="Synonym_1" value="magnesium" />
+      <Property key="Synonym_2" value="magnesium(II)" />
+      <Property key="Synonym_3" value="Mg&lt;SUP&gt;++&lt;/SUP&gt;" />
+      <Property key="Synonym_4" value="magnesium ion" />
+      <Property key="Synonym_5" value="Mg&lt;sup&gt;II&lt;/sup&gt;" />
+      <Property key="MolecularWeight" value="24.305" />
+      <Property key="MonoisotopicWeight" value="23.9850419" />
+      <Property key="InChI" value="InChI=1S/Mg/q+2" />
+      <Property key="InChIKey" value="InChIKey=JLVVSXFLKOJNIY-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="[Mg+2]" />
+      <Property key="GibbsFreeEnergy" value="-1.2482376" />
+      <Property key="CompoundType" value="Alkaline-Earth-Cations, Divalent-Inorganic-Cations" />
+    </DataNode>
+    <DataNode elementId="CO_2" textLabel="Co²⁺" type="Metabolite">
+      <Xref identifier="XLJKHNWPARRRJB-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="540.3369140625" centerY="767.4112548828125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CO+2" />
+      <Property key="AlternativeId_Seed" value="cpd00149" />
+      <Property key="AlternativeId_Metanetx" value="MNXM90960" />
+      <Property key="AlternativeId_Bigg" value="cobalt2" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00608" />
+      <Property key="AlternativeId_Chemspider" value="94546" />
+      <Property key="AlternativeId_Pubchem" value="104729" />
+      <Property key="AlternativeId_Cas" value="22541-53-3" />
+      <Property key="AlternativeId_Chebi" value="48828" />
+      <Property key="AlternativeId_LigandCpd" value="C00175" />
+      <Property key="Synonym_1" value="Co&lt;SUP&gt;++&lt;/SUP&gt;" />
+      <Property key="Synonym_2" value="cobalt(II)" />
+      <Property key="Synonym_3" value="Co&lt;sup&gt;II&lt;/sup&gt;" />
+      <Property key="MolecularWeight" value="58.93" />
+      <Property key="MonoisotopicWeight" value="58.9332002" />
+      <Property key="InChI" value="InChI=1S/Co/q+2" />
+      <Property key="InChIKey" value="InChIKey=XLJKHNWPARRRJB-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="[Co+2]" />
+      <Property key="GibbsFreeEnergy" value="-1.2482376" />
+      <Property key="CompoundType" value="Transition-Metal-Cations, Divalent-Inorganic-Cations" />
+    </DataNode>
+    <DataNode elementId="HG_2" textLabel="Hg²⁺" type="Metabolite">
+      <Xref identifier="BQPIGGFYSBELGY-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="540.3369140625" centerY="767.4112548828125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="HG+2" />
+      <Property key="AlternativeId_Seed" value="cpd00531" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1562" />
+      <Property key="AlternativeId_Bigg" value="hg2" />
+      <Property key="AlternativeId_Hmdb" value="HMDB03625" />
+      <Property key="AlternativeId_Chemspider" value="24800" />
+      <Property key="AlternativeId_Pubchem" value="26623" />
+      <Property key="AlternativeId_Chebi" value="16793" />
+      <Property key="AlternativeId_LigandCpd" value="C00703" />
+      <Property key="Synonym_1" value="Hg&lt;SUP&gt;++&lt;/SUP&gt;" />
+      <Property key="Synonym_2" value="mercury ion" />
+      <Property key="Synonym_3" value="mercury(II)" />
+      <Property key="Synonym_4" value="Hg&lt;sup&gt;II&lt;/sup&gt;" />
+      <Property key="MolecularWeight" value="200.59" />
+      <Property key="MonoisotopicWeight" value="201.970626" />
+      <Property key="InChI" value="InChI=1S/Hg/q+2" />
+      <Property key="InChIKey" value="InChIKey=BQPIGGFYSBELGY-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="[Hg+2]" />
+      <Property key="GibbsFreeEnergy" value="-1.2482376" />
+      <Property key="CompoundType" value="Post-Transition-Metal-Cations, Divalent-Inorganic-Cations" />
+      <CitationRef elementRef="citation_MERCK89" />
+    </DataNode>
+    <DataNode elementId="ZN_2" textLabel="Zn²⁺" type="Metabolite">
+      <Xref identifier="PTFCDOFLOPIGGS-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="540.3369140625" centerY="767.4112548828125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ZN+2" />
+      <Property key="AlternativeId_Mediadb" value="compounds/38/" />
+      <Property key="AlternativeId_Seed" value="cpd00034" />
+      <Property key="AlternativeId_Metanetx" value="MNXM149" />
+      <Property key="AlternativeId_Bigg" value="zn2" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC29105" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01303" />
+      <Property key="AlternativeId_Chemspider" value="29723" />
+      <Property key="AlternativeId_Pubchem" value="32051" />
+      <Property key="AlternativeId_Chebi" value="29105" />
+      <Property key="AlternativeId_Cas" value="7440-66-6" />
+      <Property key="AlternativeId_LigandCpd" value="C00038" />
+      <Property key="Synonym_1" value="zinc(II)" />
+      <Property key="Synonym_2" value="Zn(II) (incorrect)" />
+      <Property key="Synonym_3" value="Zn&lt;sup&gt;II&lt;/sup&gt;" />
+      <Property key="MolecularWeight" value="65.38" />
+      <Property key="MonoisotopicWeight" value="63.9291466" />
+      <Property key="InChI" value="InChI=1S/Zn/q+2" />
+      <Property key="InChIKey" value="InChIKey=PTFCDOFLOPIGGS-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="[Zn+2]" />
+      <Property key="GibbsFreeEnergy" value="-1.2482376" />
+      <Property key="CompoundType" value="Divalent-Inorganic-Cations, Post-Transition-Metal-Cations" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="1554.9056396484375" y="576.30078125" elementRef="AT3G06580" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="693.6005249023438" y="1166.7679443359375" elementRef="AT3G06580-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_1_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_1_0_0" x="926.891845703125" y="785.3839111328125" elementRef="G-12067" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_1_0_0" arrowHead="TranscriptionTranslation" x="745.1043701171875" y="357.313232421875" elementRef="MONOMER-15710" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_2_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_2_0_0" x="1055.593505859375" y="1220.15576171875" elementRef="AT5G51820" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_2_0_0" arrowHead="TranscriptionTranslation" x="979.3414306640625" y="822.00732421875" elementRef="AT5G51820-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_3_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_3_0_0" x="145.0" y="1040.34033203125" elementRef="G-12066" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_3_0_0" arrowHead="TranscriptionTranslation" x="663.1306762695312" y="782.6066284179688" elementRef="MONOMER-15709" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="PHOSPHOGLUCMUT-RXN">
+      <Xref identifier="23536" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="PHOSPHOGLUCMUT-RXN_start" x="767.408203125" y="621.613525390625" elementRef="GLC-1-P" relX="1.0" relY="0.0" />
+        <Point elementId="PHOSPHOGLUCMUT-RXN_end" arrowHead="Conversion" x="771.6454467773438" y="872.2215576171875" elementRef="D-glucopyranose-6-phosphate" relX="-1.0" relY="0.0" />
+        <Anchor elementId="PHOSPHOGLUCMUT-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Rhea" value="23536" />
+      <Property key="AlternativeId_Uniprot" value="P36871" />
+      <Property key="AlternativeId_Pir" value="A41801" />
+      <Property key="UniqueID" value="PHOSPHOGLUCMUT-RXN" />
+      <Property key="EC_Number" value="EC-5.4.2.2" />
+      <Property key="Pathways" value="DTDPRHAMSYN-PWY, PWY-7343, PWY-7238, PWY-5661, PWY-6317, PWY-3801, PWY-622, PWYQT-4466" />
+      <Property key="PathwayCount" value="8" />
+      <Property key="ReactionEquation" value="GLC-1-P &lt;=&gt; D-glucopyranose-6-phosphate" />
+      <Property key="ReactionDirection" value="REVERSIBLE" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXNQT-6415, ENZRXN-1902" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="Synonym_1" value="Glucose phosphomutase" />
+      <Property key="Synonym_2" value="Phosphoglucose mutase" />
+      <Property key="ReactionTypes" value="Composite-Reactions, Small-Molecule-Reactions" />
+    </Interaction>
+    <Interaction elementId="PHOSPHOGLUCMUT-RXN_ENZRXNQT-6415">
+      <Waypoints>
+        <Point elementId="PHOSPHOGLUCMUT-RXN_ENZRXNQT-6415_start" x="1024.3414306640625" y="834.50732421875" elementRef="AT5G51820-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="PHOSPHOGLUCMUT-RXN_ENZRXNQT-6415_end" arrowHead="Catalysis" x="0" y="0" elementRef="PHOSPHOGLUCMUT-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ALDOSE1EPIM-RXN">
+      <Xref identifier="EC-5.1.3.3" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="ALDOSE1EPIM-RXN_start" x="1367.3455810546875" y="224.9329376220703" elementRef="GALACTOSE" relX="1.0" relY="0.0" />
+        <Point elementId="ALDOSE1EPIM-RXN_end" arrowHead="Conversion" x="77.47381591796875" y="608.5374755859375" elementRef="ALPHA-D-GALACTOSE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="ALDOSE1EPIM-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="ALDOSE1EPIM-RXN" />
+      <Property key="EC_Number" value="EC-5.1.3.3" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-6317" />
+      <Property key="ReactionEquation" value="GALACTOSE &lt;=&gt; ALPHA-D-GALACTOSE" />
+      <Property key="ReactionDirection" value="REVERSIBLE" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+    </Interaction>
+    <Interaction elementId="UDPGLUCEPIM-RXN">
+      <Xref identifier="22168" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="UDPGLUCEPIM-RXN_start" x="981.6397705078125" y="976.00146484375" elementRef="CPD-14553" relX="1.0" relY="0.0" />
+        <Point elementId="UDPGLUCEPIM-RXN_end" arrowHead="Conversion" x="464.46337890625" y="1497.49072265625" elementRef="CPD-12575" relX="-1.0" relY="0.0" />
+        <Anchor elementId="UDPGLUCEPIM-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Rhea" value="22168" />
+      <Property key="AlternativeId_Uniprot" value="P35673" />
+      <Property key="AlternativeId_Pir" value="A36951" />
+      <Property key="UniqueID" value="UDPGLUCEPIM-RXN" />
+      <Property key="EC_Number" value="EC-5.1.3.2" />
+      <Property key="Pathways" value="PWY-7344, PWY-6317, PWY-6527, PWY-3821, GALACTMETAB-PWY" />
+      <Property key="PathwayCount" value="5" />
+      <Property key="ReactionEquation" value="CPD-12575 &lt;=&gt; CPD-14553" />
+      <Property key="ReactionDirection" value="REVERSIBLE" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXNQT-9535, ENZRXNQT-9536, ENZRXNQT-9537, ENZRXNQT-9538, ENZRXNQT-9539, ENZRXN-9141, ENZRXN-9122" />
+      <Property key="EnzymaticReactionCount" value="7" />
+      <Property key="Synonym_1" value="Galactowaldenase" />
+      <Property key="Synonym_2" value="Uridine diphosphate galactose 4-epimerase" />
+      <Property key="Synonym_3" value="Uridine diphospho-galactose-4-epimerase" />
+      <Property key="ReactionTypes" value="Chemical-Reactions, Small-Molecule-Reactions" />
+    </Interaction>
+    <Interaction elementId="UDPGLUCEPIM-RXN_ENZRXN-9122">
+      <Waypoints>
+        <Point elementId="UDPGLUCEPIM-RXN_ENZRXN-9122_start" x="1213.2601318359375" y="722.6463012695312" elementRef="MONOMER-8962" relX="0.0" relY="1.0" />
+        <Point elementId="UDPGLUCEPIM-RXN_ENZRXN-9122_end" arrowHead="Catalysis" x="0" y="0" elementRef="UDPGLUCEPIM-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="UDPGLUCEPIM-RXN_anchor_reactant_0">
+      <Xref identifier="22168" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="UDPGLUCEPIM-RXN_anchor_reactant_start_0" x="554.46337890625" y="1497.49072265625" elementRef="CPD-12575" relX="1.0" relY="0.0" />
+        <Point elementId="UDPGLUCEPIM-RXN_anchor_reactant_end_0" x="0" y="0" elementRef="UDPGLUCEPIM-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="UDPGLUCEPIM-RXN_anchor_product_0">
+      <Xref identifier="22168" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="UDPGLUCEPIM-RXN_anchor_product_start_0" x="0" y="0" elementRef="UDPGLUCEPIM-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="UDPGLUCEPIM-RXN_anchor_product_end_0" arrowHead="Conversion" x="891.6397705078125" y="976.00146484375" elementRef="CPD-14553" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="GALACTURIDYLYLTRANS-RXN">
+      <Xref identifier="EC-2.7.7.12" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="GALACTURIDYLYLTRANS-RXN_start" x="554.46337890625" y="1497.49072265625" elementRef="CPD-12575" relX="1.0" relY="0.0" />
+        <Point elementId="GALACTURIDYLYLTRANS-RXN_end" arrowHead="Conversion" x="891.6397705078125" y="976.00146484375" elementRef="CPD-14553" relX="-1.0" relY="0.0" />
+        <Anchor elementId="GALACTURIDYLYLTRANS-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Uniprot" value="P43424" />
+      <Property key="AlternativeId_Pir" value="A56685" />
+      <Property key="UniqueID" value="GALACTURIDYLYLTRANS-RXN" />
+      <Property key="EC_Number" value="EC-2.7.7.12" />
+      <Property key="Pathways" value="PWY-6317, PWY-6527, GALACTMETAB-PWY" />
+      <Property key="PathwayCount" value="3" />
+      <Property key="ReactionEquation" value="CPD-12575 + GALACTOSE-1P &lt;=&gt; CPD-14553 + GLC-1-P" />
+      <Property key="ReactionDirection" value="REVERSIBLE" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXN-9301, ENZRXN-17913" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="Synonym_1" value="Uridyl transferase" />
+      <Property key="Synonym_2" value="Hexose-1-phosphate uridylyltransferase" />
+      <Property key="Synonym_3" value="Uridylyl removing enzyme" />
+      <Property key="ReactionTypes" value="Chemical-Reactions, Small-Molecule-Reactions" />
+    </Interaction>
+    <Interaction elementId="GALACTURIDYLYLTRANS-RXN_ENZRXN-17913">
+      <Waypoints>
+        <Point elementId="GALACTURIDYLYLTRANS-RXN_ENZRXN-17913_start" x="790.1043701171875" y="369.813232421875" elementRef="MONOMER-15710" relX="0.0" relY="1.0" />
+        <Point elementId="GALACTURIDYLYLTRANS-RXN_ENZRXN-17913_end" arrowHead="Catalysis" x="0" y="0" elementRef="GALACTURIDYLYLTRANS-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="GALACTURIDYLYLTRANS-RXN_ENZRXN-9301">
+      <Waypoints>
+        <Point elementId="GALACTURIDYLYLTRANS-RXN_ENZRXN-9301_start" x="1600.0" y="956.5799560546875" elementRef="MONOMER-9141" relX="0.0" relY="1.0" />
+        <Point elementId="GALACTURIDYLYLTRANS-RXN_ENZRXN-9301_end" arrowHead="Catalysis" x="0" y="0" elementRef="GALACTURIDYLYLTRANS-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="GALACTURIDYLYLTRANS-RXN_anchor_reactant_1">
+      <Xref identifier="EC-2.7.7.12" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="GALACTURIDYLYLTRANS-RXN_anchor_reactant_start_1" x="1303.199951171875" y="1026.2850341796875" elementRef="GALACTOSE-1P" relX="1.0" relY="0.0" />
+        <Point elementId="GALACTURIDYLYLTRANS-RXN_anchor_reactant_end_1" x="0" y="0" elementRef="GALACTURIDYLYLTRANS-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="GALACTURIDYLYLTRANS-RXN_anchor_product_1">
+      <Xref identifier="EC-2.7.7.12" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="GALACTURIDYLYLTRANS-RXN_anchor_product_start_1" x="0" y="0" elementRef="GALACTURIDYLYLTRANS-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="GALACTURIDYLYLTRANS-RXN_anchor_product_end_1" arrowHead="Conversion" x="677.408203125" y="621.613525390625" elementRef="GLC-1-P" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="GALACTOKIN-RXN">
+      <Xref identifier="EC-2.7.1.6" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="GALACTOKIN-RXN_start" x="167.47381591796875" y="608.5374755859375" elementRef="ALPHA-D-GALACTOSE" relX="1.0" relY="0.0" />
+        <Point elementId="GALACTOKIN-RXN_end" arrowHead="Conversion" x="1213.199951171875" y="1026.2850341796875" elementRef="GALACTOSE-1P" relX="-1.0" relY="0.0" />
+        <Anchor elementId="GALACTOKIN-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Comment source="BioCyc">This reaction is different from the one specified by the EC, by having |FRAME: ALPHA-D-GALACTOSE &amp;alpha;-D-galactose| as a substrate (the official reaction specifies |FRAME: D-Galactose D-galactose|). It has been modified since the original literature suggests that the former is the actual substrate for the enzyme .</Comment>
+      <Property key="AlternativeId_Uniprot" value="P09608" />
+      <Property key="AlternativeId_Pir" value="A41684" />
+      <Property key="UniqueID" value="GALACTOKIN-RXN" />
+      <Property key="EC_Number" value="EC-2.7.1.6" />
+      <Property key="Pathways" value="PWY-6317, PWY-6527, PWY-3821, GALACTMETAB-PWY" />
+      <Property key="PathwayCount" value="4" />
+      <Property key="ReactionEquation" value="ALPHA-D-GALACTOSE + ATP &lt;=&gt; PROTON + GALACTOSE-1P + ADP" />
+      <Property key="ReactionDirection" value="REVERSIBLE" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXNQT-5728, ENZRXN-9103, ENZRXN-17912, ENZRXN-9102" />
+      <Property key="EnzymaticReactionCount" value="4" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+    </Interaction>
+    <Interaction elementId="GALACTOKIN-RXN_ENZRXNQT-5728">
+      <Waypoints>
+        <Point elementId="GALACTOKIN-RXN_ENZRXNQT-5728_start" x="738.6005249023438" y="1179.2679443359375" elementRef="AT3G06580-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="GALACTOKIN-RXN_ENZRXNQT-5728_end" arrowHead="Catalysis" x="0" y="0" elementRef="GALACTOKIN-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="GALACTOKIN-RXN_ENZRXN-9103">
+      <Waypoints>
+        <Point elementId="GALACTOKIN-RXN_ENZRXN-9103_start" x="738.6005249023438" y="1179.2679443359375" elementRef="AT3G06580-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="GALACTOKIN-RXN_ENZRXN-9103_end" arrowHead="Catalysis" x="0" y="0" elementRef="GALACTOKIN-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="GALACTOKIN-RXN_ENZRXN-17912">
+      <Waypoints>
+        <Point elementId="GALACTOKIN-RXN_ENZRXN-17912_start" x="708.1306762695312" y="795.1066284179688" elementRef="MONOMER-15709" relX="0.0" relY="1.0" />
+        <Point elementId="GALACTOKIN-RXN_ENZRXN-17912_end" arrowHead="Catalysis" x="0" y="0" elementRef="GALACTOKIN-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="GALACTOKIN-RXN_anchor_reactant_1">
+      <Xref identifier="EC-2.7.1.6" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="GALACTOKIN-RXN_anchor_reactant_start_1" x="886.3794555664062" y="814.1842041015625" elementRef="ATP" relX="1.0" relY="0.0" />
+        <Point elementId="GALACTOKIN-RXN_anchor_reactant_end_1" x="0" y="0" elementRef="GALACTOKIN-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="GALACTOKIN-RXN_anchor_product_0">
+      <Xref identifier="EC-2.7.1.6" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="GALACTOKIN-RXN_anchor_product_start_0" x="0" y="0" elementRef="GALACTOKIN-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="GALACTOKIN-RXN_anchor_product_end_0" arrowHead="Conversion" x="321.4351806640625" y="191.1387481689453" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="GALACTOKIN-RXN_anchor_product_2">
+      <Xref identifier="EC-2.7.1.6" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="GALACTOKIN-RXN_anchor_product_start_2" x="0" y="0" elementRef="GALACTOKIN-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="GALACTOKIN-RXN_anchor_product_end_2" arrowHead="Conversion" x="369.73345947265625" y="1172.1171875" elementRef="ADP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="UDPGLUCEPIM-RXN_regulation_0">
+      <Waypoints>
+        <Point elementId="UDPGLUCEPIM-RXN_regulation_start_0" x="618.0515747070312" y="1186.74609375" elementRef="NADH" relX="1.0" relY="0.0" />
+        <Point elementId="UDPGLUCEPIM-RXN_regulation_end_0" arrowHead="Inhibition" x="723.0515747070312" y="1236.74609375" elementRef="UDPGLUCEPIM-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-11451" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="Mechanism" value=":COMPETITIVE" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="RegulatedEntity" value="ENZRXN-9122" />
+      <Property key="Regulator" value="NADH" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <CitationRef elementRef="citation_DEY84" />
+    </Interaction>
+    <Interaction elementId="GALACTOKIN-RXN_regulation_0">
+      <Waypoints>
+        <Point elementId="GALACTOKIN-RXN_regulation_start_0" x="459.73345947265625" y="1172.1171875" elementRef="ADP" relX="1.0" relY="0.0" />
+        <Point elementId="GALACTOKIN-RXN_regulation_end_0" arrowHead="Inhibition" x="690.3369140625" y="817.4112548828125" elementRef="GALACTOKIN-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-8051" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="Mechanism" value=":NONCOMPETITIVE" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="RegulatedEntity" value="ENZRXN-9102" />
+      <Property key="Regulator" value="ADP" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <CitationRef elementRef="citation_cit_6617655" />
+    </Interaction>
+    <Interaction elementId="GALACTOKIN-RXN_regulation_1">
+      <Waypoints>
+        <Point elementId="GALACTOKIN-RXN_regulation_start_1" x="585.3369140625" y="767.4112548828125" elementRef="CU_2" relX="1.0" relY="0.0" />
+        <Point elementId="GALACTOKIN-RXN_regulation_end_1" arrowHead="Inhibition" x="690.3369140625" y="817.4112548828125" elementRef="GALACTOKIN-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-8054" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="RegulatedEntity" value="ENZRXN-9102" />
+      <Property key="Regulator" value="CU+2" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <CitationRef elementRef="citation_cit_6617655" />
+    </Interaction>
+    <Interaction elementId="GALACTOKIN-RXN_regulation_2">
+      <Waypoints>
+        <Point elementId="GALACTOKIN-RXN_regulation_start_2" x="585.3369140625" y="767.4112548828125" elementRef="MN_2" relX="1.0" relY="0.0" />
+        <Point elementId="GALACTOKIN-RXN_regulation_end_2" arrowHead="Stimulation" x="690.3369140625" y="817.4112548828125" elementRef="GALACTOKIN-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-8055" />
+      <Property key="RegulationMode" value="+" />
+      <Property key="RegulationType" value="activation" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="RegulatedEntity" value="ENZRXN-9102" />
+      <Property key="Regulator" value="MN+2" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <CitationRef elementRef="citation_cit_6617655" />
+    </Interaction>
+    <Interaction elementId="GALACTOKIN-RXN_regulation_3">
+      <Waypoints>
+        <Point elementId="GALACTOKIN-RXN_regulation_start_3" x="585.3369140625" y="767.4112548828125" elementRef="MG_2" relX="1.0" relY="0.0" />
+        <Point elementId="GALACTOKIN-RXN_regulation_end_3" arrowHead="Stimulation" x="690.3369140625" y="817.4112548828125" elementRef="GALACTOKIN-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-8057" />
+      <Property key="RegulationMode" value="+" />
+      <Property key="RegulationType" value="activation" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="RegulatedEntity" value="ENZRXN-9102" />
+      <Property key="Regulator" value="MG+2" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <CitationRef elementRef="citation_cit_6617655" />
+    </Interaction>
+    <Interaction elementId="GALACTOKIN-RXN_regulation_4">
+      <Waypoints>
+        <Point elementId="GALACTOKIN-RXN_regulation_start_4" x="1303.199951171875" y="1026.2850341796875" elementRef="GALACTOSE-1P" relX="1.0" relY="0.0" />
+        <Point elementId="GALACTOKIN-RXN_regulation_end_4" arrowHead="Inhibition" x="690.3369140625" y="817.4112548828125" elementRef="GALACTOKIN-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-8050" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="Mechanism" value=":COMPETITIVE" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="RegulatedEntity" value="ENZRXN-9102" />
+      <Property key="Regulator" value="GALACTOSE-1P" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <CitationRef elementRef="citation_cit_6617655" />
+    </Interaction>
+    <Interaction elementId="GALACTOKIN-RXN_regulation_5">
+      <Waypoints>
+        <Point elementId="GALACTOKIN-RXN_regulation_start_5" x="585.3369140625" y="767.4112548828125" elementRef="CO_2" relX="1.0" relY="0.0" />
+        <Point elementId="GALACTOKIN-RXN_regulation_end_5" arrowHead="Stimulation" x="690.3369140625" y="817.4112548828125" elementRef="GALACTOKIN-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-8056" />
+      <Property key="RegulationMode" value="+" />
+      <Property key="RegulationType" value="activation" />
+      <Property key="RegulatedEntity" value="ENZRXN-9102" />
+      <Property key="Regulator" value="CO+2" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <CitationRef elementRef="citation_cit_6617655" />
+    </Interaction>
+    <Interaction elementId="GALACTOKIN-RXN_regulation_6">
+      <Waypoints>
+        <Point elementId="GALACTOKIN-RXN_regulation_start_6" x="585.3369140625" y="767.4112548828125" elementRef="HG_2" relX="1.0" relY="0.0" />
+        <Point elementId="GALACTOKIN-RXN_regulation_end_6" arrowHead="Inhibition" x="690.3369140625" y="817.4112548828125" elementRef="GALACTOKIN-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-8052" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="RegulatedEntity" value="ENZRXN-9102" />
+      <Property key="Regulator" value="HG+2" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <CitationRef elementRef="citation_cit_6617655" />
+    </Interaction>
+    <Interaction elementId="GALACTOKIN-RXN_regulation_7">
+      <Waypoints>
+        <Point elementId="GALACTOKIN-RXN_regulation_start_7" x="585.3369140625" y="767.4112548828125" elementRef="ZN_2" relX="1.0" relY="0.0" />
+        <Point elementId="GALACTOKIN-RXN_regulation_end_7" arrowHead="Inhibition" x="690.3369140625" y="817.4112548828125" elementRef="GALACTOKIN-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-8053" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="RegulatedEntity" value="ENZRXN-9102" />
+      <Property key="Regulator" value="ZN+2" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <CitationRef elementRef="citation_cit_6617655" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_cit_16644739">
+      <Xref identifier="16644739" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_FEUSI99">
+      <Xref identifier="PUB-FEUSI99 | Galactosyl-sucrose metabolism and UDP-galactose pyrophosphorylase from Cucumis melo L. fruit (Feusi MES, Burton JD, Williamson JD et al., 1999)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_cit_9225860">
+      <Xref identifier="9225860" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_MAIN83">
+      <Xref identifier="PUB-MAIN83 | Control of galactosyl-sugar metabolism in relation to rate of germination (Main EL, Pharr DM, Huber SC et al., 1983)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_cit_8615692">
+      <Xref identifier="8615692" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PAZUR61">
+      <Xref identifier="PUB-PAZUR61 | Galactose 1-phosphate uridyl transferase activity in soybean extracts. (Pazur J.H., Shadaksharaswamy M.)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_cit_16829585">
+      <Xref identifier="16829585" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_12695547">
+      <Xref identifier="12695547" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation__10929100_">
+      <Xref identifier="[10929100]" dataSource="PlantCyc" />
+    </Citation>
+    <Citation elementId="citation_cit_6617655">
+      <Xref identifier="6617655" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_16666058">
+      <Xref identifier="16666058" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_MERCK89">
+      <Xref identifier="PUB-MERCK89 | The Merck Index:  An Encyclopedia of Chemicals, Drugs, and Biologicals. Eleventh Edition. (S. Budavari, Editor, M.J. O&apos;Neil, Associate Editor, A. Smith, Assistant Editor et al.)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_cit_10929100">
+      <Xref identifier="10929100" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_DEY84">
+      <Xref identifier="PUB-DEY84 | UDP-galactose 4-epimerase from &lt;i&gt;Vicia faba&lt;/i&gt; seeds. (Dey P.M.)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_cit_8647345">
+      <Xref identifier="8647345" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_19509290">
+      <Xref identifier="19509290" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

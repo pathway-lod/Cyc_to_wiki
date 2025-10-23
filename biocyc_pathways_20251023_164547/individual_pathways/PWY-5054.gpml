@@ -1,0 +1,1243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="D-sorbitol biosynthesis I" organism="TAX-3750" source="PlantCyc">
+  <Description>&lt;b&gt;General information:&lt;/b&gt; Sorbitol is a hexitol, |FRAME:Sugar-alcohols| found in higher plants |CITS:[BIELESKI82]|. In Rosaceae plants, sorbitol is the main photoassimilate produced in the leaves from which it is translocated to sink tissues |CITS:[WEBB62],[BIELESKI85]|. Sorbitol synthesis shares a common hexose phosphate pool with sucrose synthesis, and it was recently shown in apple that synthesis pathways are not independent from one another |CITS:[ZHOU02]|. Indeed, |FRAME:MONOMER-11709| was shown to be inhibited by |FRAME:D-SORBITOL-6-P|, an intermediate in the biosynthesis pathway of sorbitol.</Description>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-5054" />
+  <Property key="Type" value="Sorbitol-Biosynthesis" />
+  <Property key="ReactionCount" value="3" />
+  <Property key="ReactionIDs" value="SORBITOL-6-PHOSPHATASE-RXN, PGLUCISOM-RXN, ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN" />
+  <Property key="PredecessorCount" value="2" />
+  <Property key="PrimaryCompoundCount" value="3" />
+  <Property key="PathwayLinks" value="(SORBITOL PWY-4101), (FRUCTOSE-6P SUCSYN-PWY CALVIN-PWY)" />
+  <Property key="Organism" value="TAX-3750" />
+  <Property key="TaxonomicRange_1" value="TAX-3745" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_cit_7757342" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="G-1641" textLabel="GPIS" type="GeneProduct">
+      <Xref identifier="AJ000266" dataSource="Entrez Gene" />
+      <Graphics centerX="1396.7005615234375" centerY="1550.0" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="G-1641" />
+      <Property key="AlternativeId_Entrez" value="AJ000266" />
+      <Property key="Product" value="MONOMER-2301" />
+      <Property key="GeneType" value="Genes" />
+    </DataNode>
+    <DataNode elementId="AT4G24620" textLabel="PGI1" type="GeneProduct">
+      <Xref identifier="NP_194193" dataSource="Entrez Gene" />
+      <Graphics centerX="592.0474853515625" centerY="887.57861328125" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT4G24620" />
+      <Property key="AlternativeId_Tair" value="AT4G24620" />
+      <Property key="AlternativeId_Entrez" value="NP_194193" />
+      <Property key="AlternativeId_String" value="3702.AT4G24620.1" />
+      <Property key="Product" value="AT4G24620-MONOMER" />
+      <Property key="StartPosition" value="12708762" />
+      <Property key="EndPosition" value="12712835" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+    </DataNode>
+    <DataNode elementId="MONOMER-12701" textLabel="phosphoglucose isomerase subunit" type="Protein" groupRef="CPLX-7220">
+      <Xref identifier="MONOMER-12701" dataSource="plantcyc" />
+      <Graphics centerX="1371.09228515625" centerY="567.6700439453125" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="MONOMER-12701" />
+      <Property key="MolecularWeightExp" value="70." />
+      <Property key="MolecularWeightKD" value="70." />
+      <Property key="ComponentOf" value="CPLX-7220" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="TAX-4641" />
+    </DataNode>
+    <DataNode elementId="MONOMER-11698" textLabel="MONOMER-11698" type="Protein">
+      <Xref identifier="MONOMER-11698" dataSource="plantcyc" />
+      <Graphics centerX="906.1542358398438" centerY="791.9630126953125" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>A monomeric protein was isolated from fully developed leaves of 9-year-old apple trees (Borkh. cv Liberty). The protein was purified to homogeneity and shown to catalyze the conversion of sorbitol-6-phosphate to free sorbitol with a specific activity of 89.8 &amp;mu;mol.min&lt;sup&gt;-1&lt;/sup&gt;.mg&lt;sup&gt;-1&lt;/sup&gt;, and was therefore identified as sorbitol-6-phosphate phosphatase (SorPP) |CITS:[ZHOU03]|. The enzyme was shown to have little affinity for substrates other than sorbitol-6-phosphate. Sorbitol was shown to act as a competitive inhibitor of SorPP activity with a K&lt;sub&gt;i&lt;/sub&gt; of 109 mM |CITS: [ZHOU03]|. Other soluble carbohydrates present in apple leaves (glucose, fructose and sucrose) tested were shown to have little effect on the enzyme&apos;s activity. Vanadate, molybdate and fluoride, known inhibitors of phosphatase activity, were also shown to act as potent inhibitors of SorPP. Pi on the other hand only had modest inhibitory effects.</Comment>
+      <Property key="UniqueID" value="MONOMER-11698" />
+      <Property key="Synonym_1" value="SorPP" />
+      <Property key="MolecularWeightExp" value="61." />
+      <Property key="MolecularWeightKD" value="61." />
+      <Property key="Catalyzes" value="RXN-12080" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="TAX-3750" />
+      <CitationRef elementRef="citation_ZHOU03" />
+    </DataNode>
+    <DataNode elementId="MONOMER-2301" textLabel="MONOMER-2301" type="Protein">
+      <Xref identifier="MONOMER-2301" dataSource="plantcyc" />
+      <Graphics centerX="527.0133056640625" centerY="50.0" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>Higher plants have two isoforms of glucose-6-phosphate isomerase, a cytosolic enzyme and a chloroplast enzyme. Both have been purified from spinach. The protein sequences were used to clone the corresponding cDNAs.</Comment>
+      <Property key="UniqueID" value="MONOMER-2301" />
+      <Property key="Gene" value="G-1641" />
+      <Property key="Catalyzes" value="RXN-2425" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="TAX-3562" />
+      <CitationRef elementRef="citation__9651529_" />
+    </DataNode>
+    <DataNode elementId="MONOMER-11700" textLabel="aldose-6-phosphate reductase subunit" type="Protein" groupRef="CPLX-6946">
+      <Xref identifier="MONOMER-11700" dataSource="plantcyc" />
+      <Graphics centerX="1027.2471923828125" centerY="69.58975219726562" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="MONOMER-11700" />
+      <Property key="MolecularWeightExp" value="36." />
+      <Property key="MolecularWeightKD" value="36." />
+      <Property key="Gene" value="G-9100" />
+      <Property key="ComponentOf" value="CPLX-6946" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="TAX-3750" />
+    </DataNode>
+    <DataNode elementId="MONOMER-12904" textLabel="MONOMER-12904" type="Protein">
+      <Xref identifier="MONOMER-12904" dataSource="plantcyc" />
+      <Graphics centerX="747.5916137695312" centerY="492.33624267578125" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="THE-ARABIDOPSIS-INFORMATION-RESOURCE, tissier">An amyloplastic protein with phosphohexose isomerase activity was partially purified from the immature endosperm of wheat (&lt;i&gt;Triticum aestivum&lt;/i&gt;) grains collected 26 days after anthesis |CITS:[2341161]|. The enzyme was purified 133-fold, and its kinetic characteristics were determined. Although the enzyme showed a pH optimum around 8.6, it retained a relatively high activity upto pH 10.0. The enzyme displayed typical hyperbolical kinetics with both |FRAME:GLC-6-P| and |FRAME:FRUCTOSE-6P|. pH affected the &lt;i&gt;K&lt;sub&gt;m (F6P)&lt;/sub&gt;&lt;/i&gt;: whereas the &lt;i&gt;K&lt;sub&gt;m (F6P)&lt;/sub&gt;&lt;/i&gt; remained the same at pH 7.0 and 8.6, its value was much higher (390 &amp;mu;M) at pH 9.5 |CITS:[2341161]|. The purified enzyme was stable at 4 C for more than a month and did not lost any activity when incubated at 40 C for 15 min, but lost 50% activity at 55 C. The F6P/G6P ratio was determined as approximately 3:1, suggesting that this enzyme is involved in |FRAME:PWY-622|. A number of inhibitors were tested, out of which only |FRAME:CPD-2961| (&lt;i&gt;K&lt;sub&gt;i&lt;/sub&gt;&lt;/i&gt; 180 &amp;mu;M), |FRAME:RIBOSE-5P| (&lt;i&gt;K&lt;sub&gt;i&lt;/sub&gt;&lt;/i&gt; 140 &amp;mu;M) and |FRAME:RIBULOSE-5P| (&lt;i&gt;K&lt;sub&gt;i&lt;/sub&gt;&lt;/i&gt; 130 &amp;mu;M) were physiologically significant. A number of |FRAME:PENTOSE-P-PWY| intermediates did show inhibitory activity towards the enzyme, which was however not deemed physiologically significant |CITS:[2341161]|.</Comment>
+      <Property key="UniqueID" value="MONOMER-12904" />
+      <Property key="Synonym_1" value="PHI" />
+      <Property key="MolecularWeightExp" value="130." />
+      <Property key="MolecularWeightKD" value="130." />
+      <Property key="Catalyzes" value="RXN-13755" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="TAX-4565" />
+      <CitationRef elementRef="citation_cit_2341161" />
+    </DataNode>
+    <DataNode elementId="AT4G24620-MONOMER" textLabel="glucose-6-phosphate isomerase" type="Protein">
+      <Xref identifier="Q9SB57" dataSource="uniprot" />
+      <Graphics centerX="343.76123046875" centerY="1321.732421875" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">An &lt;i&gt;Arabidopsis&lt;/i&gt; mutant (&lt;i&gt;pgi1-1&lt;/i&gt;) with a missense mutation of the &lt;i&gt;PGI1&lt;/i&gt; gene has a reduced plastidic phosphoglucose isomerase (PGI) activity representing only 6.5% of that of the wild-type |CITS:[10806248]|. The mutant is deficient in starch synthesis.</Comment>
+      <Property key="UniqueID" value="AT4G24620-MONOMER" />
+      <Property key="AlternativeId_Interpro" value="IPR018189" />
+      <Property key="AlternativeId_Araport" value="AT4G24620.1" />
+      <Property key="AlternativeId_Panther" value="PTHR11469" />
+      <Property key="AlternativeId_Prints" value="PR00662" />
+      <Property key="AlternativeId_Pfam" value="PF00342" />
+      <Property key="AlternativeId_Uniprot" value="Q9SB57" />
+      <Property key="AlternativeId_Phylomedb" value="Q8H103" />
+      <Property key="AlternativeId_Pride" value="Q8H103" />
+      <Property key="AlternativeId_Smr" value="Q8H103" />
+      <Property key="AlternativeId_Prosite" value="PS00174" />
+      <Property key="AlternativeId_Pid" value="NP_194193" />
+      <Property key="Gene" value="AT4G24620" />
+      <Property key="Catalyzes" value="RXN-13424" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_cit_10806248" />
+    </DataNode>
+    <DataNode elementId="ALPHA-GLC-6-P" textLabel="α-D-glucose 6-phosphate" type="Metabolite">
+      <Xref identifier="NBSCHQHZLSJFNQ-DVKNGEFBSA-L" dataSource="InChIKey" />
+      <Graphics centerX="1589.62646484375" centerY="979.3924560546875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ALPHA-GLC-6-P" />
+      <Property key="AlternativeId_Zinc" value="ZINC000003875375" />
+      <Property key="AlternativeId_Seed" value="cpd19006" />
+      <Property key="AlternativeId_Metanetx" value="MNXM215" />
+      <Property key="AlternativeId_Chemspider" value="10239175" />
+      <Property key="AlternativeId_Chebi" value="58225" />
+      <Property key="AlternativeId_Pubchem" value="21604864" />
+      <Property key="AlternativeId_LigandCpd" value="C00668" />
+      <Property key="Synonym_1" value="&amp;alpha;-glucose 6-phosphate" />
+      <Property key="Synonym_2" value="&amp;alpha;-D-glucose-6-P" />
+      <Property key="MolecularWeight" value="258.121" />
+      <Property key="MonoisotopicWeight" value="260.0297185262" />
+      <Property key="ChemicalFormula" value="(C 6)(H 11)(O 9)(P 1)" />
+      <Property key="InChI" value="InChI=1S/C6H13O9P/c7-3-2(1-14-16(11,12)13)15-6(10)5(9)4(3)8/h2-10H,1H2,(H2,11,12,13)/p-2/t2-,3-,4+,5-,6+/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=NBSCHQHZLSJFNQ-DVKNGEFBSA-L" />
+      <Property key="SMILES" value="C(OP(=O)([O-])[O-])[C@H]1(O[C@H](O)[C@H](O)[C@@H](O)[C@H](O)1)" />
+      <Property key="GibbsFreeEnergy" value="-319.04593" />
+      <Property key="CompoundType" value="D-glucopyranose-6-phosphate" />
+    </DataNode>
+    <DataNode elementId="D-glucopyranose-6-phosphate" textLabel="D-glucopyranose 6-phosphate" type="Metabolite">
+      <Xref identifier="NBSCHQHZLSJFNQ-GASJEMHNSA-L" dataSource="InChIKey" />
+      <Graphics centerX="1065.604736328125" centerY="784.5849609375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="D-glucopyranose-6-phosphate" />
+      <Property key="AlternativeId_Mediadb" value="compounds/90/" />
+      <Property key="AlternativeId_ReactomeCpd" value="1629756" />
+      <Property key="AlternativeId_Metanetx" value="MNXM160" />
+      <Property key="AlternativeId_Chebi" value="4170" />
+      <Property key="AlternativeId_LigandCpd" value="C00092" />
+      <Property key="Synonym_1" value="D-glucopyranose-6-P" />
+      <Property key="MolecularWeight" value="258.121" />
+      <Property key="MonoisotopicWeight" value="260.0297185262" />
+      <Property key="ChemicalFormula" value="(C 6)(H 11)(O 9)(P 1)" />
+      <Property key="InChI" value="InChI=1S/C6H13O9P/c7-3-2(1-14-16(11,12)13)15-6(10)5(9)4(3)8/h2-10H,1H2,(H2,11,12,13)/p-2/t2-,3-,4+,5-,6?/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=NBSCHQHZLSJFNQ-GASJEMHNSA-L" />
+      <Property key="SMILES" value="C([C@H]1(OC([C@@H]([C@H]([C@@H]1O)O)O)O))OP([O-])([O-])=O" />
+      <Property key="GibbsFreeEnergy" value="-319.04593" />
+      <Property key="CompoundType" value="Glucose-6-phosphate" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1600.0" centerY="223.7015380859375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicWeight" value="1.0078250321" />
+      <Property key="InChI" value="InChI=1S/p+1" />
+      <Property key="InChIKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="[H+]" />
+      <Property key="GibbsFreeEnergy" value="0.42906138" />
+      <Property key="CompoundType" value="Subatomic-Particles, Monovalent-Inorganic-Cations" />
+    </DataNode>
+    <DataNode elementId="WATER" textLabel="H₂O" type="Metabolite">
+      <Xref identifier="XLYOFNOQVPJJNP-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="369.6741027832031" centerY="505.560546875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="WATER" />
+      <Property key="AlternativeId_Bigg" value="33474" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15377" />
+      <Property key="AlternativeId_Hmdb" value="HMDB02111" />
+      <Property key="AlternativeId_Chemspider" value="937" />
+      <Property key="AlternativeId_Chebi" value="15377" />
+      <Property key="AlternativeId_Pubchem" value="962" />
+      <Property key="AlternativeId_LigandCpd" value="C00001" />
+      <Property key="AlternativeId_Cas" value="7732-18-5" />
+      <Property key="Synonym_1" value="H&lt;sub&gt;2&lt;/sub&gt;0" />
+      <Property key="Synonym_2" value="H2O" />
+      <Property key="Synonym_3" value="H20" />
+      <Property key="Synonym_4" value="hydrogen oxide" />
+      <Property key="Synonym_5" value="water" />
+      <Property key="MolecularWeight" value="18.015" />
+      <Property key="MonoisotopicWeight" value="18.0105646863" />
+      <Property key="ChemicalFormula" value="(H 2)(O 1)" />
+      <Property key="InChI" value="InChI=1S/H2O/h1H2" />
+      <Property key="InChIKey" value="InChIKey=XLYOFNOQVPJJNP-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="O" />
+      <Property key="GibbsFreeEnergy" value="-36.144756" />
+      <Property key="CompoundType" value="Compounds" />
+    </DataNode>
+    <DataNode elementId="FRUCTOSE-6P" textLabel="β-D-fructofuranose 6-phosphate" type="Metabolite">
+      <Xref identifier="BGWGXPAPYGQALX-ARQDHWQXSA-L" dataSource="InChIKey" />
+      <Graphics centerX="719.9034423828125" centerY="1463.174072265625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="FRUCTOSE-6P" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004096690" />
+      <Property key="AlternativeId_Seed" value="cpd19035" />
+      <Property key="AlternativeId_Hmdb" value="HMDB03971" />
+      <Property key="AlternativeId_Metanetx" value="MNXM89621" />
+      <Property key="AlternativeId_LigandCpd" value="C05345" />
+      <Property key="AlternativeId_Bigg" value="f6p" />
+      <Property key="AlternativeId_Chemspider" value="10239172" />
+      <Property key="AlternativeId_Chebi" value="57634" />
+      <Property key="AlternativeId_Pubchem" value="21604863" />
+      <Property key="AlternativeId_Cas" value="643-13-0" />
+      <Property key="Synonym_1" value="D-fructose-6-phosphate" />
+      <Property key="Synonym_2" value="fructose-6P" />
+      <Property key="Synonym_3" value="fructose-6-P" />
+      <Property key="Synonym_4" value="fruc6p" />
+      <Property key="Synonym_5" value="fru-6-P" />
+      <Property key="Synonym_6" value="fructose-6-phosphate" />
+      <Property key="Synonym_7" value="A-D-fructose-6-P" />
+      <Property key="Synonym_8" value="D-fructose-6-P" />
+      <Property key="Synonym_9" value="D-fructose 6-phosphate" />
+      <Property key="Synonym_10" value="D-fructofuranose 6-phosphate" />
+      <Property key="MolecularWeight" value="258.121" />
+      <Property key="MonoisotopicWeight" value="260.0297185262" />
+      <Property key="ChemicalFormula" value="(C 6)(H 11)(O 9)(P 1)" />
+      <Property key="InChI" value="InChI=1S/C6H13O9P/c7-2-6(10)5(9)4(8)3(15-6)1-14-16(11,12)13/h3-5,7-10H,1-2H2,(H2,11,12,13)/p-2/t3-,4-,5+,6-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=BGWGXPAPYGQALX-ARQDHWQXSA-L" />
+      <Property key="SMILES" value="C(OP(=O)([O-])[O-])[C@H]1(O[C@@](CO)(O)[C@@H](O)[C@H](O)1)" />
+      <Property key="GibbsFreeEnergy" value="-317.66592" />
+      <Property key="CompoundType" value="CPD-18719" />
+      <Property key="AbbreviatedName" value="F6P" />
+    </DataNode>
+    <DataNode elementId="Pi" textLabel="phosphate" type="Metabolite">
+      <Xref identifier="NBIIXXVUZAFLBC-UHFFFAOYSA-L" dataSource="InChIKey" />
+      <Graphics centerX="1074.667724609375" centerY="1318.973876953125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">The most abundant form of the phosphate ion at pH 7.3 is hydrogenphosphate. To simplify the presentation of reactions taking place at physiological pH, MetaCyc does not distinguish between the two forms, and uses the name &quot;phosphate&quot; even though the structure shown is that of hydrogenphosphate.</Comment>
+      <Property key="UniqueID" value="Pi" />
+      <Property key="AlternativeId_Refmet" value="Phosphoric acid" />
+      <Property key="AlternativeId_Bigg" value="pi" />
+      <Property key="AlternativeId_Pubchem" value="3681305" />
+      <Property key="AlternativeId_Chebi" value="43474" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC43474" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00973" />
+      <Property key="AlternativeId_Knapsack" value="C00007408" />
+      <Property key="AlternativeId_Cas" value="14265-44-2" />
+      <Property key="Synonym_1" value="inorganic phosphate" />
+      <Property key="Synonym_2" value="phosphate-inorganic" />
+      <Property key="Synonym_3" value="Pi" />
+      <Property key="Synonym_4" value="orthophosphate" />
+      <Property key="Synonym_5" value="PO&lt;SUB&gt;4&lt;/SUB&gt;&lt;SUP&gt;3-&lt;/SUP&gt;" />
+      <Property key="Synonym_6" value="HPO&lt;SUB&gt;4&lt;/SUB&gt;&lt;SUP&gt;2-&lt;/SUP&gt;" />
+      <Property key="Synonym_7" value="HPO&lt;SUB&gt;4&lt;/SUB&gt;&lt;SUP&gt;-2&lt;/SUP&gt;" />
+      <Property key="Synonym_8" value="hydrogenphosphate" />
+      <Property key="MolecularWeight" value="95.979" />
+      <Property key="MonoisotopicWeight" value="97.9768950947" />
+      <Property key="ChemicalFormula" value="(H 1)(O 4)(P 1)" />
+      <Property key="InChI" value="InChI=1S/H3O4P/c1-5(2,3)4/h(H3,1,2,3,4)/p-2" />
+      <Property key="InChIKey" value="InChIKey=NBIIXXVUZAFLBC-UHFFFAOYSA-L" />
+      <Property key="SMILES" value="[O-]P(=O)(O)[O-]" />
+      <Property key="GibbsFreeEnergy" value="-252.94714" />
+      <Property key="CompoundType" value="Phosphates" />
+      <CitationRef elementRef="citation_cit_18493048" />
+    </DataNode>
+    <DataNode elementId="NADPH" textLabel="NADPH" type="Metabolite">
+      <Xref identifier="ACFIXJIJDZMPPO-NNYOXOHSSA-J" dataSource="InChIKey" />
+      <Graphics centerX="100.0" centerY="862.7262573242188" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: NAD| and |FRAME: NADP| are dinucleotides containing one |FRAME: NIACINAMIDE| base and one |FRAME: ADENINE| base. Each nucleotide is connected to a ribose sugar at position 1, and the two riboses are connected at their 5 position via a diphosphate. The only difference between the two is that in NADP there is an additional phosphate group at the 2&apos; position of the ribose that carries the adenine moiety. These molecules are biological carriers of reductive equivalents (i.e. high potential electrons). Most of the time they function as cosubstrates, and in some cases they function as |FRAME: Cofactors cofactors|. They are often referred to by the obsolete term &quot;coenzymes&quot;. The most common function of |FRAME: NAD| is to accept two electrons and a proton (a hydride ion) from a substrate that is being oxidized. This reduction converts |FRAME: NAD| to |FRAME: NADH|, the reduced form. NADH then diffuses or is transported to a terminal oxidase, where the electrons are passed on, regenerating the oxidized form. |FRAME: NADPH|, on the other hand, is mostly involved in biosynthetic reactions, where it serves as an electron donor. NADPH is formed by reduction of |FRAME: NADP|, which occurs by different mechanisms in different types of organisms. In photosynthetic organisms |FRAME: NADP| is reduced by |FRAME: CPLX-84|. In heterotrophic organisms it is reduced by central metabolism processes such as the pentose phosphate pathway (see |FRAME: OXIDATIVEPENT-PWY|).</Comment>
+      <Property key="UniqueID" value="NADPH" />
+      <Property key="AlternativeId_Metanetx" value="MNXM6" />
+      <Property key="AlternativeId_Seed" value="cpd00005" />
+      <Property key="AlternativeId_Refmet" value="NADPH" />
+      <Property key="AlternativeId_Bigg" value="33486" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57783" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00221" />
+      <Property key="AlternativeId_Chemspider" value="10239199" />
+      <Property key="AlternativeId_Chebi" value="57783" />
+      <Property key="AlternativeId_Pubchem" value="15983949" />
+      <Property key="AlternativeId_Cas" value="2646-71-1" />
+      <Property key="AlternativeId_LigandCpd" value="C00005" />
+      <Property key="Synonym_1" value="&amp;beta;-nicotinamide adenine dinucleotide phosphate, reduced" />
+      <Property key="Synonym_2" value="&amp;beta;-NADPH" />
+      <Property key="Synonym_3" value="reduced NADP" />
+      <Property key="Synonym_4" value="reduced dihydrotriphosphopyridine nucleotide" />
+      <Property key="Synonym_5" value="reduced nicotinamide adenine dinucleotide phosphate" />
+      <Property key="Synonym_6" value="Nicotinamide adenine dinucleotide phosphate - reduced" />
+      <Property key="Synonym_7" value="NADPH+H+" />
+      <Property key="Synonym_8" value="NADPH2" />
+      <Property key="Synonym_9" value="NADPH&lt;SUB&gt;2&lt;/SUB&gt;" />
+      <Property key="Synonym_10" value="dihydrotriphosphopyridine nucleotide" />
+      <Property key="Synonym_11" value="dihydrotriphosphopyridine nucleotide reduced" />
+      <Property key="Synonym_12" value="dihydronicotinamide adenine dinucleotide phosphate" />
+      <Property key="Synonym_13" value="dihydronicotinamide adenine dinucleotide phosphate reduced" />
+      <Property key="Synonym_14" value="NADP-reduced" />
+      <Property key="Synonym_15" value="NADP-red" />
+      <Property key="Synonym_16" value="NADPH&lt;SUP&gt;+&lt;/SUP&gt;H&lt;SUP&gt;+&lt;/SUP&gt;" />
+      <Property key="Synonym_17" value="TPNH" />
+      <Property key="Synonym_18" value="dihydronicotinamide adenine dinucleotide-P" />
+      <Property key="Synonym_19" value="NADP(H)" />
+      <Property key="MolecularWeight" value="741.394" />
+      <Property key="MonoisotopicWeight" value="745.0911021051" />
+      <Property key="ChemicalFormula" value="(C 21)(H 26)(N 7)(O 17)(P 3)" />
+      <Property key="InChI" value="InChI=1S/C21H30N7O17P3/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(44-46(33,34)35)14(30)11(43-21)6-41-48(38,39)45-47(36,37)40-5-10-13(29)15(31)20(42-10)27-3-1-2-9(4-27)18(23)32/h1,3-4,7-8,10-11,13-16,20-21,29-31H,2,5-6H2,(H2,23,32)(H,36,37)(H,38,39)(H2,22,24,25)(H2,33,34,35)/p-4/t10-,11-,13-,14-,15-,16-,20-,21-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=ACFIXJIJDZMPPO-NNYOXOHSSA-J" />
+      <Property key="SMILES" value="C1(\N(/C=C(C\C=1)/C(=O)N)[C@@H]2(O[C@@H]([C@H]([C@H]2O)O)COP(OP(OC[C@H]5(O[C@@H](N3(C4(\C(\N=C/3)=C(N)/N=C\N=4)))[C@H](OP([O-])(=O)[O-])[C@H](O)5))(=O)[O-])(=O)[O-]))" />
+      <Property key="GibbsFreeEnergy" value="-551.72284" />
+      <Property key="CompoundType" value="NADH-P-OR-NOP" />
+    </DataNode>
+    <DataNode elementId="NADP" textLabel="NADP⁺" type="Metabolite">
+      <Xref identifier="XJLXINKUBYWONI-NNYOXOHSSA-K" dataSource="InChIKey" />
+      <Graphics centerX="838.089111328125" centerY="935.685302734375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: NAD| and |FRAME: NADP| are dinucleotides containing one |FRAME: NIACINAMIDE| base and one |FRAME: ADENINE| base. Each nucleotide is connected to a ribose sugar at position 1, and the two riboses are connected at their 5 position via a diphosphate. The only difference between the two is that in NADP there is an additional phosphate group at the 2&apos; position of the ribose that carries the adenine moiety. These molecules are biological carriers of reductive equivalents (i.e. high potential electrons). Most of the time they function as cosubstrates, and in some cases they function as |FRAME: Cofactors cofactors|. They are often referred to by the obsolete term &quot;coenzymes&quot;. The most common function of |FRAME: NAD| is to accept two electrons and a proton (a hydride ion) from a substrate that is being oxidized. This reduction converts |FRAME: NAD| to |FRAME: NADH|, the reduced form. NADH then diffuses or is transported to a terminal oxidase, where the electrons are passed on, regenerating the oxidized form. |FRAME: NADPH|, on the other hand, is mostly involved in biosynthetic reactions, where it serves as an electron donor. NADPH is formed by reduction of |FRAME: NADP|, which occurs by different mechanisms in different types of organisms. In photosynthetic organisms |FRAME: NADP| is reduced by |FRAME: CPLX-84|. In heterotrophic organisms it is reduced by central metabolism processes such as the pentose phosphate pathway (see |FRAME: OXIDATIVEPENT-PWY|).</Comment>
+      <Property key="UniqueID" value="NADP" />
+      <Property key="AlternativeId_Metanetx" value="MNXM5" />
+      <Property key="AlternativeId_Seed" value="cpd00006" />
+      <Property key="AlternativeId_Refmet" value="NADP+" />
+      <Property key="AlternativeId_Bigg" value="33488" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC58349" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00217" />
+      <Property key="AlternativeId_Chemspider" value="10239198" />
+      <Property key="AlternativeId_Chebi" value="58349" />
+      <Property key="AlternativeId_Pubchem" value="15938972" />
+      <Property key="AlternativeId_LigandCpd" value="C00006" />
+      <Property key="AlternativeId_Cas" value="53-59-8" />
+      <Property key="Synonym_1" value="&amp;beta;-NADP&lt;sup&gt;+&lt;/sup&gt;" />
+      <Property key="Synonym_2" value="coenzyme II" />
+      <Property key="Synonym_3" value="triphosphopyridine nucleotide" />
+      <Property key="Synonym_4" value="nicotinamide adenine dinucleotide phosphate" />
+      <Property key="Synonym_5" value="NADP-oxidized" />
+      <Property key="Synonym_6" value="NADP-ox" />
+      <Property key="Synonym_7" value="NADP+" />
+      <Property key="Synonym_8" value="TPN" />
+      <Property key="Synonym_9" value="TPN+" />
+      <Property key="Synonym_10" value="TPN-ox" />
+      <Property key="Synonym_11" value="nicotinamide adenine dinucleotide-P" />
+      <Property key="Synonym_12" value="NADP(+)" />
+      <Property key="Synonym_13" value="NADP" />
+      <Property key="MolecularWeight" value="740.386" />
+      <Property key="MonoisotopicWeight" value="745.0911021051" />
+      <Property key="ChemicalFormula" value="(C 21)(H 25)(N 7)(O 17)(P 3)" />
+      <Property key="InChI" value="InChI=1S/C21H28N7O17P3/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(44-46(33,34)35)14(30)11(43-21)6-41-48(38,39)45-47(36,37)40-5-10-13(29)15(31)20(42-10)27-3-1-2-9(4-27)18(23)32/h1-4,7-8,10-11,13-16,20-21,29-31H,5-6H2,(H7-,22,23,24,25,32,33,34,35,36,37,38,39)/p-3/t10-,11-,13-,14-,15-,16-,20-,21-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=XJLXINKUBYWONI-NNYOXOHSSA-K" />
+      <Property key="SMILES" value="C5(/C=C\C(\C(=O)N)=C/[N+](/[C@@H]1(O[C@@H]([C@H]([C@H]1O)O)COP(OP(OC[C@H]4(O[C@@H](N2(C3(\C(\N=C/2)=C(N)/N=C\N=3)))[C@H](OP([O-])(=O)[O-])[C@H](O)4))(=O)[O-])(=O)[O-]))=5)" />
+      <Property key="GibbsFreeEnergy" value="-563.64954" />
+      <Property key="CompoundType" value="NAD-P-OR-NOP" />
+    </DataNode>
+    <DataNode elementId="D-SORBITOL-6-P" textLabel="D-sorbitol 6-phosphate" type="Metabolite">
+      <Xref identifier="GACTWZZMVMUKNG-SLPGGIOYSA-L" dataSource="InChIKey" />
+      <Graphics centerX="1025.8199462890625" centerY="544.0452270507812" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="D-SORBITOL-6-P" />
+      <Property key="AlternativeId_Zinc" value="ZINC000002516111" />
+      <Property key="AlternativeId_Seed" value="cpd00804" />
+      <Property key="AlternativeId_Metanetx" value="MNXM393" />
+      <Property key="AlternativeId_Bigg" value="sbt6p" />
+      <Property key="AlternativeId_Chebi" value="60084" />
+      <Property key="AlternativeId_Pubchem" value="21123134" />
+      <Property key="AlternativeId_Chemspider" value="10618756" />
+      <Property key="AlternativeId_LigandCpd" value="C01096" />
+      <Property key="AlternativeId_Cas" value="108392-12-7" />
+      <Property key="Synonym_1" value="D-glucitol 6-phosphate" />
+      <Property key="MolecularWeight" value="260.137" />
+      <Property key="MonoisotopicWeight" value="262.0453685904" />
+      <Property key="ChemicalFormula" value="(C 6)(H 13)(O 9)(P 1)" />
+      <Property key="InChI" value="InChI=1S/C6H15O9P/c7-1-3(8)5(10)6(11)4(9)2-15-16(12,13)14/h3-11H,1-2H2,(H2,12,13,14)/p-2/t3-,4+,5+,6+/m0/s1" />
+      <Property key="InChIKey" value="InChIKey=GACTWZZMVMUKNG-SLPGGIOYSA-L" />
+      <Property key="SMILES" value="C([C@@H]([C@H]([C@@H]([C@@H](COP([O-])(=O)[O-])O)O)O)O)O" />
+      <Property key="GibbsFreeEnergy" value="-305.6637" />
+      <Property key="CompoundType" value="Alditol-phosphates" />
+    </DataNode>
+    <DataNode elementId="SORBITOL" textLabel="D-sorbitol" type="Metabolite">
+      <Xref identifier="FBPFZTCFMRRESA-JGWLITMVSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1060.599609375" centerY="1004.3284912109375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="SORBITOL" />
+      <Property key="AlternativeId_Zinc" value="ZINC000018279893" />
+      <Property key="AlternativeId_ReactomeCpd" value="5652213" />
+      <Property key="AlternativeId_Seed" value="cpd00588" />
+      <Property key="AlternativeId_Metanetx" value="MNXM469" />
+      <Property key="AlternativeId_Refmet" value="Sorbitol" />
+      <Property key="AlternativeId_Bigg" value="sbt__D" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC17924" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00247" />
+      <Property key="AlternativeId_Drugbank" value="DB01638" />
+      <Property key="AlternativeId_Chemspider" value="5576" />
+      <Property key="AlternativeId_Chebi" value="17924" />
+      <Property key="AlternativeId_Pubchem" value="5780" />
+      <Property key="AlternativeId_LigandCpd" value="C00794" />
+      <Property key="AlternativeId_Cas" value="50-70-4" />
+      <Property key="Synonym_1" value="L-gulitol" />
+      <Property key="Synonym_2" value="D-glucitol" />
+      <Property key="Synonym_3" value="iso-sorbide" />
+      <Property key="Synonym_4" value="(2S,3R,4R,5R)-hexane-1,2,3,4,5,6-hexol" />
+      <Property key="MolecularWeight" value="182.173" />
+      <Property key="MonoisotopicWeight" value="182.079038182" />
+      <Property key="ChemicalFormula" value="(C 6)(H 14)(O 6)" />
+      <Property key="InChI" value="InChI=1S/C6H14O6/c7-1-3(9)5(11)6(12)4(10)2-8/h3-12H,1-2H2/t3-,4+,5-,6-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=FBPFZTCFMRRESA-JGWLITMVSA-N" />
+      <Property key="SMILES" value="C([C@@H]([C@H]([C@@H]([C@@H](CO)O)O)O)O)O" />
+      <Property key="GibbsFreeEnergy" value="-81.51431" />
+      <Property key="CompoundType" value="Sweetening-Agent, Hexitols" />
+    </DataNode>
+    <DataNode elementId="CPD-4584" textLabel="vanadate" type="Metabolite">
+      <Xref identifier="LSGOVYNHVSXFFJ-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="893.209716796875" centerY="724.1868896484375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>Even though conventionally the vanadate is represented with a single double bond, this is a resonance form, as the ion is a regular tetrahedron with four equivalent oxygen atoms.</Comment>
+      <Property key="UniqueID" value="CPD-4584" />
+      <Property key="AlternativeId_Seed" value="cpd11744" />
+      <Property key="AlternativeId_Metanetx" value="MNXM88689" />
+      <Property key="AlternativeId_Pubchem" value="61672" />
+      <Property key="AlternativeId_Wikipedia" value="VO4" />
+      <Property key="AlternativeId_LigandCpd" value="C11627" />
+      <Property key="AlternativeId_Chebi" value="46442" />
+      <Property key="AlternativeId_Chemspider" value="4576437" />
+      <Property key="Synonym_1" value="ortho-vanadate" />
+      <Property key="Synonym_2" value="tetraoxovanadate" />
+      <Property key="MolecularWeight" value="114.938" />
+      <Property key="MonoisotopicWeight" value="117.94709728469999" />
+      <Property key="ChemicalFormula" value="(O 4)(V 1)" />
+      <Property key="InChI" value="InChI=1S/4O.V/q;3*-1;" />
+      <Property key="InChIKey" value="InChIKey=LSGOVYNHVSXFFJ-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="O=[V]([O-])([O-])[O-]" />
+      <Property key="GibbsFreeEnergy" value="-134.00854" />
+      <Property key="CompoundType" value="Inorganic-Anions" />
+    </DataNode>
+    <DataNode elementId="CPD-3" textLabel="molybdate" type="Metabolite">
+      <Xref identifier="MEFBJEMVZONFCJ-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="893.209716796875" centerY="724.1868896484375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-3" />
+      <Property key="AlternativeId_ReactomeCpd" value="947561" />
+      <Property key="AlternativeId_Seed" value="cpd11574" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1026" />
+      <Property key="AlternativeId_Bigg" value="mobd" />
+      <Property key="AlternativeId_Hmdb" value="HMDB12260" />
+      <Property key="AlternativeId_Chemspider" value="23023" />
+      <Property key="AlternativeId_Chebi" value="36264" />
+      <Property key="AlternativeId_Pubchem" value="24621" />
+      <Property key="AlternativeId_LigandCpd" value="C06232" />
+      <Property key="Synonym_1" value="MoO&lt;sub&gt;4&lt;/sub&gt;&lt;sup&gt;2-&lt;/sup&gt;" />
+      <Property key="Synonym_2" value="molybdate ion" />
+      <Property key="Synonym_3" value="MoO&lt;sub&gt;4&lt;/sub&gt;&lt;sup&gt;-2&lt;/sup&gt;" />
+      <Property key="MolecularWeight" value="159.938" />
+      <Property key="MonoisotopicWeight" value="163.9007163526" />
+      <Property key="ChemicalFormula" value="(O 4)(MO 1)" />
+      <Property key="InChI" value="InChI=1S/Mo.4O/q;;;2*-1" />
+      <Property key="InChIKey" value="InChIKey=MEFBJEMVZONFCJ-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="[Mo](=O)(=O)([O-])[O-]" />
+      <Property key="GibbsFreeEnergy" value="-132.44824" />
+      <Property key="CompoundType" value="Inorganic-Anions" />
+    </DataNode>
+    <DataNode elementId="F-" textLabel="fluoride" type="Metabolite">
+      <Xref identifier="KRHYYFGTRYWZRS-UHFFFAOYSA-M" dataSource="InChIKey" />
+      <Graphics centerX="893.209716796875" centerY="724.1868896484375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="F-" />
+      <Property key="AlternativeId_Seed" value="cpd00552" />
+      <Property key="AlternativeId_Metanetx" value="MNXM996" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00662" />
+      <Property key="AlternativeId_Chemspider" value="26214" />
+      <Property key="AlternativeId_Pubchem" value="28179" />
+      <Property key="AlternativeId_LigandCpd" value="C00742" />
+      <Property key="AlternativeId_Chebi" value="17051" />
+      <Property key="Synonym_1" value="fluoride ion" />
+      <Property key="Synonym_2" value="F&lt;SUP&gt;-&lt;/SUP&gt;" />
+      <Property key="MolecularWeight" value="18.998" />
+      <Property key="MonoisotopicWeight" value="20.0062282321" />
+      <Property key="InChI" value="InChI=1S/FH/h1H/p-1" />
+      <Property key="InChIKey" value="InChIKey=KRHYYFGTRYWZRS-UHFFFAOYSA-M" />
+      <Property key="SMILES" value="[F-]" />
+      <Property key="GibbsFreeEnergy" value="-0.3120594" />
+      <Property key="CompoundType" value="Halide-Anions" />
+    </DataNode>
+    <DataNode elementId="ZN_2" textLabel="Zn²⁺" type="Metabolite">
+      <Xref identifier="PTFCDOFLOPIGGS-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1004.764892578125" centerY="1171.283203125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ZN+2" />
+      <Property key="AlternativeId_Mediadb" value="compounds/38/" />
+      <Property key="AlternativeId_Seed" value="cpd00034" />
+      <Property key="AlternativeId_Metanetx" value="MNXM149" />
+      <Property key="AlternativeId_Bigg" value="zn2" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC29105" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01303" />
+      <Property key="AlternativeId_Chemspider" value="29723" />
+      <Property key="AlternativeId_Pubchem" value="32051" />
+      <Property key="AlternativeId_Chebi" value="29105" />
+      <Property key="AlternativeId_Cas" value="7440-66-6" />
+      <Property key="AlternativeId_LigandCpd" value="C00038" />
+      <Property key="Synonym_1" value="zinc(II)" />
+      <Property key="Synonym_2" value="Zn(II) (incorrect)" />
+      <Property key="Synonym_3" value="Zn&lt;sup&gt;II&lt;/sup&gt;" />
+      <Property key="MolecularWeight" value="65.38" />
+      <Property key="MonoisotopicWeight" value="63.9291466" />
+      <Property key="InChI" value="InChI=1S/Zn/q+2" />
+      <Property key="InChIKey" value="InChIKey=PTFCDOFLOPIGGS-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="[Zn+2]" />
+      <Property key="GibbsFreeEnergy" value="-1.2482376" />
+      <Property key="CompoundType" value="Divalent-Inorganic-Cations, Post-Transition-Metal-Cations" />
+    </DataNode>
+    <DataNode elementId="CPD-8886" textLabel="Sr²⁺" type="Metabolite">
+      <Xref identifier="PWYYWQHXAPXYMF-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1004.764892578125" centerY="1171.283203125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-8886" />
+      <Property key="AlternativeId_Seed" value="cpd09695" />
+      <Property key="AlternativeId_Metanetx" value="MNXM82680" />
+      <Property key="AlternativeId_Chebi" value="35104" />
+      <Property key="AlternativeId_Pubchem" value="104798" />
+      <Property key="AlternativeId_Hmdb" value="HMDB03642" />
+      <Property key="AlternativeId_Chemspider" value="16787720" />
+      <Property key="AlternativeId_LigandCpd" value="C13884" />
+      <Property key="Synonym_1" value="Sr&lt;sup&gt;II&lt;/sup&gt;" />
+      <Property key="Synonym_2" value="Sr&lt;sup&gt;++&lt;/sup&gt;" />
+      <Property key="Synonym_3" value="strontium(II)" />
+      <Property key="MolecularWeight" value="87.62" />
+      <Property key="MonoisotopicWeight" value="87.9056143" />
+      <Property key="InChI" value="InChI=1S/Sr/q+2" />
+      <Property key="InChIKey" value="InChIKey=PWYYWQHXAPXYMF-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="[Sr+2]" />
+      <Property key="GibbsFreeEnergy" value="-1.2482376" />
+      <Property key="CompoundType" value="Alkaline-Earth-Cations, Divalent-Inorganic-Cations" />
+    </DataNode>
+    <DataNode elementId="CPD-2961" textLabel="D-gluconate 6-phosphate" type="Metabolite">
+      <Xref identifier="BIRSGZKFKXLSJQ-SQOUGZDYSA-K" dataSource="InChIKey" />
+      <Graphics centerX="1004.764892578125" centerY="1171.283203125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-2961" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001532623" />
+      <Property key="AlternativeId_ReactomeCpd" value="29996" />
+      <Property key="AlternativeId_Seed" value="cpd00284" />
+      <Property key="AlternativeId_Metanetx" value="MNXM325" />
+      <Property key="AlternativeId_Refmet" value="6-Phosphogluconic acid" />
+      <Property key="AlternativeId_Bigg" value="6pgc" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC58759" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01316" />
+      <Property key="AlternativeId_Chebi" value="58759" />
+      <Property key="AlternativeId_Pubchem" value="36688186" />
+      <Property key="AlternativeId_LigandCpd" value="C00345" />
+      <Property key="Synonym_1" value="6-p gluconate" />
+      <Property key="Synonym_2" value="6-phospho gluconate" />
+      <Property key="Synonym_3" value="6-phosphogluconic acid" />
+      <Property key="Synonym_4" value="6-phospho D-gluconate" />
+      <Property key="MolecularWeight" value="273.113" />
+      <Property key="MonoisotopicWeight" value="276.0246331483" />
+      <Property key="ChemicalFormula" value="(C 6)(H 10)(O 10)(P 1)" />
+      <Property key="InChI" value="InChI=1S/C6H13O10P/c7-2(1-16-17(13,14)15)3(8)4(9)5(10)6(11)12/h2-5,7-10H,1H2,(H,11,12)(H2,13,14,15)/p-3/t2-,3-,4+,5-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=BIRSGZKFKXLSJQ-SQOUGZDYSA-K" />
+      <Property key="SMILES" value="C([C@H]([C@H]([C@@H]([C@H](C([O-])=O)O)O)O)O)OP([O-])([O-])=O" />
+      <Property key="GibbsFreeEnergy" value="-381.25735" />
+      <Property key="CompoundType" value="Carbohydrate-acid-derivatives" />
+    </DataNode>
+    <DataNode elementId="RIBULOSE-5P" textLabel="D-ribulose 5-phosphate" type="Metabolite">
+      <Xref identifier="FNZLKVNUWIIPSJ-UHNVWZDZSA-L" dataSource="InChIKey" />
+      <Graphics centerX="1004.764892578125" centerY="1171.283203125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="RIBULOSE-5P" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001532567" />
+      <Property key="AlternativeId_ReactomeCpd" value="29732" />
+      <Property key="AlternativeId_Seed" value="cpd00171" />
+      <Property key="AlternativeId_Metanetx" value="MNXM145" />
+      <Property key="AlternativeId_Refmet" value="Ribulose-5-phosphate" />
+      <Property key="AlternativeId_Bigg" value="ru5p__D" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC58121" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00618" />
+      <Property key="AlternativeId_Chemspider" value="20015724" />
+      <Property key="AlternativeId_Chebi" value="58121" />
+      <Property key="AlternativeId_Pubchem" value="21144996" />
+      <Property key="AlternativeId_LigandCpd" value="C00199" />
+      <Property key="AlternativeId_Cas" value="4151-19-3" />
+      <Property key="Synonym_1" value="ribulose-5P" />
+      <Property key="Synonym_2" value="D-ribulose-5-P" />
+      <Property key="Synonym_3" value="ribulose-5-P" />
+      <Property key="MolecularWeight" value="228.095" />
+      <Property key="MonoisotopicWeight" value="230.01915383989999" />
+      <Property key="ChemicalFormula" value="(C 5)(H 9)(O 8)(P 1)" />
+      <Property key="InChI" value="InChI=1S/C5H11O8P/c6-1-3(7)5(9)4(8)2-13-14(10,11)12/h4-6,8-9H,1-2H2,(H2,10,11,12)/p-2/t4-,5+/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=FNZLKVNUWIIPSJ-UHNVWZDZSA-L" />
+      <Property key="SMILES" value="C([C@H]([C@H](C(CO)=O)O)O)OP([O-])([O-])=O" />
+      <Property key="GibbsFreeEnergy" value="-302.30817" />
+      <Property key="CompoundType" value="Ribulose-phosphates" />
+    </DataNode>
+    <DataNode elementId="CD_2" textLabel="Cd²⁺" type="Metabolite">
+      <Xref identifier="WLZRMCYVCSSEQC-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1004.764892578125" centerY="1171.283203125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CD+2" />
+      <Property key="AlternativeId_Seed" value="cpd01012" />
+      <Property key="AlternativeId_Metanetx" value="MNXM4505" />
+      <Property key="AlternativeId_Bigg" value="cd2" />
+      <Property key="AlternativeId_Hmdb" value="HMDB03638" />
+      <Property key="AlternativeId_Chemspider" value="28935" />
+      <Property key="AlternativeId_Pubchem" value="31193" />
+      <Property key="AlternativeId_Chebi" value="48775" />
+      <Property key="AlternativeId_LigandCpd" value="C01413" />
+      <Property key="Synonym_1" value="cadmium(II)" />
+      <Property key="Synonym_2" value="Cd&lt;sup&gt;II&lt;/sup&gt;" />
+      <Property key="Synonym_3" value="Cd&lt;SUP&gt;++&lt;/SUP&gt;" />
+      <Property key="MolecularWeight" value="112.4" />
+      <Property key="MonoisotopicWeight" value="113.9033581" />
+      <Property key="InChI" value="InChI=1S/Cd/q+2" />
+      <Property key="InChIKey" value="InChIKey=WLZRMCYVCSSEQC-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="[Cd+2]" />
+      <Property key="GibbsFreeEnergy" value="-1.2482376" />
+      <Property key="CompoundType" value="Post-Transition-Metal-Cations, Divalent-Inorganic-Cations" />
+    </DataNode>
+    <DataNode elementId="HG_2" textLabel="Hg²⁺" type="Metabolite">
+      <Xref identifier="BQPIGGFYSBELGY-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1004.764892578125" centerY="1171.283203125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="HG+2" />
+      <Property key="AlternativeId_Seed" value="cpd00531" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1562" />
+      <Property key="AlternativeId_Bigg" value="hg2" />
+      <Property key="AlternativeId_Hmdb" value="HMDB03625" />
+      <Property key="AlternativeId_Chemspider" value="24800" />
+      <Property key="AlternativeId_Pubchem" value="26623" />
+      <Property key="AlternativeId_Chebi" value="16793" />
+      <Property key="AlternativeId_LigandCpd" value="C00703" />
+      <Property key="Synonym_1" value="Hg&lt;SUP&gt;++&lt;/SUP&gt;" />
+      <Property key="Synonym_2" value="mercury ion" />
+      <Property key="Synonym_3" value="mercury(II)" />
+      <Property key="Synonym_4" value="Hg&lt;sup&gt;II&lt;/sup&gt;" />
+      <Property key="MolecularWeight" value="200.59" />
+      <Property key="MonoisotopicWeight" value="201.970626" />
+      <Property key="InChI" value="InChI=1S/Hg/q+2" />
+      <Property key="InChIKey" value="InChIKey=BQPIGGFYSBELGY-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="[Hg+2]" />
+      <Property key="GibbsFreeEnergy" value="-1.2482376" />
+      <Property key="CompoundType" value="Post-Transition-Metal-Cations, Divalent-Inorganic-Cations" />
+      <CitationRef elementRef="citation_MERCK89" />
+    </DataNode>
+    <DataNode elementId="NI_2" textLabel="Ni²⁺" type="Metabolite">
+      <Xref identifier="VEQPNABPJHWNSG-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1004.764892578125" centerY="1171.283203125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="NI+2" />
+      <Property key="AlternativeId_Seed" value="cpd20862" />
+      <Property key="AlternativeId_Metanetx" value="MNXM3673" />
+      <Property key="AlternativeId_Bigg" value="ni2" />
+      <Property key="AlternativeId_Hmdb" value="HMDB02457" />
+      <Property key="AlternativeId_Chemspider" value="909" />
+      <Property key="AlternativeId_LigandCpd" value="C19609" />
+      <Property key="AlternativeId_Pubchem" value="934" />
+      <Property key="AlternativeId_Chebi" value="49786" />
+      <Property key="Synonym_1" value="nickel(II)" />
+      <Property key="Synonym_2" value="Ni&lt;sup&gt;++&lt;/sup&gt;" />
+      <Property key="Synonym_3" value="Ni&lt;sup&gt;II&lt;/sup&gt;" />
+      <Property key="MolecularWeight" value="58.7" />
+      <Property key="MonoisotopicWeight" value="57.9353479" />
+      <Property key="InChI" value="InChI=1S/Ni/q+2" />
+      <Property key="InChIKey" value="InChIKey=VEQPNABPJHWNSG-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="[Ni+2]" />
+      <Property key="GibbsFreeEnergy" value="-1.2482376" />
+      <Property key="CompoundType" value="Transition-Metal-Cations, Divalent-Inorganic-Cations" />
+    </DataNode>
+    <DataNode elementId="RIBOSE-5P" textLabel="D-ribose 5-phosphate" type="Metabolite">
+      <Xref identifier="HMDB01548" dataSource="HMDB" />
+      <Graphics centerX="1004.764892578125" centerY="1171.283203125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>Please note that the structure shown here is that of |FRAME: CPD-15895|, and is not accurate for this generic class, which also contains the furanose forms of D-ribose 5-phosphate.</Comment>
+      <Property key="UniqueID" value="RIBOSE-5P" />
+      <Property key="AlternativeId_Mediadb" value="compounds/114/" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01548" />
+      <Property key="AlternativeId_LigandCpd" value="C00117" />
+      <Property key="AlternativeId_Cas" value="4300-28-1" />
+      <Property key="Synonym_1" value="D-ribose-5-phosphoric acid" />
+      <Property key="Synonym_2" value="ribose-5-phosphoric acid" />
+      <Property key="Synonym_3" value="ribose-5P" />
+      <Property key="Synonym_4" value="D-ribose-5-P" />
+      <Property key="Synonym_5" value="ribose-5-P" />
+      <Property key="Synonym_6" value="D-ribose 5&apos;-phosphate" />
+      <Property key="MolecularWeight" value="228.095" />
+      <Property key="MonoisotopicWeight" value="230.01915383989999" />
+      <Property key="ChemicalFormula" value="(C 5)(H 9)(O 8)(P 1)" />
+      <Property key="InChI" value="InChI=1S/C5H11O8P/c6-1-3(7)5(9)4(8)2-13-14(10,11)12/h1,3-5,7-9H,2H2,(H2,10,11,12)/p-2/t3-,4+,5-/m0/s1" />
+      <Property key="SMILES" value="C(=O)[C@H](O)[C@H](O)[C@@H](COP([O-])([O-])=O)O" />
+      <Property key="GibbsFreeEnergy" value="-296.17816" />
+      <Property key="CompoundType" value="PENTOSE-5-PHOSPHATES" />
+    </DataNode>
+    <DataNode elementId="ATP" textLabel="ATP" type="Metabolite">
+      <Xref identifier="ZKHQWZAMYRWXGA-KQYNXXCUSA-J" dataSource="InChIKey" />
+      <Graphics centerX="895.71240234375" centerY="614.3150634765625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ATP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004261765" />
+      <Property key="AlternativeId_Mediadb" value="compounds/2/" />
+      <Property key="AlternativeId_Seed" value="cpd00002" />
+      <Property key="AlternativeId_Metanetx" value="MNXM3" />
+      <Property key="AlternativeId_Refmet" value="ATP" />
+      <Property key="AlternativeId_Bigg" value="atp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC30616" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00538" />
+      <Property key="AlternativeId_Chemspider" value="4574455" />
+      <Property key="AlternativeId_Chebi" value="30616" />
+      <Property key="AlternativeId_Pubchem" value="5461108" />
+      <Property key="AlternativeId_LigandCpd" value="C00002" />
+      <Property key="AlternativeId_Cas" value="56-65-5" />
+      <Property key="Synonym_1" value="adenylpyrophosphate" />
+      <Property key="Synonym_2" value="adenosine-triphosphate" />
+      <Property key="Synonym_3" value="adenosine-5&apos;-triphosphate" />
+      <Property key="MolecularWeight" value="503.152" />
+      <Property key="MonoisotopicWeight" value="506.99574515689994" />
+      <Property key="ChemicalFormula" value="(C 10)(H 12)(N 5)(O 13)(P 3)" />
+      <Property key="InChI" value="InChI=1S/C10H16N5O13P3/c11-8-5-9(13-2-12-8)15(3-14-5)10-7(17)6(16)4(26-10)1-25-30(21,22)28-31(23,24)27-29(18,19)20/h2-4,6-7,10,16-17H,1H2,(H,21,22)(H,23,24)(H2,11,12,13)(H2,18,19,20)/p-4/t4-,6-,7-,10-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=ZKHQWZAMYRWXGA-KQYNXXCUSA-J" />
+      <Property key="SMILES" value="C(OP(=O)([O-])OP(=O)([O-])OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3)" />
+      <Property key="GibbsFreeEnergy" value="-553.6995" />
+      <Property key="CompoundType" value="Purine-ribonucleosides-5-PPP" />
+    </DataNode>
+    <DataNode elementId="ADP" textLabel="ADP" type="Metabolite">
+      <Xref identifier="XTWYTFMLZFPYCI-KQYNXXCUSA-K" dataSource="InChIKey" />
+      <Graphics centerX="895.71240234375" centerY="614.3150634765625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ADP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000012360703" />
+      <Property key="AlternativeId_Seed" value="cpd00008" />
+      <Property key="AlternativeId_Metanetx" value="MNXM7" />
+      <Property key="AlternativeId_Refmet" value="ADP" />
+      <Property key="AlternativeId_Bigg" value="adp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC456216" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01341" />
+      <Property key="AlternativeId_Chemspider" value="5414423" />
+      <Property key="AlternativeId_Chebi" value="456216" />
+      <Property key="AlternativeId_Pubchem" value="7058055" />
+      <Property key="AlternativeId_LigandCpd" value="C00008" />
+      <Property key="AlternativeId_Cas" value="58-64-0" />
+      <Property key="Synonym_1" value="adenosine pyrophosphate" />
+      <Property key="Synonym_2" value="adenosine 5&apos;-pyrophosphate" />
+      <Property key="Synonym_3" value="adenosine-5&apos;-diphosphate" />
+      <Property key="Synonym_4" value="adenosine-diphosphate" />
+      <Property key="Synonym_5" value="adenosine-5-diphosphate" />
+      <Property key="MolecularWeight" value="424.18" />
+      <Property key="MonoisotopicWeight" value="427.0294147485" />
+      <Property key="ChemicalFormula" value="(C 10)(H 12)(N 5)(O 10)(P 2)" />
+      <Property key="InChI" value="InChI=1S/C10H15N5O10P2/c11-8-5-9(13-2-12-8)15(3-14-5)10-7(17)6(16)4(24-10)1-23-27(21,22)25-26(18,19)20/h2-4,6-7,10,16-17H,1H2,(H,21,22)(H2,11,12,13)(H2,18,19,20)/p-3/t4-,6-,7-,10-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=XTWYTFMLZFPYCI-KQYNXXCUSA-K" />
+      <Property key="SMILES" value="C(OP(=O)([O-])OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3)" />
+      <Property key="GibbsFreeEnergy" value="-344.92508" />
+      <Property key="CompoundType" value="All-Nucleosides" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="1441.7005615234375" y="1550.0" elementRef="G-1641" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="482.0133056640625" y="50.0" elementRef="MONOMER-2301" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_1_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_1_0_0" x="637.0474853515625" y="887.57861328125" elementRef="AT4G24620" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_1_0_0" arrowHead="TranscriptionTranslation" x="298.76123046875" y="1321.732421875" elementRef="AT4G24620-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="SORBITOL-6-PHOSPHATASE-RXN">
+      <Xref identifier="EC-3.1.3.50" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="SORBITOL-6-PHOSPHATASE-RXN_start" x="1070.8199462890625" y="544.0452270507812" elementRef="D-SORBITOL-6-P" relX="1.0" relY="0.0" />
+        <Point elementId="SORBITOL-6-PHOSPHATASE-RXN_end" arrowHead="Conversion" x="1015.599609375" y="1004.3284912109375" elementRef="SORBITOL" relX="-1.0" relY="0.0" />
+        <Anchor elementId="SORBITOL-6-PHOSPHATASE-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="SORBITOL-6-PHOSPHATASE-RXN" />
+      <Property key="EC_Number" value="EC-3.1.3.50" />
+      <Property key="Pathways" value="PWY-5054" />
+      <Property key="ReactionEquation" value="D-SORBITOL-6-P + WATER =&gt; SORBITOL + Pi" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-12080" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+    </Interaction>
+    <Interaction elementId="SORBITOL-6-PHOSPHATASE-RXN_ENZRXN-12080">
+      <Waypoints>
+        <Point elementId="SORBITOL-6-PHOSPHATASE-RXN_ENZRXN-12080_start" x="906.1542358398438" y="804.4630126953125" elementRef="MONOMER-11698" relX="0.0" relY="1.0" />
+        <Point elementId="SORBITOL-6-PHOSPHATASE-RXN_ENZRXN-12080_end" arrowHead="Catalysis" x="0" y="0" elementRef="SORBITOL-6-PHOSPHATASE-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="SORBITOL-6-PHOSPHATASE-RXN_anchor_reactant_1">
+      <Xref identifier="EC-3.1.3.50" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="SORBITOL-6-PHOSPHATASE-RXN_anchor_reactant_start_1" x="414.6741027832031" y="505.560546875" elementRef="WATER" relX="1.0" relY="0.0" />
+        <Point elementId="SORBITOL-6-PHOSPHATASE-RXN_anchor_reactant_end_1" x="0" y="0" elementRef="SORBITOL-6-PHOSPHATASE-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="SORBITOL-6-PHOSPHATASE-RXN_anchor_product_1">
+      <Xref identifier="EC-3.1.3.50" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="SORBITOL-6-PHOSPHATASE-RXN_anchor_product_start_1" x="0" y="0" elementRef="SORBITOL-6-PHOSPHATASE-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="SORBITOL-6-PHOSPHATASE-RXN_anchor_product_end_1" arrowHead="Conversion" x="1029.667724609375" y="1318.973876953125" elementRef="Pi" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="PGLUCISOM-RXN">
+      <Xref identifier="11816" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="PGLUCISOM-RXN_start" x="764.9034423828125" y="1463.174072265625" elementRef="FRUCTOSE-6P" relX="1.0" relY="0.0" />
+        <Point elementId="PGLUCISOM-RXN_end" arrowHead="Conversion" x="1544.62646484375" y="979.3924560546875" elementRef="ALPHA-GLC-6-P" relX="-1.0" relY="0.0" />
+        <Anchor elementId="PGLUCISOM-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Rhea" value="11816" />
+      <Property key="AlternativeId_Uniprot" value="Q9X670" />
+      <Property key="AlternativeId_Pir" value="T51720" />
+      <Property key="UniqueID" value="PGLUCISOM-RXN" />
+      <Property key="EC_Number" value="EC-5.3.1.9" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="GLYCOLYSIS, UDPNACETYLGALSYN-PWY, SUCSYN-PWY, PWY-7238, PWY-5659, GLUCONEO-PWY, PWY-3801, PWY-621, PWY-622, PWY-5054" />
+      <Property key="PathwayCount" value="10" />
+      <Property key="ReactionEquation" value="ALPHA-GLC-6-P &lt;=&gt; FRUCTOSE-6P" />
+      <Property key="ReactionDirection" value="REVERSIBLE" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXN-13424, ENZRXN-13435, ENZRXN-13434, ENZRXN-2425" />
+      <Property key="EnzymaticReactionCount" value="4" />
+      <Property key="Synonym_1" value="Phosphoglucose isomerase" />
+      <Property key="Synonym_2" value="Phosphohexose isomerase" />
+      <Property key="Synonym_3" value="Phosphohexomutase" />
+      <Property key="Synonym_4" value="Oxoisomerase" />
+      <Property key="Synonym_5" value="Hexosephosphate isomerase" />
+      <Property key="Synonym_6" value="Phosphosaccharomutase" />
+      <Property key="Synonym_7" value="Phosphoglucoisomerase" />
+      <Property key="Synonym_8" value="Phosphohexoisomerase" />
+      <Property key="Synonym_9" value="Hexose monophosphate isomerase" />
+      <Property key="Synonym_10" value="glucose phosphate isomerase" />
+      <Property key="Synonym_11" value="hexose phosphate isomerase" />
+      <Property key="Synonym_12" value="&lt;small&gt;D&lt;/small&gt;-glucose-6-phosphate ketol-isomerase" />
+      <Property key="ReactionTypes" value="Chemical-Reactions, Small-Molecule-Reactions" />
+    </Interaction>
+    <Interaction elementId="PGLUCISOM-RXN_ENZRXN-13434">
+      <Waypoints>
+        <Point elementId="PGLUCISOM-RXN_ENZRXN-13434_start" x="1371.09228515625" y="580.1700439453125" elementRef="MONOMER-12701" relX="0.0" relY="1.0" />
+        <Point elementId="PGLUCISOM-RXN_ENZRXN-13434_end" arrowHead="Catalysis" x="0" y="0" elementRef="PGLUCISOM-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="PGLUCISOM-RXN_ENZRXN-13424">
+      <Waypoints>
+        <Point elementId="PGLUCISOM-RXN_ENZRXN-13424_start" x="343.76123046875" y="1334.232421875" elementRef="AT4G24620-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="PGLUCISOM-RXN_ENZRXN-13424_end" arrowHead="Catalysis" x="0" y="0" elementRef="PGLUCISOM-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="PGLUCISOM-RXN_ENZRXN-2425">
+      <Waypoints>
+        <Point elementId="PGLUCISOM-RXN_ENZRXN-2425_start" x="527.0133056640625" y="62.5" elementRef="MONOMER-2301" relX="0.0" relY="1.0" />
+        <Point elementId="PGLUCISOM-RXN_ENZRXN-2425_end" arrowHead="Catalysis" x="0" y="0" elementRef="PGLUCISOM-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="PGLUCISOM-RXN_ENZRXN-13755">
+      <Waypoints>
+        <Point elementId="PGLUCISOM-RXN_ENZRXN-13755_start" x="747.5916137695312" y="504.83624267578125" elementRef="MONOMER-12904" relX="0.0" relY="1.0" />
+        <Point elementId="PGLUCISOM-RXN_ENZRXN-13755_end" arrowHead="Catalysis" x="0" y="0" elementRef="PGLUCISOM-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="PGLUCISOM-RXN_anchor_reactant_0">
+      <Xref identifier="11816" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="PGLUCISOM-RXN_anchor_reactant_start_0" x="1634.62646484375" y="979.3924560546875" elementRef="ALPHA-GLC-6-P" relX="1.0" relY="0.0" />
+        <Point elementId="PGLUCISOM-RXN_anchor_reactant_end_0" x="0" y="0" elementRef="PGLUCISOM-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="PGLUCISOM-RXN_anchor_product_0">
+      <Xref identifier="11816" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="PGLUCISOM-RXN_anchor_product_start_0" x="0" y="0" elementRef="PGLUCISOM-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="PGLUCISOM-RXN_anchor_product_end_0" arrowHead="Conversion" x="674.9034423828125" y="1463.174072265625" elementRef="FRUCTOSE-6P" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN">
+      <Xref identifier="EC-1.1.1.200" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_start" x="1110.604736328125" y="784.5849609375" elementRef="D-glucopyranose-6-phosphate" relX="1.0" relY="0.0" />
+        <Point elementId="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_end" arrowHead="Conversion" x="980.8199462890625" y="544.0452270507812" elementRef="D-SORBITOL-6-P" relX="-1.0" relY="0.0" />
+        <Anchor elementId="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN" />
+      <Property key="EC_Number" value="EC-1.1.1.200" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-5054" />
+      <Property key="ReactionEquation" value="D-SORBITOL-6-P + NADP &lt;=&gt; D-glucopyranose-6-phosphate + NADPH + PROTON" />
+      <Property key="ReactionDirection" value="REVERSIBLE" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-12078" />
+      <Property key="Synonym_1" value="NADP-dependent D-sorbitol-6-phosphate dehydrogenase" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+    </Interaction>
+    <Interaction elementId="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_ENZRXN-12078">
+      <Waypoints>
+        <Point elementId="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_ENZRXN-12078_start" x="1027.2471923828125" y="82.08975219726562" elementRef="MONOMER-11700" relX="0.0" relY="1.0" />
+        <Point elementId="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_ENZRXN-12078_end" arrowHead="Catalysis" x="0" y="0" elementRef="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_anchor_reactant_0">
+      <Xref identifier="EC-1.1.1.200" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_anchor_reactant_start_0" x="1070.8199462890625" y="544.0452270507812" elementRef="D-SORBITOL-6-P" relX="1.0" relY="0.0" />
+        <Point elementId="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_anchor_reactant_end_0" x="0" y="0" elementRef="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_anchor_reactant_1">
+      <Xref identifier="EC-1.1.1.200" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_anchor_reactant_start_1" x="883.089111328125" y="935.685302734375" elementRef="NADP" relX="1.0" relY="0.0" />
+        <Point elementId="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_anchor_reactant_end_1" x="0" y="0" elementRef="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_anchor_product_0">
+      <Xref identifier="EC-1.1.1.200" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_anchor_product_start_0" x="0" y="0" elementRef="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_anchor_product_end_0" arrowHead="Conversion" x="1020.604736328125" y="784.5849609375" elementRef="D-glucopyranose-6-phosphate" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_anchor_product_1">
+      <Xref identifier="EC-1.1.1.200" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_anchor_product_start_1" x="0" y="0" elementRef="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_anchor_product_end_1" arrowHead="Conversion" x="55.0" y="862.7262573242188" elementRef="NADPH" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_anchor_product_2">
+      <Xref identifier="EC-1.1.1.200" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_anchor_product_start_2" x="0" y="0" elementRef="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_anchor_product_end_2" arrowHead="Conversion" x="1555.0" y="223.7015380859375" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="SORBITOL-6-PHOSPHATASE-RXN_regulation_0">
+      <Waypoints>
+        <Point elementId="SORBITOL-6-PHOSPHATASE-RXN_regulation_start_0" x="938.209716796875" y="724.1868896484375" elementRef="CPD-4584" relX="1.0" relY="0.0" />
+        <Point elementId="SORBITOL-6-PHOSPHATASE-RXN_regulation_end_0" arrowHead="Inhibition" x="1043.209716796875" y="774.1868896484375" elementRef="SORBITOL-6-PHOSPHATASE-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-7078" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="RegulatedEntity" value="ENZRXN-12080" />
+      <Property key="Regulator" value="CPD-4584" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <CitationRef elementRef="citation_ZHOU03" />
+    </Interaction>
+    <Interaction elementId="SORBITOL-6-PHOSPHATASE-RXN_regulation_1">
+      <Waypoints>
+        <Point elementId="SORBITOL-6-PHOSPHATASE-RXN_regulation_start_1" x="938.209716796875" y="724.1868896484375" elementRef="CPD-3" relX="1.0" relY="0.0" />
+        <Point elementId="SORBITOL-6-PHOSPHATASE-RXN_regulation_end_1" arrowHead="Inhibition" x="1043.209716796875" y="774.1868896484375" elementRef="SORBITOL-6-PHOSPHATASE-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-7077" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="RegulatedEntity" value="ENZRXN-12080" />
+      <Property key="Regulator" value="CPD-3" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <CitationRef elementRef="citation_ZHOU03" />
+    </Interaction>
+    <Interaction elementId="SORBITOL-6-PHOSPHATASE-RXN_regulation_2">
+      <Waypoints>
+        <Point elementId="SORBITOL-6-PHOSPHATASE-RXN_regulation_start_2" x="938.209716796875" y="724.1868896484375" elementRef="F-" relX="1.0" relY="0.0" />
+        <Point elementId="SORBITOL-6-PHOSPHATASE-RXN_regulation_end_2" arrowHead="Inhibition" x="1043.209716796875" y="774.1868896484375" elementRef="SORBITOL-6-PHOSPHATASE-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-7076" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="RegulatedEntity" value="ENZRXN-12080" />
+      <Property key="Regulator" value="F-" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <CitationRef elementRef="citation_ZHOU03" />
+    </Interaction>
+    <Interaction elementId="SORBITOL-6-PHOSPHATASE-RXN_regulation_3">
+      <Waypoints>
+        <Point elementId="SORBITOL-6-PHOSPHATASE-RXN_regulation_start_3" x="1105.599609375" y="1004.3284912109375" elementRef="SORBITOL" relX="1.0" relY="0.0" />
+        <Point elementId="SORBITOL-6-PHOSPHATASE-RXN_regulation_end_3" arrowHead="Inhibition" x="1043.209716796875" y="774.1868896484375" elementRef="SORBITOL-6-PHOSPHATASE-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-7074" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="Mechanism" value=":COMPETITIVE" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="RegulatedEntity" value="ENZRXN-12080" />
+      <Property key="Regulator" value="SORBITOL" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <CitationRef elementRef="citation_ZHOU03" />
+    </Interaction>
+    <Interaction elementId="SORBITOL-6-PHOSPHATASE-RXN_regulation_4">
+      <Waypoints>
+        <Point elementId="SORBITOL-6-PHOSPHATASE-RXN_regulation_start_4" x="1119.667724609375" y="1318.973876953125" elementRef="Pi" relX="1.0" relY="0.0" />
+        <Point elementId="SORBITOL-6-PHOSPHATASE-RXN_regulation_end_4" arrowHead="Inhibition" x="1043.209716796875" y="774.1868896484375" elementRef="SORBITOL-6-PHOSPHATASE-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-7075" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="RegulatedEntity" value="ENZRXN-12080" />
+      <Property key="Regulator" value="Pi" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <CitationRef elementRef="citation_ZHOU03" />
+    </Interaction>
+    <Interaction elementId="PGLUCISOM-RXN_regulation_0">
+      <Waypoints>
+        <Point elementId="PGLUCISOM-RXN_regulation_start_0" x="1049.764892578125" y="1171.283203125" elementRef="ZN_2" relX="1.0" relY="0.0" />
+        <Point elementId="PGLUCISOM-RXN_regulation_end_0" arrowHead="Inhibition" x="1154.764892578125" y="1221.283203125" elementRef="PGLUCISOM-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-6544" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="RegulatedEntity" value="ENZRXN-13755" />
+      <Property key="Regulator" value="ZN+2" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <CitationRef elementRef="citation_cit_2341161" />
+    </Interaction>
+    <Interaction elementId="PGLUCISOM-RXN_regulation_1">
+      <Waypoints>
+        <Point elementId="PGLUCISOM-RXN_regulation_start_1" x="1049.764892578125" y="1171.283203125" elementRef="CPD-8886" relX="1.0" relY="0.0" />
+        <Point elementId="PGLUCISOM-RXN_regulation_end_1" arrowHead="Inhibition" x="1154.764892578125" y="1221.283203125" elementRef="PGLUCISOM-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-6543" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="RegulatedEntity" value="ENZRXN-13755" />
+      <Property key="Regulator" value="CPD-8886" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <CitationRef elementRef="citation_cit_2341161" />
+    </Interaction>
+    <Interaction elementId="PGLUCISOM-RXN_regulation_2">
+      <Waypoints>
+        <Point elementId="PGLUCISOM-RXN_regulation_start_2" x="1049.764892578125" y="1171.283203125" elementRef="CPD-2961" relX="1.0" relY="0.0" />
+        <Point elementId="PGLUCISOM-RXN_regulation_end_2" arrowHead="Inhibition" x="1154.764892578125" y="1221.283203125" elementRef="PGLUCISOM-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-6540" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="Mechanism" value=":COMPETITIVE" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="RegulatedEntity" value="ENZRXN-13755" />
+      <Property key="Regulator" value="CPD-2961" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <CitationRef elementRef="citation_cit_2341161" />
+    </Interaction>
+    <Interaction elementId="PGLUCISOM-RXN_regulation_3">
+      <Waypoints>
+        <Point elementId="PGLUCISOM-RXN_regulation_start_3" x="1049.764892578125" y="1171.283203125" elementRef="RIBULOSE-5P" relX="1.0" relY="0.0" />
+        <Point elementId="PGLUCISOM-RXN_regulation_end_3" arrowHead="Inhibition" x="1154.764892578125" y="1221.283203125" elementRef="PGLUCISOM-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-6538" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="Mechanism" value=":COMPETITIVE" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="RegulatedEntity" value="ENZRXN-13755" />
+      <Property key="Regulator" value="RIBULOSE-5P" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <CitationRef elementRef="citation_cit_2341161" />
+    </Interaction>
+    <Interaction elementId="PGLUCISOM-RXN_regulation_4">
+      <Waypoints>
+        <Point elementId="PGLUCISOM-RXN_regulation_start_4" x="1049.764892578125" y="1171.283203125" elementRef="CD_2" relX="1.0" relY="0.0" />
+        <Point elementId="PGLUCISOM-RXN_regulation_end_4" arrowHead="Inhibition" x="1154.764892578125" y="1221.283203125" elementRef="PGLUCISOM-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-6545" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="RegulatedEntity" value="ENZRXN-13755" />
+      <Property key="Regulator" value="CD+2" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <CitationRef elementRef="citation_cit_2341161" />
+    </Interaction>
+    <Interaction elementId="PGLUCISOM-RXN_regulation_5">
+      <Waypoints>
+        <Point elementId="PGLUCISOM-RXN_regulation_start_5" x="1049.764892578125" y="1171.283203125" elementRef="HG_2" relX="1.0" relY="0.0" />
+        <Point elementId="PGLUCISOM-RXN_regulation_end_5" arrowHead="Inhibition" x="1154.764892578125" y="1221.283203125" elementRef="PGLUCISOM-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-6541" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="RegulatedEntity" value="ENZRXN-13755" />
+      <Property key="Regulator" value="HG+2" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <CitationRef elementRef="citation_cit_2341161" />
+    </Interaction>
+    <Interaction elementId="PGLUCISOM-RXN_regulation_6">
+      <Waypoints>
+        <Point elementId="PGLUCISOM-RXN_regulation_start_6" x="1049.764892578125" y="1171.283203125" elementRef="NI_2" relX="1.0" relY="0.0" />
+        <Point elementId="PGLUCISOM-RXN_regulation_end_6" arrowHead="Inhibition" x="1154.764892578125" y="1221.283203125" elementRef="PGLUCISOM-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-6542" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="RegulatedEntity" value="ENZRXN-13755" />
+      <Property key="Regulator" value="NI+2" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <CitationRef elementRef="citation_cit_2341161" />
+    </Interaction>
+    <Interaction elementId="PGLUCISOM-RXN_regulation_7">
+      <Waypoints>
+        <Point elementId="PGLUCISOM-RXN_regulation_start_7" x="1049.764892578125" y="1171.283203125" elementRef="RIBOSE-5P" relX="1.0" relY="0.0" />
+        <Point elementId="PGLUCISOM-RXN_regulation_end_7" arrowHead="Inhibition" x="1154.764892578125" y="1221.283203125" elementRef="PGLUCISOM-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-6539" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="Mechanism" value=":COMPETITIVE" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="RegulatedEntity" value="ENZRXN-13755" />
+      <Property key="Regulator" value="RIBOSE-5P" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <CitationRef elementRef="citation_cit_2341161" />
+    </Interaction>
+    <Interaction elementId="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_regulation_0">
+      <Waypoints>
+        <Point elementId="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_regulation_start_0" x="940.71240234375" y="614.3150634765625" elementRef="ATP" relX="1.0" relY="0.0" />
+        <Point elementId="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_regulation_end_0" arrowHead="Inhibition" x="1045.71240234375" y="664.3150634765625" elementRef="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-7073" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="Mechanism" value=":COMPETITIVE" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="RegulatedEntity" value="ENZRXN-12078" />
+      <Property key="Regulator" value="ATP" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <CitationRef elementRef="citation_KANAYAMA93" />
+    </Interaction>
+    <Interaction elementId="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_regulation_1">
+      <Waypoints>
+        <Point elementId="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_regulation_start_1" x="940.71240234375" y="614.3150634765625" elementRef="ADP" relX="1.0" relY="0.0" />
+        <Point elementId="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_regulation_end_1" arrowHead="Inhibition" x="1045.71240234375" y="664.3150634765625" elementRef="ALDOSE-6-PHOSPHATE-REDUCTASE-NADPH-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-7072" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="Mechanism" value=":COMPETITIVE" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="RegulatedEntity" value="ENZRXN-12078" />
+      <Property key="Regulator" value="ADP" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <CitationRef elementRef="citation_KANAYAMA93" />
+    </Interaction>
+  </Interactions>
+  <Groups>
+    <Group elementId="CPLX-7220" textLabel="CPLX-7220" type="Complex">
+      <Xref identifier="CPLX-7220" dataSource="plantcyc" />
+      <Graphics centerX="1371.09228515625" centerY="567.6700439453125" width="140" height="100" textColor="666666" fontName="Arial" fontSize="10" borderColor="9900CC" borderStyle="Dashed" borderWidth="2.0" fillColor="F5E6FF" shapeType="Rectangle" zOrder="-1" />
+      <Comment source="THE-ARABIDOPSIS-INFORMATION-RESOURCE, tissier">A protein with phosphoglucose isomerase activity was partially purified from the pulp of peeled banana &lt;i&gt;Musa acuminata&lt;/i&gt; fruits |CITS:[11758906]|. In fact, the purification procedure revealed two pools with the same activity. Those pools were named Pool Sephacryl 1 (PGI&lt;sub&gt;1&lt;/sub&gt;) and Pool Sephacryl 2 (PGI&lt;sub&gt;2&lt;/sub&gt;), and represent protein fraction of higher and lower ionic strength, respectively |CITS:[11758906]|. PGI&lt;sub&gt;1&lt;/sub&gt; has an &lt;i&gt;pI&lt;/i&gt; value of 5.15. The activities of both pools are relatively similar (in the 700-900 &amp;mu;mol glucose 6-phosphate.h&lt;sup&gt;-1&lt;/sup&gt; range) but differ in terms of heat-resistance, with PGI&lt;sub&gt;1&lt;/sub&gt; being most heat-resistant (70% of original activity remains after 10 min at 56°C) |CITS:[11758906]|.</Comment>
+      <Property key="UniqueID" value="CPLX-7220" />
+      <Property key="Synonym_1" value="PGI&lt;sub&gt;1&lt;/sub&gt;" />
+      <Property key="Synonym_2" value="phosphoglucose isomerase Pool Sephacryl 1" />
+      <Property key="ComplexComponents" value="MONOMER-12701" />
+      <Property key="ComponentCount" value="1" />
+      <Property key="IsComplex" value="true" />
+      <Property key="MolecularWeightExp" value="123." />
+      <Property key="MolecularWeightKD" value="123." />
+      <Property key="IsoelectricPoint" value="5.15" />
+      <Property key="Catalyzes" value="RXN-13434" />
+      <Property key="ProteinType" value="Protein-Complexes" />
+      <Property key="Species" value="TAX-4641" />
+      <CitationRef elementRef="citation_cit_11758906" />
+    </Group>
+    <Group elementId="CPLX-6946" textLabel="CPLX-6946" type="Complex">
+      <Xref identifier="P28475" dataSource="uniprot" />
+      <Graphics centerX="1027.2471923828125" centerY="69.58975219726562" width="140" height="100" textColor="666666" fontName="Arial" fontSize="10" borderColor="9900CC" borderStyle="Dashed" borderWidth="2.0" fillColor="F5E6FF" shapeType="Rectangle" zOrder="-1" />
+      <Comment>NADP-dependent sorbitol-6-phosphate dehydrogenase (aldose-6-phosphate reductase) purified from apple seedlings is a homodimeric enzyme able to catalyze the reversible conversion of glucose-6-phosphate (G6P) to sorbitol-6-phosphate (S6P) |CITS:[KANAYAMA93]|. The purified enzyme (S6PDH) has a specific activity for sorbitol-6-phosphate production of 2.21 &amp;mu;mol.min&lt;sup&gt;-1&lt;/sup&gt;.mg&lt;sup&gt;-1&lt;/sup&gt; protein |CITS:[KANAYAMA93]|. This value is much higher than that previously reported for the S6PDH of apple leaves |CITS:[NEGM81]|. The enzyme did not react with sorbitol, glucose, glucose-1-phosphate, fructose-6-phosphate and NAD(H) |CITS:[NEGM81],[KANAYAMA93]|. This enzyme does not seem to have any requirement for any divalent cations. pH was important to enzyme activity: G6P reduction activity was high at pH ranging from 7 to 11, and moderate between 11 and 12. In contrast, S6P oxidation activity was very low at neutral pH, suggesting that S6PDH plays a role in sorbitol biosynthesis &lt;i&gt;in vivo&lt;/i&gt; |CITS:[KANAYAMA93]|. While a variety of potential inhibitors were tested, only ATP and ADP were found to be strong competitive inhibitors of G6P reduction (with respective K&lt;sub&gt;i&lt;/sub&gt; values of 0.17 mM and 0.30 mM).</Comment>
+      <Property key="UniqueID" value="CPLX-6946" />
+      <Property key="AlternativeId_Pid" value="BAA01853" />
+      <Property key="AlternativeId_Uniprot" value="P28475" />
+      <Property key="Synonym_1" value="alditol-6-phosphate:NADP 1-oxidoreductase" />
+      <Property key="Synonym_2" value="sorbitol-6-phosphate dehydrogenase" />
+      <Property key="Synonym_3" value="S6PDH" />
+      <Property key="Synonym_4" value="A6PR" />
+      <Property key="Synonym_5" value="aldose-6-phosphate reductase" />
+      <Property key="ComplexComponents" value="MONOMER-11700" />
+      <Property key="ComponentCount" value="1" />
+      <Property key="IsComplex" value="true" />
+      <Property key="MolecularWeightExp" value="65." />
+      <Property key="MolecularWeightKD" value="65." />
+      <Property key="Catalyzes" value="RXN-12078" />
+      <Property key="ProteinType" value="Protein-Complexes" />
+      <Property key="Species" value="TAX-3750" />
+      <CitationRef elementRef="citation_NEGM81" />
+      <CitationRef elementRef="citation_cit_15449063" />
+      <CitationRef elementRef="citation_cit_7757342" />
+    </Group>
+  </Groups>
+  <Citations>
+    <Citation elementId="citation_cit_15449063">
+      <Xref identifier="15449063" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation__9651529_">
+      <Xref identifier="[9651529]" dataSource="PlantCyc" />
+    </Citation>
+    <Citation elementId="citation_cit_2341161">
+      <Xref identifier="2341161" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_7757342">
+      <Xref identifier="7757342" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_KANAYAMA93">
+      <Xref identifier="PUB-KANAYAMA93 | Purification and properties of NADP-dependent sorbitol-6-phosphate dehydrogenase from apple seedling... (kanayama Y., Yamaki S., 1993)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_cit_10806248">
+      <Xref identifier="10806248" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_ZHOU03">
+      <Xref identifier="PUB-ZHOU03 | Purification and characterization of sorbitol-6-phosphate phosphatase from apple leaves. (Zhou R., Cheng L., Wayne R., 2003)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_cit_18493048">
+      <Xref identifier="18493048" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_MERCK89">
+      <Xref identifier="PUB-MERCK89 | The Merck Index:  An Encyclopedia of Chemicals, Drugs, and Biologicals. Eleventh Edition. (S. Budavari, Editor, M.J. O&apos;Neil, Associate Editor, A. Smith, Assistant Editor et al.)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_cit_11758906">
+      <Xref identifier="11758906" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_NEGM81">
+      <Xref identifier="PUB-NEGM81 | Characterization and partial purification of aldose-6-phosphate reductase (alditol-6-phosphate:NADP ... (Negm F.B., Loescher W.H., 1981)" dataSource="BioCyc" />
+    </Citation>
+  </Citations>
+</Pathway>

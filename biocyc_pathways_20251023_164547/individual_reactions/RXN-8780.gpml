@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="RXN-8780" organism="TAX-3702" source="PlantCyc">
+  <Description>Single reaction view for RXN-8780: RXN-8780</Description>
+  <Authors>
+    <Author name="BioCyc" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from BioCyc single reaction data.</Comment>
+  <Property key="UniqueID" value="RXN-8780" />
+  <Graphics boardWidth="1200" boardHeight="800" />
+  <DataNodes>
+    <DataNode elementId="L-SORBOSONE" textLabel="L-sorbosone" type="Metabolite">
+      <Xref identifier="DCNMIDLYWOTSGK-KVQBGUIXSA-N" dataSource="InChIKey" />
+      <Graphics centerX="200" centerY="210" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="L-SORBOSONE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000100078686" />
+      <Property key="AlternativeId_Seed" value="cpd20927" />
+      <Property key="AlternativeId_Metanetx" value="MNXM7489" />
+      <Property key="AlternativeId_LigandCpd" value="C19679" />
+      <Property key="AlternativeId_Pubchem" value="10921067" />
+      <Property key="AlternativeId_Chebi" value="48657" />
+      <Property key="Synonym_1" value="1-dehydro-L-sorbose" />
+      <Property key="Synonym_2" value="2-dehydro-L-gulose" />
+      <Property key="Synonym_3" value="L-xylo-hexos-2-ulose" />
+      <Property key="MolecularWeight" value="178.141" />
+      <Property key="MonoisotopicWeight" value="178.0477380536" />
+      <Property key="ChemicalFormula" value="(C 6)(H 10)(O 6)" />
+      <Property key="InChI" value="InChI=1S/C6H10O6/c7-1-3(9)5(11)6(12)4(10)2-8/h1,4-6,8,10-12H,2H2/t4-,5+,6+/m0/s1" />
+      <Property key="InChIKey" value="InChIKey=DCNMIDLYWOTSGK-KVQBGUIXSA-N" />
+      <Property key="SMILES" value="C(=O)C([C@H]([C@@H]([C@H](CO)O)O)O)=O" />
+      <Property key="GibbsFreeEnergy" value="-102.76880" />
+      <Property key="CompoundType" value="Aldohexoses" />
+      <CitationRef elementRef="citation_cit_16461703" />
+    </DataNode>
+    <DataNode elementId="CPD-9055" textLabel="L-sorbosone 1,4-lactone" type="Metabolite">
+      <Xref identifier="MTSKWRIATJSKFJ-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="350" centerY="210" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-9055" />
+      <Property key="AlternativeId_Zinc" value="ZINC000034115667" />
+      <Property key="AlternativeId_Seed" value="cpd25544" />
+      <Property key="AlternativeId_Metanetx" value="MNXM12065" />
+      <Property key="AlternativeId_Pubchem" value="25203461" />
+      <Property key="Synonym_1" value="L-sorbosone furanose form" />
+      <Property key="MolecularWeight" value="178.141" />
+      <Property key="MonoisotopicWeight" value="178.0477380536" />
+      <Property key="ChemicalFormula" value="(C 6)(H 10)(O 6)" />
+      <Property key="InChI" value="InChI=1S/C6H10O6/c7-1-2(8)5-3(9)4(10)6(11)12-5/h2-3,5-9,11H,1H2" />
+      <Property key="InChIKey" value="InChIKey=MTSKWRIATJSKFJ-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="C(O)C(O)C1(C(O)C(=O)C(O)O1)" />
+      <Property key="GibbsFreeEnergy" value="-108.7688" />
+      <Property key="CompoundType" value="Hexoses" />
+      <CitationRef elementRef="citation_cit_15785002" />
+      <CitationRef elementRef="citation_cit_16461703" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="RXN-8780">
+      <Xref identifier="RXN-8780" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-8780_start" x="245.0" y="210" elementRef="L-SORBOSONE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-8780_end" arrowHead="Conversion" x="305.0" y="210" elementRef="CPD-9055" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-8780_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-8780" />
+      <Property key="Spontaneous" value="T" />
+      <Property key="ReactionEquation" value="L-SORBOSONE =&gt; CPD-9055" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_cit_16461703">
+      <Xref identifier="16461703" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_15785002">
+      <Xref identifier="15785002" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

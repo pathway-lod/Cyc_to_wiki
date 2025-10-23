@@ -1,0 +1,930 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="S-methyl-5-thio-α-D-ribose 1-phosphate degradation I" organism="TAX-4081, TAX-573, TAX-571, TAX-9606, TAX-224308, TAX-1423, TAX-10090, ORG-5993, TAX-3873, TAX-4530" source="PlantCyc">
+  <Description>&lt;b&gt;General Background&lt;/b&gt; Polyamines, organic molecules with multiple amino groups, are critical for proper regulation of the cell cycle, and are synthesized in large amounts in rapidly growing cells. During polyamine synthesis |FRAME: MET L-methionine| is consumed through the utilization of |FRAME: S-ADENOSYLMETHIONINE &lt;i&gt;S&lt;/i&gt;-adenosyl-L-methionine| (SAM), in a reaction that releases |FRAME:5-METHYLTHIOADENOSINE &lt;i&gt;S&lt;/i&gt;-methyl-5&apos;-thioadenosine| (MTA) (see the pathway |FRAME:BSUBPOLYAMSYN-PWY spermidine biosynthesis I| for an example). MTA is a strong inhibitor of polyamine biosynthesis and transmethylation reactions, and its concentration is tightly regulated. This control is achieved through the |FRAME: PWY-4361 methionine salvage I (bacteria and plants)| pathway, where MTA is recycled through a series of reactions that convert its 5-methylthio-D-ribose moiety to |FRAME: MET L-methionine|. &lt;b&gt;About This Pathway&lt;/b&gt; The |FRAME: PWY-4361 &quot;methionine salvage&quot;| pathway is found in a wide variety of organisms, including bacteria, protozoa, plants and mammals. It has been partially characterized for a number of organisms, including rat |CITS: [7852397][7068632][7007366]|, plants, yeast |CITS: [3906034]|, bacteria and protozal parasites |CITS: [8585735][ 11443076]|. The best characterized pathway is from the Gram-negative bacterium |FRAME: TAX-573 &lt;i&gt;Klebsiella pneumoniae&lt;/i&gt;| |CITS:[8694776][11371200][9880484][7852397][8227039]|. However, the initial steps of the methionine salvage pathway, between |FRAME: 5-METHYLTHIOADENOSINE &lt;i&gt;S&lt;/i&gt;-methyl-5&apos;-thioadenosine| (MTA) and |FRAME: CPD-1063 5-methylthioribulose-1-phosphate| (MTRP), are different between microorganisms (such as the bacteria |FRAME: TAX-573 &lt;i&gt;Klebsiella pneumoniae&lt;/i&gt;| |CITS: [8694776]| and |FRAME: TAX-1423 &lt;i&gt;Bacillus subtilis&lt;/i&gt;| |CITS: [12022921]|), protozoa (such as |FRAME: TAX-5741 &lt;i&gt;Giardia intestinalis&lt;/i&gt;| and |FRAME: TAX-5833 &lt;i&gt;Plasmodium falciparum&lt;/i&gt;| |CITS: [2854458]|) and mammalian cells. This pathway shows the methionine salvage pathway utilized by most bacteria. In all cases, MTRP is subsequently recycled to |FRAME: MET L-methionine| by the same route. This metabolic differences in the first step of the pathway are being exploited for developing new drugs targeted against pathogenic microorganisms that utilize the MTA nucleosidase-MTR kinase pathway |CITS: [2854458][2153115][1929327]|. MTRP is coverted to |FRAME: CPD-8999 5-(methylthio)-2,3-dioxopentyl phosphate| by the extraction of a water molecule, and the later is converted to |FRAME:CPD-85 1,2-dihydroxy-5-(methylthio)pent-1-en-3-one| by the enzyme |FRAME:CPLX-7445 2,3-diketo-5-methylthiopentyl-1-phosphate enolase|, which at least in some strains, such as |FRAME: TAX-1423 &lt;i&gt;Bacillus subtilis&lt;/i&gt;|, is a member of the RubisCO protein family |CITS: [17352497]|. |FRAME:CPD-85 1,2-dihydroxy-5-(methylthio)pent-1-en-3-one| can be oxidized to |FRAME:CPD-479 2-oxo-4-methylthiobutanoate| (KMTB) non-enzymatically in the presence of air |CITS: [7852397]|. However, in the cell this reaction is catalyzed by the enzyme |FRAME: MONOMER-1323 acireductone dioxygenase [Ni(II)-requiring]| |CITS: [11371200][9880484]|. It is yet unknown whether the non-enzymatic reaction occurs in vivo |CITS: [7852397]|. |FRAME:CPD-85 1,2-dihydroxy-5-(methylthio)pent-1-en-3-one| can also be oxidized to |FRAME:FORMATE formate| and |FRAME:CPD-7672 3-&lt;i&gt;S&lt;/i&gt;-methylmercaptopropionate|, which is a shunt of the methionine salvage pathway (see |FRAME:PWY-5389 methylthiopropionate biosynthesis|) |CITS: [11371200][9880484] [7852397]|. Interestingly, the two reactions are catalyzed by enzymes that share a common polypeptide sequence and differ only in the metal ion present. The Fe-ARD enzyme catalyzes the conversion to |FRAME:CPD-479 2-oxo-4-methylthiobutanoate|, while the Ni-ARD enzyme produces |FRAME:CPD-7672 3-&lt;i&gt;S&lt;/i&gt;-methylmercaptopropionate| |CITS: [12022880]|. The purpose of this off-pathway reaction is yet unknown; it may, however, provide a mechanism for regulating |FRAME: MET L-methionine| levels &lt;i&gt;in vivo&lt;/i&gt; |CITS: [11371200]|. &lt;b&gt;This Pathway in Plants:&lt;/b&gt; In plants, this methionine recycling pathway is known as the MTA or Yang Cycle |CITS:[miyazaki87]|. While studying the production of ethylene in apple fruit tissue, Baur and Yang |CITS:[baur72]| noted that, although methionine was in quantities sufficient for the production of ethylene only for a few hours, ethylene was being produced for months. Since no volatile sulfur was detected, it was postulated that it was recycled to replenish the methionine pool. It was later shown that the methylthio group of MTA was recycled to methionine via 5&apos;-methylthioribose (MTR) and 5&apos;-methylthioribose-1-phosphate (MTR-1-P) |CITS:[murr75],[adams77]|. It was initially thought that this methylthio group was transferred to a four carbon acceptor molecule such as homoserine to regenerate methionine. Later studies however showed that in plants, like in yeast cells, rat liver and bacterial extracts, the ribose moiety of MTA was also incorporated into the 2-aminobutyrate moiety of methionine. In animals, MTA is also recycled to methionine but not through the production of MTR. Instead, MTA is phosphorolytically cleaved by MTA phosphorylase (EC 2.4.2.28) to yield MTR-1-P. Although the participation of &amp;alpha;-keto-&amp;gamma;-methylthiobutyric acid (KMB) as an intermediate in the Yang Cycle has been demonstrated in avocado extracts, little is known of the exact nature of the intermediates involved in the rest of the cycle |CITS:[kushad83]|. &lt;b&gt;Key Notes on the plant Enzymes:&lt;/b&gt; Few enzymes have been characterized in plants for this pathway, and even fewer have been characterized with nucleic and/or protein sequences. The section of the pathway from SAM to MTR is fairly well characterized with enzymes purified from several species: methionine-adenosyltransferases (SAM), ACC synthases, MTA nucleosidases and MTR kinases. The latter part of the pathway, leading to the formation of KMB, has proven elusive. The conversion of KMB to methionine appears to occur rapidly as KMB does not seem to accumulate in plants |CITS:[miyazaki87]|. Recently, an enzyme from rice catalyzing the Fe&lt;sup&gt;2+&lt;/sup&gt;-acireductone dioxygenase step (EC 1.13.11.54) has been isolated. This enzyme appears to have a preference for Fe&lt;sup&gt;2+&lt;/sup&gt; rather than Ni&lt;sup&gt;2+&lt;/sup&gt; suggesting the enzyme might be involved mostly in the |FRAME:PWY-4361 methionine salvage I (bacteria and plants)| rather than the shunt pathway producing the cytotoxic compound 3-&lt;i&gt;S&lt;/i&gt;-methylthiopropionate (|FRAME:PWY-5389 methylthiopropionate biosynthesis|) |CITS:[16297065]|. Review: |CITS: [19946895]|</Description>
+  <Authors>
+    <Author name="SRI" />
+    <Author name="caspi" />
+    <Author name="krieger" />
+    <Author name="O-18" />
+    <Author name="pellegrini-toole" />
+    <Author name="THE-ARABIDOPSIS-INFORMATION-RESOURCE" />
+    <Author name="tissier" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-4361" />
+  <Property key="Type" value="MTR-1P-Degradation" />
+  <Property key="ReactionCount" value="7" />
+  <Property key="ReactionIDs" value="RXN-13072, RXN-15650, R147-RXN, R83-RXN, R82-RXN, R145-RXN, 5.3.1.23-RXN" />
+  <Property key="PredecessorCount" value="6" />
+  <Property key="PathwayLinks" value="(MET SAM-PWY), (CPD-85 PWY-5389)" />
+  <Property key="Organism" value="TAX-4081, TAX-573, TAX-571, TAX-9606, TAX-224308, TAX-1423, TAX-10090, ORG-5993, TAX-3873, TAX-4530" />
+  <Property key="TaxonomicRange_1" value="TAX-2157" />
+  <Property key="TaxonomicRange_2" value="TAX-2" />
+  <Property key="TaxonomicRange_3" value="TAX-3193" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_MIYAZAKI87" />
+  <CitationRef elementRef="citation_cit_12022921" />
+  <CitationRef elementRef="citation_cit_3906034" />
+  <CitationRef elementRef="citation_cit_8694776" />
+  <CitationRef elementRef="citation_cit_2854458" />
+  <CitationRef elementRef="citation_cit_17352497" />
+  <CitationRef elementRef="citation_cit_7852397" />
+  <CitationRef elementRef="citation_cit_12022880" />
+  <CitationRef elementRef="citation_cit_11371200" />
+  <CitationRef elementRef="citation_cit_16297065" />
+  <CitationRef elementRef="citation_cit_19946895" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="AT2G05830" textLabel="AT2G05830" type="GeneProduct">
+      <Xref identifier="Q9ZUG4" dataSource="uniprot" />
+      <Graphics centerX="800.7243041992188" centerY="889.1871948242188" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT2G05830" />
+      <Property key="AlternativeId_Uniprot" value="Q9ZUG4" />
+      <Property key="Product" value="AT2G05830-MONOMER" />
+      <Property key="GeneType" value="ORFs" />
+    </DataNode>
+    <DataNode elementId="AT5G53850" textLabel="AT5G53850" type="GeneProduct">
+      <Xref identifier="AT5G53850" dataSource="TAIR" />
+      <Graphics centerX="553.8650512695312" centerY="996.6583251953125" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT5G53850" />
+      <Property key="Synonym_1" value="DEP1" />
+      <Property key="Product" value="AT5G53850-MONOMER" />
+      <Property key="StartPosition" value="21878223" />
+      <Property key="EndPosition" value="21882199" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+    </DataNode>
+    <DataNode elementId="AT5G53850-MONOMER" textLabel="dehydratase-enolase-phosphatase" type="Protein">
+      <Xref identifier="AT5G53850.5" dataSource="TAIR" />
+      <Graphics centerX="170.6962890625" centerY="381.95477294921875" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, PMN, dreher">DEP1 is a multifunctional enzyme in |FRAME: ORG-5993 &lt;i&gt;Arabidopsis thaliana&lt;/i&gt; col|. Based on functional complementation experiments, it appears to carry out three separate reactions that are catalyzed by a total of two or three individual proteins in other species |CITS: [21540433]|. This is supported by sequence analyses that show that the N-terminal portion of the protein has similarity to known methylthioribulose-1-phosphate dehydratases (|FRAME: R145-RXN 4.2.1.109|) whereas the C-terminal portion of DPE1 resembles the enolase/phosphatases (|FRAME: R82-RXN 5.3.2.5| / |FRAME: R83-RXN 3.1.3.87|) identified in other species |CITS: [21540433]|.</Comment>
+      <Property key="UniqueID" value="AT5G53850-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT5G53850.5" />
+      <Property key="Synonym_1" value="dehydratase-enolase-phosphatase complex 1" />
+      <Property key="MolecularWeightSeq" value="56.5" />
+      <Property key="MolecularWeightKD" value="56.5" />
+      <Property key="Gene" value="AT5G53850" />
+      <Property key="Catalyzes" value="RXN-21714, RXN-21712, RXN-21713" />
+      <Property key="CatalyzesCount" value="3" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_cit_21540433" />
+    </DataNode>
+    <DataNode elementId="MONOMER-12674" textLabel="acireductone dioxygenase subunit" type="Protein" groupRef="CPLX-7209">
+      <Xref identifier="Q338A9" dataSource="uniprot" />
+      <Graphics centerX="1600.0" centerY="906.1676025390625" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="MONOMER-12674" />
+      <Property key="AlternativeId_Uniprot" value="Q338A9" />
+      <Property key="AlternativeId_Pid" value="AAC05511" />
+      <Property key="Gene" value="G-9728" />
+      <Property key="ComponentOf" value="CPLX-7209" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="TAX-4530" />
+    </DataNode>
+    <DataNode elementId="AT2G05830-MONOMER" textLabel="AT2G05830" type="Protein">
+      <Xref identifier="Q9ZUG4" dataSource="uniprot" />
+      <Graphics centerX="1506.3275146484375" centerY="358.9354248046875" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">The MTI1 enzyme in |FRAME: ORG-5993 &lt;i&gt;Arabidopsis thaliana&lt;/i&gt; col| participates in methioine recycling and salvage pathways. Like other enzymes that catalyze this isomerization reaction, MTI1 was originally predicted to be a eukaryotic translation initiation factor eIF-2B family protein. But, functional complementation of a yeast strain deficient in 5-methylthioribose-1-phosphate isomerase actvity demonstrates that MTI1 is capable of catalyzing this reaction (|FRAME: 5.3.1.23-RXN 5.3.1.23|) |CITS: [21540433]|.</Comment>
+      <Property key="UniqueID" value="AT2G05830-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT2G05830.1" />
+      <Property key="AlternativeId_Uniprot" value="Q9ZUG4" />
+      <Property key="Gene" value="AT2G05830" />
+      <Property key="Catalyzes" value="RXN-13272" />
+      <Property key="ProteinType" value="Polypeptides" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_cit_21540433" />
+    </DataNode>
+    <DataNode elementId="MET" textLabel="L-methionine" type="Metabolite">
+      <Xref identifier="FFEARJCKVFRZRR-BYPYZUCNSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1002.8707275390625" centerY="1515.4193115234375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: MET| (met) is one of the proteinogenic amino acids. In addition to its role in proteins, L-methionine is required for a number of important cellular functions, including the initiation of protein synthesis, the methylation of DNA, rRNA and xenobiotics, and the biosynthesis of cysteine, phospholipids and polyamines. In all metzoa |FRAME: MET| is an essential amino acid (an indispensable amino acid that cannot be synthesized &lt;i&gt;de novo&lt;/i&gt;) and must be supplied in the diet.</Comment>
+      <Property key="UniqueID" value="MET" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001532529" />
+      <Property key="AlternativeId_Mediadb" value="compounds/71/" />
+      <Property key="AlternativeId_Metanetx" value="MNXM61" />
+      <Property key="AlternativeId_Refmet" value="Methionine" />
+      <Property key="AlternativeId_Bigg" value="met__L" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57844" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00696" />
+      <Property key="AlternativeId_Chebi" value="57844" />
+      <Property key="AlternativeId_Pubchem" value="6992087" />
+      <Property key="AlternativeId_LigandCpd" value="C00073" />
+      <Property key="AlternativeId_Cas" value="63-68-3" />
+      <Property key="Synonym_1" value="M" />
+      <Property key="Synonym_2" value="methionine" />
+      <Property key="Synonym_3" value="L-met" />
+      <Property key="MolecularWeight" value="149.207" />
+      <Property key="MonoisotopicWeight" value="149.0510492925" />
+      <Property key="ChemicalFormula" value="(C 5)(H 11)(N 1)(O 2)(S 1)" />
+      <Property key="InChI" value="InChI=1S/C5H11NO2S/c1-9-3-2-4(6)5(7)8/h4H,2-3,6H2,1H3,(H,7,8)/t4-/m0/s1" />
+      <Property key="InChIKey" value="InChIKey=FFEARJCKVFRZRR-BYPYZUCNSA-N" />
+      <Property key="SMILES" value="CSCC[C@H]([NH3+])C([O-])=O" />
+      <Property key="GibbsFreeEnergy" value="37.072315" />
+      <Property key="CompoundType" value="Amino-Acids-20, Non-polar-amino-acids, L-Amino-Acids" />
+      <Property key="AbbreviatedName" value="met" />
+    </DataNode>
+    <DataNode elementId="CPD-85" textLabel="1,2-dihydroxy-5-(methylsulfanyl)pent-1-en-3-one" type="Metabolite">
+      <Xref identifier="CILXJJLQPTUUSS-XQRVVYSFSA-M" dataSource="InChIKey" />
+      <Graphics centerX="824.8077392578125" centerY="807.488525390625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>At physiological pH, this molecule, 1,2-dihydroxy-3-keto-5-methylthiopentene, is a monoanion, 1,2-dihydroxy-3-keto-5-methylthiopentene anion. 1,2-dihydroxy-3-keto-5-methylthiopentene anion, an aci-reductone, is believed to be an unstable intermediate in the methionine salvage pathway in |FRAME:TAX-573|. Although this compound is not synonymous with the pentane, 1,2-dihydroxy-3-keto-5-methylthiopentane, the database should keep this name as a synonym since a previous database version of the methionine salvage pathway and the abstract in |CITS: [7852397]| referred to this intermediate as the pentane. Reference to this intermediate as a pentane in the abstract of |CITS: [7852397]| was most likely a typo |CITS: [pochapsky02]|, which was then promulgated into the pathway of the database. The pathway has been corrected since then.</Comment>
+      <Property key="UniqueID" value="CPD-85" />
+      <Property key="AlternativeId_Zinc" value="ZINC000100079140" />
+      <Property key="AlternativeId_ReactomeCpd" value="1237155" />
+      <Property key="AlternativeId_Seed" value="cpd11255" />
+      <Property key="AlternativeId_Metanetx" value="MNXM494" />
+      <Property key="AlternativeId_Refmet" value="1,2-Dihydroxy-3-keto-5-methylthiopentene" />
+      <Property key="AlternativeId_Hmdb" value="HMDB12134" />
+      <Property key="AlternativeId_Chebi" value="58795" />
+      <Property key="AlternativeId_Pubchem" value="44229177" />
+      <Property key="AlternativeId_LigandCpd" value="C15606" />
+      <Property key="Synonym_1" value="1,2-dihydroxy-3-keto-5-methylthiopentene anion" />
+      <Property key="Synonym_2" value="1,2-dihydroxy-3-keto-5-methylthiopentane" />
+      <Property key="Synonym_3" value="1,2-dihydroxy-3-keto-5-methylthiopentene" />
+      <Property key="Synonym_4" value="acireductone" />
+      <Property key="Synonym_5" value="1,2-dihydroxy-5-(methylthio)pent-1-en-3-one" />
+      <Property key="MolecularWeight" value="161.195" />
+      <Property key="MonoisotopicWeight" value="162.03506487730002" />
+      <Property key="ChemicalFormula" value="(C 6)(H 9)(O 3)(S 1)" />
+      <Property key="InChI" value="InChI=1S/C6H10O3S/c1-10-3-2-5(8)6(9)4-7/h4,7,9H,2-3H2,1H3/p-1/b6-4-" />
+      <Property key="InChIKey" value="InChIKey=CILXJJLQPTUUSS-XQRVVYSFSA-M" />
+      <Property key="SMILES" value="CSCCC(C(\[O-])=C\O)=O" />
+      <Property key="GibbsFreeEnergy" value="24.738035" />
+      <Property key="CompoundType" value="Compounds" />
+      <CitationRef elementRef="citation_cit_14551435" />
+      <CitationRef elementRef="citation__11371200_" />
+      <CitationRef elementRef="citation__7852397_" />
+      <CitationRef elementRef="citation__9880484_" />
+      <CitationRef elementRef="citation_cit_7852397" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="611.5606079101562" centerY="460.34515380859375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicWeight" value="1.0078250321" />
+      <Property key="InChI" value="InChI=1S/p+1" />
+      <Property key="InChIKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="[H+]" />
+      <Property key="GibbsFreeEnergy" value="0.42906138" />
+      <Property key="CompoundType" value="Subatomic-Particles, Monovalent-Inorganic-Cations" />
+    </DataNode>
+    <DataNode elementId="FORMATE" textLabel="formate" type="Metabolite">
+      <Xref identifier="BDAGIHXWWSANSR-UHFFFAOYSA-M" dataSource="InChIKey" />
+      <Graphics centerX="962.61669921875" centerY="491.9170837402344" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">Formate is a one-carbon molecule that was first isolated from distillation of ant bodies, and it was subsequently named using the Latin word for ant, formica |CITS: [Stumper21]|. Ants and other insects accumulate formate in secretory glands and release their content as a mechanism of defense. Formate serves as an intermediate in one-carbon (1C) metabolism in all organisms. It is also a key metabolite for many bacterial and archaeal species. Depending on the physiological conditions, formate serves various roles, such as to act as a reductant in anaerobic respiration, be oxidized aerobically, be secreted, or be converted to hydrogen and CO&lt;sub&gt;2&lt;/sub&gt;. Formate is particularly common in anaerobic habitats, produced as a fermentation product of some species and used as a growth substrate for others. It is crucial compound in many syntrophic associations, in which organisms live close to the thermodynamic limit (for example, sulfate-reducing bacteria and methanogens) |CITS: [18708519][20844539]|. Its redox potential is low (around -420 mV), which allows it to donate an electron for the reduction of fumarate. In eukaryotes formate is produced from a variety of nutrients, and can be fed into a number of biosynthetic pathways. A common source of formate is the catabolism of serine or glycine (via tetrahydrofolate). Another important source is formaldehyde, which is formed by many demethylation enzymes and as a degradation product of methanol. Formate is also produced during sterol synthesis, polyamine synthesis, and tryptophan degradation, and is used during purine synthesis, thymidylate synthesis, and as the source of carbon for methylation reactions via folate and methionine (formate can be assimilated into folate by |FRAME: EC-6.3.4.3| and its carbon transferred to methionine by |FRAME: EC-2.1.1.13|. Methionine is then converted to |FRAME: S-ADENOSYLMETHIONINE|, the most common methyl group donor) |CITS: [31402327]|.</Comment>
+      <Property key="UniqueID" value="FORMATE" />
+      <Property key="AlternativeId_Refmet" value="Formic acid" />
+      <Property key="AlternativeId_Bigg" value="for" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15740" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00142" />
+      <Property key="AlternativeId_Chemspider" value="277" />
+      <Property key="AlternativeId_Chebi" value="15740" />
+      <Property key="AlternativeId_Pubchem" value="283" />
+      <Property key="AlternativeId_LigandCpd" value="C00058" />
+      <Property key="AlternativeId_Cas" value="64-18-6" />
+      <Property key="Synonym_1" value="formic acid" />
+      <Property key="Synonym_2" value="methanoate" />
+      <Property key="MolecularWeight" value="45.018" />
+      <Property key="MonoisotopicWeight" value="46.0054793084" />
+      <Property key="ChemicalFormula" value="(C 1)(H 1)(O 2)" />
+      <Property key="InChI" value="InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)/p-1" />
+      <Property key="InChIKey" value="InChIKey=BDAGIHXWWSANSR-UHFFFAOYSA-M" />
+      <Property key="SMILES" value="C([O-])=O" />
+      <Property key="GibbsFreeEnergy" value="-73.93095" />
+      <Property key="CompoundType" value="Short-Chain-Carboxylates" />
+      <CitationRef elementRef="citation_cit_31402327" />
+    </DataNode>
+    <DataNode elementId="_2-KETOGLUTARATE" textLabel="2-oxoglutarate" type="Metabolite">
+      <Xref identifier="KPGXRSRHYNQIFN-UHFFFAOYSA-L" dataSource="InChIKey" />
+      <Graphics centerX="100.0" centerY="798.9148559570312" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="2-KETOGLUTARATE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001532519" />
+      <Property key="AlternativeId_Seed" value="cpd00024" />
+      <Property key="AlternativeId_Metanetx" value="MNXM20" />
+      <Property key="AlternativeId_Refmet" value="Oxoglutaric acid" />
+      <Property key="AlternativeId_Bigg" value="akg" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC16810" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00208" />
+      <Property key="AlternativeId_Chemspider" value="144236" />
+      <Property key="AlternativeId_Chebi" value="16810" />
+      <Property key="AlternativeId_Pubchem" value="164533" />
+      <Property key="AlternativeId_Knapsack" value="C00000769" />
+      <Property key="AlternativeId_LigandCpd" value="C00026" />
+      <Property key="AlternativeId_Cas" value="328-50-7" />
+      <Property key="Synonym_1" value="ketoglutarate" />
+      <Property key="Synonym_2" value="&amp;alpha;-ketoglutarate" />
+      <Property key="Synonym_3" value="2-oxoglutaric acid" />
+      <Property key="Synonym_4" value="&amp;alpha;-ketoglutaric acid" />
+      <Property key="Synonym_5" value="&amp;alpha;-oxoglutarate" />
+      <Property key="Synonym_6" value="2-ketoglutaric acid" />
+      <Property key="Synonym_7" value="2-ketoglutarate" />
+      <Property key="Synonym_8" value="2-oxopentanedionic acid" />
+      <Property key="Synonym_9" value="2-oxopentanedionate" />
+      <Property key="Synonym_10" value="a-ketoglutaric acid" />
+      <Property key="MolecularWeight" value="144.084" />
+      <Property key="MonoisotopicWeight" value="146.0215233031" />
+      <Property key="ChemicalFormula" value="(C 5)(H 4)(O 5)" />
+      <Property key="InChI" value="InChI=1S/C5H6O5/c6-3(5(9)10)1-2-4(7)8/h1-2H2,(H,7,8)(H,9,10)/p-2" />
+      <Property key="InChIKey" value="InChIKey=KPGXRSRHYNQIFN-UHFFFAOYSA-L" />
+      <Property key="SMILES" value="C(CC([O-])=O)C(=O)C([O-])=O" />
+      <Property key="GibbsFreeEnergy" value="-149.76376" />
+      <Property key="CompoundType" value="2-Oxo-carboxylates, Alpha-omega-dicarboxylates" />
+      <CitationRef elementRef="citation_cit_18493048" />
+    </DataNode>
+    <DataNode elementId="OXYGEN-MOLECULE" textLabel="dioxygen" type="Metabolite">
+      <Xref identifier="MYMOFIZGZYHOMD-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="801.3489990234375" centerY="707.9813842773438" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="OXYGEN-MOLECULE" />
+      <Property key="AlternativeId_Metanetx" value="MNXM4" />
+      <Property key="AlternativeId_Seed" value="cpd00007" />
+      <Property key="AlternativeId_Bigg" value="33493" />
+      <Property key="AlternativeId_Pubchem" value="977" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15379" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01377" />
+      <Property key="AlternativeId_Chemspider" value="952" />
+      <Property key="AlternativeId_Chebi" value="15379" />
+      <Property key="AlternativeId_LigandCpd" value="C00007" />
+      <Property key="AlternativeId_Cas" value="7782-44-7" />
+      <Property key="Synonym_1" value="molecular oxygen" />
+      <Property key="Synonym_2" value="oxygen" />
+      <Property key="Synonym_3" value="oxygen molecule" />
+      <Property key="MolecularWeight" value="31.999" />
+      <Property key="MonoisotopicWeight" value="31.9898292442" />
+      <Property key="InChI" value="InChI=1S/O2/c1-2" />
+      <Property key="InChIKey" value="InChIKey=MYMOFIZGZYHOMD-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="O=O" />
+      <Property key="GibbsFreeEnergy" value="3.92" />
+      <Property key="CompoundType" value="Inorganic-Compounds" />
+      <Property key="AbbreviatedName" value="O&lt;sub&gt;2&lt;/sub&gt;" />
+      <Property key="SystematicName" value="dioxygen" />
+    </DataNode>
+    <DataNode elementId="WATER" textLabel="H₂O" type="Metabolite">
+      <Xref identifier="XLYOFNOQVPJJNP-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="175.51808166503906" centerY="1216.6214599609375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="WATER" />
+      <Property key="AlternativeId_Bigg" value="33474" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15377" />
+      <Property key="AlternativeId_Hmdb" value="HMDB02111" />
+      <Property key="AlternativeId_Chemspider" value="937" />
+      <Property key="AlternativeId_Chebi" value="15377" />
+      <Property key="AlternativeId_Pubchem" value="962" />
+      <Property key="AlternativeId_LigandCpd" value="C00001" />
+      <Property key="AlternativeId_Cas" value="7732-18-5" />
+      <Property key="Synonym_1" value="H&lt;sub&gt;2&lt;/sub&gt;0" />
+      <Property key="Synonym_2" value="H2O" />
+      <Property key="Synonym_3" value="H20" />
+      <Property key="Synonym_4" value="hydrogen oxide" />
+      <Property key="Synonym_5" value="water" />
+      <Property key="MolecularWeight" value="18.015" />
+      <Property key="MonoisotopicWeight" value="18.0105646863" />
+      <Property key="ChemicalFormula" value="(H 2)(O 1)" />
+      <Property key="InChI" value="InChI=1S/H2O/h1H2" />
+      <Property key="InChIKey" value="InChIKey=XLYOFNOQVPJJNP-UHFFFAOYSA-N" />
+      <Property key="SMILES" value="O" />
+      <Property key="GibbsFreeEnergy" value="-36.144756" />
+      <Property key="CompoundType" value="Compounds" />
+    </DataNode>
+    <DataNode elementId="CPD-444" textLabel="S-methyl-5-thio-α-D-ribose 1-phosphate" type="Metabolite">
+      <Xref identifier="JTFITTQBRJDSTL-KVTDHHQDSA-L" dataSource="InChIKey" />
+      <Graphics centerX="520.2321166992188" centerY="1550.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-444" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004096345" />
+      <Property key="AlternativeId_ReactomeCpd" value="1237165" />
+      <Property key="AlternativeId_Metanetx" value="MNXM407" />
+      <Property key="AlternativeId_Pubchem" value="45266677" />
+      <Property key="AlternativeId_Bigg" value="5mdr1p" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC58533" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00963" />
+      <Property key="AlternativeId_Chebi" value="58533" />
+      <Property key="AlternativeId_LigandCpd" value="C04188" />
+      <Property key="Synonym_1" value="5-methylthioribose-1-phosphate" />
+      <Property key="Synonym_2" value="5-methylthio-D-ribose-1-phosphate" />
+      <Property key="Synonym_3" value="1-phosphomethylthioribose" />
+      <Property key="Synonym_4" value="1-phospho-5-S-methylthioribose" />
+      <Property key="Synonym_5" value="1-PMTR" />
+      <Property key="Synonym_6" value="1-phospho-5-S-methylthio-&amp;alpha;-D-ribofuranoside" />
+      <Property key="Synonym_7" value="&lt;i&gt;S&lt;/i&gt;-methyl-5-thio-D-ribose 1-phosphate" />
+      <Property key="MolecularWeight" value="258.182" />
+      <Property key="MonoisotopicWeight" value="260.011959972" />
+      <Property key="ChemicalFormula" value="(C 6)(H 11)(O 7)(P 1)(S 1)" />
+      <Property key="InChI" value="InChI=1S/C6H13O7PS/c1-15-2-3-4(7)5(8)6(12-3)13-14(9,10)11/h3-8H,2H2,1H3,(H2,9,10,11)/p-2/t3-,4-,5-,6-/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=JTFITTQBRJDSTL-KVTDHHQDSA-L" />
+      <Property key="SMILES" value="CSC[C@H]1(O[C@H](OP([O-])(=O)[O-])[C@@H]([C@@H]1O)O)" />
+      <Property key="GibbsFreeEnergy" value="-235.76593" />
+      <Property key="CompoundType" value="Modified-Ribonucleosides" />
+      <Property key="AbbreviatedName" value="5-MTR-1-P" />
+    </DataNode>
+    <DataNode elementId="_2-HYDROXY-3-KETO-5-METHYLTHIO-1-PHOSPHOP" textLabel="2-hydroxy-5-(methylsulfanyl)-3-oxopent-1-enyl 1-phosphate" type="Metabolite">
+      <Xref identifier="YIEMFVNCENFBSD-XQRVVYSFSA-K" dataSource="InChIKey" />
+      <Graphics centerX="574.3466796875" centerY="50.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="2-HYDROXY-3-KETO-5-METHYLTHIO-1-PHOSPHOP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000030729487" />
+      <Property key="AlternativeId_Seed" value="cpd11296" />
+      <Property key="AlternativeId_Metanetx" value="MNXM409" />
+      <Property key="AlternativeId_Chebi" value="50605" />
+      <Property key="AlternativeId_Pubchem" value="44229144" />
+      <Property key="AlternativeId_LigandCpd" value="C15651" />
+      <Property key="Synonym_1" value="1-phosphoryloxyl-2-hydroxy-3-keto-5-methylthiopentene" />
+      <Property key="Synonym_2" value="2-hydroxy-3-keto-5-methylthio-1-phosphopentene" />
+      <Property key="Synonym_3" value="2-hydroxy-5-(methylthio)-3-oxopent-1-en-1-yl 1-phosphate" />
+      <Property key="MolecularWeight" value="239.159" />
+      <Property key="MonoisotopicWeight" value="242.0013952857" />
+      <Property key="ChemicalFormula" value="(C 6)(H 8)(O 6)(P 1)(S 1)" />
+      <Property key="InChI" value="InChI=1S/C6H11O6PS/c1-14-3-2-5(7)6(8)4-12-13(9,10)11/h4,8H,2-3H2,1H3,(H2,9,10,11)/p-3/b6-4-" />
+      <Property key="InChIKey" value="InChIKey=YIEMFVNCENFBSD-XQRVVYSFSA-K" />
+      <Property key="SMILES" value="CSCCC(C(\[O-])=C\OP([O-])(=O)[O-])=O" />
+      <Property key="GibbsFreeEnergy" value="-200.52959" />
+      <Property key="CompoundType" value="Compounds" />
+      <CitationRef elementRef="citation_cit_14551435" />
+    </DataNode>
+    <DataNode elementId="_2-KETO-GLUTARAMATE" textLabel="2-oxoglutaramate" type="Metabolite">
+      <Xref identifier="COJBGNAUUSNXHX-UHFFFAOYSA-M" dataSource="InChIKey" />
+      <Graphics centerX="1402.71142578125" centerY="1315.7215576171875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="2-KETO-GLUTARAMATE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001532789" />
+      <Property key="AlternativeId_ReactomeCpd" value="893598" />
+      <Property key="AlternativeId_Seed" value="cpd00695" />
+      <Property key="AlternativeId_Metanetx" value="MNXM575" />
+      <Property key="AlternativeId_Refmet" value="2-Keto-glutaramic acid" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC16769" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01552" />
+      <Property key="AlternativeId_Chemspider" value="134184" />
+      <Property key="AlternativeId_Pubchem" value="152239" />
+      <Property key="AlternativeId_Chebi" value="16769" />
+      <Property key="AlternativeId_LigandCpd" value="C00940" />
+      <Property key="AlternativeId_Cas" value="18465-19-5" />
+      <Property key="Synonym_1" value="2-keto-glutaramate" />
+      <Property key="MolecularWeight" value="144.107" />
+      <Property key="MonoisotopicWeight" value="145.0375077183" />
+      <Property key="ChemicalFormula" value="(C 5)(H 6)(N 1)(O 4)" />
+      <Property key="InChI" value="InChI=1S/C5H7NO4/c6-4(8)2-1-3(7)5(9)10/h1-2H2,(H2,6,8)(H,9,10)/p-1" />
+      <Property key="InChIKey" value="InChIKey=COJBGNAUUSNXHX-UHFFFAOYSA-M" />
+      <Property key="SMILES" value="C(CC(N)=O)C(=O)C(=O)[O-]" />
+      <Property key="GibbsFreeEnergy" value="-85.145355" />
+      <Property key="CompoundType" value="2-Oxo-carboxylates, DICARBOXYLIC-ACID-MONOAMIDES" />
+    </DataNode>
+    <DataNode elementId="GLN" textLabel="L-glutamine" type="Metabolite">
+      <Xref identifier="ZDXPYRJPNDTMRX-VKHMYHEASA-N" dataSource="InChIKey" />
+      <Graphics centerX="960.400634765625" centerY="795.7971801757812" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="GLN" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001532526" />
+      <Property key="AlternativeId_Mediadb" value="compounds/62/" />
+      <Property key="AlternativeId_Metanetx" value="MNXM37" />
+      <Property key="AlternativeId_Refmet" value="Glutamine" />
+      <Property key="AlternativeId_Bigg" value="gln__L" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC58359" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00641" />
+      <Property key="AlternativeId_Chebi" value="58359" />
+      <Property key="AlternativeId_Pubchem" value="6992086" />
+      <Property key="AlternativeId_LigandCpd" value="C00064" />
+      <Property key="AlternativeId_Cas" value="56-85-9" />
+      <Property key="Synonym_1" value="Q" />
+      <Property key="Synonym_2" value="proglumide" />
+      <Property key="Synonym_3" value="glum" />
+      <Property key="Synonym_4" value="glutamine" />
+      <Property key="Synonym_5" value="glumin" />
+      <Property key="Synonym_6" value="2-aminoglutaramic acid" />
+      <Property key="Synonym_7" value="glutamic acid 5-amide" />
+      <Property key="Synonym_8" value="L-gln" />
+      <Property key="MolecularWeight" value="146.146" />
+      <Property key="MonoisotopicWeight" value="146.0691421977" />
+      <Property key="ChemicalFormula" value="(C 5)(H 10)(N 2)(O 3)" />
+      <Property key="InChI" value="InChI=1S/C5H10N2O3/c6-3(5(9)10)1-2-4(7)8/h3H,1-2,6H2,(H2,7,8)(H,9,10)/t3-/m0/s1" />
+      <Property key="InChIKey" value="InChIKey=ZDXPYRJPNDTMRX-VKHMYHEASA-N" />
+      <Property key="SMILES" value="C(=O)(N)CC[C@H]([NH3+])C([O-])=O" />
+      <Property key="GibbsFreeEnergy" value="-23.488802" />
+      <Property key="CompoundType" value="Uncharged-polar-amino-acids, Amino-Acids-20, Neutral-Amino-Acids, L-Amino-Acids" />
+      <Property key="AbbreviatedName" value="gln" />
+      <CitationRef elementRef="citation_cit_18493048" />
+      <CitationRef elementRef="citation_cit_16306140" />
+    </DataNode>
+    <DataNode elementId="Pi" textLabel="phosphate" type="Metabolite">
+      <Xref identifier="NBIIXXVUZAFLBC-UHFFFAOYSA-L" dataSource="InChIKey" />
+      <Graphics centerX="582.3114013671875" centerY="749.09423828125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">The most abundant form of the phosphate ion at pH 7.3 is hydrogenphosphate. To simplify the presentation of reactions taking place at physiological pH, MetaCyc does not distinguish between the two forms, and uses the name &quot;phosphate&quot; even though the structure shown is that of hydrogenphosphate.</Comment>
+      <Property key="UniqueID" value="Pi" />
+      <Property key="AlternativeId_Refmet" value="Phosphoric acid" />
+      <Property key="AlternativeId_Bigg" value="pi" />
+      <Property key="AlternativeId_Pubchem" value="3681305" />
+      <Property key="AlternativeId_Chebi" value="43474" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC43474" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00973" />
+      <Property key="AlternativeId_Knapsack" value="C00007408" />
+      <Property key="AlternativeId_Cas" value="14265-44-2" />
+      <Property key="Synonym_1" value="inorganic phosphate" />
+      <Property key="Synonym_2" value="phosphate-inorganic" />
+      <Property key="Synonym_3" value="Pi" />
+      <Property key="Synonym_4" value="orthophosphate" />
+      <Property key="Synonym_5" value="PO&lt;SUB&gt;4&lt;/SUB&gt;&lt;SUP&gt;3-&lt;/SUP&gt;" />
+      <Property key="Synonym_6" value="HPO&lt;SUB&gt;4&lt;/SUB&gt;&lt;SUP&gt;2-&lt;/SUP&gt;" />
+      <Property key="Synonym_7" value="HPO&lt;SUB&gt;4&lt;/SUB&gt;&lt;SUP&gt;-2&lt;/SUP&gt;" />
+      <Property key="Synonym_8" value="hydrogenphosphate" />
+      <Property key="MolecularWeight" value="95.979" />
+      <Property key="MonoisotopicWeight" value="97.9768950947" />
+      <Property key="ChemicalFormula" value="(H 1)(O 4)(P 1)" />
+      <Property key="InChI" value="InChI=1S/H3O4P/c1-5(2,3)4/h(H3,1,2,3,4)/p-2" />
+      <Property key="InChIKey" value="InChIKey=NBIIXXVUZAFLBC-UHFFFAOYSA-L" />
+      <Property key="SMILES" value="[O-]P(=O)(O)[O-]" />
+      <Property key="GibbsFreeEnergy" value="-252.94714" />
+      <Property key="CompoundType" value="Phosphates" />
+      <CitationRef elementRef="citation_cit_18493048" />
+    </DataNode>
+    <DataNode elementId="CPD-8999" textLabel="5-(methylsulfanyl)-2,3-dioxopentyl 1-phosphate" type="Metabolite">
+      <Xref identifier="HKEAOVFNWRDVAJ-UHFFFAOYSA-L" dataSource="InChIKey" />
+      <Graphics centerX="1240.4542236328125" centerY="691.2504272460938" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-8999" />
+      <Property key="AlternativeId_Zinc" value="ZINC000003869224" />
+      <Property key="AlternativeId_ReactomeCpd" value="1237176" />
+      <Property key="AlternativeId_Seed" value="cpd11295" />
+      <Property key="AlternativeId_Metanetx" value="MNXM162358" />
+      <Property key="AlternativeId_Bigg" value="dkmpp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC58828" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59620" />
+      <Property key="AlternativeId_Chebi" value="58828" />
+      <Property key="AlternativeId_Pubchem" value="25244990" />
+      <Property key="AlternativeId_LigandCpd" value="C15650" />
+      <Property key="Synonym_1" value="1-phosphoryloxy-2,3-diketo-5-methylthiopentane" />
+      <Property key="Synonym_2" value="1-phospho-2,3-diketo-5-methylthiopentane" />
+      <Property key="Synonym_3" value="DKM-1-P" />
+      <Property key="Synonym_4" value="2,3-diketo-5-methylthio 1-phosphopentane" />
+      <Property key="Synonym_5" value="2,3-diketo-5-methylthiopentyl 1-phosphate" />
+      <Property key="Synonym_6" value="5-(methylsulfanyl)-2,3-dioxopentyl phosphate" />
+      <Property key="Synonym_7" value="5-methylthio-1-(phosphonooxy)pentane-2,3-dione" />
+      <Property key="Synonym_8" value="5-(methylthio)-2,3-dioxopentyl phosphate" />
+      <Property key="Synonym_9" value="5-(methylthio)-2,3-dioxopentyl 1-phosphate" />
+      <Property key="MolecularWeight" value="240.167" />
+      <Property key="MonoisotopicWeight" value="242.0013952857" />
+      <Property key="ChemicalFormula" value="(C 6)(H 9)(O 6)(P 1)(S 1)" />
+      <Property key="InChI" value="InChI=1S/C6H11O6PS/c1-14-3-2-5(7)6(8)4-12-13(9,10)11/h2-4H2,1H3,(H2,9,10,11)/p-2" />
+      <Property key="InChIKey" value="InChIKey=HKEAOVFNWRDVAJ-UHFFFAOYSA-L" />
+      <Property key="SMILES" value="CSCCC(=O)C(=O)COP([O-])(=O)[O-]" />
+      <Property key="GibbsFreeEnergy" value="-207.16814" />
+      <Property key="CompoundType" value="Compounds" />
+    </DataNode>
+    <DataNode elementId="CPD-479" textLabel="4-(methylsulfanyl)-2-oxobutanoate" type="Metabolite">
+      <Xref identifier="SXFSQZDSUWACKX-UHFFFAOYSA-M" dataSource="InChIKey" />
+      <Graphics centerX="1062.6973876953125" centerY="1026.698974609375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-479" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001532883" />
+      <Property key="AlternativeId_ReactomeCpd" value="1237122" />
+      <Property key="AlternativeId_Seed" value="cpd00869" />
+      <Property key="AlternativeId_Metanetx" value="MNXM276" />
+      <Property key="AlternativeId_Refmet" value="2-Oxo-4-methylthiobutanoic acid" />
+      <Property key="AlternativeId_Bigg" value="2kmb" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC16723" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01553" />
+      <Property key="AlternativeId_Chemspider" value="3776616" />
+      <Property key="AlternativeId_Pubchem" value="4584184" />
+      <Property key="AlternativeId_LigandCpd" value="C01180" />
+      <Property key="AlternativeId_Chebi" value="16723" />
+      <Property key="Synonym_1" value="2-keto-methyl-thio-butyrate" />
+      <Property key="Synonym_2" value="2-keto-4-methylthiobutyrate" />
+      <Property key="Synonym_3" value="4-methylthio-2-oxobutanoate" />
+      <Property key="Synonym_4" value="&amp;alpha;-keto-4-methylthiobutyrate" />
+      <Property key="Synonym_5" value="4-methylthio-2-ketobutyrate" />
+      <Property key="Synonym_6" value="4-methylthio-2-ketobutanoate" />
+      <Property key="Synonym_7" value="4-methylthio-2-oxobutyrate" />
+      <Property key="Synonym_8" value="2-ketomethiobutyrate" />
+      <Property key="Synonym_9" value="KMTB" />
+      <Property key="Synonym_10" value="&amp;alpha;-ketomethiobutyrate" />
+      <Property key="Synonym_11" value="2-keto-4-methylthiobutyric acid" />
+      <Property key="Synonym_12" value="&amp;alpha;-ketomethiobutyric acid" />
+      <Property key="Synonym_13" value="&amp;alpha;-keto-&amp;gamma;-methylthiobutyrate" />
+      <Property key="Synonym_14" value="&amp;alpha;-keto-&amp;gamma;-methylthiobutyric acid" />
+      <Property key="Synonym_15" value="2-oxo-4-methylthiobutanoic acid" />
+      <Property key="Synonym_16" value="2-oxomethionine" />
+      <Property key="Synonym_17" value="2-keto-4-methylthiobutanoate" />
+      <Property key="Synonym_18" value="4-(methylthio)-2-oxobutanoate" />
+      <Property key="Synonym_19" value="ketomethiobutyrate" />
+      <Property key="MolecularWeight" value="147.168" />
+      <Property key="MonoisotopicWeight" value="148.0194148131" />
+      <Property key="ChemicalFormula" value="(C 5)(H 7)(O 3)(S 1)" />
+      <Property key="InChI" value="InChI=1S/C5H8O3S/c1-9-3-2-4(6)5(7)8/h2-3H2,1H3,(H,7,8)/p-1" />
+      <Property key="InChIKey" value="InChIKey=SXFSQZDSUWACKX-UHFFFAOYSA-M" />
+      <Property key="SMILES" value="CSCCC(C([O-])=O)=O" />
+      <Property key="GibbsFreeEnergy" value="-29.09422" />
+      <Property key="CompoundType" value="CPD-19485" />
+    </DataNode>
+    <DataNode elementId="AMMONIUM" textLabel="ammonium" type="Metabolite">
+      <Xref identifier="QGZKDVFQNNGYKY-UHFFFAOYSA-O" dataSource="InChIKey" />
+      <Graphics centerX="788.2023315429688" centerY="1160.79931640625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AMMONIUM" />
+      <Property key="AlternativeId_Mediadb" value="compounds/1211/" />
+      <Property key="AlternativeId_Bigg" value="nh4" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC28938" />
+      <Property key="AlternativeId_Hmdb" value="HMDB41827" />
+      <Property key="AlternativeId_Chebi" value="28938" />
+      <Property key="AlternativeId_Chemspider" value="218" />
+      <Property key="AlternativeId_Pubchem" value="223" />
+      <Property key="AlternativeId_LigandCpd" value="C01342" />
+      <Property key="AlternativeId_Cas" value="14798-03-9" />
+      <Property key="Synonym_1" value="NH&lt;SUB&gt;4&lt;/SUB&gt;&lt;SUP&gt;+&lt;/SUP&gt;" />
+      <Property key="MolecularWeight" value="18.038" />
+      <Property key="MonoisotopicWeight" value="18.0343741336" />
+      <Property key="ChemicalFormula" value="(H 4)(N 1)" />
+      <Property key="InChI" value="InChI=1S/H3N/h1H3/p+1" />
+      <Property key="InChIKey" value="InChIKey=QGZKDVFQNNGYKY-UHFFFAOYSA-O" />
+      <Property key="SMILES" value="[NH4+]" />
+      <Property key="GibbsFreeEnergy" value="21.812426" />
+      <Property key="CompoundType" value="Monovalent-Inorganic-Cations" />
+    </DataNode>
+    <DataNode elementId="CPD-1063" textLabel="S-methyl-5-thio-D-ribulose 1-phosphate" type="Metabolite">
+      <Xref identifier="CNSJRYUMVMWNMC-RITPCOANSA-L" dataSource="InChIKey" />
+      <Graphics centerX="1069.8114013671875" centerY="88.68399047851562" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-1063" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001529999" />
+      <Property key="AlternativeId_ReactomeCpd" value="1237107" />
+      <Property key="AlternativeId_Seed" value="cpd02791" />
+      <Property key="AlternativeId_Metanetx" value="MNXM522" />
+      <Property key="AlternativeId_Bigg" value="5mdru1p" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC58548" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01299" />
+      <Property key="AlternativeId_Chemspider" value="19951215" />
+      <Property key="AlternativeId_Chebi" value="58548" />
+      <Property key="AlternativeId_Pubchem" value="23615271" />
+      <Property key="AlternativeId_LigandCpd" value="C04582" />
+      <Property key="Synonym_1" value="5-methylthio-5-deoxy-D-ribulose 1-phosphate" />
+      <Property key="Synonym_2" value="1-phosphomethylthioribulose" />
+      <Property key="Synonym_3" value="methylthioribulose 1-phosphate" />
+      <Property key="Synonym_4" value="MTRu-1-P" />
+      <Property key="Synonym_5" value="1PMT-ribulose" />
+      <Property key="Synonym_6" value="1-phospho-5-S-methylthioribulose" />
+      <Property key="Synonym_7" value="5-(methylthio)ribulose 1-phosphate" />
+      <Property key="MolecularWeight" value="258.182" />
+      <Property key="MonoisotopicWeight" value="260.011959972" />
+      <Property key="ChemicalFormula" value="(C 6)(H 11)(O 7)(P 1)(S 1)" />
+      <Property key="InChI" value="InChI=1S/C6H13O7PS/c1-15-3-5(8)6(9)4(7)2-13-14(10,11)12/h5-6,8-9H,2-3H2,1H3,(H2,10,11,12)/p-2/t5-,6+/m1/s1" />
+      <Property key="InChIKey" value="InChIKey=CNSJRYUMVMWNMC-RITPCOANSA-L" />
+      <Property key="SMILES" value="CSC[C@@H](O)[C@@H](O)C(=O)COP([O-])(=O)[O-]" />
+      <Property key="GibbsFreeEnergy" value="-235.14592" />
+      <Property key="CompoundType" value="Compounds" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="845.7243041992188" y="889.1871948242188" elementRef="AT2G05830" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="1461.3275146484375" y="358.9354248046875" elementRef="AT2G05830-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_1_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_1_0_0" x="598.8650512695312" y="996.6583251953125" elementRef="AT5G53850" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_1_0_0" arrowHead="TranscriptionTranslation" x="125.6962890625" y="381.95477294921875" elementRef="AT5G53850-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-13072">
+      <Xref identifier="EC-3.5.1.3" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-13072_start" x="1447.71142578125" y="1315.7215576171875" elementRef="_2-KETO-GLUTARAMATE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-13072_end" arrowHead="Conversion" x="55.0" y="798.9148559570312" elementRef="_2-KETOGLUTARATE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-13072_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-13072" />
+      <Property key="EC_Number_1" value="EC-3.5.1.3" />
+      <Property key="EC_Number_2" value="EC-3.5.1.111" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-4361" />
+      <Property key="ReactionEquation" value="2-KETO-GLUTARAMATE + WATER =&gt; 2-KETOGLUTARATE + AMMONIUM" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="Synonym_1" value="2-ketoglutaramate amidase" />
+      <Property key="ReactionTypes" value="Chemical-Reactions, Small-Molecule-Reactions" />
+    </Interaction>
+    <Interaction elementId="RXN-13072_anchor_reactant_1">
+      <Xref identifier="EC-3.5.1.3" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-13072_anchor_reactant_start_1" x="220.51808166503906" y="1216.6214599609375" elementRef="WATER" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-13072_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-13072_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-13072_anchor_product_1">
+      <Xref identifier="EC-3.5.1.3" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-13072_anchor_product_start_1" x="0" y="0" elementRef="RXN-13072_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-13072_anchor_product_end_1" arrowHead="Conversion" x="743.2023315429688" y="1160.79931640625" elementRef="AMMONIUM" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-15650">
+      <Xref identifier="EC-2.6.1.117" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-15650_start" x="1107.6973876953125" y="1026.698974609375" elementRef="CPD-479" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-15650_end" arrowHead="Conversion" x="1357.71142578125" y="1315.7215576171875" elementRef="_2-KETO-GLUTARAMATE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-15650_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-15650" />
+      <Property key="EC_Number" value="EC-2.6.1.117" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-4361" />
+      <Property key="ReactionEquation" value="GLN + CPD-479 &lt;=&gt; 2-KETO-GLUTARAMATE + MET" />
+      <Property key="ReactionDirection" value="REVERSIBLE" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Chemical-Reactions, Small-Molecule-Reactions" />
+    </Interaction>
+    <Interaction elementId="RXN-15650_anchor_reactant_0">
+      <Xref identifier="EC-2.6.1.117" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-15650_anchor_reactant_start_0" x="1005.400634765625" y="795.7971801757812" elementRef="GLN" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-15650_anchor_reactant_end_0" x="0" y="0" elementRef="RXN-15650_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-15650_anchor_product_1">
+      <Xref identifier="EC-2.6.1.117" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-15650_anchor_product_start_1" x="0" y="0" elementRef="RXN-15650_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-15650_anchor_product_end_1" arrowHead="Conversion" x="957.8707275390625" y="1515.4193115234375" elementRef="MET" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="R147-RXN">
+      <Xref identifier="EC-1.13.11.54" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="R147-RXN_start" x="869.8077392578125" y="807.488525390625" elementRef="CPD-85" relX="1.0" relY="0.0" />
+        <Point elementId="R147-RXN_end" arrowHead="Conversion" x="1017.6973876953125" y="1026.698974609375" elementRef="CPD-479" relX="-1.0" relY="0.0" />
+        <Anchor elementId="R147-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Comment source="BioCyc">This reaction is catalyzed by the aci-reductone dioxygenase enzyme, ARD&apos;, but it can also occur by non-enzymatic spontaneous oxidation in the presence of air |CITS: [7852397]|. It is not known whether the reaction occurs non-enzymatically in vivo |CITS: [7852397]|. The non-enzymatic oxidation 1,2-dihydroxy-3-keto-5-methylthiopentene anion is partially inhibited by catalase |CITS: [8227039][7852397]|. This reaction is catalyzed by the aci-reductone dioxygenase enzyme, ARD&apos;, but it can also occur by non-enzymatic spontaneous oxidation in the presence of air |CITS: [7852397]|. It is not known whether the reaction occurs non-enzymatically in vivo |CITS: [7852397]|. The non-enzymatic oxidation 1,2-dihydroxy-3-keto-5-methylthiopentene anion is partially inhibited by catalase |CITS: [8227039][7852397]|. If Ni(2+) is bound instead of Fe(2+), the reaction catalyzed by EC 1.13.11.53 occurs instead. The enzyme from Klebsiella oxytoca (formerly Klebsiella pneumoniae) ATCC 8724 is involved in the methionine salvage pathway.</Comment>
+      <Property key="UniqueID" value="R147-RXN" />
+      <Property key="EC_Number" value="EC-1.13.11.54" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-4361, PWY-6755" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="CPD-85 + OXYGEN-MOLECULE =&gt; PROTON + CPD-479 + FORMATE" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-13405" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <CitationRef elementRef="citation_cit_7852397" />
+    </Interaction>
+    <Interaction elementId="R147-RXN_ENZRXN-13405">
+      <Waypoints>
+        <Point elementId="R147-RXN_ENZRXN-13405_start" x="1600.0" y="918.6676025390625" elementRef="MONOMER-12674" relX="0.0" relY="1.0" />
+        <Point elementId="R147-RXN_ENZRXN-13405_end" arrowHead="Catalysis" x="0" y="0" elementRef="R147-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="R147-RXN_anchor_reactant_1">
+      <Xref identifier="EC-1.13.11.54" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="R147-RXN_anchor_reactant_start_1" x="846.3489990234375" y="707.9813842773438" elementRef="OXYGEN-MOLECULE" relX="1.0" relY="0.0" />
+        <Point elementId="R147-RXN_anchor_reactant_end_1" x="0" y="0" elementRef="R147-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="R147-RXN_anchor_product_0">
+      <Xref identifier="EC-1.13.11.54" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="R147-RXN_anchor_product_start_0" x="0" y="0" elementRef="R147-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="R147-RXN_anchor_product_end_0" arrowHead="Conversion" x="566.5606079101562" y="460.34515380859375" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="R147-RXN_anchor_product_2">
+      <Xref identifier="EC-1.13.11.54" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="R147-RXN_anchor_product_start_2" x="0" y="0" elementRef="R147-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="R147-RXN_anchor_product_end_2" arrowHead="Conversion" x="917.61669921875" y="491.9170837402344" elementRef="FORMATE" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="R83-RXN">
+      <Xref identifier="EC-3.1.3.87" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="R83-RXN_start" x="619.3466796875" y="50.0" elementRef="_2-HYDROXY-3-KETO-5-METHYLTHIO-1-PHOSPHOP" relX="1.0" relY="0.0" />
+        <Point elementId="R83-RXN_end" arrowHead="Conversion" x="779.8077392578125" y="807.488525390625" elementRef="CPD-85" relX="-1.0" relY="0.0" />
+        <Anchor elementId="R83-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="R83-RXN" />
+      <Property key="EC_Number" value="EC-3.1.3.87" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="3.1.3.77-RXN, PWY-4361, PWY-6755" />
+      <Property key="PathwayCount" value="3" />
+      <Property key="ReactionEquation" value="2-HYDROXY-3-KETO-5-METHYLTHIO-1-PHOSPHOP + WATER =&gt; CPD-85 + Pi" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-21714" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+    </Interaction>
+    <Interaction elementId="R83-RXN_ENZRXN-21714">
+      <Waypoints>
+        <Point elementId="R83-RXN_ENZRXN-21714_start" x="170.6962890625" y="394.45477294921875" elementRef="AT5G53850-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="R83-RXN_ENZRXN-21714_end" arrowHead="Catalysis" x="0" y="0" elementRef="R83-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="R83-RXN_anchor_reactant_1">
+      <Xref identifier="EC-3.1.3.87" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="R83-RXN_anchor_reactant_start_1" x="220.51808166503906" y="1216.6214599609375" elementRef="WATER" relX="1.0" relY="0.0" />
+        <Point elementId="R83-RXN_anchor_reactant_end_1" x="0" y="0" elementRef="R83-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="R83-RXN_anchor_product_1">
+      <Xref identifier="EC-3.1.3.87" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="R83-RXN_anchor_product_start_1" x="0" y="0" elementRef="R83-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="R83-RXN_anchor_product_end_1" arrowHead="Conversion" x="537.3114013671875" y="749.09423828125" elementRef="Pi" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="R82-RXN">
+      <Xref identifier="EC-5.3.2.5" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="R82-RXN_start" x="1285.4542236328125" y="691.2504272460938" elementRef="CPD-8999" relX="1.0" relY="0.0" />
+        <Point elementId="R82-RXN_end" arrowHead="Conversion" x="529.3466796875" y="50.0" elementRef="_2-HYDROXY-3-KETO-5-METHYLTHIO-1-PHOSPHOP" relX="-1.0" relY="0.0" />
+        <Anchor elementId="R82-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Comment source="BioCyc">The phosphoene-diol intermediate, 2-hydroxy-3-keto-5-methylthio-1-phosphopentene, has not been observed experimentally |CITS: [POCHAPSKY02]| . The phosphoene-diol intermediate, 2-hydroxy-3-keto-5-methylthio-1-phosphopentene, has not been observed experimentally |CITS: [POCHAPSKY02]| .</Comment>
+      <Property key="UniqueID" value="R82-RXN" />
+      <Property key="EC_Number" value="EC-5.3.2.5" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="3.1.3.77-RXN, PWY-4361, PWY-6755" />
+      <Property key="PathwayCount" value="3" />
+      <Property key="ReactionEquation" value="CPD-8999 =&gt; PROTON + 2-HYDROXY-3-KETO-5-METHYLTHIO-1-PHOSPHOP" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-21713" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+    </Interaction>
+    <Interaction elementId="R82-RXN_ENZRXN-21713">
+      <Waypoints>
+        <Point elementId="R82-RXN_ENZRXN-21713_start" x="170.6962890625" y="394.45477294921875" elementRef="AT5G53850-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="R82-RXN_ENZRXN-21713_end" arrowHead="Catalysis" x="0" y="0" elementRef="R82-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="R82-RXN_anchor_product_0">
+      <Xref identifier="EC-5.3.2.5" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="R82-RXN_anchor_product_start_0" x="0" y="0" elementRef="R82-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="R82-RXN_anchor_product_end_0" arrowHead="Conversion" x="566.5606079101562" y="460.34515380859375" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="R145-RXN">
+      <Xref identifier="EC-4.2.1.109" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="R145-RXN_start" x="1114.8114013671875" y="88.68399047851562" elementRef="CPD-1063" relX="1.0" relY="0.0" />
+        <Point elementId="R145-RXN_end" arrowHead="Conversion" x="1195.4542236328125" y="691.2504272460938" elementRef="CPD-8999" relX="-1.0" relY="0.0" />
+        <Anchor elementId="R145-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="R145-RXN" />
+      <Property key="EC_Number" value="EC-4.2.1.109" />
+      <Property key="Pathways" value="PWY-4361, PWY-6755" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="CPD-1063 =&gt; CPD-8999 + WATER" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-21712" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+    </Interaction>
+    <Interaction elementId="R145-RXN_ENZRXN-21712">
+      <Waypoints>
+        <Point elementId="R145-RXN_ENZRXN-21712_start" x="170.6962890625" y="394.45477294921875" elementRef="AT5G53850-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="R145-RXN_ENZRXN-21712_end" arrowHead="Catalysis" x="0" y="0" elementRef="R145-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="R145-RXN_anchor_product_1">
+      <Xref identifier="EC-4.2.1.109" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="R145-RXN_anchor_product_start_1" x="0" y="0" elementRef="R145-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="R145-RXN_anchor_product_end_1" arrowHead="Conversion" x="130.51808166503906" y="1216.6214599609375" elementRef="WATER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_5.3.1.23-RXN">
+      <Xref identifier="EC-5.3.1.23" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_5.3.1.23-RXN_start" x="565.2321166992188" y="1550.0" elementRef="CPD-444" relX="1.0" relY="0.0" />
+        <Point elementId="_5.3.1.23-RXN_end" arrowHead="Conversion" x="1024.8114013671875" y="88.68399047851562" elementRef="CPD-1063" relX="-1.0" relY="0.0" />
+        <Anchor elementId="_5.3.1.23-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="5.3.1.23-RXN" />
+      <Property key="EC_Number" value="EC-5.3.1.23" />
+      <Property key="Pathways" value="PWY-4361, PWY-6755" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="CPD-444 &lt;=&gt; CPD-1063" />
+      <Property key="ReactionDirection" value="REVERSIBLE" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXNQT-13272" />
+      <Property key="Synonym_1" value="5-methylthio-5-deoxy-D-ribose-1-phosphate ketol-isomerase" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+    </Interaction>
+    <Interaction elementId="_5.3.1.23-RXN_ENZRXNQT-13272">
+      <Waypoints>
+        <Point elementId="_5.3.1.23-RXN_ENZRXNQT-13272_start" x="1506.3275146484375" y="371.4354248046875" elementRef="AT2G05830-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="_5.3.1.23-RXN_ENZRXNQT-13272_end" arrowHead="Catalysis" x="0" y="0" elementRef="_5.3.1.23-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Groups>
+    <Group elementId="CPLX-7209" textLabel="CPLX-7209" type="Complex">
+      <Xref identifier="Q338A9" dataSource="uniprot" />
+      <Graphics centerX="1600.0" centerY="906.1676025390625" width="140" height="100" textColor="666666" fontName="Arial" fontSize="10" borderColor="9900CC" borderStyle="Dashed" borderWidth="2.0" fillColor="F5E6FF" shapeType="Rectangle" zOrder="-1" />
+      <Comment source="THE-ARABIDOPSIS-INFORMATION-RESOURCE, tissier">A rice gene with sequence similarities with the &lt;i&gt;Klebsiella oxytoca&lt;/i&gt; gene ARD was isolated from a screen using deepwater rice plants |CITS:[16297065]|. The gene product was heterologously expressed in &lt;i&gt;E. coli&lt;/i&gt; where it was shown to encode an enzyme with acireductone dioxygenase activity. The &lt;i&gt;E. coli&lt;/i&gt;-expressed holo-enzyme preferentially binds Fe&lt;sup&gt;2+&lt;/sup&gt; rather than Ni&lt;sup&gt;2+&lt;/sup&gt; indicating that the on-pathway (|FRAME:PWY-4361|) is favored to the off-pathway (|FRAME:PWY-5389|) |CITS:[16297065]|. It is worth mentioning, however, that in the presence of Ni&lt;sup&gt;2+&lt;/sup&gt; the enzyme does catalyze the |FRAME:R146-RXN| reaction [this was assessed using the model substrate 1,2-dihydroxy-3-ketopent-1-ene (DHKP) as the natural substrate is not synthetically available]. The ultrastructure of the protein has been studied by dynamic light scattering and indicates that holo-Fe(II)-ARD1 forms a stable trimeric complex with a radius ranging from 3.456 to 4.354 nm. The kinetic characteristics of the complex have been determined |CITS:[16297065]|. The gene appears to be under regulation by ethylene in the youngest internode of deepwater rice.</Comment>
+      <Property key="UniqueID" value="CPLX-7209" />
+      <Property key="AlternativeId_Uniprot" value="Q338A9" />
+      <Property key="AlternativeId_Pid" value="AAC05511" />
+      <Property key="ComplexComponents" value="MONOMER-12674" />
+      <Property key="ComponentCount" value="1" />
+      <Property key="IsComplex" value="true" />
+      <Property key="Catalyzes" value="RXN-13406, RXN-13405" />
+      <Property key="CatalyzesCount" value="2" />
+      <Property key="ProteinType" value="Protein-Complexes" />
+      <Property key="Species" value="TAX-4530" />
+      <CitationRef elementRef="citation_cit_16297065" />
+    </Group>
+  </Groups>
+  <Citations>
+    <Citation elementId="citation_cit_19946895">
+      <Xref identifier="19946895" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation__11371200_">
+      <Xref identifier="[11371200]" dataSource="PlantCyc" />
+    </Citation>
+    <Citation elementId="citation_cit_12022880">
+      <Xref identifier="12022880" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_7852397">
+      <Xref identifier="7852397" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_14551435">
+      <Xref identifier="14551435" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_17352497">
+      <Xref identifier="17352497" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation__9880484_">
+      <Xref identifier="[9880484]" dataSource="PlantCyc" />
+    </Citation>
+    <Citation elementId="citation_cit_18493048">
+      <Xref identifier="18493048" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_12022921">
+      <Xref identifier="12022921" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_31402327">
+      <Xref identifier="31402327" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation__7852397_">
+      <Xref identifier="[7852397]" dataSource="PlantCyc" />
+    </Citation>
+    <Citation elementId="citation_cit_16297065">
+      <Xref identifier="16297065" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_MIYAZAKI87">
+      <Xref identifier="PUB-MIYAZAKI87 | The methionine salvage pathway in relation to ethylene and polyamine biosynthesis. (Miyazaki J.H., Yang S.F.)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_cit_16306140">
+      <Xref identifier="16306140" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_3906034">
+      <Xref identifier="3906034" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_21540433">
+      <Xref identifier="21540433" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_2854458">
+      <Xref identifier="2854458" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_8694776">
+      <Xref identifier="8694776" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_cit_11371200">
+      <Xref identifier="11371200" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>
