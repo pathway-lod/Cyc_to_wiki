@@ -44,8 +44,7 @@ Place all PlantCyc `.dat` files in a directory.
 
 - **Individual pathway files**: `[output_dir]/biocyc_pathways_[timestamp]/individual_pathways/*.gpml`
 - **Single reaction files** (if `--include-reactions`): `individual_reactions/*.gpml`
-- **Build summary**: `BUILD_SUMMARY.txt`
-- **Analysis report**: `ANALYSIS_REPORT.txt` - Generated automatically by the analysis script
+- **Analysis report**: `GPML_STATISTICS_REPORT.txt` - Generated automatically by the analysis script 
 
 ## Project Structure
 
