@@ -44,8 +44,7 @@ Place all PlantCyc `.dat` files in a directory.
 
 - **Individual pathway files**: `[output_dir]/biocyc_pathways_[timestamp]/individual_pathways/*.gpml`
 - **Single reaction files** (if `--include-reactions`): `individual_reactions/*.gpml`
-- **Build summary**: `BUILD_SUMMARY.txt`
-- **Analysis report**: `ANALYSIS_REPORT.txt` - Generated automatically by the analysis script
+- **Analysis report**: `GPML_STATISTICS_REPORT.txt` - Generated automatically by the analysis script 
 
 ## Project Structure
 
@@ -80,7 +79,7 @@ Pathway ID
     ↓
 1. Retrieve Pathway Record & Expand Sub-Pathways
     ↓
-2. Collect Reactions from Expanded List
+2. Collect Reactions from Expanded List (if `--include-reactions`, individual reactions will be retrieved separately and individual_reactions GPML files will be built for them)
     ↓
 3. Retrieve Compounds from Reactions
     ↓
@@ -131,11 +130,14 @@ From the expanded reaction list, the converter collects:
 Regulations specify how compounds or proteins **activate or inhibit** reactions. The converter:
 - Parses `regulation.dat` to find regulations targeting pathway reactions
 - Determines regulation mode: `+` (activation) → Stimulation arrow, `-` (inhibition) → Inhibition arrow
+- If the regulation mode is not specified, the regulation is not added 
 - Adds regulators to the pathway, even if they weren't part of the reaction flow
 
 #### 4. Primary Compound Information (REACTION-LAYOUT)
 
 BioCyc provides layout hints in the `REACTION-LAYOUT` field to indicate which compounds are the "main" reactants/products for visualization.
+
+Examples of hints: 
 
 **Format**:
 ```
@@ -171,7 +173,7 @@ FRUCTOSE-1,6-BP <──────○──────── GAP + DHAP
    Arrow flows right → left (reversed to show physiological direction)
 ```
 
-**Search Strategy**: The converter searches for `REACTION-LAYOUT` across all pathway records, This handles cases where sub-pathways have more  layout information than parent pathways.
+**Search Strategy**: The converter searches for `REACTION-LAYOUT` across all pathway records. This handles cases where sub-pathways have more layout information than parent pathways, to ensure that layout information is kept in the parent pathway.
 
 #### 5. Layout Calculation
 
@@ -203,9 +205,9 @@ A three-layer hierarchical grid layout organizes entities by type:
 
 ##### 5b. ForceAtlas2 Layout
 
-Force-directed graph layout that automatically positions nodes to minimize edge crossings and overlap. using NetworkX module
+Force-directed graph layout that automatically positions nodes to minimize edge crossings and overlap. Using NetworkX module. 
 
-
+Other layouts can be implemented. 
 
 
 #### 6. Interaction Creation
@@ -217,14 +219,14 @@ The converter creates four types of interactions:
 - Connects to all monomers if protein is a complex
 
 **B. Protein → Reaction** (Catalysis)
-- Uses a **central anchor pattern**:
+- Uses a **central anchor pattern**:  
 ```
 Main Reactant ────────○──────── Main Product
                       │
                    Enzyme
 ```
 - Main reactant/product on the main line (from `REACTION-LAYOUT`)
-- Additional reactants/products connect to anchor
+- Additional reactants/products connect to anchor `─○─`
 - Enzyme connects to anchor from top with `Catalysis` arrow head
 
 **C. Compound ↔ Reaction** (Conversion)
@@ -244,10 +246,13 @@ The converter extracts citations from:
 **Citation Priority** (in order of preference):
 1. **PubMed ID** → Creates `<Xref dataSource="pubmed" identifier="12345678" />`
    - Standard database identifier that PathVisio/WikiPathways can use to link to PubMed
-2**BioCyc ID** → Creates `<Xref dataSource="BioCyc" identifier="UNIQUE-ID | Title (Authors, Year)" />` with full bibliographic information:
+2. **DOI** → Creates `<Xref dataSource="doi" identifier="12345678" />`
+    - When no PubMed ID is available but DOI is, DOI is set as main Xref 
+4. **BioCyc ID** → Creates `<Xref dataSource="BioCyc" identifier="UNIQUE-ID | Title (Authors, Year)" />` with full bibliographic information:
    - Format: `"UNIQUE-ID | Title (Author1, Author2 et al., Year)"`
    - Includes title (truncated to 100 chars), first 3 authors, and year
    - Why: Provides human-readable citation text when PubMed/DOI unavailable - users can copy and search manually and later lookup might be possible
+
 
 ---
 
