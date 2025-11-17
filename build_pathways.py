@@ -13,15 +13,27 @@ Arguments:
     output_dir          : Directory where GPML pathway files will be saved
 
 Options:
-    --include-reactions : Also build single reaction files for unused reactions
-    --layout grid       : Use grid layout (default)
-    --layout forceatlas2: Use ForceAtlas2 force-directed layout
+    --include-reactions        : Also build single reaction files for unused reactions
+    --layout grid              : Use grid layout (default)
+    --layout forceatlas2       : Use ForceAtlas2 force-directed layout
+    --pathway-id <PATHWAY_ID>  : Build only a specific pathway by ID
+    --reaction-id <REACTION_ID>: Build only a specific reaction by ID
 
 Examples:
+    # Build all pathways
     python build_pathways.py ./data ./output
+
+    # Build a specific pathway
+    python build_pathways.py ./data ./output --pathway-id GLYCOLYSIS
+
+    # Build a specific reaction
+    python build_pathways.py ./data ./output --reaction-id RXN-12345
+
+    # Build all with reactions included
     python build_pathways.py ./data ./output --include-reactions
+
+    # Build all with force-directed layout
     python build_pathways.py ./data ./output --layout forceatlas2
-    python build_pathways.py ./data ./output --include-reactions --layout forceatlas2
 """
 
 import sys
@@ -180,6 +192,60 @@ def build_single_reaction_pathway(builder, reaction_id):
             element_ids.append(gene_id)
 
         pathway.citations = builder.citation_manager.get_all_citations_for_pathway(element_ids)
+
+        # Add missing citation detection code (same as in build_pathway())
+        # Collect all CitationRefs that are used in the pathway
+        cited_refs_in_pathway = set()
+
+        for datanode in pathway_datanodes:
+            if hasattr(datanode, 'citationRefs') and datanode.citationRefs:
+                for ref in datanode.citationRefs:
+                    cited_refs_in_pathway.add(ref.elementRef)
+
+        for group in pathway.groups:
+            if hasattr(group, 'citationRefs') and group.citationRefs:
+                for ref in group.citationRefs:
+                    cited_refs_in_pathway.add(ref.elementRef)
+
+        for interaction in pathway.interactions:
+            if hasattr(interaction, 'citationRefs') and interaction.citationRefs:
+                for ref in interaction.citationRefs:
+                    cited_refs_in_pathway.add(ref.elementRef)
+
+        # Add any missing citations that are referenced but not in pathway.citations
+        existing_citation_ids = {citation.elementId for citation in pathway.citations if citation.elementId}
+        missing_citation_refs = cited_refs_in_pathway - existing_citation_ids
+
+        if missing_citation_refs:
+            print(f"  Found {len(missing_citation_refs)} missing citations for reaction {reaction_id}, adding them...")
+            from scripts.data_structure.wiki_data_structure import Citation, Xref
+            for missing_ref in missing_citation_refs:
+                # missing_ref is a sanitized elementId like "citation_PUB_12695547"
+                # Check if this citation already exists in citation_objects
+                citation = None
+                for orig_id, cit_obj in builder.citation_manager.citation_objects.items():
+                    if cit_obj.elementId == missing_ref:
+                        citation = cit_obj
+                        break
+
+                # If not found, try to create it by un-sanitizing the elementId
+                if not citation:
+                    # Remove "citation_" prefix
+                    unsanitized = missing_ref.replace('citation_', '', 1)
+                    # Replace underscores with hyphens for BioCyc IDs
+                    if unsanitized.startswith('PUB_'):
+                        unsanitized = unsanitized.replace('_', '-', 1)  # Only first underscore
+                    elif unsanitized.startswith('cit_'):
+                        unsanitized = unsanitized.replace('cit_', '', 1)  # Remove cit_ prefix
+
+                    # Try to create citation with un-sanitized ID
+                    citation = builder.citation_manager.create_citation_object(unsanitized)
+
+                # Add citation if we got one
+                if citation and citation.elementId not in existing_citation_ids:
+                    pathway.citations.append(citation)
+                    existing_citation_ids.add(citation.elementId)
+
         builder._update_pathway_board_size(pathway, pathway_datanodes)
 
         return pathway
@@ -210,6 +276,9 @@ def build_single_reactions(builder, unused_reactions, output_dir):
                 failed_reactions.append((reaction_id, "No pathway generated"))
                 continue
 
+            # Deduplicate elements before exporting
+            pathway = builder.deduplicate_pathway_elements(pathway)
+
             # Create safe filename
             safe_reaction_id = re.sub(r'[^a-zA-Z0-9_-]', '_', reaction_id)
             output_filename = f"{safe_reaction_id}.gpml"
@@ -233,16 +302,22 @@ def main():
     if len(sys.argv) < 3:
         print(__doc__)
         print("\nError: Missing required arguments!")
-        print("Usage: python build_pathways.py <data_dir> <output_dir> [--include-reactions] [--layout grid|forceatlas2]")
-        print("\nOptions:")
-        print("  --include-reactions    : Also build single reaction files for unused reactions")
-        print("  --layout grid          : Use grid layout (default)")
-        print("  --layout forceatlas2   : Use ForceAtlas2 force-directed layout")
+        print("Usage: python build_pathways.py <data_dir> <output_dir> [options]")
         sys.exit(1)
 
     data_dir = sys.argv[1]
     output_base_dir = sys.argv[2]
     include_reactions = '--include-reactions' in sys.argv
+
+    # Parse specific pathway or reaction ID
+    specific_pathway_id = None
+    specific_reaction_id = None
+
+    for i, arg in enumerate(sys.argv):
+        if arg == '--pathway-id' and i + 1 < len(sys.argv):
+            specific_pathway_id = sys.argv[i + 1]
+        elif arg == '--reaction-id' and i + 1 < len(sys.argv):
+            specific_reaction_id = sys.argv[i + 1]
 
     # Determine layout type
     layout_type = 'grid'  # default
@@ -314,7 +389,73 @@ def main():
         regulation_file=os.path.join(data_dir, "regulation.dat")
     )
 
-    # Find all pathways with reactions
+    # Handle specific pathway build
+    if specific_pathway_id:
+        print("="*60)
+        print(f"BUILDING SPECIFIC PATHWAY: {specific_pathway_id}")
+        print("="*60 + "\n")
+
+        # Build only the specific pathway
+        # Create the pathway info dict that build_individual_pathways expects
+        pathway_list = [{'pathway_id': specific_pathway_id}]
+        built_pathways, failed_pathways = build_individual_pathways(
+            builder, pathway_list, individual_pathways_dir, layout_type=layout_type
+        )
+
+        if built_pathways:
+            print(f"\n✓ Successfully built pathway: {specific_pathway_id}")
+        else:
+            print(f"\n✗ Failed to build pathway: {specific_pathway_id}")
+            if failed_pathways:
+                print(f"  Error: {failed_pathways[0]['error']}")
+
+        # Skip other build steps
+        print("\n" + "="*60)
+        print("BUILD COMPLETE")
+        print("="*60)
+        return
+
+    # Handle specific reaction build
+    if specific_reaction_id:
+        print("="*60)
+        print(f"BUILDING SPECIFIC REACTION: {specific_reaction_id}")
+        print("="*60 + "\n")
+
+        # Initialize reaction processor
+        reactions_file = os.path.join(data_dir, "reactions.dat")
+        builder.reaction_processor = parsing_utils.read_and_parse(reactions_file)
+
+        # Build only the specific reaction
+        individual_reactions_dir = os.path.join(output_dir, "individual_reactions")
+        os.makedirs(individual_reactions_dir, exist_ok=True)
+
+        pathway = build_single_reaction_pathway(builder, specific_reaction_id)
+
+        if pathway:
+            # Deduplicate elements before exporting
+            pathway = builder.deduplicate_pathway_elements(pathway)
+
+            # Create safe filename
+            safe_reaction_id = re.sub(r'[^a-zA-Z0-9_-]', '_', specific_reaction_id)
+            output_filename = f"{safe_reaction_id}.gpml"
+            output_filepath = os.path.join(individual_reactions_dir, output_filename)
+
+            # Export to GPML
+            builder.export_pathway_to_gpml(pathway, output_filepath)
+
+            print(f"✓ Successfully built reaction: {specific_reaction_id}")
+            print(f"  Output: {output_filepath}")
+        else:
+            print(f"✗ Failed to build reaction: {specific_reaction_id}")
+            print(f"  Reaction may not exist or has no data")
+
+        # Skip other build steps
+        print("\n" + "="*60)
+        print("BUILD COMPLETE")
+        print("="*60)
+        return
+
+    # Build all pathways (default behavior)
     print("\nFinding all pathways...")
     all_pathways = builder.find_all_pathways()
     print(f"Found {len(all_pathways)} pathways with reactions\n")

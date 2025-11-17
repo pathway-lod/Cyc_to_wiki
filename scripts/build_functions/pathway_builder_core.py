@@ -60,19 +60,37 @@ class IDManager:
     def __init__(self):
         """Initialize empty ID mapping."""
         self.id_mapping = {}
+        self.sanitized_ids = {}  # Track which sanitized IDs are in use: {sanitized_id: original_id}
+        self.id_counter = {}  # Counter for handling collisions: {base_id: count}
 
     def register_id(self, original_id):
         """
-        Register and sanitize an ID.
+        Register and sanitize an ID, ensuring uniqueness.
 
         Args:
             original_id (str): Original ID from BioCyc data
 
         Returns:
-            str: Sanitized ID safe for GPML
+            str: Sanitized ID safe for GPML (guaranteed unique)
         """
         if original_id not in self.id_mapping:
-            self.id_mapping[original_id] = sanitize_element_id(original_id)
+            sanitized = sanitize_element_id(original_id)
+
+            # Check for collision with existing sanitized IDs
+            if sanitized in self.sanitized_ids:
+                # Collision detected - append counter to make unique
+                base_id = sanitized
+                if base_id not in self.id_counter:
+                    self.id_counter[base_id] = 1
+                else:
+                    self.id_counter[base_id] += 1
+
+                # Append counter to make unique
+                sanitized = f"{base_id}_{self.id_counter[base_id]}"
+
+            self.id_mapping[original_id] = sanitized
+            self.sanitized_ids[sanitized] = original_id
+
         return self.id_mapping[original_id]
 
     def get_sanitized_id(self, original_id):
@@ -86,6 +104,15 @@ class IDManager:
             str: Sanitized ID if found, otherwise original ID
         """
         return self.id_mapping.get(original_id, original_id)
+
+    def get_all_sanitized_ids(self):
+        """
+        Get all currently registered sanitized IDs.
+
+        Returns:
+            set: Set of all sanitized IDs in use
+        """
+        return set(self.sanitized_ids.keys())
 
 
 class CompletePathwayBuilderWithGenes:
@@ -1993,7 +2020,7 @@ class CompletePathwayBuilderWithGenes:
 
     def build_complete_pathway_with_genes(self, pathway_id, layout_type='grid', layout_params=None):
         """
-        Build  pathway with genes, proteins (including complexes), reactions, and citations.
+        Build pathway with genes, proteins (including complexes), reactions, and citations.
 
         Args:
             pathway_id (str): ID of the pathway to build
@@ -2122,25 +2149,173 @@ class CompletePathwayBuilderWithGenes:
                 for ref in group.citationRefs:
                     cited_refs_in_pathway.add(ref.elementRef)
 
+        for interaction in pathway.interactions:
+            if hasattr(interaction, 'citationRefs') and interaction.citationRefs:
+                for ref in interaction.citationRefs:
+                    cited_refs_in_pathway.add(ref.elementRef)
 
         # Add any missing citations that are referenced but not in pathway.citations
-        existing_citation_ids = {f"citation_cit_{citation.xref.identifier}" for citation in pathway.citations if citation.xref}
+        existing_citation_ids = {citation.elementId for citation in pathway.citations if citation.elementId}
         missing_citation_refs = cited_refs_in_pathway - existing_citation_ids
 
         if missing_citation_refs:
+            print(f"Found {len(missing_citation_refs)} missing citations, adding them...")
             from scripts.data_structure.wiki_data_structure import Citation, Xref
             for missing_ref in missing_citation_refs:
-                # Extract PubMed ID from citation_cit_XXXXXXX format
-                if missing_ref.startswith('citation_cit_'):
-                    pmid = missing_ref.replace('citation_cit_', '')
-                    # Create a minimal citation
-                    missing_citation = Citation(
-                        elementId=missing_ref,
-                        xref=Xref(identifier=pmid, dataSource="pubmed")
-                    )
-                    pathway.citations.append(missing_citation)
+                # missing_ref is a sanitized elementId like "citation_PUB_12695547"
+                # We need to reverse-engineer the original citation ID
+
+                # Check if this citation already exists in citation_objects
+                citation = None
+                for orig_id, cit_obj in self.citation_manager.citation_objects.items():
+                    if cit_obj.elementId == missing_ref:
+                        citation = cit_obj
+                        break
+
+                # If not found, try to create it by un-sanitizing the elementId
+                if not citation:
+                    # Remove "citation_" prefix
+                    unsanitized = missing_ref.replace('citation_', '', 1)
+                    # Replace underscores with hyphens for BioCyc IDs
+                    if unsanitized.startswith('PUB_'):
+                        unsanitized = unsanitized.replace('_', '-', 1)  # Only first underscore
+                    elif unsanitized.startswith('cit_'):
+                        unsanitized = unsanitized.replace('cit_', '', 1)  # Remove cit_ prefix
+
+                    # Try to create citation with un-sanitized ID
+                    citation = self.citation_manager.create_citation_object(unsanitized)
+
+                # Add citation if we got one
+                if citation and citation.elementId not in existing_citation_ids:
+                    pathway.citations.append(citation)
+                    existing_citation_ids.add(citation.elementId)
 
         self._update_pathway_board_size(pathway, pathway_datanodes)
+
+        return pathway
+
+    def deduplicate_pathway_elements(self, pathway):
+        """
+        Remove duplicate elements from a pathway by elementId.
+
+        This ensures each element in the pathway has a unique elementId across ALL element types.
+        When conflicts occur between different element types (e.g., Group and DataNode with same ID),
+        priority is: Citations > DataNodes > Interactions > Groups
+
+        Args:
+            pathway: Pathway object to deduplicate
+
+        Returns:
+            Pathway: Deduplicated pathway
+        """
+        # Track all seen IDs across element types to detect cross-type conflicts
+        all_seen_ids = set()
+        # Track ID mappings for updating references
+        id_remapping = {}
+
+        # Step 1: Deduplicate Citations (highest priority)
+        seen_citation_ids = set()
+        deduplicated_citations = []
+        for citation in pathway.citations:
+            if citation.elementId not in seen_citation_ids:
+                deduplicated_citations.append(citation)
+                seen_citation_ids.add(citation.elementId)
+                all_seen_ids.add(citation.elementId)
+            else:
+                print(f"WARNING: Removing duplicate Citation with elementId: {citation.elementId}")
+        pathway.citations = deduplicated_citations
+
+        # Step 2: Deduplicate DataNodes (check against all previous IDs)
+        seen_datanode_ids = set()
+        deduplicated_datanodes = []
+        for datanode in pathway.dataNodes:
+            if datanode.elementId not in seen_datanode_ids:
+                if datanode.elementId in all_seen_ids:
+                    # Cross-type conflict detected
+                    print(f"WARNING: DataNode elementId '{datanode.elementId}' conflicts with existing element. Renaming...")
+                    # Rename the conflicting datanode
+                    original_id = datanode.elementId
+                    datanode.elementId = self.id_manager.register_id(f"{original_id}_datanode")
+                    id_remapping[original_id] = datanode.elementId
+                    print(f"  Renamed DataNode '{original_id}' to '{datanode.elementId}'")
+                deduplicated_datanodes.append(datanode)
+                seen_datanode_ids.add(datanode.elementId)
+                all_seen_ids.add(datanode.elementId)
+            else:
+                print(f"WARNING: Removing duplicate DataNode with elementId: {datanode.elementId}")
+        pathway.dataNodes = deduplicated_datanodes
+
+        # Step 3: Deduplicate Interactions (check against all previous IDs)
+        seen_interaction_ids = set()
+        deduplicated_interactions = []
+        for interaction in pathway.interactions:
+            if interaction.elementId not in seen_interaction_ids:
+                if interaction.elementId in all_seen_ids:
+                    # Cross-type conflict detected
+                    print(f"WARNING: Interaction elementId '{interaction.elementId}' conflicts with existing element. Renaming...")
+                    original_id = interaction.elementId
+                    interaction.elementId = self.id_manager.register_id(f"{original_id}_interaction")
+                    id_remapping[original_id] = interaction.elementId
+                    print(f"  Renamed Interaction '{original_id}' to '{interaction.elementId}'")
+                deduplicated_interactions.append(interaction)
+                seen_interaction_ids.add(interaction.elementId)
+                all_seen_ids.add(interaction.elementId)
+            else:
+                print(f"WARNING: Removing duplicate Interaction with elementId: {interaction.elementId}")
+        pathway.interactions = deduplicated_interactions
+
+        # Step 4: Deduplicate Groups (lowest priority, check against all previous IDs)
+        seen_group_ids = set()
+        deduplicated_groups = []
+        for group in pathway.groups:
+            if group.elementId not in seen_group_ids:
+                if group.elementId in all_seen_ids:
+                    # Cross-type conflict detected
+                    print(f"WARNING: Group elementId '{group.elementId}' conflicts with existing element. Renaming...")
+                    original_id = group.elementId
+                    group.elementId = self.id_manager.register_id(f"{original_id}_group")
+                    id_remapping[original_id] = group.elementId
+                    print(f"  Renamed Group '{original_id}' to '{group.elementId}'")
+                deduplicated_groups.append(group)
+                seen_group_ids.add(group.elementId)
+                all_seen_ids.add(group.elementId)
+            else:
+                print(f"WARNING: Removing duplicate Group with elementId: {group.elementId}")
+        pathway.groups = deduplicated_groups
+
+        # Step 5: Update references to renamed elements
+        if id_remapping:
+            print(f"\nUpdating {len(id_remapping)} element references...")
+
+            # Update groupRef in DataNodes
+            for datanode in pathway.dataNodes:
+                if hasattr(datanode, 'groupRef') and datanode.groupRef and datanode.groupRef in id_remapping:
+                    old_ref = datanode.groupRef
+                    datanode.groupRef = id_remapping[old_ref]
+                    print(f"  Updated DataNode '{datanode.elementId}' groupRef: {old_ref} -> {datanode.groupRef}")
+
+            # Update groupRef in Interactions
+            for interaction in pathway.interactions:
+                if hasattr(interaction, 'groupRef') and interaction.groupRef and interaction.groupRef in id_remapping:
+                    old_ref = interaction.groupRef
+                    interaction.groupRef = id_remapping[old_ref]
+                    print(f"  Updated Interaction '{interaction.elementId}' groupRef: {old_ref} -> {interaction.groupRef}")
+
+            # Update groupRef in Groups (for nested groups)
+            for group in pathway.groups:
+                if hasattr(group, 'groupRef') and group.groupRef and group.groupRef in id_remapping:
+                    old_ref = group.groupRef
+                    group.groupRef = id_remapping[old_ref]
+                    print(f"  Updated Group '{group.elementId}' groupRef: {old_ref} -> {group.groupRef}")
+
+            # Update elementRef in Point waypoints
+            for interaction in pathway.interactions:
+                if hasattr(interaction, 'waypoints'):
+                    for waypoint in interaction.waypoints:
+                        if hasattr(waypoint, 'elementRef') and waypoint.elementRef and waypoint.elementRef in id_remapping:
+                            old_ref = waypoint.elementRef
+                            waypoint.elementRef = id_remapping[old_ref]
+                            print(f"  Updated waypoint elementRef in Interaction '{interaction.elementId}': {old_ref} -> {waypoint.elementRef}")
 
         return pathway
 

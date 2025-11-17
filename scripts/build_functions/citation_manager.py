@@ -289,16 +289,23 @@ class CitationManager:
         """
         Sanitize citation ID for use as XML element ID.
 
+        Preserves BioCyc publication IDs (PUB-XXXXXX) to maintain references.
+        Converts PubMed numeric IDs to valid XML IDs.
+
         Args:
-            citation_id: Raw citation ID
+            citation_id: Raw citation ID (e.g., 'PUB-12695547' or '12695547')
 
         Returns:
-            Sanitized element ID
+            Sanitized element ID (e.g., 'citation_PUB-12695547' or 'citation_cit_12695547')
         """
-        # Remove any prefix like PUB- or PUBMED_
+        # Keep BioCyc publication IDs intact (PUB-XXXXXX format)
         if citation_id.startswith('PUB-'):
-            citation_id = citation_id[4:]
-        elif citation_id.startswith('PUBMED_'):
+            # Replace hyphen with underscore for XML compatibility
+            sanitized = citation_id.replace('-', '_')
+            return f"citation_{sanitized}"
+
+        # Handle other prefixes
+        if citation_id.startswith('PUBMED_'):
             citation_id = citation_id[7:]
         elif citation_id.startswith('CITATION_'):
             citation_id = citation_id[9:]
@@ -306,7 +313,7 @@ class CitationManager:
         # Replace any invalid characters with underscore
         sanitized = re.sub(r'[^a-zA-Z0-9_]', '_', citation_id)
 
-        # Ensure it doesn't start with a number
+        # Ensure it doesn't start with a number (for numeric PubMed IDs)
         if sanitized and sanitized[0].isdigit():
             sanitized = f"cit_{sanitized}"
 
@@ -377,13 +384,17 @@ class CitationManager:
             if element_id in self.element_citations:
                 unique_citation_ids.update(self.element_citations[element_id])
 
-        # Return Citation objects
+        # Return Citation objects, ensuring uniqueness by elementId
         citations = []
+        seen_element_ids = set()
         for citation_id in unique_citation_ids:
             # Find the citation object by element ID
             for original_id, citation in self.citation_objects.items():
                 if citation.elementId == citation_id:
-                    citations.append(citation)
+                    # Only add if we haven't seen this elementId before
+                    if citation.elementId not in seen_element_ids:
+                        citations.append(citation)
+                        seen_element_ids.add(citation.elementId)
                     break
 
         return citations

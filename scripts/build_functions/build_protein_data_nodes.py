@@ -5,6 +5,10 @@ from scripts.data_structure.wiki_data_structure import (
 from scripts.parsing_functions import parsing_utils
 from scripts.utils.HTML_cleaner import clean_text_label
 from scripts.utils import standard_graphics
+from scripts.utils.property_parser import (
+    create_dynamic_properties, handle_unique_id, handle_synonyms,
+    handle_go_terms, create_numbered_properties
+)
 from scripts.object2gmpl.gpml_writer import GPMLWriter
 import uuid
 import re
@@ -57,7 +61,7 @@ def get_primary_protein_xref(db_refs, record=None):
     # 6. Other databases
     priority_dbs = [
         'ENTREZ', 'NCBI-GENE', 'ENTREZ-GENE',  # Entrez Gene (highest priority)
-        'HGNC', 'HGNC-SYMBOL',  # HGNC for human genes
+        'HGNC', 'HGNC-SYMBOL',  # HGNC for human genes (for later versions of other cycs)
         'ENSEMBL', 'ENSEMBL-PLANT', 'ENSEMBL-PLANTS',  # Ensembl
         'UNIPROT', 'SWISS-PROT', 'TREMBL',  # UniProt variants
         'BIOCYC', 'CHLAMYCYC1',  # BioCyc databases
@@ -116,7 +120,7 @@ def get_primary_protein_xref(db_refs, record=None):
         # Plant-specific protein databases
         'TAIR': 'TAIR',
         'TAIR-PROTEIN': 'TAIR',
-        'ARAPORT': 'TAIR',  # Araport was discontinued, data migrated to TAIR
+        'ARAPORT': 'TAIR',
 
         # Other sequence databases
         'REFSEQ': 'refseq',
@@ -198,86 +202,65 @@ def parse_complex_components(record):
 
 
 def create_protein_properties_from_record(record):
-    """Create Property elements from protein record data"""
+    """
+    Create Property elements from protein record data:
+    - Custom handlers for special fields (DBLINKS, SYNONYMS, COMPONENTS, CATALYZES)
+    - Dynamic parsing for all other fields
+    """
     properties = []
 
-    if 'UNIQUE-ID' in record:
-        properties.append(Property(key='UniqueID', value=str(record['UNIQUE-ID'])))
+    # ========================================================================
+    # PART 1: Critical fields with custom handling
+    # ========================================================================
 
-    # Add EC number as property
+    # 1. UNIQUE-ID
+    if 'UNIQUE-ID' in record:
+        properties.extend(handle_unique_id(record['UNIQUE-ID'], record))
+
+    # 2. DBLINKS - Handle specially for EC numbers and alternative IDs
     dblinks = record.get('DBLINKS', [])
     db_refs = parse_protein_dblinks(dblinks)
     if 'EC-CODE' in db_refs or 'BRENDA' in db_refs:
         ec_number = db_refs.get('EC-CODE') or db_refs.get('BRENDA')
         properties.append(Property(key='ECNumber', value=str(ec_number)))
 
-    # Add ALL database IDs from DBLINKS as individual properties (excluding EC-CODE which is added separately)
     for db_name, db_id in db_refs.items():
-        if db_name not in ['EC-CODE', 'BRENDA']:  # Skip EC numbers as they're added separately
-            # Create property key from database name
+        if db_name not in ['EC-CODE', 'BRENDA']:
             prop_key = db_name.replace('-', '_').title().replace('_', '')
             properties.append(Property(key=f'AlternativeId_{prop_key}', value=str(db_id)))
 
+    # 3. SYNONYMS - Create numbered properties
     if 'SYNONYMS' in record:
-        synonyms = record['SYNONYMS']
-        if isinstance(synonyms, list):
-            for i, synonym in enumerate(synonyms):
-                properties.append(Property(key=f'Synonym_{i + 1}', value=str(synonym).strip()))
-        elif isinstance(synonyms, str):
-            properties.append(Property(key='Synonym_1', value=synonyms.strip()))
+        properties.extend(handle_synonyms(record['SYNONYMS'], record))
 
-    # Add complex-specific properties
+    # 4. COMPONENTS - Special handling for complexes
     if is_protein_complex(record):
         if 'COMPONENTS' in record:
             components = parse_complex_components(record)
             if components:
                 properties.append(Property(key='ComplexComponents', value=', '.join(components)))
                 properties.append(Property(key='ComponentCount', value=str(len(components))))
-
         properties.append(Property(key='IsComplex', value='true'))
 
-    # Continue with other properties...
-    if 'MOLECULAR-WEIGHT-SEQ' in record:
-        properties.append(Property(key='MolecularWeightSeq', value=str(record['MOLECULAR-WEIGHT-SEQ'])))
-
-    if 'MOLECULAR-WEIGHT-EXP' in record:
-        properties.append(Property(key='MolecularWeightExp', value=str(record['MOLECULAR-WEIGHT-EXP'])))
-
-    if 'MOLECULAR-WEIGHT-KD' in record:
-        properties.append(Property(key='MolecularWeightKD', value=str(record['MOLECULAR-WEIGHT-KD'])))
-
-    if 'PI' in record:
-        properties.append(Property(key='IsoelectricPoint', value=str(record['PI'])))
-
-    if 'GENE' in record:
-        genes = record['GENE']
-        if isinstance(genes, list):
-            gene_list = ', '.join(str(g) for g in genes)
-            properties.append(Property(key='Genes', value=gene_list))
-        else:
-            properties.append(Property(key='Gene', value=str(genes)))
-
+    # 5. CATALYZES - Special handling to clean ENZ prefixes
     if 'CATALYZES' in record:
         catalyzes = record['CATALYZES']
 
         def remove_enz_prefix(reaction_id):
             """Remove ENZ prefix from reaction IDs to match pathway reactions"""
             reaction_id = str(reaction_id).strip()
-
-            # Remove various ENZ prefixes
             if reaction_id.startswith('ENZRXN-'):
-                return reaction_id[7:]  # Remove 'ENZRXN-'
+                return reaction_id[7:]
             elif reaction_id.startswith('ENZRXNQT-'):
-                return reaction_id[9:]  # Remove 'ENZRXNQT-'
+                return reaction_id[9:]
             elif reaction_id.startswith('ENZRXNIO2-'):
-                return reaction_id[10:]  # Remove 'ENZRXNIO2-'
+                return reaction_id[10:]
             elif reaction_id.startswith('ENZRXN'):
-                return reaction_id[6:]  # Remove 'ENZRXN'
+                return reaction_id[6:]
             else:
                 return reaction_id
 
         if isinstance(catalyzes, list):
-            # Process each reaction ID and remove ENZ prefix
             cleaned_reactions = []
             for rxn_id in catalyzes:
                 cleaned_id = remove_enz_prefix(rxn_id)
@@ -289,79 +272,31 @@ def create_protein_properties_from_record(record):
             properties.append(Property(key='Catalyzes', value=catalyzes_list))
             properties.append(Property(key='CatalyzesCount', value=str(len(catalyzes))))
         else:
-            # Single reaction ID
             cleaned_id = remove_enz_prefix(catalyzes)
             if not cleaned_id.startswith('RXN'):
                 cleaned_id = f'RXN-{cleaned_id}'
             properties.append(Property(key='Catalyzes', value=cleaned_id))
 
-    if 'REGULATES' in record:
-        regulates = record['REGULATES']
-        if isinstance(regulates, list):
-            regulates_list = ', '.join(str(r) for r in regulates)
-            properties.append(Property(key='Regulates', value=regulates_list))
-        else:
-            properties.append(Property(key='Regulates', value=str(regulates)))
-
-    if 'COMPONENT-OF' in record:
-        component_of = record['COMPONENT-OF']
-        if isinstance(component_of, list):
-            component_list = ', '.join(str(c) for c in component_of)
-            properties.append(Property(key='ComponentOf', value=component_list))
-        else:
-            properties.append(Property(key='ComponentOf', value=str(component_of)))
-
-    if 'LOCATIONS' in record:
-        locations = record['LOCATIONS']
-        if isinstance(locations, list):
-            location_list = ', '.join(str(l) for l in locations)
-            properties.append(Property(key='Locations', value=location_list))
-        else:
-            properties.append(Property(key='Location', value=str(locations)))
-
-    if 'TYPES' in record:
-        protein_types = record['TYPES']
-        if isinstance(protein_types, list):
-            types_list = ', '.join(str(t) for t in protein_types)
-            properties.append(Property(key='ProteinTypes', value=types_list))
-        else:
-            properties.append(Property(key='ProteinType', value=str(protein_types)))
-
+    # 6. GO-TERMS - Keep explicit for clarity
     if 'GO-TERMS' in record:
-        go_terms = record['GO-TERMS']
-        if isinstance(go_terms, list):
-            go_list = ', '.join(str(go) for go in go_terms)
-            properties.append(Property(key='GOTerms', value=go_list))
-        else:
-            properties.append(Property(key='GOTerm', value=str(go_terms)))
+        properties.extend(handle_go_terms(record['GO-TERMS'], record))
 
-    if 'FEATURES' in record:
-        features = record['FEATURES']
-        if isinstance(features, list):
-            features_list = ', '.join(str(f) for f in features)
-            properties.append(Property(key='Features', value=features_list))
-        else:
-            properties.append(Property(key='Feature', value=str(features)))
+    # ========================================================================
+    # PART 2: Dynamic parsing for ALL other fields
+    # ========================================================================
 
-    if 'SPECIES' in record:
-        species = record['SPECIES']
-        if isinstance(species, list):
-            species_list = ', '.join(str(s) for s in species)
-            properties.append(Property(key='Species', value=species_list))
-        else:
-            properties.append(Property(key='Species', value=str(species)))
+    # Fields to skip
+    skip_fields = {
+        'UNIQUE-ID', 'DBLINKS', 'SYNONYMS', 'COMPONENTS', 'CATALYZES', 'GO-TERMS',
+        'COMMON-NAME',  # Already in textLabel
+        'CITATIONS',    # Handled separately
+        'COMMENT',      # Handled separately
+        'CREDITS',      # Handled in comment source
+    }
 
-    if 'MODIFIED-FORM' in record:
-        properties.append(Property(key='ModifiedForm', value=str(record['MODIFIED-FORM'])))
-
-    if 'UNMODIFIED-FORM' in record:
-        properties.append(Property(key='UnmodifiedForm', value=str(record['UNMODIFIED-FORM'])))
-
-    if 'SYMMETRY' in record:
-        properties.append(Property(key='Symmetry', value=str(record['SYMMETRY'])))
-
-    if 'DNA-FOOTPRINT-SIZE' in record:
-        properties.append(Property(key='DNAFootprintSize', value=str(record['DNA-FOOTPRINT-SIZE'])))
+    # Parse all remaining fields dynamically
+    dynamic_props = create_dynamic_properties(record, skip_fields=skip_fields)
+    properties.extend(dynamic_props)
 
     return properties
 

@@ -5,6 +5,10 @@ from scripts.data_structure.wiki_data_structure import (
 from scripts.parsing_functions import parsing_utils
 from scripts.utils.HTML_cleaner import clean_text_label
 from scripts.utils import standard_graphics
+from scripts.utils.property_parser import (
+    create_dynamic_properties, handle_unique_id, handle_synonyms,
+    handle_chemical_formula
+)
 from scripts.object2gmpl.gpml_writer import GPMLWriter
 import uuid
 import re
@@ -122,76 +126,51 @@ def get_primary_xref(db_refs, inchi_key=None):
 
 def create_properties_from_record(record):
     """
-    Create Property elements from compound record data
-
-    Args:
-        record: Compound record dictionary
-
-    Returns:
-        list: List of Property objects
+    Create Property elements from compound record data:
+    - Custom handlers for special fields (DBLINKS, SYNONYMS, CHEMICAL-FORMULA)
+    - Dynamic parsing for all other fields
     """
     properties = []
 
-    if 'UNIQUE-ID' in record:
-        properties.append(Property(key='UniqueID', value=str(record['UNIQUE-ID'])))
+    # ========================================================================
+    # PART 1: Fields with custom handling
+    # ========================================================================
 
-    # Add ALL database IDs from DBLINKS as individual properties
+    # 1. UNIQUE-ID
+    if 'UNIQUE-ID' in record:
+        properties.extend(handle_unique_id(record['UNIQUE-ID'], record))
+
+    # 2. DBLINKS - Handle for alternative IDs
     dblinks = record.get('DBLINKS', [])
     db_refs = parse_dblinks(dblinks)
     for db_name, db_id in db_refs.items():
-        # Create property key from database name
         prop_key = db_name.replace('-', '_').title().replace('_', '')
         properties.append(Property(key=f'AlternativeId_{prop_key}', value=str(db_id)))
 
+    # 3. SYNONYMS - Create numbered properties
     if 'SYNONYMS' in record:
-        synonyms = record['SYNONYMS']
-        if isinstance(synonyms, list):
-            for i, synonym in enumerate(synonyms):
-                properties.append(Property(key=f'Synonym_{i + 1}', value=str(synonym).strip()))
-        elif isinstance(synonyms, str):
-            properties.append(Property(key='Synonym_1', value=synonyms.strip()))
+        properties.extend(handle_synonyms(record['SYNONYMS'], record))
 
-    if 'MOLECULAR-WEIGHT' in record:
-        properties.append(Property(key='MolecularWeight', value=str(record['MOLECULAR-WEIGHT'])))
-
-    if 'MONOISOTOPIC-MW' in record:
-        properties.append(Property(key='MonoisotopicWeight', value=str(record['MONOISOTOPIC-MW'])))
-
+    # 4. CHEMICAL-FORMULA - Special formatting for tuple structure
     if 'CHEMICAL-FORMULA' in record:
-        formula_parts = record['CHEMICAL-FORMULA']
-        if isinstance(formula_parts, list):
-            formula = ''
-            for part in formula_parts:
-                if isinstance(part, tuple) and len(part) == 2:
-                    element, count = part
-                    formula += f" {element} {count} "
-                else:
-                    formula += str(part)
-            properties.append(Property(key='ChemicalFormula', value=formula.strip()))
+        properties.extend(handle_chemical_formula(record['CHEMICAL-FORMULA'], record))
 
-    if 'INCHI' in record:
-        properties.append(Property(key='InChI', value=str(record['INCHI'])))
+    # ========================================================================
+    # PART 2: Dynamic parsing for ALL other fields
+    # ========================================================================
 
-    if 'INCHI-KEY' in record:
-        properties.append(Property(key='InChIKey', value=str(record['INCHI-KEY'])))
+    # Fields to skip (already handled above or handled elsewhere)
+    skip_fields = {
+        'UNIQUE-ID', 'DBLINKS', 'SYNONYMS', 'CHEMICAL-FORMULA',
+        'COMMON-NAME',  # Already in textLabel
+        'CITATIONS',    # Handled separately
+        'COMMENT',      # Handled separately
+        'CREDITS',      # Handled in comment source
+    }
 
-    if 'SMILES' in record:
-        properties.append(Property(key='SMILES', value=str(record['SMILES'])))
-
-    if 'GIBBS-0' in record:
-        properties.append(Property(key='GibbsFreeEnergy', value=str(record['GIBBS-0'])))
-
-    if 'TYPES' in record:
-        compound_type = record['TYPES']
-        if isinstance(compound_type, list):
-            compound_type = ', '.join(str(t) for t in compound_type)
-        properties.append(Property(key='CompoundType', value=str(compound_type)))
-
-    if 'ABBREV-NAME' in record:
-        properties.append(Property(key='AbbreviatedName', value=str(record['ABBREV-NAME'])))
-
-    if 'SYSTEMATIC-NAME' in record:
-        properties.append(Property(key='SystematicName', value=str(record['SYSTEMATIC-NAME'])))
+    # Parse all remaining fields dynamically
+    dynamic_props = create_dynamic_properties(record, skip_fields=skip_fields)
+    properties.extend(dynamic_props)
 
     return properties
 

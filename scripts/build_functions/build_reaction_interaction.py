@@ -4,6 +4,7 @@ from scripts.data_structure.wiki_data_structure import (
     CitationRef, Citation
 )
 from scripts.utils.HTML_cleaner import clean_text_label
+from scripts.utils.property_parser import create_dynamic_properties
 from scripts.parsing_functions import parsing_utils
 import uuid
 import re
@@ -217,6 +218,18 @@ def create_reaction_properties(record):
             properties.append(Property(key='ReactionTypes', value=types_text))
         else:
             properties.append(Property(key='ReactionType', value=str(types)))
+
+    # Dynamic parsing for all other fields
+    skip_fields = {
+        'UNIQUE-ID', 'COMMON-NAME', 'DBLINKS', 'EC-NUMBER', 'OFFICIAL-EC?',
+        'DELTAG0', 'SPONTANEOUS?', 'ORPHAN?', 'IN-PATHWAY', 'REACTION-DIRECTION',
+        'REACTION-BALANCE-STATUS', 'LEFT', 'RIGHT', 'PHYSIOLOGICALLY-RELEVANT?',
+        'STD-REDUCTION-POTENTIAL', 'ENZYME-REACTION-CLASS', 'ENZYMATIC-REACTION',
+        'CATALYZED-BY', 'RXN-LOCATIONS', 'TYPES',
+        'CITATIONS', 'COMMENT', 'CREDITS',
+    }
+    dynamic_props = create_dynamic_properties(record, skip_fields=skip_fields)
+    properties.extend(dynamic_props)
 
     return properties
 

@@ -6,6 +6,9 @@ from scripts.parsing_functions import parsing_utils
 from scripts.object2gmpl.gpml_writer import GPMLWriter
 from scripts.utils.HTML_cleaner import clean_text_label
 from scripts.utils import standard_graphics
+from scripts.utils.property_parser import (
+    create_dynamic_properties, handle_unique_id, handle_synonyms
+)
 import uuid
 import re
 
@@ -240,6 +243,18 @@ def create_gene_properties_from_record(record):
     # Additional gene feats
     if 'INTERRUPTED?' in record:
         properties.append(Property(key='Interrupted', value=str(record['INTERRUPTED?'])))
+
+    # ========================================================================
+    # Dynamic parsing for ALL other fields not explicitly handled above
+    # ========================================================================
+    skip_fields = {
+        'UNIQUE-ID', 'DBLINKS', 'SYNONYMS', 'PRODUCT', 'LEFT-END-POSITION',
+        'RIGHT-END-POSITION', 'TRANSCRIPTION-DIRECTION', 'COMPONENT-OF',
+        'CENTISOME-POSITION', 'TYPES', 'PRODUCT-STRING', 'INTERRUPTED?',
+        'COMMON-NAME', 'CITATIONS', 'COMMENT', 'CREDITS',
+    }
+    dynamic_props = create_dynamic_properties(record, skip_fields=skip_fields)
+    properties.extend(dynamic_props)
 
     return properties
 

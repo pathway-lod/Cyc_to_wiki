@@ -74,6 +74,12 @@ class GPMLAnalyzer:
         self.files_processed = 0
         self.files_failed = 0
 
+        # Property statistics
+        self.property_keys = defaultdict(int)  # Property key -> count
+        self.datanode_property_keys = defaultdict(int)  # DataNode property keys
+        self.interaction_property_keys = defaultdict(int)  # Interaction property keys
+        self.total_properties = 0
+
     def _create_stats_dict(self):
         """Create a statistics dictionary for pathways or reactions."""
         return {
@@ -117,6 +123,9 @@ class GPMLAnalyzer:
 
             # Process Citations
             self._process_citations(root, ns)
+
+            # Process Properties
+            self._process_properties(root, ns)
 
             self.files_processed += 1
 
@@ -324,6 +333,26 @@ class GPMLAnalyzer:
                     if citation_id:
                         self.unique_citations_without_either.add(citation_id)
 
+    def _process_properties(self, root, ns):
+        """Process Property elements from DataNodes and Interactions."""
+        # Process DataNode properties
+        for datanode in root.findall('.//gpml:DataNode', ns):
+            for prop in datanode.findall('.//gpml:Property', ns):
+                prop_key = prop.get('key', '')
+                if prop_key:
+                    self.property_keys[prop_key] += 1
+                    self.datanode_property_keys[prop_key] += 1
+                    self.total_properties += 1
+
+        # Process Interaction properties
+        for interaction in root.findall('.//gpml:Interaction', ns):
+            for prop in interaction.findall('.//gpml:Property', ns):
+                prop_key = prop.get('key', '')
+                if prop_key:
+                    self.property_keys[prop_key] += 1
+                    self.interaction_property_keys[prop_key] += 1
+                    self.total_properties += 1
+
     def analyze_directory(self, directory):
         """Analyze all GPML files in a directory."""
         gpml_files = []
@@ -453,7 +482,6 @@ class GPMLAnalyzer:
 
         # Publication Statistics
         print("\n" + "="*80)
-        print("PUBLICATION STATISTICS")
         print("="*80)
 
         print(f"\nTotal citations: {self.total_citations:,}")
@@ -506,51 +534,37 @@ class GPMLAnalyzer:
         # Reaction-specific stats
         self._print_file_type_stats("REACTION FILES", self.reaction_stats)
 
-        # Summary
+        # Property Statistics
         print("\n" + "="*80)
-        print("SUMMARY")
+        print("PROPERTY STATISTICS")
         print("="*80)
 
-        print(f"\nFiles processed: {self.files_processed:,}")
-        print(f"  - Pathway files: {self.pathway_files:,}")
-        print(f"  - Reaction files: {self.reaction_files:,}")
+        print(f"\nTotal properties: {self.total_properties:,}")
+        print(f"Unique property keys: {len(self.property_keys)}")
 
-        print(f"\nTotal interactions: {total_interactions:,}")
-        print(f"Unique interactions: {len(self.unique_interactions):,} (normalized, excl. anchor connections)")
+        print("\nTop 20 Property Keys (All Elements):")
+        print(f"{'Property Key':<40} {'Count':<15} {'%':<10}")
+        print("-"*65)
+        sorted_props = sorted(self.property_keys.items(), key=lambda x: x[1], reverse=True)[:20]
+        for prop_key, count in sorted_props:
+            pct = (count / self.total_properties * 100) if self.total_properties > 0 else 0
+            print(f"{prop_key:<40} {count:<15,} {pct:>6.1f}%")
 
-        print(f"\nTotal datanodes: {total_datanodes:,}")
-        print(f"Unique datanodes: {len(self.unique_datanodes):,}")
-        print(f"Total protein complexes: {self.total_complexes:,}")
-        print(f"Unique protein complexes: {len(self.unique_complexes):,}")
-        print(f"TOTAL (datanodes + complexes): {total_datanodes + self.total_complexes:,} ({len(self.unique_datanodes) + len(self.unique_complexes):,} unique)")
+        print("\nTop 15 DataNode Property Keys:")
+        print(f"{'Property Key':<40} {'Count':<15}")
+        print("-"*55)
+        sorted_dn_props = sorted(self.datanode_property_keys.items(), key=lambda x: x[1], reverse=True)[:15]
+        for prop_key, count in sorted_dn_props:
+            print(f"{prop_key:<40} {count:<15,}")
 
-        print(f"\nUnique proteins (all files): {len(unique_dn_by_type.get('Protein', set())):,}")
-        print(f"Unique protein complexes (all files): {len(self.unique_complexes):,}")
-        print(f"TOTAL unique proteins + complexes: {len(unique_dn_by_type.get('Protein', set())) + len(self.unique_complexes):,}")
+        if self.interaction_property_keys:
+            print("\nTop 10 Interaction Property Keys:")
+            print(f"{'Property Key':<40} {'Count':<15}")
+            print("-"*55)
+            sorted_int_props = sorted(self.interaction_property_keys.items(), key=lambda x: x[1], reverse=True)[:10]
+            for prop_key, count in sorted_int_props:
+                print(f"{prop_key:<40} {count:<15,}")
 
-        # Show pathway vs reaction breakdown
-        pathway_unique = len(self.pathway_stats['unique_datanodes'])
-        reaction_unique = len(self.reaction_stats['unique_datanodes'])
-        combined_unique = len(self.unique_datanodes)
-        shared_entities = pathway_unique + reaction_unique - combined_unique
-
-        print(f"\nDataNode uniqueness breakdown:")
-        print(f"  - Unique in pathway files: {pathway_unique:,}")
-        print(f"  - Unique in reaction files: {reaction_unique:,}")
-        print(f"  - Shared between both: {shared_entities:,}")
-        print(f"  - TOTAL unique (combined): {combined_unique:,}")
-
-        print(f"\nTotal placeholders: {self.total_placeholders:,}")
-        print(f"Unique placeholders: {len(self.unique_placeholders):,}")
-
-        print(f"\nTotal citations: {self.total_citations:,}")
-        print(f"Unique citations: {len(self.unique_citations):,}")
-        print(f"Citations with PubMed/DOI: {self.citations_with_pubmed + self.citations_with_doi:,} ({(self.citations_with_pubmed + self.citations_with_doi) / self.total_citations * 100:.1f}%)")
-
-        print(f"\nUnique pathway organisms: {len(self.pathway_organisms)}")
-        print(f"Unique protein species: {len(self.protein_species)}")
-
-        print("\n" + "="*80)
 
     def _print_file_type_stats(self, title, stats):
         """Print statistics for a specific file type (pathways or reactions)."""

@@ -52,6 +52,9 @@ def build_individual_pathways(builder, all_pathways, individual_pathways_dir, la
             # Build the pathway with specified layout
             pathway = builder.build_complete_pathway_with_genes(pathway_id, layout_type=layout_type, layout_params=layout_params)
 
+            # Deduplicate elements before exporting
+            pathway = builder.deduplicate_pathway_elements(pathway)
+
             # Create safe filename (just use pathway ID)
             safe_pathway_id = re.sub(r'[^a-zA-Z0-9_-]', '_', pathway_id)
             output_filename = f"{safe_pathway_id}.gpml"
