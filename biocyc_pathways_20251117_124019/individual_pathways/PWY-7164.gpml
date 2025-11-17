@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="chlorophyll a degradation III" organism="TAX-3055" source="PlantCyc">
+  <Description>&lt;b&gt;General Background&lt;/b&gt; Chlorophyll degradation, corresponding to the loss of green color, is an integral part of leaf senescence and fruit ripening |CITS:[16113212],[15012204],[10767575],[12675736][ 16669755]| in land plants. In those species, chlorophyll degradation may follow one of two routes, likely depending on the physiogical context in which it occurs. In |FRAME: PWY-5098 chlorophyll &lt;i&gt;a&lt;/i&gt; degradation I|, |FRAME: CPD-7061 pheophorbide &lt;i&gt;a&lt;/i&gt;| is broken down to |FRAME: CPD-10296 pyropheophorbide &lt;i&gt;a&lt;/i&gt;| via a two-step reaction |FRAME: 3.1.1.82-RXN 3.1.1.82| catalyzed by an enzyme known as phenophorbidase |CITS: [16228561]|. In contrast, green algae use the same initial reactions to break down |FRAME: CHLOROPHYLL-A chlorophyll &lt;i&gt;a&lt;/i&gt;|, but a distinct type of enzyme, called pheophorbide demethoxycarbonylase (PDC), catalyzes the breakdown of |FRAME: CPD-7061 pheophorbide &lt;i&gt;a&lt;/i&gt;| |CITS: [16228561]|. &lt;b&gt;About This Pathway&lt;/b&gt; One of the first step in this route of chlorophyll degradation is dephytylation, or removal of the phytol moiety of the compound. This step is catalyzed by chlorophyllases which have been described in several plants species (for review see |CITS:[16448336]|) and acts primarily on chlorophyll &lt;i&gt;a&lt;/i&gt;. The second enzyme of the pathway, Mg dechelatase, remains elusive. This enzyme catalyzes the release of Mg&lt;sup&gt;2+&lt;/sup&gt; from chlorophyllide &lt;i&gt;a&lt;/i&gt; in exchange from two protons to form pheophorbide &lt;i&gt;a&lt;/i&gt;. Since the purification of the protein has been unsuccessful and has led to the detection of a low-molecular-weight compound rather than a protein, the removal of Mg&lt;sup&gt;2+&lt;/sup&gt; from chlorophyllide &lt;i&gt;a&lt;/i&gt; has been postulated to be performed by a &apos;Mg-dechelating substance&apos;, or MCS. It is uncertain whether MCS represents an active cofactor of Mg-dechelatase. The structure of either Mg-dechelatase or MCS remains to be determined |CITS:[16448336]|. The final step in this pathway is catalyzed by a class of enzymes only detected in algae to date. The exact product(s) of the pheophorbide demethoxycarbonylase (PDC) enzyme have not been identified, but there is experimental evidence of PDC activity in |FRAME: TAX-3055 &lt;i&gt;Chlamydomonas reinhardtii&lt;/i&gt;| |CITS: [16228561]|.</Description>
+  <Authors>
+    <Author name="zhang" />
+    <Author name="PMN" />
+    <Author name="dreher" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-7164" />
+  <Property key="Type" value="Chlorophyll-A-Degradation" />
+  <Property key="ReactionCount" value="3" />
+  <Property key="ReactionIDs" value="RXN-13940, RXN-7739, RXN-7738" />
+  <Property key="PredecessorCount" value="3" />
+  <Property key="PrimaryCompoundCount" value="2" />
+  <Property key="PathwayLinks" value="(CHLOROPHYLL-A PWY-5086)" />
+  <Property key="Organism" value="TAX-3055" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_PUB_16228561" />
+  <CitationRef elementRef="citation_PUB_16448336" />
+  <Graphics boardWidth="1200" boardHeight="800" />
+  <DataNodes>
+    <DataNode elementId="AT5G43860" textLabel="CLH2" type="GeneProduct">
+      <Xref identifier="NM_123753" dataSource="Entrez Gene" />
+      <Graphics centerX="100" centerY="50" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT5G43860" />
+      <Property key="AlternativeId_Entrez" value="NM_123753" />
+      <Property key="Product" value="AT5G43860-MONOMER" />
+      <Property key="StartPosition" value="17647677" />
+      <Property key="EndPosition" value="17649539" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="Accession1" value="AT5G43860" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="AT1G19670" textLabel="CLH1" type="GeneProduct">
+      <Xref identifier="NM_101823" dataSource="Entrez Gene" />
+      <Graphics centerX="220" centerY="50" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT1G19670" />
+      <Property key="AlternativeId_Entrez" value="NM_101823" />
+      <Property key="Synonym_1" value="ATHCOR1" />
+      <Property key="Product" value="AT1G19670-MONOMER" />
+      <Property key="StartPosition" value="6803602" />
+      <Property key="EndPosition" value="6805035" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="Accession1" value="AT1G19670" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+      <CitationRef elementRef="citation_PUB_11950974" />
+    </DataNode>
+    <DataNode elementId="AT5G43860-MONOMER" textLabel="chlorophyllase" type="Protein">
+      <Xref identifier="Q9M7I7" dataSource="uniprot" />
+      <Graphics centerX="150" centerY="215" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">The &lt;i&gt;Arabidopsis thaliana CLH2&lt;/i&gt; gene was expressed in &lt;i&gt;E. coli&lt;/i&gt; and shown to encode a protein with chlorophyllase activity. This enzyme catalyzes the hydrolysis of the ester bond of both chlorophyll &lt;i&gt;a&lt;/i&gt;, producing chlorophyllide &lt;i&gt;a&lt;/i&gt; and phytol |CITS:[10611389]|. Unlike its homologue |FRAME:AT1G19670|, expression of &lt;i&gt;CLH2&lt;/i&gt; is not regulated by jasmonate |CITS:[10611389]|.</Comment>
+      <Property key="UniqueID" value="AT5G43860-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT5G43860.1" />
+      <Property key="AlternativeId_Uniprot" value="Q9M7I7" />
+      <Property key="AlternativeId_Pid" value="NP_199199" />
+      <Property key="Catalyzes" value="RXN-6500, RXN-12394" />
+      <Property key="CatalyzesCount" value="2" />
+      <Property key="Accession1" value="AT5G43860.1" />
+      <Property key="Gene" value="AT5G43860" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_11950974" />
+      <CitationRef elementRef="citation_PUB_10611389" />
+    </DataNode>
+    <DataNode elementId="AT1G19670-MONOMER" textLabel="chlorophyllase" type="Protein">
+      <Xref identifier="AT1G19670.1" dataSource="TAIR" />
+      <Graphics centerX="300" centerY="215" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">The &lt;i&gt;Arabidopsis thaliana CLH1&lt;/i&gt; gene was expressed in &lt;i&gt;E. coli&lt;/i&gt; and shown to encode a protein with chlorophyllase activity. This enzyme catalyzes the hydrolysis of the ester bond of both chlorophyll &lt;i&gt;a&lt;/i&gt; and &lt;i&gt;b&lt;/i&gt; (with a preference for chlorophyll &lt;i&gt;a&lt;/i&gt;), producing chlorophyllide &lt;i&gt;a&lt;/i&gt; and &lt;i&gt;b&lt;/i&gt;, respectively, and phytol |CITS:[11950974]|. The hydrolytic esterase activity of the enzyme appears to be very specific to chlorophylls. Although chlorophyllases have been shown in several species to be glycosylated &lt;i&gt;in vivo&lt;/i&gt; |CITS:[terpstra81],[tsuchiya97]|, and their activity enhanced by divalent cations and some detergents |CITS:[terpstra80]|, the &lt;i&gt;Arabidopsis&lt;/i&gt; recombinant protein produced in &lt;i&gt;E. coli&lt;/i&gt; was functional and required no lipids or detergents for activity |CITS:[11950974]|. Additionally, it was shown that the protein was equally efficient at pH 6.0 and 7.5; and stable at 4 ºC but less stable at 37 ºC. Its activity was greatly reduced in the presence of 0.2% to 1.0% (v/v) Triton X-100 or in acetone above 40% (v/v) |CITS:[11950974]|. Unlike its homologue |FRAME:AT5G43860|, expression of &lt;i&gt;CLH1&lt;/i&gt; is upregulated by jasmonate |CITS:[10611389]|.</Comment>
+      <Property key="UniqueID" value="AT1G19670-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT1G19670.1" />
+      <Property key="AlternativeId_Pid" value="NP_564094" />
+      <Property key="Synonym_1" value="chlorophyll-chlorophyllido hydrolase" />
+      <Property key="Synonym_2" value="Chlase" />
+      <Property key="Catalyzes" value="RXN-4771, RXN-12393" />
+      <Property key="CatalyzesCount" value="2" />
+      <Property key="Accession1" value="AT1G19670.1" />
+      <Property key="Gene" value="AT1G19670" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_10611389" />
+      <CitationRef elementRef="citation_PUB_11950974" />
+      <CitationRef elementRef="citation_PUB_TERPSTRA81" />
+      <CitationRef elementRef="citation_PUB_TSUCHIYA97" />
+      <CitationRef elementRef="citation_PUB_TERPSTRA80" />
+    </DataNode>
+    <DataNode elementId="MONOMER-17834" textLabel="pheophorbide demethoxycarbonylase" type="Protein" groupRef="CPLX-8597">
+      <Xref identifier="MONOMER-17834" dataSource="plantcyc" />
+      <Graphics centerX="450.0" centerY="215" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="MONOMER-17834" />
+      <Property key="ComponentOf" value="CPLX-8597" />
+      <Property key="Gene" value="G-15489" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="MolecularWeightExp" value="87." />
+      <Property key="MolecularWeightKd" value="87." />
+      <Property key="Species" value="TAX-3055" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="200" centerY="400" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="ChemicalFormula" value="(H 1)" />
+      <Property key="AtomCharges" value="(1 1)" />
+      <Property key="Gibbs0" value="0.42906138" />
+      <Property key="Inchi" value="InChI=1S/p+1" />
+      <Property key="InchiKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicMw" value="1.0078250321" />
+      <Property key="NonStandardInchi" value="InChI=1S/p+1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="[H+]" />
+    </DataNode>
+    <DataNode elementId="WATER" textLabel="H₂O" type="Metabolite">
+      <Xref identifier="XLYOFNOQVPJJNP-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="350" centerY="400" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="WATER" />
+      <Property key="AlternativeId_Bigg" value="33474" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15377" />
+      <Property key="AlternativeId_Hmdb" value="HMDB02111" />
+      <Property key="AlternativeId_Chemspider" value="937" />
+      <Property key="AlternativeId_Chebi" value="15377" />
+      <Property key="AlternativeId_Pubchem" value="962" />
+      <Property key="AlternativeId_LigandCpd" value="C00001" />
+      <Property key="AlternativeId_Cas" value="7732-18-5" />
+      <Property key="Synonym_1" value="H&lt;sub&gt;2&lt;/sub&gt;0" />
+      <Property key="Synonym_2" value="H2O" />
+      <Property key="Synonym_3" value="H20" />
+      <Property key="Synonym_4" value="hydrogen oxide" />
+      <Property key="Synonym_5" value="water" />
+      <Property key="ChemicalFormula" value="(H 2) (O 1)" />
+      <Property key="Gibbs0" value="-36.144756" />
+      <Property key="Inchi" value="InChI=1S/H2O/h1H2" />
+      <Property key="InchiKey" value="InChIKey=XLYOFNOQVPJJNP-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="18.015" />
+      <Property key="MonoisotopicMw" value="18.0105646863" />
+      <Property key="NonStandardInchi" value="InChI=1S/H2O/h1H2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="O" />
+    </DataNode>
+    <DataNode elementId="CHLOROPHYLLIDE-A" textLabel="chlorophyllide a" type="Metabolite">
+      <Xref identifier="122706261" dataSource="PubChem-compound" />
+      <Graphics centerX="500" centerY="400" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CHLOROPHYLLIDE-A" />
+      <Property key="AlternativeId_Metanetx" value="MNXM631" />
+      <Property key="AlternativeId_Pubchem" value="122706261" />
+      <Property key="AlternativeId_Chebi" value="83348" />
+      <Property key="AlternativeId_Cas" value="14897-06-4" />
+      <Property key="AlternativeId_LigandCpd" value="C02139" />
+      <Property key="Synonym_1" value="chlorophyllide" />
+      <Property key="ChemicalFormula" value="(C 35) (H 32) (N 4) (O 5) (MG 1)" />
+      <Property key="AtomCharges" value="(41 -1), (31 -1)" />
+      <Property key="Gibbs0" value="309.47763" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="612.967" />
+      <Property key="MonoisotopicMw" value="614.2379621227001" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C=CC4(\C(/C)=C5(\C=C7([C@@H](C)[C@H](CCC(=O)[O-])C(\C6(/[C@@H-](C(OC)=O)C(=O)C1(\C(\N2([Mg]N(C(/C=C3(C(/C)=C(CC)/C(\C=C(C(\C)=1)/2)=N3))=4)5))=6)))=N7)))" />
+    </DataNode>
+    <DataNode elementId="CHLOROPHYLL-A" textLabel="chlorophyll a" type="Metabolite">
+      <Xref identifier="122706195" dataSource="PubChem-compound" />
+      <Graphics centerX="200" centerY="500" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: Chlorophylls Chlorophyll| is a green photosynthetic pigment found in photosynthetic plants, algae, and bacteria. Its name is derived from ancient Greek: &lt;i&gt;chloros&lt;/i&gt; = green and &lt;i&gt;phyllon&lt;/i&gt; = leaf. Chlorophyll functions as the main light harvesting pigment in photosynthesis, capturing photons and transfering them to the reaction centers. Chlorophyll absorbs mostly in the blue and, to a lesser extent, red portions of the electromagnetic spectrum, hence its intense green color. There are several variants of chlorophyll (|FRAME: CHLOROPHYLL-A|, |FRAME: CPD-10334|, |FRAME: CHLOROPHYLL-B|, |FRAME: CPD-18895|, |FRAME: CPD-10336|, |FRAME: CPD-10337|, |FRAME: CPD-10335|, |FRAME: CPD-18896|, |FRAME: CPD-18897| and |FRAME: CPD-18898|).</Comment>
+      <Property key="UniqueID" value="CHLOROPHYLL-A" />
+      <Property key="AlternativeId_Seed" value="cpd03148" />
+      <Property key="AlternativeId_Metanetx" value="MNXM46466" />
+      <Property key="AlternativeId_Pubchem" value="122706195" />
+      <Property key="AlternativeId_Hmdb" value="HMDB38578" />
+      <Property key="AlternativeId_Chebi" value="58416" />
+      <Property key="AlternativeId_Knapsack" value="C00001528" />
+      <Property key="AlternativeId_Cas" value="479-61-8" />
+      <Property key="AlternativeId_LigandCpd" value="C05306" />
+      <Property key="Synonym_1" value="chlorophyll &lt;i&gt;a&lt;/i&gt; (phytol)" />
+      <Property key="ChemicalFormula" value="(C 55) (H 71) (N 4) (O 5) (MG 1)" />
+      <Property key="AtomCharges" value="(51 -1)" />
+      <Property key="Gibbs0" value="760.4776" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="892.495" />
+      <Property key="MonoisotopicMw" value="892.5353133425001" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C=CC4(\C(/C)=C5(\C=C7([C@@H](C)[C@H](CCC(=O)OC/C=C(C)/CCC[C@H](C)CCC[C@H](C)CCCC(C)C)C(\C6(/[C@@H-](C(OC)=O)C(=O)C1(\C(\N2([Mg]N(C(/C=C3(C(/C)=C(CC)/C(\C=C(C(\C)=1)/2)=N3))=4)5))=6)))=N7)))" />
+    </DataNode>
+    <DataNode elementId="CPD-10296" textLabel="pyropheophorbide a" type="Metabolite">
+      <Xref identifier="IEGUQQKIFBYXLG-CDIXLCFRSA-M" dataSource="InChIKey" />
+      <Graphics centerX="350" centerY="500" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-10296" />
+      <Property key="AlternativeId_Pubchem" value="135926599" />
+      <Property key="AlternativeId_Seed" value="cpd18047" />
+      <Property key="AlternativeId_Metanetx" value="MNXM2556" />
+      <Property key="AlternativeId_Refmet" value="Pyropheophorbide a" />
+      <Property key="AlternativeId_Chebi" value="58742" />
+      <Property key="AlternativeId_LigandCpd" value="C18064" />
+      <Property key="ChemicalFormula" value="(C 33) (H 33) (N 4) (O 3)" />
+      <Property key="AtomCharges" value="(40 -1)" />
+      <Property key="Gibbs0" value="394.60492" />
+      <Property key="Inchi" value="InChI=1S/C33H34N4O3/c1-7-19-15(3)23-12-25-17(5)21(9-10-30(39)40)32(36-25)22-11-29(38)31-18(6)26(37-33(22)31)14-28-20(8-2)16(4)24(35-28)13-27(19)34-23/h7,12-14,17,21,34,37H,1,8-11H2,2-6H3,(H,39,40)/p-1/b23-12-,24-13-,25-12-,26-14-,27-13-,28-14-,32-22-/t17-,21-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=IEGUQQKIFBYXLG-CDIXLCFRSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="533.649" />
+      <Property key="MonoisotopicMw" value="534.2630909785" />
+      <Property key="NonStandardInchi" value="InChI=1S/C33H34N4O3/c1-7-19-15(3)23-12-25-17(5)21(9-10-30(39)40)32(36-25)22-11-29(38)31-18(6)26(37-33(22)31)14-28-20(8-2)16(4)24(35-28)13-27(19)34-23/h7,12-14,17,21,34,37H,1,8-11H2,2-6H3,(H,39,40)/p-1/b23-12-,24-13-,25-12-,26-14-,27-13-,28-14-,32-22-/t17-,21-/m0/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C=CC4(\C(/C)=C3(\C=C6([C@@H](C)[C@H](CCC(=O)[O-])C(/C5(\CC(=O)C1(\C(\NC(/C(\C)=1)=C/C2(/C(\CC)=C(C)\C(\N=2)=C\C(\N3)=4))=5)))=N\6)))" />
+    </DataNode>
+    <DataNode elementId="PHYTOL" textLabel="phytol" type="Metabolite">
+      <Xref identifier="BOTWFXYSPFMFNR-PYDDKJGSSA-N" dataSource="InChIKey" />
+      <Graphics centerX="500" centerY="500" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PHYTOL" />
+      <Property key="AlternativeId_Zinc" value="ZINC000003861087" />
+      <Property key="AlternativeId_Seed" value="cpd00999" />
+      <Property key="AlternativeId_Metanetx" value="MNXM2712" />
+      <Property key="AlternativeId_Refmet" value="Phytol" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC17327" />
+      <Property key="AlternativeId_Hmdb" value="HMDB02019" />
+      <Property key="AlternativeId_Chemspider" value="4444094" />
+      <Property key="AlternativeId_Pubchem" value="5280435" />
+      <Property key="AlternativeId_Chebi" value="17327" />
+      <Property key="AlternativeId_LigandCpd" value="C01389" />
+      <Property key="Synonym_1" value="&lt;i&gt;trans&lt;/i&gt;-phytol" />
+      <Property key="Synonym_2" value="(2&lt;i&gt;E&lt;/i&gt;,7&lt;i&gt;R&lt;/i&gt;,11&lt;i&gt;R&lt;/i&gt;)-3,7,11,15-tetramethyl-2-hexadecen-1-ol" />
+      <Property key="ChemicalFormula" value="(C 20) (H 40) (O 1)" />
+      <Property key="Gibbs0" value="411.0348" />
+      <Property key="Inchi" value="InChI=1S/C20H40O/c1-17(2)9-6-10-18(3)11-7-12-19(4)13-8-14-20(5)15-16-21/h15,17-19,21H,6-14,16H2,1-5H3/b20-15+/t18-,19-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=BOTWFXYSPFMFNR-PYDDKJGSSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="296.535" />
+      <Property key="MonoisotopicMw" value="296.3079159061" />
+      <Property key="NonStandardInchi" value="InChI=1S/C20H40O/c1-17(2)9-6-10-18(3)11-7-12-19(4)13-8-14-20(5)15-16-21/h15,17-19,21H,6-14,16H2,1-5H3/b20-15+/t18-,19-/m1/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC(C)CCC[C@@H](C)CCC[C@@H](C)CCCC(\C)=C/CO" />
+    </DataNode>
+    <DataNode elementId="MG_2" textLabel="Mg²⁺" type="Metabolite">
+      <Xref identifier="JLVVSXFLKOJNIY-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="200" centerY="600" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">Many hundreds of enzymes require magnesium ions (Mg&lt;sup&gt;2+&lt;/sup&gt;) for their catalytic action, including all enzymes using or synthesizing ATP and those that use other nucleotides to synthesize DNA and RNA. The interaction between magnesium ions and phosphate makes magnesium essential to basic nucleic acid chemistry, and the common ATP molecule is normally found in a chelate with a magnesium ion. Photosynthetic organisms require Mg for the biosynthesis of chlorophyll, which is essential for photosynthesis. The function of magnesium in the center of the porphyrin ring in chlorophyll is similar to that of iron in the center of the porphyrin ring in heme. Mg is the fourth-most abundant element in the human body (Ca&lt;sup&gt;2+&lt;/sup&gt; &gt; K&lt;sup&gt;+&lt;/sup&gt; &gt; Na&lt;sup&gt;+&lt;/sup&gt; &gt; Mg&lt;sup&gt;2+&lt;/sup&gt;).</Comment>
+      <Property key="UniqueID" value="MG+2" />
+      <Property key="AlternativeId_Mediadb" value="compounds/292/" />
+      <Property key="AlternativeId_Seed" value="cpd00254" />
+      <Property key="AlternativeId_Metanetx" value="MNXM653" />
+      <Property key="AlternativeId_Bigg" value="mg2" />
+      <Property key="AlternativeId_Drugbank" value="DB01378" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00547" />
+      <Property key="AlternativeId_Chemspider" value="865" />
+      <Property key="AlternativeId_Pubchem" value="888" />
+      <Property key="AlternativeId_Chebi" value="18420" />
+      <Property key="AlternativeId_LigandCpd" value="C00305" />
+      <Property key="Synonym_1" value="magnesium" />
+      <Property key="Synonym_2" value="magnesium(II)" />
+      <Property key="Synonym_3" value="Mg&lt;SUP&gt;++&lt;/SUP&gt;" />
+      <Property key="Synonym_4" value="magnesium ion" />
+      <Property key="Synonym_5" value="Mg&lt;sup&gt;II&lt;/sup&gt;" />
+      <Property key="ChemicalFormula" value="(MG 1)" />
+      <Property key="AtomCharges" value="(1 2)" />
+      <Property key="CofactorsOf" value="ENZRXNQT-6791, ENZRXN-26427, ENZRXN-26429, ENZRXN-26432, ENZRXN-26430, ENZRXN-26428, ENZRXN-26433, ENZRXN-26431, ENZRXN-25494, ENZRXN-25493, ENZRXN-25491, ENZRXN-25495, ENZRXN-25485, ENZRXN-25486, ENZRXN-25492, ENZRXN-25487, ENZRXN-22246, ENZRXN-13303, ENZRXN-22247, ENZRXN-17490, ENZRXNQT-10488, ENZRXNQT-10489, ENZRXNQT-4330, ENZRXNQT-4634, ENZRXN-22248, ENZRXN-18398, ENZRXN-18397, ENZRXNQT-5555, ENZRXN-1385, ENZRXN-16918, ENZRXNQT-9531, ENZRXN-22245, ENZRXN-22230, ENZRXN-23941, ENZRXN-1082, ENZRXN-13820, ENZRXN-16587, ENZRXN-13579, ENZRXN-18421, ENZRXN-18293, ENZRXN-15934, ENZRXN-21855, ENZRXN-21852, ENZRXN-21854, ENZRXN-21851, ENZRXN2OL-2454, ENZRXN2OL-140, ENZRXN-19990, ENZRXN-17480, ENZRXN-12187, ENZRXN-12190, ENZRXN-12903, ENZRXN-12141, ENZRXN-14739, ENZRXN-14663, ENZRXN-12030, ENZRXN-14702, ENZRXN-14703, ENZRXN-9081, ENZRXN-9082, ENZRXN-13432, ENZRXN-13436, ENZRXN-11722, ENZRXN-11708, ENZRXN-14447, ENZRXN-12080, ENZRXN-14390, ENZRXN-14391, ENZRXN-13286, ENZRXN-13674" />
+      <Property key="ComponentOf" value="CPD0-1651, MGCL2" />
+      <Property key="Gibbs0" value="-1.2482376" />
+      <Property key="Inchi" value="InChI=1S/Mg/q+2" />
+      <Property key="InchiKey" value="InChIKey=JLVVSXFLKOJNIY-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="24.305" />
+      <Property key="MonoisotopicMw" value="23.9850419" />
+      <Property key="NonStandardInchi" value="InChI=1S/Mg/q+2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="ProstheticGroupsOf" value="ENZRXN-2075, ENZRXN-18815, ENZRXN-18816, ENZRXN-18814, ENZRXN-2462" />
+      <Property key="Regulates" value="REG-13300, REG-13914, REG-13924, REG18C3-26, REG18C3-27, REG18C3-31, REG18C3-29, REG-12036, REG-12516, REG-12518, REG-12520, REG-15177, REG-14539, REG0-10002, REG-13173, REG-13178, REG-8219, REG-6606, REG-14990, REG-14989, REG-14189, REG-14187, REG-12882, REG-14993, REG-6253, REG-10428, REG-12089, REG-14173, REG-14179, REG-14644, REG-14640, REG-14712, REG-14717, REG-14797, REG-14808, REG-14840, REG-14820, REG-14825, REG-14845, REG-14860, REG-14855, REG-14830, REG-14835, REG-14850, REG-14865, REG-7387, REG-14602, REG0-9497, REG0-9500, REG0-8760, REG-13701, REG-13698, REG-13704, REG-9132, REG-8291, REG-6153, REG-8298, REG-6242, REG-12747, REG-13414, REG-12497, REG-8374, REG-9120, REG-12180, REG-12181, REG-12333, REG-5970, REG0-7231, REG-7178, REG-7172, REG-7184, REG-11321, REG0-8278, REG-6708, REG-6909, REG0-7961, REG-12168, REG0-9314, REG-9479, REG-11129, REG-8657, REG-12030, REG-11017, REG-12107, REG-8057, REG0-7347, REG-8676, REG-8673, REG-8242, REG-11822, REG-11823, REG-11829, REG-8062, REG-9049, REG0-7044, REG-11293, REG-10806, REG-10607, REG0-7218, REG-12133, REG-8034, REG-9453, REG-11815, REG-7099, REG-7419, REG-7426, REG-10417, REG-6092, REG-6497" />
+      <Property key="Smiles" value="[Mg+2]" />
+    </DataNode>
+    <DataNode elementId="CPD-7061" textLabel="pheophorbide a" type="Metabolite">
+      <Xref identifier="UXWYEAZHZLZDGM-ZVEVZSNKSA-M" dataSource="InChIKey" />
+      <Graphics centerX="350" centerY="600" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-7061" />
+      <Property key="AlternativeId_Pubchem" value="135887872" />
+      <Property key="AlternativeId_Seed" value="cpd18004" />
+      <Property key="AlternativeId_Metanetx" value="MNXM91266" />
+      <Property key="AlternativeId_Chebi" value="58687" />
+      <Property key="AlternativeId_Chemspider" value="4481064" />
+      <Property key="AlternativeId_LigandCpd" value="C18021" />
+      <Property key="Synonym_1" value="pheide &lt;i&gt;a&lt;/i&gt;" />
+      <Property key="ChemicalFormula" value="(C 35) (H 34) (N 4) (O 5)" />
+      <Property key="AtomCharges" value="(41 -1), (31 -1)" />
+      <Property key="Gibbs0" value="317.59985" />
+      <Property key="Inchi" value="InChI=1S/C35H35N4O5/c1-8-19-15(3)22-12-24-17(5)21(10-11-28(40)41)32(38-24)30-31(35(43)44-7)34(42)29-18(6)25(39-33(29)30)14-27-20(9-2)16(4)23(37-27)13-26(19)36-22/h8,12-14,17,21,36,39H,1,9-11H2,2-7H3,(H,40,41)/q-1/p-1/b22-12-,23-13-,24-12-,25-14-,26-13-,27-14-,32-30-/t17-,21-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=UXWYEAZHZLZDGM-ZVEVZSNKSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="590.677" />
+      <Property key="MonoisotopicMw" value="592.2685702869001" />
+      <Property key="NonStandardInchi" value="InChI=1S/C35H36N4O5/c1-8-19-15(3)22-12-24-17(5)21(10-11-28(40)41)32(38-24)30-31(35(43)44-7)34(42)29-18(6)25(39-33(29)30)14-27-20(9-2)16(4)23(37-27)13-26(19)36-22/h8,12-14,17,21,31,36,39H,1,9-11H2,2-7H3,(H,40,41)/p-1/b22-12-,23-13-,24-12-,25-14-,26-13-,27-14-,32-30-/t17-,21-,31+/m0/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C=CC1(\C3(\NC(/C(\C)=1)=C/C2([C@@H](C)[C@H](CCC(=O)[O-])C(\N=2)=C5([C-](C(OC)=O)C(=O)C6(\C(/C)=C(\C=C4(C(/CC)=C(C)/C(\C=3)=N\4))/NC/5=6)))))" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="145.0" y="50" elementRef="AT5G43860" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="105.0" y="215" elementRef="AT5G43860-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_1_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_1_0_0" x="265.0" y="50" elementRef="AT1G19670" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_1_0_0" arrowHead="TranscriptionTranslation" x="255.0" y="215" elementRef="AT1G19670-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-13940">
+      <Xref identifier="RXN-13940" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-13940_start" x="395.0" y="600" elementRef="CPD-7061" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-13940_end" arrowHead="Conversion" x="305.0" y="500" elementRef="CPD-10296" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-13940_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-13940" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-7164" />
+      <Property key="ReactionEquation" value="CPD-7061 =&gt; CPD-10296" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED-UNFIXABLE" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-21183" />
+      <Property key="ReactionTypes" value="Chemical-Reactions, Small-Molecule-Reactions" />
+      <Property key="AtomMappings" value=":UNBALANCED" />
+      <Property key="CannotBalance?" value="T" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <CitationRef elementRef="citation_PUB_BEALE09" />
+      <CitationRef elementRef="citation_PUB_16228561" />
+    </Interaction>
+    <Interaction elementId="RXN-13940_ENZRXN-21183">
+      <Waypoints>
+        <Point elementId="RXN-13940_ENZRXN-21183_start" x="450.0" y="227.5" elementRef="MONOMER-17834" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-13940_ENZRXN-21183_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-13940_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-7739">
+      <Xref identifier="EC-4.99.1.10" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-7739_start" x="545.0" y="400" elementRef="CHLOROPHYLLIDE-A" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-7739_end" arrowHead="Conversion" x="305.0" y="600" elementRef="CPD-7061" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-7739_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-7739" />
+      <Property key="EC_Number" value="EC-4.99.1.10" />
+      <Property key="Pathways" value="PWY-5098, PWY-7164" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="CHLOROPHYLLIDE-A + PROTON =&gt; CPD-7061 + MG+2" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="6.015869" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="^coefficient" value="2" />
+    </Interaction>
+    <Interaction elementId="RXN-7739_anchor_reactant_1">
+      <Xref identifier="EC-4.99.1.10" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-7739_anchor_reactant_start_1" x="245.0" y="400" elementRef="PROTON" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-7739_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-7739_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-7739_anchor_product_1">
+      <Xref identifier="EC-4.99.1.10" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-7739_anchor_product_start_1" x="0" y="0" elementRef="RXN-7739_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-7739_anchor_product_end_1" arrowHead="Conversion" x="155.0" y="600" elementRef="MG_2" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-7738">
+      <Xref identifier="EC-3.1.1.14" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-7738_start" x="245.0" y="500" elementRef="CHLOROPHYLL-A" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-7738_end" arrowHead="Conversion" x="455.0" y="400" elementRef="CHLOROPHYLLIDE-A" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-7738_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-7738" />
+      <Property key="EC_Number" value="EC-3.1.1.14" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-5098, PWY-7164" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="CHLOROPHYLL-A + WATER =&gt; PROTON + CHLOROPHYLLIDE-A + PHYTOL" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXN-12393, ENZRXN-12394" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="NIL" />
+      <Property key="Gibbs0" value="-3.3913574" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-7738_ENZRXN-12394">
+      <Waypoints>
+        <Point elementId="RXN-7738_ENZRXN-12394_start" x="150" y="227.5" elementRef="AT5G43860-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-7738_ENZRXN-12394_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-7738_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-7738_ENZRXN-12393">
+      <Waypoints>
+        <Point elementId="RXN-7738_ENZRXN-12393_start" x="300" y="227.5" elementRef="AT1G19670-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-7738_ENZRXN-12393_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-7738_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-7738_anchor_reactant_1">
+      <Xref identifier="EC-3.1.1.14" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-7738_anchor_reactant_start_1" x="395.0" y="400" elementRef="WATER" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-7738_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-7738_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-7738_anchor_product_0">
+      <Xref identifier="EC-3.1.1.14" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-7738_anchor_product_start_0" x="0" y="0" elementRef="RXN-7738_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-7738_anchor_product_end_0" arrowHead="Conversion" x="155.0" y="400" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-7738_anchor_product_2">
+      <Xref identifier="EC-3.1.1.14" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-7738_anchor_product_start_2" x="0" y="0" elementRef="RXN-7738_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-7738_anchor_product_end_2" arrowHead="Conversion" x="455.0" y="500" elementRef="PHYTOL" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Groups>
+    <Group elementId="CPLX-8597" textLabel="pheophorbide demethoxycarbonylase" type="Complex">
+      <Xref identifier="CPLX-8597" dataSource="plantcyc" />
+      <Graphics centerX="450" centerY="215" width="140" height="100" textColor="666666" fontName="Arial" fontSize="10" borderColor="9900CC" borderStyle="Dashed" borderWidth="2.0" fillColor="F5E6FF" shapeType="Rectangle" zOrder="-1" />
+      <Comment source="AU4FS-1, PMN, dreher">Pheophorbide demethoxycarbonylase (PDC) activity was originally discovered in |FRAME: TAX-3055 &lt;i&gt;Chlamydomonas reinhardtii&lt;/i&gt;| based on the characterization of a mutant that lacks |FRAME: CHLOROPHYLL-B chlorophyll b| |CITS: [6454054][DOI97][11382812][16228561]|. Although to date no gene encoding the enzyme has been found the homodimeric nature and catalytic properties of PDC have been experimentally determined |CITS: [11382812][16228561]|. A preliminary search for PDC activity in several land plant species was unsuccessful indicating that PDC might be specific to green algae |CITS: [16228561]|.</Comment>
+      <Property key="UniqueID" value="CPLX-8597" />
+      <Property key="ComplexComponents" value="MONOMER-17834" />
+      <Property key="ComponentCount" value="1" />
+      <Property key="IsComplex" value="true" />
+      <Property key="Catalyzes" value="RXN-21183" />
+      <Property key="^coefficient" value="2" />
+      <Property key="InstanceNameTemplate" value="CPLX-*" />
+      <Property key="MolecularWeightExp" value="170." />
+      <Property key="MolecularWeightKd" value="170." />
+      <Property key="Species" value="TAX-3055" />
+      <CitationRef elementRef="citation_PUB_16228561" />
+    </Group>
+  </Groups>
+  <Citations>
+    <Citation elementId="citation_PUB_16448336">
+      <Xref identifier="16448336" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_TERPSTRA81">
+      <Xref identifier="PUB-TERPSTRA81 | Identification of chlorophyllase as a glycoprotein (Terpstra, W, 1981)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_PUB_11950974">
+      <Xref identifier="11950974" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_BEALE09">
+      <Xref identifier="PUB-BEALE09 | Chapter 20: Biosynthesis of Chlorophylls
+and Hemes (Beale, SI, 2009)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_PUB_TSUCHIYA97">
+      <Xref identifier="PUB-TSUCHIYA97 | Purification and characterization of two isozymes of chlorophyllase from
+Purification and characteri... (Tsuchiya, T., Ohta, H., Masuda, T. et al., 1997)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_PUB_TERPSTRA80">
+      <Xref identifier="PUB-TERPSTRA80 | Influence of lecithin liposomes on chlorophyllase-catalyzed chlorophyll hydrolysis: comparison of in... (Terpstra, W., 1980)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_PUB_16228561">
+      <Xref identifier="16228561" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_10611389">
+      <Xref identifier="10611389" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

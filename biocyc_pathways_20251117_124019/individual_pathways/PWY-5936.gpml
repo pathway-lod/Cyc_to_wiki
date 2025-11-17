@@ -1,0 +1,922 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="xyloglucan biosynthesis" organism="ORG-5993, TAX-3702, TAX-3888" source="PlantCyc">
+  <Description>&lt;b&gt;General Background&lt;/b&gt; |FRAME: Xyloglucan Xyloglucan| is the major component of the |FRAME: Hemicelluloses| in cell walls of dicotyledon type I and non-graminaceous monocotyledons plants. It also exists in some seeds of trees growing in the tropical zone. Xyloglucan interacts with cellulose microfibrils via hydrogen bonds to form a structural network that is assumed to play a key role in cell wall integrity. Cross-linking between the xyloglucan chains is a major factor in the stability of the resulting three-dimensional matrix |CITS: [Whitney95]|. Xyloglucan has a backbone of &amp;beta;-1,4-linked glucose residues, most of which are substituted in C-6 by &amp;alpha;-D-xylosyl residues |CITS: [8252539]|. Some of the xylosyl residues are further substituted by (1,2)-&amp;beta;-D-galactosyl residues, and some of the galactosyl residues are capped by (1,2)-&amp;alpha;-L-fucose |CITS:[12837954] [17011813]|. A common terminology uses G for basic non-substituted glucosyl units within a xylosylglycan, X for glucose residues substituted by &amp;alpha;-D-xylose, L for glucose residues substituted by &amp;alpha;-D-xylose and &amp;beta;-D-galactose, and F for glucose residues substituted by &amp;alpha;-D-xylose, &amp;beta;-D-galactose and &amp;alpha;-L-fucose |CITS:[Fry93]|. Fucosyl residues are typically absent from seed xyloglucans but present on the xyloglucans in the vegatative portions of the same plant |CITS: [Mishra09]|. Most xylosylglucans consist of repeating heptasaccharide XXXG units. The average molecular weight of xyloglucan is more than 50 000 |CITS: [Mishra09]|. &lt;b&gt;About This Pathway&lt;/b&gt; The biosynthesis of xyloglucan is still not well understood. It is well established that xyloglucan is assembled within Golgi stacks and transported in Golgi-derived vesicles to the cell wall. The glucan synthase that is involved in xyloglucan synthesis is likely encoded by |FRAME: AT3G28180| gene, characterized from Nasturtium and Arabidopsis |CITS: [17488821]|. Three xyloglucan 6-xylosyltransferase enzymes that catalyze the transfer of xylose from |FRAME: UDP-D-XYLOSE| onto &amp;beta;(1,4)-linked glucan chains have been reported from |FRAME: TAX-3702| |CITS: [12032363][16982611][18557833]|. Two of the enzymes (|FRAME: AT3G62720| and |FRAME: AT4G02500|) were shown to preferentially add one xylose to unsubstituted glucans at the second position from the non-reducing end. When using |FRAME: CPD-13238| (GGGGGG), the preferred substrate, the enzymes produced mostly GGXGGG, with GGXXGG also formed after long incubations with a high substrate ratio |CITS: [16982611]|. While the activity of the third enzyme, |FRAME: AT1G74380|, has not been well characterized, it has been shown that a mutant lacking it shows a reduced xyloglucan content |CITS: [18557833]|. A xyloglucan galactosyltransferase (|FRAME: AT2G20370|) that attaches an &amp;alpha;-L-D-galactose residue specifically to the third xylose residue within the XXXG core structure has been reported from Arabidopsis |CITS: [12837954]|. Other galactosyltransferases may be necessary for galactosylation of other opsitions |CITS: [15020758]|. Finally, the Arabidopsis |FRAME: AT2G03220-MONOMER| (|FRAME: AT2G03220|) that attaches an &amp;alpha;-L-fucose residue to the third xylose residue within the XXXG core structure has been identified and characterized |CITS: [11854459]|.</Description>
+  <Authors>
+    <Author name="THE-ARABIDOPSIS-INFORMATION-RESOURCE" />
+    <Author name="karthik" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-5936" />
+  <Property key="Type" value="Polysaccharides-Biosynthesis" />
+  <Property key="ReactionCount" value="6" />
+  <Property key="ReactionIDs" value="RXN-12419, RXN-12418, RXN-12415, RXN-9462, RXN-9463, RXN-9461" />
+  <Property key="PredecessorCount" value="5" />
+  <Property key="PrimaryCompoundCount" value="5" />
+  <Property key="Organism" value="ORG-5993, TAX-3702, TAX-3888" />
+  <Property key="TaxonomicRange_1" value="TAX-33090" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_PUB_17011813" />
+  <CitationRef elementRef="citation_PUB_12837954" />
+  <CitationRef elementRef="citation_PUB_12032363" />
+  <CitationRef elementRef="citation_PUB_8252539" />
+  <CitationRef elementRef="citation_PUB_17488821" />
+  <CitationRef elementRef="citation_PUB_16982611" />
+  <CitationRef elementRef="citation_PUB_18557833" />
+  <CitationRef elementRef="citation_PUB_15020758" />
+  <CitationRef elementRef="citation_PUB_11854459" />
+  <Graphics boardWidth="1200" boardHeight="1120" />
+  <DataNodes>
+    <DataNode elementId="AT2G03220" textLabel="AtFUT1" type="GeneProduct">
+      <Xref identifier="AT2G03220" dataSource="TAIR" />
+      <Graphics centerX="100" centerY="50" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT2G03220" />
+      <Property key="Synonym_1" value="MUR2" />
+      <Property key="Product" value="AT2G03220-MONOMER" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="AT4G02500" textLabel="XT2" type="GeneProduct">
+      <Xref identifier="AT4G02500" dataSource="TAIR" />
+      <Graphics centerX="220" centerY="50" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT4G02500" />
+      <Property key="Synonym_1" value="GTL5" />
+      <Property key="Synonym_2" value="GT2" />
+      <Property key="Product" value="AT4G02500-MONOMER" />
+      <Property key="StartPosition" value="1101507" />
+      <Property key="EndPosition" value="1103610" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+      <Property key="Accession1" value="AT4G02500" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="AT2G20370" textLabel="KAM1" type="GeneProduct">
+      <Xref identifier="AT2G20370" dataSource="TAIR" />
+      <Graphics centerX="340" centerY="50" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT2G20370" />
+      <Property key="Synonym_1" value="MUR3" />
+      <Property key="Product" value="AT2G20370-MONOMER" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="AT3G28180" textLabel="CSLC4" type="GeneProduct">
+      <Xref identifier="AT3G28180" dataSource="TAIR" />
+      <Graphics centerX="100" centerY="110" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT3G28180" />
+      <Property key="Product" value="AT3G28180-MONOMER" />
+      <Property key="GeneType" value="ORFs" />
+      <Property key="Accession1" value="AT3G28180" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="AT3G62720" textLabel="XT1" type="GeneProduct">
+      <Xref identifier="AT3G62720" dataSource="TAIR" />
+      <Graphics centerX="220" centerY="110" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT3G62720" />
+      <Property key="Product" value="AT3G62720-MONOMER" />
+      <Property key="StartPosition" value="23212093" />
+      <Property key="EndPosition" value="23213889" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+      <Property key="Accession1" value="AT3G62720" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+      <CitationRef elementRef="citation_PUB_12032363" />
+    </DataNode>
+    <DataNode elementId="AT2G03220-MONOMER" textLabel="xyloglucan α-1,2-fucosyltransferase" type="Protein">
+      <Xref identifier="Q9SWH5" dataSource="uniprot" />
+      <Graphics centerX="150" centerY="275" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="THE-ARABIDOPSIS-INFORMATION-RESOURCE, karthik">Xyloglucan &amp;alpha;-1,2-fucosyltransferase is a glycosyltransferase family 37 (GT37) enzyme that adds the terminal fucosyl residue on xyloglucan side chains in many plants. The enzyme was originally was purified from pea epicotyls, and the homologous |FRAME: AT2G03220| gene was identified in |FRAME: TAX-3702| |CITS: [10373113]|. The gene was cloned and expressed in COS cells, and xyloglucan &amp;alpha;-1,2-fucosyltransferase activity was demonstrated in the cell extracts |CITS: [11854459]|. Cell walls of |FRAME: TAX-3702| mutants lacking |FRAME: AT2G20370| contain less than 2% of the wild-type amount of fucosylated xyloglucan. Despite this alteration in structure, mur2 plants show a normal growth habit and wall strength |CITS: [11854459]|. Several related enzymes have been discovered, but do not appear to be involved in xyloglucan synthesis |CITS: [11743104]|.</Comment>
+      <Property key="UniqueID" value="AT2G03220-MONOMER" />
+      <Property key="AlternativeId_Phytozome" value="At2g03220.1" />
+      <Property key="AlternativeId_Tair" value="At2g03220" />
+      <Property key="AlternativeId_Uniprot" value="Q9SWH5" />
+      <Property key="Catalyzes" value="RXN-10758, RXN-15014" />
+      <Property key="CatalyzesCount" value="2" />
+      <Property key="GOTerms" value="GO:0005794" />
+      <Property key="Gene" value="AT2G03220" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Locations" value="CCO-GOLGI" />
+      <Property key="Species" value="TAX-3702" />
+      <CitationRef elementRef="citation_PUB_10373113" />
+      <CitationRef elementRef="citation_PUB_11854459" />
+      <CitationRef elementRef="citation_PUB_11743104" />
+    </DataNode>
+    <DataNode elementId="AT4G02500-MONOMER" textLabel="xyloglucan 6-xylosyltransferase" type="Protein">
+      <Xref identifier="O22775" dataSource="uniprot" />
+      <Graphics centerX="300" centerY="275" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">This enzyme, which belongs to CAZy glycosyl transferase family GT34, catalyzes the transfer of xylose from |FRAME: UDP-D-XYLOSE UDP-&amp;alpha;-D-xylose| onto &amp;beta;(1,4)-linked glucan chains The enzyme preferentially adds one xylose to unsubstituted glucans at the fourth position from the reducing end. When using |FRAME: CPD-13237 cellopentaose| (GGGGG) as substrate the enzyme produced mostly GXGGG, with minor amounts of XGGGG and GGXGG. Activity with |FRAME: CPD-13238 cellohexaose| was 4-fold higher, and produced GGXGGG |CITS: [16982611]|. Under high donor concentrations and longer incubation time the enzyme also adds a second xylose at the third position from the reducing end, forming GGXXGG |CITS: [16982611]|. Very small amounts of tri-xylosylated molecules GXXXGG) were also detected. The |FRAME: TAX-3702 &lt;i&gt;Arabidopsis thaliana&lt;/i&gt;| |FRAME: AT4G02500 XXT2| gene was cloned and overexpressed in insect cells, and detergent-slubilized extracts were analyzed for activity |CITS: [16982611]|. The activities of |FRAME: AT3G62720 XXT1| and |FRAME: AT4G02500 XXT2| appear identical &lt;i&gt;in vitro&lt;/i&gt;.</Comment>
+      <Property key="UniqueID" value="AT4G02500-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT4G02500.1" />
+      <Property key="AlternativeId_Uniprot" value="O22775" />
+      <Property key="AlternativeId_Tair" value="AT4G02500" />
+      <Property key="Catalyzes" value="RXN-11301, RXN-12805, RXN-19229, RXN-11300" />
+      <Property key="CatalyzesCount" value="4" />
+      <Property key="Accession1" value="AT4G02500.1" />
+      <Property key="FunctionalAssignmentStatus" value=":PROBABLE-ENZYME" />
+      <Property key="Gene" value="AT4G02500" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_16982611" />
+    </DataNode>
+    <DataNode elementId="MONOMER-13998" textLabel="α-1,2-fucosyltransferase" type="Protein">
+      <Xref identifier="MONOMER-13998" dataSource="plantcyc" />
+      <Graphics centerX="450" centerY="275" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="THE-ARABIDOPSIS-INFORMATION-RESOURCE, karthik">Purifie xyloglucan (XG) fucosyltransferase from growing pisum epicotyl tissue was shown to catalize the fucosylation of the galactose residue attached to the to the third xylose residue within the XXXG core structure|CITS: [1550346]|.</Comment>
+      <Property key="UniqueID" value="MONOMER-13998" />
+      <Property key="Catalyzes" value="RXN-15016" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="TAX-3888" />
+      <CitationRef elementRef="citation_PUB_1550346" />
+    </DataNode>
+    <DataNode elementId="AT3G62720-MONOMER" textLabel="α-xylosyltransferase" type="Protein">
+      <Xref identifier="Q9LZJ3" dataSource="uniprot" />
+      <Graphics centerX="150" centerY="355" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, THE-ARABIDOPSIS-INFORMATION-RESOURCE, karthik">This enzyme, which belongs to CAZy glycosyl transferase family GT34, catalyzes the transfer of xylose from |FRAME: UDP-D-XYLOSE UDP-&amp;alpha;-D-xylose| onto &amp;beta;(1,4)-linked glucan chains The enzyme preferentially adds one xylose to unsubstituted glucans at the fourth position from the reducing end. When using |FRAME: CPD-13237 cellopentaose| (GGGGG) as substrate the enzyme produced mostly GXGGG, with minor amounts of XGGGG and GGXGG |CITS: [12032363]|. Activity with |FRAME: CPD-13238 cellohexaose| was 4-fold higher, and produced GGXGGG |CITS: [16982611]|. Under high donor concentrations and longer incubation time the enzyme also adds a second xylose at the third position from the reducing end, forming GGXXGG |CITS: [16982611]|. Very small amounts of the tri-xylosylated molecule GXXXGG were also detected. The |FRAME: TAX-3702 &lt;i&gt;Arabidopsis thaliana&lt;/i&gt;| |FRAME: AT3G62720 XXT1| gene was cloned and overexpressed in the yeast |FRAME: TAX-4922 &lt;i&gt;Pichia pastoris&lt;/i&gt;|, and the recombinant protein was patially purified and analyzed for activity |CITS: [12032363]|. A preformed precursor molecule is necessary for the addition of xylose. The enzyme from pea requires a minimum size of five glucose residues, while the enzyme from Arabidopsis requires only four. Large molecules, such as |FRAME: Carboxymethylcellulose carboxymethyl cellulose|, were also used |CITS: [12032363]|. The activities of |FRAME: AT3G62720 XXT1| and |FRAME: AT4G02500 XXT2| appear identical &lt;i&gt;in vitro&lt;/i&gt;.</Comment>
+      <Property key="UniqueID" value="AT3G62720-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT3G62720.1" />
+      <Property key="AlternativeId_Uniprot" value="Q9LZJ3" />
+      <Property key="AlternativeId_Tair" value="At3g62720" />
+      <Property key="Catalyzes" value="RXN-11315, RXN-15011, RXN-11314" />
+      <Property key="CatalyzesCount" value="3" />
+      <Property key="Accession1" value="AT3G62720.1" />
+      <Property key="Gene" value="AT3G62720" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_12032363" />
+      <CitationRef elementRef="citation_PUB_16982611" />
+    </DataNode>
+    <DataNode elementId="AT2G20370-MONOMER" textLabel="xyloglucan galactosyltransferase" type="Protein">
+      <Xref identifier="Q7XJ98" dataSource="uniprot" />
+      <Graphics centerX="300" centerY="355" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="THE-ARABIDOPSIS-INFORMATION-RESOURCE, karthik">Biochemical analysis using crude extracts from |FRAME: TAX-4922| cells over-expressing the |FRAME: TAX-3702| |FRAME: AT2G20370| protein using radiolabeled |FRAME: CPD-14553| as the donor substrate revealed that this xyloglucan galactosyltransferase attaches a D-galactose residue specifically to the third xylose residue within the XXXG core structure |CITS: [12837954]|. The |FRAME: AT2G20370| gene product has also been implicated in endomembrane organization, and appears to be necessary for cell elongation |CITS: [15863516]|.</Comment>
+      <Property key="UniqueID" value="AT2G20370-MONOMER" />
+      <Property key="AlternativeId_Tair" value="At2g20370" />
+      <Property key="AlternativeId_Phytozome" value="At2g20370.1" />
+      <Property key="AlternativeId_Uniprot" value="Q7XJ98" />
+      <Property key="Catalyzes" value="RXN-19227, RXN-15013" />
+      <Property key="CatalyzesCount" value="2" />
+      <Property key="GOTerms" value="GO:0005794" />
+      <Property key="Gene" value="AT2G20370" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Locations" value="CCO-GOLGI" />
+      <Property key="Species" value="TAX-3702" />
+      <CitationRef elementRef="citation_PUB_12837954" />
+      <CitationRef elementRef="citation_PUB_15863516" />
+    </DataNode>
+    <DataNode elementId="AT3G28180-MONOMER" textLabel="AT3G28180" type="Protein">
+      <Xref identifier="Q9LJP4" dataSource="uniprot" />
+      <Graphics centerX="450" centerY="355" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">Efforts to identify the Golgi-localized glucan synthase responsible for xyloglucan biosynthesis by traditional methods of protein purification have not been successful |CITS:[6457048][8363577]|. Because of the structural similarity between the &amp;beta;-linked glycan chains of xyloglucan and those of cellulose, the cellulose synthase-like (CSL) genes were suggested as candidates |CITS: [11554468]|, and several results supported this suggestion |CITS: [16574868][19321749][20497371]|. The |FRAME: AT3G28180 CSLC4| gene of |FRAME: TAX-3702 &lt;i&gt;Arabidopsis thaliana&lt;/i&gt;| was found based on its homology with the CSLC gene of |FRAME: TAX-4020 &lt;i&gt;Tropaeolum majus&lt;/i&gt;| (common Nasturium). The CSLC gene is highly upregulated during a growth phase during which nasturium accumulates large quantities of xyloglucan as a storage polysaccharide |CITS: [17488821]|. The Arabidopsis |FRAME: AT3G28180 CSLC4| gene was cloned and expressed in the yeast |FRAME: TAX-4922 &lt;i&gt;Pichia pastoris&lt;/i&gt;|. Even though the protein could be detected in |FRAME: TAX-4922 &lt;i&gt;Pichia pastoris&lt;/i&gt;| cell extracts, no &lt;i&gt;in vitro&lt;/i&gt; activity could be measured. However, cells expressing the gene accumulated soluble &amp;beta;-1,4-linked glucans oligosaccharides of between four and six residues in length. |FRAME: TAX-4922 &lt;i&gt;Pichia pastoris&lt;/i&gt;| cells co-expressing both the |FRAME: TAX-3702 &lt;i&gt;Arabidopsis thaliana&lt;/i&gt;| |FRAME: AT3G28180 CSLC4| gene and the |FRAME: AT3G62720 XXT1| gene (encoding |FRAME: AT3G62720-MONOMER xyloglucan 6-xylosyltransferase 1|) accumulated much longer &amp;beta;-1,4-glucans, suggesting that the XT1 and CSLC4 proteins interact directly or indirectly to extend the length of the product |CITS: [17488821]|.</Comment>
+      <Property key="UniqueID" value="AT3G28180-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT3G28180.1" />
+      <Property key="AlternativeId_Uniprot" value="Q9LJP4" />
+      <Property key="AlternativeId_Tair" value="At3g28180" />
+      <Property key="Synonym_1" value="xyloglucan synthase 4" />
+      <Property key="Synonym_2" value="cellulose synthase-like protein C4" />
+      <Property key="Catalyzes" value="RXN-19231" />
+      <Property key="Accession1" value="AT3G28180.1" />
+      <Property key="Gene" value="AT3G28180" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_11554468" />
+      <CitationRef elementRef="citation_PUB_17488821" />
+    </DataNode>
+    <DataNode elementId="MONOMER-13995" textLabel="α-xylosyltransferase" type="Protein">
+      <Xref identifier="MONOMER-13995" dataSource="plantcyc" />
+      <Graphics centerX="150" centerY="435" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="MONOMER-13995" />
+      <Property key="Catalyzes" value="RXN-15012" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="TAX-3888" />
+    </DataNode>
+    <DataNode elementId="UDP-D-XYLOSE" textLabel="UDP-α-D-xylose" type="Metabolite">
+      <Xref identifier="DQQDLYVHOTZLOR-OCIMBMBZSA-L" dataSource="InChIKey" />
+      <Graphics centerX="200" centerY="620" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="UDP-D-XYLOSE" />
+      <Property key="AlternativeId_Seed" value="cpd00163" />
+      <Property key="AlternativeId_Metanetx" value="MNXM284" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57632" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01018" />
+      <Property key="AlternativeId_Chemspider" value="17600385" />
+      <Property key="AlternativeId_Chebi" value="57632" />
+      <Property key="AlternativeId_Pubchem" value="16667349" />
+      <Property key="AlternativeId_LigandCpd" value="C00190" />
+      <Property key="AlternativeId_Cas" value="3616-06-6" />
+      <Property key="ChemicalFormula" value="(C 14) (H 20) (N 2) (O 16) (P 2)" />
+      <Property key="AtomCharges" value="(27 -1), (25 -1)" />
+      <Property key="Gibbs0" value="-549.1659" />
+      <Property key="GroupCoords2d" value="(41 41), (93 41)" />
+      <Property key="Inchi" value="InChI=1S/C14H22N2O16P2/c17-5-3-28-13(11(22)8(5)19)31-34(26,27)32-33(24,25)29-4-6-9(20)10(21)12(30-6)16-2-1-7(18)15-14(16)23/h1-2,5-6,8-13,17,19-22H,3-4H2,(H,24,25)(H,26,27)(H,15,18,23)/p-2/t5-,6-,8+,9-,10-,11-,12-,13-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=DQQDLYVHOTZLOR-OCIMBMBZSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="534.263" />
+      <Property key="MonoisotopicMw" value="536.0444556901999" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-15453, REG-10376, REG-7346, REG-7359, REG-7353" />
+      <Property key="Smiles" value="C3(O[C@H](OP(OP(OC[C@@H]2([C@H]([C@H]([C@H](N1(\C=C/C(=O)NC1=O))O2)O)O))(=O)[O-])(=O)[O-])[C@H](O)[C@@H](O)[C@H](O)3)" />
+      <Property key="StructureGroups" value="A-DXYL-PEN-1:5, UDP" />
+      <Property key="StructureLinks" value="(2 1 N -1 X 1)" />
+      <Property key="Superatoms" value="UDP-GROUP" />
+    </DataNode>
+    <DataNode elementId="CPD-12575" textLabel="UDP-α-D-glucose" type="Metabolite">
+      <Xref identifier="HSCJRCZFDFQWRP-JZMIEXBBSA-L" dataSource="InChIKey" />
+      <Graphics centerX="350" centerY="620" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue, SRI, caspi">UDP-glucose is an activated form of glucose that participates in a variety of enzymatic reactions, including: 1. Biosynthesis of glucose-containing compounds, such as polysaccharaides (glycogen, starch, laminarin and cellulose), disaccharides (sucrose, trehalose), &amp;beta;-glucosides, and glucosyl-ceramides. 2. Channeling galactose into the glycolytic pathway It has also been suggested that UDP-D-glucose can act as an extracellular signaling molecule |CITS: [12695547]|.</Comment>
+      <Property key="UniqueID" value="CPD-12575" />
+      <Property key="AlternativeId_Zinc" value="ZINC000008215472" />
+      <Property key="AlternativeId_Chebi" value="58885" />
+      <Property key="AlternativeId_Pubchem" value="16667346" />
+      <Property key="AlternativeId_Cas" value="133-89-1" />
+      <Property key="AlternativeId_Knapsack" value="C00001514" />
+      <Property key="AlternativeId_Hmdb" value="HMDB60079" />
+      <Property key="AlternativeId_Metanetx" value="MNXM722710" />
+      <Property key="AlternativeId_Bigg" value="udpg" />
+      <Property key="AlternativeId_LigandCpd" value="C00029" />
+      <Property key="AlternativeId_Chemspider" value="10239191" />
+      <Property key="Synonym_1" value="UDPG" />
+      <Property key="Synonym_2" value="UDP-glucose" />
+      <Property key="Synonym_3" value="UDP-D-glucose" />
+      <Property key="Synonym_4" value="UDP-&amp;alpha;-D-glucopyranose" />
+      <Property key="Synonym_5" value="uridine 5&apos;-diphosphoglucose" />
+      <Property key="ChemicalFormula" value="(C 15) (H 22) (N 2) (O 17) (P 2)" />
+      <Property key="AbbrevName" value="UDP-Glc" />
+      <Property key="AtomCharges" value="(27 -1), (29 -1)" />
+      <Property key="Gibbs0" value="-566.8436" />
+      <Property key="GroupCoords2d" value="(41 41), (96 41)" />
+      <Property key="Inchi" value="InChI=1S/C15H24N2O17P2/c18-3-5-8(20)10(22)12(24)14(32-5)33-36(28,29)34-35(26,27)30-4-6-9(21)11(23)13(31-6)17-2-1-7(19)16-15(17)25/h1-2,5-6,8-14,18,20-24H,3-4H2,(H,26,27)(H,28,29)(H,16,19,25)/p-2/t5-,6-,8-,9-,10+,11-,12-,13-,14-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=HSCJRCZFDFQWRP-JZMIEXBBSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="564.289" />
+      <Property key="MonoisotopicMw" value="566.0550203765" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-7351, REG-7357, REG-11336, REG0-8723, REG-15562, REG-7218, REG-15557" />
+      <Property key="Smiles" value="C(O)[C@@H]1([C@@H](O)[C@H](O)[C@@H](O)[C@H](O1)OP(OP(OC[C@@H]3([C@H]([C@H]([C@H](N2(\C=C/C(=O)NC2=O))O3)O)O))(=O)[O-])(=O)[O-])" />
+      <Property key="StructureGroups" value="A-DGLC-HEX-1:5, UDP" />
+      <Property key="StructureLinks" value="(2 1 N -1 X 1)" />
+      <Property key="Superatoms" value="UDP-GROUP" />
+      <Property key="SystematicName" value="Uridine 5&apos;-(trihydrogen diphosphate) alpha-D-gucopyranosyl ester" />
+      <CitationRef elementRef="citation_PUB_12695547" />
+    </DataNode>
+    <DataNode elementId="XLFG-Xyloglucans" textLabel="an XLFG xylogulcan" type="Metabolite">
+      <Xref identifier="MNXM22463" dataSource="MetaNetX" />
+      <Graphics centerX="500" centerY="620" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="THE-ARABIDOPSIS-INFORMATION-RESOURCE, zhang, SRI, caspi">|FRAME: Xyloglucan Xyloglucan| is the major hemicellulose in dicotyledon type I cell walls. The cross-linking between xyloglucan chains is a major factor in the stability of the three-dimensional matrix between adjacent cellulose microfibrils |CITS: [Whitney95]|. Xyloglucan has a backbone of &amp;beta;-1,4-linked cellotetraose units, which are substituted in C-6 by &amp;alpha;-D-xylosyl residues at two or three of the first three glucosyl residues, but not in the position closest to the reducing end |CITS: [8252539]|. Some of the xylosyl residues are subsequently further substituted by (1,2)-&amp;beta;-D-galactosyl residues at the second and/or third xylose residue and by (1,2)-&amp;alpha;-L-fucose at the galactosyl unit of the third xylose residue |CITS:[12837954] [17011813]|. A common terminology uses G for basic non-substituted glucosyl units within a xylosylglycan, X for glucose residues substituted by &amp;alpha;-D-xylose, L for glucose residues substituted by &amp;alpha;-D-xylose and &amp;beta;-D-galactose, and F for glucose residues substituted by &amp;alpha;-D-xylose, &amp;beta;-D-galactose and &amp;alpha;-L-fucose |CITS:[Fry93]|. Most xylosylglucans consist of repeating heptasaccharide |FRAME: Xyloglucans-Xylose XXXG| units.</Comment>
+      <Property key="UniqueID" value="XLFG-Xyloglucans" />
+      <Property key="AlternativeId_Seed" value="cpd28347" />
+      <Property key="AlternativeId_Metanetx" value="MNXM22463" />
+      <Property key="Synonym_1" value="a xyloglucan modified with galactose and fucose side chains" />
+      <Property key="GroupCoords2d" value="(249 197), (197 197), (145 197), (93 197), (93 145), (145 145), (145 93), (197 145), (197 93), (197 41), (301 197), (41 197)" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="N+1Name" value="xyloglucan-(substituted glucose residues)&lt;sub&gt;(n+1)&lt;/sub&gt;" />
+      <Property key="N1Name" value="xyloglucan-(substituted glucose residues)&lt;sub&gt;(n-1)&lt;/sub&gt;" />
+      <Property key="NName" value="xyloglucan-(substituted glucose residues)&lt;sub&gt;(n)&lt;/sub&gt;" />
+      <Property key="NonStandardInchi" value="InChI=1S/C55H92O47/c1-9-17(60)22(65)33(76)48(90-9)99-43-26(69)31(74)46(83)102-55(43)100-42-20(63)12(59)5-86-54(42)89-8-16-40(27(70)36(79)50(93-16)95-38-13(2-56)91-44(81)30(73)25(38)68)97-51-37(80)28(71)39(96-49-34(77)23(66)21(64)14(92-49)6-87-47-32(75)18(61)10(57)3-84-47)15(94-51)7-88-53-41(19(62)11(58)4-85-53)98-52-35(78)24(67)29(72)45(82)101-52/h9-83H,2-8H2,1H3/t9-,10-,11-,12-,13-,14-,15-,16-,17+,18+,19+,20+,21-,22+,23+,24+,25-,26+,27-,28-,29-,30-,31-,32-,33-,34-,35-,36-,37-,38-,39-,40-,41-,42-,43-,44-,45+,46+,47-,48+,49+,50+,51+,52-,53-,54-,55-/m1/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C[C@@H]%10([C@H](O)[C@H](O)[C@@H](O)[C@H](O[C@H]9([C@H](O[C@@H]1([C@@H](O)[C@H](O)CO[C@@H]1OC[C@H]3(O[C@@H](O[C@H]2([C@H](O)[C@@H](O)[C@H](O[R2])O[C@H](CO)2))[C@H](O)[C@@H](O)[C@@H]3O[C@@H]6(O[C@H](CO[C@H]5(OC[C@@H](O)[C@H](O)[C@@H](O[C@@H]4(O[C@H](O)[C@H](O)[C@H](O)[C@@H](O)4))5))[C@H]([C@H](O)[C@@H](O)6)O[C@@H]8(O[C@H](CO[C@H]7(OC[C@@H](O)[C@H](O)[C@@H](O)7))[C@@H](O[R1])[C@H](O)[C@@H](O)8)))))O[C@H](O)[C@H](O)[C@H](O)9))O%10)" />
+      <Property key="StructureGroups" value="X-DGLC-HEX-1:5, B-DGLC-HEX-1:5, B-DGLC-HEX-1:5, B-DGLC-HEX-1:5, A-DXYL-PEN-1:5, A-DXYL-PEN-1:5, B-DGAL-HEX-1:5, A-DXYL-PEN-1:5, B-DGAL-HEX-1:5, A-LGAL-HEX-1:5_6:D, R2, R1" />
+      <Property key="StructureLinks" value="(1 2 O 4 D 1), (2 3 O 4 D 1), (3 4 O 4 D 1), (4 5 O 6 D 1), (3 6 O 6 D 1), (6 7 O 2 D 1), (2 8 O 6 D 1), (8 9 O 2 D 1), (9 10 O 2 D 1), (11 1 N -1 X 1), (4 12 X -1 N 1)" />
+      <CitationRef elementRef="citation_PUB_8252539" />
+    </DataNode>
+    <DataNode elementId="GXGG-Xyloglucans" textLabel="a GXGG xylogulcan" type="Metabolite">
+      <Xref identifier="MNXM11741" dataSource="MetaNetX" />
+      <Graphics centerX="650" centerY="620" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="THE-ARABIDOPSIS-INFORMATION-RESOURCE, zhang, SRI, caspi">|FRAME: Xyloglucan Xyloglucan| is the major hemicellulose in dicotyledon type I cell walls. The cross-linking between xyloglucan chains is a major factor in the stability of the three-dimensional matrix between adjacent cellulose microfibrils |CITS: [Whitney95]|. Xyloglucan has a backbone of &amp;beta;-1,4-linked cellotetraose units, which are substituted in C-6 by &amp;alpha;-D-xylosyl residues at two or three of the first three glucosyl residues, but not in the position closest to the reducing end |CITS: [8252539]|. Some of the xylosyl residues are subsequently further substituted by (1,2)-&amp;beta;-D-galactosyl residues at the second and/or third xylose residue and by (1,2)-&amp;alpha;-L-fucose at the galactosyl unit of the third xylose residue |CITS:[12837954] [17011813]|. A common terminology uses G for basic non-substituted glucosyl units within a xylosylglycan, X for glucose residues substituted by &amp;alpha;-D-xylose, L for glucose residues substituted by &amp;alpha;-D-xylose and &amp;beta;-D-galactose, and F for glucose residues substituted by &amp;alpha;-D-xylose, &amp;beta;-D-galactose and &amp;alpha;-L-fucose |CITS:[Fry93]|. Most xylosylglucans consist of repeating heptasaccharide |FRAME: Xyloglucans-Xylose XXXG| units.</Comment>
+      <Property key="UniqueID" value="GXGG-Xyloglucans" />
+      <Property key="AlternativeId_Seed" value="cpd27130" />
+      <Property key="AlternativeId_Metanetx" value="MNXM11741" />
+      <Property key="GroupCoords2d" value="(249 93), (197 93), (145 93), (93 93), (145 41), (301 93), (41 93)" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="NonStandardInchi" value="InChI=1S/C29H50O25/c30-1-7-12(35)13(36)19(42)27(49-7)54-24-10(5-47-26-18(41)11(34)6(33)4-46-26)51-29(21(44)16(24)39)53-23-9(3-32)50-28(20(43)15(23)38)52-22-8(2-31)48-25(45)17(40)14(22)37/h6-45H,1-5H2/t6-,7-,8-,9-,10-,11+,12-,13+,14-,15-,16-,17-,18-,19-,20-,21-,22-,23-,24-,25-,26-,27+,28+,29+/m1/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C(O)[C@H]1(O[C@@H](O[R2])[C@H](O)[C@@H](O)[C@@H]1O[C@@H]2(O[C@H](CO)[C@H]([C@H](O)[C@@H](O)2)O[C@@H]4(O[C@H](CO[C@H]3(OC[C@@H](O)[C@H](O)[C@@H](O)3))[C@H]([C@H](O)[C@@H](O)4)O[C@@H]5(O[C@H](CO)[C@@H](O[R1])[C@H](O)[C@@H](O)5))))" />
+      <Property key="StructureGroups" value="X-DGLC-HEX-1:5, B-DGLC-HEX-1:5, B-DGLC-HEX-1:5, B-DGLC-HEX-1:5, A-DXYL-PEN-1:5, R2, R1" />
+      <Property key="StructureLinks" value="(1 2 O 4 D 1), (2 3 O 4 D 1), (3 4 O 4 D 1), (3 5 O 6 D 1), (6 1 N -1 X 1), (4 7 X -1 N 1)" />
+      <CitationRef elementRef="citation_PUB_8252539" />
+    </DataNode>
+    <DataNode elementId="GDP" textLabel="GDP" type="Metabolite">
+      <Xref identifier="QGWNDRXFNXRZMB-UUOKFMHZSA-K" dataSource="InChIKey" />
+      <Graphics centerX="200" centerY="720" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="GDP" />
+      <Property key="AlternativeId_Pubchem" value="135398618" />
+      <Property key="AlternativeId_Zinc" value="ZINC000008215481" />
+      <Property key="AlternativeId_Mediadb" value="compounds/35/" />
+      <Property key="AlternativeId_Seed" value="cpd00031" />
+      <Property key="AlternativeId_Metanetx" value="MNXM30" />
+      <Property key="AlternativeId_Refmet" value="GDP" />
+      <Property key="AlternativeId_Bigg" value="gdp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC58189" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01201" />
+      <Property key="AlternativeId_Chemspider" value="10239187" />
+      <Property key="AlternativeId_Chebi" value="58189" />
+      <Property key="AlternativeId_LigandCpd" value="C00035" />
+      <Property key="AlternativeId_Cas" value="146-91-8" />
+      <Property key="Synonym_1" value="ppG" />
+      <Property key="Synonym_2" value="guanosine-5&apos;-diphosphate" />
+      <Property key="Synonym_3" value="guanosine-diphosphate" />
+      <Property key="ChemicalFormula" value="(C 10) (H 12) (N 5) (O 11) (P 2)" />
+      <Property key="AtomCharges" value="(22 -1), (21 -1), (20 -1)" />
+      <Property key="Gibbs0" value="-439.5341" />
+      <Property key="Inchi" value="InChI=1S/C10H15N5O11P2/c11-10-13-7-4(8(18)14-10)12-2-15(7)9-6(17)5(16)3(25-9)1-24-28(22,23)26-27(19,20)21/h2-3,5-6,9,16-17H,1H2,(H,22,23)(H2,19,20,21)(H3,11,13,14,18)/p-3/t3-,5-,6-,9-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=QGWNDRXFNXRZMB-UUOKFMHZSA-K" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="440.179" />
+      <Property key="MonoisotopicMw" value="443.0243293706" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-11362, REG0-7494, REG0-8375, REG0-8480, REG-12063, REG0-11742, REG0-7475, REG-9545, REG-8491, REG-11604, REG-7190, REG-7186, REG0-8827, REG0-8829, REG-9478, REG0-8729, REG-11625" />
+      <Property key="Smiles" value="C(OP(=O)([O-])OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\N=C(N)/NC(=O)C(\N=C/1)=2)))[C@H](O)[C@H](O)3)" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="350" centerY="720" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="ChemicalFormula" value="(H 1)" />
+      <Property key="AtomCharges" value="(1 1)" />
+      <Property key="Gibbs0" value="0.42906138" />
+      <Property key="Inchi" value="InChI=1S/p+1" />
+      <Property key="InchiKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicMw" value="1.0078250321" />
+      <Property key="NonStandardInchi" value="InChI=1S/p+1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="[H+]" />
+    </DataNode>
+    <DataNode elementId="UDP" textLabel="UDP" type="Metabolite">
+      <Xref identifier="XCCTYIAWTASOJW-XVFCMESISA-K" dataSource="InChIKey" />
+      <Graphics centerX="500" centerY="720" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="UDP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004490939" />
+      <Property key="AlternativeId_Seed" value="cpd00014" />
+      <Property key="AlternativeId_Metanetx" value="MNXM17" />
+      <Property key="AlternativeId_Refmet" value="UDP" />
+      <Property key="AlternativeId_Bigg" value="udp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC58223" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00295" />
+      <Property key="AlternativeId_Chemspider" value="16739715" />
+      <Property key="AlternativeId_Pubchem" value="20056717" />
+      <Property key="AlternativeId_Chebi" value="58223" />
+      <Property key="AlternativeId_Knapsack" value="C00007313" />
+      <Property key="AlternativeId_LigandCpd" value="C00015" />
+      <Property key="AlternativeId_Cas" value="58-98-0" />
+      <Property key="Synonym_1" value="uridine-diphosphate" />
+      <Property key="Synonym_2" value="uridine-5&apos;-diphosphate" />
+      <Property key="ChemicalFormula" value="(C 9) (H 11) (N 2) (O 12) (P 2)" />
+      <Property key="AtomCharges" value="(20 -1), (18 -1), (17 -1)" />
+      <Property key="Gibbs0" value="-504.6063" />
+      <Property key="Inchi" value="InChI=1S/C9H14N2O12P2/c12-5-1-2-11(9(15)10-5)8-7(14)6(13)4(22-8)3-21-25(19,20)23-24(16,17)18/h1-2,4,6-8,13-14H,3H2,(H,19,20)(H,10,12,15)(H2,16,17,18)/p-3/t4-,6-,7-,8-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=XCCTYIAWTASOJW-XVFCMESISA-K" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="401.14" />
+      <Property key="MonoisotopicMw" value="404.002196945" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-14903, REG18C3-14, REG18C3-3, REG-15561, REG-7217, REG-15558, REG-15258, REG-11337, REG-14196, REG-14197, REG-14193, REG-14194, REG-14641, REG-14645, REG-14637, REG-9486, REG-14192, REG-14002, REG-14015, REG-14026, REG-14195, REG-7347, REG-7360, REG-7354, REG-11603, REG-12091, REG-11623, REG-6057, REG-6056, REG-6058, REG-9037, REG-7329, REG-7330, REG-6142, REG-6139" />
+      <Property key="Smiles" value="C(OP(=O)([O-])OP(=O)([O-])[O-])[C@@H]2([C@H]([C@H]([C@H](N1(\C=C/C(=O)NC1=O))O2)O)O)" />
+    </DataNode>
+    <DataNode elementId="CPD-13118" textLabel="GDP-β-L-fucose" type="Metabolite">
+      <Xref identifier="LQEBEXMHBLQMDB-JGQUBWHWSA-L" dataSource="InChIKey" />
+      <Graphics centerX="650" centerY="720" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-13118" />
+      <Property key="AlternativeId_Pubchem" value="135956775" />
+      <Property key="AlternativeId_Zinc" value="ZINC000008551144" />
+      <Property key="AlternativeId_Chebi" value="57273" />
+      <Property key="AlternativeId_Cas" value="15839-70-0" />
+      <Property key="AlternativeId_LigandCpd" value="C00325" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01095" />
+      <Property key="AlternativeId_Bigg" value="gdpfuc" />
+      <Property key="Synonym_1" value="GDP-&amp;beta;-L-fucopyranose" />
+      <Property key="Synonym_2" value="GDP-L-fucose" />
+      <Property key="Synonym_3" value="guanosine diphosphate fucose" />
+      <Property key="Synonym_4" value="GDP-L-fucopyranose" />
+      <Property key="Synonym_5" value="GDP-L-Fuc" />
+      <Property key="Synonym_6" value="GDP-L-Fuc&lt;i&gt;p&lt;/i&gt;" />
+      <Property key="ChemicalFormula" value="(C 16) (H 23) (N 5) (O 15) (P 2)" />
+      <Property key="AtomCharges" value="(28 -1), (31 -1)" />
+      <Property key="Gibbs0" value="-465.5415" />
+      <Property key="GroupCoords2d" value="(41 97), (93 97)" />
+      <Property key="Inchi" value="InChI=1S/C16H25N5O15P2/c1-4-7(22)9(24)11(26)15(33-4)35-38(30,31)36-37(28,29)32-2-5-8(23)10(25)14(34-5)21-3-18-6-12(21)19-16(17)20-13(6)27/h3-5,7-11,14-15,22-26H,2H2,1H3,(H,28,29)(H,30,31)(H3,17,19,20,27)/p-2/t4-,5+,7+,8+,9+,10+,11-,14+,15+/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=LQEBEXMHBLQMDB-JGQUBWHWSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="587.33" />
+      <Property key="MonoisotopicMw" value="589.08223818" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-8496" />
+      <Property key="Smiles" value="C[C@@H]4(O[C@H](OP(OP(=O)([O-])OC[C@H]3(O[C@@H](N1(C2(\N=C(N)/NC(=O)C(\N=C/1)=2)))[C@H](O)[C@H](O)3))(=O)[O-])[C@H]([C@@H]([C@@H]4O)O)O)" />
+      <Property key="StructureGroups" value="X-LGAL-HEX-1:5_6:D, GDP" />
+      <Property key="StructureLinks" value="(2 1 N -1 X 1)" />
+      <Property key="Superatoms" value="GDP-GROUP" />
+      <CitationRef elementRef="citation_PUB_KREIS98" />
+    </DataNode>
+    <DataNode elementId="Xyloglucans-Xylose" textLabel="an XXXG xylogulcan" type="Metabolite">
+      <Xref identifier="MNXM9245" dataSource="MetaNetX" />
+      <Graphics centerX="200" centerY="820" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>|FRAME: Xyloglucan Xyloglucan| is the major hemicellulose in dicotyledon type I cell walls. The cross-linking between xyloglucan chains is a major factor in the stability of the three-dimensional matrix between adjacent cellulose microfibrils |CITS: [Whitney95]|. Xyloglucan has a backbone of &amp;beta;-1,4-linked cellotetraose units, which are substituted in C-6 by &amp;alpha;-D-xylosyl residues at two or three of the first three glucosyl residues, but not in the position closest to the reducing end |CITS: [8252539]|. Some of the xylosyl residues are subsequently further substituted by (1,2)-&amp;beta;-D-galactosyl residues at the second and/or third xylose residue and by (1,2)-&amp;alpha;-L-fucose at the galactosyl unit of the third xylose residue |CITS:[12837954] [17011813]|. A common terminology uses G for basic non-substituted glucosyl units within a xylosylglycan, X for glucose residues substituted by &amp;alpha;-D-xylose, L for glucose residues substituted by &amp;alpha;-D-xylose and &amp;beta;-D-galactose, and F for glucose residues substituted by &amp;alpha;-D-xylose, &amp;beta;-D-galactose and &amp;alpha;-L-fucose |CITS:[Fry93]|. Most xylosylglucans consist of repeating heptasaccharide |FRAME: Xyloglucans-Xylose XXXG| units.</Comment>
+      <Property key="UniqueID" value="Xyloglucans-Xylose" />
+      <Property key="AlternativeId_Seed" value="cpd28361" />
+      <Property key="AlternativeId_Metanetx" value="MNXM9245" />
+      <Property key="Synonym_1" value="a xylose-only xyloglucan" />
+      <Property key="GroupCoords2d" value="(249 93), (197 93), (145 93), (93 93), (93 41), (145 41), (197 41), (301 93), (41 93)" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="N+1Name" value="XXXG&lt;sub&gt;(n+1)&lt;/sub&gt;" />
+      <Property key="N1Name" value="XXXG&lt;sub&gt;(n-1)&lt;/sub&gt;" />
+      <Property key="NName" value="XXXG&lt;sub&gt;(n)&lt;/sub&gt;" />
+      <Property key="NonStandardInchi" value="InChI=1S/C39H66O33/c40-1-11-30(20(49)23(52)33(59)66-11)70-38-28(57)21(50)32(14(68-38)7-65-36-26(55)17(46)10(43)4-62-36)72-39-29(58)22(51)31(13(69-39)6-64-35-25(54)16(45)9(42)3-61-35)71-37-27(56)19(48)18(47)12(67-37)5-63-34-24(53)15(44)8(41)2-60-34/h8-59H,1-7H2/t8-,9-,10-,11-,12-,13-,14-,15+,16+,17+,18-,19+,20-,21-,22-,23-,24-,25-,26-,27-,28-,29-,30-,31-,32-,33-,34-,35-,36-,37+,38+,39+/m1/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C(O)[C@H]1(O[C@@H](O[R2])[C@H](O)[C@@H](O)[C@@H]1O[C@@H]3(O[C@H](CO[C@H]2(OC[C@@H](O)[C@H](O)[C@@H](O)2))[C@H]([C@H](O)[C@@H](O)3)O[C@@H]5(O[C@H](CO[C@H]4(OC[C@@H](O)[C@H](O)[C@@H](O)4))[C@H]([C@H](O)[C@@H](O)5)O[C@@H]7(O[C@H](CO[C@H]6(OC[C@@H](O)[C@H](O)[C@@H](O)6))[C@@H](O[R1])[C@H](O)[C@@H](O)7))))" />
+      <Property key="StructureGroups" value="X-DGLC-HEX-1:5, B-DGLC-HEX-1:5, B-DGLC-HEX-1:5, B-DGLC-HEX-1:5, A-DXYL-PEN-1:5, A-DXYL-PEN-1:5, A-DXYL-PEN-1:5, R2, R1" />
+      <Property key="StructureLinks" value="(1 2 O 4 D 1), (2 3 O 4 D 1), (3 4 O 4 D 1), (4 5 O 6 D 1), (3 6 O 6 D 1), (2 7 O 6 D 1), (8 1 N -1 X 1), (4 9 X -1 N 1)" />
+      <CitationRef elementRef="citation_PUB_8252539" />
+    </DataNode>
+    <DataNode elementId="CPD-14553" textLabel="UDP-α-D-galactose" type="Metabolite">
+      <Xref identifier="HSCJRCZFDFQWRP-ABVWGUQPSA-L" dataSource="InChIKey" />
+      <Graphics centerX="350" centerY="820" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-14553" />
+      <Property key="AlternativeId_Zinc" value="ZINC000008551104" />
+      <Property key="AlternativeId_Metanetx" value="MNXM89795" />
+      <Property key="AlternativeId_Bigg" value="udpgal" />
+      <Property key="AlternativeId_Chebi" value="66914" />
+      <Property key="AlternativeId_Pubchem" value="9549262" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC66914" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00302" />
+      <Property key="AlternativeId_Chemspider" value="17069" />
+      <Property key="AlternativeId_Cas" value="2956-16-3" />
+      <Property key="AlternativeId_LigandCpd" value="C00052" />
+      <Property key="Synonym_1" value="UDP-&amp;alpha;-D-galactopyranose" />
+      <Property key="Synonym_2" value="UDP-galactose" />
+      <Property key="Synonym_3" value="UDP-Gal" />
+      <Property key="ChemicalFormula" value="(C 15) (H 22) (N 2) (O 17) (P 2)" />
+      <Property key="AtomCharges" value="(27 -1), (29 -1)" />
+      <Property key="Gibbs0" value="-566.8436" />
+      <Property key="GroupCoords2d" value="(41 41), (96 41)" />
+      <Property key="Inchi" value="InChI=1S/C15H24N2O17P2/c18-3-5-8(20)10(22)12(24)14(32-5)33-36(28,29)34-35(26,27)30-4-6-9(21)11(23)13(31-6)17-2-1-7(19)16-15(17)25/h1-2,5-6,8-14,18,20-24H,3-4H2,(H,26,27)(H,28,29)(H,16,19,25)/p-2/t5-,6-,8+,9-,10+,11-,12-,13-,14-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=HSCJRCZFDFQWRP-ABVWGUQPSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="564.289" />
+      <Property key="MonoisotopicMw" value="566.0550203765" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-7348" />
+      <Property key="Smiles" value="C(O)[C@@H]1([C@H](O)[C@H](O)[C@@H](O)[C@H](O1)OP(OP(OC[C@@H]3([C@H]([C@H]([C@H](N2(\C=C/C(=O)NC2=O))O3)O)O))(=O)[O-])(=O)[O-])" />
+      <Property key="StructureGroups" value="A-DGAL-HEX-1:5, UDP" />
+      <Property key="StructureLinks" value="(2 1 N -1 X 1)" />
+      <Property key="Superatoms" value="UDP-GROUP" />
+    </DataNode>
+    <DataNode elementId="_1-4-beta-D-Glucan" textLabel="a 1,4-β-D-glucan" type="Metabolite">
+      <Xref identifier="18246" dataSource="ChEBI" />
+      <Graphics centerX="500" centerY="820" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>This compound class stands for 1,4-&amp;beta;-D-glucosyl polymers.</Comment>
+      <Property key="UniqueID" value="1-4-beta-D-Glucan" />
+      <Property key="AlternativeId_Chebi" value="18246" />
+      <Property key="AlternativeId_Cas" value="9004-34-6" />
+      <Property key="Synonym_1" value="(1,4-&amp;beta;-D-glucosyl)&lt;sub&gt;(n)&lt;/sub&gt;" />
+      <Property key="Synonym_2" value="(1,4-&amp;beta;-D-glucosyl)&lt;sub&gt;(n+1)&lt;/sub&gt;" />
+      <Property key="Synonym_3" value="(1,4-&amp;beta;-D-glucosyl)&lt;sub&gt;(n-1)&lt;/sub&gt;" />
+      <Property key="GroupCoords2d" value="(249 41), (197 41), (145 41), (93 41), (301 41), (41 41)" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="N+1Name" value="(1,4-&amp;beta;-D-glucosyl)&lt;sub&gt;(n+1)&lt;/sub&gt;" />
+      <Property key="N1Name" value="(1,4-&amp;beta;-D-glucosyl)&lt;sub&gt;(n-1)&lt;/sub&gt;" />
+      <Property key="NName" value="(1,4-&amp;beta;-D-glucosyl)&lt;sub&gt;(n)&lt;/sub&gt;" />
+      <Property key="NonStandardInchi" value="InChI=1S/C24H42O21/c25-1-5-9(29)10(30)15(35)22(40-5)44-19-7(3-27)42-24(17(37)12(19)32)45-20-8(4-28)41-23(16(36)13(20)33)43-18-6(2-26)39-21(38)14(34)11(18)31/h5-38H,1-4H2/t5-,6-,7-,8-,9-,10+,11-,12-,13-,14-,15-,16-,17-,18-,19-,20-,21-,22+,23+,24+/m1/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="[C@@H]1([R1])([C@H](O)[C@@H](O)[C@@H](O[C@H](CO)1)O[C@H]2([C@H](O)[C@@H](O)[C@@H](O[C@H](CO)2)O[C@H]3([C@H](O)[C@@H](O)[C@@H](O[C@H](CO)3)O[C@H]4([C@H](O)[C@@H](O)[C@H]([R2])O[C@H](CO)4))))" />
+      <Property key="StructureGroups" value="X-DGLC-HEX-1:5, B-DGLC-HEX-1:5, B-DGLC-HEX-1:5, B-DGLC-HEX-1:5, R2, R1" />
+      <Property key="StructureLinks" value="(1 2 O 4 D 1), (2 3 O 4 D 1), (3 4 O 4 D 1), (5 1 N -1 X 1), (4 6 X -1 N 1)" />
+    </DataNode>
+    <DataNode elementId="Xyloglucans-Galactose-3" textLabel="an XXLG xylogulcan" type="Metabolite">
+      <Xref identifier="MNXM13274" dataSource="MetaNetX" />
+      <Graphics centerX="650" centerY="820" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="THE-ARABIDOPSIS-INFORMATION-RESOURCE, zhang, SRI, caspi">|FRAME: Xyloglucan Xyloglucan| is the major hemicellulose in dicotyledon type I cell walls. The cross-linking between xyloglucan chains is a major factor in the stability of the three-dimensional matrix between adjacent cellulose microfibrils |CITS: [Whitney95]|. Xyloglucan has a backbone of &amp;beta;-1,4-linked cellotetraose units, which are substituted in C-6 by &amp;alpha;-D-xylosyl residues at two or three of the first three glucosyl residues, but not in the position closest to the reducing end |CITS: [8252539]|. Some of the xylosyl residues are subsequently further substituted by (1,2)-&amp;beta;-D-galactosyl residues at the second and/or third xylose residue and by (1,2)-&amp;alpha;-L-fucose at the galactosyl unit of the third xylose residue |CITS:[12837954] [17011813]|. A common terminology uses G for basic non-substituted glucosyl units within a xylosylglycan, X for glucose residues substituted by &amp;alpha;-D-xylose, L for glucose residues substituted by &amp;alpha;-D-xylose and &amp;beta;-D-galactose, and F for glucose residues substituted by &amp;alpha;-D-xylose, &amp;beta;-D-galactose and &amp;alpha;-L-fucose |CITS:[Fry93]|. Most xylosylglucans consist of repeating heptasaccharide |FRAME: Xyloglucans-Xylose XXXG| units.</Comment>
+      <Property key="UniqueID" value="Xyloglucans-Galactose-3" />
+      <Property key="AlternativeId_Seed" value="cpd28360" />
+      <Property key="AlternativeId_Metanetx" value="MNXM13274" />
+      <Property key="Synonym_1" value="a xyloglucan with galactose side chain at position 3" />
+      <Property key="GroupCoords2d" value="(249 145), (197 145), (145 145), (93 145), (93 93), (145 93), (197 93), (197 41), (301 145), (41 145)" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="NonStandardInchi" value="InChI=1S/C44H74O38/c45-1-11-32(21(55)25(59)36(66)74-11)78-41-30(64)22(56)34(14(77-41)7-73-44-35(17(51)10(48)4-70-44)81-43-29(63)20(54)24(58)37(67)82-43)80-42-31(65)23(57)33(13(76-42)6-72-39-27(61)16(50)9(47)3-69-39)79-40-28(62)19(53)18(52)12(75-40)5-71-38-26(60)15(49)8(46)2-68-38/h8-67H,1-7H2/t8-,9-,10-,11-,12-,13-,14-,15+,16+,17+,18-,19+,20+,21-,22-,23-,24-,25-,26-,27-,28-,29-,30-,31-,32-,33-,34-,35-,36-,37+,38-,39-,40+,41+,42+,43-,44-/m1/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C(O)[C@H]1(O[C@@H](O[R2])[C@H](O)[C@@H](O)[C@@H]1O[C@@H]4(O[C@H](CO[C@H]3(OC[C@@H](O)[C@H](O)[C@@H](O[C@@H]2(O[C@H](O)[C@H](O)[C@H](O)[C@@H](O)2))3))[C@H]([C@H](O)[C@@H](O)4)O[C@@H]6(O[C@H](CO[C@H]5(OC[C@@H](O)[C@H](O)[C@@H](O)5))[C@H]([C@H](O)[C@@H](O)6)O[C@@H]8(O[C@H](CO[C@H]7(OC[C@@H](O)[C@H](O)[C@@H](O)7))[C@@H](O[R1])[C@H](O)[C@@H](O)8))))" />
+      <Property key="StructureGroups" value="X-DGLC-HEX-1:5, B-DGLC-HEX-1:5, B-DGLC-HEX-1:5, B-DGLC-HEX-1:5, A-DXYL-PEN-1:5, A-DXYL-PEN-1:5, A-DXYL-PEN-1:5, B-DGAL-HEX-1:5, R2, R1" />
+      <Property key="StructureLinks" value="(1 2 O 4 D 1), (2 3 O 4 D 1), (3 4 O 4 D 1), (4 5 O 6 D 1), (3 6 O 6 D 1), (2 7 O 6 D 1), (7 8 O 2 D 1), (9 1 N -1 X 1), (4 10 X -1 N 1)" />
+      <CitationRef elementRef="citation_PUB_8252539" />
+    </DataNode>
+    <DataNode elementId="Xyloglucans-Galactose-23" textLabel="an XLLG xylogulcan" type="Metabolite">
+      <Xref identifier="MNXM9244" dataSource="MetaNetX" />
+      <Graphics centerX="200" centerY="920" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="THE-ARABIDOPSIS-INFORMATION-RESOURCE, zhang, SRI, caspi">|FRAME: Xyloglucan Xyloglucan| is the major hemicellulose in dicotyledon type I cell walls. The cross-linking between xyloglucan chains is a major factor in the stability of the three-dimensional matrix between adjacent cellulose microfibrils |CITS: [Whitney95]|. Xyloglucan has a backbone of &amp;beta;-1,4-linked cellotetraose units, which are substituted in C-6 by &amp;alpha;-D-xylosyl residues at two or three of the first three glucosyl residues, but not in the position closest to the reducing end |CITS: [8252539]|. Some of the xylosyl residues are subsequently further substituted by (1,2)-&amp;beta;-D-galactosyl residues at the second and/or third xylose residue and by (1,2)-&amp;alpha;-L-fucose at the galactosyl unit of the third xylose residue |CITS:[12837954] [17011813]|. A common terminology uses G for basic non-substituted glucosyl units within a xylosylglycan, X for glucose residues substituted by &amp;alpha;-D-xylose, L for glucose residues substituted by &amp;alpha;-D-xylose and &amp;beta;-D-galactose, and F for glucose residues substituted by &amp;alpha;-D-xylose, &amp;beta;-D-galactose and &amp;alpha;-L-fucose |CITS:[Fry93]|. Most xylosylglucans consist of repeating heptasaccharide |FRAME: Xyloglucans-Xylose XXXG| units.</Comment>
+      <Property key="UniqueID" value="Xyloglucans-Galactose-23" />
+      <Property key="AlternativeId_Seed" value="cpd28359" />
+      <Property key="AlternativeId_Metanetx" value="MNXM9244" />
+      <Property key="Synonym_1" value="a xyloglucan with galactose side chain at positions 2 and 3" />
+      <Property key="GroupCoords2d" value="(249 145), (197 145), (145 145), (93 145), (93 93), (145 93), (145 41), (197 93), (197 41), (301 145), (41 145)" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="NonStandardInchi" value="InChI=1S/C49H82O43/c50-1-11-34(22(61)27(66)39(73)82-11)86-44-32(71)23(62)36(14(84-44)7-81-49-38(17(56)10(53)4-78-49)90-47-31(70)21(60)26(65)41(75)92-47)88-45-33(72)24(63)35(87-43-29(68)19(58)18(57)12(83-43)5-79-42-28(67)15(54)8(51)2-76-42)13(85-45)6-80-48-37(16(55)9(52)3-77-48)89-46-30(69)20(59)25(64)40(74)91-46/h8-75H,1-7H2/t8-,9-,10-,11-,12-,13-,14-,15+,16+,17+,18-,19+,20+,21+,22-,23-,24-,25-,26-,27-,28-,29-,30-,31-,32-,33-,34-,35-,36-,37-,38-,39-,40+,41+,42-,43+,44+,45+,46-,47-,48-,49-/m1/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C(O)[C@H]1(O[C@@H](O[R2])[C@H](O)[C@@H](O)[C@@H]1O[C@@H]4(O[C@H](CO[C@H]3(OC[C@@H](O)[C@H](O)[C@@H](O[C@@H]2(O[C@H](O)[C@H](O)[C@H](O)[C@@H](O)2))3))[C@H]([C@H](O)[C@@H](O)4)O[C@@H]7(O[C@H](CO[C@H]6(OC[C@@H](O)[C@H](O)[C@@H](O[C@@H]5(O[C@H](O)[C@H](O)[C@H](O)[C@@H](O)5))6))[C@H]([C@H](O)[C@@H](O)7)O[C@@H]9(O[C@H](CO[C@H]8(OC[C@@H](O)[C@H](O)[C@@H](O)8))[C@@H](O[R1])[C@H](O)[C@@H](O)9))))" />
+      <Property key="StructureGroups" value="X-DGLC-HEX-1:5, B-DGLC-HEX-1:5, B-DGLC-HEX-1:5, B-DGLC-HEX-1:5, A-DXYL-PEN-1:5, A-DXYL-PEN-1:5, B-DGAL-HEX-1:5, A-DXYL-PEN-1:5, B-DGAL-HEX-1:5, R2, R1" />
+      <Property key="StructureLinks" value="(1 2 O 4 D 1), (2 3 O 4 D 1), (3 4 O 4 D 1), (4 5 O 6 D 1), (3 6 O 6 D 1), (6 7 O 2 D 1), (2 8 O 6 D 1), (8 9 O 2 D 1), (10 1 N -1 X 1), (4 11 X -1 N 1)" />
+      <CitationRef elementRef="citation_PUB_8252539" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="145.0" y="50" elementRef="AT2G03220" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="105.0" y="275" elementRef="AT2G03220-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_1_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_1_0_0" x="265.0" y="50" elementRef="AT4G02500" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_1_0_0" arrowHead="TranscriptionTranslation" x="255.0" y="275" elementRef="AT4G02500-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_2_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_2_0_0" x="385.0" y="50" elementRef="AT2G20370" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_2_0_0" arrowHead="TranscriptionTranslation" x="255.0" y="355" elementRef="AT2G20370-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_3_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_3_0_0" x="145.0" y="110" elementRef="AT3G28180" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_3_0_0" arrowHead="TranscriptionTranslation" x="405.0" y="355" elementRef="AT3G28180-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_4_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_4_0_0" x="265.0" y="110" elementRef="AT3G62720" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_4_0_0" arrowHead="TranscriptionTranslation" x="105.0" y="355" elementRef="AT3G62720-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-12419">
+      <Xref identifier="EC-2.4.1.168" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-12419_start" x="395.0" y="620" elementRef="CPD-12575" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-12419_end" arrowHead="Conversion" x="455.0" y="820" elementRef="_1-4-beta-D-Glucan" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-12419_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-12419" />
+      <Property key="EC_Number" value="EC-2.4.1.168" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-5936" />
+      <Property key="ReactionEquation" value="CPD-12575 + 1-4-beta-D-Glucan =&gt; 1-4-beta-D-Glucan + UDP" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED-UNFIXABLE" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-19231" />
+      <Property key="Synonym_1" value="uridine diphosphoglucose-glycogen glucosyltransferase" />
+      <Property key="Synonym_2" value="UDPG-glycogen transglucosylase" />
+      <Property key="Synonym_3" value="UDPG-glycogen synthetase" />
+      <Property key="Synonym_4" value="UDP-glycogen synthase" />
+      <Property key="Synonym_5" value="UDP-glucose-glycogen glucosyltransferase" />
+      <Property key="Synonym_6" value="glycogen (starch) synthetase" />
+      <Property key="Synonym_7" value="UDP-glucose&amp;mdash;glycogen glucosyltransferase" />
+      <Property key="SystematicName" value="UDP-glucose:glycogen 4-&amp;alpha;-&lt;small&gt;D&lt;/small&gt;-glucosyltransferase" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="CannotBalance?" value="T" />
+      <Property key="^official?" value="T" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="Synonyms" value="uridine diphosphoglucose-glycogen glucosyltransferase, UDPG-glycogen transglucosylase, UDPG-glycogen synthetase, UDP-glycogen synthase, UDP-glucose-glycogen glucosyltransferase, glycogen (starch) synthetase, UDP-glucose&amp;mdash;glycogen glucosyltransferase" />
+      <Property key="SystematicName" value="UDP-glucose:glycogen 4-&amp;alpha;-&lt;small&gt;D&lt;/small&gt;-glucosyltransferase" />
+    </Interaction>
+    <Interaction elementId="RXN-12419_ENZRXN-19231">
+      <Waypoints>
+        <Point elementId="RXN-12419_ENZRXN-19231_start" x="450" y="367.5" elementRef="AT3G28180-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-12419_ENZRXN-19231_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-12419_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-12419_anchor_reactant_1">
+      <Xref identifier="EC-2.4.1.168" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-12419_anchor_reactant_start_1" x="545.0" y="820" elementRef="_1-4-beta-D-Glucan" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-12419_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-12419_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-12419_anchor_product_1">
+      <Xref identifier="EC-2.4.1.168" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-12419_anchor_product_start_1" x="0" y="0" elementRef="RXN-12419_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-12419_anchor_product_end_1" arrowHead="Conversion" x="455.0" y="720" elementRef="UDP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-12418">
+      <Xref identifier="RXN-12418" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-12418_start" x="695.0" y="820" elementRef="Xyloglucans-Galactose-3" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-12418_end" arrowHead="Conversion" x="155.0" y="920" elementRef="Xyloglucans-Galactose-23" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-12418_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-12418" />
+      <Property key="Pathways" value="PWY-5936" />
+      <Property key="ReactionEquation" value="CPD-14553 + Xyloglucans-Galactose-3 =&gt; Xyloglucans-Galactose-23 + UDP" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED-UNFIXABLE" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="CannotBalance?" value="T" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-12418_anchor_reactant_0">
+      <Xref identifier="RXN-12418" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-12418_anchor_reactant_start_0" x="395.0" y="820" elementRef="CPD-14553" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-12418_anchor_reactant_end_0" x="0" y="0" elementRef="RXN-12418_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-12418_anchor_product_1">
+      <Xref identifier="RXN-12418" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-12418_anchor_product_start_1" x="0" y="0" elementRef="RXN-12418_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-12418_anchor_product_end_1" arrowHead="Conversion" x="455.0" y="720" elementRef="UDP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-12415">
+      <Xref identifier="EC-2.4.2.39" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-12415_start" x="695.0" y="620" elementRef="GXGG-Xyloglucans" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-12415_end" arrowHead="Conversion" x="155.0" y="820" elementRef="Xyloglucans-Xylose" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-12415_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-12415" />
+      <Property key="EC_Number" value="EC-2.4.2.39" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-5936" />
+      <Property key="ReactionEquation" value="GXGG-Xyloglucans + UDP-D-XYLOSE =&gt; Xyloglucans-Xylose + UDP + PROTON" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-150.5426" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="^coefficient" value="2, 2, 2" />
+    </Interaction>
+    <Interaction elementId="RXN-12415_anchor_reactant_1">
+      <Xref identifier="EC-2.4.2.39" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-12415_anchor_reactant_start_1" x="245.0" y="620" elementRef="UDP-D-XYLOSE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-12415_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-12415_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-12415_anchor_product_1">
+      <Xref identifier="EC-2.4.2.39" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-12415_anchor_product_start_1" x="0" y="0" elementRef="RXN-12415_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-12415_anchor_product_end_1" arrowHead="Conversion" x="455.0" y="720" elementRef="UDP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-12415_anchor_product_2">
+      <Xref identifier="EC-2.4.2.39" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-12415_anchor_product_start_2" x="0" y="0" elementRef="RXN-12415_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-12415_anchor_product_end_2" arrowHead="Conversion" x="305.0" y="720" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9462">
+      <Xref identifier="RXN-9462" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9462_start" x="245.0" y="820" elementRef="Xyloglucans-Xylose" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9462_end" arrowHead="Conversion" x="605.0" y="820" elementRef="Xyloglucans-Galactose-3" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9462_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9462" />
+      <Property key="Pathways" value="PWY-5936" />
+      <Property key="ReactionEquation" value="CPD-14553 + Xyloglucans-Xylose =&gt; Xyloglucans-Galactose-3 + UDP" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED-UNFIXABLE" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-15013" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="CannotBalance?" value="T" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-9462_ENZRXN-15013">
+      <Waypoints>
+        <Point elementId="RXN-9462_ENZRXN-15013_start" x="300" y="367.5" elementRef="AT2G20370-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-9462_ENZRXN-15013_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-9462_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9462_anchor_reactant_0">
+      <Xref identifier="RXN-9462" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9462_anchor_reactant_start_0" x="395.0" y="820" elementRef="CPD-14553" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9462_anchor_reactant_end_0" x="0" y="0" elementRef="RXN-9462_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9462_anchor_product_1">
+      <Xref identifier="RXN-9462" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9462_anchor_product_start_1" x="0" y="0" elementRef="RXN-9462_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-9462_anchor_product_end_1" arrowHead="Conversion" x="455.0" y="720" elementRef="UDP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9463">
+      <Xref identifier="EC-2.4.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-9463_start" x="245.0" y="920" elementRef="Xyloglucans-Galactose-23" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9463_end" arrowHead="Conversion" x="455.0" y="620" elementRef="XLFG-Xyloglucans" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9463_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9463" />
+      <Property key="EC_Number" value="EC-2.4.1" />
+      <Property key="Pathways" value="PWY-5936" />
+      <Property key="ReactionEquation" value="CPD-13118 + Xyloglucans-Galactose-23 =&gt; XLFG-Xyloglucans + GDP + PROTON" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXN-15016, ENZRXN-15014" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="CannotBalance?" value="NIL" />
+      <Property key="Gibbs0" value="-95.8136" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-9463_ENZRXN-15014">
+      <Waypoints>
+        <Point elementId="RXN-9463_ENZRXN-15014_start" x="150" y="287.5" elementRef="AT2G03220-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-9463_ENZRXN-15014_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-9463_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9463_ENZRXN-15016">
+      <Waypoints>
+        <Point elementId="RXN-9463_ENZRXN-15016_start" x="450" y="287.5" elementRef="MONOMER-13998" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-9463_ENZRXN-15016_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-9463_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9463_anchor_reactant_0">
+      <Xref identifier="EC-2.4.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-9463_anchor_reactant_start_0" x="695.0" y="720" elementRef="CPD-13118" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9463_anchor_reactant_end_0" x="0" y="0" elementRef="RXN-9463_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9463_anchor_product_1">
+      <Xref identifier="EC-2.4.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-9463_anchor_product_start_1" x="0" y="0" elementRef="RXN-9463_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-9463_anchor_product_end_1" arrowHead="Conversion" x="155.0" y="720" elementRef="GDP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9463_anchor_product_2">
+      <Xref identifier="EC-2.4.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-9463_anchor_product_start_2" x="0" y="0" elementRef="RXN-9463_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-9463_anchor_product_end_2" arrowHead="Conversion" x="305.0" y="720" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9461">
+      <Xref identifier="EC-2.4.2.39" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-9461_start" x="545.0" y="820" elementRef="_1-4-beta-D-Glucan" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9461_end" arrowHead="Conversion" x="605.0" y="620" elementRef="GXGG-Xyloglucans" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9461_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9461" />
+      <Property key="EC_Number" value="EC-2.4.2.39" />
+      <Property key="Pathways" value="PWY-5936" />
+      <Property key="ReactionEquation" value="1-4-beta-D-Glucan + UDP-D-XYLOSE =&gt; GXGG-Xyloglucans + UDP" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED-UNFIXABLE" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXN-15011, ENZRXNQT-12805, ENZRXN-19229, ENZRXN-15012" />
+      <Property key="EnzymaticReactionCount" value="4" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="CannotBalance?" value="T" />
+      <Property key="^official?" value="T" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-9461_ENZRXN-15012">
+      <Waypoints>
+        <Point elementId="RXN-9461_ENZRXN-15012_start" x="150" y="447.5" elementRef="MONOMER-13995" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-9461_ENZRXN-15012_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-9461_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9461_ENZRXN-15011">
+      <Waypoints>
+        <Point elementId="RXN-9461_ENZRXN-15011_start" x="150" y="367.5" elementRef="AT3G62720-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-9461_ENZRXN-15011_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-9461_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9461_ENZRXNQT-12805">
+      <Waypoints>
+        <Point elementId="RXN-9461_ENZRXNQT-12805_start" x="300" y="287.5" elementRef="AT4G02500-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-9461_ENZRXNQT-12805_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-9461_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9461_ENZRXN-19229">
+      <Waypoints>
+        <Point elementId="RXN-9461_ENZRXN-19229_start" x="300" y="287.5" elementRef="AT4G02500-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-9461_ENZRXN-19229_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-9461_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9461_anchor_reactant_1">
+      <Xref identifier="EC-2.4.2.39" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-9461_anchor_reactant_start_1" x="245.0" y="620" elementRef="UDP-D-XYLOSE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9461_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-9461_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9461_anchor_product_1">
+      <Xref identifier="EC-2.4.2.39" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-9461_anchor_product_start_1" x="0" y="0" elementRef="RXN-9461_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-9461_anchor_product_end_1" arrowHead="Conversion" x="455.0" y="720" elementRef="UDP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_PUB_8252539">
+      <Xref identifier="8252539" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_15020758">
+      <Xref identifier="15020758" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_12695547">
+      <Xref identifier="12695547" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_10373113">
+      <Xref identifier="10373113" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_11554468">
+      <Xref identifier="11554468" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_12032363">
+      <Xref identifier="12032363" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_17011813">
+      <Xref identifier="17011813" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_11854459">
+      <Xref identifier="11854459" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_16982611">
+      <Xref identifier="16982611" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_15863516">
+      <Xref identifier="15863516" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_17488821">
+      <Xref identifier="17488821" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_11743104">
+      <Xref identifier="11743104" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_12837954">
+      <Xref identifier="12837954" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_1550346">
+      <Xref identifier="1550346" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_18557833">
+      <Xref identifier="18557833" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_KREIS98">
+      <Xref identifier="PUB-KREIS98 | Cardenolide biosynthesis in Foxglove. (Kreis, W, Hensel, A, Stuhlemmer, U, 1998)" dataSource="BioCyc" />
+    </Citation>
+  </Citations>
+</Pathway>

@@ -1,0 +1,627 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="des-methyl avenacin A-1 biosynthesis" organism="TAX-38783" source="PlantCyc">
+  <Description>Avenacins are triterpene glucosides which act as phytoalexins and allelopathic agents conferring resistance against soil-borne pathogens and influencing the development of close neighbors |CITS:[10536024] [16995908]|. The occurrence of the phytoalexic avenacins appears to be restricted to the genus &lt;i&gt;Avena&lt;/i&gt; which is an expression of a highly specialized defense biochemistry |CITS:[Hostettmann95]|. In general, triterpenes are valued compounds with a wide range of commercial applications and because of that in the focus of metabolic engineering. One of the major goals is to re-introduce lost traits of resistance into cultivated crops |CITS:[22639586]|. As a general rule genes in plant biochemical pathways, unlike bacterial biochemical pathways, have been regarded as unlinked. However, the avenacin biosynthesis appears to be carried out by an avenacin biosynthetic gene cluster which implies a high degree of coordination regarding avenacin synthesis, transport and sequestration, all of which must be precisely orchestrated in time and space between different cell organelles and compartments |CITS:[21876149] [15148404] [21443624] [20040536]|. |FRAME:CPD-16624 Des-methyl avenacin A-1| (this pathway) is the avenacin species found in &lt;i&gt;Avena&lt;/i&gt; mutants such as sad9 which lack the anthranilate N-methyltransferase, hence have a deficiency in catalyzing |FRAME:CPD-402 &lt;i&gt;N&lt;/i&gt;-methylanthranilate| and apparently acylate with |FRAME:ANTHRANILATE anthranilate| instead. |FRAME:CPD-16623 Des-acyl avenacin A| is the origin within the |FRAME:PWY-7473 avenacin A-1 biosynthesis| which deviates towards the synthesis of |FRAME:CPD-16624 des-methyl avenacin A-1|. The first reaction of the pathway is the glucosylation of |FRAME:ANTHRANILATE anthranilate| which yields |FRAME:CPD-12835 anthraniloyl-&lt;i&gt;O&lt;/i&gt;-glucopyranose| catalyzed by two anthranilate glucosyltransferases encoded by SAD10 (aka UGT74H5) and UGT74H6. Both glucosyltransferases accept |FRAME:CPD-402 &lt;i&gt;N&lt;/i&gt;-methylanthranilate| and |FRAME:ANTHRANILATE anthranilate| with varying efficiency and therefore are capable of forming |FRAME:CPD-16600 N-methylanthraniloyl-&amp;beta;-&lt;i&gt;D&lt;/i&gt;-glucopyranose| (see |FRAME:PWY-7463 &lt;i&gt;N&lt;/i&gt;-methylanthraniloyl-&amp;beta;-&lt;i&gt;D&lt;/i&gt;-glucopyranose biosynthesis|) and |FRAME:CPD-12835 anthraniloyl-&lt;i&gt;O&lt;/i&gt;-glucopyranose|, respectively |CITS:[23258535]|. The following step in the pathway of |FRAME:CPD-16624 des-methyl avenacin A-1| biosynthesis is the acylation of |FRAME:CPD-16623 des-acyl avenacin A| with |FRAME:ANTHRANILATE anthranilate| which is provided through the acyl-donor |FRAME:CPD-12835 anthraniloyl-&lt;i&gt;O&lt;/i&gt;-glucopyranose|. The catalyzing enzyme is a serine carboxypeptidase-like (SCPL) protein (SCPL1) encoded by SAD7, also a member of the avenacin genetic cluster, which can utilize both |FRAME:CPD-16600 N-methylanthraniloyl-&amp;beta;-&lt;i&gt;D&lt;/i&gt;-glucopyranose| and |FRAME:CPD-12835 anthraniloyl-&lt;i&gt;O&lt;/i&gt;-glucopyranose| as acyl-donor, in the latter case resulting in the formation of |FRAME:CPD-16624 des-methyl avenacin A-1| |CITS:[19684243]|.</Description>
+  <Authors>
+    <Author name="O-28" />
+    <Author name="hartmut" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-7475" />
+  <Property key="Type" value="TRITERPENOID-SYN" />
+  <Property key="ReactionCount" value="2" />
+  <Property key="ReactionIDs" value="RXN-11853, RXN-15390" />
+  <Property key="PredecessorCount" value="2" />
+  <Property key="PrimaryCompoundCount" value="2" />
+  <Property key="PathwayLinks" value="(CPD-16623 PWY-7473)" />
+  <Property key="Organism" value="TAX-38783" />
+  <Property key="TaxonomicRange_1" value="TAX-4496" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_PUB_16995908" />
+  <CitationRef elementRef="citation_PUB_HOSTETTMANN95" />
+  <CitationRef elementRef="citation_PUB_22639586" />
+  <CitationRef elementRef="citation_PUB_21876149" />
+  <CitationRef elementRef="citation_PUB_21443624" />
+  <CitationRef elementRef="citation_PUB_10536024" />
+  <CitationRef elementRef="citation_PUB_15148404" />
+  <CitationRef elementRef="citation_PUB_20040536" />
+  <CitationRef elementRef="citation_PUB_23258535" />
+  <CitationRef elementRef="citation_PUB_19684243" />
+  <Graphics boardWidth="1200" boardHeight="1020" />
+  <DataNodes>
+    <DataNode elementId="AT2G43840" textLabel="UGT74F1" type="GeneProduct">
+      <Xref identifier="AT2G43840" dataSource="TAIR" />
+      <Graphics centerX="100" centerY="50" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT2G43840" />
+      <Property key="Product" value="AT2G43840-MONOMER" />
+      <Property key="StartPosition" value="18164715" />
+      <Property key="EndPosition" value="18166308" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+      <Property key="Accession1" value="AT2G43840" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="G-18036" textLabel="SAD10" type="GeneProduct">
+      <Xref identifier="G-18036" dataSource="plantcyc" />
+      <Graphics centerX="220" centerY="50" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="G-18036" />
+      <Property key="Synonym_1" value="UGT74H5" />
+      <Property key="Product" value="MONOMER-18568" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="AT2G43820" textLabel="UGT74F2" type="GeneProduct">
+      <Xref identifier="AT2G43820" dataSource="TAIR" />
+      <Graphics centerX="340" centerY="50" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT2G43820" />
+      <Property key="AlternativeId_Tair" value="AT2G43820" />
+      <Property key="AlternativeId_Arrayexpress" value="O22822" />
+      <Property key="AlternativeId_String" value="3702.AT2G43820.1" />
+      <Property key="Synonym_1" value="SGT1" />
+      <Property key="Product" value="AT2G43820-MONOMER" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="Accession1" value="AT2G43820" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="GLYMA.08G125600" textLabel="Glyma.08G125600" type="GeneProduct">
+      <Xref identifier="GLYMA.08G125600" dataSource="plantcyc" />
+      <Graphics centerX="100" centerY="110" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="GLYMA.08G125600" />
+      <Property key="Product" value="GLYMA.08G125600-MONOMER" />
+      <Property key="GeneType" value="ORFs" />
+      <Property key="Accession1" value="Glyma.08G125600" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="G-18035" textLabel="UGT74H6" type="GeneProduct">
+      <Xref identifier="G-18035" dataSource="plantcyc" />
+      <Graphics centerX="220" centerY="110" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="G-18035" />
+      <Property key="Product" value="MONOMER-18567" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="LJ4G0022296" textLabel="Lj4g0022296" type="GeneProduct">
+      <Xref identifier="LJ4G0022296" dataSource="plantcyc" />
+      <Graphics centerX="340" centerY="110" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="LJ4G0022296" />
+      <Property key="Product" value="LJ4G0022296.1" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+      <Property key="Accession1" value="Lj4g0022296" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="GLYMA.08G125600-MONOMER" textLabel="Glyma.08G125600" type="Protein">
+      <Xref identifier="GLYMA.08G125600-MONOMER" dataSource="plantcyc" />
+      <Graphics centerX="150" centerY="275" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="GLYMA.08G125600-MONOMER" />
+      <Property key="Catalyzes" value="RXN-N7V-108238, RXN-N7V-108237, RXN-N7V-108236, RXN-N7V-108235, RXN-N7V-108234" />
+      <Property key="CatalyzesCount" value="5" />
+      <Property key="Accession1" value="Glyma.08G125600.1.p" />
+      <Property key="Gene" value="GLYMA.08G125600" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="TAX-3847" />
+    </DataNode>
+    <DataNode elementId="AT2G43840-MONOMER" textLabel="salicylic acid / benzoic acid glucosyltransferase" type="Protein">
+      <Xref identifier="Q3EBH1" dataSource="uniprot" />
+      <Graphics centerX="300" centerY="275" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">UGT74F1 is a glucosyltransferase that acts on |FRAME: BENZOATE| and |FRAME: CPD-110| |CITS: [17085977][11641410]|. It also appears to act on |FRAME: ANTHRANILATE| |CITS: [12475971]|, |FRAME: CPD-520 quercetin||CITS: [15352060]|, and |FRAME: P-AMINO-BENZOATE| |CITS: [18385129]|. A closely related enzyme in Arabidopsis, |FRAME:AT2G43820-MONOMER UGT74F2| seems to possess many over-lapping activities, but, it appears to be expressed at a higher level, and does have some biochemical differences. For instance, while |FRAME:AT2G43820-MONOMER UGT74F2| can catalyze the formation of |FRAME: CPD-12629 SGE| and |FRAME: CPD-12628 SAG| &lt;i&gt;in vitro&lt;/i&gt;, UGT74F1 only appears to promote the formation of |FRAME: CPD-12628 SAG| |CITS: [18248508]|. There is &lt;i&gt;in vivo&lt;/i&gt; evidence for its participation in salicylic acid modification based on the reduction of |FRAME: CPD-12628 SAG| observed in a &lt;i&gt;ugt74f1&lt;/i&gt; mutant |CITS: [18248508]|. To date, the subcellular localization and precise biological function of UGT74F1 remain unknown, but, given its ability to act upon several different substrates, it may be involved in multiple biochemical pathways &lt;i&gt;in planta&lt;/i&gt;.</Comment>
+      <Property key="UniqueID" value="AT2G43840-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT2G43840.1" />
+      <Property key="AlternativeId_Uniprot" value="Q3EBH1" />
+      <Property key="Synonym_1" value="AT2G43840.1" />
+      <Property key="Synonym_2" value="UDP-glucose:salicylic acid glucosyltransferase / UDP-glucose:benzoic acid glucosyltransferase" />
+      <Property key="Synonym_3" value="UDP-glucose:salicylate glucosyltransferase / UDP-glucose:benzoate glucosyltransferase" />
+      <Property key="Catalyzes" value="RXN-12866, RXN-12580, RXN-12865, RXN-12652, RXN-12864" />
+      <Property key="CatalyzesCount" value="5" />
+      <Property key="Accession1" value="AT2G43840.1" />
+      <Property key="FunctionalAssignmentStatus" value=":PROBABLE-ENZYME" />
+      <Property key="Gene" value="AT2G43840" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_12475971" />
+      <CitationRef elementRef="citation_PUB_15352060" />
+      <CitationRef elementRef="citation_PUB_18385129" />
+      <CitationRef elementRef="citation_PUB_18248508" />
+    </DataNode>
+    <DataNode elementId="MONOMER-18568" textLabel="UDP-glucose: acyl glucosyltransferase" type="Protein">
+      <Xref identifier="C4MF47" dataSource="uniprot" />
+      <Graphics centerX="450" centerY="275" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="O-28, hartmut">The cDNA encoding a UDP-glucose: N-methylanthranilate glucosyltransferase (UGT74H5) was identified utilizing the EST collection established from roots of &lt;i&gt;Avena strigosa&lt;/i&gt;. The gene was recombinant expressed in &lt;i&gt;E. coli&lt;/i&gt;, purified to homogeneity and its catalytic properties determined. It was demonstrated that UGT74H5 catalyzed the glucosylation of |FRAME:CPD-402 &lt;i&gt;N&lt;/i&gt;-methylanthranilate| forming |FRAME:CPD-16600 N-methylanthraniloyl-&amp;beta;-&lt;i&gt;D&lt;/i&gt;-glucopyranose| utilizing the glucose donor |FRAME:CPD-12575 UDP-&amp;alpha;-D-glucose| in the process. The biochemical and genetic data indicate the involvement of UGT74H6 in the avenacin biosynthetic pathway(s) with focus on the avenacins acylated with |FRAME:CPD-402 &lt;i&gt;N&lt;/i&gt;-methylanthranilate| generating |FRAME:CPD-10678 avenacin A-1| and |FRAME:CPD-16597 avenacin B-1|. As a less effective side-reaction UGT74H6 also glucosylated |FRAME:ANTHRANILATE anthranilate| to form the corresponding glucoside, i.e. |FRAME:CPD-12835 anthraniloyl-&lt;i&gt;O&lt;/i&gt;-glucopyranose|. The involvement of UGT74H5 in avenacin biosynthesis was indicated by its co-expression with other avenacin biosynthetic genes and its location within the avenacin gene cluster, especially its closeness to the SCPL-acyltransferase (SAD7) which utilizes |FRAME:CPD-16600 N-methylanthraniloyl-&amp;beta;-&lt;i&gt;D&lt;/i&gt;-glucopyranose| in the avenacin biosynthesis. UGT74H5 was strongly expressed in root tips of &lt;i&gt;Avena&lt;/i&gt;, which is also the confirmed location for avenacin biosynthesis |CITS:[23258535]|.</Comment>
+      <Property key="UniqueID" value="MONOMER-18568" />
+      <Property key="AlternativeId_Interpro" value="IPR002213" />
+      <Property key="AlternativeId_Cazy" value="GT1" />
+      <Property key="AlternativeId_Prosite" value="PS00375" />
+      <Property key="AlternativeId_Pfam" value="PF00201" />
+      <Property key="AlternativeId_Panther" value="PTHR11926" />
+      <Property key="AlternativeId_Uniprot" value="C4MF47" />
+      <Property key="AlternativeId_Pid" value="EU496509" />
+      <Property key="Catalyzes" value="RXN-22661, RXN-22660" />
+      <Property key="CatalyzesCount" value="2" />
+      <Property key="Gene" value="G-18036" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="MolecularWeightExp" value="55." />
+      <Property key="MolecularWeightKd" value="55." />
+      <Property key="Species" value="TAX-38783" />
+      <CitationRef elementRef="citation_PUB_23258535" />
+    </DataNode>
+    <DataNode elementId="MONOMER-18567" textLabel="UDP-glucose: acyl glucosyltransferase" type="Protein">
+      <Xref identifier="C4MF58" dataSource="uniprot" />
+      <Graphics centerX="150" centerY="355" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="O-28, hartmut">The cDNA encoding a UDP-glucose: benzoate glucosyltransferase (UGT74H6) was identified utilizing the EST collection established from roots of &lt;i&gt;Avena strigosa&lt;/i&gt;. The gene was recombinant expressed in &lt;i&gt;E. coli&lt;/i&gt;, purified to homogeneity and its catalytic properties determined. It was demonstrated that UGT74H6 catalyzed the glucosylation of |FRAME:BENZOATE benzoate| forming |FRAME:CPD-12630 benzoyl-&amp;beta;-D-glucopyranose| and utilizing the glucose donor |FRAME:CPD-12575 UDP-&amp;alpha;-D-glucose| in the process. The enzyme was also able to convert |FRAME:CPD-402 &lt;i&gt;N&lt;/i&gt;-methylanthranilate| to |FRAME:CPD-16600 N-methylanthraniloyl-&amp;beta;-&lt;i&gt;D&lt;/i&gt;-glucopyranose| using |FRAME:CPD-12575 UDP-&amp;alpha;-D-glucose| as glucose donor. The biochemical and genetic data indicate the involvement of UGT74H6 in the avenacin biosynthetic pathway(s) with focus on the avenacins acylated with |FRAME:BENZOATE benzoate|, i.e. |FRAME:CPD-16599 avenacin A-2| and |FRAME:CPD-16598 avenacin B-2|. Since UGT74H6 also glucosylated |FRAME:CPD-402 &lt;i&gt;N&lt;/i&gt;-methylanthranilate| to yield |FRAME:CPD-16600 N-methylanthraniloyl-&amp;beta;-&lt;i&gt;D&lt;/i&gt;-glucopyranose| it may also be involved and functionally redundant to the major N-methylanthranilate glucosyltransferase (UGT74H5) generating the |FRAME:CPD-402 &lt;i&gt;N&lt;/i&gt;-methylanthranilate| acylated avenacins |CITS:[23258535]|.</Comment>
+      <Property key="UniqueID" value="MONOMER-18567" />
+      <Property key="AlternativeId_Interpro" value="IPR002213" />
+      <Property key="AlternativeId_Cazy" value="GT1" />
+      <Property key="AlternativeId_Prosite" value="PS00375" />
+      <Property key="AlternativeId_Pfam" value="PF00201" />
+      <Property key="AlternativeId_Panther" value="PTHR11926" />
+      <Property key="AlternativeId_Uniprot" value="C4MF58" />
+      <Property key="AlternativeId_Pid" value="EU496520" />
+      <Property key="Catalyzes" value="RXN-22659, RXN-22658, RXN-22657" />
+      <Property key="CatalyzesCount" value="3" />
+      <Property key="Gene" value="G-18035" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="TAX-38783" />
+      <CitationRef elementRef="citation_PUB_23258535" />
+    </DataNode>
+    <DataNode elementId="LJ4G0022296.1" textLabel="Lj4g0022296.1" type="Protein">
+      <Xref identifier="LJ4G0022296.1" dataSource="plantcyc" />
+      <Graphics centerX="300" centerY="355" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="LJ4G0022296.1" />
+      <Property key="Catalyzes" value="RXN-5D-3013, RXN-5D-3012, RXN-5D-3011, RXN-5D-3010, RXN-5D-3009" />
+      <Property key="CatalyzesCount" value="5" />
+      <Property key="Accession1" value="Lj4g0022296.1" />
+      <Property key="Gene" value="LJ4G0022296" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="TAX-34305" />
+    </DataNode>
+    <DataNode elementId="AT2G43820-MONOMER" textLabel="salicylic acid / benzoic acid glucosyltransferase" type="Protein">
+      <Xref identifier="O22822" dataSource="uniprot" />
+      <Graphics centerX="150" centerY="435" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, THE-ARABIDOPSIS-INFORMATION-RESOURCE, dreher">UGT74F2 is a glucosyltransferase that acts on |FRAME: BENZOATE benzoate| and |FRAME: CPD-110 salicylate| |CITS: [17085977][11641410]|. It also appears to act on |FRAME: ANTHRANILATE anthranilate| |CITS: [12475971]| and |FRAME: P-AMINO-BENZOATE 4-aminobenzoate| |CITS: [18385129]|. A closely related enzyme in Arabidopsis, UGT74F1 seems to possess many over-lapping activities, but, it appears to be expressed at a lower level, and does have some biochemical differences. For instance, while UGT74F2 can catalyze the formation of |FRAME: CPD-12629 SGE| and |FRAME: CPD-12628 SAG| &lt;i&gt;in vitro&lt;/i&gt;, UGT74F1 only appears to promote the formation of |FRAME: CPD-12628 SAG| |CITS: [18248508]|. Transcript levels for UGT74F2 are increased in seedlings exposed to |FRAME: CPD-110 salicylate| and |FRAME: Abscisic-Acid abscisic acid|, but decreased in responde to gibberellic acid |CITS: [12475971]|. To date, the subcellular localization and precise biological function of UGT74F2 remain unknown, but, given its ability to act upon several different substrates, it may be involved in multiple biochemical pathways &lt;i&gt;in planta&lt;/i&gt;. There is &lt;i&gt;in vivo&lt;/i&gt; evidence for its participation in salicylic acid modification based on the reduction of |FRAME: CPD-12629 SGE| and |FRAME: CPD-12628 SAG| observed in a &lt;i&gt;ugt74f2&lt;/i&gt; mutant |CITS: [18248508]|.</Comment>
+      <Property key="UniqueID" value="AT2G43820-MONOMER" />
+      <Property key="AlternativeId_Pdb" value="5U6M" />
+      <Property key="AlternativeId_Interpro" value="IPR002213" />
+      <Property key="AlternativeId_Araport" value="AT2G43820.1" />
+      <Property key="AlternativeId_Cazy" value="GT1" />
+      <Property key="AlternativeId_Panther" value="PTHR11926" />
+      <Property key="AlternativeId_Smr" value="O22822" />
+      <Property key="AlternativeId_Pride" value="O22822" />
+      <Property key="AlternativeId_Pfam" value="PF00201" />
+      <Property key="AlternativeId_Phylomedb" value="O22822" />
+      <Property key="AlternativeId_Prosite" value="PS00375" />
+      <Property key="AlternativeId_Uniprot" value="O22822" />
+      <Property key="AlternativeId_Tair" value="AT2G43820" />
+      <Property key="Synonym_1" value="AtSGT1" />
+      <Property key="Synonym_2" value="UDP-glucose:salicylic acid glucosyltransferase / UDP-glucose:benzoic acid glucosyltransferase" />
+      <Property key="Synonym_3" value="UDP-glucose:salicylate glucosyltransferase / UDP-glucose:benzoate glucosyltransferase" />
+      <Property key="Catalyzes" value="RXN-18134, RXN-18136, RXN-18135, RXN-18355" />
+      <Property key="CatalyzesCount" value="4" />
+      <Property key="Accession1" value="AT2G43820.1" />
+      <Property key="Gene" value="AT2G43820" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_12475971" />
+      <CitationRef elementRef="citation_PUB_18385129" />
+      <CitationRef elementRef="citation_PUB_18248508" />
+    </DataNode>
+    <DataNode elementId="CPD-12835" textLabel="anthraniloyl-O-glucopyranose" type="Metabolite">
+      <Xref identifier="GTQKOJVFDJDUGN-HMUNZLOLSA-N" dataSource="InChIKey" />
+      <Graphics centerX="200" centerY="620" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-12835" />
+      <Property key="AlternativeId_Zinc" value="ZINC000095635701" />
+      <Property key="AlternativeId_Chebi" value="176467" />
+      <Property key="AlternativeId_Seed" value="cpd23603" />
+      <Property key="AlternativeId_Metanetx" value="MNXM16099" />
+      <Property key="AlternativeId_Pubchem" value="70684367" />
+      <Property key="Synonym_1" value="anthranilic acid-&amp;beta;-glucoside" />
+      <Property key="Synonym_2" value="2-aminobenzoic acid-&amp;beta;-glucoside" />
+      <Property key="Synonym_3" value="anthranilic acid, &amp;beta;-D-glucosyl ester" />
+      <Property key="Synonym_4" value="1-O-&amp;beta;-D-Glucopyranosyl anthranilate" />
+      <Property key="Synonym_5" value="D-Glucose 1-anthranilate" />
+      <Property key="Synonym_6" value="anthraniloyl-&lt;i&gt;O&lt;/i&gt;-glucose" />
+      <Property key="Synonym_7" value="anthranilate-&amp;beta;-glucoside" />
+      <Property key="ChemicalFormula" value="(C 13) (H 17) (N 1) (O 7)" />
+      <Property key="Gibbs0" value="-43.36096" />
+      <Property key="Inchi" value="InChI=1S/C13H17NO7/c14-7-4-2-1-3-6(7)12(19)21-13-11(18)10(17)9(16)8(5-15)20-13/h1-4,8-11,13,15-18H,5,14H2/t8-,9-,10+,11-,13+/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=GTQKOJVFDJDUGN-HMUNZLOLSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="299.28" />
+      <Property key="MonoisotopicMw" value="299.1005019056" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C(O)[C@H]2(O[C@@H](OC(C1(/C=C\C=C/C(/N)=1))=O)[C@H](O)[C@@H](O)[C@H](O)2)" />
+      <CitationRef elementRef="citation_PUB_17796738" />
+      <CitationRef elementRef="citation_PUB_PARADA96" />
+      <CitationRef elementRef="citation_PUB_23532069" />
+      <CitationRef elementRef="citation_PUB_23258535" />
+    </DataNode>
+    <DataNode elementId="CPD-12575" textLabel="UDP-α-D-glucose" type="Metabolite">
+      <Xref identifier="HSCJRCZFDFQWRP-JZMIEXBBSA-L" dataSource="InChIKey" />
+      <Graphics centerX="350" centerY="620" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue, SRI, caspi">UDP-glucose is an activated form of glucose that participates in a variety of enzymatic reactions, including: 1. Biosynthesis of glucose-containing compounds, such as polysaccharaides (glycogen, starch, laminarin and cellulose), disaccharides (sucrose, trehalose), &amp;beta;-glucosides, and glucosyl-ceramides. 2. Channeling galactose into the glycolytic pathway It has also been suggested that UDP-D-glucose can act as an extracellular signaling molecule |CITS: [12695547]|.</Comment>
+      <Property key="UniqueID" value="CPD-12575" />
+      <Property key="AlternativeId_Zinc" value="ZINC000008215472" />
+      <Property key="AlternativeId_Chebi" value="58885" />
+      <Property key="AlternativeId_Pubchem" value="16667346" />
+      <Property key="AlternativeId_Cas" value="133-89-1" />
+      <Property key="AlternativeId_Knapsack" value="C00001514" />
+      <Property key="AlternativeId_Hmdb" value="HMDB60079" />
+      <Property key="AlternativeId_Metanetx" value="MNXM722710" />
+      <Property key="AlternativeId_Bigg" value="udpg" />
+      <Property key="AlternativeId_LigandCpd" value="C00029" />
+      <Property key="AlternativeId_Chemspider" value="10239191" />
+      <Property key="Synonym_1" value="UDPG" />
+      <Property key="Synonym_2" value="UDP-glucose" />
+      <Property key="Synonym_3" value="UDP-D-glucose" />
+      <Property key="Synonym_4" value="UDP-&amp;alpha;-D-glucopyranose" />
+      <Property key="Synonym_5" value="uridine 5&apos;-diphosphoglucose" />
+      <Property key="ChemicalFormula" value="(C 15) (H 22) (N 2) (O 17) (P 2)" />
+      <Property key="AbbrevName" value="UDP-Glc" />
+      <Property key="AtomCharges" value="(27 -1), (29 -1)" />
+      <Property key="Gibbs0" value="-566.8436" />
+      <Property key="GroupCoords2d" value="(41 41), (96 41)" />
+      <Property key="Inchi" value="InChI=1S/C15H24N2O17P2/c18-3-5-8(20)10(22)12(24)14(32-5)33-36(28,29)34-35(26,27)30-4-6-9(21)11(23)13(31-6)17-2-1-7(19)16-15(17)25/h1-2,5-6,8-14,18,20-24H,3-4H2,(H,26,27)(H,28,29)(H,16,19,25)/p-2/t5-,6-,8-,9-,10+,11-,12-,13-,14-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=HSCJRCZFDFQWRP-JZMIEXBBSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="564.289" />
+      <Property key="MonoisotopicMw" value="566.0550203765" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-7351, REG-7357, REG-11336, REG0-8723, REG-15562, REG-7218, REG-15557" />
+      <Property key="Smiles" value="C(O)[C@@H]1([C@@H](O)[C@H](O)[C@@H](O)[C@H](O1)OP(OP(OC[C@@H]3([C@H]([C@H]([C@H](N2(\C=C/C(=O)NC2=O))O3)O)O))(=O)[O-])(=O)[O-])" />
+      <Property key="StructureGroups" value="A-DGLC-HEX-1:5, UDP" />
+      <Property key="StructureLinks" value="(2 1 N -1 X 1)" />
+      <Property key="Superatoms" value="UDP-GROUP" />
+      <Property key="SystematicName" value="Uridine 5&apos;-(trihydrogen diphosphate) alpha-D-gucopyranosyl ester" />
+      <CitationRef elementRef="citation_PUB_12695547" />
+    </DataNode>
+    <DataNode elementId="CPD-16623" textLabel="des-acyl avenacin A" type="Metabolite">
+      <Xref identifier="WDHZXDLRQGPOGR-WGJSNZCWSA-N" dataSource="InChIKey" />
+      <Graphics centerX="500" centerY="620" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-16623" />
+      <Property key="AlternativeId_Metanetx" value="MNXM146544" />
+      <Property key="AlternativeId_Pubchem" value="90657310" />
+      <Property key="ChemicalFormula" value="(C 47) (H 76) (O 20)" />
+      <Property key="Gibbs0" value="137.5951" />
+      <Property key="Inchi" value="InChI=1S/C47H76O20/c1-41(18-50)12-25-43(3,13-26(41)52)27(53)14-46(6)45(5)10-7-23-42(2,24(45)11-29-47(25,46)67-29)9-8-28(44(23,4)19-51)65-40-37(66-39-36(60)34(58)31(55)21(16-49)63-39)32(56)22(17-61-40)64-38-35(59)33(57)30(54)20(15-48)62-38/h18,20-40,48-49,51-60H,7-17,19H2,1-6H3/t20-,21-,22+,23-,24-,25-,26+,27+,28+,29-,30-,31-,32+,33+,34+,35-,36-,37-,38+,39+,40+,41+,42+,43+,44+,45-,46+,47-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=WDHZXDLRQGPOGR-WGJSNZCWSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="961.105" />
+      <Property key="MonoisotopicMw" value="960.4929948816" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C[C@]1(C=O)([C@@H](O)C[C@@]3(C)([C@@H](C1)[C@@]24(O[C@@H]2C[C@H]5([C@](C)([C@](C)(C[C@H](O)3)4)CC[C@@H]9([C@@](C)5CC[C@H](O[C@@H]8(OC[C@H](O[C@@H]6(O[C@H](CO)[C@@H](O)[C@H](O)[C@@H](O)6))[C@H](O)[C@@H](O[C@@H]7(O[C@H](CO)[C@@H](O)[C@H](O)[C@@H](O)7))8))[C@](CO)(C)9)))))" />
+      <CitationRef elementRef="citation_PUB_23940321" />
+    </DataNode>
+    <DataNode elementId="UDP" textLabel="UDP" type="Metabolite">
+      <Xref identifier="XCCTYIAWTASOJW-XVFCMESISA-K" dataSource="InChIKey" />
+      <Graphics centerX="200" centerY="720" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="UDP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004490939" />
+      <Property key="AlternativeId_Seed" value="cpd00014" />
+      <Property key="AlternativeId_Metanetx" value="MNXM17" />
+      <Property key="AlternativeId_Refmet" value="UDP" />
+      <Property key="AlternativeId_Bigg" value="udp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC58223" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00295" />
+      <Property key="AlternativeId_Chemspider" value="16739715" />
+      <Property key="AlternativeId_Pubchem" value="20056717" />
+      <Property key="AlternativeId_Chebi" value="58223" />
+      <Property key="AlternativeId_Knapsack" value="C00007313" />
+      <Property key="AlternativeId_LigandCpd" value="C00015" />
+      <Property key="AlternativeId_Cas" value="58-98-0" />
+      <Property key="Synonym_1" value="uridine-diphosphate" />
+      <Property key="Synonym_2" value="uridine-5&apos;-diphosphate" />
+      <Property key="ChemicalFormula" value="(C 9) (H 11) (N 2) (O 12) (P 2)" />
+      <Property key="AtomCharges" value="(20 -1), (18 -1), (17 -1)" />
+      <Property key="Gibbs0" value="-504.6063" />
+      <Property key="Inchi" value="InChI=1S/C9H14N2O12P2/c12-5-1-2-11(9(15)10-5)8-7(14)6(13)4(22-8)3-21-25(19,20)23-24(16,17)18/h1-2,4,6-8,13-14H,3H2,(H,19,20)(H,10,12,15)(H2,16,17,18)/p-3/t4-,6-,7-,8-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=XCCTYIAWTASOJW-XVFCMESISA-K" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="401.14" />
+      <Property key="MonoisotopicMw" value="404.002196945" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-14903, REG18C3-14, REG18C3-3, REG-15561, REG-7217, REG-15558, REG-15258, REG-11337, REG-14196, REG-14197, REG-14193, REG-14194, REG-14641, REG-14645, REG-14637, REG-9486, REG-14192, REG-14002, REG-14015, REG-14026, REG-14195, REG-7347, REG-7360, REG-7354, REG-11603, REG-12091, REG-11623, REG-6057, REG-6056, REG-6058, REG-9037, REG-7329, REG-7330, REG-6142, REG-6139" />
+      <Property key="Smiles" value="C(OP(=O)([O-])OP(=O)([O-])[O-])[C@@H]2([C@H]([C@H]([C@H](N1(\C=C/C(=O)NC1=O))O2)O)O)" />
+    </DataNode>
+    <DataNode elementId="ANTHRANILATE" textLabel="anthranilate" type="Metabolite">
+      <Xref identifier="RWZYAGGXGHYGMB-UHFFFAOYSA-M" dataSource="InChIKey" />
+      <Graphics centerX="350" centerY="720" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ANTHRANILATE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000000047985" />
+      <Property key="AlternativeId_Seed" value="cpd00093" />
+      <Property key="AlternativeId_Metanetx" value="MNXM188" />
+      <Property key="AlternativeId_Refmet" value="2-Aminobenzoic acid" />
+      <Property key="AlternativeId_Bigg" value="anth" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC16567" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01123" />
+      <Property key="AlternativeId_Chemspider" value="4573598" />
+      <Property key="AlternativeId_Pubchem" value="5459842" />
+      <Property key="AlternativeId_Chebi" value="16567" />
+      <Property key="AlternativeId_LigandCpd" value="C00108" />
+      <Property key="AlternativeId_Cas" value="118-92-3" />
+      <Property key="Synonym_1" value="anthranilic acid" />
+      <Property key="Synonym_2" value="2-aminobenzoic acid" />
+      <Property key="Synonym_3" value="vitamin L1" />
+      <Property key="Synonym_4" value="&lt;i&gt;o&lt;/i&gt;-aminobenzoic acid" />
+      <Property key="Synonym_5" value="2-aminobenzoate" />
+      <Property key="Synonym_6" value="&lt;i&gt;o&lt;/i&gt;-aminobenzoate" />
+      <Property key="ChemicalFormula" value="(C 7) (H 6) (N 1) (O 2)" />
+      <Property key="AtomCharges" value="(9 -1)" />
+      <Property key="Gibbs0" value="12.324662" />
+      <Property key="Inchi" value="InChI=1S/C7H7NO2/c8-6-4-2-1-3-5(6)7(9)10/h1-4H,8H2,(H,9,10)/p-1" />
+      <Property key="InchiKey" value="InChIKey=RWZYAGGXGHYGMB-UHFFFAOYSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="136.13" />
+      <Property key="MonoisotopicMw" value="137.0476784741" />
+      <Property key="NonStandardInchi" value="InChI=1S/C7H7NO2/c8-6-4-2-1-3-5(6)7(9)10/h1-4H,8H2,(H,9,10)/p-1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C(C1(\C(\N)=C/C=C\C=1))(=O)[O-]" />
+    </DataNode>
+    <DataNode elementId="CPD-16624" textLabel="des-methyl avenacin A-1" type="Metabolite">
+      <Xref identifier="CHCABZDCRBQQCY-TZLKGKMXSA-N" dataSource="InChIKey" />
+      <Graphics centerX="500" centerY="720" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-16624" />
+      <Property key="AlternativeId_Metanetx" value="MNXM149024" />
+      <Property key="AlternativeId_Pubchem" value="90658623" />
+      <Property key="ChemicalFormula" value="(C 54) (H 81) (N 1) (O 21)" />
+      <Property key="Gibbs0" value="189.26077" />
+      <Property key="Inchi" value="InChI=1S/C54H81NO21/c1-48(22-58)16-31-50(3,18-35(48)73-44(68)24-9-7-8-10-25(24)55)32(60)17-53(6)52(5)14-11-29-49(2,30(52)15-34-54(31,53)76-34)13-12-33(51(29,4)23-59)74-47-43(75-46-42(67)40(65)37(62)27(20-57)71-46)38(63)28(21-69-47)72-45-41(66)39(64)36(61)26(19-56)70-45/h7-10,22,26-43,45-47,56-57,59-67H,11-21,23,55H2,1-6H3/t26-,27-,28+,29-,30-,31-,32+,33+,34-,35+,36-,37-,38+,39+,40+,41-,42-,43-,45+,46+,47+,48+,49+,50+,51+,52-,53+,54-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=CHCABZDCRBQQCY-TZLKGKMXSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="1080.228" />
+      <Property key="MonoisotopicMw" value="1079.5301086693999" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C[C@]2(C=O)([C@@H](OC(=O)C1(\C(\N)=C/C=C\C=1))C[C@@]4(C)([C@@H](C2)[C@@]35(O[C@@H]3C[C@H]6([C@](C)([C@](C)(C[C@H](O)4)5)CC[C@@H]%10([C@@](C)6CC[C@H](O[C@@H]9(OC[C@H](O[C@@H]7(O[C@H](CO)[C@@H](O)[C@H](O)[C@@H](O)7))[C@H](O)[C@@H](O[C@@H]8(O[C@H](CO)[C@@H](O)[C@H](O)[C@@H](O)8))9))[C@](CO)(C)%10)))))" />
+      <CitationRef elementRef="citation_PUB_23532069" />
+    </DataNode>
+    <DataNode elementId="Glucopyranose" textLabel="D-glucopyranose" type="Metabolite">
+      <Xref identifier="WQZGKKKJIJFFOK-GASJEMHNSA-N" dataSource="InChIKey" />
+      <Graphics centerX="200" centerY="820" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="SRI, caspi">This compound stands for a mixture of |FRAME: ALPHA-GLUCOSE| and |FRAME: GLC|. In most cases, each of these compounds mutarotates quickly to form a mixture of the two, and thus it is the general rule to use this non-specific form in reactions unless it is specifically known that an enzyme can accept only one of the forms.</Comment>
+      <Property key="UniqueID" value="Glucopyranose" />
+      <Property key="AlternativeId_Bigg" value="glc__D" />
+      <Property key="AlternativeId_Metanetx" value="MNXM41" />
+      <Property key="AlternativeId_LigandCpd" value="C00031" />
+      <Property key="AlternativeId_Chebi" value="4167" />
+      <Property key="Synonym_1" value="6-(hydroxymethyl)tetrahydropyran-2,3,4,5-tetraol" />
+      <Property key="ChemicalFormula" value="(C 6) (H 12) (O 6)" />
+      <Property key="FastEquilibratingInstances?" value="T" />
+      <Property key="Gibbs0" value="-95.02656" />
+      <Property key="GroupCoords2d" value="(41 41)" />
+      <Property key="Inchi" value="InChI=1S/C6H12O6/c7-1-2-3(8)4(9)5(10)6(11)12-2/h2-11H,1H2/t2-,3-,4+,5-,6?/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=WQZGKKKJIJFFOK-GASJEMHNSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="InternalsOfGroup" value="X-DGLC-HEX-1:5" />
+      <Property key="MolecularWeight" value="180.157" />
+      <Property key="MonoisotopicMw" value="180.0633881178" />
+      <Property key="NonStandardInchi" value="InChI=1S/C6H12O6/c7-1-2-3(8)4(9)5(10)6(11)12-2/h2-11H,1H2/t2-,3-,4+,5-,6?/m1/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C([C@@H]1([C@H]([C@@H]([C@H](C(O1)O)O)O)O))O" />
+      <Property key="StructureGroups" value="A-DGLC-HEX-1:5" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="145.0" y="50" elementRef="AT2G43840" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="255.0" y="275" elementRef="AT2G43840-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_1_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_1_0_0" x="265.0" y="50" elementRef="G-18036" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_1_0_0" arrowHead="TranscriptionTranslation" x="405.0" y="275" elementRef="MONOMER-18568" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_2_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_2_0_0" x="385.0" y="50" elementRef="AT2G43820" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_2_0_0" arrowHead="TranscriptionTranslation" x="105.0" y="435" elementRef="AT2G43820-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_3_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_3_0_0" x="145.0" y="110" elementRef="GLYMA.08G125600" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_3_0_0" arrowHead="TranscriptionTranslation" x="105.0" y="275" elementRef="GLYMA.08G125600-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_4_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_4_0_0" x="265.0" y="110" elementRef="G-18035" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_4_0_0" arrowHead="TranscriptionTranslation" x="105.0" y="355" elementRef="MONOMER-18567" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_5_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_5_0_0" x="385.0" y="110" elementRef="LJ4G0022296" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_5_0_0" arrowHead="TranscriptionTranslation" x="255.0" y="355" elementRef="LJ4G0022296.1" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-11853">
+      <Xref identifier="EC-2.4.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-11853_start" x="395.0" y="720" elementRef="ANTHRANILATE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-11853_end" arrowHead="Conversion" x="155.0" y="620" elementRef="CPD-12835" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-11853_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-11853" />
+      <Property key="EC_Number" value="EC-2.4.1" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-7475" />
+      <Property key="ReactionEquation" value="ANTHRANILATE + CPD-12575 =&gt; CPD-12835 + UDP" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXNN7V-108235, ENZRXN5D-3012, ENZRXNQT-12864, ENZRXN-18355, ENZRXN-22661, ENZRXN-22659" />
+      <Property key="EnzymaticReactionCount" value="6" />
+      <Property key="ReactionTypes" value="Chemical-Reactions, Small-Molecule-Reactions" />
+      <Property key="AtomMappings" value="(:NO-HYDROGEN-ENCODING (21 22 4 23 7 24 25 8 26 9 27 10 28 12 29 30 31 14 32 15 33 16 34 17 35 40 39 38 36 41 42 19 37 43 45 44 0 1 2 3 5 6 11 13 20 18) (((CPD-12835 0 20) (UDP 21 45)) ((CPD-12575 0 35) (ANTHRANILATE 36 45))))" />
+      <Property key="Gibbs0" value="6.551758" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <CitationRef elementRef="citation_PUB_12475971" />
+    </Interaction>
+    <Interaction elementId="RXN-11853_ENZRXN5D-3012">
+      <Waypoints>
+        <Point elementId="RXN-11853_ENZRXN5D-3012_start" x="300" y="367.5" elementRef="LJ4G0022296.1" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-11853_ENZRXN5D-3012_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-11853_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-11853_ENZRXNN7V-108235">
+      <Waypoints>
+        <Point elementId="RXN-11853_ENZRXNN7V-108235_start" x="150" y="287.5" elementRef="GLYMA.08G125600-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-11853_ENZRXNN7V-108235_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-11853_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-11853_ENZRXNQT-12864">
+      <Waypoints>
+        <Point elementId="RXN-11853_ENZRXNQT-12864_start" x="300" y="287.5" elementRef="AT2G43840-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-11853_ENZRXNQT-12864_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-11853_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-11853_ENZRXN-22661">
+      <Waypoints>
+        <Point elementId="RXN-11853_ENZRXN-22661_start" x="450" y="287.5" elementRef="MONOMER-18568" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-11853_ENZRXN-22661_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-11853_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-11853_ENZRXN-18355">
+      <Waypoints>
+        <Point elementId="RXN-11853_ENZRXN-18355_start" x="150" y="447.5" elementRef="AT2G43820-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-11853_ENZRXN-18355_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-11853_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-11853_ENZRXN-22659">
+      <Waypoints>
+        <Point elementId="RXN-11853_ENZRXN-22659_start" x="150" y="367.5" elementRef="MONOMER-18567" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-11853_ENZRXN-22659_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-11853_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-11853_anchor_reactant_1">
+      <Xref identifier="EC-2.4.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-11853_anchor_reactant_start_1" x="395.0" y="620" elementRef="CPD-12575" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-11853_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-11853_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-11853_anchor_product_1">
+      <Xref identifier="EC-2.4.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-11853_anchor_product_start_1" x="0" y="0" elementRef="RXN-11853_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-11853_anchor_product_end_1" arrowHead="Conversion" x="155.0" y="720" elementRef="UDP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-15390">
+      <Xref identifier="EC-2.3.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-15390_start" x="545.0" y="620" elementRef="CPD-16623" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-15390_end" arrowHead="Conversion" x="455.0" y="720" elementRef="CPD-16624" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-15390_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-15390" />
+      <Property key="ReactionName" value="des-acyl avenacin A acylglucoside ltransferase" />
+      <Property key="EC_Number" value="EC-2.3.1" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-7475" />
+      <Property key="ReactionEquation" value="CPD-16623 + CPD-12835 =&gt; CPD-16624 + Glucopyranose" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-22677" />
+      <Property key="ReactionTypes" value="Chemical-Reactions, Small-Molecule-Reactions" />
+      <Property key="AtomMappings" value="(:NO-HYDROGEN-ENCODING (21 22 23 24 25 26 0 1 2 3 27 28 29 30 31 32 34 33 35 36 37 38 39 5 6 40 41 42 43 44 45 47 48 49 46 50 51 52 53 54 55 56 57 11 58 59 60 61 62 63 64 65 66 67 13 68 69 70 71 73 74 75 76 77 78 79 80 18 81 82 83 84 72 85 86 87 4 7 8 9 10 12 14 15 16 17 20 19) (((CPD-12835 0 20) (CPD-16623 21 87)) ((CPD-16624 0 75) (GLC 76 87))))" />
+      <Property key="Gibbs0" value="8.39233400000e-5" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <CitationRef elementRef="citation_PUB_23532069" />
+    </Interaction>
+    <Interaction elementId="RXN-15390_anchor_reactant_1">
+      <Xref identifier="EC-2.3.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-15390_anchor_reactant_start_1" x="245.0" y="620" elementRef="CPD-12835" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-15390_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-15390_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-15390_anchor_product_1">
+      <Xref identifier="EC-2.3.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-15390_anchor_product_start_1" x="0" y="0" elementRef="RXN-15390_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-15390_anchor_product_end_1" arrowHead="Conversion" x="155.0" y="820" elementRef="Glucopyranose" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_PUB_18248508">
+      <Xref identifier="18248508" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_23532069">
+      <Xref identifier="23532069" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_12475971">
+      <Xref identifier="12475971" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_15352060">
+      <Xref identifier="15352060" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_17796738">
+      <Xref identifier="17796738" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_12695547">
+      <Xref identifier="12695547" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_23940321">
+      <Xref identifier="23940321" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_23258535">
+      <Xref identifier="23258535" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_19684243">
+      <Xref identifier="19684243" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_18385129">
+      <Xref identifier="18385129" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_PARADA96">
+      <Xref identifier="PUB-PARADA96 | 1-O-&amp;beta;-D-Glucopyranosyl anthranilate from pinuela (Bromelia plumieri) fruit (Parada, F., Krajewski, D., Duque, C. et al., 1996)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_PUB_21876149">
+      <Xref identifier="21876149" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_15148404">
+      <Xref identifier="15148404" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_HOSTETTMANN95">
+      <Xref identifier="PUB-HOSTETTMANN95 | Saponins (Hostettmann V, Marston A, 1995)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_PUB_10536024">
+      <Xref identifier="10536024" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_16995908">
+      <Xref identifier="16995908" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_22639586">
+      <Xref identifier="22639586" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_21443624">
+      <Xref identifier="21443624" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_20040536">
+      <Xref identifier="20040536" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

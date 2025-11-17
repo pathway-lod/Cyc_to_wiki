@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="RXN-14806" organism="TAX-3702" source="PlantCyc">
+  <Description>Single reaction view for RXN-14806: RXN-14806</Description>
+  <Authors>
+    <Author name="BioCyc" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from BioCyc single reaction data.</Comment>
+  <Property key="UniqueID" value="RXN-14806" />
+  <Graphics boardWidth="1200" boardHeight="800" />
+  <DataNodes>
+    <DataNode elementId="D-arabinopyranose" textLabel="D-arabinopyranose" type="Metabolite">
+      <Xref identifier="46994" dataSource="ChEBI" />
+      <Graphics centerX="200" centerY="210" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="chawkins">This compound stands for a mixture of |FRAME: CPD-12047| and |FRAME: CPD-12049|. In most cases, each of these compounds mutarotates quickly to form a mixture of the two, and thus it is the general rule to use this non-specific form in reactions unless it is specifically known that an enzyme can accept only one of the forms.</Comment>
+      <Property key="UniqueID" value="D-arabinopyranose" />
+      <Property key="AlternativeId_Seed" value="cpd00185" />
+      <Property key="AlternativeId_Chebi" value="46994" />
+      <Property key="AlternativeId_Metanetx" value="MNXM544" />
+      <Property key="ChemicalFormula" value="(C 5) (H 10) (O 5)" />
+      <Property key="FastEquilibratingInstances?" value="T" />
+      <Property key="Gibbs0" value="-77.3488" />
+      <Property key="Inchi" value="InChI=1S/C5H10O5/c6-2-1-10-5(9)4(8)3(2)7/h2-9H,1H2/t2-,3-,4+,5?/m1/s1" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="150.131" />
+      <Property key="MonoisotopicMw" value="150.0528234315" />
+      <Property key="NonStandardInchi" value="InChI=1S/C5H10O5/c6-2-1-10-5(9)4(8)3(2)7/h2-9H,1H2/t2-,3-,4+,5?/m1/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C1([C@@H](O)[C@@H](O)[C@H](O)C(O)O1)" />
+    </DataNode>
+    <DataNode elementId="CPD-15700" textLabel="aldehydo-D-arabinose" type="Metabolite">
+      <Xref identifier="PYMYPHUHKUWMLA-WDCZJNDASA-N" dataSource="InChIKey" />
+      <Graphics centerX="350" centerY="210" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-15700" />
+      <Property key="AlternativeId_Refmet" value="Arabinose" />
+      <Property key="AlternativeId_Pubchem" value="66308" />
+      <Property key="AlternativeId_Hmdb" value="HMDB29942" />
+      <Property key="AlternativeId_Chebi" value="46983" />
+      <Property key="ChemicalFormula" value="(C 5) (H 10) (O 5)" />
+      <Property key="Gibbs0" value="-76.8288" />
+      <Property key="Inchi" value="InChI=1S/C5H10O5/c6-1-3(8)5(10)4(9)2-7/h1,3-5,7-10H,2H2/t3-,4-,5+/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=PYMYPHUHKUWMLA-WDCZJNDASA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="150.131" />
+      <Property key="MonoisotopicMw" value="150.0528234315" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C(=O)[C@@H](O)[C@H](O)[C@H](O)CO" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="RXN-14806">
+      <Xref identifier="RXN-14806" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-14806_start" x="245.0" y="210" elementRef="D-arabinopyranose" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-14806_end" arrowHead="Conversion" x="305.0" y="210" elementRef="CPD-15700" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-14806_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-14806" />
+      <Property key="Spontaneous" value="T" />
+      <Property key="ReactionEquation" value="D-arabinopyranose &lt;=&gt; CPD-15700" />
+      <Property key="ReactionDirection" value="REVERSIBLE" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Chemical-Reactions, Small-Molecule-Reactions" />
+      <Property key="AtomMappings" value="(:NO-HYDROGEN-ENCODING (1 3 4 2 0 8 9 7 5 6) (((CPD-15700 0 9)) ((|D-arabinopyranose| 0 9))))" />
+      <Property key="Gibbs0" value="0.5200043" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+  </Interactions>
+</Pathway>

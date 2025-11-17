@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="dimethylsulfoniopropanoate biosynthesis I (Wollastonia)" organism="TAX-101473" source="PlantCyc">
+  <Description>&lt;b&gt;General Background&lt;/b&gt; |FRAME: SS-DIMETHYL-BETA-PROPIOTHETIN &quot;Dimethylsulfoniopropionate&quot;| (DMSP) is an osmolyte of many marine algae and certain plants |CITS: [15181109]|. In marine phytoplankton DMSP is also used as a predator deterrent and an antioxidant |CITS: [17068264]|. Biological degradation of DMSP is the main source for |FRAME: CPD-7670 dimethyl sulfide| (DMS) in the marine environment |CITS: [12450799]| (see |FRAME: PWY-6046 dimethylsulfoniopropanoate degradation I (cleavage)|). The degradation of DMSP to DMS and subsequent exchange of DMS across the ocean-atmosphere boundary is the main natural source of sulfur to the atmosphere. The flux of DMS from the ocean to the atmosphere is estimated at about 1.5 x 10(13) g of sulfur annually. Once in the atmosphere, DMS plays a major part in cloud formation and potentially in climate regulation. &lt;b&gt;About This Pathway&lt;/b&gt; The biosynthetic pathway for DMSP in the green plant |FRAME: TAX-101473 &lt;i&gt;Wedelia biflora&lt;/i&gt;| starts with the methylation of L-methionine to |FRAME: CPD-397 S-methyl-L-methionine| |CITS: [8029347]| by the cytosolic enzyme |FRAME: CPLX-7667 methionine &lt;i&gt;S&lt;/i&gt;-methyltransferase|, and continues with conversion to |FRAME: CPD-10472 3-dimethylsulfoniopropionaldehyde| via a coupled transamination-decarboxylation reaction |CITS: [12223879]|. The participation of |FRAME: CPD-10472 3-dimethylsulfoniopropionaldehyde| as a pathway intermediate was verified |CITS: [7659747]|. The aldehyde is transported to the chloroplast where it is oxidized to DMSP by a dehydrogenase related to plant betaine aldehyde dehydrogenases |CITS: [12226341]|.</Description>
+  <Authors>
+    <Author name="SRI" />
+    <Author name="caspi" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-6054" />
+  <Property key="Type" value="Dimethylsulfoniopropionate-Biosynthesis" />
+  <Property key="ReactionCount" value="3" />
+  <Property key="ReactionIDs" value="RXN-9759, RXN-9758, METHIONINE-S-METHYLTRANSFERASE-RXN" />
+  <Property key="PredecessorCount" value="2" />
+  <Property key="Organism" value="TAX-101473" />
+  <Property key="TaxonomicRange_1" value="TAX-33090" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_PUB_8029347" />
+  <CitationRef elementRef="citation_PUB_15181109" />
+  <CitationRef elementRef="citation_PUB_17068264" />
+  <CitationRef elementRef="citation_PUB_12450799" />
+  <CitationRef elementRef="citation_PUB_12223879" />
+  <CitationRef elementRef="citation_PUB_7659747" />
+  <CitationRef elementRef="citation_PUB_12226341" />
+  <Graphics boardWidth="1200" boardHeight="900" />
+  <DataNodes>
+    <DataNode elementId="AT5G49810" textLabel="AT5G49810" type="GeneProduct">
+      <Xref identifier="AT5G49810" dataSource="TAIR" />
+      <Graphics centerX="100" centerY="50" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT5G49810" />
+      <Property key="Synonym_1" value="MMT" />
+      <Property key="Product" value="AT5G49810-MONOMER" />
+      <Property key="StartPosition" value="20256569" />
+      <Property key="EndPosition" value="20263606" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+      <Property key="Accession1" value="AT5G49810" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="AT5G49810-MONOMER" textLabel="S-adenosylmethionine-dependent methyltransferase" type="Protein">
+      <Xref identifier="Q9LTB2" dataSource="uniprot" />
+      <Graphics centerX="150" centerY="215" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">The enzyme is unique to plants.</Comment>
+      <Property key="UniqueID" value="AT5G49810-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT5G49810.1" />
+      <Property key="AlternativeId_Uniprot" value="Q9LTB2" />
+      <Property key="Catalyzes" value="RXN-19679, RXN-13681" />
+      <Property key="CatalyzesCount" value="2" />
+      <Property key="Accession1" value="AT5G49810.1" />
+      <Property key="FunctionalAssignmentStatus" value=":PROBABLE-ENZYME" />
+      <Property key="Gene" value="AT5G49810" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_12692340" />
+    </DataNode>
+    <DataNode elementId="MONOMER-14236" textLabel="MONOMER-14236" type="Protein">
+      <Xref identifier="MONOMER-14236" dataSource="plantcyc" />
+      <Graphics centerX="300" centerY="215" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="SRI, caspi">|FRAME: MONOMER-14236 dimethylsulfoniopropionate dehydrogenase| activity was demonstrated in cell extracts of |FRAME: TAX-101473 &lt;i&gt;Wedelia biflora&lt;/i&gt;|, and was located in the chloroplast stroma |CITS: [12226341]|. The enzyme could use either NAD+ or NADP+, but had a strong preference for the former. The enzyme was characterized from dialyzed stromal extracts, and its activity increasedg with pH up to 8.5. Higher pH values were not tested because of the instability of |FRAME: CPD-10472 3-dimethylsulfoniopropionaldehyde|. The enzyme was subject to substrate inhibition by |FRAME: CPD-10472 3-dimethylsulfoniopropionaldehyde| and related aldehydes. Antibodies raised against the enzyme cross-reacted with plant |FRAME: CPLX-2743 betaine aldehyde dehydrogenase| enzymes. A different study demonstrated that betaine aldehyde dehdrogenase from |FRAME: TAX-3567 &lt;i&gt;Amaranthus caudatus&lt;/i&gt;| leaves was able to catalyze the conversion of |FRAME: CPD-10472 3-dimethylsulfoniopropionaldehyde| to DMSP |CITS: [8990271]|. As a matter of fact, |FRAME: CPD-10472 3-dimethylsulfoniopropionaldehyde| was a better substrate for that enzyme than |FRAME: BETAINE_ALDEHYDE betaine aldehyde|. Until the enzyme is purified, it can not be excluded that the two enzymes are one.</Comment>
+      <Property key="UniqueID" value="MONOMER-14236" />
+      <Property key="Catalyzes" value="RXN-15453" />
+      <Property key="GOTerms" value="GO:0009570" />
+      <Property key="^citations" value="12226341" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Locations" value="CCO-CHLOR-STR" />
+      <Property key="MolecularWeightExp" value="63." />
+      <Property key="MolecularWeightKd" value="63." />
+      <Property key="Species" value="TAX-101473" />
+      <CitationRef elementRef="citation_PUB_12226341" />
+      <CitationRef elementRef="citation_PUB_8990271" />
+    </DataNode>
+    <DataNode elementId="ADENOSYL-HOMO-CYS" textLabel="S-adenosyl-L-homocysteine" type="Metabolite">
+      <Xref identifier="ZJUKTBDSGOFHSH-WFMPWKQPSA-N" dataSource="InChIKey" />
+      <Graphics centerX="200" centerY="400" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ADENOSYL-HOMO-CYS" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004228232" />
+      <Property key="AlternativeId_Seed" value="cpd00019" />
+      <Property key="AlternativeId_Metanetx" value="MNXM19" />
+      <Property key="AlternativeId_Pubchem" value="25246222" />
+      <Property key="AlternativeId_Refmet" value="S-Adenosylhomocysteine" />
+      <Property key="AlternativeId_Bigg" value="ahcys" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57856" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00939" />
+      <Property key="AlternativeId_Chebi" value="57856" />
+      <Property key="AlternativeId_LigandCpd" value="C00021" />
+      <Property key="AlternativeId_Cas" value="979-92-0" />
+      <Property key="Synonym_1" value="S-adenosyl-L-homocysteine" />
+      <Property key="Synonym_2" value="SAH" />
+      <Property key="Synonym_3" value="S-adenosylhomocysteine" />
+      <Property key="Synonym_4" value="2-S-adenosyl-L-homocysteine" />
+      <Property key="Synonym_5" value="AdoHcy" />
+      <Property key="Synonym_6" value="2-&lt;i&gt;S&lt;/i&gt;-adenosyl-L-homocysteine" />
+      <Property key="Synonym_7" value="&lt;i&gt;S&lt;/i&gt;-adenosyl-homocysteine" />
+      <Property key="Synonym_8" value="&lt;i&gt;S&lt;/i&gt;-adenosylhomocysteine" />
+      <Property key="Synonym_9" value="adenosyl-homo-cys" />
+      <Property key="Synonym_10" value="adenosylhomocysteine" />
+      <Property key="Synonym_11" value="adenosylhomo-cys" />
+      <Property key="Synonym_12" value="&lt;i&gt;S&lt;/i&gt;-(5&apos;-adenosyl)-homocysteine" />
+      <Property key="ChemicalFormula" value="(C 14) (H 20) (N 6) (O 5) (S 1)" />
+      <Property key="AbbrevName" value="SAH" />
+      <Property key="AtomCharges" value="(23 -1), (15 1)" />
+      <Property key="Gibbs0" value="84.0534" />
+      <Property key="Inchi" value="InChI=1S/C14H20N6O5S/c15-6(14(23)24)1-2-26-3-7-9(21)10(22)13(25-7)20-5-19-8-11(16)17-4-18-12(8)20/h4-7,9-10,13,21-22H,1-3,15H2,(H,23,24)(H2,16,17,18)/t6-,7+,9+,10+,13+/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=ZJUKTBDSGOFHSH-WFMPWKQPSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="384.409" />
+      <Property key="MonoisotopicMw" value="384.1215884737" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-7326, REG-8467, REG-14064, REG-14069, REG-14088, REG-14789, REG-14060, REG-13740, REG-13741, REG0-10277, REG-12210, REG-13289, REG-8730, REG-12209, REG-7945, REG-11566, REG-7947, REG-8997, REG-11533, REG-7961, REG-6204, REG-6764, REG-6118, REG-6119, REG-11189, REG-9060, REG-8992, REG-7408" />
+      <Property key="Smiles" value="C(SC[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3))C[C@@H](C(=O)[O-])[NH3+]" />
+    </DataNode>
+    <DataNode elementId="NADH" textLabel="NADH" type="Metabolite">
+      <Xref identifier="BOPGDPNILDQYTO-NNYOXOHSSA-L" dataSource="InChIKey" />
+      <Graphics centerX="350" centerY="400" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: NAD| and |FRAME: NADP| are dinucleotides containing one |FRAME: NIACINAMIDE| base and one |FRAME: ADENINE| base. Each nucleotide is connected to a ribose sugar at position 1, and the two riboses are connected at their 5 position via a diphosphate. The only difference between the two is that in NADP there is an additional phosphate group at the 2&apos; position of the ribose that carries the adenine moiety. These molecules are biological carriers of reductive equivalents (i.e. high potential electrons). Most of the time they function as cosubstrates, and in some cases they function as |FRAME: Cofactors cofactors|. They are often referred to by the obsolete term &quot;coenzymes&quot;. The most common function of |FRAME: NAD| is to accept two electrons and a proton (a hydride ion) from a substrate that is being oxidized. This reduction converts |FRAME: NAD| to |FRAME: NADH|, the reduced form. NADH then diffuses or is transported to a terminal oxidase, where the electrons are passed on, regenerating the oxidized form. |FRAME: NADPH|, on the other hand, is mostly involved in biosynthetic reactions, where it serves as an electron donor. NADPH is formed by reduction of |FRAME: NADP|, which occurs by different mechanisms in different types of organisms. In photosynthetic organisms |FRAME: NADP| is reduced by |FRAME: CPLX-84|. In heterotrophic organisms it is reduced by central metabolism processes such as the pentose phosphate pathway (see |FRAME: OXIDATIVEPENT-PWY|).</Comment>
+      <Property key="UniqueID" value="NADH" />
+      <Property key="AlternativeId_Seed" value="cpd00004" />
+      <Property key="AlternativeId_Metanetx" value="MNXM10" />
+      <Property key="AlternativeId_Refmet" value="NADH" />
+      <Property key="AlternativeId_Bigg" value="nadh" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57945" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01487" />
+      <Property key="AlternativeId_Chemspider" value="10239197" />
+      <Property key="AlternativeId_Chebi" value="57945" />
+      <Property key="AlternativeId_Pubchem" value="21604869" />
+      <Property key="AlternativeId_Cas" value="58-68-4" />
+      <Property key="AlternativeId_LigandCpd" value="C00004" />
+      <Property key="Synonym_1" value="NADH&lt;sub&gt;2&lt;/sub&gt;" />
+      <Property key="Synonym_2" value="NADH2" />
+      <Property key="Synonym_3" value="dihydrodiphosphopyridine nucleotide" />
+      <Property key="Synonym_4" value="diphosphopyridine nucleotide reduced" />
+      <Property key="Synonym_5" value="dihydronicotinamide adenine dinucleotide" />
+      <Property key="Synonym_6" value="nicotinamide adenine dinucleotide reduced" />
+      <Property key="Synonym_7" value="NAD-reduced" />
+      <Property key="Synonym_8" value="NADH+H+" />
+      <Property key="Synonym_9" value="DPNH" />
+      <Property key="Synonym_10" value="&amp;beta;-NADH" />
+      <Property key="Synonym_11" value="&amp;beta;-nicotinamide adenine dinucleotide, reduced" />
+      <Property key="ChemicalFormula" value="(C 21) (H 27) (N 7) (O 14) (P 2)" />
+      <Property key="AtomCharges" value="(35 -1), (37 -1)" />
+      <Property key="Gibbs0" value="-325.20697" />
+      <Property key="Inchi" value="InChI=1S/C21H29N7O14P2/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(32)14(30)11(41-21)6-39-44(36,37)42-43(34,35)38-5-10-13(29)15(31)20(40-10)27-3-1-2-9(4-27)18(23)33/h1,3-4,7-8,10-11,13-16,20-21,29-32H,2,5-6H2,(H2,23,33)(H,34,35)(H,36,37)(H2,22,24,25)/p-2/t10-,11-,13-,14-,15-,16-,20-,21-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=BOPGDPNILDQYTO-NNYOXOHSSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="663.43" />
+      <Property key="MonoisotopicMw" value="665.1247716966999" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-13296, REG-8720, REG-9482, REG0-8209, REG0-11850, REG-9631, REG-10377, REG-9494, REG-6521, REG-8741, REG0-8745, REG0-9223, REG-11600, REG0-6738, REG0-8782, REG-8495, REG0-7641, REG0-7644, REG0-7960, REG-7340, REG-7356, REG-7350, REG0-9224, REG-11451, REG-6090" />
+      <Property key="Smiles" value="C1(/N(\C=C/CC(/C(N)=O)=1)[C@@H]5(O[C@H](COP(OP(OC[C@H]4(O[C@@H](N2(C3(\C(\N=C/2)=C(N)/N=C\N=3)))[C@H](O)[C@H](O)4))(=O)[O-])(=O)[O-])[C@@H](O)[C@@H](O)5))" />
+    </DataNode>
+    <DataNode elementId="MET" textLabel="L-methionine" type="Metabolite">
+      <Xref identifier="FFEARJCKVFRZRR-BYPYZUCNSA-N" dataSource="InChIKey" />
+      <Graphics centerX="500" centerY="400" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: MET| (met) is one of the proteinogenic amino acids. In addition to its role in proteins, L-methionine is required for a number of important cellular functions, including the initiation of protein synthesis, the methylation of DNA, rRNA and xenobiotics, and the biosynthesis of cysteine, phospholipids and polyamines. In all metzoa |FRAME: MET| is an essential amino acid (an indispensable amino acid that cannot be synthesized &lt;i&gt;de novo&lt;/i&gt;) and must be supplied in the diet.</Comment>
+      <Property key="UniqueID" value="MET" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001532529" />
+      <Property key="AlternativeId_Mediadb" value="compounds/71/" />
+      <Property key="AlternativeId_Metanetx" value="MNXM61" />
+      <Property key="AlternativeId_Refmet" value="Methionine" />
+      <Property key="AlternativeId_Bigg" value="met__L" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57844" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00696" />
+      <Property key="AlternativeId_Chebi" value="57844" />
+      <Property key="AlternativeId_Pubchem" value="6992087" />
+      <Property key="AlternativeId_LigandCpd" value="C00073" />
+      <Property key="AlternativeId_Cas" value="63-68-3" />
+      <Property key="Synonym_1" value="M" />
+      <Property key="Synonym_2" value="methionine" />
+      <Property key="Synonym_3" value="L-met" />
+      <Property key="ChemicalFormula" value="(C 5) (H 11) (N 1) (O 2) (S 1)" />
+      <Property key="AbbrevName" value="met" />
+      <Property key="AtomCharges" value="(8 -1), (6 1)" />
+      <Property key="Gibbs0" value="37.072315" />
+      <Property key="Inchi" value="InChI=1S/C5H11NO2S/c1-9-3-2-4(6)5(7)8/h4H,2-3,6H2,1H3,(H,7,8)/t4-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=FFEARJCKVFRZRR-BYPYZUCNSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="149.207" />
+      <Property key="MonoisotopicMw" value="149.0510492925" />
+      <Property key="NonStandardInchi" value="InChI=1S/C5H11NO2S/c1-9-3-2-4(6)5(7)8/h4H,2-3,6H2,1H3,(H,7,8)/t4-/m0/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-12360, REG-9509, REG-13514, REG-10769, REG-9179" />
+      <Property key="Smiles" value="CSCC[C@H]([NH3+])C([O-])=O" />
+    </DataNode>
+    <DataNode elementId="SS-DIMETHYL-BETA-PROPIOTHETIN" textLabel="dimethylsulfoniopropanoate" type="Metabolite">
+      <Xref identifier="DFPOZTRSOAQFIK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="650" centerY="400" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>Dimethylsulfoniopropanoate (DMSP), an osmolyte of many marine algae and certain plants |CITS: [15181109]|, is also the main source for |FRAME: CPD-7670| (DMS) in the marine environment |CITS: [12450799]|. It was first identified in 1948 in the red alga |FRAME: TAX-1261582| |CITS: [18101461]|, and is found in the highest concentrations in |FRAME: TAX-2864| (dinoflagellates) and |FRAME: TAX-2608131| (haptophytes). However, DMSP is produced by many more organisms including diatoms, green algae, some higher plants like |FRAME: TAX-4547| (sugarcane) and the coastal angiosperms |FRAME: TAX-15853| and |FRAME: TAX-101473|, bacteria, and some coral species |CITS: [31231779]|. Marine phytoplankton synthesize DMSP not only as an osmolyte, but also as a predator deterrent and an antioxidant |CITS: [17068264]|. The degradation of DMSP to DMS and subsequent exchange of DMS across the ocean-atmosphere boundary is the main natural source of sulfur to the atmosphere.</Comment>
+      <Property key="UniqueID" value="SS-DIMETHYL-BETA-PROPIOTHETIN" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004096288" />
+      <Property key="AlternativeId_Seed" value="cpd02491" />
+      <Property key="AlternativeId_Metanetx" value="MNXM2864" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC16457" />
+      <Property key="AlternativeId_Chemspider" value="22195" />
+      <Property key="AlternativeId_Pubchem" value="23736" />
+      <Property key="AlternativeId_Chebi" value="16457" />
+      <Property key="AlternativeId_LigandCpd" value="C04022" />
+      <Property key="AlternativeId_Cas" value="7314-30-9" />
+      <Property key="Synonym_1" value="&lt;i&gt;S,S&lt;/i&gt;-dimethyl-&amp;beta;-propiothetin" />
+      <Property key="Synonym_2" value="DMPT" />
+      <Property key="Synonym_3" value="dimethylpropiothetin" />
+      <Property key="Synonym_4" value="&lt;i&gt;S&lt;/i&gt;-dimethylsulfonium propionic acid" />
+      <Property key="Synonym_5" value="dimethylsulfoniopropionate" />
+      <Property key="Synonym_6" value="3-(dimethylsulfaniumyl)propanoate" />
+      <Property key="ChemicalFormula" value="(C 5) (H 10) (O 2) (S 1)" />
+      <Property key="AbbrevName" value="DMSP" />
+      <Property key="AtomCharges" value="(8 1), (7 -1)" />
+      <Property key="Gibbs0" value="37.4512" />
+      <Property key="Inchi" value="InChI=1S/C5H10O2S/c1-8(2)4-3-5(6)7/h3-4H2,1-2H3" />
+      <Property key="InchiKey" value="InChIKey=DFPOZTRSOAQFIK-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="134.193" />
+      <Property key="MonoisotopicMw" value="136.0558003194" />
+      <Property key="NonStandardInchi" value="InChI=1S/C5H10O2S/c1-8(2)4-3-5(6)7/h3-4H2,1-2H3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C[S+](C)CCC(=O)[O-]" />
+      <CitationRef elementRef="citation_PUB_15181109" />
+      <CitationRef elementRef="citation_PUB_12450799" />
+      <CitationRef elementRef="citation_PUB_18101461" />
+      <CitationRef elementRef="citation_PUB_31231779" />
+      <CitationRef elementRef="citation_PUB_17068264" />
+    </DataNode>
+    <DataNode elementId="S-ADENOSYLMETHIONINE" textLabel="S-adenosyl-L-methionine" type="Metabolite">
+      <Xref identifier="MEFKEPWMEQBLKI-FCKMPRQPSA-O" dataSource="InChIKey" />
+      <Graphics centerX="200" centerY="500" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: S-ADENOSYLMETHIONINE| (AdoMet, SAM) is a sulfonium compound in which each of the carbons attached to the sulfur is activated toward nucleophilic attack. It is the most common methyl group donor for methyltransferase enzymes. In addition, AdoMet is cleaved reductively by a large number of iron-sulfur cluster-containing enzymes (known as radical SAM or radical AdoMet enzymes) to produce |FRAME: CPD-15400|, which they use to activate their substrates. Another major role of AdoMet is in polyamine biosynthesis, where it is decarboxylated by |FRAME: EC-4.1.1.50|, to form |FRAME: S-ADENOSYLMETHIONINAMINE|, which serves as a propylamine group donor. AdoMet is formed by |FRAME: EC-2.5.1.6| and bears an &lt;i&gt;S&lt;/i&gt; configuration at the sulfur atom. The chiral sulfonium of AdoMet spontaneously racemizes under physiological conditions to form a mixture of &lt;i&gt;S&lt;/i&gt; and &lt;i&gt;R&lt;/i&gt; isomers. This results in reduced activity, as the |FRAME: CPD0-2554 &quot;&lt;i&gt;R&lt;/i&gt; isomer&quot;| is not accepted as a substrate for AdoMet-dependent methyltransferases |CITS: [12419350]|.</Comment>
+      <Property key="UniqueID" value="S-ADENOSYLMETHIONINE" />
+      <Property key="AlternativeId_Pubchem" value="24762165" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004214738" />
+      <Property key="AlternativeId_Seed" value="cpd00017" />
+      <Property key="AlternativeId_Metanetx" value="MNXM16" />
+      <Property key="AlternativeId_Refmet" value="S-adenosyl-L-methioninate" />
+      <Property key="AlternativeId_Bigg" value="amet" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC59789" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01185" />
+      <Property key="AlternativeId_Chebi" value="59789" />
+      <Property key="AlternativeId_LigandCpd" value="C00019" />
+      <Property key="AlternativeId_Cas" value="29908-03-0" />
+      <Property key="Synonym_1" value="(&lt;i&gt;S&lt;/i&gt;)-S-adenosyl-L-methionine" />
+      <Property key="Synonym_2" value="AdoMet" />
+      <Property key="Synonym_3" value="SAM" />
+      <Property key="Synonym_4" value="2-&lt;i&gt;S&lt;/i&gt;-adenosyl-L-methionine" />
+      <Property key="Synonym_5" value="&lt;i&gt;S&lt;/i&gt;-adenosyl-methionine" />
+      <Property key="Synonym_6" value="adenosylmethionine" />
+      <Property key="Synonym_7" value="&lt;i&gt;S&lt;/i&gt;-adenosylmethionine" />
+      <Property key="ChemicalFormula" value="(C 15) (H 23) (N 6) (O 5) (S 1)" />
+      <Property key="AbbrevName" value="SAM" />
+      <Property key="AtomCharges" value="(27 1), (24 -1), (16 1)" />
+      <Property key="Gibbs0" value="124.03472" />
+      <Property key="Inchi" value="InChI=1S/C15H22N6O5S/c1-27(3-2-7(16)15(24)25)4-8-10(22)11(23)14(26-8)21-6-20-9-12(17)18-5-19-13(9)21/h5-8,10-11,14,22-23H,2-4,16H2,1H3,(H2-,17,18,19,24,25)/p+1/t7-,8+,10+,11+,14+,27-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=MEFKEPWMEQBLKI-FCKMPRQPSA-O" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="399.444" />
+      <Property key="MonoisotopicMw" value="400.1528886021" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-15570, REG-12359, REG-9936, REG-9937, REG-8082, REG0-8461, REG-7118" />
+      <Property key="Smiles" value="C[S+](C[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3))CC[C@@H](C(=O)[O-])[NH3+]" />
+      <CitationRef elementRef="citation_PUB_12419350" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="350" centerY="500" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="ChemicalFormula" value="(H 1)" />
+      <Property key="AtomCharges" value="(1 1)" />
+      <Property key="Gibbs0" value="0.42906138" />
+      <Property key="Inchi" value="InChI=1S/p+1" />
+      <Property key="InchiKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicMw" value="1.0078250321" />
+      <Property key="NonStandardInchi" value="InChI=1S/p+1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="[H+]" />
+    </DataNode>
+    <DataNode elementId="CARBON-DIOXIDE" textLabel="CO₂" type="Metabolite">
+      <Xref identifier="CURLTUGMZLYLDI-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="500" centerY="500" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CARBON-DIOXIDE" />
+      <Property key="AlternativeId_Metanetx" value="MNXM13" />
+      <Property key="AlternativeId_Seed" value="cpd00011" />
+      <Property key="AlternativeId_Bigg" value="33506" />
+      <Property key="AlternativeId_UmBbdCpd" value="c0131" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01967" />
+      <Property key="AlternativeId_LigandCpd" value="C00011" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC16526" />
+      <Property key="AlternativeId_Chemspider" value="274" />
+      <Property key="AlternativeId_Chebi" value="16526" />
+      <Property key="AlternativeId_Pubchem" value="280" />
+      <Property key="AlternativeId_Cas" value="124-38-9" />
+      <Property key="Synonym_1" value="carbonic anhydride" />
+      <Property key="Synonym_2" value="carbonic acid gas" />
+      <Property key="Synonym_3" value="carbon dioxide" />
+      <Property key="ChemicalFormula" value="(C 1) (O 2)" />
+      <Property key="Gibbs0" value="-92.26" />
+      <Property key="Inchi" value="InChI=1S/CO2/c2-1-3" />
+      <Property key="InchiKey" value="InChIKey=CURLTUGMZLYLDI-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="44.01" />
+      <Property key="MonoisotopicMw" value="43.989829244199996" />
+      <Property key="NonStandardInchi" value="InChI=1S/CO2/c2-1-3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C(=O)=O" />
+    </DataNode>
+    <DataNode elementId="WATER" textLabel="H₂O" type="Metabolite">
+      <Xref identifier="XLYOFNOQVPJJNP-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="650" centerY="500" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="WATER" />
+      <Property key="AlternativeId_Bigg" value="33474" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15377" />
+      <Property key="AlternativeId_Hmdb" value="HMDB02111" />
+      <Property key="AlternativeId_Chemspider" value="937" />
+      <Property key="AlternativeId_Chebi" value="15377" />
+      <Property key="AlternativeId_Pubchem" value="962" />
+      <Property key="AlternativeId_LigandCpd" value="C00001" />
+      <Property key="AlternativeId_Cas" value="7732-18-5" />
+      <Property key="Synonym_1" value="H&lt;sub&gt;2&lt;/sub&gt;0" />
+      <Property key="Synonym_2" value="H2O" />
+      <Property key="Synonym_3" value="H20" />
+      <Property key="Synonym_4" value="hydrogen oxide" />
+      <Property key="Synonym_5" value="water" />
+      <Property key="ChemicalFormula" value="(H 2) (O 1)" />
+      <Property key="Gibbs0" value="-36.144756" />
+      <Property key="Inchi" value="InChI=1S/H2O/h1H2" />
+      <Property key="InchiKey" value="InChIKey=XLYOFNOQVPJJNP-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="18.015" />
+      <Property key="MonoisotopicMw" value="18.0105646863" />
+      <Property key="NonStandardInchi" value="InChI=1S/H2O/h1H2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="O" />
+    </DataNode>
+    <DataNode elementId="CPD-397" textLabel="S-methyl-L-methionine" type="Metabolite">
+      <Xref identifier="YDBYJHTYSHBBAU-YFKPBYRVSA-O" dataSource="InChIKey" />
+      <Graphics centerX="200" centerY="600" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-397" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004096040" />
+      <Property key="AlternativeId_ReactomeCpd" value="4789070" />
+      <Property key="AlternativeId_Seed" value="cpd02027" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1119" />
+      <Property key="AlternativeId_Bigg" value="mmet" />
+      <Property key="AlternativeId_Chebi" value="58252" />
+      <Property key="AlternativeId_Pubchem" value="7098638" />
+      <Property key="AlternativeId_LigandCpd" value="C03172" />
+      <Property key="Synonym_1" value="&lt;i&gt;S&lt;/i&gt;-methylmethionine" />
+      <Property key="ChemicalFormula" value="(C 6) (H 14) (N 1) (O 2) (S 1)" />
+      <Property key="AtomCharges" value="(9 -1), (10 1), (7 1)" />
+      <Property key="Gibbs0" value="77.05363" />
+      <Property key="Inchi" value="InChI=1S/C6H13NO2S/c1-10(2)4-3-5(7)6(8)9/h5H,3-4,7H2,1-2H3/p+1/t5-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=YDBYJHTYSHBBAU-YFKPBYRVSA-O" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="164.242" />
+      <Property key="MonoisotopicMw" value="165.08234942090002" />
+      <Property key="NonStandardInchi" value="InChI=1S/C6H13NO2S/c1-10(2)4-3-5(7)6(8)9/h5H,3-4,7H2,1-2H3/p+1/t5-/m0/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C[S+](CC[C@H]([NH3+])C(=O)[O-])C" />
+    </DataNode>
+    <DataNode elementId="CPD-10472" textLabel="dimethyl(3-oxopropyl)sulfanium" type="Metabolite">
+      <Xref identifier="OISJAAYQHIBAQP-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="350" centerY="600" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-10472" />
+      <Property key="AlternativeId_Zinc" value="ZINC000013547147" />
+      <Property key="AlternativeId_Seed" value="cpd22697" />
+      <Property key="AlternativeId_Metanetx" value="MNXM8110" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC74027" />
+      <Property key="AlternativeId_Chebi" value="74027" />
+      <Property key="AlternativeId_Pubchem" value="19824238" />
+      <Property key="Synonym_1" value="DMSP-aldehyde" />
+      <Property key="Synonym_2" value="3-dimethylsulfoniopropionaldehyde" />
+      <Property key="Synonym_3" value="3-dimethylsulfoniopropanal" />
+      <Property key="ChemicalFormula" value="(C 5) (H 11) (O 1) (S 1)" />
+      <Property key="AtomCharges" value="(7 1)" />
+      <Property key="Gibbs0" value="100.11026" />
+      <Property key="Inchi" value="InChI=1S/C5H11OS/c1-7(2)5-3-4-6/h4H,3,5H2,1-2H3/q+1" />
+      <Property key="InchiKey" value="InChIKey=OISJAAYQHIBAQP-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="119.201" />
+      <Property key="MonoisotopicMw" value="120.0608856973" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-12354" />
+      <Property key="Smiles" value="C[S+](C)CCC=O" />
+      <CitationRef elementRef="citation_PUB_8029347" />
+    </DataNode>
+    <DataNode elementId="_2-Oxo-carboxylates" textLabel="a 2-oxo carboxylate" type="Metabolite">
+      <Xref identifier="35910" dataSource="ChEBI" />
+      <Graphics centerX="500" centerY="600" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>This compound class stands for generic and unspecified 2-oxo acids.</Comment>
+      <Property key="UniqueID" value="2-Oxo-carboxylates" />
+      <Property key="AlternativeId_Chebi" value="35910" />
+      <Property key="Synonym_1" value="2-oxo acid" />
+      <Property key="Synonym_2" value="an &amp;alpha; keto acid" />
+      <Property key="Synonym_3" value="a keto acid" />
+      <Property key="Synonym_4" value="a 2-oxo acid" />
+      <Property key="Synonym_5" value="a 2-ketocarboxylate" />
+      <Property key="AtomCharges" value="(5 -1)" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="NonStandardInchi" value="InChI=1S/C2H2O3/c3-1-2(4)5/h1H,(H,4,5)/p-1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C([R])(=O)C([O-])=O" />
+    </DataNode>
+    <DataNode elementId="NAD" textLabel="NAD⁺" type="Metabolite">
+      <Xref identifier="BAWFJGJZGIEFAR-NNYOXOHSSA-M" dataSource="InChIKey" />
+      <Graphics centerX="650" centerY="600" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: NAD| and |FRAME: NADP| are dinucleotides containing one |FRAME: NIACINAMIDE| base and one |FRAME: ADENINE| base. Each nucleotide is connected to a ribose sugar at position 1, and the two riboses are connected at their 5 position via a diphosphate. The only difference between the two is that in NADP there is an additional phosphate group at the 2&apos; position of the ribose that carries the adenine moiety. These molecules are biological carriers of reductive equivalents (i.e. high potential electrons). Most of the time they function as cosubstrates, and in some cases they function as |FRAME: Cofactors cofactors|. They are often referred to by the obsolete term &quot;coenzymes&quot;. The most common function of |FRAME: NAD| is to accept two electrons and a proton (a hydride ion) from a substrate that is being oxidized. This reduction converts |FRAME: NAD| to |FRAME: NADH|, the reduced form. NADH then diffuses or is transported to a terminal oxidase, where the electrons are passed on, regenerating the oxidized form. |FRAME: NADPH|, on the other hand, is mostly involved in biosynthetic reactions, where it serves as an electron donor. NADPH is formed by reduction of |FRAME: NADP|, which occurs by different mechanisms in different types of organisms. In photosynthetic organisms |FRAME: NADP| is reduced by |FRAME: CPLX-84|. In heterotrophic organisms it is reduced by central metabolism processes such as the pentose phosphate pathway (see |FRAME: OXIDATIVEPENT-PWY|).</Comment>
+      <Property key="UniqueID" value="NAD" />
+      <Property key="AlternativeId_Mediadb" value="compounds/3/" />
+      <Property key="AlternativeId_Seed" value="cpd00003" />
+      <Property key="AlternativeId_Metanetx" value="MNXM8" />
+      <Property key="AlternativeId_Refmet" value="NAD+" />
+      <Property key="AlternativeId_Bigg" value="nad" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57540" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00902" />
+      <Property key="AlternativeId_Chemspider" value="10239196" />
+      <Property key="AlternativeId_Chebi" value="57540" />
+      <Property key="AlternativeId_Pubchem" value="15938971" />
+      <Property key="AlternativeId_LigandCpd" value="C00003" />
+      <Property key="AlternativeId_Cas" value="53-84-9" />
+      <Property key="Synonym_1" value="NAD+" />
+      <Property key="Synonym_2" value="beta-nicotinamide adenine dinucleotide" />
+      <Property key="Synonym_3" value="coenzyme I" />
+      <Property key="Synonym_4" value="diphosphopyridine nucleotide" />
+      <Property key="Synonym_5" value="diphosphopyridine nucleotide oxidized" />
+      <Property key="Synonym_6" value="nicotinamide adenine dinucleotide" />
+      <Property key="Synonym_7" value="nicotinamide adenine dinucleotide oxidized" />
+      <Property key="Synonym_8" value="NAD-oxidized" />
+      <Property key="Synonym_9" value="NAD-ox" />
+      <Property key="Synonym_10" value="DPN+" />
+      <Property key="Synonym_11" value="DPN-ox" />
+      <Property key="Synonym_12" value="DPN" />
+      <Property key="Synonym_13" value="&amp;beta;-nicotinamide adenine dinucleotide" />
+      <Property key="Synonym_14" value="NAD" />
+      <Property key="Synonym_15" value="&amp;beta;-NAD&lt;sup&gt;+&lt;/sup&gt;" />
+      <Property key="ChemicalFormula" value="(C 21) (H 26) (N 7) (O 14) (P 2)" />
+      <Property key="AtomCharges" value="(27 1), (37 -1), (35 -1)" />
+      <Property key="CofactorsOf" value="ENZRXN-12451, ENZRXN-1362, ENZRXNQT-9536, ENZRXN-9141, ENZRXN-9122" />
+      <Property key="Gibbs0" value="-338.38196" />
+      <Property key="Inchi" value="InChI=1S/C21H27N7O14P2/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(32)14(30)11(41-21)6-39-44(36,37)42-43(34,35)38-5-10-13(29)15(31)20(40-10)27-3-1-2-9(4-27)18(23)33/h1-4,7-8,10-11,13-16,20-21,29-32H,5-6H2,(H5-,22,23,24,25,33,34,35,36,37)/p-1/t10-,11-,13-,14-,15-,16-,20-,21-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=BAWFJGJZGIEFAR-NNYOXOHSSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="662.422" />
+      <Property key="MonoisotopicMw" value="665.1247716966999" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-13857, REG-14487, REG0-8643, REG-14636, REG0-8746, REG0-6740, REG0-10411, REG-8498, REG-11606, REG0-8592, REG0-7959, REG-7455, REG-7348, REG-10755, REG-8006, REG0-8151, REG-8140, REG0-7613" />
+      <Property key="Smiles" value="C5(/C(/C(N)=O)=C\C=C/[N+](/[C@@H]4(O[C@H](COP(OP(OC[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3))(=O)[O-])(=O)[O-])[C@@H](O)[C@@H](O)4))=5)" />
+    </DataNode>
+    <DataNode elementId="Amino-Acids-20" textLabel="a proteinogenic amino acid" type="Metabolite">
+      <Xref identifier="83813" dataSource="ChEBI" />
+      <Graphics centerX="200" centerY="700" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>This compound class contains the standard set of 20 protein-buliding amino acids. Note that L-proline is included in this group although technically it is not an amino acid. This class does not include other amino acids even if they have been implicated in protein synthesis.</Comment>
+      <Property key="UniqueID" value="Amino-Acids-20" />
+      <Property key="AlternativeId_Seed" value="cpd22369" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1075" />
+      <Property key="AlternativeId_Chebi" value="83813" />
+      <Property key="Synonym_1" value="a protein-building amino acid" />
+      <Property key="Synonym_2" value="a standard &amp;alpha; amino acid" />
+      <Property key="AtomCharges" value="(4 -1), (3 1)" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="NName" value="amino acids" />
+      <Property key="NonStandardInchi" value="InChI=1S/C2H5NO2/c3-1-2(4)5/h1,3H2,(H,4,5)" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="[C@@H]([NH3+])([R])C([O-])=O" />
+    </DataNode>
+    <DataNode elementId="CPD-665" textLabel="1-propanal" type="Metabolite">
+      <Xref identifier="NBBJYMSMWIIQGU-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="350.0" centerY="450.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-665" />
+      <Property key="AlternativeId_Zinc" value="ZINC000000895256" />
+      <Property key="AlternativeId_Seed" value="cpd00371" />
+      <Property key="AlternativeId_Metanetx" value="MNXM821" />
+      <Property key="AlternativeId_Bigg" value="ppal" />
+      <Property key="AlternativeId_Hmdb" value="HMDB03366" />
+      <Property key="AlternativeId_Chemspider" value="512" />
+      <Property key="AlternativeId_Pubchem" value="527" />
+      <Property key="AlternativeId_Chebi" value="17153" />
+      <Property key="AlternativeId_LigandCpd" value="C00479" />
+      <Property key="AlternativeId_Cas" value="123-38-6" />
+      <Property key="Synonym_1" value="propionaldehyde" />
+      <Property key="ChemicalFormula" value="(C 3) (H 6) (O 1)" />
+      <Property key="Gibbs0" value="29.196724" />
+      <Property key="Inchi" value="InChI=1S/C3H6O/c1-2-3-4/h3H,2H2,1H3" />
+      <Property key="InchiKey" value="InChIKey=NBBJYMSMWIIQGU-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="58.08" />
+      <Property key="MonoisotopicMw" value="58.0418648147" />
+      <Property key="NonStandardInchi" value="InChI=1S/C3H6O/c1-2-3-4/h3H,2H2,1H3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-12353" />
+      <Property key="Smiles" value="CCC=O" />
+    </DataNode>
+    <DataNode elementId="_4-AMINO-BUTYRALDEHYDE" textLabel="4-aminobutanal" type="Metabolite">
+      <Xref identifier="DZQLQEYLEYWJIB-UHFFFAOYSA-O" dataSource="InChIKey" />
+      <Graphics centerX="350.0" centerY="450.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="4-AMINO-BUTYRALDEHYDE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001532682" />
+      <Property key="AlternativeId_Metanetx" value="MNXM422" />
+      <Property key="AlternativeId_Refmet" value="4-Aminobutyraldehyde" />
+      <Property key="AlternativeId_Bigg" value="4abutn" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC58264" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01080" />
+      <Property key="AlternativeId_Chebi" value="58264" />
+      <Property key="AlternativeId_Pubchem" value="25245200" />
+      <Property key="AlternativeId_LigandCpd" value="C00555" />
+      <Property key="AlternativeId_Cas" value="4390-05-0" />
+      <Property key="Synonym_1" value="4-amino-butyraldehyde" />
+      <Property key="Synonym_2" value="&amp;gamma;-aminobutyraldehyde" />
+      <Property key="Synonym_3" value="4-aminobutyraldehyde" />
+      <Property key="Synonym_4" value="ABAL" />
+      <Property key="ChemicalFormula" value="(C 4) (H 10) (N 1) (O 1)" />
+      <Property key="AtomCharges" value="(5 1)" />
+      <Property key="Gibbs0" value="70.609146" />
+      <Property key="Inchi" value="InChI=1S/C4H9NO/c5-3-1-2-4-6/h4H,1-3,5H2/p+1" />
+      <Property key="InchiKey" value="InChIKey=DZQLQEYLEYWJIB-UHFFFAOYSA-O" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="88.129" />
+      <Property key="MonoisotopicMw" value="87.0684139162" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-12355" />
+      <Property key="Smiles" value="C(C[NH3+])CC=O" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="145.0" y="50" elementRef="AT5G49810" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="105.0" y="215" elementRef="AT5G49810-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9759">
+      <Xref identifier="RXN-9759" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9759_start" x="245.0" y="600" elementRef="CPD-397" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9759_end" arrowHead="Conversion" x="305.0" y="600" elementRef="CPD-10472" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9759_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9759" />
+      <Property key="Pathways" value="PWY-6054" />
+      <Property key="ReactionEquation" value="CPD-397 + 2-Oxo-carboxylates + PROTON =&gt; CPD-10472 + CARBON-DIOXIDE + Amino-Acids-20" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="AtomMappings" value="(:NO-HYDROGEN-ENCODING (0 1 11 4 3 5 6 7 8 10 9 13 2 15 14 12) (((|Amino-Acids-20| 0 5) (CPD-10472 6 12) (CARBON-DIOXIDE 13 15)) ((|2-Oxo-carboxylates| 0 5) (CPD-397 6 15))))" />
+      <Property key="Gibbs0" value="-44.55036" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-9759_anchor_reactant_1">
+      <Xref identifier="RXN-9759" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9759_anchor_reactant_start_1" x="545.0" y="600" elementRef="_2-Oxo-carboxylates" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9759_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-9759_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9759_anchor_reactant_2">
+      <Xref identifier="RXN-9759" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9759_anchor_reactant_start_2" x="395.0" y="500" elementRef="PROTON" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9759_anchor_reactant_end_2" x="0" y="0" elementRef="RXN-9759_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9759_anchor_product_1">
+      <Xref identifier="RXN-9759" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9759_anchor_product_start_1" x="0" y="0" elementRef="RXN-9759_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-9759_anchor_product_end_1" arrowHead="Conversion" x="455.0" y="500" elementRef="CARBON-DIOXIDE" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9759_anchor_product_2">
+      <Xref identifier="RXN-9759" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9759_anchor_product_start_2" x="0" y="0" elementRef="RXN-9759_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-9759_anchor_product_end_2" arrowHead="Conversion" x="155.0" y="700" elementRef="Amino-Acids-20" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9758">
+      <Xref identifier="EC-1.2.1.8" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-9758_start" x="395.0" y="600" elementRef="CPD-10472" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9758_end" arrowHead="Conversion" x="605.0" y="400" elementRef="SS-DIMETHYL-BETA-PROPIOTHETIN" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9758_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9758" />
+      <Property key="EC_Number" value="EC-1.2.1.8" />
+      <Property key="Pathways" value="PWY-6055, PWY-6054" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="CPD-10472 + WATER + NAD =&gt; SS-DIMETHYL-BETA-PROPIOTHETIN + NADH + PROTON" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-15453" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="Gibbs0" value="-12.481201" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="^coefficient" value="2" />
+    </Interaction>
+    <Interaction elementId="RXN-9758_ENZRXN-15453">
+      <Waypoints>
+        <Point elementId="RXN-9758_ENZRXN-15453_start" x="300" y="227.5" elementRef="MONOMER-14236" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-9758_ENZRXN-15453_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-9758_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9758_anchor_reactant_1">
+      <Xref identifier="EC-1.2.1.8" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-9758_anchor_reactant_start_1" x="695.0" y="500" elementRef="WATER" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9758_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-9758_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9758_anchor_reactant_2">
+      <Xref identifier="EC-1.2.1.8" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-9758_anchor_reactant_start_2" x="695.0" y="600" elementRef="NAD" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9758_anchor_reactant_end_2" x="0" y="0" elementRef="RXN-9758_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9758_anchor_product_1">
+      <Xref identifier="EC-1.2.1.8" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-9758_anchor_product_start_1" x="0" y="0" elementRef="RXN-9758_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-9758_anchor_product_end_1" arrowHead="Conversion" x="305.0" y="400" elementRef="NADH" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9758_anchor_product_2">
+      <Xref identifier="EC-1.2.1.8" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-9758_anchor_product_start_2" x="0" y="0" elementRef="RXN-9758_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-9758_anchor_product_end_2" arrowHead="Conversion" x="305.0" y="500" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="METHIONINE-S-METHYLTRANSFERASE-RXN">
+      <Xref identifier="13761" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="METHIONINE-S-METHYLTRANSFERASE-RXN_start" x="545.0" y="400" elementRef="MET" relX="1.0" relY="0.0" />
+        <Point elementId="METHIONINE-S-METHYLTRANSFERASE-RXN_end" arrowHead="Conversion" x="155.0" y="600" elementRef="CPD-397" relX="-1.0" relY="0.0" />
+        <Anchor elementId="METHIONINE-S-METHYLTRANSFERASE-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Uniprot" value="Q9LTB2" />
+      <Property key="AlternativeId_Rhea" value="13761" />
+      <Property key="AlternativeId_Pir" value="T52306" />
+      <Property key="UniqueID" value="METHIONINE-S-METHYLTRANSFERASE-RXN" />
+      <Property key="EC_Number" value="EC-2.1.1.12" />
+      <Property key="Pathways" value="PWY-6055, PWY-6054, PWY-5441" />
+      <Property key="PathwayCount" value="3" />
+      <Property key="ReactionEquation" value="S-ADENOSYLMETHIONINE + MET =&gt; ADENOSYL-HOMO-CYS + CPD-397" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXN-13681, ENZRXN-15452" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="0." />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="METHIONINE-S-METHYLTRANSFERASE-RXN_ENZRXN-13681">
+      <Waypoints>
+        <Point elementId="METHIONINE-S-METHYLTRANSFERASE-RXN_ENZRXN-13681_start" x="150" y="227.5" elementRef="AT5G49810-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="METHIONINE-S-METHYLTRANSFERASE-RXN_ENZRXN-13681_end" arrowHead="Catalysis" x="0" y="0" elementRef="METHIONINE-S-METHYLTRANSFERASE-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="METHIONINE-S-METHYLTRANSFERASE-RXN_anchor_reactant_0">
+      <Xref identifier="13761" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="METHIONINE-S-METHYLTRANSFERASE-RXN_anchor_reactant_start_0" x="245.0" y="500" elementRef="S-ADENOSYLMETHIONINE" relX="1.0" relY="0.0" />
+        <Point elementId="METHIONINE-S-METHYLTRANSFERASE-RXN_anchor_reactant_end_0" x="0" y="0" elementRef="METHIONINE-S-METHYLTRANSFERASE-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="METHIONINE-S-METHYLTRANSFERASE-RXN_anchor_product_0">
+      <Xref identifier="13761" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="METHIONINE-S-METHYLTRANSFERASE-RXN_anchor_product_start_0" x="0" y="0" elementRef="METHIONINE-S-METHYLTRANSFERASE-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="METHIONINE-S-METHYLTRANSFERASE-RXN_anchor_product_end_0" arrowHead="Conversion" x="155.0" y="400" elementRef="ADENOSYL-HOMO-CYS" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9758_regulation_0">
+      <Waypoints>
+        <Point elementId="RXN-9758_regulation_start_0" x="395.0" y="450.0" elementRef="CPD-665" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9758_regulation_end_0" arrowHead="Inhibition" x="500.0" y="500.0" elementRef="RXN-9758_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-12353" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="Mechanism" value=":COMPETITIVE" />
+      <Property key="RegulatedEntity" value="ENZRXN-15453" />
+      <Property key="Regulator" value="CPD-665" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <Property key="InstanceNameTemplate" value="REG-*" />
+      <CitationRef elementRef="citation_PUB_12226341" />
+    </Interaction>
+    <Interaction elementId="RXN-9758_regulation_1">
+      <Waypoints>
+        <Point elementId="RXN-9758_regulation_start_1" x="395.0" y="600" elementRef="CPD-10472" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9758_regulation_end_1" arrowHead="Inhibition" x="500.0" y="500.0" elementRef="RXN-9758_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-12354" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="Mechanism" value=":COMPETITIVE" />
+      <Property key="RegulatedEntity" value="ENZRXN-15453" />
+      <Property key="Regulator" value="CPD-10472" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <Property key="InstanceNameTemplate" value="REG-*" />
+      <CitationRef elementRef="citation_PUB_12226341" />
+    </Interaction>
+    <Interaction elementId="RXN-9758_regulation_2">
+      <Waypoints>
+        <Point elementId="RXN-9758_regulation_start_2" x="395.0" y="450.0" elementRef="_4-AMINO-BUTYRALDEHYDE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9758_regulation_end_2" arrowHead="Inhibition" x="500.0" y="500.0" elementRef="RXN-9758_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-12355" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="Mechanism" value=":COMPETITIVE" />
+      <Property key="RegulatedEntity" value="ENZRXN-15453" />
+      <Property key="Regulator" value="4-AMINO-BUTYRALDEHYDE" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <Property key="InstanceNameTemplate" value="REG-*" />
+      <CitationRef elementRef="citation_PUB_12226341" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_PUB_8029347">
+      <Xref identifier="8029347" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_12226341">
+      <Xref identifier="12226341" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_8990271">
+      <Xref identifier="8990271" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_7659747">
+      <Xref identifier="7659747" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_15181109">
+      <Xref identifier="15181109" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_18101461">
+      <Xref identifier="18101461" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_12450799">
+      <Xref identifier="12450799" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_7673218">
+      <Xref identifier="7673218" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_12223879">
+      <Xref identifier="12223879" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_12692340">
+      <Xref identifier="12692340" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_31231779">
+      <Xref identifier="31231779" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_17068264">
+      <Xref identifier="17068264" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_12419350">
+      <Xref identifier="12419350" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>
