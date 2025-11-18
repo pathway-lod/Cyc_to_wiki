@@ -264,7 +264,7 @@ Issues, suggestions, and pull requests welcome at:
 ## License
 
 - The license for the data is available at https://plantcyc.org/downloads/license-agreement
-- The license for the code is available in the LICENSE.txt
+- The license for the code is available at [GNU AGPL 3.0](https://www.gnu.org/licenses/agpl-3.0)
 
 
 ## References
