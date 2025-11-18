@@ -263,6 +263,9 @@ Issues, suggestions, and pull requests welcome at:
 
 ## License
 
+- The license for the data is available at https://plantcyc.org/downloads/license-agreement
+- The license for the code is available in the LICENSE.txt
+
 
 ## References
 
