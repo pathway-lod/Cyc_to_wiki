@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="4-aminobenzoate biosynthesis I" organism="Oryza sativa, Glycine max, Solanum lycopersicum, Arabidopsis thaliana" source="PlantCyc" version="20251121085146">
+  <Description>|FRAME: P-AMINO-BENZOATE &quot;4-Aminobenzoate&quot;| is an important metabolic intermediate, leading to the biosynthesis of various products such as |FRAME: All-Folates folates|, |FRAME: Ubiquinones ubiquinone| (in eukaryotes), and various bacterial antibiotics (e.g.. |FRAME: Candicidins candicidin|). |FRAME: P-AMINO-BENZOATE &quot;4-Aminobenzoate&quot;| is produced from |FRAME: CHORISMATE chorismate| in two steps. In the first step |FRAME: EC-2.6.1.85 EC 2.6.1.85, aminodeoxychorismate synthase|, synthesizes |FRAME: 4-AMINO-4-DEOXYCHORISMATE 4-amino-4-deoxychorismate| from |FRAME: CHORISMATE chorismate| and |FRAME: GLN L-glutamine|. The enzyme is composed from two subunit, PabA and PabB (in some organisms they are fused together into a bifunctional protein). PabA functions as a glutaminase, but only when in complex with PabB. PabB is an aminodeoxychorismate synthase that utilizes chorismate, and the nacent ammonia derived from glutamine hydrolysis by PabA, as substrates. In the absence of PabA, PabB can utilize added ammonia (at a reduced rate) to aminate chorismate and produce 4-amino-4-deoxychorismate |CITS: [1637823][ANDERSONK91][2251281]|. In the second step |FRAME: EC-4.1.3.38 EC 4.1.3.38, aminodeoxychorismate lyase| (PabC), forms the final product. The reaction involves the elimination of pyruvate from 4-amino-4-deoxychorismate with concomitant aromatization of the cyclohexadiene ring. The enzyme is classified as an &amp;alpha;,&amp;beta;-lyase of the fold-type IV family, and requires pyridoxal 5&apos;-phosphate for activity |CITS: [11011151]|.</Description>
+  <Authors>
+    <Author name="SRI" />
+    <Author name="caspi" />
+    <Author name="O-28" />
+    <Author name="pujar" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-6543" />
+  <Property key="Type" value="4-Aminobenzoate-Biosynthesis" />
+  <Property key="ReactionCount" value="2" />
+  <Property key="ReactionIDs" value="ADCLY-RXN, PABASYN-RXN" />
+  <Property key="PredecessorCount" value="2" />
+  <Property key="PathwayLinks" value="(P-AMINO-BENZOATE PWY-6614), (CHORISMATE ARO-PWY)" />
+  <Property key="Organism" value="Oryza sativa, Glycine max, Solanum lycopersicum, Arabidopsis thaliana" />
+  <Property key="TaxonomicRange_1" value="Fungi" />
+  <Property key="TaxonomicRange_2" value="Archaea" />
+  <Property key="TaxonomicRange_3" value="Bacteria &lt;bacteria&gt;" />
+  <Property key="TaxonomicRange_4" value="Viridiplantae" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_PUB_18757550" />
+  <CitationRef elementRef="citation_PUB_11011151" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="AT5G57850" textLabel="ADCL" type="GeneProduct">
+      <Xref identifier="AY099783" dataSource="Entrez Gene" />
+      <Graphics centerX="892.5465698242188" centerY="50.0" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT5G57850" />
+      <Property key="AlternativeId_Entrez" value="AY099783" />
+      <Property key="AlternativeId_Arrayexpress" value="Q8L493" />
+      <Property key="AlternativeId_String" value="3702.AT5G57850.1" />
+      <Property key="Synonym_1" value="At5g57850" />
+      <Property key="Product" value="AT5G57850-MONOMER" />
+      <Property key="StartPosition" value="23452517" />
+      <Property key="EndPosition" value="23454553" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+      <Property key="Accession1" value="AT5G57850" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="G-12101" textLabel="ADCS" type="GeneProduct">
+      <Xref identifier="G-12101" dataSource="plantcyc" />
+      <Graphics centerX="550.49853515625" centerY="1200.1168212890625" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="G-12101" />
+      <Property key="Product" value="MONOMER-8741" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="AT2G28880" textLabel="ADCS" type="GeneProduct">
+      <Xref identifier="AY096797" dataSource="Entrez Gene" />
+      <Graphics centerX="1600.0" centerY="524.263427734375" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT2G28880" />
+      <Property key="AlternativeId_Entrez" value="AY096797" />
+      <Property key="AlternativeId_String" value="3702.AT2G28880.1" />
+      <Property key="Synonym_1" value="AY096797" />
+      <Property key="Synonym_2" value="At2g28880" />
+      <Property key="Product" value="AT2G28880-MONOMER" />
+      <Property key="StartPosition" value="12405822" />
+      <Property key="EndPosition" value="12410605" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+      <Property key="Accession1" value="AT2G28880" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="MONOMER-8921" textLabel="ADCL subunits" type="Protein" groupRef="CPLX-5401">
+      <Xref identifier="MONOMER-8921" dataSource="plantcyc" />
+      <Graphics centerX="1029.4510498046875" centerY="1093.6396484375" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="MONOMER-8921" />
+      <Property key="ComponentOf" value="CPLX-5401" />
+      <Property key="Gene" value="G-6741" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="MolecularWeightExp" value="63." />
+      <Property key="MolecularWeightKd" value="63." />
+      <Property key="Species" value="TAX-4081" />
+    </DataNode>
+    <DataNode elementId="AT5G57850-MONOMER" textLabel="AT5G57850-MONOMER" type="Protein">
+      <Xref identifier="Q8L493" dataSource="uniprot" />
+      <Graphics centerX="100.0" centerY="977.4963989257812" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">The protein sequence of aminodeoxychorismate lyase (ADCL) of E. coli (PabC) was used to locate cognate ESTs and isolate the cDNA encoding the ADCL in &lt;i&gt;Arabidopsis thaliana&lt;/i&gt;. The functional complementation of an &lt;i&gt;E. coli&lt;/i&gt; mutant lacking ADC lyase activity confirmed that the cDNA indeed encoded for a functional enzyme |CITS: [15500462]|. The complemented enzyme was recombinant expressed in &lt;i&gt;E. coli&lt;/i&gt; bearing the ADC synthase gene |CITS: [14745019]| demonstrating in this coupled assay the formation of p-aminobenzoate (pABA). The dimeric protein was not inhibited by physiological concentrations of folates, pABA, or pABAglucose ester. The plastidal subcellular localization was confirmed by import assays in isolated pea chloroplasts fusing the Arabidopsis ADCL cDNA to the green fluorescent protein (GFP) |CITS: [15500462]|. The function of this protein and the interaction of its two domains has been further characterized &lt;i&gt;in vitro&lt;/i&gt; using recombinant proteins expressed in E.coli |CITS: [20851095]|.</Comment>
+      <Property key="UniqueID" value="AT5G57850-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT5G57850.1" />
+      <Property key="AlternativeId_Panther" value="PTHR11825" />
+      <Property key="AlternativeId_Smr" value="Q8L493" />
+      <Property key="AlternativeId_Pride" value="Q8L493" />
+      <Property key="AlternativeId_Interpro" value="IPR001544" />
+      <Property key="AlternativeId_Pfam" value="PF01063" />
+      <Property key="AlternativeId_Phylomedb" value="Q8L493" />
+      <Property key="AlternativeId_Prosite" value="PS00770" />
+      <Property key="AlternativeId_Uniprot" value="Q8L493" />
+      <Property key="AlternativeId_Pid" value="AAM20634" />
+      <Property key="Synonym_1" value="Branched-chain-amino-acid aminotransferase-like protein 3, chloroplastic" />
+      <Property key="Catalyzes" value="RXN-9063" />
+      <Property key="GOTerms" value="GO:0009507" />
+      <Property key="Accession1" value="AT5G57850.1" />
+      <Property key="Gene" value="AT5G57850" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Locations" value="CCO-CHLOROPLAST" />
+      <Property key="MolecularWeightExp" value="41." />
+      <Property key="MolecularWeightKd" value="41." />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_15500462" />
+      <CitationRef elementRef="citation_PUB_14745019" />
+      <CitationRef elementRef="citation_PUB_20851095" />
+    </DataNode>
+    <DataNode elementId="MONOMER-8741" textLabel="MONOMER-8741" type="Protein">
+      <Xref identifier="Q6TAS3" dataSource="uniprot" />
+      <Graphics centerX="1133.402099609375" centerY="419.1385498046875" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="O-28, pujar">Genetic approaches were used to isolate the cDNA encoding the aminodeoxychorismate synthase (ADCS) in |FRAME:TAX-4081 &lt;i&gt;Solanum lycopersicum&lt;/i&gt;|. The enzyme was recombinant expressed in |FRAME:TAX-562 &lt;i&gt;Escherichia coli&lt;/i&gt;| demonstrating the formation of 4-amino-4-deoxychorismate. Furthermore, the functional complementation of an |FRAME:TAX-562 &lt;i&gt;Escherichia coli&lt;/i&gt;| double mutant and a yeast pABA synthase deletant confirmed that the cDNA indeed encoded for a functional enzyme. The monomeric protein is bipartite containing tandem domains homologous to the PabA and PabB subunits of the |FRAME:TAX-562 &lt;i&gt;Escherichia coli&lt;/i&gt;| enzyme. No feedback inhibition of the enzyme was observed for neither pABA or folate which is in contrast to a closely related enzyme, anthranilate synthase |CITS: [14745019]|. The expression patterns of ADCS during the ripening process of fruits suggest that fruits synthesize their own supply of folate precursors, which is in agreement with the expression pattern of other enzymes from the pterin branch in ripening fruits |CITS: [12221287]|.</Comment>
+      <Property key="UniqueID" value="MONOMER-8741" />
+      <Property key="AlternativeId_Interpro" value="IPR005801" />
+      <Property key="AlternativeId_Prosite" value="PS51273" />
+      <Property key="AlternativeId_Pfam" value="PF04715" />
+      <Property key="AlternativeId_Uniprot" value="Q6TAS3" />
+      <Property key="AlternativeId_Pid" value="AAR83121" />
+      <Property key="Catalyzes" value="RXN-8931" />
+      <Property key="GOTerms" value="GO:0009509" />
+      <Property key="Gene" value="G-12101" />
+      <Property key="^citations" value="14745019" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Locations" value="CCO-CHROMOPLAST" />
+      <Property key="MolecularWeightExp" value="102." />
+      <Property key="MolecularWeightKd" value="102., 102." />
+      <Property key="MolecularWeightSeq" value="102." />
+      <Property key="Species" value="TAX-4081" />
+      <CitationRef elementRef="citation_PUB_14745019" />
+      <CitationRef elementRef="citation_PUB_12221287" />
+    </DataNode>
+    <DataNode elementId="AT2G28880-MONOMER" textLabel="aminodeoxychorismate synthase" type="Protein">
+      <Xref identifier="Q8LPN3" dataSource="uniprot" />
+      <Graphics centerX="1596.676025390625" centerY="1094.776123046875" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">The protein sequence of the pABA synthase (PabA and PabB subunits) of &lt;i&gt;E. coli&lt;/i&gt; was used to isolate the cDNA encoding the aminodeoxychorismate synthase (ADCS) in &lt;i&gt;Arabidopsis thaliana&lt;/i&gt;. The enzyme was recombinant expressed in &lt;i&gt;E. coli&lt;/i&gt; demonstrating the formation of 4-amino-4-deoxychorismate. Furthermore, the functional complementation of an &lt;i&gt;E. coli&lt;/i&gt; double mutant and a yeast pABA synthase deletant confirmed that the cDNA indeed encoded for a functional enzyme. The recombinant protein overexpressed in &lt;i&gt;E. coli&lt;/i&gt; showed no ADC lyase activity indicating that the second step towards pABA must be catalyzed by a different enzyme in plants. The monomeric protein is bipartite containing tandem domains homologous to the PabA and PabB subunits of the &lt;i&gt;E. coli&lt;/i&gt; enzyme. No feedback inhibition of the enzyme was observed for neither pABA or folate which is in contrast to a closely related enzyme, anthranilate synthase |CITS: [14745019]|.</Comment>
+      <Property key="UniqueID" value="AT2G28880-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT2G28880.1" />
+      <Property key="AlternativeId_Uniprot" value="Q8LPN3" />
+      <Property key="AlternativeId_Pride" value="Q8LPN3" />
+      <Property key="AlternativeId_Interpro" value="IPR029062" />
+      <Property key="AlternativeId_Pfam" value="PF00117" />
+      <Property key="AlternativeId_Phylomedb" value="Q8LPN3" />
+      <Property key="AlternativeId_Prosite" value="PS51273" />
+      <Property key="AlternativeId_Smr" value="Q8LPN3" />
+      <Property key="AlternativeId_Pid" value="AAM19955" />
+      <Property key="Synonym_1" value="plastid aminodeoxychorismate synthase" />
+      <Property key="Catalyzes" value="RXN-9061" />
+      <Property key="Accession1" value="AT2G28880.1" />
+      <Property key="FunctionalAssignmentStatus" value=":PROBABLE-ENZYME" />
+      <Property key="Gene" value="AT2G28880" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="MolecularWeightExp" value="110." />
+      <Property key="MolecularWeightKd" value="110." />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_14745019" />
+    </DataNode>
+    <DataNode elementId="GLN" textLabel="L-glutamine" type="Metabolite">
+      <Xref identifier="ZDXPYRJPNDTMRX-VKHMYHEASA-N" dataSource="InChIKey" />
+      <Graphics centerX="787.8114013671875" centerY="875.0135498046875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="GLN" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001532526" />
+      <Property key="AlternativeId_Mediadb" value="compounds/62/" />
+      <Property key="AlternativeId_Metanetx" value="MNXM37" />
+      <Property key="AlternativeId_Refmet" value="Glutamine" />
+      <Property key="AlternativeId_Bigg" value="gln__L" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC58359" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00641" />
+      <Property key="AlternativeId_Chebi" value="58359" />
+      <Property key="AlternativeId_Pubchem" value="6992086" />
+      <Property key="AlternativeId_LigandCpd" value="C00064" />
+      <Property key="AlternativeId_Cas" value="56-85-9" />
+      <Property key="Synonym_1" value="Q" />
+      <Property key="Synonym_2" value="proglumide" />
+      <Property key="Synonym_3" value="glum" />
+      <Property key="Synonym_4" value="glutamine" />
+      <Property key="Synonym_5" value="glumin" />
+      <Property key="Synonym_6" value="2-aminoglutaramic acid" />
+      <Property key="Synonym_7" value="glutamic acid 5-amide" />
+      <Property key="Synonym_8" value="L-gln" />
+      <Property key="ChemicalFormula" value="(C 5) (H 10) (N 2) (O 3)" />
+      <Property key="AbbrevName" value="gln" />
+      <Property key="AtomCharges" value="(10 -1), (6 1)" />
+      <Property key="Gibbs0" value="-23.488802" />
+      <Property key="Inchi" value="InChI=1S/C5H10N2O3/c6-3(5(9)10)1-2-4(7)8/h3H,1-2,6H2,(H2,7,8)(H,9,10)/t3-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=ZDXPYRJPNDTMRX-VKHMYHEASA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="146.146" />
+      <Property key="MonoisotopicMw" value="146.0691421977" />
+      <Property key="NonStandardInchi" value="InChI=1S/C5H10N2O3/c6-3(5(9)10)1-2-4(7)8/h3H,1-2,6H2,(H2,7,8)(H,9,10)/t3-/m0/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Pka1" value="2.17" />
+      <Property key="Pka2" value="9.13" />
+      <Property key="Regulates" value="REG-9519, REG0-7747" />
+      <Property key="Smiles" value="C(=O)(N)CC[C@H]([NH3+])C([O-])=O" />
+      <CitationRef elementRef="citation_PUB_18493048" />
+      <CitationRef elementRef="citation_PUB_16306140" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="521.8265991210938" centerY="670.1297607421875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="ChemicalFormula" value="(H 1)" />
+      <Property key="AtomCharges" value="(1 1)" />
+      <Property key="Gibbs0" value="0.42906138" />
+      <Property key="Inchi" value="InChI=1S/p+1" />
+      <Property key="InchiKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicMw" value="1.0078250321" />
+      <Property key="NonStandardInchi" value="InChI=1S/p+1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="[H+]" />
+    </DataNode>
+    <DataNode elementId="P-AMINO-BENZOATE" textLabel="4-aminobenzoate" type="Metabolite">
+      <Xref identifier="ALYNCZNDIQEVRV-UHFFFAOYSA-M" dataSource="InChIKey" />
+      <Graphics centerX="985.3734130859375" centerY="1550.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="P-AMINO-BENZOATE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000000000920" />
+      <Property key="AlternativeId_Mediadb" value="compounds/534/" />
+      <Property key="AlternativeId_Seed" value="cpd00443" />
+      <Property key="AlternativeId_Metanetx" value="MNXM421" />
+      <Property key="AlternativeId_Refmet" value="P-Aminobenzoic acid" />
+      <Property key="AlternativeId_Bigg" value="4abz" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01392" />
+      <Property key="AlternativeId_Chemspider" value="4710" />
+      <Property key="AlternativeId_Chebi" value="17836" />
+      <Property key="AlternativeId_Pubchem" value="4876" />
+      <Property key="AlternativeId_Cas" value="150-13-0" />
+      <Property key="AlternativeId_LigandCpd" value="C00568" />
+      <Property key="Synonym_1" value="para-aminobenzoic acid" />
+      <Property key="Synonym_2" value="p-aminobenzoic acid" />
+      <Property key="Synonym_3" value="para-aminobenzoate" />
+      <Property key="Synonym_4" value="&lt;i&gt;p&lt;/i&gt;-aminobenzoate" />
+      <Property key="Synonym_5" value="4-aminobenzoic acid" />
+      <Property key="Synonym_6" value="pABA" />
+      <Property key="ChemicalFormula" value="(C 7) (H 6) (N 1) (O 2)" />
+      <Property key="AtomCharges" value="(9 -1)" />
+      <Property key="Gibbs0" value="12.324662" />
+      <Property key="Inchi" value="InChI=1S/C7H7NO2/c8-6-3-1-5(2-4-6)7(9)10/h1-4H,8H2,(H,9,10)/p-1" />
+      <Property key="InchiKey" value="InChIKey=ALYNCZNDIQEVRV-UHFFFAOYSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="136.13" />
+      <Property key="MonoisotopicMw" value="137.0476784741" />
+      <Property key="NonStandardInchi" value="InChI=1S/C7H7NO2/c8-6-3-1-5(2-4-6)7(9)10/h1-4H,8H2,(H,9,10)/p-1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C(=O)([O-])C1(\C=C/C(/N)=C\C=1)" />
+    </DataNode>
+    <DataNode elementId="GLT" textLabel="L-glutamate" type="Metabolite">
+      <Xref identifier="WHUUTDBJXJRKMK-VKHMYHEASA-M" dataSource="InChIKey" />
+      <Graphics centerX="315.0116271972656" centerY="278.3103942871094" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: GLT| is one of the proteinogenic amino acids. It is named after wheat gluten, from which it was described in 1866 by the German chemist Karl Heinrich Ritthausen. |FRAME: GLT| plays an important role in nitrogen metabolism in the cell. Once cells take up ammonium, it is fixed by incorporation into the TCA cycle intermediate |FRAME: 2-KETOGLUTARATE| by |FRAME: EC-1.4.1.4|, forming |FRAME: GLT| |CITS: [13239305]| (an additional ammonium molecule can be fixed into L-glutamate, e.g. by |FRAME: EC-6.3.1.2|, forming |FRAME: GLN| |CITS: [14833423]|). Glutamate then becomes the central source for passing amino groups on to other molecules by the action of transaminase (=aminotransferase) enzymes, distributing nitrogen throughout the cell. For example, glutamate can transfer the amino group to the common metabolites |FRAME: PYRUVATE| and |FRAME: OXALACETIC_ACID|, forming |FRAME: L-ALPHA-ALANINE| and |FRAME: L-ASPARTATE|, respectively. It has been estimated that glutamate and glutamine provide 75% and 25%, respectively, of all cellular nitrogen |CITS: [30026566]|. In addition to its protein building role, |FRAME: GLT| is the most abundant excitatory neurotransmitter in the vertebrate nervous system, acting on ionotropic and metabotropic (G-protein coupled) receptors |CITS: [10736372]|. |FRAME: GLT| interacts with the umami taste receptors, which sense glutamates and nucleotides, imparting &quot;meaty&quot;, &quot;savory&quot;, and &quot;broth-like&quot; flavor. The monosodium salt of glutamate (MSG), which is found naturally in some foods, is often added to foodstuff for flavoring |CITS: [1679557]|. Although MSG is commnly believed to cause headaches, all scientific studies found no such effect |CITS: [27189588]|.</Comment>
+      <Property key="UniqueID" value="GLT" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001482113" />
+      <Property key="AlternativeId_Mediadb" value="compounds/25/" />
+      <Property key="AlternativeId_Refmet" value="Glutamic acid" />
+      <Property key="AlternativeId_Bigg" value="glu__L" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC29985" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00148" />
+      <Property key="AlternativeId_Chemspider" value="4573882" />
+      <Property key="AlternativeId_Pubchem" value="5460299" />
+      <Property key="AlternativeId_Knapsack" value="C00001358" />
+      <Property key="AlternativeId_Chebi" value="29985" />
+      <Property key="AlternativeId_LigandCpd" value="C00025" />
+      <Property key="AlternativeId_Cas" value="56-86-0" />
+      <Property key="Synonym_1" value="1-amino-propane-1,3-dicarboxylic acid" />
+      <Property key="Synonym_2" value="glutacid" />
+      <Property key="Synonym_3" value="glutaminic acid" />
+      <Property key="Synonym_4" value="L-glutamic acid" />
+      <Property key="Synonym_5" value="&amp;alpha;-aminoglutaric acid" />
+      <Property key="Synonym_6" value="E" />
+      <Property key="Synonym_7" value="glt" />
+      <Property key="Synonym_8" value="glut" />
+      <Property key="Synonym_9" value="L-glu" />
+      <Property key="Synonym_10" value="2-aminopentanedioic acid" />
+      <Property key="ChemicalFormula" value="(C 5) (H 8) (N 1) (O 4)" />
+      <Property key="AbbrevName" value="glu" />
+      <Property key="AtomCharges" value="(10 -1), (7 -1), (6 1)" />
+      <Property key="Gibbs0" value="-82.27311" />
+      <Property key="Inchi" value="InChI=1S/C5H9NO4/c6-3(5(9)10)1-2-4(7)8/h3H,1-2,6H2,(H,7,8)(H,9,10)/p-1/t3-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=WHUUTDBJXJRKMK-VKHMYHEASA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="146.122" />
+      <Property key="MonoisotopicMw" value="147.0531577825" />
+      <Property key="NonStandardInchi" value="InChI=1S/C5H9NO4/c6-3(5(9)10)1-2-4(7)8/h3H,1-2,6H2,(H,7,8)(H,9,10)/p-1/t3-/m0/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Pka1" value="2.19" />
+      <Property key="Pka2" value="4.25" />
+      <Property key="Pka3" value="9.67" />
+      <Property key="Regulates" value="REG-15653, REG-9139, REG-12357, REG-9495, REG-8443, REG0-8740, REG0-8754, REG0-7397, REG-8144, REG-9353, REG-5952" />
+      <Property key="Smiles" value="C(CC[C@@H](C(=O)[O-])[NH3+])([O-])=O" />
+      <CitationRef elementRef="citation_PUB_18493048" />
+      <CitationRef elementRef="citation_PUB_16306140" />
+      <CitationRef elementRef="citation_PUB_13239305" />
+      <CitationRef elementRef="citation_PUB_14833423" />
+      <CitationRef elementRef="citation_PUB_30026566" />
+      <CitationRef elementRef="citation_PUB_10736372" />
+      <CitationRef elementRef="citation_PUB_1679557" />
+      <CitationRef elementRef="citation_PUB_27189588" />
+    </DataNode>
+    <DataNode elementId="CHORISMATE" textLabel="chorismate" type="Metabolite">
+      <Xref identifier="WTFXTQVDAKGDEY-HTQZYQBOSA-L" dataSource="InChIKey" />
+      <Graphics centerX="884.3910522460938" centerY="781.5811767578125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CHORISMATE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000003869471" />
+      <Property key="AlternativeId_ReactomeCpd" value="964856" />
+      <Property key="AlternativeId_Seed" value="cpd00216" />
+      <Property key="AlternativeId_Metanetx" value="MNXM337" />
+      <Property key="AlternativeId_Refmet" value="Chorismic acid" />
+      <Property key="AlternativeId_Bigg" value="chor" />
+      <Property key="AlternativeId_Hmdb" value="HMDB12199" />
+      <Property key="AlternativeId_Chemspider" value="4573889" />
+      <Property key="AlternativeId_Pubchem" value="5460312" />
+      <Property key="AlternativeId_Chebi" value="29748" />
+      <Property key="AlternativeId_Cas" value="55508-12-8" />
+      <Property key="AlternativeId_LigandCpd" value="C00251" />
+      <Property key="Synonym_1" value="chorismic acid" />
+      <Property key="ChemicalFormula" value="(C 10) (H 8) (O 6)" />
+      <Property key="AtomCharges" value="(13 -1), (15 -1)" />
+      <Property key="Gibbs0" value="-95.44927" />
+      <Property key="Inchi" value="InChI=1S/C10H10O6/c1-5(9(12)13)16-8-4-6(10(14)15)2-3-7(8)11/h2-4,7-8,11H,1H2,(H,12,13)(H,14,15)/p-2/t7-,8-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=WTFXTQVDAKGDEY-HTQZYQBOSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="224.17" />
+      <Property key="MonoisotopicMw" value="226.04773805359997" />
+      <Property key="NonStandardInchi" value="InChI=1S/C10H10O6/c1-5(9(12)13)16-8-4-6(10(14)15)2-3-7(8)11/h2-4,7-8,11H,1H2,(H,12,13)(H,14,15)/p-2/t7-,8-/m1/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-8580" />
+      <Property key="Smiles" value="C=C(C(=O)[O-])O[C@H]1([C@H](O)\C=C/C(/C([O-])=O)=C\1)" />
+      <Property key="SystematicName" value="(3R,4R)-3-[(1-carboxylatoethenyl)oxy]-4-hydroxycyclohexa-1,5-diene-1-carboxylate" />
+    </DataNode>
+    <DataNode elementId="_4-AMINO-4-DEOXYCHORISMATE" textLabel="4-amino-4-deoxychorismate" type="Metabolite">
+      <Xref identifier="OIUJHGOLFKDBSU-HTQZYQBOSA-M" dataSource="InChIKey" />
+      <Graphics centerX="863.065185546875" centerY="636.1422729492188" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="4-AMINO-4-DEOXYCHORISMATE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000003869292" />
+      <Property key="AlternativeId_Seed" value="cpd08210" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1458" />
+      <Property key="AlternativeId_Bigg" value="4adcho" />
+      <Property key="AlternativeId_Pubchem" value="45266632" />
+      <Property key="AlternativeId_Chebi" value="58406" />
+      <Property key="AlternativeId_LigandCpd" value="C11355" />
+      <Property key="AlternativeId_Cas" value="97279-79-3" />
+      <Property key="ChemicalFormula" value="(C 10) (H 10) (N 1) (O 5)" />
+      <Property key="AtomCharges" value="(15 -1), (13 -1), (11 1)" />
+      <Property key="Gibbs0" value="-38.720848" />
+      <Property key="Inchi" value="InChI=1S/C10H11NO5/c1-5(9(12)13)16-8-4-6(10(14)15)2-3-7(8)11/h2-4,7-8H,1,11H2,(H,12,13)(H,14,15)/p-1/t7-,8-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=OIUJHGOLFKDBSU-HTQZYQBOSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="224.193" />
+      <Property key="MonoisotopicMw" value="225.0637224688" />
+      <Property key="NonStandardInchi" value="InChI=1S/C10H11NO5/c1-5(9(12)13)16-8-4-6(10(14)15)2-3-7(8)11/h2-4,7-8H,1,11H2,(H,12,13)(H,14,15)/p-1/t7?,8-/m1/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C=C(C(=O)[O-])O[C@H]1([C@H]([NH3+])\C=C/C(/C([O-])=O)=C\1)" />
+    </DataNode>
+    <DataNode elementId="PYRUVATE" textLabel="pyruvate" type="Metabolite">
+      <Xref identifier="LCTONWCANYUPML-UHFFFAOYSA-M" dataSource="InChIKey" />
+      <Graphics centerX="1114.3775634765625" centerY="798.1170654296875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PYRUVATE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001532517" />
+      <Property key="AlternativeId_Mediadb" value="compounds/22/" />
+      <Property key="AlternativeId_Seed" value="cpd00020" />
+      <Property key="AlternativeId_Metanetx" value="MNXM23" />
+      <Property key="AlternativeId_Refmet" value="Pyruvic acid" />
+      <Property key="AlternativeId_Bigg" value="pyr" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15361" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00243" />
+      <Property key="AlternativeId_Chemspider" value="96901" />
+      <Property key="AlternativeId_Pubchem" value="107735" />
+      <Property key="AlternativeId_Knapsack" value="C00001200" />
+      <Property key="AlternativeId_Chebi" value="15361" />
+      <Property key="AlternativeId_LigandCpd" value="C00022" />
+      <Property key="AlternativeId_Cas" value="127-17-3" />
+      <Property key="AlternativeId_UmBbdCpd" value="c0159" />
+      <Property key="Synonym_1" value="alpha-ketopropionic acid" />
+      <Property key="Synonym_2" value="BTS" />
+      <Property key="Synonym_3" value="&amp;alpha;-ketopropionic acid" />
+      <Property key="Synonym_4" value="acetylformic acid" />
+      <Property key="Synonym_5" value="pyroracemic acid" />
+      <Property key="Synonym_6" value="2-oxopropanoic acid" />
+      <Property key="Synonym_7" value="pyruvic acid" />
+      <Property key="Synonym_8" value="2-oxopropanoate" />
+      <Property key="Synonym_9" value="2-oxo-propionic acid" />
+      <Property key="ChemicalFormula" value="(C 3) (H 3) (O 3)" />
+      <Property key="AbbrevName" value="pyruvate" />
+      <Property key="AtomCharges" value="(6 -1)" />
+      <Property key="Gibbs0" value="-82.398705" />
+      <Property key="Inchi" value="InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)/p-1" />
+      <Property key="InchiKey" value="InChIKey=LCTONWCANYUPML-UHFFFAOYSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="InternalsOfGroup" value="GLYCO-CT-PYR" />
+      <Property key="MolecularWeight" value="87.055" />
+      <Property key="MonoisotopicMw" value="88.0160439947" />
+      <Property key="NonStandardInchi" value="InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)/p-1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-9094, REG0-12383, REG0-8339, REG0-11787, REG0-10864, REG0-8218, REG0-10866, REG0-7196, REG0-8057, REG-9991, REG0-9120, REG-7142, REG-7159" />
+      <Property key="Smiles" value="CC(=O)C(=O)[O-]" />
+      <CitationRef elementRef="citation_PUB_18493048" />
+      <CitationRef elementRef="citation_PUB_16306140" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="937.5465698242188" y="50.0" elementRef="AT5G57850" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="55.0" y="977.4963989257812" elementRef="AT5G57850-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_1_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_1_0_0" x="595.49853515625" y="1200.1168212890625" elementRef="G-12101" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_1_0_0" arrowHead="TranscriptionTranslation" x="1088.402099609375" y="419.1385498046875" elementRef="MONOMER-8741" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_2_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_2_0_0" x="1645.0" y="524.263427734375" elementRef="AT2G28880" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_2_0_0" arrowHead="TranscriptionTranslation" x="1551.676025390625" y="1094.776123046875" elementRef="AT2G28880-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ADCLY-RXN">
+      <Xref identifier="16201" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="ADCLY-RXN_start" x="908.065185546875" y="636.1422729492188" elementRef="_4-AMINO-4-DEOXYCHORISMATE" relX="1.0" relY="0.0" />
+        <Point elementId="ADCLY-RXN_end" arrowHead="Conversion" x="940.3734130859375" y="1550.0" elementRef="P-AMINO-BENZOATE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="ADCLY-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Comment source="BioCyc">Forms part of the folate biosynthesis pathway.</Comment>
+      <Property key="AlternativeId_Rhea" value="16201" />
+      <Property key="UniqueID" value="ADCLY-RXN" />
+      <Property key="EC_Number" value="EC-4.1.3.38" />
+      <Property key="Pathways" value="PWY-6543, PWY-3742" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="4-AMINO-4-DEOXYCHORISMATE =&gt; PROTON + P-AMINO-BENZOATE + PYRUVATE" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXN-9063, ENZRXN-8941" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-30.924133" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="ADCLY-RXN_ENZRXN-8941">
+      <Waypoints>
+        <Point elementId="ADCLY-RXN_ENZRXN-8941_start" x="1029.4510498046875" y="1106.1396484375" elementRef="MONOMER-8921" relX="0.0" relY="1.0" />
+        <Point elementId="ADCLY-RXN_ENZRXN-8941_end" arrowHead="Catalysis" x="0" y="0" elementRef="ADCLY-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ADCLY-RXN_ENZRXN-9063">
+      <Waypoints>
+        <Point elementId="ADCLY-RXN_ENZRXN-9063_start" x="100.0" y="989.9963989257812" elementRef="AT5G57850-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="ADCLY-RXN_ENZRXN-9063_end" arrowHead="Catalysis" x="0" y="0" elementRef="ADCLY-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ADCLY-RXN_anchor_product_0">
+      <Xref identifier="16201" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="ADCLY-RXN_anchor_product_start_0" x="0" y="0" elementRef="ADCLY-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="ADCLY-RXN_anchor_product_end_0" arrowHead="Conversion" x="476.82659912109375" y="670.1297607421875" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ADCLY-RXN_anchor_product_2">
+      <Xref identifier="16201" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="ADCLY-RXN_anchor_product_start_2" x="0" y="0" elementRef="ADCLY-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="ADCLY-RXN_anchor_product_end_2" arrowHead="Conversion" x="1069.3775634765625" y="798.1170654296875" elementRef="PYRUVATE" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="PABASYN-RXN">
+      <Xref identifier="11672" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="PABASYN-RXN_start" x="929.3910522460938" y="781.5811767578125" elementRef="CHORISMATE" relX="1.0" relY="0.0" />
+        <Point elementId="PABASYN-RXN_end" arrowHead="Conversion" x="818.065185546875" y="636.1422729492188" elementRef="_4-AMINO-4-DEOXYCHORISMATE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="PABASYN-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Comment source="BioCyc">The enzyme is composed of two parts, PabA and PabB. The enzyme is composed of two parts, PabA and PabB. In the absence of PabA and glutamine, PabB converts ammonia and chorismate into 4-amino-4-deoxychorismate (in the presence of Mg2+). PabA converts glutamine into glutamate only in the presence of stoichiometric amounts of PabB. This enzyme is coupled with EC 4.1.3.38, aminodeoxychorismate lyase, to form 4-aminobenzoate.</Comment>
+      <Property key="AlternativeId_Rhea" value="11672" />
+      <Property key="UniqueID" value="PABASYN-RXN" />
+      <Property key="EC_Number" value="EC-2.6.1.85" />
+      <Property key="Pathways" value="PWY-6543, PWY-3742" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="GLN + CHORISMATE =&gt; 4-AMINO-4-DEOXYCHORISMATE + GLT" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXN-9061, ENZRXN-8931" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="ReactionTypes" value="Composite-Reactions, Small-Molecule-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-2.0558853" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="ReactionList" value="GLUTAMIN-RXN, RXN-22713" />
+    </Interaction>
+    <Interaction elementId="PABASYN-RXN_ENZRXN-8931">
+      <Waypoints>
+        <Point elementId="PABASYN-RXN_ENZRXN-8931_start" x="1133.402099609375" y="431.6385498046875" elementRef="MONOMER-8741" relX="0.0" relY="1.0" />
+        <Point elementId="PABASYN-RXN_ENZRXN-8931_end" arrowHead="Catalysis" x="0" y="0" elementRef="PABASYN-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="PABASYN-RXN_ENZRXN-9061">
+      <Waypoints>
+        <Point elementId="PABASYN-RXN_ENZRXN-9061_start" x="1596.676025390625" y="1107.276123046875" elementRef="AT2G28880-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="PABASYN-RXN_ENZRXN-9061_end" arrowHead="Catalysis" x="0" y="0" elementRef="PABASYN-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="PABASYN-RXN_anchor_reactant_0">
+      <Xref identifier="11672" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="PABASYN-RXN_anchor_reactant_start_0" x="832.8114013671875" y="875.0135498046875" elementRef="GLN" relX="1.0" relY="0.0" />
+        <Point elementId="PABASYN-RXN_anchor_reactant_end_0" x="0" y="0" elementRef="PABASYN-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="PABASYN-RXN_anchor_product_1">
+      <Xref identifier="11672" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="PABASYN-RXN_anchor_product_start_1" x="0" y="0" elementRef="PABASYN-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="PABASYN-RXN_anchor_product_end_1" arrowHead="Conversion" x="270.0116271972656" y="278.3103942871094" elementRef="GLT" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Groups>
+    <Group elementId="CPLX-5401" textLabel="CPLX-5401" type="Complex">
+      <Xref identifier="CPLX-5401" dataSource="plantcyc" />
+      <Graphics centerX="1029.4510498046875" centerY="1093.6396484375" width="140" height="100" textColor="666666" fontName="Arial" fontSize="10" borderColor="9900CC" borderStyle="Dashed" borderWidth="2.0" fillColor="F5E6FF" shapeType="Rectangle" zOrder="-1" />
+      <Comment source="O-28, pujar">Screening tomato ESTs using the Arabidopsis aminodeoxychorismate lyase (ADCL) sequence resulted in the isolation of a cDNA encoding the ADCL in |FRAME:TAX-4081 &lt;i&gt;Solanum lycopersicum&lt;/i&gt;|. The functional complementation of an |FRAME:TAX-562 &lt;i&gt;Escherichia coli&lt;/i&gt;| mutant lacking ADClyase activity confirmed that the cDNA indeed encoded for a functional enzyme |CITS: [15500462]|. The complemented enzyme was recombinantly expressed in |FRAME:TAX-562 &lt;i&gt;Escherichia coli&lt;/i&gt;| bearing the ADC synthase gene |CITS: [14745019]| demonstrating in this coupled assay the formation of p-aminobenzoate (pABA). The enzyme was overexpressed in |FRAME:TAX-562 &lt;i&gt;Escherichia coli&lt;/i&gt;| and the partially purified recombinant protein was determined as a dimeric protein with a molecular weight of 63 +/- 8 kDa. The protein was not inhibited by physiological concentrations of folates, pABA, or pABA glucose ester. The expression patterns of tomato ADCL during the ripening process of fruits follow the expression pattern of the ADC synthase in ripening fruits |CITS: [14745019]| indicating that the formation of pABA may be not regulated at the metabolic but rather at the post-transcriptional level.</Comment>
+      <Property key="UniqueID" value="CPLX-5401" />
+      <Property key="Synonym_1" value="4-amino-4-deoxychorismate lyase" />
+      <Property key="ComplexComponents" value="MONOMER-8921" />
+      <Property key="ComponentCount" value="1" />
+      <Property key="IsComplex" value="true" />
+      <Property key="Catalyzes" value="RXN-8941" />
+      <Property key="^coefficient" value="2" />
+      <Property key="InstanceNameTemplate" value="CPLX-*" />
+      <Property key="MolecularWeightExp" value="43.9" />
+      <Property key="MolecularWeightKd" value="43.9" />
+      <Property key="Species" value="TAX-4081" />
+      <CitationRef elementRef="citation_PUB_15500462" />
+      <CitationRef elementRef="citation_PUB_14745019" />
+    </Group>
+  </Groups>
+  <Citations>
+    <Citation elementId="citation_PUB_14745019">
+      <Xref identifier="14745019" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_10736372">
+      <Xref identifier="10736372" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_14833423">
+      <Xref identifier="14833423" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_15500462">
+      <Xref identifier="15500462" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_30026566">
+      <Xref identifier="30026566" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_16306140">
+      <Xref identifier="16306140" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_18493048">
+      <Xref identifier="18493048" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_12221287">
+      <Xref identifier="12221287" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_20851095">
+      <Xref identifier="20851095" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_1679557">
+      <Xref identifier="1679557" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_11011151">
+      <Xref identifier="11011151" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_18757550">
+      <Xref identifier="18757550" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_27189588">
+      <Xref identifier="27189588" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_13239305">
+      <Xref identifier="13239305" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

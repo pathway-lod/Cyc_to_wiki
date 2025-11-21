@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="methylbutenol biosynthesis" organism="Pinus ponderosa, Pinus sabiniana" source="PlantCyc" version="20251121085146">
+  <Description>Pine species growing in the Western USA emit volatiles such as 2-methyl-3-buten-2-ol (MBO), a hemiterpene. The five carbon alcohol (MBO) is released in large enough quantities to affect the ozone layer and impact global warming |CITS: [11469599]|. MBO is structurally similar to isoprene, because of its effect on immediate atmosphere, the biosynthesis of MBO from needles of pine species is under active investigation. It has been demonstrated that MBO is primarily formed via the DOXP/MEP pathway. The enzyme that catalyses the conversion of dimethylallyl diphosphate (DMAPP) to MBO has been isolated from Pinus sabiniana |CITS: [21504898]| and called methylbutenol synthase . This enzyme is bifunctional, produces MBO and isoprene in a 90:1 ratio. Phylogenetic analysis of the methylbutenol synthase belongs to the class of gymnosperm monoterpene synthases (TPS-d1) |CITS: [21504898]|.</Description>
+  <Authors>
+    <Author name="O-28" />
+    <Author name="pujar" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-6913" />
+  <Property key="Type" value="ISOPRENOIDS" />
+  <Property key="ReactionIDs" value="RXN-12646" />
+  <Property key="Organism" value="Pinus ponderosa, Pinus sabiniana" />
+  <Property key="TaxonomicRange_1" value="Pinidae" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_PUB_11097185" />
+  <CitationRef elementRef="citation_PUB_21504898" />
+  <CitationRef elementRef="citation_PUB_12114581" />
+  <CitationRef elementRef="citation_PUB_16668590" />
+  <CitationRef elementRef="citation_PUB_11469599" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="G-14656" textLabel="Tps-MBO1" type="GeneProduct">
+      <Xref identifier="G-14656" dataSource="plantcyc" />
+      <Graphics centerX="1600.0" centerY="50.0" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="G-14656" />
+      <Property key="Product" value="MONOMER-16830" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="MONOMER-16830" textLabel="MONOMER-16830" type="Protein">
+      <Xref identifier="F5CJS6" dataSource="uniprot" />
+      <Graphics centerX="666.6949462890625" centerY="880.8719482421875" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="O-28, pujar">A cDNA clone was isolated from pine needles of Pinus sabiniana. The DNA was recombinantly expressed in E.coli and the protein was characterized. The enzyme catalyzes the synthesis of |FRAME: CPD-13614 methylbutenol| from |FRAME: CPD-4211 dimethylallyl diphosphate| via the |FRAME: NONMEVIPP-PWY methylerythritol phosphate pathway|. The enzyme is similar to isoprene synthases but requires divalent cations. Modelling studies show the presence of three phenylalanine residues which constrict the active site and maybe responsible for making this enzyme a hemiterpene synthase rather than a monoterpene synthase |CITS: [21504898]|.</Comment>
+      <Property key="UniqueID" value="MONOMER-16830" />
+      <Property key="AlternativeId_Uniprot" value="F5CJS6" />
+      <Property key="AlternativeId_Pid" value="AEB53064" />
+      <Property key="Catalyzes" value="RXN-19578" />
+      <Property key="Gene" value="G-14656" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="MolecularWeightExp" value="70." />
+      <Property key="MolecularWeightKd" value="70.3, 70." />
+      <Property key="MolecularWeightSeq" value="70.3" />
+      <Property key="Species" value="TAX-268869" />
+      <CitationRef elementRef="citation_PUB_21504898" />
+    </DataNode>
+    <DataNode elementId="MONOMER-16827" textLabel="MONOMER-16827" type="Protein">
+      <Xref identifier="MONOMER-16827" dataSource="plantcyc" />
+      <Graphics centerX="100.0" centerY="1550.0" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="O-28, pujar">An enzyme preparation from pine needles of Pinus sabiniana was partially purified and characterized for its biochemical properties. The enzyme catalyzes the conversion of |FRAME: CPD-4211 dimethylallyl diphosphate| to |FRAME: CPD-13614 methylbutenol| via the |FRAME: NONMEVIPP-PWY methylerythritol phosphate pathway|. This enzyme is distinct from the analogous linalool synthase, as it carries no specificity for geranyl diphosphate |CITS: [11097185 ]|. The enzyme requires Mn2+ for activity.</Comment>
+      <Property key="UniqueID" value="MONOMER-16827" />
+      <Property key="Catalyzes" value="RXN-19575" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="TAX-268869" />
+    </DataNode>
+    <DataNode elementId="WATER" textLabel="H₂O" type="Metabolite">
+      <Xref identifier="XLYOFNOQVPJJNP-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1042.915283203125" centerY="730.8361206054688" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="WATER" />
+      <Property key="AlternativeId_Bigg" value="33474" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15377" />
+      <Property key="AlternativeId_Hmdb" value="HMDB02111" />
+      <Property key="AlternativeId_Chemspider" value="937" />
+      <Property key="AlternativeId_Chebi" value="15377" />
+      <Property key="AlternativeId_Pubchem" value="962" />
+      <Property key="AlternativeId_LigandCpd" value="C00001" />
+      <Property key="AlternativeId_Cas" value="7732-18-5" />
+      <Property key="Synonym_1" value="H&lt;sub&gt;2&lt;/sub&gt;0" />
+      <Property key="Synonym_2" value="H2O" />
+      <Property key="Synonym_3" value="H20" />
+      <Property key="Synonym_4" value="hydrogen oxide" />
+      <Property key="Synonym_5" value="water" />
+      <Property key="ChemicalFormula" value="(H 2) (O 1)" />
+      <Property key="Gibbs0" value="-36.144756" />
+      <Property key="Inchi" value="InChI=1S/H2O/h1H2" />
+      <Property key="InchiKey" value="InChIKey=XLYOFNOQVPJJNP-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="18.015" />
+      <Property key="MonoisotopicMw" value="18.0105646863" />
+      <Property key="NonStandardInchi" value="InChI=1S/H2O/h1H2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="O" />
+    </DataNode>
+    <DataNode elementId="CPD-13614" textLabel="isoprenyl alcohol" type="Metabolite">
+      <Xref identifier="HNVRRHSXBLFLIG-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="697.624267578125" centerY="690.3588256835938" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-13614" />
+      <Property key="AlternativeId_Seed" value="cpd23961" />
+      <Property key="AlternativeId_Metanetx" value="MNXM19337" />
+      <Property key="AlternativeId_LigandCpd" value="C21402" />
+      <Property key="AlternativeId_Chebi" value="132752" />
+      <Property key="AlternativeId_Hmdb" value="HMDB33854" />
+      <Property key="AlternativeId_Pubchem" value="8257" />
+      <Property key="Synonym_1" value="methylbutenol" />
+      <Property key="Synonym_2" value="1-dimethyl-2-propenol" />
+      <Property key="Synonym_3" value="1-dimethylallyl alcohol" />
+      <Property key="Synonym_4" value="3-hydroxy-3-methylbut-1-ene" />
+      <Property key="Synonym_5" value="3-methylbut-1-en-3-ol" />
+      <Property key="ChemicalFormula" value="(C 5) (H 10) (O 1)" />
+      <Property key="Gibbs0" value="80.7012" />
+      <Property key="Inchi" value="InChI=1S/C5H10O/c1-4-5(2,3)6/h4,6H,1H2,2-3H3" />
+      <Property key="InchiKey" value="InChIKey=HNVRRHSXBLFLIG-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="86.133" />
+      <Property key="MonoisotopicMw" value="86.0731649431" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C=CC(C)(C)O" />
+      <CitationRef elementRef="citation_PUB_11097185" />
+    </DataNode>
+    <DataNode elementId="CPD-4211" textLabel="prenyl pyrophosphate" type="Metabolite">
+      <Xref identifier="CBIDRCWHNCKSTO-UHFFFAOYSA-K" dataSource="InChIKey" />
+      <Graphics centerX="853.2095947265625" centerY="806.0061645507812" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-4211" />
+      <Property key="AlternativeId_Chebi" value="57623" />
+      <Property key="AlternativeId_Zinc" value="ZINC000008215740" />
+      <Property key="AlternativeId_Seed" value="cpd00202" />
+      <Property key="AlternativeId_Metanetx" value="MNXM132" />
+      <Property key="AlternativeId_Bigg" value="dmpp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57623" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01120" />
+      <Property key="AlternativeId_Chemspider" value="13115336" />
+      <Property key="AlternativeId_Pubchem" value="15983958" />
+      <Property key="AlternativeId_LigandCpd" value="C00235" />
+      <Property key="AlternativeId_Cas" value="358-71-4" />
+      <Property key="Synonym_1" value="dimethylallyl-diphosphate" />
+      <Property key="Synonym_2" value="prenyl-diphosphate" />
+      <Property key="Synonym_3" value="&amp;delta;-prenyl diphosphate" />
+      <Property key="Synonym_4" value="&amp;delta;2-isopentenyl-diphosphate" />
+      <Property key="Synonym_5" value="2-isopentenyl diphosphate" />
+      <Property key="Synonym_6" value="dimethylallyl diphosphate" />
+      <Property key="Synonym_7" value="DPP" />
+      <Property key="Synonym_8" value="di-CH3-allyl-PPi" />
+      <Property key="Synonym_9" value="dimethylallyl-PP" />
+      <Property key="Synonym_10" value="dimethylallyl-PPi" />
+      <Property key="Synonym_11" value="DMPP" />
+      <Property key="Synonym_12" value="dimethylallyl pyrophosphate" />
+      <Property key="Synonym_13" value="3-methylbut-2-en-1-yl diphosphate" />
+      <Property key="Synonym_14" value="gamma,gamma-dimethylallyl pyrophosphate" />
+      <Property key="ChemicalFormula" value="(C 5) (H 9) (O 7) (P 2)" />
+      <Property key="AbbrevName" value="DMAPP" />
+      <Property key="AtomCharges" value="(9 -1), (7 -1), (6 -1)" />
+      <Property key="Gibbs0" value="-349.54843" />
+      <Property key="Inchi" value="InChI=1S/C5H12O7P2/c1-5(2)3-4-11-14(9,10)12-13(6,7)8/h3H,4H2,1-2H3,(H,9,10)(H2,6,7,8)/p-3" />
+      <Property key="InchiKey" value="InChIKey=CBIDRCWHNCKSTO-UHFFFAOYSA-K" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="243.069" />
+      <Property key="MonoisotopicMw" value="246.0058257599" />
+      <Property key="NonStandardInchi" value="InChI=1S/C5H12O7P2/c1-5(2)3-4-11-14(9,10)12-13(6,7)8/h3H,4H2,1-2H3,(H,9,10)(H2,6,7,8)/p-3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC(C)=CCOP(=O)([O-])OP(=O)([O-])[O-]" />
+      <Property key="SystematicName" value="3-methylbut-2-en-1-yl diphosphate" />
+    </DataNode>
+    <DataNode elementId="PPI" textLabel="pyrophosphate" type="Metabolite">
+      <Xref identifier="XPPKVPWEQAFLFU-UHFFFAOYSA-K" dataSource="InChIKey" />
+      <Graphics centerX="1015.701416015625" centerY="924.5130004882812" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PPI" />
+      <Property key="AlternativeId_Chebi" value="33019" />
+      <Property key="AlternativeId_Pubchem" value="4097574" />
+      <Property key="AlternativeId_Bigg" value="ppi" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC33019" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00250" />
+      <Property key="AlternativeId_Drugbank" value="DB04160" />
+      <Property key="AlternativeId_Chemspider" value="996" />
+      <Property key="AlternativeId_LigandCpd" value="C00013" />
+      <Property key="AlternativeId_Cas" value="2466-09-3" />
+      <Property key="Synonym_1" value="PPi" />
+      <Property key="Synonym_2" value="PP" />
+      <Property key="Synonym_3" value="pyrophosphate" />
+      <Property key="ChemicalFormula" value="(H 1) (O 7) (P 2)" />
+      <Property key="AtomCharges" value="(3 -1), (5 -1), (4 -1)" />
+      <Property key="Gibbs0" value="-473.4674" />
+      <Property key="Inchi" value="InChI=1S/H4O7P2/c1-8(2,3)7-9(4,5)6/h(H2,1,2,3)(H2,4,5,6)/p-3" />
+      <Property key="InchiKey" value="InChIKey=XPPKVPWEQAFLFU-UHFFFAOYSA-K" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="174.951" />
+      <Property key="MonoisotopicMw" value="177.9432255031" />
+      <Property key="NonStandardInchi" value="InChI=1S/H4O7P2/c1-8(2,3)7-9(4,5)6/h(H2,1,2,3)(H2,4,5,6)/p-3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-8724, REG0-8483, REG-12877, REG-9488, REG-12060, REG0-8756, REG-13025, REG-9934, REG-8081, REG0-9977, REG-13335, REG0-8836, REG0-7229, REG0-7537, REG0-8365, REG0-8912, REG-11188, REG-8675, REG0-8919, REG0-8467, REG0-7304, REG-7117, REG-8030, REG-9450" />
+      <Property key="Smiles" value="O=P(O)(OP([O-])([O-])=O)[O-]" />
+      <CitationRef elementRef="citation_PUB_18493048" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="1645.0" y="50.0" elementRef="G-14656" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="621.6949462890625" y="880.8719482421875" elementRef="MONOMER-16830" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-12646">
+      <Xref identifier="RXN-12646" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-12646_start" x="898.2095947265625" y="806.0061645507812" elementRef="CPD-4211" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-12646_end" arrowHead="Conversion" x="652.624267578125" y="690.3588256835938" elementRef="CPD-13614" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-12646_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-12646" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-6913" />
+      <Property key="ReactionEquation" value="CPD-4211 + WATER =&gt; CPD-13614 + PPI" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXN-19578, ENZRXN-19575" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="Gibbs0" value="-7.072998" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <CitationRef elementRef="citation_PUB_11097185" />
+    </Interaction>
+    <Interaction elementId="RXN-12646_ENZRXN-19578">
+      <Waypoints>
+        <Point elementId="RXN-12646_ENZRXN-19578_start" x="666.6949462890625" y="893.3719482421875" elementRef="MONOMER-16830" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-12646_ENZRXN-19578_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-12646_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-12646_ENZRXN-19575">
+      <Waypoints>
+        <Point elementId="RXN-12646_ENZRXN-19575_start" x="100.0" y="1562.5" elementRef="MONOMER-16827" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-12646_ENZRXN-19575_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-12646_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-12646_anchor_reactant_1">
+      <Xref identifier="RXN-12646" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-12646_anchor_reactant_start_1" x="1087.915283203125" y="730.8361206054688" elementRef="WATER" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-12646_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-12646_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-12646_anchor_product_1">
+      <Xref identifier="RXN-12646" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-12646_anchor_product_start_1" x="0" y="0" elementRef="RXN-12646_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-12646_anchor_product_end_1" arrowHead="Conversion" x="970.701416015625" y="924.5130004882812" elementRef="PPI" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_PUB_18493048">
+      <Xref identifier="18493048" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_11469599">
+      <Xref identifier="11469599" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_21504898">
+      <Xref identifier="21504898" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_16668590">
+      <Xref identifier="16668590" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_11097185">
+      <Xref identifier="11097185" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_12114581">
+      <Xref identifier="12114581" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

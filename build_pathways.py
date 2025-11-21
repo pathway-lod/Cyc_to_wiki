@@ -87,13 +87,15 @@ def get_reaction_info(builder, reaction_id):
 
 def build_single_reaction_pathway(builder, reaction_id):
     """Build a pathway object containing a single reaction."""
+    from scripts.build_functions.build_pathway_data_nodes import convert_to_latin_name
+
     # Get reaction information
     reaction_record = get_reaction_info(builder, reaction_id)
 
     # Get reaction name and EC number
     reaction_name = reaction_id
     ec_number = None
-    organism = "TAX-3702"  # Default to Arabidopsis
+    organism = " "
 
     if reaction_record:
         reaction_name = reaction_record.get('COMMON-NAME', reaction_id)
@@ -110,10 +112,10 @@ def build_single_reaction_pathway(builder, reaction_id):
                     ec_number = db_id
                     break
 
-        # Try to get organism info
+        # Try to get organism info and convert to Latin name
         species = reaction_record.get('SPECIES', '')
         if species:
-            organism = species
+            organism = convert_to_latin_name(str(species))
 
     # Create pathway title
     if ec_number:
@@ -132,7 +134,7 @@ def build_single_reaction_pathway(builder, reaction_id):
         title=title,
         organism=organism,
         source="PlantCyc",
-        version=None,
+        version=builder.version,
         license=None,
         xref=xref,
         description=f"Single reaction view for {reaction_id}: {reaction_name}",
@@ -358,7 +360,7 @@ def main():
         sys.exit(1)
 
     # Create output directory with timestamp
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
     output_dir = os.path.join(output_base_dir, f"biocyc_pathways_{timestamp}")
     individual_pathways_dir = os.path.join(output_dir, "individual_pathways")
     os.makedirs(individual_pathways_dir, exist_ok=True)
@@ -375,10 +377,38 @@ def main():
     print(f"Output directory: {output_dir}")
     print(f"Include single reactions: {include_reactions}")
     print(f"Layout type: {layout_type}")
+    print(f"Version: {timestamp}")
     print("="*60 + "\n")
 
-    # Initialize builder with BioCyc data files
-    print("Initializing pathway builder...")
+    #Build organism mappings from BioCyc classes.dat
+    print("="*60)
+    print("BUILDING ORGANISM MAPPINGS")
+    print("="*60)
+
+    from scripts.utils.build_org_mapping import parse_species_dat
+
+    org_mapping_output = "org_id_mapping_v2.tsv"
+    all_mapping = {}
+
+    # Parse classes.dat for both ORG-ID and TAX-ID entries
+    classes_dat = os.path.join(data_dir, "classes.dat")
+    if os.path.exists(classes_dat):
+        print(f"  Reading {classes_dat}...")
+        all_mapping.update(parse_species_dat(classes_dat))
+
+    # Also parse species.dat
+    species_dat = os.path.join(data_dir, "species.dat")
+    if os.path.exists(species_dat):
+        print(f"  Reading {species_dat}...")
+        all_mapping.update(parse_species_dat(species_dat))
+
+    # Write mapping to TSV file
+    print(f"\n  Writing organism mapping to {org_mapping_output}...")
+    with open(org_mapping_output, 'w', encoding='utf-8') as f:
+        f.write("org_id\tlatin_name\tncbi_id\n")
+        for org_id, info in sorted(all_mapping.items()):
+            f.write(f"{org_id}\t{info['latin_name']}\t{info['ncbi_id']}\n")
+
     builder = CompletePathwayBuilderWithGenes(
         compounds_file=os.path.join(data_dir, "compounds.dat"),
         genes_file=os.path.join(data_dir, "genes.dat"),
@@ -386,7 +416,8 @@ def main():
         reactions_file=os.path.join(data_dir, "reactions.dat"),
         pathways_file=os.path.join(data_dir, "pathways.dat"),
         pubs_file=os.path.join(data_dir, "pubs.dat"),
-        regulation_file=os.path.join(data_dir, "regulation.dat")
+        regulation_file=os.path.join(data_dir, "regulation.dat"),
+        version=timestamp
     )
 
     # Handle specific pathway build

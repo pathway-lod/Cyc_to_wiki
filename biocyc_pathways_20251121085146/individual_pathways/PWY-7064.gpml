@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="3-amino-3-phenylpropanoyl-CoA biosynthesis" organism="Taxus cuspidata, Taxus chinensis" source="PlantCyc" version="20251121085146">
+  <Description>The assembly of the 13C-side chain of taxol is carried out in 5 steps, the first one catalyzing the intramolecular transport of the amino group and the proximate interchange of the 3S-hydrogen from 2S-&amp;alpha;-phenylalanine (|FRAME:PHE L-phenylalanine|) to form 3R-&amp;beta;-phenylalanine. The following reaction is most likely carried out by a CoA-ligase activating 3R-&amp;beta;-phenylalanine to the corresponding CoA ester but the catalyzing enzyme has not yet been identified. The |FRAME:CPD-9207 (3&lt;i&gt;R&lt;/i&gt;)-3-amino-3-phenylpropanoyl-CoA| is transferred to baccatin III in the next step where the resulting N-debenzoyl-2&apos;-deoxytaxol is 2&apos;-hydroxylated and subsequently acylated to form taxol (see |FRAME:PWY-5660 taxol biosynthesis|) |CITS:[Croteau06]|. The 13C-side chain is of pharmacological importance as its binding to &amp;beta;-tubulin efficiently disrupts mitosis and hence contributes significantly to the approved antitumor activity of taxol (paclitaxel), the currently most potent anticancer drug on the market |CITS:[Malik11]|. The first committed reaction in forming the 13C-side chain of taxol is the isomerization of (S)-&amp;alpha;-phenylalanine to the (R)-&amp;beta;-isomer which is catalyzed by phenylalanine aminomutase. The enzymes described so far for this reaction are independent of cofactors and act through 4-methylideneimidazole-5-one (MIO) which is expected to be the catalyst within the active site |CITS:[15494399]| |CITS:[15878763]|. The underlying stereochemical mechanism of removal and interchange of the 3S-hydrogen and the amino group with retention of configuration was just recently clarified. It was shown that the active site also forms a complex with E-cinnamate which acts both as substrate and intermediate and is actively involved in the the mode of &amp;beta;-H and NH&lt;sub&gt;2&lt;/sub&gt; exchange |CITS:[21361343]|.</Description>
+  <Authors>
+    <Author name="O-28" />
+    <Author name="hartmut" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-7064" />
+  <Property key="Type" value="Cofactor-Biosynthesis" />
+  <Property key="ReactionCount" value="2" />
+  <Property key="ReactionIDs" value="RXN-13485, RXN-13484" />
+  <Property key="PredecessorCount" value="2" />
+  <Property key="PrimaryCompoundCount" value="2" />
+  <Property key="PathwayLinks" value="(CPD-9207 PWY-5660), (PHE (PWY-3462 . :INCOMING))" />
+  <Property key="Organism" value="Taxus cuspidata, Taxus chinensis" />
+  <Property key="TaxonomicRange_1" value="Fungi" />
+  <Property key="TaxonomicRange_2" value="Pinidae" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_PUB_CROTEAU06" />
+  <CitationRef elementRef="citation_PUB_MALIK11" />
+  <CitationRef elementRef="citation_PUB_15494399" />
+  <CitationRef elementRef="citation_PUB_15878763" />
+  <CitationRef elementRef="citation_PUB_21361343" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="MONOMER-17466" textLabel="MONOMER-17466" type="Protein">
+      <Xref identifier="Q6GZ04" dataSource="uniprot" />
+      <Graphics centerX="1549.853515625" centerY="958.4120483398438" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="O-28, hartmut">An annotated EST library of &lt;i&gt;Taxus cuspidate&lt;/i&gt; was screened for phenylalanine lyase (PAL)-like sequences; one of them (PAL1981) was cloned and heterogously expressed in &lt;i&gt;E. coli&lt;/i&gt;. The recombinant protein was capable to catalyze the isomerization of 2S-&amp;alpha;-phenylalanine to 3R-&amp;beta;-phenylalanine while retaining configuration and the 3R-hydrogen at C-3. The enzyme also catalyzed the enantio-specific reverse reaction with comparable efficiency. The phenylalanine aminomutase did not require any cofactors; the reaction was autocatalytically achieved through a 4-methylideneimidazol-5-one (MIO) functional group within the active site |CITS:[15494399]|. The observed catalytic reaction of the recombinant enzyme is in agreement with the described reaction mechanism of the native enzyme in &lt;i&gt;Taxus brevifolia&lt;/i&gt; |CITS:[Walker98]|.</Comment>
+      <Property key="UniqueID" value="MONOMER-17466" />
+      <Property key="AlternativeId_Uniprot" value="Q6GZ04" />
+      <Property key="AlternativeId_Pid" value="AAT47186.1" />
+      <Property key="Catalyzes" value="RXN-20514" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="MolecularWeightExp" value="80." />
+      <Property key="MolecularWeightKd" value="76.53, 80." />
+      <Property key="MolecularWeightSeq" value="76.53" />
+      <Property key="Species" value="TAX-99806" />
+      <CitationRef elementRef="citation_PUB_15494399" />
+      <CitationRef elementRef="citation_PUB_WALKER98" />
+    </DataNode>
+    <DataNode elementId="CO-A" textLabel="coenzyme A" type="Metabolite">
+      <Xref identifier="RGJOEKWQDUBAIZ-IBOSZNHHSA-J" dataSource="InChIKey" />
+      <Graphics centerX="1187.770751953125" centerY="1550.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">Coenzyme A (CoA) is a ubiquitous compound found in archaea, bacteria, plants, and animals. It is a common acyl carrier in prokaryotic and eukaryotic cells, and is required for a multitude of reactions for both biosynthetic and degradative pathways, including the oxidation of fatty acids, carbohydrates, and amino acids |CITS: [16415216]|. While the name &quot;coenzyme A&quot; is well established, the correct name for the function of the compound in enzymatic reactions is &quot;cosubstrate&quot;.</Comment>
+      <Property key="UniqueID" value="CO-A" />
+      <Property key="AlternativeId_Metanetx" value="MNXM727276" />
+      <Property key="AlternativeId_Refmet" value="Coenzyme A" />
+      <Property key="AlternativeId_Bigg" value="33502" />
+      <Property key="AlternativeId_Pubchem" value="25113190" />
+      <Property key="AlternativeId_Wikipedia" value="Coenzyme_a" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57287" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01423" />
+      <Property key="AlternativeId_Chebi" value="57287" />
+      <Property key="AlternativeId_Knapsack" value="C00007258" />
+      <Property key="AlternativeId_Cas" value="85-61-0" />
+      <Property key="AlternativeId_LigandCpd" value="C00010" />
+      <Property key="Synonym_1" value="Co-A-SH" />
+      <Property key="Synonym_2" value="CoA" />
+      <Property key="Synonym_3" value="co-A-SH" />
+      <Property key="Synonym_4" value="co-enzyme-A" />
+      <Property key="Synonym_5" value="co-A" />
+      <Property key="Synonym_6" value="HS-CoA" />
+      <Property key="ChemicalFormula" value="(C 21) (H 32) (N 7) (O 16) (P 3) (S 1)" />
+      <Property key="AtomCharges" value="(39 -1), (37 -1), (35 -1), (33 -1)" />
+      <Property key="Gibbs0" value="-493.56613" />
+      <Property key="Inchi" value="InChI=1S/C21H36N7O16P3S/c1-21(2,16(31)19(32)24-4-3-12(29)23-5-6-48)8-41-47(38,39)44-46(36,37)40-7-11-15(43-45(33,34)35)14(30)20(42-11)28-10-27-13-17(22)25-9-26-18(13)28/h9-11,14-16,20,30-31,48H,3-8H2,1-2H3,(H,23,29)(H,24,32)(H,36,37)(H,38,39)(H2,22,25,26)(H2,33,34,35)/p-4/t11-,14-,15-,16+,20-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=RGJOEKWQDUBAIZ-IBOSZNHHSA-J" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="763.502" />
+      <Property key="MonoisotopicMw" value="767.1152083656" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-10749, REG0-9520, REG0-8343, REG0-8346, REG-14465, REG-13932, REG-13248, REG-8110, REG-10174, REG-7984, REG-12031, REG-12173, REG0-7083, REG0-8249, REG0-7409, REG0-7217, REG-8668, REG-7144, REG-7161, REG-6744, REG-6205, REG-6393" />
+      <Property key="Smiles" value="CC(C)(COP([O-])(=O)OP(OC[C@H]3(O[C@@H](N1(C2(\N=C/N=C(C(\N=C/1)=2)/N)))[C@H](O)[C@H](OP([O-])(=O)[O-])3))(=O)[O-])[C@@H](O)C(=O)NCCC(=O)NCCS" />
+      <CitationRef elementRef="citation_PUB_16415216" />
+    </DataNode>
+    <DataNode elementId="CPD-9207" textLabel="(3R)-3-amino-3-phenylpropanoyl-CoA" type="Metabolite">
+      <Xref identifier="SUUAAMNYLVZHRN-JOQFVOQGSA-K" dataSource="InChIKey" />
+      <Graphics centerX="863.1161499023438" centerY="50.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>This compound was synthesized to assess the substrate specificity of O-(3-amino-3-phenylalanoyl) transferase |CITS: [12232048]|.</Comment>
+      <Property key="UniqueID" value="CPD-9207" />
+      <Property key="AlternativeId_Metanetx" value="MNXM6006" />
+      <Property key="AlternativeId_LigandCpd" value="C16833" />
+      <Property key="AlternativeId_Chebi" value="79188" />
+      <Property key="AlternativeId_Pubchem" value="86289809" />
+      <Property key="Synonym_1" value="(3&lt;i&gt;R&lt;/i&gt;)-&amp;beta;-phenylalanoyl-CoA" />
+      <Property key="Synonym_2" value="&amp;beta;-phenylalanoyl-CoA ester" />
+      <Property key="ChemicalFormula" value="(C 30) (H 42) (N 8) (O 17) (P 3) (S 1)" />
+      <Property key="AtomCharges" value="(46 -1), (44 -1), (49 -1), (47 -1), (31 1)" />
+      <Property key="Gibbs0" value="-386.81042" />
+      <Property key="Inchi" value="InChI=1S/C30H45N8O17P3S/c1-30(2,25(42)28(43)34-9-8-20(39)33-10-11-59-21(40)12-18(31)17-6-4-3-5-7-17)14-52-58(49,50)55-57(47,48)51-13-19-24(54-56(44,45)46)23(41)29(53-19)38-16-37-22-26(32)35-15-36-27(22)38/h3-7,15-16,18-19,23-25,29,41-42H,8-14,31H2,1-2H3,(H,33,39)(H,34,43)(H,47,48)(H,49,50)(H2,32,35,36)(H2,44,45,46)/p-3/t18-,19-,23-,24-,25+,29-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=SUUAAMNYLVZHRN-JOQFVOQGSA-K" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="911.686" />
+      <Property key="MonoisotopicMw" value="914.1836222818" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC(C)([C@@H](O)C(=O)NCCC(=O)NCCSC(C[C@@H]([NH3+])C1(\C=C/C=C\C=1))=O)COP(=O)(OP(=O)(OC[C@@H]2([C@@H](OP([O-])(=O)[O-])[C@@H](O)[C@@H](O2)N3(C4(\N=C/N=C(C(\N=C/3)=4)/N))))[O-])[O-]" />
+      <Property key="Superatoms" value="COA-GROUP" />
+      <CitationRef elementRef="citation_PUB_12232048" />
+    </DataNode>
+    <DataNode elementId="ATP" textLabel="ATP" type="Metabolite">
+      <Xref identifier="ZKHQWZAMYRWXGA-KQYNXXCUSA-J" dataSource="InChIKey" />
+      <Graphics centerX="804.9585571289062" centerY="603.5003051757812" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ATP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004261765" />
+      <Property key="AlternativeId_Mediadb" value="compounds/2/" />
+      <Property key="AlternativeId_Seed" value="cpd00002" />
+      <Property key="AlternativeId_Metanetx" value="MNXM3" />
+      <Property key="AlternativeId_Refmet" value="ATP" />
+      <Property key="AlternativeId_Bigg" value="atp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC30616" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00538" />
+      <Property key="AlternativeId_Chemspider" value="4574455" />
+      <Property key="AlternativeId_Chebi" value="30616" />
+      <Property key="AlternativeId_Pubchem" value="5461108" />
+      <Property key="AlternativeId_LigandCpd" value="C00002" />
+      <Property key="AlternativeId_Cas" value="56-65-5" />
+      <Property key="Synonym_1" value="adenylpyrophosphate" />
+      <Property key="Synonym_2" value="adenosine-triphosphate" />
+      <Property key="Synonym_3" value="adenosine-5&apos;-triphosphate" />
+      <Property key="ChemicalFormula" value="(C 10) (H 12) (N 5) (O 13) (P 3)" />
+      <Property key="AtomCharges" value="(20 -1), (19 -1), (24 -1), (22 -1)" />
+      <Property key="CofactorsOf" value="ENZRXN-12212" />
+      <Property key="Gibbs0" value="-553.6995" />
+      <Property key="Inchi" value="InChI=1S/C10H16N5O13P3/c11-8-5-9(13-2-12-8)15(3-14-5)10-7(17)6(16)4(26-10)1-25-30(21,22)28-31(23,24)27-29(18,19)20/h2-4,6-7,10,16-17H,1H2,(H,21,22)(H,23,24)(H2,11,12,13)(H2,18,19,20)/p-4/t4-,6-,7-,10-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=ZKHQWZAMYRWXGA-KQYNXXCUSA-J" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="503.152" />
+      <Property key="MonoisotopicMw" value="506.99574515689994" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-12909, REG-12890, REG-14488, REG-9772, REG-14329, REG0-6781, REG0-7497, REG0-7707, REG-13176, REG-14419, REG-14422, REG0-8315, REG0-8212, REG-10429, REG0-7195, REG-8742, REG0-8749, REG-10985, REG-11599, REG0-8040, REG0-8166, REG0-7200, REG-9547, REG0-10640, REG-12493, REG0-6737, REG-12901, REG0-8975, REG0-8830, REG-7496, REG-6229, REG0-7802, REG-9667, REG-8008, REG0-8732, REG-8477, REG-6695, REG-6569, REG-6589, REG-6588, REG0-6967, REG-6554, REG-8022, REG-5951, REG-5950, REG-12145, REG-12092, REG-5953, REG-11615, REG-11617, REG-7073, REG-6927, REG-6086" />
+      <Property key="Smiles" value="C(OP(=O)([O-])OP(=O)([O-])OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3)" />
+    </DataNode>
+    <DataNode elementId="AMP" textLabel="AMP" type="Metabolite">
+      <Xref identifier="UDMBCSSLTHHNCD-KQYNXXCUSA-L" dataSource="InChIKey" />
+      <Graphics centerX="1600.0" centerY="360.1690673828125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AMP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000003860156" />
+      <Property key="AlternativeId_Refmet" value="AMP" />
+      <Property key="AlternativeId_Bigg" value="amp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC456215" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00045" />
+      <Property key="AlternativeId_Chemspider" value="10239183" />
+      <Property key="AlternativeId_Chebi" value="456215" />
+      <Property key="AlternativeId_Pubchem" value="15938965" />
+      <Property key="AlternativeId_LigandCpd" value="C00020" />
+      <Property key="AlternativeId_Cas" value="61-19-8" />
+      <Property key="AlternativeId_Nci" value="20264" />
+      <Property key="Synonym_1" value="5&apos;-AMP" />
+      <Property key="Synonym_2" value="adenosine-monophosphate" />
+      <Property key="Synonym_3" value="adenylic acid" />
+      <Property key="Synonym_4" value="adenosine 5&apos;-phosphate" />
+      <Property key="Synonym_5" value="adenosine 5&apos;-monophosphate" />
+      <Property key="Synonym_6" value="adenylate" />
+      <Property key="Synonym_7" value="5&apos;-adenylic acid" />
+      <Property key="Synonym_8" value="5&apos;-adenosine monophosphate" />
+      <Property key="Synonym_9" value="adenine ribotide" />
+      <Property key="ChemicalFormula" value="(C 10) (H 12) (N 5) (O 7) (P 1)" />
+      <Property key="AtomCharges" value="(20 -1), (19 -1)" />
+      <Property key="Gibbs0" value="-135.89479" />
+      <Property key="Inchi" value="InChI=1S/C10H14N5O7P/c11-8-5-9(13-2-12-8)15(3-14-5)10-7(17)6(16)4(22-10)1-21-23(18,19)20/h2-4,6-7,10,16-17H,1H2,(H2,11,12,13)(H2,18,19,20)/p-2/t4-,6-,7-,10-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=UDMBCSSLTHHNCD-KQYNXXCUSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="345.208" />
+      <Property key="MonoisotopicMw" value="347.0630843401" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-15683, REG-9765, REG-14330, REG0-7202, REG-14235, REG-14236, REG0-8379, REG-14416, REG-14425, REG0-6727, REG-12062, REG-8740, REG-8449, REG0-8757, REG-10983, REG-11597, REG0-8715, REG-9775, REG0-7230, REG0-9061, REG0-8911, REG0-8145, REG0-8148, REG0-8901, REG-6551, REG0-7067, REG0-9117, REG0-6999, REG-11627" />
+      <Property key="Smiles" value="C(OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3)" />
+    </DataNode>
+    <DataNode elementId="CPD-14474" textLabel="(3R)-β-phenylalanine" type="Metabolite">
+      <Xref identifier="UJOYFRCOTPUKAK-MRVPVSSYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="909.2780151367188" centerY="796.033447265625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-14474" />
+      <Property key="AlternativeId_Metanetx" value="MNXM97137" />
+      <Property key="AlternativeId_Chebi" value="67158" />
+      <Property key="AlternativeId_Pubchem" value="6921434" />
+      <Property key="AlternativeId_LigandCpd" value="C20487" />
+      <Property key="Synonym_1" value="L-&amp;beta;-phenylalanine" />
+      <Property key="Synonym_2" value="(&lt;i&gt;R&lt;/i&gt;)-&amp;beta;-phenylalanine" />
+      <Property key="ChemicalFormula" value="(C 9) (H 11) (N 1) (O 2)" />
+      <Property key="AtomCharges" value="(10 1), (11 -1)" />
+      <Property key="Gibbs0" value="61.93232" />
+      <Property key="Inchi" value="InChI=1S/C9H11NO2/c10-8(6-9(11)12)7-4-2-1-3-5-7/h1-5,8H,6,10H2,(H,11,12)/t8-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=UJOYFRCOTPUKAK-MRVPVSSYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="165.191" />
+      <Property key="MonoisotopicMw" value="165.0789786025" />
+      <Property key="NonStandardInchi" value="InChI=1S/C9H11NO2/c10-8(6-9(11)12)7-4-2-1-3-5-7/h1-5,8H,6,10H2,(H,11,12)/t8-/m1/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C(=O)([O-])C[C@@H]([NH3+])C1(\C=C/C=C\C=1)" />
+    </DataNode>
+    <DataNode elementId="PHE" textLabel="L-phenylalanine" type="Metabolite">
+      <Xref identifier="COLNVLDHVKWLRT-QMMMGPOBSA-N" dataSource="InChIKey" />
+      <Graphics centerX="100.0" centerY="539.9154663085938" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PHE" />
+      <Property key="AlternativeId_Mediadb" value="compounds/77/" />
+      <Property key="AlternativeId_Metanetx" value="MNXM97" />
+      <Property key="AlternativeId_Refmet" value="Phenylalanine" />
+      <Property key="AlternativeId_Bigg" value="phe__L" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC58095" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00159" />
+      <Property key="AlternativeId_Chebi" value="58095" />
+      <Property key="AlternativeId_Pubchem" value="6925665" />
+      <Property key="AlternativeId_LigandCpd" value="C00079" />
+      <Property key="AlternativeId_Cas" value="63-91-2" />
+      <Property key="Synonym_1" value="2S-&amp;alpha;-phenylalanine" />
+      <Property key="Synonym_2" value="F" />
+      <Property key="Synonym_3" value="endophenyl" />
+      <Property key="Synonym_4" value="phenylalanine" />
+      <Property key="Synonym_5" value="phe" />
+      <Property key="Synonym_6" value="L-phe" />
+      <Property key="ChemicalFormula" value="(C 9) (H 11) (N 1) (O 2)" />
+      <Property key="AbbrevName" value="phe" />
+      <Property key="AtomCharges" value="(12 -1), (10 1)" />
+      <Property key="Gibbs0" value="63.48232" />
+      <Property key="Inchi" value="InChI=1S/C9H11NO2/c10-8(9(11)12)6-7-4-2-1-3-5-7/h1-5,8H,6,10H2,(H,11,12)/t8-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=COLNVLDHVKWLRT-QMMMGPOBSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="165.191" />
+      <Property key="MonoisotopicMw" value="165.0789786025" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-9334, REG-9513, REG-9446, REG-8104" />
+      <Property key="Smiles" value="C([O-])(=O)[C@@H]([NH3+])CC1(\C=C/C=C\C=1)" />
+    </DataNode>
+    <DataNode elementId="PPI" textLabel="pyrophosphate" type="Metabolite">
+      <Xref identifier="XPPKVPWEQAFLFU-UHFFFAOYSA-K" dataSource="InChIKey" />
+      <Graphics centerX="879.8489990234375" centerY="1007.4013671875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PPI" />
+      <Property key="AlternativeId_Chebi" value="33019" />
+      <Property key="AlternativeId_Pubchem" value="4097574" />
+      <Property key="AlternativeId_Bigg" value="ppi" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC33019" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00250" />
+      <Property key="AlternativeId_Drugbank" value="DB04160" />
+      <Property key="AlternativeId_Chemspider" value="996" />
+      <Property key="AlternativeId_LigandCpd" value="C00013" />
+      <Property key="AlternativeId_Cas" value="2466-09-3" />
+      <Property key="Synonym_1" value="PPi" />
+      <Property key="Synonym_2" value="PP" />
+      <Property key="Synonym_3" value="pyrophosphate" />
+      <Property key="ChemicalFormula" value="(H 1) (O 7) (P 2)" />
+      <Property key="AtomCharges" value="(3 -1), (5 -1), (4 -1)" />
+      <Property key="Gibbs0" value="-473.4674" />
+      <Property key="Inchi" value="InChI=1S/H4O7P2/c1-8(2,3)7-9(4,5)6/h(H2,1,2,3)(H2,4,5,6)/p-3" />
+      <Property key="InchiKey" value="InChIKey=XPPKVPWEQAFLFU-UHFFFAOYSA-K" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="174.951" />
+      <Property key="MonoisotopicMw" value="177.9432255031" />
+      <Property key="NonStandardInchi" value="InChI=1S/H4O7P2/c1-8(2,3)7-9(4,5)6/h(H2,1,2,3)(H2,4,5,6)/p-3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-8724, REG0-8483, REG-12877, REG-9488, REG-12060, REG0-8756, REG-13025, REG-9934, REG-8081, REG0-9977, REG-13335, REG0-8836, REG0-7229, REG0-7537, REG0-8365, REG0-8912, REG-11188, REG-8675, REG0-8919, REG0-8467, REG0-7304, REG-7117, REG-8030, REG-9450" />
+      <Property key="Smiles" value="O=P(O)(OP([O-])([O-])=O)[O-]" />
+      <CitationRef elementRef="citation_PUB_18493048" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="RXN-13485">
+      <Xref identifier="EC-6.2.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-13485_start" x="954.2780151367188" y="796.033447265625" elementRef="CPD-14474" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-13485_end" arrowHead="Conversion" x="818.1161499023438" y="50.0" elementRef="CPD-9207" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-13485_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-13485" />
+      <Property key="ReactionName" value="phenylalanine CoA ligase" />
+      <Property key="EC_Number" value="EC-6.2.1" />
+      <Property key="Pathways" value="PWY-5660, PWY-7064" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="CPD-14474 + ATP + CO-A =&gt; CPD-9207 + AMP + PPI" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="AtomMappings" value="(:NO-HYDROGEN-ENCODING (0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 87 86 85 17 18 82 84 20 21 88 83 90 22 89 24 23 30 31 32 33 35 36 37 38 41 42 44 45 46 47 48 49 50 51 52 54 55 56 57 58 59 60 61 63 64 65 68 66 67 70 69 72 71 73 74 75 76 77 78 79 80 81 25 27 26 29 28 34 39 40 43 53 19 62) (((AMP 0 22) (CPD-9207 23 81) (PPI 82 90)) ((ATP 0 30) (CO-A 31 78) (CPD-14474 79 90))))" />
+      <Property key="Gibbs0" value="-10.839233" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-13485_anchor_reactant_1">
+      <Xref identifier="EC-6.2.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-13485_anchor_reactant_start_1" x="849.9585571289062" y="603.5003051757812" elementRef="ATP" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-13485_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-13485_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-13485_anchor_reactant_2">
+      <Xref identifier="EC-6.2.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-13485_anchor_reactant_start_2" x="1232.770751953125" y="1550.0" elementRef="CO-A" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-13485_anchor_reactant_end_2" x="0" y="0" elementRef="RXN-13485_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-13485_anchor_product_1">
+      <Xref identifier="EC-6.2.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-13485_anchor_product_start_1" x="0" y="0" elementRef="RXN-13485_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-13485_anchor_product_end_1" arrowHead="Conversion" x="1555.0" y="360.1690673828125" elementRef="AMP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-13485_anchor_product_2">
+      <Xref identifier="EC-6.2.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-13485_anchor_product_start_2" x="0" y="0" elementRef="RXN-13485_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-13485_anchor_product_end_2" arrowHead="Conversion" x="834.8489990234375" y="1007.4013671875" elementRef="PPI" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-13484">
+      <Xref identifier="EC-5.4.3.10" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-13484_start" x="145.0" y="539.9154663085938" elementRef="PHE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-13484_end" arrowHead="Conversion" x="864.2780151367188" y="796.033447265625" elementRef="CPD-14474" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-13484_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-13484" />
+      <Property key="EC_Number" value="EC-5.4.3.10" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-5660, PWY-7064" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="PHE =&gt; CPD-14474" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXN-20515, ENZRXN-20514" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="ReactionTypes" value="Composite-Reactions, Small-Molecule-Reactions" />
+      <Property key="AtomMappings" value="(:NO-HYDROGEN-ENCODING (0 2 1 4 3 7 6 5 8 9 10 11) (((CPD-14474 0 11)) ((PHE 0 11))))" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-1.5499992" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="ReactionList" value="PHENYLALANINE-AMMONIA-LYASE-RXN, RXN-18527" />
+      <CitationRef elementRef="citation_PUB_15494399" />
+      <CitationRef elementRef="citation_PUB_15878763" />
+    </Interaction>
+    <Interaction elementId="RXN-13484_ENZRXN-20514">
+      <Waypoints>
+        <Point elementId="RXN-13484_ENZRXN-20514_start" x="1549.853515625" y="970.9120483398438" elementRef="MONOMER-17466" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-13484_ENZRXN-20514_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-13484_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_PUB_CROTEAU06">
+      <Xref identifier="PUB-CROTEAU06 | Taxol biosynthesis and molecular genetics (Croteau R, Ketchum REB, Long RM et al., 2006)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_PUB_15878763">
+      <Xref identifier="15878763" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_15494399">
+      <Xref identifier="15494399" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_MALIK11">
+      <Xref identifier="PUB-MALIK11 | Production of the anticancer drug taxol in Taxus baccata suspension cultures:
+A review
+ (Malik S, Cusido RM, Mirjalili MH et al., 2011)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_PUB_21361343">
+      <Xref identifier="21361343" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_18493048">
+      <Xref identifier="18493048" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_16415216">
+      <Xref identifier="16415216" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_12232048">
+      <Xref identifier="12232048" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_WALKER98">
+      <Xref identifier="PUB-WALKER98 | Detection of a Phenylalanine Aminomutase in Cell-Free Extracts of &lt;i&gt;Taxus brevifolia&lt;/i&gt; and Prelim... (Walker KD, Floss HG, 1998)" dataSource="BioCyc" />
+    </Citation>
+  </Citations>
+</Pathway>

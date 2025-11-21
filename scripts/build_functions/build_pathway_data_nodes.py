@@ -7,6 +7,60 @@ from scripts.utils.HTML_cleaner import clean_text_label
 from scripts.object2gmpl.gpml_writer import GPMLWriter
 import uuid
 import re
+from pathlib import Path
+
+
+# Organism mapping cache
+_ORGANISM_MAPPING = None
+
+def load_organism_mapping():
+    """Load organism mapping from org_id_mapping_v2.tsv."""
+    global _ORGANISM_MAPPING
+
+    if _ORGANISM_MAPPING is not None:
+        return _ORGANISM_MAPPING
+
+    _ORGANISM_MAPPING = {}
+
+    # Load mapping file created at pipeline start
+    mapping_file = Path(__file__).parent.parent.parent / 'org_id_mapping_v2.tsv'
+    if mapping_file.exists():
+        with open(mapping_file, 'r', encoding='utf-8') as f:
+            for line in f:
+                if line.startswith('org_id'):  # Skip header
+                    continue
+                parts = line.strip().split('\t')
+                if len(parts) >= 2:
+                    organism_id = parts[0]
+                    latin_name = parts[1]
+                    if latin_name:
+                        _ORGANISM_MAPPING[organism_id] = latin_name
+
+    return _ORGANISM_MAPPING
+
+
+def convert_to_latin_name(organism_id):
+    """
+    Convert ORG-ID or TAX-ID to Latin name.
+
+    Args:
+        organism_id: String like 'ORG-5993' or 'TAX-3702'
+
+    Returns:
+        str: Latin name if found, otherwise original organism_id
+    """
+    if not organism_id:
+        return organism_id
+
+    mapping = load_organism_mapping()
+    organism_id = str(organism_id).strip()
+
+    # Direct lookup (handles both ORG-XXXX and TAX-XXXX)
+    if organism_id in mapping:
+        return mapping[organism_id]
+
+    # Return original if not found
+    return organism_id
 
 
 def parse_pathway_dblinks(dblinks):
@@ -67,7 +121,8 @@ def get_pathway_xref(db_refs):
 
 def parse_taxonomic_info(record):
     """
-    Extract organism and taxonomic information from pathway record
+    Extract organism and taxonomic information from pathway record.
+    Converts ORG-IDs and TAX-IDs to Latin names.
 
     Args:
         record: Pathway record dictionary
@@ -81,16 +136,19 @@ def parse_taxonomic_info(record):
     if 'SPECIES' in record:
         species = record['SPECIES']
         if isinstance(species, list):
-            organism = ', '.join(str(s) for s in species)
+            # Convert each species ID to Latin name
+            converted_species = [convert_to_latin_name(str(s)) for s in species]
+            organism = ', '.join(converted_species)
         else:
-            organism = str(species)
+            organism = convert_to_latin_name(str(species))
 
     if 'TAXONOMIC-RANGE' in record:
         tax_ranges = record['TAXONOMIC-RANGE']
         if isinstance(tax_ranges, list):
-            taxonomic_ranges = [str(t) for t in tax_ranges]
+            # Convert each taxonomic range ID to Latin name
+            taxonomic_ranges = [convert_to_latin_name(str(t)) for t in tax_ranges]
         else:
-            taxonomic_ranges = [str(tax_ranges)]
+            taxonomic_ranges = [convert_to_latin_name(str(tax_ranges))]
 
     return organism, taxonomic_ranges
 
@@ -297,13 +355,14 @@ def create_pathway_citations_from_record(record, citation_manager):
     return []
 
 
-def create_enhanced_pathway_from_record(record, citation_manager=None):
+def create_enhanced_pathway_from_record(record, citation_manager=None, version=None):
     """
     Convert a pathway record to a comprehensive GPML Pathway object.
 
     Args:
         record: Dictionary containing pathway data from parsing_utils
         citation_manager: CitationManager instance (optional)
+        version: Version string for the pathway (optional)
 
     Returns:
         Pathway: A comprehensive Pathway object
@@ -344,7 +403,7 @@ def create_enhanced_pathway_from_record(record, citation_manager=None):
         elementId=element_id,
         organism=organism,
         source="PlantCyc",
-        version=None,
+        version=version,
         license=None,
         xref=xref,
         description=description,
@@ -369,13 +428,14 @@ def create_enhanced_pathway_from_record(record, citation_manager=None):
     return pathway
 
 
-def create_enhanced_pathways_from_file(pathways_file, citation_manager=None):
+def create_enhanced_pathways_from_file(pathways_file, citation_manager=None, version=None):
     """
     Create comprehensive Pathway objects from a pathways file.
 
     Args:
         pathways_file: Path to the pathways.dat file
         citation_manager: CitationManager instance (optional)
+        version: Version string for pathways (optional)
 
     Returns:
         list: List of enhanced Pathway objects
@@ -396,7 +456,7 @@ def create_enhanced_pathways_from_file(pathways_file, citation_manager=None):
     }
 
     for record in processor.records:
-        pathway = create_enhanced_pathway_from_record(record, citation_manager)
+        pathway = create_enhanced_pathway_from_record(record, citation_manager, version)
         pathways.append(pathway)
 
         # Track species and taxonomic ranges

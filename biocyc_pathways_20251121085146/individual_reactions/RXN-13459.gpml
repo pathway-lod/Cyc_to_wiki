@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="RXN-13459" organism=" " source="PlantCyc" version="20251121085146">
+  <Description>Single reaction view for RXN-13459: RXN-13459</Description>
+  <Authors>
+    <Author name="BioCyc" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from BioCyc single reaction data.</Comment>
+  <Property key="UniqueID" value="RXN-13459" />
+  <Graphics boardWidth="1200" boardHeight="800" />
+  <DataNodes>
+    <DataNode elementId="CPD-14441" textLabel="(3E)-2-oxopent-3-enoate" type="Metabolite">
+      <Xref identifier="IWARWSDDJHGZOW-NSCUHMNNSA-M" dataSource="InChIKey" />
+      <Graphics centerX="200" centerY="210" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue, PMN, nilo-poyanco, SRI, caspi">This compound is a tautomeric form of |FRAME: OXOPENTENOATE|.</Comment>
+      <Property key="UniqueID" value="CPD-14441" />
+      <Property key="AlternativeId_Pubchem" value="21475713" />
+      <Property key="AlternativeId_Metanetx" value="MNXM97053" />
+      <Property key="ChemicalFormula" value="(C 5) (H 5) (O 3)" />
+      <Property key="AtomCharges" value="(7 -1)" />
+      <Property key="Gibbs0" value="-36.04646" />
+      <Property key="Inchi" value="InChI=1S/C5H6O3/c1-2-3-4(6)5(7)8/h2-3H,1H3,(H,7,8)/p-1/b3-2+" />
+      <Property key="InchiKey" value="InChIKey=IWARWSDDJHGZOW-NSCUHMNNSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="113.093" />
+      <Property key="MonoisotopicMw" value="114.0316940589" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C/C=C/C(=O)C(=O)[O-]" />
+      <Property key="Tautomers" value="CPD-6761, CPD-14447, OXOPENTENOATE" />
+    </DataNode>
+    <DataNode elementId="CPD-14447" textLabel="(2Z)-2-hydroxypenta-2,4-dienoate" type="Metabolite">
+      <Xref identifier="VHTQQDXPNUTMNB-ARJAWSKDSA-M" dataSource="InChIKey" />
+      <Graphics centerX="350" centerY="210" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-14447" />
+      <Property key="AlternativeId_Metanetx" value="MNXM145798" />
+      <Property key="AlternativeId_Pubchem" value="54713710" />
+      <Property key="AlternativeId_Chebi" value="67152" />
+      <Property key="ChemicalFormula" value="(C 5) (H 5) (O 3)" />
+      <Property key="AtomCharges" value="(7 -1)" />
+      <Property key="Gibbs0" value="-31.756462" />
+      <Property key="Inchi" value="InChI=1S/C5H6O3/c1-2-3-4(6)5(7)8/h2-3,6H,1H2,(H,7,8)/p-1/b4-3-" />
+      <Property key="InchiKey" value="InChIKey=VHTQQDXPNUTMNB-ARJAWSKDSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="113.093" />
+      <Property key="MonoisotopicMw" value="114.0316940589" />
+      <Property key="NonStandardInchi" value="InChI=1S/C5H6O3/c1-2-3-4(6)5(7)8/h2-3,6H,1H2,(H,7,8)/p-1/b4-3-" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C=C\C=C(C([O-])=O)/O" />
+      <Property key="Tautomers" value="CPD-6761, CPD-14441, OXOPENTENOATE" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="RXN-13459">
+      <Xref identifier="EC-5.3.2.6" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-13459_start" x="395.0" y="210" elementRef="CPD-14447" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-13459_end" arrowHead="Conversion" x="155.0" y="210" elementRef="CPD-14441" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-13459_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-13459" />
+      <Property key="EC_Number" value="EC-5.3.2.6" />
+      <Property key="Spontaneous" value="T" />
+      <Property key="ReactionEquation" value="CPD-14447 &lt;=&gt; CPD-14441" />
+      <Property key="ReactionDirection" value="REVERSIBLE" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="AtomMappings" value="(:NO-HYDROGEN-ENCODING (0 1 2 3 4 5 6 7) (((CPD-14441 0 7)) ((OXOPENTENOATE 0 7))))" />
+      <Property key="Gibbs0" value="-4.289997" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+  </Interactions>
+</Pathway>

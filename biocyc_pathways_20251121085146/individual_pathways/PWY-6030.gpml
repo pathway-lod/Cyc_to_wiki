@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="serotonin and melatonin biosynthesis I" organism="Homo sapiens, Mus musculus, Oryza sativa, Rattus norvegicus" source="PlantCyc" version="20251121085146">
+  <Description>&lt;b&gt;Background&lt;/b&gt; |FRAME: SEROTONIN &quot;Serotonin&quot;| and |FRAME: N-ACETYL-5-METHOXY-TRYPTAMINE melatonin| are both derived from the amino acid |FRAME: TRP L-tryptophan|. Serotonin is a monoamine neurotransmitter found in the CNS and gut. In the CNS, it is causally involved in the regulation of mood, sleep, appetite, memory and learning |CITS: [16615082]|. Modulation of serotonin at synapses is the modus operandi of several classes of antidepressants. Serotonin in the periphery is expressed in the enterochromaffin cells of the gastrointestinal tract and regulates gut motility. Released from the enterochromaffin cells, it is taken up by platelets and plays a role in primary homeostasis and cell mediated immune responses |CITS: [19630576]|. Circulating |FRAME: SEROTONIN serotonin| derived from peripheral tissues is primarily metabolized in the liver to |FRAME: 5-HYDROXYINDOLE_ACETATE 5-hydroxyindole acetate|, which is excreted in the urine, see |FRAME: PWY-6313 serotonin degradation|. |FRAME: N-ACETYL-5-METHOXY-TRYPTAMINE &quot;Melatonin&quot;| is a hormone regulating a number of different physiological functions including sleep induction, circadian rhythm, oxidative stress and immune response |CITS: [9674691]|. It is synthesized nocturnally in the pineal gland |CITS: [20478436]|. &lt;b&gt;About this Pathway&lt;/b&gt; The biosynthesis of serotonin and melatonin utilize some common reactions starting from L-tryptophan. |FRAME: CPLX-7488 &quot;Tryptophan hydroxylase&quot;| catalyzes the rate-limiting step of |FRAME: SEROTONIN serotonin| biosynthesis, the oxidation of |FRAME:TRP L-tryptophan| to |FRAME: 5-HYDROXY-TRYPTOPHAN 5-hydroxy-L-tryptophan| |CITS: [12379098]|. The reaction, which occurs in the presence of molecular oxygen, requires |FRAME: TETRA-H-BIOPTERIN tetrahydrobiopterin| as a cofactor. |FRAME: CPLX-7890 &quot;Aromatic L-amino-acid decarboxylase&quot;| is a pyridoxal 5-phosphate (PLP)-dependent enzyme that catalyzes the decarboxylation of |FRAME: 5-HYDROXY-TRYPTOPHAN 5-hydroxy-L-tryptophan| to the indoleamine |FRAME: SEROTONIN serotonin| |CITS: [1540578]|. |FRAME: HS05303-MONOMER &quot;Serotonin N-acetyltransferase&quot;| catalyzes the N-acetylation of serotonin to N-acetylserotonin, the rate-limiting step in melatonin synthesis. It is this enzyme which controls the circadian rhythm of melatonin production by the pineal gland. In all vertebrates, enzyme activity is highest at night time and activity decreases very rapidly upon exposure to light |CITS: [9238858]|. Rhythms in the mammalian pineal gland are set by afferent information derived from the endogenous clock in the hypothalamic suprachiasmatic nucleus (SCN). |FRAME: CPLX66-309 &quot;Acetylserotonin O-methyltransferase&quot;| is the last enzyme of the melatonin biosynthesis pathway, catalyzing the transfer of a methyl group from |FRAME: S-ADENOSYLMETHIONINE &lt;i&gt;S&lt;/i&gt;-adenosyl-L-methionine| onto |FRAME: N-ACETYL-SEROTONIN &lt;i&gt;N&lt;/i&gt;-acetyl-serotonin|, to produce |FRAME: N-ACETYL-5-METHOXY-TRYPTAMINE melatonin|. Melatonin levels are under strong genetic influence and have heterogeneous expression among individuals |CITS: [21517957]|. Abnormal melatonin synthesis has been reported as a risk factor for a variety of medical conditions, such as diabetes and psychiatric disorders |CITS: [18516223]|.</Description>
+  <Authors>
+    <Author name="SRI" />
+    <Author name="brito" />
+    <Author name="O3DJ-6" />
+    <Author name="AU3DJ-15" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-6030" />
+  <Property key="Type" value="Neurotransmitter-Biosynthesis" />
+  <Property key="ReactionCount" value="4" />
+  <Property key="ReactionIDs" value="TRYPTOPHAN-5-MONOOXYGENASE-RXN, RXN3DJ-170, RXN3DJ-35528, ACETYLSEROTONIN-O-METHYLTRANSFERASE-RXN" />
+  <Property key="PredecessorCount" value="3" />
+  <Property key="Organism" value="Homo sapiens, Mus musculus, Oryza sativa, Rattus norvegicus" />
+  <Property key="TaxonomicRange_1" value="Viridiplantae" />
+  <Property key="TaxonomicRange_2" value="Metazoa" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_PUB_20586889" />
+  <CitationRef elementRef="citation_PUB_11821057" />
+  <CitationRef elementRef="citation_PUB_3941912" />
+  <CitationRef elementRef="citation_PUB_16615082" />
+  <CitationRef elementRef="citation_PUB_19630576" />
+  <CitationRef elementRef="citation_PUB_9674691" />
+  <CitationRef elementRef="citation_PUB_20478436" />
+  <CitationRef elementRef="citation_PUB_12379098" />
+  <CitationRef elementRef="citation_PUB_1540578" />
+  <CitationRef elementRef="citation_PUB_9238858" />
+  <CitationRef elementRef="citation_PUB_21517957" />
+  <CitationRef elementRef="citation_PUB_18516223" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="N-ACETYL-SEROTONIN" textLabel="N-acetyl-serotonin" type="Metabolite">
+      <Xref identifier="MVAWJSIDNICKHF-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="892.5465698242188" centerY="50.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="N-ACETYL-SEROTONIN" />
+      <Property key="AlternativeId_Zinc" value="ZINC000000066104" />
+      <Property key="AlternativeId_ReactomeCpd" value="209793" />
+      <Property key="AlternativeId_Seed" value="cpd00721" />
+      <Property key="AlternativeId_Metanetx" value="MNXM780" />
+      <Property key="AlternativeId_Refmet" value="N-Acetylserotonin" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC17697" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01238" />
+      <Property key="AlternativeId_Drugbank" value="DB04275" />
+      <Property key="AlternativeId_Chemspider" value="879" />
+      <Property key="AlternativeId_Chebi" value="17697" />
+      <Property key="AlternativeId_Pubchem" value="903" />
+      <Property key="AlternativeId_LigandCpd" value="C00978" />
+      <Property key="AlternativeId_Cas" value="1210-83-9" />
+      <Property key="Synonym_1" value="&lt;i&gt;N&lt;/i&gt;-acetyl-5-hydroxytryptamine" />
+      <Property key="ChemicalFormula" value="(C 12) (H 14) (N 2) (O 2)" />
+      <Property key="Gibbs0" value="107.48669" />
+      <Property key="Inchi" value="InChI=1S/C12H14N2O2/c1-8(15)13-5-4-9-7-14-12-3-2-10(16)6-11(9)12/h2-3,6-7,14,16H,4-5H2,1H3,(H,13,15)" />
+      <Property key="InchiKey" value="InChIKey=MVAWJSIDNICKHF-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="218.255" />
+      <Property key="MonoisotopicMw" value="218.105527704" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC(=O)NCCC1(\C2(/C=C(\C=C/C(/N\C=1)=2)/O))" />
+    </DataNode>
+    <DataNode elementId="CO-A" textLabel="coenzyme A" type="Metabolite">
+      <Xref identifier="RGJOEKWQDUBAIZ-IBOSZNHHSA-J" dataSource="InChIKey" />
+      <Graphics centerX="550.49853515625" centerY="1200.1168212890625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">Coenzyme A (CoA) is a ubiquitous compound found in archaea, bacteria, plants, and animals. It is a common acyl carrier in prokaryotic and eukaryotic cells, and is required for a multitude of reactions for both biosynthetic and degradative pathways, including the oxidation of fatty acids, carbohydrates, and amino acids |CITS: [16415216]|. While the name &quot;coenzyme A&quot; is well established, the correct name for the function of the compound in enzymatic reactions is &quot;cosubstrate&quot;.</Comment>
+      <Property key="UniqueID" value="CO-A" />
+      <Property key="AlternativeId_Metanetx" value="MNXM727276" />
+      <Property key="AlternativeId_Refmet" value="Coenzyme A" />
+      <Property key="AlternativeId_Bigg" value="33502" />
+      <Property key="AlternativeId_Pubchem" value="25113190" />
+      <Property key="AlternativeId_Wikipedia" value="Coenzyme_a" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57287" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01423" />
+      <Property key="AlternativeId_Chebi" value="57287" />
+      <Property key="AlternativeId_Knapsack" value="C00007258" />
+      <Property key="AlternativeId_Cas" value="85-61-0" />
+      <Property key="AlternativeId_LigandCpd" value="C00010" />
+      <Property key="Synonym_1" value="Co-A-SH" />
+      <Property key="Synonym_2" value="CoA" />
+      <Property key="Synonym_3" value="co-A-SH" />
+      <Property key="Synonym_4" value="co-enzyme-A" />
+      <Property key="Synonym_5" value="co-A" />
+      <Property key="Synonym_6" value="HS-CoA" />
+      <Property key="ChemicalFormula" value="(C 21) (H 32) (N 7) (O 16) (P 3) (S 1)" />
+      <Property key="AtomCharges" value="(39 -1), (37 -1), (35 -1), (33 -1)" />
+      <Property key="Gibbs0" value="-493.56613" />
+      <Property key="Inchi" value="InChI=1S/C21H36N7O16P3S/c1-21(2,16(31)19(32)24-4-3-12(29)23-5-6-48)8-41-47(38,39)44-46(36,37)40-7-11-15(43-45(33,34)35)14(30)20(42-11)28-10-27-13-17(22)25-9-26-18(13)28/h9-11,14-16,20,30-31,48H,3-8H2,1-2H3,(H,23,29)(H,24,32)(H,36,37)(H,38,39)(H2,22,25,26)(H2,33,34,35)/p-4/t11-,14-,15-,16+,20-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=RGJOEKWQDUBAIZ-IBOSZNHHSA-J" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="763.502" />
+      <Property key="MonoisotopicMw" value="767.1152083656" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-10749, REG0-9520, REG0-8343, REG0-8346, REG-14465, REG-13932, REG-13248, REG-8110, REG-10174, REG-7984, REG-12031, REG-12173, REG0-7083, REG0-8249, REG0-7409, REG0-7217, REG-8668, REG-7144, REG-7161, REG-6744, REG-6205, REG-6393" />
+      <Property key="Smiles" value="CC(C)(COP([O-])(=O)OP(OC[C@H]3(O[C@@H](N1(C2(\N=C/N=C(C(\N=C/1)=2)/N)))[C@H](O)[C@H](OP([O-])(=O)[O-])3))(=O)[O-])[C@@H](O)C(=O)NCCC(=O)NCCS" />
+      <CitationRef elementRef="citation_PUB_16415216" />
+    </DataNode>
+    <DataNode elementId="TETRA-H-BIOPTERIN" textLabel="5,6,7,8-tetrahydrobiopterin" type="Metabolite">
+      <Xref identifier="FNKQXYHWGSIFBK-NHTYNGABSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1600.0" centerY="524.263427734375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>|FRAME: CPD-14053| serves as an electron donor for several enzymes, including the aromatic amino acid hydroxylases |FRAME: EC-1.14.16.4|, |FRAME: EC-1.14.16.2|, and |FRAME: EC-1.14.16.1| (which are essential for the formation of the neurotransmitters |FRAME: DOPAMINE|, |FRAME: NOREPINEPHRINE|, |FRAME: L-EPINEPHRINE| and |FRAME: SEROTONIN| - see |FRAME: PWY66-301|), and the enzyme |FRAME: EC-1.14.16.5|. It also serves as a cofactor for all three forms of mammalian |FRAME: EC-1.14.13.39| (NOS) - |FRAME: CPLX-6585|, |FRAME: CPLX-6581|, and |FRAME: CPLX-6582| (see |FRAME: PWY-4983|). In addition, |FRAME: TETRA-H-BIOPTERIN| has been proposed to be involved in proliferation of murine erythrocyte cells |CITS: [2762302]|, promotion of neurotransmitter release in the brain |CITS: [1680529]| and regulation of human melanogenesis |CITS: [8128228]|. Deffciency causes severe neurological disorders characterized by hyperphenylalaninaemia and monoamine neurotransmitter deffciency, and is also implicated in Parkinson&apos;s disease, Alzheimer&apos;s disease and depression (|CITS: [11592814][10727395]|. |FRAME: TETRA-H-BIOPTERIN Tetrahydrobiopterin| is present in probably every cell or tissue of higher animals |CITS: [10727395]|. On the other hand, most bacteria, fungi and plants do not synthesize tetrahydrobiopterin. However, tetrahydrobiopterin was found in glycosylated forms in some groups of bacteria including cyanobacteria |CITS: [11113566]| and the anaerobic photosynthetic &lt;i&gt;Chlorobium&lt;/i&gt; species |CITS: [9468332]|, and have been reported in several types of fungi |CITS: [7899493][21852350]|. Different isomers of tetrahydrobiopterin appear to be formed in mammals and bacteria |CITS: [10333495]|.</Comment>
+      <Property key="UniqueID" value="TETRA-H-BIOPTERIN" />
+      <Property key="AlternativeId_Chebi" value="136570" />
+      <Property key="AlternativeId_Pubchem" value="135409384" />
+      <Property key="AlternativeId_Drugbank" value="DB00360" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00027" />
+      <Property key="AlternativeId_LigandCpd" value="C00272" />
+      <Property key="AlternativeId_Cas" value="17528-72-2" />
+      <Property key="Synonym_1" value="a 5,6,7,8-tetrahydrobiopterin" />
+      <Property key="Synonym_2" value="phenylalanine hydroxylase cofactor" />
+      <Property key="Synonym_3" value="tetrahydrobiopterin" />
+      <Property key="Synonym_4" value="5,6,7,8-tetra-H-biopterin" />
+      <Property key="Synonym_5" value="tetra-H-biopterin" />
+      <Property key="Synonym_6" value="tetra-hydro-biopterin" />
+      <Property key="Synonym_7" value="(6R)-5,6,7,8-tetrahydrobiopterin" />
+      <Property key="ChemicalFormula" value="(C 9) (H 15) (N 5) (O 3)" />
+      <Property key="Gibbs0" value="82.936806" />
+      <Property key="Inchi" value="InChI=1S/C9H15N5O3/c1-3(15)6(16)4-2-11-7-5(12-4)8(17)14-9(10)13-7/h3-4,6,12,15-16H,2H2,1H3,(H4,10,11,13,14,17)/t3?,4-,6?/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=FNKQXYHWGSIFBK-NHTYNGABSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="241.249" />
+      <Property key="MonoisotopicMw" value="241.1174893738" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-8733, REG-10949" />
+      <Property key="Smiles" value="CC(O)C(O)[C@H]1(CNC2(/N=C(N)\NC(C(/N1)=2)=O))" />
+      <Property key="SystematicName" value="(6R)-2-amino-6-(1,2-dihydroxypropyl)-5,6,7,8-tetrahydropteridin-4(1H)-one" />
+      <CitationRef elementRef="citation_PUB_2762302" />
+      <CitationRef elementRef="citation_PUB_1680529" />
+      <CitationRef elementRef="citation_PUB_8128228" />
+      <CitationRef elementRef="citation_PUB_10727395" />
+      <CitationRef elementRef="citation_PUB_11113566" />
+      <CitationRef elementRef="citation_PUB_9468332" />
+      <CitationRef elementRef="citation_PUB_10333495" />
+    </DataNode>
+    <DataNode elementId="_4a-Hydroxytetrahydrobiopterins" textLabel="a 4a-hydroxytetrahydrobiopterin" type="Metabolite">
+      <Xref identifier="KJKIEFUPAPPGBC-ATDKUNPGSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1029.4510498046875" centerY="1093.6396484375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="4a-Hydroxytetrahydrobiopterins" />
+      <Property key="ChemicalFormula" value="(C 9) (H 15) (N 5) (O 4)" />
+      <Property key="Inchi" value="InChI=1S/C9H15N5O4/c1-3(15)5(16)4-2-11-6-9(18,14-4)7(17)13-8(10)12-6/h3-5,14-16,18H,2H2,1H3,(H3,10,11,12,13,17)/t3?,4-,5?,9+/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=KJKIEFUPAPPGBC-ATDKUNPGSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="257.249" />
+      <Property key="MonoisotopicMw" value="257.1124039959" />
+      <Property key="NonStandardInchi" value="InChI=1S/C9H15N5O4/c1-3(15)5(16)4-2-11-6-9(18,14-4)7(17)13-8(10)12-6/h3-5,14-16,18H,2H2,1H3,(H3,10,11,12,13,17)/t3?,4-,5?,9+/m1/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC(O)C(O)[C@H]2(CNC1(\[C@](O)(C(\N=C(N)/N=1)=O)N2))" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="100.0" centerY="977.4963989257812" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="ChemicalFormula" value="(H 1)" />
+      <Property key="AtomCharges" value="(1 1)" />
+      <Property key="Gibbs0" value="0.42906138" />
+      <Property key="Inchi" value="InChI=1S/p+1" />
+      <Property key="InchiKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicMw" value="1.0078250321" />
+      <Property key="NonStandardInchi" value="InChI=1S/p+1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="[H+]" />
+    </DataNode>
+    <DataNode elementId="SEROTONIN" textLabel="serotonin" type="Metabolite">
+      <Xref identifier="QZAYGJVTTNCVMB-UHFFFAOYSA-O" dataSource="InChIKey" />
+      <Graphics centerX="1133.402099609375" centerY="419.1385498046875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>|FRAME: SEROTONIN &quot;Serotonin&quot;| is a monoamine neurotransmitter found in the CNS and gut. It was first discovered in the blood serum as a vasoconstrictor substance |CITS: [18100415]|. In the CNS, serotonin is causally involved in the regulation of mood, sleep, appetite, memory and learning |CITS: [16615082]|. Modulation of serotonin at synapses is the modus operandi of several classes of antidepressants. Serotonin in the periphery is expressed in the enterochromaffin cells of the gastrointestinal tract and regulates gut motility. Released from the enterochromaffin cells, it is taken up by platelets and plays a role in primary homeostasis and cell mediated immune responses |CITS: [19630576]|. Circulating |FRAME: SEROTONIN| derived from peripheral tissues is primarily metabolized in the liver to |FRAME: 5-HYDROXYINDOLE_ACETATE|, which is excreted in the urine, see |FRAME: PWY-6313|.</Comment>
+      <Property key="UniqueID" value="SEROTONIN" />
+      <Property key="AlternativeId_Zinc" value="ZINC000000057058" />
+      <Property key="AlternativeId_Seed" value="cpd00579" />
+      <Property key="AlternativeId_Metanetx" value="MNXM357" />
+      <Property key="AlternativeId_Refmet" value="Serotonin" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC350546" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00259" />
+      <Property key="AlternativeId_Chemspider" value="3264617" />
+      <Property key="AlternativeId_Chebi" value="350546" />
+      <Property key="AlternativeId_Pubchem" value="4048638" />
+      <Property key="AlternativeId_LigandCpd" value="C00780" />
+      <Property key="AlternativeId_Cas" value="50-67-9" />
+      <Property key="Synonym_1" value="5-HT" />
+      <Property key="Synonym_2" value="hydroxytryptamine" />
+      <Property key="Synonym_3" value="5-hydroxytryptamine" />
+      <Property key="Synonym_4" value="3-(2-aminoethyl)-1H-indol-5-ol" />
+      <Property key="Synonym_5" value="enteramine" />
+      <Property key="Synonym_6" value="thrombocytin" />
+      <Property key="Synonym_7" value="thrombotonin" />
+      <Property key="ChemicalFormula" value="(C 10) (H 13) (N 2) (O 1)" />
+      <Property key="AtomCharges" value="(11 1)" />
+      <Property key="Gibbs0" value="126.50352" />
+      <Property key="Inchi" value="InChI=1S/C10H12N2O/c11-4-3-7-6-12-10-2-1-8(13)5-9(7)10/h1-2,5-6,12-13H,3-4,11H2/p+1" />
+      <Property key="InchiKey" value="InChIKey=QZAYGJVTTNCVMB-UHFFFAOYSA-O" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="177.225" />
+      <Property key="MonoisotopicMw" value="176.0949630177" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C([NH3+])CC1(\C2(/C=C(\C=C/C(/N\C=1)=2)/O))" />
+      <CitationRef elementRef="citation_PUB_18100415" />
+      <CitationRef elementRef="citation_PUB_16615082" />
+      <CitationRef elementRef="citation_PUB_19630576" />
+    </DataNode>
+    <DataNode elementId="ACETYL-COA" textLabel="acetyl-CoA" type="Metabolite">
+      <Xref identifier="ZSLZBFCDCINBPY-ZSJPKINUSA-J" dataSource="InChIKey" />
+      <Graphics centerX="1596.676025390625" centerY="1094.776123046875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ACETYL-COA" />
+      <Property key="AlternativeId_Seed" value="cpd00022" />
+      <Property key="AlternativeId_Metanetx" value="MNXM21" />
+      <Property key="AlternativeId_Refmet" value="Acetyl-CoA" />
+      <Property key="AlternativeId_Bigg" value="accoa" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57288" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01206" />
+      <Property key="AlternativeId_Chebi" value="57288" />
+      <Property key="AlternativeId_Pubchem" value="45266541" />
+      <Property key="AlternativeId_Knapsack" value="C00007259" />
+      <Property key="AlternativeId_Cas" value="72-89-9" />
+      <Property key="AlternativeId_UmBbdCpd" value="c0031" />
+      <Property key="AlternativeId_LigandCpd" value="C00024" />
+      <Property key="Synonym_1" value="acetyl coenzyme-A" />
+      <Property key="Synonym_2" value="ac-CoA" />
+      <Property key="Synonym_3" value="acetylcoenzyme-A" />
+      <Property key="Synonym_4" value="acetyl-&lt;i&gt;S&lt;/i&gt;-CoA" />
+      <Property key="Synonym_5" value="ac-&lt;i&gt;S&lt;/i&gt;-CoA" />
+      <Property key="ChemicalFormula" value="(C 23) (H 34) (N 7) (O 17) (P 3) (S 1)" />
+      <Property key="AtomCharges" value="(38 -1), (37 -1), (39 -1), (41 -1)" />
+      <Property key="Gibbs0" value="-506.8639" />
+      <Property key="Inchi" value="InChI=1S/C23H38N7O17P3S/c1-12(31)51-7-6-25-14(32)4-5-26-21(35)18(34)23(2,3)9-44-50(41,42)47-49(39,40)43-8-13-17(46-48(36,37)38)16(33)22(45-13)30-11-29-15-19(24)27-10-28-20(15)30/h10-11,13,16-18,22,33-34H,4-9H2,1-3H3,(H,25,32)(H,26,35)(H,39,40)(H,41,42)(H2,24,27,28)(H2,36,37,38)/p-4/t13-,16-,17-,18+,22-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=ZSLZBFCDCINBPY-ZSJPKINUSA-J" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="805.54" />
+      <Property key="MonoisotopicMw" value="809.1257730519" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-13931, REG-11719, REG0-6743, REG0-7082, REG0-7410, REG0-7273, REG0-7612, REG-6799, REG-6399, REG-6392" />
+      <Property key="Smiles" value="CC(=O)SCCNC(=O)CCNC(=O)[C@H](O)C(C)(C)COP(OP([O-])(OC[C@@H]1([C@@H](OP([O-])([O-])=O)[C@@H](O)[C@@H](O1)N2(C3(\N=C/N=C(C(\N=C/2)=3)/N))))=O)([O-])=O" />
+      <Property key="Superatoms" value="COA-GROUP" />
+    </DataNode>
+    <DataNode elementId="ADENOSYL-HOMO-CYS" textLabel="S-adenosyl-L-homocysteine" type="Metabolite">
+      <Xref identifier="ZJUKTBDSGOFHSH-WFMPWKQPSA-N" dataSource="InChIKey" />
+      <Graphics centerX="787.8114013671875" centerY="875.0135498046875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ADENOSYL-HOMO-CYS" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004228232" />
+      <Property key="AlternativeId_Seed" value="cpd00019" />
+      <Property key="AlternativeId_Metanetx" value="MNXM19" />
+      <Property key="AlternativeId_Pubchem" value="25246222" />
+      <Property key="AlternativeId_Refmet" value="S-Adenosylhomocysteine" />
+      <Property key="AlternativeId_Bigg" value="ahcys" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57856" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00939" />
+      <Property key="AlternativeId_Chebi" value="57856" />
+      <Property key="AlternativeId_LigandCpd" value="C00021" />
+      <Property key="AlternativeId_Cas" value="979-92-0" />
+      <Property key="Synonym_1" value="S-adenosyl-L-homocysteine" />
+      <Property key="Synonym_2" value="SAH" />
+      <Property key="Synonym_3" value="S-adenosylhomocysteine" />
+      <Property key="Synonym_4" value="2-S-adenosyl-L-homocysteine" />
+      <Property key="Synonym_5" value="AdoHcy" />
+      <Property key="Synonym_6" value="2-&lt;i&gt;S&lt;/i&gt;-adenosyl-L-homocysteine" />
+      <Property key="Synonym_7" value="&lt;i&gt;S&lt;/i&gt;-adenosyl-homocysteine" />
+      <Property key="Synonym_8" value="&lt;i&gt;S&lt;/i&gt;-adenosylhomocysteine" />
+      <Property key="Synonym_9" value="adenosyl-homo-cys" />
+      <Property key="Synonym_10" value="adenosylhomocysteine" />
+      <Property key="Synonym_11" value="adenosylhomo-cys" />
+      <Property key="Synonym_12" value="&lt;i&gt;S&lt;/i&gt;-(5&apos;-adenosyl)-homocysteine" />
+      <Property key="ChemicalFormula" value="(C 14) (H 20) (N 6) (O 5) (S 1)" />
+      <Property key="AbbrevName" value="SAH" />
+      <Property key="AtomCharges" value="(23 -1), (15 1)" />
+      <Property key="Gibbs0" value="84.0534" />
+      <Property key="Inchi" value="InChI=1S/C14H20N6O5S/c15-6(14(23)24)1-2-26-3-7-9(21)10(22)13(25-7)20-5-19-8-11(16)17-4-18-12(8)20/h4-7,9-10,13,21-22H,1-3,15H2,(H,23,24)(H2,16,17,18)/t6-,7+,9+,10+,13+/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=ZJUKTBDSGOFHSH-WFMPWKQPSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="384.409" />
+      <Property key="MonoisotopicMw" value="384.1215884737" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-7326, REG-8467, REG-14064, REG-14069, REG-14088, REG-14789, REG-14060, REG-13740, REG-13741, REG0-10277, REG-12210, REG-13289, REG-8730, REG-12209, REG-7945, REG-11566, REG-7947, REG-8997, REG-11533, REG-7961, REG-6204, REG-6764, REG-6118, REG-6119, REG-11189, REG-9060, REG-8992, REG-7408" />
+      <Property key="Smiles" value="C(SC[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3))C[C@@H](C(=O)[O-])[NH3+]" />
+    </DataNode>
+    <DataNode elementId="_5-HYDROXY-TRYPTOPHAN" textLabel="5-hydroxy-L-tryptophan" type="Metabolite">
+      <Xref identifier="LDCYZAJDBXYCGN-VIFPVBQESA-N" dataSource="InChIKey" />
+      <Graphics centerX="521.8265991210938" centerY="670.1297607421875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>5-hydroxy-L-tryptophan is the direct precusor of |FRAME: SEROTONIN|, and is sold as a dietary supplement.</Comment>
+      <Property key="UniqueID" value="5-HYDROXY-TRYPTOPHAN" />
+      <Property key="AlternativeId_Zinc" value="ZINC000000895330" />
+      <Property key="AlternativeId_ReactomeCpd" value="209911" />
+      <Property key="AlternativeId_Metanetx" value="MNXM722724" />
+      <Property key="AlternativeId_Refmet" value="5-Hydroxy-L-tryptophan" />
+      <Property key="AlternativeId_Pubchem" value="6971044" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC58266" />
+      <Property key="AlternativeId_Hmdb" value="HMDB15571" />
+      <Property key="AlternativeId_Chebi" value="58266" />
+      <Property key="AlternativeId_Cas" value="4350-09-8" />
+      <Property key="AlternativeId_LigandCpd" value="C00643" />
+      <Property key="Synonym_1" value="L-5-hydroxytryptophan" />
+      <Property key="Synonym_2" value="5-hydroxytryptophan L-form" />
+      <Property key="Synonym_3" value="oxitriptan" />
+      <Property key="Synonym_4" value="Cincofarm" />
+      <Property key="Synonym_5" value="Levothym" />
+      <Property key="Synonym_6" value="(2&lt;i&gt;S&lt;/i&gt;)-2-ammonio-3-(5-hydroxy-1H-indol-3-yl)propanoate" />
+      <Property key="Synonym_7" value="Tript-OH" />
+      <Property key="Synonym_8" value="L-5-Htp" />
+      <Property key="Synonym_9" value="5-HTP" />
+      <Property key="ChemicalFormula" value="(C 11) (H 12) (N 2) (O 3)" />
+      <Property key="AtomCharges" value="(15 -1), (12 1)" />
+      <Property key="Gibbs0" value="36.904446" />
+      <Property key="Inchi" value="InChI=1S/C11H12N2O3/c12-9(11(15)16)3-6-5-13-10-2-1-7(14)4-8(6)10/h1-2,4-5,9,13-14H,3,12H2,(H,15,16)/t9-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=LDCYZAJDBXYCGN-VIFPVBQESA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="220.227" />
+      <Property key="MonoisotopicMw" value="220.0847922619" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C1(\NC2(/C=C\C(\O)=C/C(/C(\C[C@@H](C(=O)[O-])[NH3+])=1)=2))" />
+    </DataNode>
+    <DataNode elementId="TRP" textLabel="L-tryptophan" type="Metabolite">
+      <Xref identifier="QIVBCDIJIAJPQS-VIFPVBQESA-N" dataSource="InChIKey" />
+      <Graphics centerX="985.3734130859375" centerY="1550.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="TRP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000000083315" />
+      <Property key="AlternativeId_Mediadb" value="compounds/76/" />
+      <Property key="AlternativeId_Metanetx" value="MNXM94" />
+      <Property key="AlternativeId_Refmet" value="Tryptophan" />
+      <Property key="AlternativeId_Bigg" value="trp__L" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57912" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00929" />
+      <Property key="AlternativeId_Chebi" value="57912" />
+      <Property key="AlternativeId_Pubchem" value="6923516" />
+      <Property key="AlternativeId_LigandCpd" value="C00078" />
+      <Property key="AlternativeId_Cas" value="73-22-3" />
+      <Property key="Synonym_1" value="trp" />
+      <Property key="Synonym_2" value="W" />
+      <Property key="Synonym_3" value="tryptacin" />
+      <Property key="Synonym_4" value="trofan" />
+      <Property key="Synonym_5" value="tryptophan" />
+      <Property key="Synonym_6" value="2-amino-3-indolylpropanic acid" />
+      <Property key="Synonym_7" value="L-trp" />
+      <Property key="ChemicalFormula" value="(C 11) (H 12) (N 2) (O 2)" />
+      <Property key="AbbrevName" value="trp" />
+      <Property key="AtomCharges" value="(14 -1), (12 1)" />
+      <Property key="Gibbs0" value="95.843445" />
+      <Property key="Inchi" value="InChI=1S/C11H12N2O2/c12-9(11(14)15)5-7-6-13-10-4-2-1-3-8(7)10/h1-4,6,9,13H,5,12H2,(H,14,15)/t9-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=QIVBCDIJIAJPQS-VIFPVBQESA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="204.228" />
+      <Property key="MonoisotopicMw" value="204.0898776398" />
+      <Property key="NonStandardInchi" value="InChI=1S/C11H12N2O2/c12-9(11(14)15)5-7-6-13-10-4-2-1-3-8(7)10/h1-4,6,9,13H,5,12H2,(H,14,15)/t9-/m0/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-11978, REG-9511, REG0-8903, REG-11629" />
+      <Property key="Smiles" value="C1(\NC2(/C=C\C=C/C(/C(\C[C@H]([NH3+])C(=O)[O-])=1)=2))" />
+    </DataNode>
+    <DataNode elementId="CARBON-DIOXIDE" textLabel="CO₂" type="Metabolite">
+      <Xref identifier="CURLTUGMZLYLDI-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="315.0116271972656" centerY="278.3103942871094" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CARBON-DIOXIDE" />
+      <Property key="AlternativeId_Metanetx" value="MNXM13" />
+      <Property key="AlternativeId_Seed" value="cpd00011" />
+      <Property key="AlternativeId_Bigg" value="33506" />
+      <Property key="AlternativeId_UmBbdCpd" value="c0131" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01967" />
+      <Property key="AlternativeId_LigandCpd" value="C00011" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC16526" />
+      <Property key="AlternativeId_Chemspider" value="274" />
+      <Property key="AlternativeId_Chebi" value="16526" />
+      <Property key="AlternativeId_Pubchem" value="280" />
+      <Property key="AlternativeId_Cas" value="124-38-9" />
+      <Property key="Synonym_1" value="carbonic anhydride" />
+      <Property key="Synonym_2" value="carbonic acid gas" />
+      <Property key="Synonym_3" value="carbon dioxide" />
+      <Property key="ChemicalFormula" value="(C 1) (O 2)" />
+      <Property key="Gibbs0" value="-92.26" />
+      <Property key="Inchi" value="InChI=1S/CO2/c2-1-3" />
+      <Property key="InchiKey" value="InChIKey=CURLTUGMZLYLDI-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="44.01" />
+      <Property key="MonoisotopicMw" value="43.989829244199996" />
+      <Property key="NonStandardInchi" value="InChI=1S/CO2/c2-1-3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C(=O)=O" />
+    </DataNode>
+    <DataNode elementId="S-ADENOSYLMETHIONINE" textLabel="S-adenosyl-L-methionine" type="Metabolite">
+      <Xref identifier="MEFKEPWMEQBLKI-FCKMPRQPSA-O" dataSource="InChIKey" />
+      <Graphics centerX="884.3910522460938" centerY="781.5811767578125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: S-ADENOSYLMETHIONINE| (AdoMet, SAM) is a sulfonium compound in which each of the carbons attached to the sulfur is activated toward nucleophilic attack. It is the most common methyl group donor for methyltransferase enzymes. In addition, AdoMet is cleaved reductively by a large number of iron-sulfur cluster-containing enzymes (known as radical SAM or radical AdoMet enzymes) to produce |FRAME: CPD-15400|, which they use to activate their substrates. Another major role of AdoMet is in polyamine biosynthesis, where it is decarboxylated by |FRAME: EC-4.1.1.50|, to form |FRAME: S-ADENOSYLMETHIONINAMINE|, which serves as a propylamine group donor. AdoMet is formed by |FRAME: EC-2.5.1.6| and bears an &lt;i&gt;S&lt;/i&gt; configuration at the sulfur atom. The chiral sulfonium of AdoMet spontaneously racemizes under physiological conditions to form a mixture of &lt;i&gt;S&lt;/i&gt; and &lt;i&gt;R&lt;/i&gt; isomers. This results in reduced activity, as the |FRAME: CPD0-2554 &quot;&lt;i&gt;R&lt;/i&gt; isomer&quot;| is not accepted as a substrate for AdoMet-dependent methyltransferases |CITS: [12419350]|.</Comment>
+      <Property key="UniqueID" value="S-ADENOSYLMETHIONINE" />
+      <Property key="AlternativeId_Pubchem" value="24762165" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004214738" />
+      <Property key="AlternativeId_Seed" value="cpd00017" />
+      <Property key="AlternativeId_Metanetx" value="MNXM16" />
+      <Property key="AlternativeId_Refmet" value="S-adenosyl-L-methioninate" />
+      <Property key="AlternativeId_Bigg" value="amet" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC59789" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01185" />
+      <Property key="AlternativeId_Chebi" value="59789" />
+      <Property key="AlternativeId_LigandCpd" value="C00019" />
+      <Property key="AlternativeId_Cas" value="29908-03-0" />
+      <Property key="Synonym_1" value="(&lt;i&gt;S&lt;/i&gt;)-S-adenosyl-L-methionine" />
+      <Property key="Synonym_2" value="AdoMet" />
+      <Property key="Synonym_3" value="SAM" />
+      <Property key="Synonym_4" value="2-&lt;i&gt;S&lt;/i&gt;-adenosyl-L-methionine" />
+      <Property key="Synonym_5" value="&lt;i&gt;S&lt;/i&gt;-adenosyl-methionine" />
+      <Property key="Synonym_6" value="adenosylmethionine" />
+      <Property key="Synonym_7" value="&lt;i&gt;S&lt;/i&gt;-adenosylmethionine" />
+      <Property key="ChemicalFormula" value="(C 15) (H 23) (N 6) (O 5) (S 1)" />
+      <Property key="AbbrevName" value="SAM" />
+      <Property key="AtomCharges" value="(27 1), (24 -1), (16 1)" />
+      <Property key="Gibbs0" value="124.03472" />
+      <Property key="Inchi" value="InChI=1S/C15H22N6O5S/c1-27(3-2-7(16)15(24)25)4-8-10(22)11(23)14(26-8)21-6-20-9-12(17)18-5-19-13(9)21/h5-8,10-11,14,22-23H,2-4,16H2,1H3,(H2-,17,18,19,24,25)/p+1/t7-,8+,10+,11+,14+,27-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=MEFKEPWMEQBLKI-FCKMPRQPSA-O" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="399.444" />
+      <Property key="MonoisotopicMw" value="400.1528886021" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-15570, REG-12359, REG-9936, REG-9937, REG-8082, REG0-8461, REG-7118" />
+      <Property key="Smiles" value="C[S+](C[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3))CC[C@@H](C(=O)[O-])[NH3+]" />
+      <CitationRef elementRef="citation_PUB_12419350" />
+    </DataNode>
+    <DataNode elementId="N-ACETYL-5-METHOXY-TRYPTAMINE" textLabel="melatonin" type="Metabolite">
+      <Xref identifier="DRLFMBDRBRZALE-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="863.065185546875" centerY="636.1422729492188" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>Melatonin is a natural product found in plants and animals. It is primarily known in animals as a hormone released by the pineal gland in the brain at night. In vertebrates, melatonin is involved in synchronizing circadian rhythms, including sleep-wake timing and blood pressure regulation, and in control of seasonal rhythmicity including reproduction, fattening, moulting and hibernation. Many of its effects are through activation of the melatonin receptors, while others are due to its role as an antioxidant. In plants, it functions to defend against oxidative stress.</Comment>
+      <Property key="UniqueID" value="N-ACETYL-5-METHOXY-TRYPTAMINE" />
+      <Property key="AlternativeId_Wikipedia" value="Melatonin" />
+      <Property key="AlternativeId_Zinc" value="ZINC000000057060" />
+      <Property key="AlternativeId_ReactomeCpd" value="209934" />
+      <Property key="AlternativeId_Seed" value="cpd01124" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1114" />
+      <Property key="AlternativeId_Refmet" value="Melatonin" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC16796" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01389" />
+      <Property key="AlternativeId_Drugbank" value="DB01065" />
+      <Property key="AlternativeId_Chemspider" value="872" />
+      <Property key="AlternativeId_Pubchem" value="896" />
+      <Property key="AlternativeId_LigandCpd" value="C01598" />
+      <Property key="AlternativeId_Chebi" value="16796" />
+      <Property key="AlternativeId_Cas" value="73-31-4" />
+      <Property key="Synonym_1" value="&lt;i&gt;N&lt;/i&gt;-acetyl-5-methoxy-tryptamine" />
+      <Property key="Synonym_2" value="&lt;i&gt;N&lt;/i&gt;-[2-(5-methoxyindol-3-yl)ethyl]acetamide" />
+      <Property key="Synonym_3" value="5-methoxy-&lt;i&gt;N&lt;/i&gt;-acetyltryptamine" />
+      <Property key="ChemicalFormula" value="(C 13) (H 16) (N 2) (O 2)" />
+      <Property key="Gibbs0" value="142.67892" />
+      <Property key="Inchi" value="InChI=1S/C13H16N2O2/c1-9(16)14-6-5-10-8-15-13-4-3-11(17-2)7-12(10)13/h3-4,7-8,15H,5-6H2,1-2H3,(H,14,16)" />
+      <Property key="InchiKey" value="InChIKey=DRLFMBDRBRZALE-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="232.282" />
+      <Property key="MonoisotopicMw" value="232.1211777682" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC(=O)NCCC1(\C2(/C=C(\C=C/C(/N\C=1)=2)/OC))" />
+    </DataNode>
+    <DataNode elementId="OXYGEN-MOLECULE" textLabel="dioxygen" type="Metabolite">
+      <Xref identifier="MYMOFIZGZYHOMD-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1114.3775634765625" centerY="798.1170654296875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="OXYGEN-MOLECULE" />
+      <Property key="AlternativeId_Metanetx" value="MNXM4" />
+      <Property key="AlternativeId_Seed" value="cpd00007" />
+      <Property key="AlternativeId_Bigg" value="33493" />
+      <Property key="AlternativeId_Pubchem" value="977" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15379" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01377" />
+      <Property key="AlternativeId_Chemspider" value="952" />
+      <Property key="AlternativeId_Chebi" value="15379" />
+      <Property key="AlternativeId_LigandCpd" value="C00007" />
+      <Property key="AlternativeId_Cas" value="7782-44-7" />
+      <Property key="Synonym_1" value="molecular oxygen" />
+      <Property key="Synonym_2" value="oxygen" />
+      <Property key="Synonym_3" value="oxygen molecule" />
+      <Property key="ChemicalFormula" value="(O 2)" />
+      <Property key="AbbrevName" value="O&lt;sub&gt;2&lt;/sub&gt;" />
+      <Property key="Gibbs0" value="3.92" />
+      <Property key="Inchi" value="InChI=1S/O2/c1-2" />
+      <Property key="InchiKey" value="InChIKey=MYMOFIZGZYHOMD-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="31.999" />
+      <Property key="MonoisotopicMw" value="31.9898292442" />
+      <Property key="NonStandardInchi" value="InChI=1S/O2/c1-2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-6231, REG0-11284, REG-13683, REG-5882" />
+      <Property key="Smiles" value="O=O" />
+      <Property key="SystematicName" value="dioxygen" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="TRYPTOPHAN-5-MONOOXYGENASE-RXN">
+      <Xref identifier="16709" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="TRYPTOPHAN-5-MONOOXYGENASE-RXN_start" x="1030.3734130859375" y="1550.0" elementRef="TRP" relX="1.0" relY="0.0" />
+        <Point elementId="TRYPTOPHAN-5-MONOOXYGENASE-RXN_end" arrowHead="Conversion" x="476.82659912109375" y="670.1297607421875" elementRef="_5-HYDROXY-TRYPTOPHAN" relX="-1.0" relY="0.0" />
+        <Anchor elementId="TRYPTOPHAN-5-MONOOXYGENASE-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Rhea" value="16709" />
+      <Property key="AlternativeId_Uniprot" value="P09810" />
+      <Property key="UniqueID" value="TRYPTOPHAN-5-MONOOXYGENASE-RXN" />
+      <Property key="EC_Number" value="EC-1.14.16.4" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-6030" />
+      <Property key="ReactionEquation" value="TRP + TETRA-H-BIOPTERIN + OXYGEN-MOLECULE =&gt; 5-HYDROXY-TRYPTOPHAN + 4a-Hydroxytetrahydrobiopterins" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="AtomMappings" value="(:NO-HYDROGEN-ENCODING (1 3 4 2 5 6 0 7 8 9 10 11 12 33 13 14 15 16 17 18 20 21 22 23 19 24 25 27 28 26 29 30 31 32) (((TRP 0 14) (TETRA-H-BIOPTERIN 15 31) (OXYGEN-MOLECULE 32 33)) ((5-HYDROXY-TRYPTOPHAN 0 15) (CPD-5881 16 33))))" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-110.548996" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="TRYPTOPHAN-5-MONOOXYGENASE-RXN_anchor_reactant_1">
+      <Xref identifier="16709" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="TRYPTOPHAN-5-MONOOXYGENASE-RXN_anchor_reactant_start_1" x="1645.0" y="524.263427734375" elementRef="TETRA-H-BIOPTERIN" relX="1.0" relY="0.0" />
+        <Point elementId="TRYPTOPHAN-5-MONOOXYGENASE-RXN_anchor_reactant_end_1" x="0" y="0" elementRef="TRYPTOPHAN-5-MONOOXYGENASE-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="TRYPTOPHAN-5-MONOOXYGENASE-RXN_anchor_reactant_2">
+      <Xref identifier="16709" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="TRYPTOPHAN-5-MONOOXYGENASE-RXN_anchor_reactant_start_2" x="1159.3775634765625" y="798.1170654296875" elementRef="OXYGEN-MOLECULE" relX="1.0" relY="0.0" />
+        <Point elementId="TRYPTOPHAN-5-MONOOXYGENASE-RXN_anchor_reactant_end_2" x="0" y="0" elementRef="TRYPTOPHAN-5-MONOOXYGENASE-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="TRYPTOPHAN-5-MONOOXYGENASE-RXN_anchor_product_1">
+      <Xref identifier="16709" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="TRYPTOPHAN-5-MONOOXYGENASE-RXN_anchor_product_start_1" x="0" y="0" elementRef="TRYPTOPHAN-5-MONOOXYGENASE-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="TRYPTOPHAN-5-MONOOXYGENASE-RXN_anchor_product_end_1" arrowHead="Conversion" x="984.4510498046875" y="1093.6396484375" elementRef="_4a-Hydroxytetrahydrobiopterins" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN3DJ-170">
+      <Xref identifier="18533" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="RXN3DJ-170_start" x="566.8265991210938" y="670.1297607421875" elementRef="_5-HYDROXY-TRYPTOPHAN" relX="1.0" relY="0.0" />
+        <Point elementId="RXN3DJ-170_end" arrowHead="Conversion" x="1088.402099609375" y="419.1385498046875" elementRef="SEROTONIN" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN3DJ-170_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Rhea" value="18533" />
+      <Property key="UniqueID" value="RXN3DJ-170" />
+      <Property key="EC_Number" value="EC-4.1.1.28" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-6030" />
+      <Property key="ReactionEquation" value="5-HYDROXY-TRYPTOPHAN + PROTON =&gt; SEROTONIN + CARBON-DIOXIDE" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="AtomMappings" value="(:NO-HYDROGEN-ENCODING (0 1 2 4 5 6 7 8 3 9 13 10 11 12 15 14) (((SEROTONIN 0 12) (CARBON-DIOXIDE 13 15)) ((5-HYDROXY-TRYPTOPHAN 0 15))))" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-3.090004" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN3DJ-170_anchor_reactant_1">
+      <Xref identifier="18533" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="RXN3DJ-170_anchor_reactant_start_1" x="145.0" y="977.4963989257812" elementRef="PROTON" relX="1.0" relY="0.0" />
+        <Point elementId="RXN3DJ-170_anchor_reactant_end_1" x="0" y="0" elementRef="RXN3DJ-170_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN3DJ-170_anchor_product_1">
+      <Xref identifier="18533" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="RXN3DJ-170_anchor_product_start_1" x="0" y="0" elementRef="RXN3DJ-170_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN3DJ-170_anchor_product_end_1" arrowHead="Conversion" x="270.0116271972656" y="278.3103942871094" elementRef="CARBON-DIOXIDE" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN3DJ-35528">
+      <Xref identifier="25217" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="RXN3DJ-35528_start" x="1178.402099609375" y="419.1385498046875" elementRef="SEROTONIN" relX="1.0" relY="0.0" />
+        <Point elementId="RXN3DJ-35528_end" arrowHead="Conversion" x="847.5465698242188" y="50.0" elementRef="N-ACETYL-SEROTONIN" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN3DJ-35528_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Rhea" value="25217" />
+      <Property key="UniqueID" value="RXN3DJ-35528" />
+      <Property key="EC_Number" value="EC-2.3.1.87" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-6030" />
+      <Property key="ReactionEquation" value="ACETYL-COA + SEROTONIN =&gt; PROTON + CO-A + N-ACETYL-SEROTONIN" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="AtomMappings" value="(:NO-HYDROGEN-ENCODING (1 2 3 4 5 6 8 9 10 11 12 13 15 0 17 16 18 19 20 21 22 23 24 25 7 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 14 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63) (((N-ACETYL-SEROTONIN 0 15) (CO-A 16 63)) ((SEROTONIN 0 12) (ACETYL-COA 13 63))))" />
+      <Property key="^official?" value="NIL" />
+      <Property key="Gibbs0" value="-5.2900085" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN3DJ-35528_anchor_reactant_0">
+      <Xref identifier="25217" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="RXN3DJ-35528_anchor_reactant_start_0" x="1641.676025390625" y="1094.776123046875" elementRef="ACETYL-COA" relX="1.0" relY="0.0" />
+        <Point elementId="RXN3DJ-35528_anchor_reactant_end_0" x="0" y="0" elementRef="RXN3DJ-35528_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN3DJ-35528_anchor_product_0">
+      <Xref identifier="25217" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="RXN3DJ-35528_anchor_product_start_0" x="0" y="0" elementRef="RXN3DJ-35528_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN3DJ-35528_anchor_product_end_0" arrowHead="Conversion" x="55.0" y="977.4963989257812" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN3DJ-35528_anchor_product_1">
+      <Xref identifier="25217" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="RXN3DJ-35528_anchor_product_start_1" x="0" y="0" elementRef="RXN3DJ-35528_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN3DJ-35528_anchor_product_end_1" arrowHead="Conversion" x="505.49853515625" y="1200.1168212890625" elementRef="CO-A" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ACETYLSEROTONIN-O-METHYLTRANSFERASE-RXN">
+      <Xref identifier="15573" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="ACETYLSEROTONIN-O-METHYLTRANSFERASE-RXN_start" x="937.5465698242188" y="50.0" elementRef="N-ACETYL-SEROTONIN" relX="1.0" relY="0.0" />
+        <Point elementId="ACETYLSEROTONIN-O-METHYLTRANSFERASE-RXN_end" arrowHead="Conversion" x="818.065185546875" y="636.1422729492188" elementRef="N-ACETYL-5-METHOXY-TRYPTAMINE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="ACETYLSEROTONIN-O-METHYLTRANSFERASE-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Rhea" value="15573" />
+      <Property key="AlternativeId_Uniprot" value="Q92056" />
+      <Property key="UniqueID" value="ACETYLSEROTONIN-O-METHYLTRANSFERASE-RXN" />
+      <Property key="EC_Number" value="EC-2.1.1.4" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-6030" />
+      <Property key="ReactionEquation" value="S-ADENOSYLMETHIONINE + N-ACETYL-SEROTONIN =&gt; PROTON + ADENOSYL-HOMO-CYS + N-ACETYL-5-METHOXY-TRYPTAMINE" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="AtomMappings" value="(:NO-HYDROGEN-ENCODING (0 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 1 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42) (((N-ACETYL-5-METHOXY-TRYPTAMINE 0 16) (ADENOSYL-HOMO-CYS 17 42)) ((N-ACETYL-SEROTONIN 0 15) (S-ADENOSYLMETHIONINE 16 42))))" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-4.3600006" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="ACETYLSEROTONIN-O-METHYLTRANSFERASE-RXN_anchor_reactant_0">
+      <Xref identifier="15573" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="ACETYLSEROTONIN-O-METHYLTRANSFERASE-RXN_anchor_reactant_start_0" x="929.3910522460938" y="781.5811767578125" elementRef="S-ADENOSYLMETHIONINE" relX="1.0" relY="0.0" />
+        <Point elementId="ACETYLSEROTONIN-O-METHYLTRANSFERASE-RXN_anchor_reactant_end_0" x="0" y="0" elementRef="ACETYLSEROTONIN-O-METHYLTRANSFERASE-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ACETYLSEROTONIN-O-METHYLTRANSFERASE-RXN_anchor_product_0">
+      <Xref identifier="15573" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="ACETYLSEROTONIN-O-METHYLTRANSFERASE-RXN_anchor_product_start_0" x="0" y="0" elementRef="ACETYLSEROTONIN-O-METHYLTRANSFERASE-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="ACETYLSEROTONIN-O-METHYLTRANSFERASE-RXN_anchor_product_end_0" arrowHead="Conversion" x="55.0" y="977.4963989257812" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ACETYLSEROTONIN-O-METHYLTRANSFERASE-RXN_anchor_product_1">
+      <Xref identifier="15573" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="ACETYLSEROTONIN-O-METHYLTRANSFERASE-RXN_anchor_product_start_1" x="0" y="0" elementRef="ACETYLSEROTONIN-O-METHYLTRANSFERASE-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="ACETYLSEROTONIN-O-METHYLTRANSFERASE-RXN_anchor_product_end_1" arrowHead="Conversion" x="742.8114013671875" y="875.0135498046875" elementRef="ADENOSYL-HOMO-CYS" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_PUB_1680529">
+      <Xref identifier="1680529" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_18100415">
+      <Xref identifier="18100415" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_20478436">
+      <Xref identifier="20478436" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_21517957">
+      <Xref identifier="21517957" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_3941912">
+      <Xref identifier="3941912" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_11113566">
+      <Xref identifier="11113566" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_8128228">
+      <Xref identifier="8128228" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_9238858">
+      <Xref identifier="9238858" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_9468332">
+      <Xref identifier="9468332" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_10727395">
+      <Xref identifier="10727395" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_19630576">
+      <Xref identifier="19630576" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_20586889">
+      <Xref identifier="20586889" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_9674691">
+      <Xref identifier="9674691" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_18516223">
+      <Xref identifier="18516223" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_12379098">
+      <Xref identifier="12379098" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_2762302">
+      <Xref identifier="2762302" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_16615082">
+      <Xref identifier="16615082" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_16415216">
+      <Xref identifier="16415216" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_12419350">
+      <Xref identifier="12419350" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_10333495">
+      <Xref identifier="10333495" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_1540578">
+      <Xref identifier="1540578" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_11821057">
+      <Xref identifier="11821057" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

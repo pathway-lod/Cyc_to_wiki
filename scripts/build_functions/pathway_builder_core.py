@@ -124,7 +124,7 @@ class CompletePathwayBuilderWithGenes:
 
     """
 
-    def __init__(self, compounds_file, genes_file, proteins_file, reactions_file, pathways_file, pubs_file="pubs.dat", regulation_file="regulation.dat"):
+    def __init__(self, compounds_file, genes_file, proteins_file, reactions_file, pathways_file, pubs_file="pubs.dat", regulation_file="regulation.dat", version=None):
         """
         Initialize builder by loading all BioCyc data files.
 
@@ -136,8 +136,10 @@ class CompletePathwayBuilderWithGenes:
             pathways_file (str): Path to pathways.dat
             pubs_file (str): Path to pubs.dat (default: "pubs.dat")
             regulation_file (str): Path to regulation.dat (default: "regulation.dat")
+            version (str): Version string for GPML files (default: None)
         """
         self.id_manager = IDManager()
+        self.version = version
 
         # Initialize CitationManager
         self.citation_manager = CitationManager(pubs_file)
@@ -234,7 +236,7 @@ class CompletePathwayBuilderWithGenes:
 
     def _load_pathways(self, pathways_file):
         """Load and process pathway data with citations."""
-        self.pathways = create_enhanced_pathways_from_file(pathways_file, self.citation_manager)
+        self.pathways = create_enhanced_pathways_from_file(pathways_file, self.citation_manager, self.version)
         self._register_and_map_nodes(self.pathways)
         self.pathways_processor = parsing_utils.read_and_parse(pathways_file)
         self.pathway_records = {r['UNIQUE-ID']: r for r in self.pathways_processor.records if 'UNIQUE-ID' in r}
