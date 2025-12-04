@@ -151,6 +151,7 @@ class GPMLValidator:
 
         # Run validation checks
         self._validate_schema(root)
+        self._validate_organism(root)
         self._validate_duplicate_ids(root)
         self._validate_id_format(root)
         self._validate_references(root)
@@ -176,6 +177,27 @@ class GPMLValidator:
                 self.report.add_error("SCHEMA_ERROR", "Missing 'boardWidth' in Pathway Graphics")
             if graphics.get("boardHeight") is None:
                 self.report.add_error("SCHEMA_ERROR", "Missing 'boardHeight' in Pathway Graphics")
+
+    def _validate_organism(self, root: ET.Element):
+        """Validate organism attribute on Pathway element"""
+        organism = root.get("organism")
+
+        # Check if organism attribute exists
+        if organism is None or organism.strip() == "":
+            self.report.add_error(
+                "MISSING_ORGANISM",
+                "Pathway element missing 'organism' attribute or organism is empty"
+            )
+            return
+
+        # Check for multiple organisms
+        if "," in organism:
+            organisms = [o.strip() for o in organism.split(",")]
+            self.report.add_error(
+                "MULTIPLE_ORGANISMS",
+                f"Pathway has multiple organisms ({len(organisms)}): {organism}. "
+                f"Each GPML file must have exactly one organism."
+            )
 
     def _validate_duplicate_ids(self, root: ET.Element):
         """Check for duplicate element IDs across all elements"""
