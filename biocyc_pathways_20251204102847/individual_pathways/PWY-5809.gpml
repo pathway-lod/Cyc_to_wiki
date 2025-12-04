@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="robustaquinone biosynthesis" organism="Cinchona" source="PlantCyc" version="20251204102847">
+  <Description>In the cell cultures of Cinchona robusta, elicitor can induce the formation of strong orange-colored anthraquinones. The ten anthraquinones isolated from the cell culture are highly substituted and they all have substitutions in both A and C rings. This is remarkable in that most anthraquinones found in the family Rubiaceae only have subsitutions in the C ring. Based on the closely related structures of these highly substituted anthraquinones (robustaquinones), a biosynthesis pathway schema with the smallest number of intermediates was proposed|CITS: [Schripsema99]|. At the time of proposing the schema, the authors were skeptical of the origin of the A, B, and C rings of these robustaquinones. Later, it was demonstrated by a carefully designed radio tracer study that, like alizarin (see |FRAME: PWY-5802 alizarin biosynthesis|) and other Rubiaceae anthraquinones, the three rings of robustaquinones are derived from isochorismate and alpha-ketoglutarate via 1,4-dihydroxy-2-naphthoate, and from DMAPP of the MEP pathway|CITS: [11754943]|.</Description>
+  <Authors>
+    <Author name="THE-ARABIDOPSIS-INFORMATION-RESOURCE" />
+    <Author name="zhang" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-5809" />
+  <Property key="Type" value="QUINONE-SYN" />
+  <Property key="ReactionCount" value="20" />
+  <Property key="ReactionIDs" value="RXN-9121, RXN-9122, RXN-9123, RXN-9124, RXN-9125, RXN-9126, RXN-9120, RXN-9119, RXN-9118, RXN-9117, RXN-9116, RXN-9115, RXN-9114, RXN-9113, RXN-9112, RXN-9111, RXN-9110, RXN-9109, RXN-9108, RXN-9107" />
+  <Property key="PredecessorCount" value="19" />
+  <Property key="Organism" value="Cinchona" />
+  <Property key="TaxonomicRange_1" value="Rubiaceae" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_PUB_SCHRIPSEMA99" />
+  <CitationRef elementRef="citation_PUB_11754943" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="CPD-9630" textLabel="1,5,7-trihydroxy-6,8-dimethoxyanthraquinone" type="Metabolite">
+      <Xref identifier="XXQBOYIMJVUYPA-UHFFFAOYSA-M" dataSource="InChIKey" />
+      <Graphics centerX="1396.7005615234375" centerY="1550.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-9630" />
+      <Property key="AlternativeId_Zinc" value="ZINC000059064959" />
+      <Property key="AlternativeId_Seed" value="cpd25768" />
+      <Property key="AlternativeId_Metanetx" value="MNXM32371" />
+      <Property key="AlternativeId_Pubchem" value="25200958" />
+      <Property key="ChemicalFormula" value="(C 16) (H 11) (O 7)" />
+      <Property key="AtomCharges" value="(21 -1)" />
+      <Property key="Gibbs0" value="-70.687744" />
+      <Property key="Inchi" value="InChI=1S/C16H12O7/c1-22-15-10-9(13(20)16(23-2)14(15)21)11(18)6-4-3-5-7(17)8(6)12(10)19/h3-5,17,20-21H,1-2H3/p-1" />
+      <Property key="InchiKey" value="InChIKey=XXQBOYIMJVUYPA-UHFFFAOYSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="315.259" />
+      <Property key="MonoisotopicMw" value="316.0583027399" />
+      <Property key="NonStandardInchi" value="InChI=1S/C16H12O7/c1-22-15-10-9(13(20)16(23-2)14(15)21)11(18)6-4-3-5-7(17)8(6)12(10)19/h3-5,17,20-21H,1-2H3/p-1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="COC1(/C2(/C(=O)C3(/C(/O)=C\C=C/C(/C(=O)C(/C(/O)=C(C(\[O-])=1)/OC)=2)=3)))" />
+    </DataNode>
+    <DataNode elementId="CPD-9620" textLabel="robustaquinone F" type="Metabolite">
+      <Xref identifier="ZAFTVWGDFRXJAF-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="592.0474853515625" centerY="887.57861328125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>Eight anthraquinone derivatives were detected in a suspension culture of the tree |FRAME: TAX-43462| &quot;robusta&quot; after elicitation |CITS: [Schripsema99]|. They were named |FRAME: CPD-9615|, |FRAME: CPD-9616|, |FRAME: CPD-9617|, |FRAME: CPD-9618|, |FRAME: CPD-9619|, |FRAME: CPD-9620|, |FRAME: CPD-9621| and |FRAME: CPD-9622|. Out of those, |FRAME: CPD-9616| was identified as the major form |CITS: [14516002]|. The compounds were shown to be synthesized from |FRAME: DIHYDROXYNAPHTHOATE| and |FRAME: DELTA3-ISOPENTENYL-PP| that is produced via the |FRAME: PWY-7560 &quot;methylerythritol 4-phosphate pathway&quot;| |CITS: [11754943]|.</Comment>
+      <Property key="UniqueID" value="CPD-9620" />
+      <Property key="AlternativeId_Zinc" value="ZINC000014639492" />
+      <Property key="AlternativeId_Seed" value="cpd25758" />
+      <Property key="AlternativeId_Metanetx" value="MNXM81043" />
+      <Property key="AlternativeId_Pubchem" value="25200969" />
+      <Property key="Synonym_1" value="1,3,5,8-tetrahydroxy-2-methoxyanthraquinone" />
+      <Property key="ChemicalFormula" value="(C 15) (H 10) (O 7)" />
+      <Property key="Gibbs0" value="-103.9968" />
+      <Property key="Inchi" value="InChI=1S/C15H10O7/c1-22-15-8(18)4-5-9(14(15)21)13(20)11-7(17)3-2-6(16)10(11)12(5)19/h2-4,16-18,21H,1H3" />
+      <Property key="InchiKey" value="InChIKey=ZAFTVWGDFRXJAF-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="302.24" />
+      <Property key="MonoisotopicMw" value="302.04265267569997" />
+      <Property key="NonStandardInchi" value="InChI=1S/C15H10O7/c1-22-15-8(18)4-5-9(14(15)21)13(20)11-7(17)3-2-6(16)10(11)12(5)19/h2-4,16-18,21H,1H3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="COC1(/C(/O)=C\C2(\C(=O)C3(/C(/O)=C\C=C(C(\C(=O)C(/C(/O)=1)=2)=3)\O)))" />
+      <CitationRef elementRef="citation_PUB_14516002" />
+      <CitationRef elementRef="citation_PUB_11754943" />
+    </DataNode>
+    <DataNode elementId="CPD-9629" textLabel="1,7-dihydroxy-6,8-dimethoxy-2-methylanthraquinone" type="Metabolite">
+      <Xref identifier="UKUQUIGVHDWZRU-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1371.09228515625" centerY="567.6700439453125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-9629" />
+      <Property key="AlternativeId_Zinc" value="ZINC000014760789" />
+      <Property key="AlternativeId_Seed" value="cpd25767" />
+      <Property key="AlternativeId_Metanetx" value="MNXM32402" />
+      <Property key="AlternativeId_Chebi" value="548425" />
+      <Property key="AlternativeId_Pubchem" value="25202491" />
+      <Property key="ChemicalFormula" value="(C 17) (H 14) (O 6)" />
+      <Property key="Gibbs0" value="-10.412312" />
+      <Property key="Inchi" value="InChI=1S/C17H14O6/c1-7-4-5-8-11(13(7)18)16(21)12-9(14(8)19)6-10(22-2)15(20)17(12)23-3/h4-6,18,20H,1-3H3" />
+      <Property key="InchiKey" value="InChIKey=UKUQUIGVHDWZRU-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="314.294" />
+      <Property key="MonoisotopicMw" value="314.079038182" />
+      <Property key="NonStandardInchi" value="InChI=1S/C17H14O6/c1-7-4-5-8-11(13(7)18)16(21)12-9(14(8)19)6-10(22-2)15(20)17(12)23-3/h4-6,18,20H,1-3H3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC1(/C=C\C2(\C(=O)C3(/C=C(C(\O)=C(C(\C(=O)C(/C(/O)=1)=2)=3)\OC)/OC)))" />
+    </DataNode>
+    <DataNode elementId="CPD-9632" textLabel="1,4-dihydroxy-6,7,8-trimethoxy-2-methylanthraquinone" type="Metabolite">
+      <Xref identifier="SLVDBDKSOJEDSU-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="906.1542358398438" centerY="791.9630126953125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-9632" />
+      <Property key="AlternativeId_Zinc" value="ZINC000014647401" />
+      <Property key="AlternativeId_Seed" value="cpd25770" />
+      <Property key="AlternativeId_Metanetx" value="MNXM32357" />
+      <Property key="AlternativeId_Pubchem" value="25202715" />
+      <Property key="ChemicalFormula" value="(C 18) (H 16) (O 7)" />
+      <Property key="Gibbs0" value="-14.700064" />
+      <Property key="Inchi" value="InChI=1S/C18H16O7/c1-7-5-9(19)12-13(14(7)20)16(22)11-8(15(12)21)6-10(23-2)17(24-3)18(11)25-4/h5-6,19-20H,1-4H3" />
+      <Property key="InchiKey" value="InChIKey=SLVDBDKSOJEDSU-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="344.32" />
+      <Property key="MonoisotopicMw" value="344.0896028683" />
+      <Property key="NonStandardInchi" value="InChI=1S/C18H16O7/c1-7-5-9(19)12-13(14(7)20)16(22)11-8(15(12)21)6-10(23-2)17(24-3)18(11)25-4/h5-6,19-20H,1-4H3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC1(/C=C(C2(\C(=O)C3(/C=C(C(\OC)=C(C(\C(=O)C(/C(/O)=1)=2)=3)\OC)/OC)))/O)" />
+    </DataNode>
+    <DataNode elementId="CPD-9633" textLabel="1,4,5-trihydroxy-6,7,8-trimethoxy-2-methylanthraquinone" type="Metabolite">
+      <Xref identifier="MEHFFTKCQDPUMR-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="527.0133056640625" centerY="50.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-9633" />
+      <Property key="AlternativeId_Zinc" value="ZINC000059066511" />
+      <Property key="AlternativeId_Seed" value="cpd25771" />
+      <Property key="AlternativeId_Metanetx" value="MNXM32328" />
+      <Property key="AlternativeId_Pubchem" value="25203111" />
+      <Property key="ChemicalFormula" value="(C 18) (H 16) (O 8)" />
+      <Property key="Gibbs0" value="-54.18008" />
+      <Property key="Inchi" value="InChI=1S/C18H16O8/c1-6-5-7(19)8-9(12(6)20)14(22)11-10(13(8)21)15(23)17(25-3)18(26-4)16(11)24-2/h5,19-20,23H,1-4H3" />
+      <Property key="InchiKey" value="InChIKey=MEHFFTKCQDPUMR-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="360.32" />
+      <Property key="MonoisotopicMw" value="360.0845174904" />
+      <Property key="NonStandardInchi" value="InChI=1S/C18H16O8/c1-6-5-7(19)8-9(12(6)20)14(22)11-10(13(8)21)15(23)17(25-3)18(26-4)16(11)24-2/h5,19-20,23H,1-4H3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC1(/C=C(C2(\C(=O)C3(/C(/O)=C(C(\OC)=C(C(\C(=O)C(/C(/O)=1)=2)=3)\OC)/OC)))/O)" />
+    </DataNode>
+    <DataNode elementId="CPD-9631" textLabel="1,7-dihydroxy-5,6,8-trimethoxyanthraquinone" type="Metabolite">
+      <Xref identifier="MGRHBGCZDYUXJH-UHFFFAOYSA-M" dataSource="InChIKey" />
+      <Graphics centerX="1027.2471923828125" centerY="69.58975219726562" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-9631" />
+      <Property key="AlternativeId_Zinc" value="ZINC000014639480" />
+      <Property key="AlternativeId_Seed" value="cpd25769" />
+      <Property key="AlternativeId_Metanetx" value="MNXM32401" />
+      <Property key="AlternativeId_Pubchem" value="25202320" />
+      <Property key="ChemicalFormula" value="(C 17) (H 13) (O 7)" />
+      <Property key="AtomCharges" value="(21 -1)" />
+      <Property key="Gibbs0" value="-35.495495" />
+      <Property key="Inchi" value="InChI=1S/C17H14O7/c1-22-15-11-10(16(23-2)17(24-3)14(15)21)12(19)7-5-4-6-8(18)9(7)13(11)20/h4-6,18,21H,1-3H3/p-1" />
+      <Property key="InchiKey" value="InChIKey=MGRHBGCZDYUXJH-UHFFFAOYSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="329.285" />
+      <Property key="MonoisotopicMw" value="330.0739528041" />
+      <Property key="NonStandardInchi" value="InChI=1S/C17H14O7/c1-22-15-11-10(16(23-2)17(24-3)14(15)21)12(19)7-5-4-6-8(18)9(7)13(11)20/h4-6,18,21H,1-3H3/p-1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="COC1(/C2(/C(=O)C3(/C(/O)=C\C=C/C(/C(=O)C(/C(/OC)=C(C(\[O-])=1)/OC)=2)=3)))" />
+    </DataNode>
+    <DataNode elementId="CPD-9616" textLabel="robustaquinone B" type="Metabolite">
+      <Xref identifier="DQVJBPZRWJRGJO-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="747.5916137695312" centerY="492.33624267578125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>Eight anthraquinone derivatives were detected in a suspension culture of the tree |FRAME: TAX-43462| &quot;robusta&quot; after elicitation |CITS: [Schripsema99]|. They were named |FRAME: CPD-9615|, |FRAME: CPD-9616|, |FRAME: CPD-9617|, |FRAME: CPD-9618|, |FRAME: CPD-9619|, |FRAME: CPD-9620|, |FRAME: CPD-9621| and |FRAME: CPD-9622|. Out of those, |FRAME: CPD-9616| was identified as the major form |CITS: [14516002]|. The compounds were shown to be synthesized from |FRAME: DIHYDROXYNAPHTHOATE| and |FRAME: DELTA3-ISOPENTENYL-PP| that is produced via the |FRAME: PWY-7560 &quot;methylerythritol 4-phosphate pathway&quot;| |CITS: [11754943]|.</Comment>
+      <Property key="UniqueID" value="CPD-9616" />
+      <Property key="AlternativeId_Zinc" value="ZINC000059064928" />
+      <Property key="AlternativeId_Seed" value="cpd25753" />
+      <Property key="AlternativeId_Metanetx" value="MNXM81039" />
+      <Property key="AlternativeId_Pubchem" value="25200882" />
+      <Property key="Synonym_1" value="1-hydroxy-6,7-dimethoxy-2-methylanthraquinone" />
+      <Property key="ChemicalFormula" value="(C 17) (H 14) (O 6)" />
+      <Property key="Gibbs0" value="-10.412312" />
+      <Property key="Inchi" value="InChI=1S/C17H14O6/c1-7-4-10(18)13-14(15(7)19)17(21)9-6-12(23-3)11(22-2)5-8(9)16(13)20/h4-6,18-19H,1-3H3" />
+      <Property key="InchiKey" value="InChIKey=DQVJBPZRWJRGJO-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="314.294" />
+      <Property key="MonoisotopicMw" value="314.079038182" />
+      <Property key="NonStandardInchi" value="InChI=1S/C17H14O6/c1-7-4-10(18)13-14(15(7)19)17(21)9-6-12(23-3)11(22-2)5-8(9)16(13)20/h4-6,18-19H,1-3H3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC1(/C=C(C2(\C(=O)C3(\C(\C(=O)C(/C(/O)=1)=2)=C/C(/OC)=C(/C=3)/OC)))/O)" />
+      <CitationRef elementRef="citation_PUB_14516002" />
+      <CitationRef elementRef="citation_PUB_11754943" />
+    </DataNode>
+    <DataNode elementId="CPD-9615" textLabel="robustaquinone A" type="Metabolite">
+      <Xref identifier="BHXGNEJDWATDFR-UHFFFAOYSA-M" dataSource="InChIKey" />
+      <Graphics centerX="841.656494140625" centerY="734.0635375976562" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>Eight anthraquinone derivatives were detected in a suspension culture of the tree |FRAME: TAX-43462| &quot;robusta&quot; after elicitation |CITS: [Schripsema99]|. They were named |FRAME: CPD-9615|, |FRAME: CPD-9616|, |FRAME: CPD-9617|, |FRAME: CPD-9618|, |FRAME: CPD-9619|, |FRAME: CPD-9620|, |FRAME: CPD-9621| and |FRAME: CPD-9622|. Out of those, |FRAME: CPD-9616| was identified as the major form |CITS: [14516002]|. The compounds were shown to be synthesized from |FRAME: DIHYDROXYNAPHTHOATE| and |FRAME: DELTA3-ISOPENTENYL-PP| that is produced via the |FRAME: PWY-7560 &quot;methylerythritol 4-phosphate pathway&quot;| |CITS: [11754943]|.</Comment>
+      <Property key="UniqueID" value="CPD-9615" />
+      <Property key="AlternativeId_Chebi" value="192449" />
+      <Property key="AlternativeId_Zinc" value="ZINC000014647399" />
+      <Property key="AlternativeId_Seed" value="cpd25752" />
+      <Property key="AlternativeId_Metanetx" value="MNXM81038" />
+      <Property key="AlternativeId_Pubchem" value="25200504" />
+      <Property key="Synonym_1" value="1,4,7-trihydroxy-6,8-dimethoxy-2-methylanthraquinone" />
+      <Property key="ChemicalFormula" value="(C 17) (H 13) (O 7)" />
+      <Property key="AtomCharges" value="(21 -1)" />
+      <Property key="Gibbs0" value="-51.7755" />
+      <Property key="Inchi" value="InChI=1S/C17H14O7/c1-6-4-8(18)11-12(13(6)19)16(22)10-7(14(11)20)5-9(23-2)15(21)17(10)24-3/h4-5,18-19,21H,1-3H3/p-1" />
+      <Property key="InchiKey" value="InChIKey=BHXGNEJDWATDFR-UHFFFAOYSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="329.285" />
+      <Property key="MonoisotopicMw" value="330.0739528041" />
+      <Property key="NonStandardInchi" value="InChI=1S/C17H14O7/c1-6-4-8(18)11-12(13(6)19)16(22)10-7(14(11)20)5-9(23-2)15(21)17(10)24-3/h4-5,18-19,21H,1-3H3/p-1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC1(/C=C(C2(\C(=O)C3(/C=C(C(\[O-])=C(C(\C(=O)C(/C(/O)=1)=2)=3)\OC)/OC)))/O)" />
+      <CitationRef elementRef="citation_PUB_14516002" />
+      <CitationRef elementRef="citation_PUB_11754943" />
+    </DataNode>
+    <DataNode elementId="CPD-9626" textLabel="1,6,7,8-tetrahydroxy-2-methylanthraquinone" type="Metabolite">
+      <Xref identifier="AQEJBANJFDNKHW-UHFFFAOYSA-M" dataSource="InChIKey" />
+      <Graphics centerX="343.76123046875" centerY="1321.732421875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-9626" />
+      <Property key="AlternativeId_Zinc" value="ZINC000014760787" />
+      <Property key="AlternativeId_Seed" value="cpd25764" />
+      <Property key="AlternativeId_Metanetx" value="MNXM32384" />
+      <Property key="AlternativeId_Pubchem" value="25203423" />
+      <Property key="ChemicalFormula" value="(C 15) (H 9) (O 6)" />
+      <Property key="AtomCharges" value="(19 -1)" />
+      <Property key="Gibbs0" value="-82.67997" />
+      <Property key="Inchi" value="InChI=1S/C15H10O6/c1-5-2-3-6-9(11(5)17)14(20)10-7(12(6)18)4-8(16)13(19)15(10)21/h2-4,16-17,19,21H,1H3/p-1" />
+      <Property key="InchiKey" value="InChIKey=AQEJBANJFDNKHW-UHFFFAOYSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="285.232" />
+      <Property key="MonoisotopicMw" value="286.04773805359997" />
+      <Property key="NonStandardInchi" value="InChI=1S/C15H10O6/c1-5-2-3-6-9(11(5)17)14(20)10-7(12(6)18)4-8(16)13(19)15(10)21/h2-4,16-17,19,21H,1H3/p-1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC1(/C=C\C2(\C(=O)C3(/C=C(C(\[O-])=C(C(\C(=O)C(/C(/O)=1)=2)=3)\O)/O)))" />
+    </DataNode>
+    <DataNode elementId="CPD-9627" textLabel="1,6,8-trihydroxy-7-methoxy-2-methylanthraquinone" type="Metabolite">
+      <Xref identifier="HCRUWIGJIZVCAW-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1589.62646484375" centerY="979.3924560546875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-9627" />
+      <Property key="AlternativeId_Zinc" value="ZINC000059067128" />
+      <Property key="AlternativeId_Seed" value="cpd25765" />
+      <Property key="AlternativeId_Metanetx" value="MNXM32386" />
+      <Property key="AlternativeId_Pubchem" value="25203826" />
+      <Property key="ChemicalFormula" value="(C 16) (H 12) (O 6)" />
+      <Property key="Gibbs0" value="-45.60456" />
+      <Property key="Inchi" value="InChI=1S/C16H12O6/c1-6-3-4-7-10(12(6)18)14(20)11-8(13(7)19)5-9(17)16(22-2)15(11)21/h3-5,17-18,21H,1-2H3" />
+      <Property key="InchiKey" value="InChIKey=HCRUWIGJIZVCAW-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="300.267" />
+      <Property key="MonoisotopicMw" value="300.0633881178" />
+      <Property key="NonStandardInchi" value="InChI=1S/C16H12O6/c1-6-3-4-7-10(12(6)18)14(20)11-8(13(7)19)5-9(17)16(22-2)15(11)21/h3-5,17-18,21H,1-2H3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC1(/C=C\C2(\C(=O)C3(/C=C(C(\OC)=C(C(\C(=O)C(/C(/O)=1)=2)=3)\O)/O)))" />
+    </DataNode>
+    <DataNode elementId="CPD-9624" textLabel="1,3,8-trihydroxy-2-methoxyanthraquinone" type="Metabolite">
+      <Xref identifier="ITLMMMUIWDPRJK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1065.604736328125" centerY="784.5849609375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-9624" />
+      <Property key="AlternativeId_Zinc" value="ZINC000014725222" />
+      <Property key="AlternativeId_Seed" value="cpd25762" />
+      <Property key="AlternativeId_Metanetx" value="MNXM32251" />
+      <Property key="AlternativeId_Pubchem" value="25202463" />
+      <Property key="ChemicalFormula" value="(C 15) (H 10) (O 6)" />
+      <Property key="Gibbs0" value="-64.5168" />
+      <Property key="Inchi" value="InChI=1S/C15H10O6/c1-21-15-9(17)5-7-11(14(15)20)13(19)10-6(12(7)18)3-2-4-8(10)16/h2-5,16-17,20H,1H3" />
+      <Property key="InchiKey" value="InChIKey=ITLMMMUIWDPRJK-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="286.24" />
+      <Property key="MonoisotopicMw" value="286.04773805359997" />
+      <Property key="NonStandardInchi" value="InChI=1S/C15H10O6/c1-21-15-9(17)5-7-11(14(15)20)13(19)10-6(12(7)18)3-2-4-8(10)16/h2-5,16-17,20H,1H3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="COC1(/C(/O)=C\C2(\C(=O)C3(/C=C\C=C(C(\C(=O)C(/C(/O)=1)=2)=3)\O)))" />
+    </DataNode>
+    <DataNode elementId="CPD-9618" textLabel="robustaquinone D" type="Metabolite">
+      <Xref identifier="BVNMMZKNCPOEFW-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1600.0" centerY="223.7015380859375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>Eight anthraquinone derivatives were detected in a suspension culture of the tree |FRAME: TAX-43462| &quot;robusta&quot; after elicitation |CITS: [Schripsema99]|. They were named |FRAME: CPD-9615|, |FRAME: CPD-9616|, |FRAME: CPD-9617|, |FRAME: CPD-9618|, |FRAME: CPD-9619|, |FRAME: CPD-9620|, |FRAME: CPD-9621| and |FRAME: CPD-9622|. Out of those, |FRAME: CPD-9616| was identified as the major form |CITS: [14516002]|. The compounds were shown to be synthesized from |FRAME: DIHYDROXYNAPHTHOATE| and |FRAME: DELTA3-ISOPENTENYL-PP| that is produced via the |FRAME: PWY-7560 &quot;methylerythritol 4-phosphate pathway&quot;| |CITS: [11754943]|.</Comment>
+      <Property key="UniqueID" value="CPD-9618" />
+      <Property key="AlternativeId_Zinc" value="ZINC000014814393" />
+      <Property key="AlternativeId_Seed" value="cpd25755" />
+      <Property key="AlternativeId_Metanetx" value="MNXM81041" />
+      <Property key="AlternativeId_Pubchem" value="25201879" />
+      <Property key="Synonym_1" value="1,7-dihydroxy-6-methoxy-2-methylanthraquinone" />
+      <Property key="ChemicalFormula" value="(C 16) (H 12) (O 5)" />
+      <Property key="Gibbs0" value="-6.1245584" />
+      <Property key="Inchi" value="InChI=1S/C16H12O5/c1-7-3-4-8-13(14(7)18)16(20)9-5-11(17)12(21-2)6-10(9)15(8)19/h3-6,17-18H,1-2H3" />
+      <Property key="InchiKey" value="InChIKey=BVNMMZKNCPOEFW-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="284.268" />
+      <Property key="MonoisotopicMw" value="284.0684734957" />
+      <Property key="NonStandardInchi" value="InChI=1S/C16H12O5/c1-7-3-4-8-13(14(7)18)16(20)9-5-11(17)12(21-2)6-10(9)15(8)19/h3-6,17-18H,1-2H3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC1(/C=C\C2(\C(=O)C3(/C=C(C(/O)=C\C(\C(=O)C(/C(/O)=1)=2)=3)/OC)))" />
+      <CitationRef elementRef="citation_PUB_14516002" />
+      <CitationRef elementRef="citation_PUB_11754943" />
+    </DataNode>
+    <DataNode elementId="CPD-9623" textLabel="1,5,7-trihydroxy-6-methoxy-2-methylanthraquinone" type="Metabolite">
+      <Xref identifier="IUQAZAAMCAPINP-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="369.6741027832031" centerY="505.560546875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-9623" />
+      <Property key="AlternativeId_Zinc" value="ZINC000014760771" />
+      <Property key="AlternativeId_Seed" value="cpd25761" />
+      <Property key="AlternativeId_Metanetx" value="MNXM32372" />
+      <Property key="AlternativeId_Chemspider" value="8215992" />
+      <Property key="AlternativeId_Pubchem" value="10040428" />
+      <Property key="Synonym_1" value="copareolatin 6-methylether" />
+      <Property key="ChemicalFormula" value="(C 16) (H 12) (O 6)" />
+      <Property key="Gibbs0" value="-45.60456" />
+      <Property key="Inchi" value="InChI=1S/C16H12O6/c1-6-3-4-7-10(12(6)18)14(20)8-5-9(17)16(22-2)15(21)11(8)13(7)19/h3-5,17-18,21H,1-2H3" />
+      <Property key="InchiKey" value="InChIKey=IUQAZAAMCAPINP-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="300.267" />
+      <Property key="MonoisotopicMw" value="300.0633881178" />
+      <Property key="NonStandardInchi" value="InChI=1S/C16H12O6/c1-6-3-4-7-10(12(6)18)14(20)8-5-9(17)16(22-2)15(21)11(8)13(7)19/h3-5,17-18,21H,1-2H3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC1(/C=C\C2(\C(=O)C3(/C(/O)=C(C(/O)=C\C(\C(=O)C(/C(/O)=1)=2)=3)/OC)))" />
+    </DataNode>
+    <DataNode elementId="CPD-9619" textLabel="robustaquinone E" type="Metabolite">
+      <Xref identifier="DGUUJRSNOLQLSU-UHFFFAOYSA-M" dataSource="InChIKey" />
+      <Graphics centerX="719.9034423828125" centerY="1463.174072265625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>Eight anthraquinone derivatives were detected in a suspension culture of the tree |FRAME: TAX-43462| &quot;robusta&quot; after elicitation |CITS: [Schripsema99]|. They were named |FRAME: CPD-9615|, |FRAME: CPD-9616|, |FRAME: CPD-9617|, |FRAME: CPD-9618|, |FRAME: CPD-9619|, |FRAME: CPD-9620|, |FRAME: CPD-9621| and |FRAME: CPD-9622|. Out of those, |FRAME: CPD-9616| was identified as the major form |CITS: [14516002]|. The compounds were shown to be synthesized from |FRAME: DIHYDROXYNAPHTHOATE| and |FRAME: DELTA3-ISOPENTENYL-PP| that is produced via the |FRAME: PWY-7560 &quot;methylerythritol 4-phosphate pathway&quot;| |CITS: [11754943]|.</Comment>
+      <Property key="UniqueID" value="CPD-9619" />
+      <Property key="AlternativeId_Zinc" value="ZINC000014639494" />
+      <Property key="AlternativeId_Seed" value="cpd25756" />
+      <Property key="AlternativeId_Metanetx" value="MNXM81042" />
+      <Property key="AlternativeId_Pubchem" value="25202353" />
+      <Property key="Synonym_1" value="2,5,8-trihydroxy-1,3-dimethoxyanthraquinone" />
+      <Property key="ChemicalFormula" value="(C 16) (H 11) (O 7)" />
+      <Property key="AtomCharges" value="(20 -1)" />
+      <Property key="Gibbs0" value="-70.687744" />
+      <Property key="Inchi" value="InChI=1S/C16H12O7/c1-22-9-5-6-10(16(23-2)14(9)20)15(21)12-8(18)4-3-7(17)11(12)13(6)19/h3-5,17-18,20H,1-2H3/p-1" />
+      <Property key="InchiKey" value="InChIKey=DGUUJRSNOLQLSU-UHFFFAOYSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="315.259" />
+      <Property key="MonoisotopicMw" value="316.0583027399" />
+      <Property key="NonStandardInchi" value="InChI=1S/C16H12O7/c1-22-9-5-6-10(16(23-2)14(9)20)15(21)12-8(18)4-3-7(17)11(12)13(6)19/h3-5,17-18,20H,1-2H3/p-1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="COC1(\C(\[O-])=C(C2(\C(=O)C3(/C(/O)=C\C=C(C(\C(=O)C(/C=1)=2)=3)\O)))\OC)" />
+      <CitationRef elementRef="citation_PUB_14516002" />
+      <CitationRef elementRef="citation_PUB_11754943" />
+    </DataNode>
+    <DataNode elementId="CPD-9628" textLabel="1,7,8-trihydroxy-6-methoxy-2-methylanthraquinone" type="Metabolite">
+      <Xref identifier="ZSUQPNCHNPWHAQ-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1074.667724609375" centerY="1318.973876953125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-9628" />
+      <Property key="AlternativeId_Zinc" value="ZINC000059064599" />
+      <Property key="AlternativeId_Seed" value="cpd25766" />
+      <Property key="AlternativeId_Metanetx" value="MNXM32398" />
+      <Property key="AlternativeId_Pubchem" value="25200481" />
+      <Property key="ChemicalFormula" value="(C 16) (H 12) (O 6)" />
+      <Property key="Gibbs0" value="-45.60456" />
+      <Property key="Inchi" value="InChI=1S/C16H12O6/c1-6-3-4-7-10(12(6)17)15(20)11-8(13(7)18)5-9(22-2)14(19)16(11)21/h3-5,17,19,21H,1-2H3" />
+      <Property key="InchiKey" value="InChIKey=ZSUQPNCHNPWHAQ-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="300.267" />
+      <Property key="MonoisotopicMw" value="300.0633881178" />
+      <Property key="NonStandardInchi" value="InChI=1S/C16H12O6/c1-6-3-4-7-10(12(6)17)15(20)11-8(13(7)18)5-9(22-2)14(19)16(11)21/h3-5,17,19,21H,1-2H3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC1(/C=C\C2(\C(=O)C3(/C=C(C(\O)=C(C(\C(=O)C(/C(/O)=1)=2)=3)\O)/OC)))" />
+    </DataNode>
+    <DataNode elementId="CPD-9625" textLabel="1,6,7-trihydroxy-2-methylanthraquinone" type="Metabolite">
+      <Xref identifier="ZRTICYFZXFUPAO-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="100.0" centerY="862.7262573242188" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-9625" />
+      <Property key="AlternativeId_Zinc" value="ZINC000014814391" />
+      <Property key="AlternativeId_Seed" value="cpd25763" />
+      <Property key="AlternativeId_Metanetx" value="MNXM32385" />
+      <Property key="AlternativeId_Pubchem" value="25202820" />
+      <Property key="ChemicalFormula" value="(C 15) (H 10) (O 5)" />
+      <Property key="Gibbs0" value="-41.316803" />
+      <Property key="Inchi" value="InChI=1S/C15H10O5/c1-6-2-3-7-12(13(6)18)15(20)9-5-11(17)10(16)4-8(9)14(7)19/h2-5,16-18H,1H3" />
+      <Property key="InchiKey" value="InChIKey=ZRTICYFZXFUPAO-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="270.241" />
+      <Property key="MonoisotopicMw" value="270.0528234315" />
+      <Property key="NonStandardInchi" value="InChI=1S/C15H10O5/c1-6-2-3-7-12(13(6)18)15(20)9-5-11(17)10(16)4-8(9)14(7)19/h2-5,16-18H,1H3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC1(/C=C\C2(\C(=O)C3(/C=C(C(/O)=C\C(\C(=O)C(/C(/O)=1)=2)=3)/O)))" />
+    </DataNode>
+    <DataNode elementId="CPD-9622" textLabel="robustaquinone H" type="Metabolite">
+      <Xref identifier="SRUJKEFCIXYWDT-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="838.089111328125" centerY="935.685302734375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>Eight anthraquinone derivatives were detected in a suspension culture of the tree |FRAME: TAX-43462| &quot;robusta&quot; after elicitation |CITS: [Schripsema99]|. They were named |FRAME: CPD-9615|, |FRAME: CPD-9616|, |FRAME: CPD-9617|, |FRAME: CPD-9618|, |FRAME: CPD-9619|, |FRAME: CPD-9620|, |FRAME: CPD-9621| and |FRAME: CPD-9622|. Out of those, |FRAME: CPD-9616| was identified as the major form |CITS: [14516002]|. The compounds were shown to be synthesized from |FRAME: DIHYDROXYNAPHTHOATE| and |FRAME: DELTA3-ISOPENTENYL-PP| that is produced via the |FRAME: PWY-7560 &quot;methylerythritol 4-phosphate pathway&quot;| |CITS: [11754943]|.</Comment>
+      <Property key="UniqueID" value="CPD-9622" />
+      <Property key="AlternativeId_Zinc" value="ZINC000014639483" />
+      <Property key="AlternativeId_Seed" value="cpd25760" />
+      <Property key="AlternativeId_Metanetx" value="MNXM81045" />
+      <Property key="AlternativeId_Pubchem" value="25201000" />
+      <Property key="Synonym_1" value="5-hydroxy-1,2,3,4-tetramethoxyanthraquinone" />
+      <Property key="ChemicalFormula" value="(C 18) (H 16) (O 7)" />
+      <Property key="Gibbs0" value="1.5799412" />
+      <Property key="Inchi" value="InChI=1S/C18H16O7/c1-22-15-11-12(16(23-2)18(25-4)17(15)24-3)14(21)10-8(13(11)20)6-5-7-9(10)19/h5-7,19H,1-4H3" />
+      <Property key="InchiKey" value="InChIKey=SRUJKEFCIXYWDT-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="344.32" />
+      <Property key="MonoisotopicMw" value="344.0896028683" />
+      <Property key="NonStandardInchi" value="InChI=1S/C18H16O7/c1-22-15-11-12(16(23-2)18(25-4)17(15)24-3)14(21)10-8(13(11)20)6-5-7-9(10)19/h5-7,19H,1-4H3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="COC1(/C2(/C(=O)C3(/C=C\C=C(C(\C(=O)C(/C(/OC)=C(C(\OC)=1)/OC)=2)=3)\O)))" />
+      <CitationRef elementRef="citation_PUB_14516002" />
+      <CitationRef elementRef="citation_PUB_11754943" />
+    </DataNode>
+    <DataNode elementId="CPD-9621" textLabel="robustaquinone G" type="Metabolite">
+      <Xref identifier="JKXHMVHBYLVNJU-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1025.8199462890625" centerY="544.0452270507812" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>Eight anthraquinone derivatives were detected in a suspension culture of the tree |FRAME: TAX-43462| &quot;robusta&quot; after elicitation |CITS: [Schripsema99]|. They were named |FRAME: CPD-9615|, |FRAME: CPD-9616|, |FRAME: CPD-9617|, |FRAME: CPD-9618|, |FRAME: CPD-9619|, |FRAME: CPD-9620|, |FRAME: CPD-9621| and |FRAME: CPD-9622|. Out of those, |FRAME: CPD-9616| was identified as the major form |CITS: [14516002]|. The compounds were shown to be synthesized from |FRAME: DIHYDROXYNAPHTHOATE| and |FRAME: DELTA3-ISOPENTENYL-PP| that is produced via the |FRAME: PWY-7560 &quot;methylerythritol 4-phosphate pathway&quot;| |CITS: [11754943]|.</Comment>
+      <Property key="UniqueID" value="CPD-9621" />
+      <Property key="AlternativeId_Zinc" value="ZINC000014437931" />
+      <Property key="AlternativeId_Seed" value="cpd25759" />
+      <Property key="AlternativeId_Metanetx" value="MNXM81044" />
+      <Property key="AlternativeId_Pubchem" value="25200478" />
+      <Property key="Synonym_1" value="1,4-dihydroxy-7,8-dimethoxy-2-methyl-5,6-methylenedioxyanthraquinone" />
+      <Property key="ChemicalFormula" value="(C 18) (H 14) (O 8)" />
+      <Property key="Gibbs0" value="-76.75232" />
+      <Property key="Inchi" value="InChI=1S/C18H14O8/c1-6-4-7(19)8-9(12(6)20)14(22)10-11(13(8)21)16-18(26-5-25-16)17(24-3)15(10)23-2/h4,19-20H,5H2,1-3H3" />
+      <Property key="InchiKey" value="InChIKey=JKXHMVHBYLVNJU-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="358.304" />
+      <Property key="MonoisotopicMw" value="358.0688674262" />
+      <Property key="NonStandardInchi" value="InChI=1S/C18H14O8/c1-6-4-7(19)8-9(12(6)20)14(22)10-11(13(8)21)16-18(26-5-25-16)17(24-3)15(10)23-2/h4,19-20H,5H2,1-3H3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC1(/C=C(C2(\C(=O)C3(/C4(/OCOC(/C(/OC)=C(C(\C(=O)C(/C(/O)=1)=2)=3)/OC)=4))))/O)" />
+      <CitationRef elementRef="citation_PUB_14516002" />
+      <CitationRef elementRef="citation_PUB_11754943" />
+    </DataNode>
+    <DataNode elementId="CPD-9617" textLabel="robustaquinone C" type="Metabolite">
+      <Xref identifier="FSJQILFEYGANSZ-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1060.599609375" centerY="1004.3284912109375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>Eight anthraquinone derivatives were detected in a suspension culture of the tree |FRAME: TAX-43462| &quot;robusta&quot; after elicitation |CITS: [Schripsema99]|. They were named |FRAME: CPD-9615|, |FRAME: CPD-9616|, |FRAME: CPD-9617|, |FRAME: CPD-9618|, |FRAME: CPD-9619|, |FRAME: CPD-9620|, |FRAME: CPD-9621| and |FRAME: CPD-9622|. Out of those, |FRAME: CPD-9616| was identified as the major form |CITS: [14516002]|. The compounds were shown to be synthesized from |FRAME: DIHYDROXYNAPHTHOATE| and |FRAME: DELTA3-ISOPENTENYL-PP| that is produced via the |FRAME: PWY-7560 &quot;methylerythritol 4-phosphate pathway&quot;| |CITS: [11754943]|.</Comment>
+      <Property key="UniqueID" value="CPD-9617" />
+      <Property key="AlternativeId_Zinc" value="ZINC000014725224" />
+      <Property key="AlternativeId_Seed" value="cpd25754" />
+      <Property key="AlternativeId_Metanetx" value="MNXM81040" />
+      <Property key="AlternativeId_Pubchem" value="25202864" />
+      <Property key="Synonym_1" value="2,8-dihydroxy-1,3-dimethoxyanthraquinone" />
+      <Property key="ChemicalFormula" value="(C 16) (H 12) (O 6)" />
+      <Property key="Gibbs0" value="-29.324556" />
+      <Property key="Inchi" value="InChI=1S/C16H12O6/c1-21-10-6-8-12(16(22-2)14(10)19)15(20)11-7(13(8)18)4-3-5-9(11)17/h3-6,17,19H,1-2H3" />
+      <Property key="InchiKey" value="InChIKey=FSJQILFEYGANSZ-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="300.267" />
+      <Property key="MonoisotopicMw" value="300.0633881178" />
+      <Property key="NonStandardInchi" value="InChI=1S/C16H12O6/c1-21-10-6-8-12(16(22-2)14(10)19)15(20)11-7(13(8)18)4-3-5-9(11)17/h3-6,17,19H,1-2H3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="COC1(\C(\O)=C(C2(\C(=O)C3(/C(/O)=C\C=C/C(/C(=O)C(/C=1)=2)=3)))\OC)" />
+      <CitationRef elementRef="citation_PUB_14516002" />
+      <CitationRef elementRef="citation_PUB_11754943" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="RXN-9121">
+      <Xref identifier="RXN-9121" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9121_start" x="1645.0" y="223.7015380859375" elementRef="CPD-9618" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9121_end" arrowHead="Conversion" x="702.5916137695312" y="492.33624267578125" elementRef="CPD-9616" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9121_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9121" />
+      <Property key="Pathways" value="PWY-5809" />
+      <Property key="ReactionEquation" value="CPD-9618 =&gt; CPD-9616" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-9122">
+      <Xref identifier="RXN-9122" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9122_start" x="1645.0" y="223.7015380859375" elementRef="CPD-9618" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9122_end" arrowHead="Conversion" x="324.6741027832031" y="505.560546875" elementRef="CPD-9623" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9122_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9122" />
+      <Property key="Pathways" value="PWY-5809" />
+      <Property key="ReactionEquation" value="CPD-9618 =&gt; CPD-9623" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-9123">
+      <Xref identifier="RXN-9123" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9123_start" x="1416.09228515625" y="567.6700439453125" elementRef="CPD-9629" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9123_end" arrowHead="Conversion" x="1015.599609375" y="1004.3284912109375" elementRef="CPD-9617" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9123_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9123" />
+      <Property key="Pathways" value="PWY-5809" />
+      <Property key="ReactionEquation" value="CPD-9629 =&gt; CPD-9617" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-9124">
+      <Xref identifier="RXN-9124" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9124_start" x="1105.599609375" y="1004.3284912109375" elementRef="CPD-9617" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9124_end" arrowHead="Conversion" x="1351.7005615234375" y="1550.0" elementRef="CPD-9630" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9124_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9124" />
+      <Property key="Pathways" value="PWY-5809" />
+      <Property key="ReactionEquation" value="CPD-9617 =&gt; CPD-9630" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-9125">
+      <Xref identifier="RXN-9125" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9125_start" x="1105.599609375" y="1004.3284912109375" elementRef="CPD-9617" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9125_end" arrowHead="Conversion" x="674.9034423828125" y="1463.174072265625" elementRef="CPD-9619" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9125_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9125" />
+      <Property key="Pathways" value="PWY-5809" />
+      <Property key="ReactionEquation" value="CPD-9617 =&gt; CPD-9619" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-9126">
+      <Xref identifier="RXN-9126" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9126_start" x="886.656494140625" y="734.0635375976562" elementRef="CPD-9615" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9126_end" arrowHead="Conversion" x="674.9034423828125" y="1463.174072265625" elementRef="CPD-9619" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9126_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9126" />
+      <Property key="Pathways" value="PWY-5809" />
+      <Property key="ReactionEquation" value="CPD-9615 =&gt; CPD-9619" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-9120">
+      <Xref identifier="RXN-9120" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9120_start" x="572.0133056640625" y="50.0" elementRef="CPD-9633" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9120_end" arrowHead="Conversion" x="980.8199462890625" y="544.0452270507812" elementRef="CPD-9621" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9120_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9120" />
+      <Property key="Pathways" value="PWY-5809" />
+      <Property key="ReactionEquation" value="CPD-9633 =&gt; CPD-9621" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-9119">
+      <Xref identifier="RXN-9119" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9119_start" x="951.1542358398438" y="791.9630126953125" elementRef="CPD-9632" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9119_end" arrowHead="Conversion" x="482.0133056640625" y="50.0" elementRef="CPD-9633" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9119_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9119" />
+      <Property key="Pathways" value="PWY-5809" />
+      <Property key="ReactionEquation" value="CPD-9632 =&gt; CPD-9633" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-9118">
+      <Xref identifier="RXN-9118" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9118_start" x="886.656494140625" y="734.0635375976562" elementRef="CPD-9615" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9118_end" arrowHead="Conversion" x="861.1542358398438" y="791.9630126953125" elementRef="CPD-9632" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9118_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9118" />
+      <Property key="Pathways" value="PWY-5809" />
+      <Property key="ReactionEquation" value="CPD-9615 =&gt; CPD-9632" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-9117">
+      <Xref identifier="RXN-9117" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9117_start" x="1416.09228515625" y="567.6700439453125" elementRef="CPD-9629" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9117_end" arrowHead="Conversion" x="796.656494140625" y="734.0635375976562" elementRef="CPD-9615" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9117_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9117" />
+      <Property key="Pathways" value="PWY-5809" />
+      <Property key="ReactionEquation" value="CPD-9629 =&gt; CPD-9615" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-9116">
+      <Xref identifier="RXN-9116" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9116_start" x="1119.667724609375" y="1318.973876953125" elementRef="CPD-9628" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9116_end" arrowHead="Conversion" x="1326.09228515625" y="567.6700439453125" elementRef="CPD-9629" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9116_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9116" />
+      <Property key="Pathways" value="PWY-5809" />
+      <Property key="ReactionEquation" value="CPD-9628 =&gt; CPD-9629" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-9115">
+      <Xref identifier="RXN-9115" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9115_start" x="1645.0" y="223.7015380859375" elementRef="CPD-9618" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9115_end" arrowHead="Conversion" x="1029.667724609375" y="1318.973876953125" elementRef="CPD-9628" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9115_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9115" />
+      <Property key="Pathways" value="PWY-5809" />
+      <Property key="ReactionEquation" value="CPD-9618 =&gt; CPD-9628" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-9114">
+      <Xref identifier="RXN-9114" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9114_start" x="145.0" y="862.7262573242188" elementRef="CPD-9625" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9114_end" arrowHead="Conversion" x="1555.0" y="223.7015380859375" elementRef="CPD-9618" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9114_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9114" />
+      <Property key="Pathways" value="PWY-5809" />
+      <Property key="ReactionEquation" value="CPD-9625 =&gt; CPD-9618" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-9113">
+      <Xref identifier="RXN-9113" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9113_start" x="1072.2471923828125" y="69.58975219726562" elementRef="CPD-9631" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9113_end" arrowHead="Conversion" x="793.089111328125" y="935.685302734375" elementRef="CPD-9622" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9113_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9113" />
+      <Property key="Pathways" value="PWY-5809" />
+      <Property key="ReactionEquation" value="CPD-9631 =&gt; CPD-9622" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-9112">
+      <Xref identifier="RXN-9112" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9112_start" x="1441.7005615234375" y="1550.0" elementRef="CPD-9630" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9112_end" arrowHead="Conversion" x="982.2471923828125" y="69.58975219726562" elementRef="CPD-9631" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9112_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9112" />
+      <Property key="Pathways" value="PWY-5809" />
+      <Property key="ReactionEquation" value="CPD-9630 =&gt; CPD-9631" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-9111">
+      <Xref identifier="RXN-9111" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9111_start" x="637.0474853515625" y="887.57861328125" elementRef="CPD-9620" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9111_end" arrowHead="Conversion" x="1351.7005615234375" y="1550.0" elementRef="CPD-9630" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9111_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9111" />
+      <Property key="Pathways" value="PWY-5809" />
+      <Property key="ReactionEquation" value="CPD-9620 =&gt; CPD-9630" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-9110">
+      <Xref identifier="RXN-9110" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9110_start" x="1110.604736328125" y="784.5849609375" elementRef="CPD-9624" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9110_end" arrowHead="Conversion" x="547.0474853515625" y="887.57861328125" elementRef="CPD-9620" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9110_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9110" />
+      <Property key="Pathways" value="PWY-5809" />
+      <Property key="ReactionEquation" value="CPD-9624 =&gt; CPD-9620" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-9109">
+      <Xref identifier="RXN-9109" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9109_start" x="1634.62646484375" y="979.3924560546875" elementRef="CPD-9627" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9109_end" arrowHead="Conversion" x="1020.604736328125" y="784.5849609375" elementRef="CPD-9624" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9109_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9109" />
+      <Property key="Pathways" value="PWY-5809" />
+      <Property key="ReactionEquation" value="CPD-9627 =&gt; CPD-9624" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-9108">
+      <Xref identifier="RXN-9108" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9108_start" x="388.76123046875" y="1321.732421875" elementRef="CPD-9626" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9108_end" arrowHead="Conversion" x="1544.62646484375" y="979.3924560546875" elementRef="CPD-9627" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9108_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9108" />
+      <Property key="Pathways" value="PWY-5809" />
+      <Property key="ReactionEquation" value="CPD-9626 =&gt; CPD-9627" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-9107">
+      <Xref identifier="RXN-9107" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9107_start" x="145.0" y="862.7262573242188" elementRef="CPD-9625" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9107_end" arrowHead="Conversion" x="298.76123046875" y="1321.732421875" elementRef="CPD-9626" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9107_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9107" />
+      <Property key="Pathways" value="PWY-5809" />
+      <Property key="ReactionEquation" value="CPD-9625 =&gt; CPD-9626" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_PUB_14516002">
+      <Xref identifier="14516002" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_SCHRIPSEMA99">
+      <Xref identifier="PUB-SCHRIPSEMA99 | Robustaquinones, novel anthraquinones from an elicited Cinchona robusta suspension culture (Schripsema, Jan, Ramos-Valdivia, Ana, Verpoorte, Robert, 1999)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_PUB_11754943">
+      <Xref identifier="11754943" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

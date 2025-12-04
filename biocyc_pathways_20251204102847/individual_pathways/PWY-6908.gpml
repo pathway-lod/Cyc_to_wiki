@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="thiamine pyrophosphate biosynthesis IV (eukaryotes)" organism="Arabidopsis thaliana" source="PlantCyc" version="20251204102847">
+  <Description>&lt;b&gt;General Background&lt;/b&gt; |FRAME: THIAMINE-PYROPHOSPHATE &quot;Thiamine diphosphate&quot;|, also known as vitamin B1, is known to play a fundamental role in energy metabolism. It is an essential cofactor for a variety of enzymes such as |FRAME: TRANSKETOI-CPLX transketolase|, |FRAME: PYRUVATEDEH-CPLX &quot;pyruvate dehydrogenase&quot;|, |FRAME: CPLX3O-118 &quot;pyruvate decarboxylase&quot;|, and |FRAME: CPLX66-42 &quot;&amp;alpha;-ketoglutarate dehydrogenase&quot;| |CITS:[15326535]|. Its discovery followed from the original early research on the anti-beriberi factor found in rice bran. Beriberi, a neurological disease, was particularly prevalent in Asia, where the refining of rice resulted in the removal of the thiamine-containing husk |CITS: [Begley96]|. Thiamine is synthesized &lt;i&gt;de novo&lt;/i&gt; by microorganisms, plants and some lower eukaryotes (e.g. |FRAME: TAX-5820 &lt;i&gt;Plasmodium &lt;genus&gt;&lt;/i&gt;|), but not by higher eukaryotes, which must obtain it through their diet. &lt;b&gt;About This Pathway&lt;/b&gt; Thiamine biosynthesis is composed of the separate formation of the pyrimidine and thiazole moieties, which are subsequently coupled to form |FRAME: THIAMINE-P thiamine phosphate| (see |FRAME: PWY-6893 thiamine diphosphate biosynthesis II (Bacillus)|). This pathway describes the last part of the thiamine biosynthesis pathway in |FRAME: TAX-1280 &lt;i&gt;Staphylococcus aureus&lt;/i&gt;| - the coupling of the two moieties of thiamine, the thiazole and the pyrimidine, forming |FRAME: THIAMINE-P thiamine phosphate|, and its phosphorylation to the biologically active form, |FRAME: THIAMINE-PYROPHOSPHATE thiamine diphosphate|. While most bacteria achieve this phosphorylation in a single step, catalyzed by |FRAME: THI-P-KIN-MONOMER thiamine monophosphate kinase| (|FRAME: G6234 thiL|) (see |FRAME: PWY-6893 thiamine diphosphate biosynthesis II (Bacillus)|), eukaryotes lack that enzyme and instead utilize a pathway where |FRAME: THIAMINE-P thiamine phosphate| is first dephosphorylated to |FRAME: THIAMINE thiamine|, which is then diphosphorylated to |FRAME: THIAMINE-PYROPHOSPHATE thiamine diphosphate| (see |FRAME: THISYNARA-PWY superpathway of thiamine diphosphate biosynthesis III (eukaryotes)|) |CITS: [19888457]|. The first step in this pathway is catalyzed in Arabidopsis by the TH1 gene product, a multifunctional, chloroplast-localized protein capable of catalyzing several sequential steps in thiamine (vitamin B1) biosynthesis |CITS: [17174261] [16666289]|. The next step, |FRAME: AT4G29530-MONOMER &quot;Thiamine phosphate phosphatase&quot;|, has been detected in partially purified Arabidopsis extracts, and was associated with a low molecular weight (~10 kD) protein |CITS: [16666289]|. However, the exact identity of this enzyme is still not known. The last step in the pathway is catalyzed in Arabidopsis by two similar cytosolic proteins, |FRAME: AT1G02880 TPK1| and |FRAME: AT2G44750 TPK2| |CITS: 17611796|. The subcellular compartmentalization of thiamine biosynthesis is a subject of on-going investigation. While the Arabidopsis proteins TH1, ThiC, and TH1, which catalyze the early parts of the pathway, all localize to the chloroplasts |CITS:[18048325][18332905][17174261][11575719]|, the downstream TPK1 and TPK2 enzymes are both cytosolic in Arabidopsis |CITS:[17611796]|, suggesting that intermediates in the vitamin B1 biosynthesis pathway may need to be transported out of organelles for TPP synthesis to be completed.</Description>
+  <Authors>
+    <Author name="xue" />
+    <Author name="SRI" />
+    <Author name="caspi" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-6908" />
+  <Property key="Type" value="Thiamin-Diphosphate-Biosynthesis" />
+  <Property key="ReactionCount" value="3" />
+  <Property key="ReactionIDs" value="THIAMIN-PYROPHOSPHOKINASE-RXN, RXNQT-4191, THI-P-SYN-RXN" />
+  <Property key="PredecessorCount" value="2" />
+  <Property key="PathwayLinks" value="(THZ-P PWY-6909), (AMINO-HYDROXYMETHYL-METHYLPYRIMIDINE-PP PWY-6890)" />
+  <Property key="Organism" value="Arabidopsis thaliana" />
+  <Property key="TaxonomicRange_1" value="Fungi" />
+  <Property key="TaxonomicRange_2" value="Alveolata" />
+  <Property key="TaxonomicRange_3" value="Viridiplantae" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_PUB_16666289" />
+  <CitationRef elementRef="citation_PUB_1761179" />
+  <CitationRef elementRef="citation_PUB_15326535" />
+  <CitationRef elementRef="citation_PUB_19888457" />
+  <CitationRef elementRef="citation_PUB_17611796" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="AT4G29530" textLabel="AT4G29530" type="GeneProduct">
+      <Xref identifier="AT4G29530" dataSource="TAIR" />
+      <Graphics centerX="800.7243041992188" centerY="889.1871948242188" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT4G29530" />
+      <Property key="Product" value="AT4G29530-MONOMER" />
+      <Property key="StartPosition" value="14496085" />
+      <Property key="EndPosition" value="14497460" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+      <Property key="Accession1" value="AT4G29530" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="GDQC-110335" textLabel="Zm00001d041829" type="GeneProduct">
+      <Xref identifier="GDQC-110335" dataSource="plantcyc" />
+      <Graphics centerX="553.8650512695312" centerY="996.6583251953125" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="GDQC-110335" />
+      <Property key="Synonym_1" value="thiamine synthesis3" />
+      <Property key="Product" value="GDQC-110335-MONOMER" />
+      <Property key="StartPosition" value="139490055" />
+      <Property key="EndPosition" value="139496394" />
+      <Property key="GeneType" value="ORFs" />
+      <Property key="Accession1" value="Zm00001d041829" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="AT1G02880" textLabel="TPK1" type="GeneProduct">
+      <Xref identifier="AT1G02880" dataSource="TAIR" />
+      <Graphics centerX="170.6962890625" centerY="381.95477294921875" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT1G02880" />
+      <Property key="Synonym_1" value="AtTPK1" />
+      <Property key="Synonym_2" value="Thiamine pyrophosphokinase" />
+      <Property key="Product" value="AT1G02880-MONOMER" />
+      <Property key="StartPosition" value="642752" />
+      <Property key="EndPosition" value="644903" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+      <Property key="Accession1" value="AT1G02880" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="AT1G22940" textLabel="TH1" type="GeneProduct">
+      <Xref identifier="AT1G22940" dataSource="TAIR" />
+      <Graphics centerX="1600.0" centerY="906.1676025390625" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT1G22940" />
+      <Property key="Synonym_1" value="TH-1" />
+      <Property key="Product" value="AT1G22940-MONOMER" />
+      <Property key="StartPosition" value="8122340" />
+      <Property key="EndPosition" value="8125057" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+      <Property key="Accession1" value="AT1G22940" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="AT2G44750" textLabel="TPK2" type="GeneProduct">
+      <Xref identifier="AT2G44750" dataSource="TAIR" />
+      <Graphics centerX="1506.3275146484375" centerY="358.9354248046875" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT2G44750" />
+      <Property key="Synonym_1" value="AtTPK2" />
+      <Property key="Synonym_2" value="Thiamine pyrophosphokinase 2" />
+      <Property key="Product" value="AT2G44750-MONOMER" />
+      <Property key="StartPosition" value="18458501" />
+      <Property key="EndPosition" value="18459950" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+      <Property key="Accession1" value="AT2G44750" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="AT1G22940-MONOMER" textLabel="HMP-P kinase//thiamin-monophosphate pyrophosphorylase" type="Protein">
+      <Xref identifier="Q5M731" dataSource="uniprot" />
+      <Graphics centerX="1002.8707275390625" centerY="1515.4193115234375" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, THE-ARABIDOPSIS-INFORMATION-RESOURCE, dreher">The TH1 gene encodes a multifunctional, chloroplast-localized protein capable of catalyzing several sequential steps in thiamine (vitamin B1) biosynthesis |CITS: [17174261]|. First, it leads to the production of |FRAME:AMINO-HYDROXYMETHYL-METHYLPYRIMIDINE-PP| (HMP-PP) the pyrimidine heterocyclic subunit of thiamine. Then it catalyzes the condensation of HMP-PP and |FRAME:THZ-P| (HET-P) to form |FRAME: THIAMINE-P| (TMP) |CITS: [17174261] [16666289]|. TH1 can also phosphorylate |FRAME:HMP| (HMP), to generate HMP-P |CITS: [17174261]|, but the biological relevance of this reaction remains unknown because the THIC enzyme can produce HMP-P directly from the |FRAME: 5-PHOSPHORIBOSYL-5-AMINOIMIDAZOLE| (AIR) precursor |CITS:[15326535]|. &lt;i&gt; th1&lt;/i&gt; mutants are thiamine auxotrophs that remain incapable of producing TMP even when supplied with exogenous HMP-PP or HET-P |CITS: [16666289], [17174261]|. Because vitamin B1 is a required cofactor for many enzymes involved in primary metabolism, TH1, a single copy enzyme, is essential for viability. TH1 in Arabidopsis and other plants |CITS:[9700068]| differs from related biosynthetic enzymes in &lt;i&gt;E.coli&lt;/i&gt; and yeast. Three different proteins provide the comparable kinase (PdxK, ThiD) and pyrophosphorylase (ThiE) activities in E.coli (rev. in |CITS:[10382260]|). Meanwhile, &lt;i&gt;S. cerevisiae&lt;/i&gt; has a bifunctional enzyme, but, instead of combining an N-terminal HMP-P kinase and with a C-terminal TMPPase activity like TH1 |CITS:[9700068]|, the yeast enzyme (Thi6) brings together an N-terminal TMPPase activity with a C-terminal HET kinase activity (rev in |CITS:[16826377]|). TMPPase activity was first associated with a ~100 kD peak isolated purified from Arabidopsis extracts using gel filtration |CITS: [16666289]|, but the predicted molecular weight of the TH1 monomer is ~56 kD. Studies on the &lt;i&gt;Zea mays&lt;/i&gt; homolog &lt;i&gt;thi3&lt;/i&gt; suggest that it may exist as a dimer |CITS: [17696876]|. Further experiments will be needed to determine whether TH1 is enzymatically active as a monomer or part of a complex.</Comment>
+      <Property key="UniqueID" value="AT1G22940-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT1G22940.1" />
+      <Property key="AlternativeId_Uniprot" value="Q5M731" />
+      <Property key="AlternativeId_Tair" value="AT1G22940" />
+      <Property key="Synonym_1" value="HMP-P kinase" />
+      <Property key="Catalyzes" value="RXN-ARA-497, RXN-4615, RXN-10745" />
+      <Property key="CatalyzesCount" value="3" />
+      <Property key="GOTerms" value="GO:0009507" />
+      <Property key="Accession1" value="AT1G22940.1" />
+      <Property key="Gene" value="AT1G22940" />
+      <Property key="^citations" value="17174261" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Locations" value="CCO-CHLOROPLAST" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_17174261" />
+      <CitationRef elementRef="citation_PUB_15326535" />
+      <CitationRef elementRef="citation_PUB_9700068" />
+      <CitationRef elementRef="citation_PUB_10382260" />
+      <CitationRef elementRef="citation_PUB_16826377" />
+      <CitationRef elementRef="citation_PUB_16666289" />
+      <CitationRef elementRef="citation_PUB_17696876" />
+    </DataNode>
+    <DataNode elementId="AT4G29530-MONOMER" textLabel="catalytic" type="Protein">
+      <Xref identifier="Q9SU92" dataSource="uniprot" />
+      <Graphics centerX="824.8077392578125" centerY="807.488525390625" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">TMP phosphatase activity has been detected in partially purified Arabidopsis extracts. Gel filtration fractionation indicates that the protein associated with this activity has a low molecular weight (~10 kD) |CITS: [16666289 ]|.</Comment>
+      <Property key="UniqueID" value="AT4G29530-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT4G29530.1" />
+      <Property key="AlternativeId_Uniprot" value="Q9SU92" />
+      <Property key="Catalyzes" value="RXN-10746" />
+      <Property key="Accession1" value="AT4G29530.1" />
+      <Property key="Gene" value="AT4G29530" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="MolecularWeightExp" value="10." />
+      <Property key="MolecularWeightKd" value="10." />
+      <Property key="Species" value="ORG-5993" />
+    </DataNode>
+    <DataNode elementId="AT2G44750-MONOMER" textLabel="AT2G44750-MONOMER" type="Protein">
+      <Xref identifier="AT2G44750" dataSource="TAIR" />
+      <Graphics centerX="611.5606079101562" centerY="460.34515380859375" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, dreher, THE-ARABIDOPSIS-INFORMATION-RESOURCE, zhang">TPK2 is a cytosolic protein capable converting thiamine to TPP, the active form of vitamin B1 |CITS: 17611796|. A close homolog, TPK1 (see |FRAME:AT1G02880-MONOMER|), performs a redundant function in Arabidopsis. Knocking out either one of these enzymes individually does not affect plant growth and development. But, plants that lack both TPK1 and TPK2 are thiamin auxotrophs that have a seedling lethal phenotype on unsupplemented media |CITS: 17611796|. TPK1 and TPK2 are both active in the pH range of 6-8, with optimal activity at pH 7. TPK1 (45 &amp;deg; C) has a higher optimal temperature than TPK2 (37 &amp;deg; C), and TPK1 can also withstand higher temperatures than TPK2, which completely loses activity by 50 &amp;deg; C. TPK1 (Km = 0.96 &amp;mu;m) has a slightly higher affinity for free thiamine than TPK2 (Km = 1.28 &amp;mu;m), but a slightly lower Vmax (8.4 vs. 9.6 pmol/sec). Neither enzyme has thiamine kinase activity, since they do not form |FRAME:THIAMINE-P| in the presence of thiamine. They also do not phosphorylate TMP confirming that thiamine is their preferred substrate and that they add a diphosphate to it |CITS: 17611796|. TPK1 and TPK2 show relatively similar mRNA expression patterns, with the highest level of expression in leaves. But, TPK1 is expressed at a notably higher level than TPK2 in the roots |CITS: 17611796|.</Comment>
+      <Property key="UniqueID" value="AT2G44750-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT2G44750.2" />
+      <Property key="AlternativeId_Tair" value="AT2G44750" />
+      <Property key="Catalyzes" value="RXN-6993" />
+      <Property key="GOTerms" value="GO:0005829" />
+      <Property key="Accession1" value="AT2G44750.2" />
+      <Property key="FunctionalAssignmentStatus" value=":PROBABLE-ENZYME" />
+      <Property key="Gene" value="AT2G44750" />
+      <Property key="^citations" value="17611796" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Locations" value="CCO-CYTOSOL" />
+      <Property key="Species" value="ORG-5993" />
+    </DataNode>
+    <DataNode elementId="AT1G02880-MONOMER" textLabel="AT1G02880-MONOMER" type="Protein">
+      <Xref identifier="AT1G02880" dataSource="TAIR" />
+      <Graphics centerX="962.61669921875" centerY="491.9170837402344" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, dreher, THE-ARABIDOPSIS-INFORMATION-RESOURCE, zhang">TPK1 is a cytosolic protein capable converting thiamine to TPP, the active form of vitamin B1 |CITS: 17611796|. A close homolog, TPK2 (see |FRAME:AT2G44750-MONOMER|), performs a redundant function in Arabidopsis. Knocking out either one of these enzymes individually does not affect plant growth and development. But, plants that lack both TPK1 and TPK2 are thiamin auxotrophs that have a seedling lethal phenotype on unsupplemented media |CITS: 17611796|. TPK1 and TPK2 are both active in the pH range of 6-8, with optimal activity at pH 7. TPK1 (45 &amp;deg; C) has a higher optimal temperature than TPK2 (37 &amp;deg; C), and TPK1 can also withstand higher temperatures than TPK2, which completely loses activity by 50 &amp;deg; C. TPK1 (Km = 0.96 &amp;mu;m) has a slightly higher affinity for free thiamine than TPK2 (Km = 1.28 &amp;mu;m), but a slightly lower Vmax (8.4 vs. 9.6 pmol/sec). Neither enzyme has thiamine kinase activity, since they do not form |FRAME:THIAMINE-P| in the presence of thiamine. They also do not phosphorylate TMP confirming that thiamine is their preferred substrate and that they add a diphosphate to it |CITS: 17611796|. TPK1 and TPK2 show relatively similar mRNA expression patterns, with the highest level of expression in leaves. But, TPK1 is expressed at a notably higher level than TPK2 in the roots |CITS: 17611796|.</Comment>
+      <Property key="UniqueID" value="AT1G02880-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT1G02880.6" />
+      <Property key="AlternativeId_Tair" value="AT1G02880" />
+      <Property key="Synonym_1" value="AT1G02880.6" />
+      <Property key="Catalyzes" value="RXN-7161" />
+      <Property key="GOTerms" value="GO:0005829" />
+      <Property key="Accession1" value="AT1G02880.6" />
+      <Property key="FunctionalAssignmentStatus" value=":PROBABLE-ENZYME" />
+      <Property key="Gene" value="AT1G02880" />
+      <Property key="^citations" value="17611796" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Locations" value="CCO-CYTOSOL" />
+      <Property key="Species" value="ORG-5993" />
+    </DataNode>
+    <DataNode elementId="GDQC-110335-MONOMER" textLabel="4-amino-2-methyl-5-hydroxymethylpyridine phosphate kinase" type="Protein">
+      <Xref identifier="GDQC-110335-MONOMER" dataSource="plantcyc" />
+      <Graphics centerX="100.0" centerY="798.9148559570312" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="GDQC-110335-MONOMER" />
+      <Property key="AlternativeId_Maizegdb" value="Zm00001d041829_T001.1" />
+      <Property key="Catalyzes" value="RXN-DQC-144380, RXN-DQC-144382" />
+      <Property key="CatalyzesCount" value="2" />
+      <Property key="Accession1" value="Zm00001d041829_T001.1" />
+      <Property key="Gene" value="GDQC-110335" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Pi" value="8.51" />
+      <Property key="Species" value="TAX-381124" />
+      <CitationRef elementRef="citation_PUB_17696876" />
+    </DataNode>
+    <DataNode elementId="PPI" textLabel="pyrophosphate" type="Metabolite">
+      <Xref identifier="XPPKVPWEQAFLFU-UHFFFAOYSA-K" dataSource="InChIKey" />
+      <Graphics centerX="801.3489990234375" centerY="707.9813842773438" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PPI" />
+      <Property key="AlternativeId_Chebi" value="33019" />
+      <Property key="AlternativeId_Pubchem" value="4097574" />
+      <Property key="AlternativeId_Bigg" value="ppi" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC33019" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00250" />
+      <Property key="AlternativeId_Drugbank" value="DB04160" />
+      <Property key="AlternativeId_Chemspider" value="996" />
+      <Property key="AlternativeId_LigandCpd" value="C00013" />
+      <Property key="AlternativeId_Cas" value="2466-09-3" />
+      <Property key="Synonym_1" value="PPi" />
+      <Property key="Synonym_2" value="PP" />
+      <Property key="Synonym_3" value="pyrophosphate" />
+      <Property key="ChemicalFormula" value="(H 1) (O 7) (P 2)" />
+      <Property key="AtomCharges" value="(3 -1), (5 -1), (4 -1)" />
+      <Property key="Gibbs0" value="-473.4674" />
+      <Property key="Inchi" value="InChI=1S/H4O7P2/c1-8(2,3)7-9(4,5)6/h(H2,1,2,3)(H2,4,5,6)/p-3" />
+      <Property key="InchiKey" value="InChIKey=XPPKVPWEQAFLFU-UHFFFAOYSA-K" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="174.951" />
+      <Property key="MonoisotopicMw" value="177.9432255031" />
+      <Property key="NonStandardInchi" value="InChI=1S/H4O7P2/c1-8(2,3)7-9(4,5)6/h(H2,1,2,3)(H2,4,5,6)/p-3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-8724, REG0-8483, REG-12877, REG-9488, REG-12060, REG0-8756, REG-13025, REG-9934, REG-8081, REG0-9977, REG-13335, REG0-8836, REG0-7229, REG0-7537, REG0-8365, REG0-8912, REG-11188, REG-8675, REG0-8919, REG0-8467, REG0-7304, REG-7117, REG-8030, REG-9450" />
+      <Property key="Smiles" value="O=P(O)(OP([O-])([O-])=O)[O-]" />
+      <CitationRef elementRef="citation_PUB_18493048" />
+    </DataNode>
+    <DataNode elementId="ATP" textLabel="ATP" type="Metabolite">
+      <Xref identifier="ZKHQWZAMYRWXGA-KQYNXXCUSA-J" dataSource="InChIKey" />
+      <Graphics centerX="175.51808166503906" centerY="1216.6214599609375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ATP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004261765" />
+      <Property key="AlternativeId_Mediadb" value="compounds/2/" />
+      <Property key="AlternativeId_Seed" value="cpd00002" />
+      <Property key="AlternativeId_Metanetx" value="MNXM3" />
+      <Property key="AlternativeId_Refmet" value="ATP" />
+      <Property key="AlternativeId_Bigg" value="atp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC30616" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00538" />
+      <Property key="AlternativeId_Chemspider" value="4574455" />
+      <Property key="AlternativeId_Chebi" value="30616" />
+      <Property key="AlternativeId_Pubchem" value="5461108" />
+      <Property key="AlternativeId_LigandCpd" value="C00002" />
+      <Property key="AlternativeId_Cas" value="56-65-5" />
+      <Property key="Synonym_1" value="adenylpyrophosphate" />
+      <Property key="Synonym_2" value="adenosine-triphosphate" />
+      <Property key="Synonym_3" value="adenosine-5&apos;-triphosphate" />
+      <Property key="ChemicalFormula" value="(C 10) (H 12) (N 5) (O 13) (P 3)" />
+      <Property key="AtomCharges" value="(20 -1), (19 -1), (24 -1), (22 -1)" />
+      <Property key="CofactorsOf" value="ENZRXN-12212" />
+      <Property key="Gibbs0" value="-553.6995" />
+      <Property key="Inchi" value="InChI=1S/C10H16N5O13P3/c11-8-5-9(13-2-12-8)15(3-14-5)10-7(17)6(16)4(26-10)1-25-30(21,22)28-31(23,24)27-29(18,19)20/h2-4,6-7,10,16-17H,1H2,(H,21,22)(H,23,24)(H2,11,12,13)(H2,18,19,20)/p-4/t4-,6-,7-,10-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=ZKHQWZAMYRWXGA-KQYNXXCUSA-J" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="503.152" />
+      <Property key="MonoisotopicMw" value="506.99574515689994" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-12909, REG-12890, REG-14488, REG-9772, REG-14329, REG0-6781, REG0-7497, REG0-7707, REG-13176, REG-14419, REG-14422, REG0-8315, REG0-8212, REG-10429, REG0-7195, REG-8742, REG0-8749, REG-10985, REG-11599, REG0-8040, REG0-8166, REG0-7200, REG-9547, REG0-10640, REG-12493, REG0-6737, REG-12901, REG0-8975, REG0-8830, REG-7496, REG-6229, REG0-7802, REG-9667, REG-8008, REG0-8732, REG-8477, REG-6695, REG-6569, REG-6589, REG-6588, REG0-6967, REG-6554, REG-8022, REG-5951, REG-5950, REG-12145, REG-12092, REG-5953, REG-11615, REG-11617, REG-7073, REG-6927, REG-6086" />
+      <Property key="Smiles" value="C(OP(=O)([O-])OP(=O)([O-])OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3)" />
+    </DataNode>
+    <DataNode elementId="Pi" textLabel="phosphate" type="Metabolite">
+      <Xref identifier="NBIIXXVUZAFLBC-UHFFFAOYSA-L" dataSource="InChIKey" />
+      <Graphics centerX="520.2321166992188" centerY="1550.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">The most abundant form of the phosphate ion at pH 7.3 is hydrogenphosphate. To simplify the presentation of reactions taking place at physiological pH, MetaCyc does not distinguish between the two forms, and uses the name &quot;phosphate&quot; even though the structure shown is that of hydrogenphosphate.</Comment>
+      <Property key="UniqueID" value="Pi" />
+      <Property key="AlternativeId_Refmet" value="Phosphoric acid" />
+      <Property key="AlternativeId_Bigg" value="pi" />
+      <Property key="AlternativeId_Pubchem" value="3681305" />
+      <Property key="AlternativeId_Chebi" value="43474" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC43474" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00973" />
+      <Property key="AlternativeId_Knapsack" value="C00007408" />
+      <Property key="AlternativeId_Cas" value="14265-44-2" />
+      <Property key="Synonym_1" value="inorganic phosphate" />
+      <Property key="Synonym_2" value="phosphate-inorganic" />
+      <Property key="Synonym_3" value="Pi" />
+      <Property key="Synonym_4" value="orthophosphate" />
+      <Property key="Synonym_5" value="PO&lt;SUB&gt;4&lt;/SUB&gt;&lt;SUP&gt;3-&lt;/SUP&gt;" />
+      <Property key="Synonym_6" value="HPO&lt;SUB&gt;4&lt;/SUB&gt;&lt;SUP&gt;2-&lt;/SUP&gt;" />
+      <Property key="Synonym_7" value="HPO&lt;SUB&gt;4&lt;/SUB&gt;&lt;SUP&gt;-2&lt;/SUP&gt;" />
+      <Property key="Synonym_8" value="hydrogenphosphate" />
+      <Property key="ChemicalFormula" value="(H 1) (O 4) (P 1)" />
+      <Property key="AtomCharges" value="(4 -1), (1 -1)" />
+      <Property key="ComponentOf" value="CPD-9010" />
+      <Property key="Gibbs0" value="-252.94714" />
+      <Property key="Inchi" value="InChI=1S/H3O4P/c1-5(2,3)4/h(H3,1,2,3,4)/p-2" />
+      <Property key="InchiKey" value="InChIKey=NBIIXXVUZAFLBC-UHFFFAOYSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="InternalsOfGroup" value="GLYCO-CT-PHOSPHATE" />
+      <Property key="MolecularWeight" value="95.979" />
+      <Property key="MonoisotopicMw" value="97.9768950947" />
+      <Property key="NonStandardInchi" value="InChI=1S/H3O4P/c1-5(2,3)4/h(H3,1,2,3,4)/p-2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-13915, REG0-8013, REG-12892, REG0-7059, REG-12878, REG-8321, REG-13930, REG-8651, REG-7453, REG0-9498, REG0-9501, REG-10989, REG0-10704, REG0-9976, REG-10770, REG-6237, REG0-11039, REG-11289, REG-11169, REG-8708, REG0-8513, REG0-9096, REG-7176, REG-7170, REG-7182, REG-8534, REG-9306, REG-11141, REG-6443, REG-6437, REG-12171, REG-6318, REG0-8734, REG-6642, REG0-6968, REG-6684, REG0-8071, REG0-7210, REG-7116, REG0-7425, REG-11628, REG-7075" />
+      <Property key="Smiles" value="[O-]P(=O)(O)[O-]" />
+      <CitationRef elementRef="citation_PUB_18493048" />
+    </DataNode>
+    <DataNode elementId="AMP" textLabel="AMP" type="Metabolite">
+      <Xref identifier="UDMBCSSLTHHNCD-KQYNXXCUSA-L" dataSource="InChIKey" />
+      <Graphics centerX="574.3466796875" centerY="50.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AMP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000003860156" />
+      <Property key="AlternativeId_Refmet" value="AMP" />
+      <Property key="AlternativeId_Bigg" value="amp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC456215" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00045" />
+      <Property key="AlternativeId_Chemspider" value="10239183" />
+      <Property key="AlternativeId_Chebi" value="456215" />
+      <Property key="AlternativeId_Pubchem" value="15938965" />
+      <Property key="AlternativeId_LigandCpd" value="C00020" />
+      <Property key="AlternativeId_Cas" value="61-19-8" />
+      <Property key="AlternativeId_Nci" value="20264" />
+      <Property key="Synonym_1" value="5&apos;-AMP" />
+      <Property key="Synonym_2" value="adenosine-monophosphate" />
+      <Property key="Synonym_3" value="adenylic acid" />
+      <Property key="Synonym_4" value="adenosine 5&apos;-phosphate" />
+      <Property key="Synonym_5" value="adenosine 5&apos;-monophosphate" />
+      <Property key="Synonym_6" value="adenylate" />
+      <Property key="Synonym_7" value="5&apos;-adenylic acid" />
+      <Property key="Synonym_8" value="5&apos;-adenosine monophosphate" />
+      <Property key="Synonym_9" value="adenine ribotide" />
+      <Property key="ChemicalFormula" value="(C 10) (H 12) (N 5) (O 7) (P 1)" />
+      <Property key="AtomCharges" value="(20 -1), (19 -1)" />
+      <Property key="Gibbs0" value="-135.89479" />
+      <Property key="Inchi" value="InChI=1S/C10H14N5O7P/c11-8-5-9(13-2-12-8)15(3-14-5)10-7(17)6(16)4(22-10)1-21-23(18,19)20/h2-4,6-7,10,16-17H,1H2,(H2,11,12,13)(H2,18,19,20)/p-2/t4-,6-,7-,10-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=UDMBCSSLTHHNCD-KQYNXXCUSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="345.208" />
+      <Property key="MonoisotopicMw" value="347.0630843401" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-15683, REG-9765, REG-14330, REG0-7202, REG-14235, REG-14236, REG0-8379, REG-14416, REG-14425, REG0-6727, REG-12062, REG-8740, REG-8449, REG0-8757, REG-10983, REG-11597, REG0-8715, REG-9775, REG0-7230, REG0-9061, REG0-8911, REG0-8145, REG0-8148, REG0-8901, REG-6551, REG0-7067, REG0-9117, REG0-6999, REG-11627" />
+      <Property key="Smiles" value="C(OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3)" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1402.71142578125" centerY="1315.7215576171875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="ChemicalFormula" value="(H 1)" />
+      <Property key="AtomCharges" value="(1 1)" />
+      <Property key="Gibbs0" value="0.42906138" />
+      <Property key="Inchi" value="InChI=1S/p+1" />
+      <Property key="InchiKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicMw" value="1.0078250321" />
+      <Property key="NonStandardInchi" value="InChI=1S/p+1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="[H+]" />
+    </DataNode>
+    <DataNode elementId="THIAMINE-P" textLabel="thiamine phosphate" type="Metabolite">
+      <Xref identifier="HZSAJDVWZRBGIF-UHFFFAOYSA-M" dataSource="InChIKey" />
+      <Graphics centerX="960.400634765625" centerY="795.7971801757812" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">Thiamin(e), also known as vitamin B1, is known to play a fundamental role in energy metabolism. Its discovery followed from the original early research on the anti-beriberi factor found in rice bran. Beriberi, a neurological disease, was particularly prevalent in Asia, where the refining of rice resulted in the removal of the thiamin-containing husk |CITS: [Begley96]|. The anti-beriberi substance was crystallized from rice polishings by Jansen and Donath in 1926 |CITS: [Jansen26]|. The structure and synthesis of thiamine were reported by Williams |CITS: [Williams38]|. The compound was named thiamine when it was believed to be an amine. When it became clear that it is not an amine, the &apos;e&apos; was dropped, and the name was changed to thiamin |CITS:[16550223]|.</Comment>
+      <Property key="UniqueID" value="THIAMINE-P" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001532839" />
+      <Property key="AlternativeId_Seed" value="cpd00793" />
+      <Property key="AlternativeId_Metanetx" value="MNXM662" />
+      <Property key="AlternativeId_Refmet" value="Thiamine monophosphate" />
+      <Property key="AlternativeId_Bigg" value="thmmp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC37575" />
+      <Property key="AlternativeId_Hmdb" value="HMDB02666" />
+      <Property key="AlternativeId_Chemspider" value="13085545" />
+      <Property key="AlternativeId_Pubchem" value="15942892" />
+      <Property key="AlternativeId_Chebi" value="37575" />
+      <Property key="AlternativeId_Cas" value="532-40-1" />
+      <Property key="AlternativeId_LigandCpd" value="C01081" />
+      <Property key="Synonym_1" value="TMP" />
+      <Property key="Synonym_2" value="thiamin monophosphate" />
+      <Property key="Synonym_3" value="thiamin phosphate" />
+      <Property key="Synonym_4" value="thiamin-P" />
+      <Property key="Synonym_5" value="thiamine-Pi" />
+      <Property key="Synonym_6" value="ThP" />
+      <Property key="Synonym_7" value="thiamine monophosphate" />
+      <Property key="ChemicalFormula" value="(C 12) (H 16) (N 4) (O 4) (P 1) (S 1)" />
+      <Property key="AtomCharges" value="(19 -1), (18 -1), (16 1)" />
+      <Property key="Gibbs0" value="-18.504126" />
+      <Property key="Inchi" value="InChI=1S/C12H17N4O4PS/c1-8-11(3-4-20-21(17,18)19)22-7-16(8)6-10-5-14-9(2)15-12(10)13/h5,7H,3-4,6H2,1-2H3,(H3-,13,14,15,17,18,19)/p-1" />
+      <Property key="InchiKey" value="InChIKey=HZSAJDVWZRBGIF-UHFFFAOYSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="343.316" />
+      <Property key="MonoisotopicMw" value="346.0864623191" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC2(\[N+](/CC1(\C(\N)=N/C(\C)=N\C=1))=C/SC(/CCOP([O-])(=O)[O-])=2)" />
+      <CitationRef elementRef="citation_PUB_16550223" />
+    </DataNode>
+    <DataNode elementId="THZ-P" textLabel="4-methyl-5-(2-phosphooxyethyl)thiazole" type="Metabolite">
+      <Xref identifier="OCYMERZCMYJQQO-UHFFFAOYSA-L" dataSource="InChIKey" />
+      <Graphics centerX="582.3114013671875" centerY="749.09423828125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="THZ-P" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001529922" />
+      <Property key="AlternativeId_Seed" value="cpd02654" />
+      <Property key="AlternativeId_Metanetx" value="MNXM960" />
+      <Property key="AlternativeId_Bigg" value="4mpetz" />
+      <Property key="AlternativeId_Chebi" value="58296" />
+      <Property key="AlternativeId_Pubchem" value="25245616" />
+      <Property key="AlternativeId_LigandCpd" value="C04327" />
+      <Property key="Synonym_1" value="4-4-methyl-5-(2-phosphonooxyethyl)-thiazole" />
+      <Property key="Synonym_2" value="4-methyl-5-(2-phosphoethyl)-thiazole" />
+      <Property key="Synonym_3" value="THZ-P" />
+      <Property key="Synonym_4" value="4-methyl-5-(&amp;beta;-hydroxyethyl)thiazole phosphate" />
+      <Property key="Synonym_5" value="HET-P" />
+      <Property key="ChemicalFormula" value="(C 6) (H 8) (N 1) (O 4) (P 1) (S 1)" />
+      <Property key="AtomCharges" value="(10 -1), (9 -1)" />
+      <Property key="Gibbs0" value="-151.71928" />
+      <Property key="Inchi" value="InChI=1S/C6H10NO4PS/c1-5-6(13-4-7-5)2-3-11-12(8,9)10/h4H,2-3H2,1H3,(H2,8,9,10)/p-2" />
+      <Property key="InchiKey" value="InChIKey=OCYMERZCMYJQQO-UHFFFAOYSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="221.167" />
+      <Property key="MonoisotopicMw" value="223.00681501460002" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC1(\N=C/SC(/CCOP(=O)([O-])[O-])=1)" />
+    </DataNode>
+    <DataNode elementId="WATER" textLabel="H₂O" type="Metabolite">
+      <Xref identifier="XLYOFNOQVPJJNP-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1240.4542236328125" centerY="691.2504272460938" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="WATER" />
+      <Property key="AlternativeId_Bigg" value="33474" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15377" />
+      <Property key="AlternativeId_Hmdb" value="HMDB02111" />
+      <Property key="AlternativeId_Chemspider" value="937" />
+      <Property key="AlternativeId_Chebi" value="15377" />
+      <Property key="AlternativeId_Pubchem" value="962" />
+      <Property key="AlternativeId_LigandCpd" value="C00001" />
+      <Property key="AlternativeId_Cas" value="7732-18-5" />
+      <Property key="Synonym_1" value="H&lt;sub&gt;2&lt;/sub&gt;0" />
+      <Property key="Synonym_2" value="H2O" />
+      <Property key="Synonym_3" value="H20" />
+      <Property key="Synonym_4" value="hydrogen oxide" />
+      <Property key="Synonym_5" value="water" />
+      <Property key="ChemicalFormula" value="(H 2) (O 1)" />
+      <Property key="Gibbs0" value="-36.144756" />
+      <Property key="Inchi" value="InChI=1S/H2O/h1H2" />
+      <Property key="InchiKey" value="InChIKey=XLYOFNOQVPJJNP-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="18.015" />
+      <Property key="MonoisotopicMw" value="18.0105646863" />
+      <Property key="NonStandardInchi" value="InChI=1S/H2O/h1H2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="O" />
+    </DataNode>
+    <DataNode elementId="AMINO-HYDROXYMETHYL-METHYLPYRIMIDINE-PP" textLabel="4-amino-2-methyl-5-(diphosphooxymethyl)pyrimidine" type="Metabolite">
+      <Xref identifier="AGQJQCFEPUVXNK-UHFFFAOYSA-K" dataSource="InChIKey" />
+      <Graphics centerX="1062.6973876953125" centerY="1026.698974609375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AMINO-HYDROXYMETHYL-METHYLPYRIMIDINE-PP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000008219605" />
+      <Property key="AlternativeId_Seed" value="cpd02894" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1135" />
+      <Property key="AlternativeId_Bigg" value="2mahmp" />
+      <Property key="AlternativeId_Chebi" value="57841" />
+      <Property key="AlternativeId_Pubchem" value="25245586" />
+      <Property key="AlternativeId_Cas" value="841-01-0" />
+      <Property key="AlternativeId_LigandCpd" value="C04752" />
+      <Property key="Synonym_1" value="4-amino-5-hydroxymethyl-2-methylpyrimidine-PP" />
+      <Property key="ChemicalFormula" value="(C 6) (H 8) (N 3) (O 7) (P 2)" />
+      <Property key="AbbrevName" value="HMP-PP" />
+      <Property key="AtomCharges" value="(12 -1), (14 -1), (10 -1)" />
+      <Property key="Gibbs0" value="-350.4596" />
+      <Property key="Inchi" value="InChI=1S/C6H11N3O7P2/c1-4-8-2-5(6(7)9-4)3-15-18(13,14)16-17(10,11)12/h2H,3H2,1H3,(H,13,14)(H2,7,8,9)(H2,10,11,12)/p-3" />
+      <Property key="InchiKey" value="InChIKey=AGQJQCFEPUVXNK-UHFFFAOYSA-K" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="296.093" />
+      <Property key="MonoisotopicMw" value="299.0072227434" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC1(\N=C(C(/COP([O-])(=O)OP([O-])(=O)[O-])=C\N=1)\N)" />
+      <Property key="SystematicName" value="(4-amino-2-methylpyrimidin-5-yl)methyl diphosphate" />
+    </DataNode>
+    <DataNode elementId="THIAMINE-PYROPHOSPHATE" textLabel="thiamine pyrophosphate" type="Metabolite">
+      <Xref identifier="AYEKOFBPNLCAJY-UHFFFAOYSA-L" dataSource="InChIKey" />
+      <Graphics centerX="788.2023315429688" centerY="1160.79931640625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: THIAMINE Thiamin(e)|, also known as vitamin B1, is known to play a fundamental role in energy metabolism. Its discovery followed from the original early research on the anti-beriberi factor found in rice bran. Beriberi, a neurological disease, was particularly prevalent in Asia, where the refining of rice resulted in the removal of the thiamin-containing husk |CITS: [Begley96]|. The anti-beriberi substance was crystallized from rice polishings by Jansen and Donath in 1926 |CITS: [Jansen26]|. The structure and synthesis of thiamine were reported by Williams |CITS: [Williams38]|. The compound was named thiamine when it was believed to be an amine. When it became clear that it is not an amine, it was suggested to drop the &apos;e&apos; and change the name to thiamin, although both names are still in use |CITS:[16550223]|. The active form of the vitamin &lt;i&gt;in vivo&lt;/i&gt; is |FRAME: THIAMINE-PYROPHOSPHATE|.</Comment>
+      <Property key="UniqueID" value="THIAMINE-PYROPHOSPHATE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000008215517" />
+      <Property key="AlternativeId_Seed" value="cpd00056" />
+      <Property key="AlternativeId_Metanetx" value="MNXM256" />
+      <Property key="AlternativeId_Refmet" value="Thiamine diphosphate" />
+      <Property key="AlternativeId_Bigg" value="thmpp" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01372" />
+      <Property key="AlternativeId_Chemspider" value="13082024" />
+      <Property key="AlternativeId_Pubchem" value="15938963" />
+      <Property key="AlternativeId_Chebi" value="58937" />
+      <Property key="AlternativeId_Cas" value="154-87-0" />
+      <Property key="AlternativeId_LigandCpd" value="C00068" />
+      <Property key="Synonym_1" value="thiamin diphosphate" />
+      <Property key="Synonym_2" value="TDP" />
+      <Property key="Synonym_3" value="thiamine pyrophosphate" />
+      <Property key="Synonym_4" value="TPP" />
+      <Property key="Synonym_5" value="thiamin-PPi" />
+      <Property key="Synonym_6" value="thiamin pyrophosphate" />
+      <Property key="Synonym_7" value="thiamine-PPi" />
+      <Property key="Synonym_8" value="ThPP" />
+      <Property key="ChemicalFormula" value="(C 12) (H 16) (N 4) (O 7) (P 2) (S 1)" />
+      <Property key="AtomCharges" value="(21 -1), (19 -1), (18 -1), (16 1)" />
+      <Property key="CofactorsOf" value="ENZRXN-14661, ENZRXN-12040" />
+      <Property key="Gibbs0" value="-227.4403" />
+      <Property key="Inchi" value="InChI=1S/C12H18N4O7P2S/c1-8-11(3-4-22-25(20,21)23-24(17,18)19)26-7-16(8)6-10-5-14-9(2)15-12(10)13/h5,7H,3-4,6H2,1-2H3,(H4-,13,14,15,17,18,19,20,21)/p-2" />
+      <Property key="InchiKey" value="InChIKey=AYEKOFBPNLCAJY-UHFFFAOYSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="422.288" />
+      <Property key="MonoisotopicMw" value="426.0527927275" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC2(\[N+](/CC1(\C(\N)=N/C(\C)=N\C=1))=C/SC(/CCOP([O-])(=O)OP([O-])(=O)[O-])=2)" />
+      <CitationRef elementRef="citation_PUB_16550223" />
+    </DataNode>
+    <DataNode elementId="THIAMINE" textLabel="thiamine" type="Metabolite">
+      <Xref identifier="JZRWCGZRTZMZEH-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1069.8114013671875" centerY="88.68399047851562" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">Thiamin(e), also known as vitamin B1, is known to play a fundamental role in energy metabolism. Its discovery followed from the original early research on the anti-beriberi factor found in rice bran. Beriberi, a neurological disease, was particularly prevalent in Asia, where the refining of rice resulted in the removal of the thiamin-containing husk |CITS: [Begley96]|. The anti-beriberi substance was crystallized from rice polishings by Jansen and Donath in 1926 |CITS: [Jansen26]|. The structure and synthesis of thiamine were reported by Williams |CITS: [Williams38]|. The compound was named thiamine when it was believed to be an amine. When it became clear that it is not an amine, the &apos;e&apos; was dropped, and the name thiamin was used |CITS:[16550223]|. Today both names are used in the literature.</Comment>
+      <Property key="UniqueID" value="THIAMINE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000000049153" />
+      <Property key="AlternativeId_Mediadb" value="compounds/361/" />
+      <Property key="AlternativeId_Metanetx" value="MNXM322" />
+      <Property key="AlternativeId_Refmet" value="Thiamine" />
+      <Property key="AlternativeId_Bigg" value="thm" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC18385" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00235" />
+      <Property key="AlternativeId_Drugbank" value="DB00152" />
+      <Property key="AlternativeId_Chemspider" value="1098" />
+      <Property key="AlternativeId_Pubchem" value="1130" />
+      <Property key="AlternativeId_Chebi" value="18385" />
+      <Property key="AlternativeId_Cas" value="59-43-8" />
+      <Property key="AlternativeId_LigandCpd" value="C00378" />
+      <Property key="Synonym_1" value="thiamin" />
+      <Property key="Synonym_2" value="vitamin B&lt;SUB&gt;1&lt;/SUB&gt;" />
+      <Property key="ChemicalFormula" value="(C 12) (H 17) (N 4) (O 1) (S 1)" />
+      <Property key="AtomCharges" value="(16 1)" />
+      <Property key="Gibbs0" value="204.267" />
+      <Property key="Inchi" value="InChI=1S/C12H17N4OS/c1-8-11(3-4-17)18-7-16(8)6-10-5-14-9(2)15-12(10)13/h5,7,17H,3-4,6H2,1-2H3,(H2,13,14,15)/q+1" />
+      <Property key="InchiKey" value="InChIKey=JZRWCGZRTZMZEH-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="265.352" />
+      <Property key="MonoisotopicMw" value="266.12013191069997" />
+      <Property key="NonStandardInchi" value="InChI=1S/C12H17N4OS/c1-8-11(3-4-17)18-7-16(8)6-10-5-14-9(2)15-12(10)13/h5,7,17H,3-4,6H2,1-2H3,(H2,13,14,15)/q+1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-13494" />
+      <Property key="Smiles" value="CC2(\[N+](/CC1(\C(\N)=N/C(\C)=N\C=1))=C/SC(/CCO)=2)" />
+      <CitationRef elementRef="citation_PUB_16550223" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="845.7243041992188" y="889.1871948242188" elementRef="AT4G29530" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="779.8077392578125" y="807.488525390625" elementRef="AT4G29530-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_1_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_1_0_0" x="598.8650512695312" y="996.6583251953125" elementRef="GDQC-110335" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_1_0_0" arrowHead="TranscriptionTranslation" x="55.0" y="798.9148559570312" elementRef="GDQC-110335-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_2_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_2_0_0" x="215.6962890625" y="381.95477294921875" elementRef="AT1G02880" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_2_0_0" arrowHead="TranscriptionTranslation" x="917.61669921875" y="491.9170837402344" elementRef="AT1G02880-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_3_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_3_0_0" x="1645.0" y="906.1676025390625" elementRef="AT1G22940" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_3_0_0" arrowHead="TranscriptionTranslation" x="957.8707275390625" y="1515.4193115234375" elementRef="AT1G22940-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_4_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_4_0_0" x="1551.3275146484375" y="358.9354248046875" elementRef="AT2G44750" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_4_0_0" arrowHead="TranscriptionTranslation" x="566.5606079101562" y="460.34515380859375" elementRef="AT2G44750-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="THIAMIN-PYROPHOSPHOKINASE-RXN">
+      <Xref identifier="11576" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="THIAMIN-PYROPHOSPHOKINASE-RXN_start" x="1114.8114013671875" y="88.68399047851562" elementRef="THIAMINE" relX="1.0" relY="0.0" />
+        <Point elementId="THIAMIN-PYROPHOSPHOKINASE-RXN_end" arrowHead="Conversion" x="743.2023315429688" y="1160.79931640625" elementRef="THIAMINE-PYROPHOSPHATE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="THIAMIN-PYROPHOSPHOKINASE-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Uniprot" value="P35202" />
+      <Property key="AlternativeId_Rhea" value="11576" />
+      <Property key="UniqueID" value="THIAMIN-PYROPHOSPHOKINASE-RXN" />
+      <Property key="EC_Number" value="EC-2.7.6.2" />
+      <Property key="Pathways" value="PWY-6908" />
+      <Property key="ReactionEquation" value="THIAMINE + ATP =&gt; PROTON + THIAMINE-PYROPHOSPHATE + AMP" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXNQT-6993, ENZRXNQT-7161" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="Synonym_1" value="Thiamine diphosphokinase" />
+      <Property key="Synonym_2" value="Thiamine kinase" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="AtomMappings" value="(:NO-HYDROGEN-ENCODING (0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 62 63 64 17 19 65 66 20 21 68 18 69 22 70 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 88 89 90 40 41 91 92 43 44 94 42 95 45 96 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 67 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 93 97) ((((&quot;AMP&quot; 1) 0 22) ((&quot;AMP&quot; 2) 23 45) ((&quot;THIAMINE-PYROPHOSPHATE&quot; 1) 46 71) ((&quot;THIAMINE-PYROPHOSPHATE&quot; 2) 72 97)) (((&quot;ATP&quot; 1) 0 30) ((&quot;ATP&quot; 2) 31 61) ((&quot;THIAMINE&quot; 1) 62 79) ((&quot;THIAMINE&quot; 2) 80 97))))" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-13.473510" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="Synonyms" value="Thiamine diphosphokinase, Thiamine kinase" />
+    </Interaction>
+    <Interaction elementId="THIAMIN-PYROPHOSPHOKINASE-RXN_ENZRXNQT-6993">
+      <Waypoints>
+        <Point elementId="THIAMIN-PYROPHOSPHOKINASE-RXN_ENZRXNQT-6993_start" x="611.5606079101562" y="472.84515380859375" elementRef="AT2G44750-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="THIAMIN-PYROPHOSPHOKINASE-RXN_ENZRXNQT-6993_end" arrowHead="Catalysis" x="0" y="0" elementRef="THIAMIN-PYROPHOSPHOKINASE-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="THIAMIN-PYROPHOSPHOKINASE-RXN_ENZRXNQT-7161">
+      <Waypoints>
+        <Point elementId="THIAMIN-PYROPHOSPHOKINASE-RXN_ENZRXNQT-7161_start" x="962.61669921875" y="504.4170837402344" elementRef="AT1G02880-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="THIAMIN-PYROPHOSPHOKINASE-RXN_ENZRXNQT-7161_end" arrowHead="Catalysis" x="0" y="0" elementRef="THIAMIN-PYROPHOSPHOKINASE-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="THIAMIN-PYROPHOSPHOKINASE-RXN_anchor_reactant_1">
+      <Xref identifier="11576" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="THIAMIN-PYROPHOSPHOKINASE-RXN_anchor_reactant_start_1" x="220.51808166503906" y="1216.6214599609375" elementRef="ATP" relX="1.0" relY="0.0" />
+        <Point elementId="THIAMIN-PYROPHOSPHOKINASE-RXN_anchor_reactant_end_1" x="0" y="0" elementRef="THIAMIN-PYROPHOSPHOKINASE-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="THIAMIN-PYROPHOSPHOKINASE-RXN_anchor_product_0">
+      <Xref identifier="11576" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="THIAMIN-PYROPHOSPHOKINASE-RXN_anchor_product_start_0" x="0" y="0" elementRef="THIAMIN-PYROPHOSPHOKINASE-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="THIAMIN-PYROPHOSPHOKINASE-RXN_anchor_product_end_0" arrowHead="Conversion" x="1357.71142578125" y="1315.7215576171875" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="THIAMIN-PYROPHOSPHOKINASE-RXN_anchor_product_2">
+      <Xref identifier="11576" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="THIAMIN-PYROPHOSPHOKINASE-RXN_anchor_product_start_2" x="0" y="0" elementRef="THIAMIN-PYROPHOSPHOKINASE-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="THIAMIN-PYROPHOSPHOKINASE-RXN_anchor_product_end_2" arrowHead="Conversion" x="529.3466796875" y="50.0" elementRef="AMP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXNQT-4191">
+      <Xref identifier="EC-3.1.3.100" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXNQT-4191_start" x="1005.400634765625" y="795.7971801757812" elementRef="THIAMINE-P" relX="1.0" relY="0.0" />
+        <Point elementId="RXNQT-4191_end" arrowHead="Conversion" x="1024.8114013671875" y="88.68399047851562" elementRef="THIAMINE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXNQT-4191_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXNQT-4191" />
+      <Property key="ReactionName" value="acid phosphatase" />
+      <Property key="EC_Number" value="EC-3.1.3.100" />
+      <Property key="Pathways" value="PWY-6908" />
+      <Property key="ReactionEquation" value="THIAMINE-P + WATER =&gt; THIAMINE + Pi" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXNQT-10746" />
+      <Property key="Synonym_1" value="orthophosphoric-monoester phosphohydrolase (acid optimum)" />
+      <Property key="Synonym_2" value="acid nucleoside diphosphate phosphatase" />
+      <Property key="Synonym_3" value="uteroferrin" />
+      <Property key="Synonym_4" value="acid phosphomonoester hydrolase" />
+      <Property key="Synonym_5" value="acid phosphohydrolase" />
+      <Property key="Synonym_6" value="acid monophosphatase" />
+      <Property key="Synonym_7" value="glycerophosphatase" />
+      <Property key="Synonym_8" value="phosphomonoesterase" />
+      <Property key="Synonym_9" value="acid phosphomonoesterase" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="AtomMappings" value="(:NO-HYDROGEN-ENCODING (0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 19 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 41 43 44 39 40 38 42 16 17 18 45 20) ((((&quot;THIAMINE-P&quot; 1) 0 21) ((&quot;THIAMINE-P&quot; 2) 22 43) ((&quot;WATER&quot; 1) 44 44) ((&quot;WATER&quot; 2) 45 45)) (((&quot;THIAMINE&quot; 1) 0 17) ((&quot;THIAMINE&quot; 2) 18 35) ((&quot;Pi&quot; 1) 36 40) ((&quot;Pi&quot; 2) 41 45)))), (:NO-HYDROGEN-ENCODING (0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 19 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 41 43 44 39 40 38 42 45 17 18 16 20) ((((&quot;THIAMINE-P&quot; 1) 0 21) ((&quot;THIAMINE-P&quot; 2) 22 43) ((&quot;WATER&quot; 1) 44 44) ((&quot;WATER&quot; 2) 45 45)) (((&quot;THIAMINE&quot; 1) 0 17) ((&quot;THIAMINE&quot; 2) 18 35) ((&quot;Pi&quot; 1) 36 40) ((&quot;Pi&quot; 2) 41 45))))" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="5.9687347" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="Synonyms" value="orthophosphoric-monoester phosphohydrolase (acid optimum), acid nucleoside diphosphate phosphatase, uteroferrin, acid phosphomonoester hydrolase, acid phosphohydrolase, acid monophosphatase, glycerophosphatase, phosphomonoesterase, acid phosphomonoesterase" />
+      <CitationRef elementRef="citation_PUB_2407294" />
+    </Interaction>
+    <Interaction elementId="RXNQT-4191_ENZRXNQT-10746">
+      <Waypoints>
+        <Point elementId="RXNQT-4191_ENZRXNQT-10746_start" x="824.8077392578125" y="819.988525390625" elementRef="AT4G29530-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="RXNQT-4191_ENZRXNQT-10746_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXNQT-4191_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXNQT-4191_anchor_reactant_1">
+      <Xref identifier="EC-3.1.3.100" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXNQT-4191_anchor_reactant_start_1" x="1285.4542236328125" y="691.2504272460938" elementRef="WATER" relX="1.0" relY="0.0" />
+        <Point elementId="RXNQT-4191_anchor_reactant_end_1" x="0" y="0" elementRef="RXNQT-4191_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXNQT-4191_anchor_product_1">
+      <Xref identifier="EC-3.1.3.100" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXNQT-4191_anchor_product_start_1" x="0" y="0" elementRef="RXNQT-4191_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXNQT-4191_anchor_product_end_1" arrowHead="Conversion" x="475.23211669921875" y="1550.0" elementRef="Pi" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="THI-P-SYN-RXN">
+      <Xref identifier="22328" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="THI-P-SYN-RXN_start" x="627.3114013671875" y="749.09423828125" elementRef="THZ-P" relX="1.0" relY="0.0" />
+        <Point elementId="THI-P-SYN-RXN_end" arrowHead="Conversion" x="915.400634765625" y="795.7971801757812" elementRef="THIAMINE-P" relX="-1.0" relY="0.0" />
+        <Anchor elementId="THI-P-SYN-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Uniprot" value="P41835" />
+      <Property key="AlternativeId_Rhea" value="22328" />
+      <Property key="UniqueID" value="THI-P-SYN-RXN" />
+      <Property key="EC_Number" value="EC-2.5.1.3" />
+      <Property key="Pathways" value="PWY-6908" />
+      <Property key="ReactionEquation" value="PROTON + THZ-P + AMINO-HYDROXYMETHYL-METHYLPYRIMIDINE-PP =&gt; THIAMINE-P + PPI" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXNDQC-144382, ENZRXNARA-497" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="Synonym_1" value="Thiamine-phosphate diphosphorylase" />
+      <Property key="Synonym_2" value="TMP pyrophosphorylase" />
+      <Property key="Synonym_3" value="TMP diphosphorylase" />
+      <Property key="Synonym_4" value="Thiamine-phosphate synthase" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="9.77832" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="Synonyms" value="Thiamine-phosphate diphosphorylase, TMP pyrophosphorylase, TMP diphosphorylase, Thiamine-phosphate synthase" />
+    </Interaction>
+    <Interaction elementId="THI-P-SYN-RXN_ENZRXNDQC-144382">
+      <Waypoints>
+        <Point elementId="THI-P-SYN-RXN_ENZRXNDQC-144382_start" x="100.0" y="811.4148559570312" elementRef="GDQC-110335-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="THI-P-SYN-RXN_ENZRXNDQC-144382_end" arrowHead="Catalysis" x="0" y="0" elementRef="THI-P-SYN-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="THI-P-SYN-RXN_ENZRXNARA-497">
+      <Waypoints>
+        <Point elementId="THI-P-SYN-RXN_ENZRXNARA-497_start" x="1002.8707275390625" y="1527.9193115234375" elementRef="AT1G22940-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="THI-P-SYN-RXN_ENZRXNARA-497_end" arrowHead="Catalysis" x="0" y="0" elementRef="THI-P-SYN-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="THI-P-SYN-RXN_anchor_reactant_0">
+      <Xref identifier="22328" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="THI-P-SYN-RXN_anchor_reactant_start_0" x="1447.71142578125" y="1315.7215576171875" elementRef="PROTON" relX="1.0" relY="0.0" />
+        <Point elementId="THI-P-SYN-RXN_anchor_reactant_end_0" x="0" y="0" elementRef="THI-P-SYN-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="THI-P-SYN-RXN_anchor_reactant_2">
+      <Xref identifier="22328" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="THI-P-SYN-RXN_anchor_reactant_start_2" x="1107.6973876953125" y="1026.698974609375" elementRef="AMINO-HYDROXYMETHYL-METHYLPYRIMIDINE-PP" relX="1.0" relY="0.0" />
+        <Point elementId="THI-P-SYN-RXN_anchor_reactant_end_2" x="0" y="0" elementRef="THI-P-SYN-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="THI-P-SYN-RXN_anchor_product_1">
+      <Xref identifier="22328" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="THI-P-SYN-RXN_anchor_product_start_1" x="0" y="0" elementRef="THI-P-SYN-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="THI-P-SYN-RXN_anchor_product_end_1" arrowHead="Conversion" x="756.3489990234375" y="707.9813842773438" elementRef="PPI" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_PUB_18493048">
+      <Xref identifier="18493048" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_16826377">
+      <Xref identifier="16826377" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_17696876">
+      <Xref identifier="17696876" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_16666289">
+      <Xref identifier="16666289" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_10382260">
+      <Xref identifier="10382260" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_15326535">
+      <Xref identifier="15326535" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_9700068">
+      <Xref identifier="9700068" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_16550223">
+      <Xref identifier="16550223" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_19888457">
+      <Xref identifier="19888457" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_1761179">
+      <Xref identifier="1761179" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_2407294">
+      <Xref identifier="2407294" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_17174261">
+      <Xref identifier="17174261" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_17611796">
+      <Xref identifier="17611796" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

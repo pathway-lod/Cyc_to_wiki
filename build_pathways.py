@@ -117,6 +117,10 @@ def build_single_reaction_pathway(builder, reaction_id):
         if species:
             organism = convert_to_latin_name(str(species))
 
+    # Handle missing organism - set to "cellular organisms"
+    if not organism or organism.strip() == "":
+        organism = "cellular organisms"
+
     # Create pathway title
     if ec_number:
         title = f"{reaction_name} (EC {ec_number})"

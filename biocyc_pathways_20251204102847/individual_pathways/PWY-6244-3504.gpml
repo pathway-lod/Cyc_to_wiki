@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="bergamotene biosynthesis II" organism="Betula" source="PlantCyc" version="20251204102847">
+  <Description>Bergamotenes are sesquiterpenoids that are components of volatile oils from a number of plants. They function as insect repellents in some plants, although they may also function as attractants for certain organisms. There are several isomers of bergamotene, including |FRAME: CPD-8849|, |FRAME: CPD-11287|, |FRAME:CPD-13396| and |FRAME: CPD-13402|. |FRAME:CPD-13396| and |FRAME: CPD-13402| have been identified as the active compounds of the sex attractant of male |FRAME: TAX-29043| wasps |CITS: [12371819]|. In members of |FRAME: TAX-4070| bergamotenes play a role in defense against insects |CITS: [19155349]|. The domesticated |FRAME: TAX-4081| plant does not produce bergamotenes, but its wild relative |FRAME: TAX-62890| does |CITS: [11090225]|. Many plants have lost some of their inherent survival traits during domestication. This pathway depicts the steps of bergamotene biosynthesis in the wild tomato |FRAME: TAX-62890|. The enzyme |FRAME: MONOMER-14819|, which is encoded by the |FRAME: G-11318| gene, acts specifically on |FRAME: CPD-11293| to produce three major terpenes |FRAME: CPD-8849|, |FRAME: CPD-11287| and |FRAME: CPD-11377| |CITS: [19155349]|. These three compounds, along with their epoxy derivatives, have also been isolated from Birch bark |FRAME: TAX-38787| |CITS: [ABYSHEV07]|.&quot;</Description>
+  <Authors>
+    <Author name="O-28" />
+    <Author name="pujar" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-6244" />
+  <Property key="Type" value="Bergamotene-Biosynthesis" />
+  <Property key="ReactionCount" value="3" />
+  <Property key="ReactionIDs" value="RXN-10483, RXN-10482, RXN-10481" />
+  <Property key="PredecessorCount" value="2" />
+  <Property key="Organism" value="Betula, Betula pubescens, Solanum habrochaites" />
+  <Property key="TaxonomicRange_1" value="Viridiplantae" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_PUB_ABYSHEV07" />
+  <CitationRef elementRef="citation_PUB_19155349" />
+  <CitationRef elementRef="citation_PUB_12371819" />
+  <CitationRef elementRef="citation_PUB_11090225" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="G-11318" textLabel="SBS" type="GeneProduct">
+      <Xref identifier="G-11318" dataSource="plantcyc" />
+      <Graphics centerX="1328.797607421875" centerY="268.5750732421875" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="G-11318" />
+      <Property key="Product" value="MONOMER-14819" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="G-11320" textLabel="zFPS" type="GeneProduct">
+      <Xref identifier="G-11320" dataSource="plantcyc" />
+      <Graphics centerX="397.913818359375" centerY="1550.0" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="G-11320" />
+      <Property key="Product" value="MONOMER-14834" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="MONOMER-14819" textLabel="MONOMER-14819" type="Protein">
+      <Xref identifier="B8XA41" dataSource="uniprot" />
+      <Graphics centerX="834.7907104492188" centerY="816.3797607421875" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="O-28, pujar">A cDNA clone was isolated from wild tomato |FRAME: TAX-62890| and the expressed in E.coli the recombinant protein was purified. The expressed protein was shown to be a terpene synthase acting specifically on |FRAME: CPD-11293| to produce three major terpenes |FRAME: CPD-8849| |FRAME: CPD-11287| and santalene |CITS: [19155349]|.</Comment>
+      <Property key="UniqueID" value="MONOMER-14819" />
+      <Property key="AlternativeId_Pid" value="ACJ38409" />
+      <Property key="AlternativeId_Uniprot" value="B8XA41" />
+      <Property key="Synonym_1" value="santalene and bergamontene synthase" />
+      <Property key="Catalyzes" value="RXN-16522, RXN-16519, RXN-16518, RXN-16513" />
+      <Property key="CatalyzesCount" value="4" />
+      <Property key="Gene" value="G-11318" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="MolecularWeightExp" value="90.6" />
+      <Property key="MolecularWeightKd" value="90.6, 90.6" />
+      <Property key="MolecularWeightSeq" value="90.6" />
+      <Property key="Species" value="TAX-62890" />
+      <CitationRef elementRef="citation_PUB_19155349" />
+    </DataNode>
+    <DataNode elementId="MONOMER-14834" textLabel="MONOMER-14834" type="Protein">
+      <Xref identifier="B8XA40" dataSource="uniprot" />
+      <Graphics centerX="1600.0" centerY="1031.1671142578125" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="O-28, pujar">A cDNA clone was isolated from the glandular trichomes of Wild tomato |FRAME: TAX-62890|. The cDNA encodes a protein that can catalyze the conversion of |FRAME: DELTA3-ISOPENTENYL-PP| and |FRAME: CPD-4211| into |FRAME: CPD-11293|. This gene bears homology to kaurene synthases and co-segrgates with SBS (santalene and bergamotene synthase). It is specifically expressed in the trichomes |CITS: [19155349]|.</Comment>
+      <Property key="UniqueID" value="MONOMER-14834" />
+      <Property key="AlternativeId_Pid" value="ACJ38408" />
+      <Property key="AlternativeId_Uniprot" value="B8XA40" />
+      <Property key="Catalyzes" value="RXN-16521, RXN-16520" />
+      <Property key="CatalyzesCount" value="2" />
+      <Property key="Gene" value="G-11320" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="MolecularWeightExp" value="34.4" />
+      <Property key="MolecularWeightKd" value="34.4, 34.4" />
+      <Property key="MolecularWeightSeq" value="34.4" />
+      <Property key="Species" value="TAX-62890" />
+      <CitationRef elementRef="citation_PUB_19155349" />
+    </DataNode>
+    <DataNode elementId="PPI" textLabel="pyrophosphate" type="Metabolite">
+      <Xref identifier="XPPKVPWEQAFLFU-UHFFFAOYSA-K" dataSource="InChIKey" />
+      <Graphics centerX="670.0719604492188" centerY="50.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PPI" />
+      <Property key="AlternativeId_Chebi" value="33019" />
+      <Property key="AlternativeId_Pubchem" value="4097574" />
+      <Property key="AlternativeId_Bigg" value="ppi" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC33019" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00250" />
+      <Property key="AlternativeId_Drugbank" value="DB04160" />
+      <Property key="AlternativeId_Chemspider" value="996" />
+      <Property key="AlternativeId_LigandCpd" value="C00013" />
+      <Property key="AlternativeId_Cas" value="2466-09-3" />
+      <Property key="Synonym_1" value="PPi" />
+      <Property key="Synonym_2" value="PP" />
+      <Property key="Synonym_3" value="pyrophosphate" />
+      <Property key="ChemicalFormula" value="(H 1) (O 7) (P 2)" />
+      <Property key="AtomCharges" value="(3 -1), (5 -1), (4 -1)" />
+      <Property key="Gibbs0" value="-473.4674" />
+      <Property key="Inchi" value="InChI=1S/H4O7P2/c1-8(2,3)7-9(4,5)6/h(H2,1,2,3)(H2,4,5,6)/p-3" />
+      <Property key="InchiKey" value="InChIKey=XPPKVPWEQAFLFU-UHFFFAOYSA-K" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="174.951" />
+      <Property key="MonoisotopicMw" value="177.9432255031" />
+      <Property key="NonStandardInchi" value="InChI=1S/H4O7P2/c1-8(2,3)7-9(4,5)6/h(H2,1,2,3)(H2,4,5,6)/p-3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-8724, REG0-8483, REG-12877, REG-9488, REG-12060, REG0-8756, REG-13025, REG-9934, REG-8081, REG0-9977, REG-13335, REG0-8836, REG0-7229, REG0-7537, REG0-8365, REG0-8912, REG-11188, REG-8675, REG0-8919, REG0-8467, REG0-7304, REG-7117, REG-8030, REG-9450" />
+      <Property key="Smiles" value="O=P(O)(OP([O-])([O-])=O)[O-]" />
+      <CitationRef elementRef="citation_PUB_18493048" />
+    </DataNode>
+    <DataNode elementId="DELTA3-ISOPENTENYL-PP" textLabel="3-methylbut-3-en-1-yl pyrophosphate" type="Metabolite">
+      <Xref identifier="NUHSROFQTUXZQQ-UHFFFAOYSA-K" dataSource="InChIKey" />
+      <Graphics centerX="572.8299560546875" centerY="972.519287109375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="DELTA3-ISOPENTENYL-PP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000008215654" />
+      <Property key="AlternativeId_Seed" value="cpd00113" />
+      <Property key="AlternativeId_Metanetx" value="MNXM83" />
+      <Property key="AlternativeId_Refmet" value="Isopentenyl-diphosphate" />
+      <Property key="AlternativeId_Bigg" value="ipdp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC128769" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01347" />
+      <Property key="AlternativeId_Chemspider" value="13115335" />
+      <Property key="AlternativeId_Chebi" value="128769" />
+      <Property key="AlternativeId_Pubchem" value="15983957" />
+      <Property key="AlternativeId_LigandCpd" value="C00129" />
+      <Property key="Synonym_1" value="isopentenyl-PP" />
+      <Property key="Synonym_2" value="isopentenyl pyrophosphate" />
+      <Property key="Synonym_3" value="&amp;delta;(3)-isopentenyl-PP" />
+      <Property key="Synonym_4" value="&amp;Delta;&lt;SUP&gt;3&lt;/SUP&gt;-isopentenyl-PP" />
+      <Property key="Synonym_5" value="3-methylbut-3-enyl diphosphate" />
+      <Property key="Synonym_6" value="3-methylbut-3-enyl pyrophosphate" />
+      <Property key="Synonym_7" value="isopentenyl diphosphate" />
+      <Property key="ChemicalFormula" value="(C 5) (H 9) (O 7) (P 2)" />
+      <Property key="AbbrevName" value="IPP" />
+      <Property key="AtomCharges" value="(8 -1), (10 -1), (6 -1)" />
+      <Property key="Gibbs0" value="-350.20844" />
+      <Property key="Inchi" value="InChI=1S/C5H12O7P2/c1-5(2)3-4-11-14(9,10)12-13(6,7)8/h1,3-4H2,2H3,(H,9,10)(H2,6,7,8)/p-3" />
+      <Property key="InchiKey" value="InChIKey=NUHSROFQTUXZQQ-UHFFFAOYSA-K" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="243.069" />
+      <Property key="MonoisotopicMw" value="246.0058257599" />
+      <Property key="NonStandardInchi" value="InChI=1S/C5H12O7P2/c1-5(2)3-4-11-14(9,10)12-13(6,7)8/h1,3-4H2,2H3,(H,9,10)(H2,6,7,8)/p-3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-10797, REG-8189" />
+      <Property key="Smiles" value="C=C(C)CCOP([O-])(=O)OP([O-])(=O)[O-]" />
+    </DataNode>
+    <DataNode elementId="CPD-11287" textLabel="(+)-endo-β-bergamotene" type="Metabolite">
+      <Xref identifier="DGZBGCMPRYFWFF-KKUMJFAQSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1028.52685546875" centerY="1405.95751953125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-11287" />
+      <Property key="AlternativeId_Zinc" value="ZINC000062612248" />
+      <Property key="AlternativeId_Seed" value="cpd20984" />
+      <Property key="AlternativeId_Metanetx" value="MNXM4142" />
+      <Property key="AlternativeId_LigandCpd" value="C19737" />
+      <Property key="AlternativeId_Chebi" value="61678" />
+      <Property key="AlternativeId_Pubchem" value="12300073" />
+      <Property key="Synonym_1" value="(+)-&lt;i&gt;cis&lt;/i&gt;-&amp;beta;-bergamotene" />
+      <Property key="ChemicalFormula" value="(C 15) (H 24)" />
+      <Property key="Gibbs0" value="310.09692" />
+      <Property key="Inchi" value="InChI=1S/C15H24/c1-11(2)6-5-9-15(4)13-8-7-12(3)14(15)10-13/h6,13-14H,3,5,7-10H2,1-2,4H3/t13-,14-,15-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=DGZBGCMPRYFWFF-KKUMJFAQSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="204.355" />
+      <Property key="MonoisotopicMw" value="204.1878007704" />
+      <Property key="NonStandardInchi" value="InChI=1S/C15H24/c1-11(2)6-5-9-15(4)13-8-7-12(3)14(15)10-13/h6,13-14H,3,5,7-10H2,1-2,4H3/t13-,14-,15-/m0/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC(C)=CCC[C@@]1(C)([C@@H]2(C[C@@H]1C(CC2)=C))" />
+    </DataNode>
+    <DataNode elementId="CPD-11293" textLabel="(2Z,6Z)-farnesyl pyrophosphate" type="Metabolite">
+      <Xref identifier="VWFJDQUYCIWHTN-FBXUGWQNSA-K" dataSource="InChIKey" />
+      <Graphics centerX="762.7890625" centerY="600.6002197265625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-11293" />
+      <Property key="AlternativeId_Zinc" value="ZINC000013507236" />
+      <Property key="AlternativeId_Seed" value="cpd21006" />
+      <Property key="AlternativeId_Metanetx" value="MNXM756" />
+      <Property key="AlternativeId_LigandCpd" value="C19760" />
+      <Property key="AlternativeId_Chebi" value="60374" />
+      <Property key="AlternativeId_Pubchem" value="45479402" />
+      <Property key="Synonym_1" value="&amp;omega;,&lt;i&gt;Z,Z&lt;/i&gt; farensyl diphosphate" />
+      <Property key="Synonym_2" value="(2Z,6Z)-3,7,11-trimethyldodeca-2,6,10-trien-1-yl trihydrogen diphosphate" />
+      <Property key="Synonym_3" value="(Z,Z) FPP" />
+      <Property key="Synonym_4" value="(2Z,6Z)-farnesyl pyrophosphate" />
+      <Property key="Synonym_5" value="(Z,Z)-farensyl pyrophosphate" />
+      <Property key="Synonym_6" value="2-&lt;i&gt;cis&lt;/i&gt;,6-&lt;i&gt;cis&lt;/i&gt;-farnesyl diphosphate" />
+      <Property key="ChemicalFormula" value="(C 15) (H 25) (O 7) (P 2)" />
+      <Property key="AtomCharges" value="(20 -1), (18 -1), (16 -1)" />
+      <Property key="Gibbs0" value="-129.03052" />
+      <Property key="Inchi" value="InChI=1S/C15H28O7P2/c1-13(2)7-5-8-14(3)9-6-10-15(4)11-12-21-24(19,20)22-23(16,17)18/h7,9,11H,5-6,8,10,12H2,1-4H3,(H,19,20)(H2,16,17,18)/p-3/b14-9-,15-11-" />
+      <Property key="InchiKey" value="InChIKey=VWFJDQUYCIWHTN-FBXUGWQNSA-K" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="379.306" />
+      <Property key="MonoisotopicMw" value="382.1310262735" />
+      <Property key="NonStandardInchi" value="InChI=1S/C15H28O7P2/c1-13(2)7-5-8-14(3)9-6-10-15(4)11-12-21-24(19,20)22-23(16,17)18/h7,9,11H,5-6,8,10,12H2,1-4H3,(H,19,20)(H2,16,17,18)/p-3/b14-9-,15-11-" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC(C)=CCCC(/C)=C/CCC(/C)=C/COP([O-])(=O)OP([O-])(=O)[O-]" />
+    </DataNode>
+    <DataNode elementId="CPD-8849" textLabel="(-)-endo-α-bergamotene" type="Metabolite">
+      <Xref identifier="YMBFCQPIMVLNIU-KKUMJFAQSA-N" dataSource="InChIKey" />
+      <Graphics centerX="100.0" centerY="563.677490234375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-8849" />
+      <Property key="AlternativeId_Zinc" value="ZINC000002510648" />
+      <Property key="AlternativeId_Seed" value="cpd20982" />
+      <Property key="AlternativeId_Metanetx" value="MNXM4149" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC61679" />
+      <Property key="AlternativeId_Chemspider" value="10379953" />
+      <Property key="AlternativeId_LigandCpd" value="C19735" />
+      <Property key="AlternativeId_Chebi" value="61679" />
+      <Property key="AlternativeId_Pubchem" value="6429303" />
+      <Property key="Synonym_1" value="(?)-&lt;i&gt;cis&lt;/i&gt;-&amp;alpha;-bergamotene" />
+      <Property key="ChemicalFormula" value="(C 15) (H 24)" />
+      <Property key="Gibbs0" value="299.57693" />
+      <Property key="Inchi" value="InChI=1S/C15H24/c1-11(2)6-5-9-15(4)13-8-7-12(3)14(15)10-13/h6-7,13-14H,5,8-10H2,1-4H3/t13-,14-,15-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=YMBFCQPIMVLNIU-KKUMJFAQSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="204.355" />
+      <Property key="MonoisotopicMw" value="204.1878007704" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC(C)=CCC[C@@]1(C)([C@@H]2(C[C@@H]1C(/C)=C/C2))" />
+      <CitationRef elementRef="citation_PUB_19155349" />
+    </DataNode>
+    <DataNode elementId="CPD-4211" textLabel="prenyl pyrophosphate" type="Metabolite">
+      <Xref identifier="CBIDRCWHNCKSTO-UHFFFAOYSA-K" dataSource="InChIKey" />
+      <Graphics centerX="1044.56591796875" centerY="856.974609375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-4211" />
+      <Property key="AlternativeId_Chebi" value="57623" />
+      <Property key="AlternativeId_Zinc" value="ZINC000008215740" />
+      <Property key="AlternativeId_Seed" value="cpd00202" />
+      <Property key="AlternativeId_Metanetx" value="MNXM132" />
+      <Property key="AlternativeId_Bigg" value="dmpp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57623" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01120" />
+      <Property key="AlternativeId_Chemspider" value="13115336" />
+      <Property key="AlternativeId_Pubchem" value="15983958" />
+      <Property key="AlternativeId_LigandCpd" value="C00235" />
+      <Property key="AlternativeId_Cas" value="358-71-4" />
+      <Property key="Synonym_1" value="dimethylallyl-diphosphate" />
+      <Property key="Synonym_2" value="prenyl-diphosphate" />
+      <Property key="Synonym_3" value="&amp;delta;-prenyl diphosphate" />
+      <Property key="Synonym_4" value="&amp;delta;2-isopentenyl-diphosphate" />
+      <Property key="Synonym_5" value="2-isopentenyl diphosphate" />
+      <Property key="Synonym_6" value="dimethylallyl diphosphate" />
+      <Property key="Synonym_7" value="DPP" />
+      <Property key="Synonym_8" value="di-CH3-allyl-PPi" />
+      <Property key="Synonym_9" value="dimethylallyl-PP" />
+      <Property key="Synonym_10" value="dimethylallyl-PPi" />
+      <Property key="Synonym_11" value="DMPP" />
+      <Property key="Synonym_12" value="dimethylallyl pyrophosphate" />
+      <Property key="Synonym_13" value="3-methylbut-2-en-1-yl diphosphate" />
+      <Property key="Synonym_14" value="gamma,gamma-dimethylallyl pyrophosphate" />
+      <Property key="ChemicalFormula" value="(C 5) (H 9) (O 7) (P 2)" />
+      <Property key="AbbrevName" value="DMAPP" />
+      <Property key="AtomCharges" value="(9 -1), (7 -1), (6 -1)" />
+      <Property key="Gibbs0" value="-349.54843" />
+      <Property key="Inchi" value="InChI=1S/C5H12O7P2/c1-5(2)3-4-11-14(9,10)12-13(6,7)8/h3H,4H2,1-2H3,(H,9,10)(H2,6,7,8)/p-3" />
+      <Property key="InchiKey" value="InChIKey=CBIDRCWHNCKSTO-UHFFFAOYSA-K" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="243.069" />
+      <Property key="MonoisotopicMw" value="246.0058257599" />
+      <Property key="NonStandardInchi" value="InChI=1S/C5H12O7P2/c1-5(2)3-4-11-14(9,10)12-13(6,7)8/h3H,4H2,1-2H3,(H,9,10)(H2,6,7,8)/p-3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC(C)=CCOP(=O)([O-])OP(=O)([O-])[O-]" />
+      <Property key="SystematicName" value="3-methylbut-2-en-1-yl diphosphate" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="1373.797607421875" y="268.5750732421875" elementRef="G-11318" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="789.7907104492188" y="816.3797607421875" elementRef="MONOMER-14819" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_1_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_1_0_0" x="442.913818359375" y="1550.0" elementRef="G-11320" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_1_0_0" arrowHead="TranscriptionTranslation" x="1555.0" y="1031.1671142578125" elementRef="MONOMER-14834" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10483">
+      <Xref identifier="EC-4.2.3.53" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10483_start" x="807.7890625" y="600.6002197265625" elementRef="CPD-11293" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-10483_end" arrowHead="Conversion" x="983.52685546875" y="1405.95751953125" elementRef="CPD-11287" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-10483_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-10483" />
+      <Property key="EC_Number" value="EC-4.2.3.53" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-6244" />
+      <Property key="ReactionEquation" value="CPD-11293 =&gt; PPI + CPD-11287" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-16518" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-34.339966" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-10483_ENZRXN-16518">
+      <Waypoints>
+        <Point elementId="RXN-10483_ENZRXN-16518_start" x="834.7907104492188" y="828.8797607421875" elementRef="MONOMER-14819" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-10483_ENZRXN-16518_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-10483_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10483_anchor_product_0">
+      <Xref identifier="EC-4.2.3.53" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10483_anchor_product_start_0" x="0" y="0" elementRef="RXN-10483_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-10483_anchor_product_end_0" arrowHead="Conversion" x="625.0719604492188" y="50.0" elementRef="PPI" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10482">
+      <Xref identifier="EC-4.2.3.54" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10482_start" x="807.7890625" y="600.6002197265625" elementRef="CPD-11293" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-10482_end" arrowHead="Conversion" x="55.0" y="563.677490234375" elementRef="CPD-8849" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-10482_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-10482" />
+      <Property key="EC_Number" value="EC-4.2.3.54" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-6244" />
+      <Property key="ReactionEquation" value="CPD-11293 =&gt; PPI + CPD-8849" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-16519" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-44.859955" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-10482_ENZRXN-16519">
+      <Waypoints>
+        <Point elementId="RXN-10482_ENZRXN-16519_start" x="834.7907104492188" y="828.8797607421875" elementRef="MONOMER-14819" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-10482_ENZRXN-16519_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-10482_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10482_anchor_product_0">
+      <Xref identifier="EC-4.2.3.54" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10482_anchor_product_start_0" x="0" y="0" elementRef="RXN-10482_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-10482_anchor_product_end_0" arrowHead="Conversion" x="625.0719604492188" y="50.0" elementRef="PPI" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10481">
+      <Xref identifier="EC-2.5.1.92" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10481_start" x="1089.56591796875" y="856.974609375" elementRef="CPD-4211" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-10481_end" arrowHead="Conversion" x="717.7890625" y="600.6002197265625" elementRef="CPD-11293" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-10481_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-10481" />
+      <Property key="EC_Number" value="EC-2.5.1.92" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-6244" />
+      <Property key="ReactionEquation" value="CPD-4211 + DELTA3-ISOPENTENYL-PP =&gt; PPI + CPD-11293" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-16521" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-26." />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="^coefficient" value="2, 2" />
+    </Interaction>
+    <Interaction elementId="RXN-10481_ENZRXN-16521">
+      <Waypoints>
+        <Point elementId="RXN-10481_ENZRXN-16521_start" x="1600.0" y="1043.6671142578125" elementRef="MONOMER-14834" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-10481_ENZRXN-16521_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-10481_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10481_anchor_reactant_1">
+      <Xref identifier="EC-2.5.1.92" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10481_anchor_reactant_start_1" x="617.8299560546875" y="972.519287109375" elementRef="DELTA3-ISOPENTENYL-PP" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-10481_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-10481_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10481_anchor_product_0">
+      <Xref identifier="EC-2.5.1.92" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10481_anchor_product_start_0" x="0" y="0" elementRef="RXN-10481_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-10481_anchor_product_end_0" arrowHead="Conversion" x="625.0719604492188" y="50.0" elementRef="PPI" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_PUB_18493048">
+      <Xref identifier="18493048" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_19155349">
+      <Xref identifier="19155349" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_11090225">
+      <Xref identifier="11090225" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_ABYSHEV07">
+      <Xref identifier="PUB-ABYSHEV07 | Studies of the chemical composition of birch bark extracts (Cortex betula) from the Betulaceae  fami... (Abyshev, A. Z, Agaev, E.M, Guseinov, A.B, 2007)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_PUB_12371819">
+      <Xref identifier="12371819" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

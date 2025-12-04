@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="RXN-12647" organism="cellular organisms" source="PlantCyc" version="20251204102847">
+  <Description>Single reaction view for RXN-12647: RXN-12647</Description>
+  <Authors>
+    <Author name="BioCyc" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from BioCyc single reaction data.</Comment>
+  <Property key="UniqueID" value="RXN-12647" />
+  <Graphics boardWidth="1200" boardHeight="800" />
+  <DataNodes>
+    <DataNode elementId="Oxidized-Plastocyanins" textLabel="Oxidized-Plastocyanins" type="Metabolite">
+      <Xref identifier="Oxidized-Plastocyanins" dataSource="" />
+      <Graphics centerX="200" centerY="210" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="AAAAAA" borderStyle="Solid" borderWidth="1.0" fillColor="F0F0F0" shapeType="Rectangle" />
+      <Property key="IsPlaceholder" value="true" />
+    </DataNode>
+    <DataNode elementId="E-" textLabel="E-" type="Metabolite">
+      <Xref identifier="E-" dataSource="" />
+      <Graphics centerX="350" centerY="210" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="AAAAAA" borderStyle="Solid" borderWidth="1.0" fillColor="F0F0F0" shapeType="Rectangle" />
+      <Property key="IsPlaceholder" value="true" />
+    </DataNode>
+    <DataNode elementId="Plastocyanin-Reduced" textLabel="Plastocyanin-Reduced" type="Metabolite">
+      <Xref identifier="Plastocyanin-Reduced" dataSource="" />
+      <Graphics centerX="500" centerY="210" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="AAAAAA" borderStyle="Solid" borderWidth="1.0" fillColor="F0F0F0" shapeType="Rectangle" />
+      <Property key="IsPlaceholder" value="true" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="RXN-12647">
+      <Xref identifier="RXN-12647" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-12647_start" x="245.0" y="210" elementRef="Oxidized-Plastocyanins" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-12647_end" arrowHead="Conversion" x="455.0" y="210" elementRef="Plastocyanin-Reduced" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-12647_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-12647" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="RXN-15479, PLASTOQUINOL--PLASTOCYANIN-REDUCTASE-RXN" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="Oxidized-Plastocyanins + E- =&gt; Plastocyanin-Reduced" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="StandardReductionPotential" value="0.37" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionType" value="Redox-Half-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="^compartment" value="CCO-IN, CCO-IN" />
+      <CitationRef elementRef="citation_PUB_16787635" />
+      <CitationRef elementRef="citation_PUB_6269845" />
+    </Interaction>
+    <Interaction elementId="RXN-12647_anchor_reactant_1">
+      <Xref identifier="RXN-12647" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-12647_anchor_reactant_start_1" x="395.0" y="210" elementRef="E-" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-12647_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-12647_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_PUB_16787635">
+      <Xref identifier="16787635" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_6269845">
+      <Xref identifier="6269845" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

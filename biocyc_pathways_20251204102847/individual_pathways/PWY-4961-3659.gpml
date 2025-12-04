@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="β-pyrazole-1-ylalanine biosynthesis" organism="Cucumis sativus" source="PlantCyc" version="20251204102847">
+  <Description>Over 200 non-protein amino acids are present in plants. Many occur in free forms while some are detected in peptide conjugates. Many have toxic properties. The role of non-protein amino acids in plants has been proposed to include serving as defense compounds against predators, as storage forms of carbon and nitrogen, and as detoxification products|CITS: [Wallsgrove95]|. &amp;beta;-pyrazole-1-ylalanine is a non-protein amino acid first isolated from water melon and later found in several other species of Cucurbitaceae. It makes up about 0.1% of the total dry weight of water melon seeds which suggest its role of a storage form of carbon and nitrogen. Given the toxicity of pyrazole and 1,3-diaminopropane, and the less toxicity of &amp;beta;-pyrazole-1-ylalanine, it is suggested that the biosynthesis pathway of &amp;beta;-pyrazole-1-ylalanine serves as one of the detoxification mechanisms in cucurbit plants|CITS: [Brown90]|. &amp;beta;-pyrazole-1-ylalanine is synthesized from pyrazole and O-acetyl-serine, catalyzed by &amp;beta;-pyrazole-1-ylalanine synthase. The enzyme is reported to be same enzyme of cysteine synthase in water melon|CITS: [8280125]|. As far as concerning the origin of the pyrazole moiety of &amp;beta;-pyrazole-1-ylalanine, it was before implicated that 1,3-diaminopropane is the precursor of pyrazole. A partially purified enzyme, tentatively named pyrazole synthase here in MetaCyc, otherwise was not named, from cucumber which was demonstrated to convert 1,3-diaminopropane to pyrazole via 2-pyrazoline confirmed the previous hypothesis|CITS: [Brown90]|. The enzyme is the first to be described, from any biological source, catalyzes the covalent linking of two organic N-atoms. Preliminary results suggested 1,3-diaminopropane was derived from spermidine in cucumber. Studies in other non-cucurbit plant species also indicated that 1,3-diaminopropane arises from spermidine and spermine and that 1,3-diaminopropane is also metabolized to &amp;beta;-alanine|CITS: [Brown90]|. The supply of pyrazole is the limiting factor of &amp;beta;-pyrazole-1-ylalanine synthesis|CITS: [Frisch67]|.</Description>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-4961" />
+  <Property key="Type" value="NON-PROTEIN-AMINO-ACID-SYN" />
+  <Property key="ReactionCount" value="4" />
+  <Property key="ReactionIDs" value="RXN-7443, RXN-7442, RXN-7441, 2.5.1.51-RXN" />
+  <Property key="PredecessorCount" value="3" />
+  <Property key="Organism" value="Citrullus lanatus, Cucumis sativus" />
+  <Property key="TaxonomicRange_1" value="Cucurbitales" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_PUB_WALLSGROVE95" />
+  <CitationRef elementRef="citation_PUB_BROWN90" />
+  <CitationRef elementRef="citation_PUB_8280125" />
+  <CitationRef elementRef="citation_PUB_FRISCH67" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="MONOMER-11327" textLabel="β-pyrazole-1-ylalanine synthase" type="Protein" groupRef="CPLX-6681">
+      <Xref identifier="MONOMER-11327" dataSource="plantcyc" />
+      <Graphics centerX="925.16162109375" centerY="595.4088134765625" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>The GenBank accession for the coding cDNA is D17363.</Comment>
+      <Property key="UniqueID" value="MONOMER-11327" />
+      <Property key="ComponentOf" value="CPLX-6681" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="MolecularWeightExp" value="32." />
+      <Property key="MolecularWeightKd" value="32." />
+      <Property key="Species" value="TAX-260674" />
+    </DataNode>
+    <DataNode elementId="MONOMER-11326" textLabel="pyrazole synthase" type="Protein">
+      <Xref identifier="MONOMER-11326" dataSource="plantcyc" />
+      <Graphics centerX="1138.2791748046875" centerY="835.8812255859375" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>This partially purified enzyme was demonstrated to convert 1,3-diaminopropane to pyrazole via 2-pyrazoline and thus catalyzes both cyclization of 1,3-diaminopropane and subsequent dehydrogenation to yield pyrazole.</Comment>
+      <Property key="UniqueID" value="MONOMER-11326" />
+      <Property key="Catalyzes" value="RXN-11650, RXN-11649, RXN-11648" />
+      <Property key="CatalyzesCount" value="3" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="MolecularWeightExp" value="66." />
+      <Property key="MolecularWeightKd" value="66." />
+      <Property key="Species" value="TAX-3659" />
+      <CitationRef elementRef="citation_PUB_BROWN90" />
+    </DataNode>
+    <DataNode elementId="Acceptor" textLabel="an oxidized electron carrier" type="Metabolite">
+      <Xref identifier="15339" dataSource="ChEBI" />
+      <Graphics centerX="615.9423828125" centerY="233.54481506347656" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>In general, an electron carrier is a chemical entity that can accept or donate electrons from/to another chemical entity. When accepting electrons, it acts as an &quot;electron acceptor&quot;. By accepting the electrons, the acceptor is reduced, and thus prior to receiving the electrons the entity is called &quot;an oxidized electron acceptor&quot; and after receiving them it is called &quot;a reduced electron acceptor&quot;. Many reduced electron acceptors are able to transfer the electrons to other molecules, becoming oxidized in the process. Thus the distinction between an electron acceptor and an electron donor is often not determined by the actual chemical entity, but by the role it plays in a particular reaction. However, some acceptors in biological reactions only accept electrons and do not transfer them further. Those are often known as &quot;terminal electron acceptors&quot;. While in general every chemical reaction in which electrons are transferred includes an electron donor and an electron acceptor, several molecules are commonly used in metabolism solely for the purpose of electron transfer, and are referred to in biology as electron carriers. Different biological electron carriers differ in the number of electrons that they transfer and in their electron affinity. Some of the common biological electron carriers transfer only a single electron (e.g. |FRAME: Cytochromes cytochromes|, |FRAME: Blue-Copper-Proteins &quot;blue copper proteins&quot;|, and some |FRAME: Ferredoxins ferredoxins|), some transfer two electrons (e.g. some |FRAME: Ferredoxins ferredoxins|), some transfer a hydride ion ( e.g. |FRAME: NAD| and |FRAME: NADP|), and some transfer two electrons and two protons (|FRAME: ETR-Quinones quinones|, |FRAME: FAD| and |FRAME: FMN|). In addition, a number of inorganic small molecules (e.g. oxygen, nitrate, iron (III), manganese (IV), sulfate) are often used as terminal electron acceptors. In many cases, purified enzymes can act &lt;i&gt;in vitro&lt;/i&gt; using an artificial electron carrier, and their &lt;i&gt;in vivo&lt;/i&gt; electron carrier is not known. This class of &quot;unknown electron carriers&quot; is used to describe such reactions, which are incompletely characterized.</Comment>
+      <Property key="UniqueID" value="Acceptor" />
+      <Property key="AlternativeId_ReactomeCpd" value="5359011" />
+      <Property key="AlternativeId_Metanetx" value="MNXM8975" />
+      <Property key="AlternativeId_LigandCpd" value="C00028" />
+      <Property key="AlternativeId_Chebi" value="15339" />
+      <Property key="Synonym_1" value="A" />
+      <Property key="Synonym_2" value="an oxidized unknown electron donor" />
+      <Property key="Synonym_3" value="an oxidized unknown electron acceptor" />
+      <Property key="AbbrevName" value="A" />
+      <Property key="HasNoStructure?" value="T" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="NName" value="acceptors" />
+      <Property key="Osmolarity" value="0" />
+    </DataNode>
+    <DataNode elementId="_2-PYRAZOLINE" textLabel="2-pyrazoline" type="Metabolite">
+      <Xref identifier="MCGBIXXDQFWVDW-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="882.69873046875" centerY="786.853515625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="2-PYRAZOLINE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000005190620" />
+      <Property key="AlternativeId_Seed" value="cpd21908" />
+      <Property key="AlternativeId_Metanetx" value="MNXM9897" />
+      <Property key="AlternativeId_Chemspider" value="10609909" />
+      <Property key="AlternativeId_Pubchem" value="66962" />
+      <Property key="ChemicalFormula" value="(C 3) (H 6) (N 2)" />
+      <Property key="Gibbs0" value="86.79673" />
+      <Property key="Inchi" value="InChI=1S/C3H6N2/c1-2-4-5-3-1/h2,5H,1,3H2" />
+      <Property key="InchiKey" value="InChIKey=MCGBIXXDQFWVDW-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="70.094" />
+      <Property key="MonoisotopicMw" value="70.053098203" />
+      <Property key="NonStandardInchi" value="InChI=1S/C3H6N2/c1-2-4-5-3-1/h2,5H,1,3H2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C1(C\C=N/N1)" />
+    </DataNode>
+    <DataNode elementId="Donor-H2" textLabel="a reduced two electron carrier" type="Metabolite">
+      <Xref identifier="17499" dataSource="ChEBI" />
+      <Graphics centerX="1162.22607421875" centerY="50.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>In general, an electron carrier is a chemical entity that can accept or donate electrons from/to another chemical entity. When accepting electrons, it acts as an &quot;electron acceptor&quot;. By accepting the electrons, the acceptor is reduced, and thus prior to receiving the electrons the entity is called &quot;an oxidized electron acceptor&quot; and after receiving them it is called &quot;a reduced electron acceptor&quot;. Many reduced electron acceptors are able to transfer the electrons to other molecules, becoming oxidized in the process. Thus the distinction between an electron acceptor and an electron donor is often not determined by the actual chemical entity, but by the role it plays in a particular reaction. However, some acceptors in biological reactions only accept electrons and do not transfer them further. Those are often known as &quot;terminal electron acceptors&quot;. While in general every chemical reaction in which electrons are transferred includes an electron donor and an electron acceptor, several molecules are commonly used in metabolism solely for the purpose of electron transfer, and are referred to in biology as electron carriers. Different biological electron carriers differ in the number of electrons that they transfer and in their electron affinity. Some of the common biological electron carriers transfer only a single electron (e.g. |FRAME: Cytochromes cytochromes|, |FRAME: Blue-Copper-Proteins &quot;blue copper proteins&quot;|, and some |FRAME: Ferredoxins ferredoxins|), some transfer two electrons (e.g. some |FRAME: Ferredoxins ferredoxins|), some transfer a hydride ion ( e.g. |FRAME: NAD| and |FRAME: NADP|), and some transfer two electrons and two protons (|FRAME: ETR-Quinones quinones|, |FRAME: FAD| and |FRAME: FMN|). In addition, a number of inorganic small molecules (e.g. oxygen, nitrate, iron (III), manganese (IV), sulfate) are often used as terminal electron acceptors. In many cases, purified enzymes can act &lt;i&gt;in vitro&lt;/i&gt; using an artificial electron carrier, and their &lt;i&gt;in vivo&lt;/i&gt; electron carrier is not known. The classes of &quot;unknown electron carriers&quot; are used to describe such reactions, which are incompletely characterized.</Comment>
+      <Property key="UniqueID" value="Donor-H2" />
+      <Property key="AlternativeId_Seed" value="cpd26978" />
+      <Property key="AlternativeId_Metanetx" value="MNXM36" />
+      <Property key="AlternativeId_Chebi" value="17499" />
+      <Property key="AlternativeId_LigandCpd" value="C00030" />
+      <Property key="Synonym_1" value="a reduced unknown two electron donor" />
+      <Property key="Synonym_2" value="A(H2)" />
+      <Property key="Synonym_3" value="a reduced unknown two electron acceptor" />
+      <Property key="AbbrevName" value="A(H2)" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="NName" value="reduced acceptors" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="[an oxidized electron carrier]" />
+    </DataNode>
+    <DataNode elementId="CPD-670" textLabel="3-(pyrazol-1-yl)-L-alanine" type="Metabolite">
+      <Xref identifier="PIGOPELHGLPKLL-YFKPBYRVSA-N" dataSource="InChIKey" />
+      <Graphics centerX="277.49188232421875" centerY="1256.724609375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-670" />
+      <Property key="AlternativeId_Zinc" value="ZINC000000895518" />
+      <Property key="AlternativeId_Seed" value="cpd00855" />
+      <Property key="AlternativeId_Metanetx" value="MNXM2327" />
+      <Property key="AlternativeId_Chebi" value="57747" />
+      <Property key="AlternativeId_Pubchem" value="25203312" />
+      <Property key="AlternativeId_LigandCpd" value="C01162" />
+      <Property key="Synonym_1" value="&amp;beta;-(pyrazol-1-yl)-L-alanine" />
+      <Property key="ChemicalFormula" value="(C 6) (H 9) (N 3) (O 2)" />
+      <Property key="AtomCharges" value="(11 -1), (7 1)" />
+      <Property key="Gibbs0" value="48.90009" />
+      <Property key="Inchi" value="InChI=1S/C6H9N3O2/c7-5(6(10)11)4-9-3-1-2-8-9/h1-3,5H,4,7H2,(H,10,11)/t5-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=PIGOPELHGLPKLL-YFKPBYRVSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="155.156" />
+      <Property key="MonoisotopicMw" value="155.0694765487" />
+      <Property key="NonStandardInchi" value="InChI=1S/C6H9N3O2/c7-5(6(10)11)4-9-3-1-2-8-9/h1-3,5H,4,7H2,(H,10,11)/t5-/m0/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C1(\N(\N=C/C=1)C[C@H]([NH3+])C(=O)[O-])" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="917.6902465820312" centerY="1550.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="ChemicalFormula" value="(H 1)" />
+      <Property key="AtomCharges" value="(1 1)" />
+      <Property key="Gibbs0" value="0.42906138" />
+      <Property key="Inchi" value="InChI=1S/p+1" />
+      <Property key="InchiKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicMw" value="1.0078250321" />
+      <Property key="NonStandardInchi" value="InChI=1S/p+1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="[H+]" />
+    </DataNode>
+    <DataNode elementId="PYRAZOLE" textLabel="pyrazole" type="Metabolite">
+      <Xref identifier="WTKZEGDFNFYCGP-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1521.139892578125" centerY="1219.484619140625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PYRAZOLE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000000895257" />
+      <Property key="AlternativeId_Seed" value="cpd00372" />
+      <Property key="AlternativeId_Metanetx" value="MNXM2277" />
+      <Property key="AlternativeId_Drugbank" value="DB02757" />
+      <Property key="AlternativeId_Chemspider" value="1019" />
+      <Property key="AlternativeId_Pubchem" value="1048" />
+      <Property key="AlternativeId_Chebi" value="17241" />
+      <Property key="AlternativeId_LigandCpd" value="C00481" />
+      <Property key="Synonym_1" value="1,2-diazole" />
+      <Property key="ChemicalFormula" value="(C 3) (H 4) (N 2)" />
+      <Property key="Gibbs0" value="64.27448" />
+      <Property key="Inchi" value="InChI=1S/C3H4N2/c1-2-4-5-3-1/h1-3H,(H,4,5)" />
+      <Property key="InchiKey" value="InChIKey=WTKZEGDFNFYCGP-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="68.078" />
+      <Property key="MonoisotopicMw" value="68.0374481388" />
+      <Property key="NonStandardInchi" value="InChI=1S/C3H4N2/c1-2-4-5-3-1/h1-3H,(H,4,5)" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-8058, REG0-7135" />
+      <Property key="Smiles" value="C1(\C=C/N\N=1)" />
+    </DataNode>
+    <DataNode elementId="CPD-313" textLabel="propane-1,3-diamine" type="Metabolite">
+      <Xref identifier="XFNJVJPLKCPIBV-UHFFFAOYSA-P" dataSource="InChIKey" />
+      <Graphics centerX="1600.0" centerY="537.4297485351562" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-313" />
+      <Property key="AlternativeId_Zinc" value="ZINC000005828682" />
+      <Property key="AlternativeId_Chebi" value="70977" />
+      <Property key="AlternativeId_ReactomeCpd" value="204628" />
+      <Property key="AlternativeId_Seed" value="cpd00726" />
+      <Property key="AlternativeId_Metanetx" value="MNXM350" />
+      <Property key="AlternativeId_Refmet" value="1,3-Diaminopropane" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57484" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00002" />
+      <Property key="AlternativeId_Chemspider" value="3247103" />
+      <Property key="AlternativeId_Pubchem" value="4030255" />
+      <Property key="AlternativeId_LigandCpd" value="C00986" />
+      <Property key="AlternativeId_Cas" value="109-76-2" />
+      <Property key="Synonym_1" value="trimethylenediamine" />
+      <Property key="Synonym_2" value="1,3-propanediamine" />
+      <Property key="Synonym_3" value="1,3-diaminopropane" />
+      <Property key="Synonym_4" value="1,3-DAP" />
+      <Property key="ChemicalFormula" value="(C 3) (H 12) (N 2)" />
+      <Property key="AtomCharges" value="(5 1), (4 1)" />
+      <Property key="Gibbs0" value="114.36521" />
+      <Property key="Inchi" value="InChI=1S/C3H10N2/c4-2-1-3-5/h1-5H2/p+2" />
+      <Property key="InchiKey" value="InChIKey=XFNJVJPLKCPIBV-UHFFFAOYSA-P" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="76.141" />
+      <Property key="MonoisotopicMw" value="74.0843983314" />
+      <Property key="NonStandardInchi" value="InChI=1S/C3H10N2/c4-2-1-3-5/h1-5H2/p+2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-12363" />
+      <Property key="Smiles" value="C(CC[NH3+])[NH3+]" />
+    </DataNode>
+    <DataNode elementId="ACET" textLabel="acetate" type="Metabolite">
+      <Xref identifier="QTBSBXVTEAMEQO-UHFFFAOYSA-M" dataSource="InChIKey" />
+      <Graphics centerX="617.195556640625" centerY="778.5057983398438" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ACET" />
+      <Property key="AlternativeId_Pubchem" value="175" />
+      <Property key="AlternativeId_Drugbank" value="DB03166" />
+      <Property key="AlternativeId_UmBbdCpd" value="c0050" />
+      <Property key="AlternativeId_LigandCpd" value="C00033" />
+      <Property key="AlternativeId_Wikipedia" value="Acetate" />
+      <Property key="AlternativeId_Zinc" value="ZINC000005224164" />
+      <Property key="AlternativeId_Mediadb" value="compounds/33" />
+      <Property key="AlternativeId_Seed" value="cpd00029" />
+      <Property key="AlternativeId_Metanetx" value="MNXM26" />
+      <Property key="AlternativeId_Refmet" value="Acetic acid" />
+      <Property key="AlternativeId_Bigg" value="ac" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC30089" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00042" />
+      <Property key="AlternativeId_Chemspider" value="170" />
+      <Property key="AlternativeId_Chebi" value="30089" />
+      <Property key="AlternativeId_Cas" value="71-50-1" />
+      <Property key="Synonym_1" value="acetate" />
+      <Property key="Synonym_2" value="acetic acid" />
+      <Property key="Synonym_3" value="ethanoate" />
+      <Property key="ChemicalFormula" value="(C 2) (H 3) (O 2)" />
+      <Property key="AtomCharges" value="(3 -1)" />
+      <Property key="Gibbs0" value="-57.768696" />
+      <Property key="Inchi" value="InChI=1S/C2H4O2/c1-2(3)4/h1H3,(H,3,4)/p-1" />
+      <Property key="InchiKey" value="InChIKey=QTBSBXVTEAMEQO-UHFFFAOYSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="InternalsOfGroup" value="GLYCO-CT-ACETYL" />
+      <Property key="MolecularWeight" value="59.044" />
+      <Property key="MonoisotopicMw" value="60.0211293726" />
+      <Property key="NonStandardInchi" value="InChI=1S/C2H4O2/c1-2(3)4/h1H3,(H,3,4)/p-1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-11782" />
+      <Property key="Smiles" value="CC([O-])=O" />
+      <Property key="SystematicName" value="acetate" />
+    </DataNode>
+    <DataNode elementId="ACETYLSERINE" textLabel="O-acetyl-L-serine" type="Metabolite">
+      <Xref identifier="VZXPDPZARILFQX-BYPYZUCNSA-N" dataSource="InChIKey" />
+      <Graphics centerX="850.3519897460938" centerY="1025.885986328125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ACETYLSERINE" />
+      <Property key="AlternativeId_Refmet" value="O-Acetylserine" />
+      <Property key="AlternativeId_Bigg" value="acser" />
+      <Property key="AlternativeId_Chebi" value="58340" />
+      <Property key="AlternativeId_Pubchem" value="6971051" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC17981" />
+      <Property key="AlternativeId_Hmdb" value="HMDB03011" />
+      <Property key="AlternativeId_LigandCpd" value="C00979" />
+      <Property key="AlternativeId_Cas" value="66638-22-0" />
+      <Property key="Synonym_1" value="O&lt;sup&gt;3&lt;/sup&gt;-acetyl-L-serine" />
+      <Property key="Synonym_2" value="acetylserine" />
+      <Property key="Synonym_3" value="&lt;i&gt;O&lt;/i&gt;-acetylserine" />
+      <Property key="Synonym_4" value="(2S)-3-acetyloxy-2-aminopropanoate" />
+      <Property key="ChemicalFormula" value="(C 5) (H 9) (N 1) (O 4)" />
+      <Property key="AtomCharges" value="(6 1), (9 -1)" />
+      <Property key="Gibbs0" value="-69.15991" />
+      <Property key="Inchi" value="InChI=1S/C5H9NO4/c1-3(7)10-2-4(6)5(8)9/h4H,2,6H2,1H3,(H,8,9)/t4-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=VZXPDPZARILFQX-BYPYZUCNSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="147.13" />
+      <Property key="MonoisotopicMw" value="147.0531577825" />
+      <Property key="NonStandardInchi" value="InChI=1S/C5H9NO4/c1-3(7)10-2-4(6)5(8)9/h4H,2,6H2,1H3,(H,8,9)" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-9178" />
+      <Property key="Smiles" value="CC(OC[C@H]([NH3+])C(=O)[O-])=O" />
+    </DataNode>
+    <DataNode elementId="PYRAZOLIDINE" textLabel="pyrazolidine" type="Metabolite">
+      <Xref identifier="USPWKWBDZOARPV-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="100.0" centerY="525.5509643554688" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PYRAZOLIDINE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000019170183" />
+      <Property key="AlternativeId_Seed" value="cpd27825" />
+      <Property key="AlternativeId_Metanetx" value="MNXM12819" />
+      <Property key="AlternativeId_Chemspider" value="10692437" />
+      <Property key="AlternativeId_Pubchem" value="79033" />
+      <Property key="AlternativeId_Chebi" value="33138" />
+      <Property key="ChemicalFormula" value="(C 3) (H 8) (N 2)" />
+      <Property key="Gibbs0" value="104.06897" />
+      <Property key="Inchi" value="InChI=1S/C3H8N2/c1-2-4-5-3-1/h4-5H,1-3H2" />
+      <Property key="InchiKey" value="InChIKey=USPWKWBDZOARPV-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="72.11" />
+      <Property key="MonoisotopicMw" value="72.0687482672" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C1(NNCC1)" />
+    </DataNode>
+    <DataNode elementId="FAD" textLabel="FAD" type="Metabolite">
+      <Xref identifier="IMGVNJNCCGXBHD-UYBVJOGSSA-K" dataSource="InChIKey" />
+      <Graphics centerX="700.0" centerY="481.4903564453125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: FAD &quot;Flavin adenine dinucleotide&quot;| (FAD) is an important redox cofactor involved in many reactions in metabolism. The fully oxidized form, FAD, is converted to the reduced form, |FRAME: FADH2| by receiving two electrons and two protons. The reduced form can be oxidized to a |FRAME: FADH &quot;semireduced form&quot;| (semiquinone, FADH) by donating one electron and one proton. The semiquinone is then oxidized back to the fully oxidized form by losing a second electron and proton. Even though FAD has an aromatic ring system, FADH2 does not, making it significantly higher in energy. Many proteins contain a flavin moiety, either in the form of FAD or |FRAME: FMN|. They are known as |FRAME: Flavoproteins flavoproteins|.</Comment>
+      <Property key="UniqueID" value="FAD" />
+      <Property key="AlternativeId_Seed" value="cpd00015" />
+      <Property key="AlternativeId_Metanetx" value="MNXM33" />
+      <Property key="AlternativeId_Bigg" value="fad" />
+      <Property key="AlternativeId_Chebi" value="57692" />
+      <Property key="AlternativeId_Pubchem" value="46906035" />
+      <Property key="AlternativeId_Wikipedia" value="Flavin_adenine_dinucleotide" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01248" />
+      <Property key="AlternativeId_Chemspider" value="13082029" />
+      <Property key="AlternativeId_LigandCpd" value="C00016" />
+      <Property key="AlternativeId_Cas" value="146-14-5" />
+      <Property key="Synonym_1" value="flavin adenine dinucleotide oxidized" />
+      <Property key="Synonym_2" value="flavin adenine dinucleotide" />
+      <Property key="Synonym_3" value="flavitan" />
+      <Property key="ChemicalFormula" value="(C 27) (H 30) (N 9) (O 15) (P 2)" />
+      <Property key="AtomCharges" value="(45 -1), (47 -1), (34 -1)" />
+      <Property key="CofactorsOf" value="ENZRXN-26786, ENZRXN-26787, ENZRXN-26080, ENZRXN-26668, ENZRXN-22426, ENZRXN-9661, ENZRXN-9725, ENZRXNIO2-4892, ENZRXN-13408, ENZRXN-18092, ENZRXN-17488, ENZRXN-13407, ENZRXN-1303, ENZRXN-1302, ENZRXNQT-12686, ENZRXN-17489, ENZRXN-12582, ENZRXNQT-12714, ENZRXN-16490, ENZRXN-5273, ENZRXN-9652, ENZRXN-9724, ENZRXN-12559, ENZRXN-12970" />
+      <Property key="Gibbs0" value="-327.42395" />
+      <Property key="Inchi" value="InChI=1S/C27H33N9O15P2/c1-10-3-12-13(4-11(10)2)35(24-18(32-12)25(42)34-27(43)33-24)5-14(37)19(39)15(38)6-48-52(44,45)51-53(46,47)49-7-16-20(40)21(41)26(50-16)36-9-31-17-22(28)29-8-30-23(17)36/h3-4,8-9,14-16,19-21,26,37-41H,5-7H2,1-2H3,(H5,28,29,30,34,42,43,44,45,46,47)/p-3/t14-,15+,16+,19-,20+,21+,26+/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=IMGVNJNCCGXBHD-UYBVJOGSSA-K" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="782.533" />
+      <Property key="MonoisotopicMw" value="785.1571344575999" />
+      <Property key="NonStandardInchi" value="InChI=1S/C27H33N9O15P2/c1-10-3-12-13(4-11(10)2)35(24-18(32-12)25(42)34-27(43)33-24)5-14(37)19(39)15(38)6-48-52(44,45)51-53(46,47)49-7-16-20(40)21(41)26(50-16)36-9-31-17-22(28)29-8-30-23(17)36/h3-4,8-9,14-16,19-21,26,37-41H,5-7H2,1-2H3,(H5,28,29,30,34,42,43,44,45,46,47)/p-3/t14-,15+,16+,19-,20+,21+,26+/m0/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="ProstheticGroupsOf" value="ENZRXN-7642" />
+      <Property key="Regulates" value="REG-10108, REG-10850, REG-10799, REG-6088" />
+      <Property key="Smiles" value="CC6(\C=C5(C(/N(C[C@@H]([C@H](O)[C@H](O)COP(OP([O-])(OC[C@@H]3([C@@H](O)[C@@H](O)[C@H](N1(\C=N/C2(C(/N)=N\C=N/C1=2)))O3))=O)([O-])=O)O)C4(\C(\C(=O)[N-]C(=O)/N=4)=N/5))=C\C(/C)=6))" />
+    </DataNode>
+    <DataNode elementId="CA_2" textLabel="Ca²⁺" type="Metabolite">
+      <Xref identifier="BHPQYMZQTOCNFJ-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="700.0" centerY="481.4903564453125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CA+2" />
+      <Property key="AlternativeId_Mediadb" value="compounds/74/" />
+      <Property key="AlternativeId_Metanetx" value="MNXM128" />
+      <Property key="AlternativeId_Bigg" value="ca2" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC29108" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00464" />
+      <Property key="AlternativeId_Chemspider" value="266" />
+      <Property key="AlternativeId_Pubchem" value="271" />
+      <Property key="AlternativeId_LigandCpd" value="C00076" />
+      <Property key="AlternativeId_Chebi" value="29108" />
+      <Property key="Synonym_1" value="calcium(II)" />
+      <Property key="Synonym_2" value="Ca&lt;SUP&gt;++&lt;/SUP&gt;" />
+      <Property key="Synonym_3" value="calcium ion" />
+      <Property key="Synonym_4" value="Ca&lt;sup&gt;II&lt;/sup&gt;" />
+      <Property key="ChemicalFormula" value="(CA 1)" />
+      <Property key="AtomCharges" value="(1 2)" />
+      <Property key="CofactorsOf" value="ENZRXN-12780, ENZRXN-12779, ENZRXNDQC-157112" />
+      <Property key="ComponentOf" value="CPD0-1589" />
+      <Property key="Gibbs0" value="-1.2482376" />
+      <Property key="Inchi" value="InChI=1S/Ca/q+2" />
+      <Property key="InchiKey" value="InChIKey=BHPQYMZQTOCNFJ-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="40.08" />
+      <Property key="MonoisotopicMw" value="39.9625912" />
+      <Property key="NonStandardInchi" value="InChI=1S/Ca/q+2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="ProstheticGroupsOf" value="ENZRXN-18815, ENZRXN-18816" />
+      <Property key="Regulates" value="REG0-8014, REG-9769, REG-14326, REG0-12159, REG-13172, REG0-10718, REG-12880, REG-10936, REG-8469, REG-14106, REG-14071, REG-14077, REG-14086, REG-14643, REG-14639, REG-14796, REG-14807, REG-14839, REG-14819, REG-14824, REG-14844, REG-14859, REG-14854, REG-14829, REG-14834, REG-14849, REG-14864, REG-14600, REG-12867, REG-12866, REG-12868, REG0-11593, REG0-8758, REG0-8523, REG-13702, REG-13699, REG0-8164, REG0-8168, REGQT-406, REG4FS-4, REGQT-409, REG4FS-2, REG0-7201, REG-12430, REG-9118, REG-12335, REG-5969, REG0-8244, REG0-7232, REG0-7024, REG-11320, REG-11015, REG-12102, REG0-6973, REG-11101, REG-12186, REG-11620, REG-8032, REG-9449, REG-7098, REG-10116, REG-10107, REG-10849, REG-10798, REG-10416, REG-7958" />
+      <Property key="Smiles" value="[Ca+2]" />
+    </DataNode>
+    <DataNode elementId="HYDROXYLAMINE" textLabel="hydroxylamine" type="Metabolite">
+      <Xref identifier="AVXURJPOCDRRFD-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="749.31591796875" centerY="1188.1046142578125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="HYDROXYLAMINE" />
+      <Property key="AlternativeId_Seed" value="cpd00165" />
+      <Property key="AlternativeId_Metanetx" value="MNXM433" />
+      <Property key="AlternativeId_Refmet" value="Hydroxylamine" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15429" />
+      <Property key="AlternativeId_Hmdb" value="HMDB03338" />
+      <Property key="AlternativeId_Chemspider" value="766" />
+      <Property key="AlternativeId_Pubchem" value="787" />
+      <Property key="AlternativeId_Chebi" value="15429" />
+      <Property key="AlternativeId_LigandCpd" value="C00192" />
+      <Property key="AlternativeId_Cas" value="7803-49-8" />
+      <Property key="Synonym_1" value="NH2OH" />
+      <Property key="ChemicalFormula" value="(H 3) (N 1) (O 1)" />
+      <Property key="Gibbs0" value="-8.646637" />
+      <Property key="Inchi" value="InChI=1S/H3NO/c1-2/h2H,1H2" />
+      <Property key="InchiKey" value="InChIKey=AVXURJPOCDRRFD-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="33.03" />
+      <Property key="MonoisotopicMw" value="33.0214637236" />
+      <Property key="NonStandardInchi" value="InChI=1S/H3NO/c1-2/h2H,1H2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-8073, REG-12118, REG-5864, REG-13764, REG-10427, REG-9492, REG-8441, REG-6831, REG0-7757, REG0-8159, REG-10248, REG-6957, REG-6247, REG-10120, REG-10942, REG-9381, REG-9359, REG-7417" />
+      <Property key="Smiles" value="NO" />
+    </DataNode>
+    <DataNode elementId="CPD-7082" textLabel="potassium cyanide" type="Metabolite">
+      <Xref identifier="9032" dataSource="PubChem-compound" />
+      <Graphics centerX="749.31591796875" centerY="1188.1046142578125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-7082" />
+      <Property key="AlternativeId_Seed" value="cpd24707" />
+      <Property key="AlternativeId_Metanetx" value="MNXM77888" />
+      <Property key="AlternativeId_Chemspider" value="8681" />
+      <Property key="AlternativeId_Chebi" value="33191" />
+      <Property key="AlternativeId_Pubchem" value="9032" />
+      <Property key="Synonym_1" value="KCN" />
+      <Property key="Synonym_2" value="kalium cyanid" />
+      <Property key="Components" value="CPD-13584, K+" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="65.116" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-7222, REG-7219, REG-6753, REG-14795, REG-14806, REG-9527, REG-5979, REG-10119, REG-9380, REG-9358, REG-6759, REG-8180, REG-7369" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="RXN-7443">
+      <Xref identifier="RXN-7443" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-7443_start" x="1645.0" y="537.4297485351562" elementRef="CPD-313" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-7443_end" arrowHead="Conversion" x="55.0" y="525.5509643554688" elementRef="PYRAZOLIDINE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-7443_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-7443" />
+      <Property key="Pathways" value="PWY-4961" />
+      <Property key="ReactionEquation" value="CPD-313 + Acceptor =&gt; PYRAZOLIDINE + Donor-H2 + PROTON" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-11648" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="^coefficient" value="2" />
+    </Interaction>
+    <Interaction elementId="RXN-7443_ENZRXN-11648">
+      <Waypoints>
+        <Point elementId="RXN-7443_ENZRXN-11648_start" x="1138.2791748046875" y="848.3812255859375" elementRef="MONOMER-11326" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-7443_ENZRXN-11648_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-7443_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-7443_anchor_reactant_1">
+      <Xref identifier="RXN-7443" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-7443_anchor_reactant_start_1" x="660.9423828125" y="233.54481506347656" elementRef="Acceptor" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-7443_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-7443_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-7443_anchor_product_1">
+      <Xref identifier="RXN-7443" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-7443_anchor_product_start_1" x="0" y="0" elementRef="RXN-7443_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-7443_anchor_product_end_1" arrowHead="Conversion" x="1117.22607421875" y="50.0" elementRef="Donor-H2" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-7443_anchor_product_2">
+      <Xref identifier="RXN-7443" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-7443_anchor_product_start_2" x="0" y="0" elementRef="RXN-7443_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-7443_anchor_product_end_2" arrowHead="Conversion" x="872.6902465820312" y="1550.0" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-7442">
+      <Xref identifier="RXN-7442" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-7442_start" x="145.0" y="525.5509643554688" elementRef="PYRAZOLIDINE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-7442_end" arrowHead="Conversion" x="837.69873046875" y="786.853515625" elementRef="_2-PYRAZOLINE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-7442_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-7442" />
+      <Property key="Pathways" value="PWY-4961" />
+      <Property key="ReactionEquation" value="PYRAZOLIDINE + Acceptor =&gt; Donor-H2 + 2-PYRAZOLINE" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-11649" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-7442_ENZRXN-11649">
+      <Waypoints>
+        <Point elementId="RXN-7442_ENZRXN-11649_start" x="1138.2791748046875" y="848.3812255859375" elementRef="MONOMER-11326" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-7442_ENZRXN-11649_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-7442_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-7442_anchor_reactant_1">
+      <Xref identifier="RXN-7442" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-7442_anchor_reactant_start_1" x="660.9423828125" y="233.54481506347656" elementRef="Acceptor" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-7442_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-7442_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-7442_anchor_product_0">
+      <Xref identifier="RXN-7442" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-7442_anchor_product_start_0" x="0" y="0" elementRef="RXN-7442_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-7442_anchor_product_end_0" arrowHead="Conversion" x="1117.22607421875" y="50.0" elementRef="Donor-H2" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-7441">
+      <Xref identifier="RXN-7441" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-7441_start" x="927.69873046875" y="786.853515625" elementRef="_2-PYRAZOLINE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-7441_end" arrowHead="Conversion" x="1476.139892578125" y="1219.484619140625" elementRef="PYRAZOLE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-7441_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-7441" />
+      <Property key="Pathways" value="PWY-4961" />
+      <Property key="ReactionEquation" value="2-PYRAZOLINE + Acceptor =&gt; Donor-H2 + PYRAZOLE" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-11650" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-7441_ENZRXN-11650">
+      <Waypoints>
+        <Point elementId="RXN-7441_ENZRXN-11650_start" x="1138.2791748046875" y="848.3812255859375" elementRef="MONOMER-11326" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-7441_ENZRXN-11650_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-7441_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-7441_anchor_reactant_1">
+      <Xref identifier="RXN-7441" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-7441_anchor_reactant_start_1" x="660.9423828125" y="233.54481506347656" elementRef="Acceptor" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-7441_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-7441_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-7441_anchor_product_0">
+      <Xref identifier="RXN-7441" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-7441_anchor_product_start_0" x="0" y="0" elementRef="RXN-7441_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-7441_anchor_product_end_0" arrowHead="Conversion" x="1117.22607421875" y="50.0" elementRef="Donor-H2" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.5.1.51-RXN">
+      <Xref identifier="EC-2.5.1.51" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_2.5.1.51-RXN_start" x="1566.139892578125" y="1219.484619140625" elementRef="PYRAZOLE" relX="1.0" relY="0.0" />
+        <Point elementId="_2.5.1.51-RXN_end" arrowHead="Conversion" x="232.49188232421875" y="1256.724609375" elementRef="CPD-670" relX="-1.0" relY="0.0" />
+        <Anchor elementId="_2.5.1.51-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Comment source="BioCyc">The enzyme is highly specific for acetylserine and pyrazole. Not identical with EC 2.5.1.52. Formerly EC 4.2.99.14 and EC 4.2.99.17.</Comment>
+      <Property key="UniqueID" value="2.5.1.51-RXN" />
+      <Property key="EC_Number" value="EC-2.5.1.51" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-4961" />
+      <Property key="ReactionEquation" value="ACETYLSERINE + PYRAZOLE =&gt; PROTON + CPD-670 + ACET" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-11651" />
+      <Property key="Synonym_1" value="BPA synthase" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-3.5541153" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="Synonyms" value="BPA synthase" />
+    </Interaction>
+    <Interaction elementId="_2.5.1.51-RXN_ENZRXN-11651">
+      <Waypoints>
+        <Point elementId="_2.5.1.51-RXN_ENZRXN-11651_start" x="925.16162109375" y="607.9088134765625" elementRef="MONOMER-11327" relX="0.0" relY="1.0" />
+        <Point elementId="_2.5.1.51-RXN_ENZRXN-11651_end" arrowHead="Catalysis" x="0" y="0" elementRef="_2.5.1.51-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.5.1.51-RXN_anchor_reactant_0">
+      <Xref identifier="EC-2.5.1.51" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_2.5.1.51-RXN_anchor_reactant_start_0" x="895.3519897460938" y="1025.885986328125" elementRef="ACETYLSERINE" relX="1.0" relY="0.0" />
+        <Point elementId="_2.5.1.51-RXN_anchor_reactant_end_0" x="0" y="0" elementRef="_2.5.1.51-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.5.1.51-RXN_anchor_product_0">
+      <Xref identifier="EC-2.5.1.51" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_2.5.1.51-RXN_anchor_product_start_0" x="0" y="0" elementRef="_2.5.1.51-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="_2.5.1.51-RXN_anchor_product_end_0" arrowHead="Conversion" x="872.6902465820312" y="1550.0" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2.5.1.51-RXN_anchor_product_2">
+      <Xref identifier="EC-2.5.1.51" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_2.5.1.51-RXN_anchor_product_start_2" x="0" y="0" elementRef="_2.5.1.51-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="_2.5.1.51-RXN_anchor_product_end_2" arrowHead="Conversion" x="572.195556640625" y="778.5057983398438" elementRef="ACET" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-7443_regulation_0">
+      <Waypoints>
+        <Point elementId="RXN-7443_regulation_start_0" x="745.0" y="481.4903564453125" elementRef="FAD" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-7443_regulation_end_0" arrowHead="Stimulation" x="850.0" y="531.4903564453125" elementRef="RXN-7443_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-10799" />
+      <Property key="RegulationMode" value="+" />
+      <Property key="RegulationType" value="activation" />
+      <Property key="RegulatedEntity" value="ENZRXN-11648" />
+      <Property key="Regulator" value="FAD" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <Property key="InstanceNameTemplate" value="REG-*" />
+      <CitationRef elementRef="citation_PUB_BROWN90" />
+    </Interaction>
+    <Interaction elementId="RXN-7443_regulation_1">
+      <Waypoints>
+        <Point elementId="RXN-7443_regulation_start_1" x="745.0" y="481.4903564453125" elementRef="CA_2" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-7443_regulation_end_1" arrowHead="Inhibition" x="850.0" y="531.4903564453125" elementRef="RXN-7443_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-10798" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="RegulatedEntity" value="ENZRXN-11648" />
+      <Property key="Regulator" value="CA+2" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <Property key="InstanceNameTemplate" value="REG-*" />
+      <CitationRef elementRef="citation_PUB_BROWN90" />
+    </Interaction>
+    <Interaction elementId="RXN-7442_regulation_0">
+      <Waypoints>
+        <Point elementId="RXN-7442_regulation_start_0" x="745.0" y="481.4903564453125" elementRef="FAD" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-7442_regulation_end_0" arrowHead="Stimulation" x="491.349365234375" y="656.2022705078125" elementRef="RXN-7442_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-10850" />
+      <Property key="RegulationMode" value="+" />
+      <Property key="RegulationType" value="activation" />
+      <Property key="RegulatedEntity" value="ENZRXN-11649" />
+      <Property key="Regulator" value="FAD" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <Property key="InstanceNameTemplate" value="REG-*" />
+      <CitationRef elementRef="citation_PUB_BROWN90" />
+    </Interaction>
+    <Interaction elementId="RXN-7442_regulation_1">
+      <Waypoints>
+        <Point elementId="RXN-7442_regulation_start_1" x="745.0" y="481.4903564453125" elementRef="CA_2" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-7442_regulation_end_1" arrowHead="Inhibition" x="491.349365234375" y="656.2022705078125" elementRef="RXN-7442_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-10849" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="RegulatedEntity" value="ENZRXN-11649" />
+      <Property key="Regulator" value="CA+2" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <Property key="InstanceNameTemplate" value="REG-*" />
+      <CitationRef elementRef="citation_PUB_BROWN90" />
+    </Interaction>
+    <Interaction elementId="RXN-7441_regulation_0">
+      <Waypoints>
+        <Point elementId="RXN-7441_regulation_start_0" x="745.0" y="481.4903564453125" elementRef="FAD" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-7441_regulation_end_0" arrowHead="Stimulation" x="1201.9193115234375" y="1003.1690673828125" elementRef="RXN-7441_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-10108" />
+      <Property key="RegulationMode" value="+" />
+      <Property key="RegulationType" value="activation" />
+      <Property key="RegulatedEntity" value="ENZRXN-11650" />
+      <Property key="Regulator" value="FAD" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <Property key="InstanceNameTemplate" value="REG-*" />
+      <CitationRef elementRef="citation_PUB_BROWN90" />
+    </Interaction>
+    <Interaction elementId="RXN-7441_regulation_1">
+      <Waypoints>
+        <Point elementId="RXN-7441_regulation_start_1" x="745.0" y="481.4903564453125" elementRef="CA_2" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-7441_regulation_end_1" arrowHead="Inhibition" x="1201.9193115234375" y="1003.1690673828125" elementRef="RXN-7441_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-10107" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="RegulatedEntity" value="ENZRXN-11650" />
+      <Property key="Regulator" value="CA+2" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <Property key="InstanceNameTemplate" value="REG-*" />
+      <CitationRef elementRef="citation_PUB_BROWN90" />
+    </Interaction>
+    <Interaction elementId="_2.5.1.51-RXN_regulation_0">
+      <Waypoints>
+        <Point elementId="_2.5.1.51-RXN_regulation_start_0" x="794.31591796875" y="1188.1046142578125" elementRef="HYDROXYLAMINE" relX="1.0" relY="0.0" />
+        <Point elementId="_2.5.1.51-RXN_regulation_end_0" arrowHead="Inhibition" x="899.31591796875" y="1238.1046142578125" elementRef="_2.5.1.51-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-10120" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="Mechanism" value=":OTHER" />
+      <Property key="RegulatedEntity" value="ENZRXN-11651" />
+      <Property key="Regulator" value="HYDROXYLAMINE" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <Property key="InstanceNameTemplate" value="REG-*" />
+      <CitationRef elementRef="citation_PUB_MURAKOSHI84" />
+    </Interaction>
+    <Interaction elementId="_2.5.1.51-RXN_regulation_1">
+      <Waypoints>
+        <Point elementId="_2.5.1.51-RXN_regulation_start_1" x="794.31591796875" y="1188.1046142578125" elementRef="CPD-7082" relX="1.0" relY="0.0" />
+        <Point elementId="_2.5.1.51-RXN_regulation_end_1" arrowHead="Inhibition" x="899.31591796875" y="1238.1046142578125" elementRef="_2.5.1.51-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-10119" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="Mechanism" value=":OTHER" />
+      <Property key="RegulatedEntity" value="ENZRXN-11651" />
+      <Property key="Regulator" value="CPD-7082" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <Property key="InstanceNameTemplate" value="REG-*" />
+      <CitationRef elementRef="citation_PUB_MURAKOSHI84" />
+    </Interaction>
+  </Interactions>
+  <Groups>
+    <Group elementId="CPLX-6681" textLabel="CPLX-6681" type="Complex">
+      <Xref identifier="CPLX-6681" dataSource="plantcyc" />
+      <Graphics centerX="925.16162109375" centerY="595.4088134765625" width="140" height="100" textColor="666666" fontName="Arial" fontSize="10" borderColor="9900CC" borderStyle="Dashed" borderWidth="2.0" fillColor="F5E6FF" shapeType="Rectangle" zOrder="-1" />
+      <Comment>The water melon &amp;beta;-pyrazole-1-ylalanine synthase is identical with cysteine synthase. This identity was confirmed by expressing the cDNA in E.coli and subsequent in-vitro and in-vivo assay|CITS: [8280125]|. The enzyme is a homodimer. Each subunit contains one molecule of pyridoxal 5&apos; phosphate. The enzyme activity in plant extracts increased progressively with increasing age of the seedlings over a 10-day growth period. No activity was detected in dry seeds. The purified enzyme is sensitive to freezing even in the presence of 20% glycerol.</Comment>
+      <Property key="UniqueID" value="CPLX-6681" />
+      <Property key="ComplexComponents" value="MONOMER-11327" />
+      <Property key="ComponentCount" value="1" />
+      <Property key="IsComplex" value="true" />
+      <Property key="Catalyzes" value="RXN-11651" />
+      <Property key="^coefficient" value="2" />
+      <Property key="InstanceNameTemplate" value="CPLX-*" />
+      <Property key="MolecularWeightExp" value="58." />
+      <Property key="MolecularWeightKd" value="58." />
+      <Property key="Species" value="TAX-260674" />
+      <CitationRef elementRef="citation_PUB_8280125" />
+      <CitationRef elementRef="citation_PUB_MURAKOSHI84" />
+    </Group>
+  </Groups>
+  <Citations>
+    <Citation elementId="citation_PUB_BROWN90">
+      <Xref identifier="PUB-BROWN90 | Biosynthesis and metabolism of pyrazole by Cucumis sativus: enzymic cyclization and dehydrogenation ... (Brown, E.G., Diffin, F.M., 1990)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_PUB_8280125">
+      <Xref identifier="8280125" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_MURAKOSHI84">
+      <Xref identifier="PUB-MURAKOSHI84 | Purification and characterization of &amp;beta;(pyrazol-1-yl)-L-alanine synthase from Citrullus vulgaris (Murakoshi, Isamu, Ikegami, Fumio, Hinuma, Yasuko et al.)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_PUB_FRISCH67">
+      <Xref identifier="PUB-FRISCH67 | The specificity of amino acid biosynthesis in the Cucurbitaceae (Frisch, D.M., Dunnill, P.M., Smith, A. et al., 1967)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_PUB_WALLSGROVE95">
+      <Xref identifier="PUB-WALLSGROVE95 | Amino acids and their derivatives in higher plants (Wallsgrove, R.M., 1995)" dataSource="BioCyc" />
+    </Citation>
+  </Citations>
+</Pathway>

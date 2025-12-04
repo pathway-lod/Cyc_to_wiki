@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="jasmonoyl-amino acid conjugates biosynthesis II" organism="Nicotiana attenuata" source="PlantCyc" version="20251204102847">
+  <Description>Jasmonates an important class of compounds related to |FRAME:Jasmonic-Acids &quot;jasmonic acid&quot;|, are found throughout the plant kingdom as well as in fungi |CITS:[17513307]|. These compounds may participate in a number of biological processes including resistance to herbivores and some pathogens, protection against ozone, senescence, and reproductive development (reviewed in |CITS:[19025383][17513307]|). Many different jasmonate precursors and jasmonate derivatives have biological activity, including jasmonyl (JA)-amino acid conjugates. Different species may have a different array of JA-amino acid conjugates, and the biological activity of each compound may differ between species. For example, jasmonyl-isoleucine (JA-Ile) has been shown to have biological activity in a number of different plants, including &lt;i&gt;Arabidopsis thaliana&lt;/i&gt; |CITS:[15258265][18247047]|, &lt;i&gt;Nicotiana attenuata&lt;/i&gt;|CITS:[17273867][17085687]|, &lt;i&gt;Achyranthes bidentata&lt;/i&gt; |CITS:[18812165]|, barley |CITS:[9315685]|, tomato |CITS:[18458331]|, rice |CITS:[ 9013895]| and others. In &lt;i&gt;Arabidopsis thaliana&lt;/i&gt;, JA-Ile promotes the interaction between COI1 (an F-box) protein and the JAZ1 repressor protein. In this manner, JA-Ile is believed to help destabilize the JAZ1 repressor and thereby promote JA-responsive transcription |CITS:[17637677]|. COI1 and JAZ homologs have been found in other plants, such as tomato, where they also bind in a JA-Ile-dependent manner, |CITS:[18458331]|, indicating that JA-Ile might have a similar function in other plant species. Additional studies in Arabidopsis thaliana suggest that the specific isomeric forms of the same jasmonate can have very different biological effects |CITS: [19349968]|. Interestingly, in &lt;i&gt;Polygonum longisetum&lt;/i&gt;, a weed commonly found in Japan, a treatment of 100 uM JA-Ile fails to stimulate the normal JA-responsive emissions of volatile sesquiterpenes |CITS:[TAMOGAMI07]| indicating that even JA-Ile may not be similarly effective in all plants. Other differences in biological activity have been observed across species for many other conjugates including JA-ACC, JA-leucine, and JA-valine. In &lt;i&gt;N.attenuata&lt;/i&gt;, jasmonate signaling is an important part of the response to herbivory |CITS:[17513307]|. The level of JA as well as JA-Ile, JA-Leu, JA-Val, and JA-Gln all rise in response to wounding and treatment with oral secretions from the herbivorous tobacco hornworm. On the other hand, JA-Trp, JA-Met, and JA-ACC have not been detected in this species |CITS:[17513307]|. JA-Ile is involved in herbivore resistance |CITS:[17085687]|, but JA-Val and JA-Leu do not appear to stimulate herbivore defense responses |CITS:[18065562]|. It is unclear whether these are storage forms of JA or catabolic intermediates. Another important phytohormone, indole-3-acetic acid (IAA), can be conjugated with several amino acids, as shown in the |FRAME:PWY-6219| pathway for Arabidopsis thaliana. Some of these compounds, such as IAA-aspartate are targeted for further breakdown (|CITS:[9733548]|, (see |FRAME:PWY-2021|), while others, such as, IAA-alanine may serve as storage forms. A family of amido hydrolases can release free, active IAA from some of these &quot;storage&quot; IAA conjugates |CITS:[7792259][10072397]|. But, to date, no JA-amido hydrolases (that can release free JA from the amino acid conjugates) have been identified in plants. However, this enzymatic activity has been detected in the fungus, &lt;i&gt;Botryodiplodia theobromae&lt;/i&gt; |CITS:[9141491]|. Further work will be required to determine the metabolic and functional fate of the &quot;inactive&quot; JA-amino acid conjugates identified in &lt;i&gt;N. attenuata&lt;/i&gt;. Reduced levels of JAR4 and JAR6 transcripts lead to lower levels of JA-Ile, JA-Leu, and JA-Val, suggesting that the &lt;i&gt;in vivo&lt;/i&gt; synthesis of these compounds requires these enzymes. JA-Gln levels are not affected in these mutants, indicating that at least one other enzyme capable of generating jasmonyl-amino acid conjugates exists in this species |CITS:[17273867][17085687]|.</Description>
+  <Authors>
+    <Author name="THE-ARABIDOPSIS-INFORMATION-RESOURCE" />
+    <Author name="dreher" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-6233" />
+  <Property key="Type" value="Jasmonates-Biosynthesis" />
+  <Property key="ReactionCount" value="4" />
+  <Property key="ReactionIDs" value="RXN-10455, RXN-10449, RXN-10459, RXN-10457" />
+  <Property key="PredecessorCount" value="4" />
+  <Property key="PrimaryCompoundCount" value="4" />
+  <Property key="PathwayLinks" value="(|Jasmonic-Acids| PWY-735), (CPD-734 PWY-735)" />
+  <Property key="Organism" value="Nicotiana attenuata" />
+  <Property key="TaxonomicRange_1" value="Viridiplantae" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_PUB_17085687" />
+  <CitationRef elementRef="citation_PUB_17273867" />
+  <CitationRef elementRef="citation_PUB_17513307" />
+  <CitationRef elementRef="citation_PUB_18812165" />
+  <CitationRef elementRef="citation_PUB_9315685" />
+  <CitationRef elementRef="citation_PUB_18458331" />
+  <CitationRef elementRef="citation_PUB_17637677" />
+  <CitationRef elementRef="citation_PUB_19349968" />
+  <CitationRef elementRef="citation_PUB_18065562" />
+  <CitationRef elementRef="citation_PUB_9733548" />
+  <CitationRef elementRef="citation_PUB_9141491" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="AT2G46370" textLabel="AT2G46370" type="GeneProduct">
+      <Xref identifier="AT2G46370" dataSource="TAIR" />
+      <Graphics centerX="1396.7005615234375" centerY="1550.0" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT2G46370" />
+      <Property key="Synonym_1" value="JAR1" />
+      <Property key="Synonym_2" value="FIN219" />
+      <Property key="Synonym_3" value="GH3.11" />
+      <Property key="Synonym_4" value="At2g46370" />
+      <Property key="Product" value="AT2G46370-MONOMER" />
+      <Property key="StartPosition" value="19040860" />
+      <Property key="EndPosition" value="19043732" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+      <Property key="Accession1" value="AT2G46370" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="G-11279" textLabel="JAR6" type="GeneProduct">
+      <Xref identifier="G-11279" dataSource="plantcyc" />
+      <Graphics centerX="592.0474853515625" centerY="887.57861328125" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="G-11279" />
+      <Property key="Product" value="MONOMER-14777" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="G-11278" textLabel="JAR4" type="GeneProduct">
+      <Xref identifier="G-11278" dataSource="plantcyc" />
+      <Graphics centerX="1371.09228515625" centerY="567.6700439453125" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="G-11278" />
+      <Property key="Product" value="MONOMER-14776" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="MONOMER-14776" textLabel="jasmonoyl-amino acid synthetase" type="Protein">
+      <Xref identifier="MONOMER-14776" dataSource="plantcyc" />
+      <Graphics centerX="906.1542358398438" centerY="791.9630126953125" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="THE-ARABIDOPSIS-INFORMATION-RESOURCE, dreher">JAR4 is a jasmonyl-amino acid synthetase that is up-regulated, at the transcriptional level, in response to wounding, or wounding and treatment with the oral secretions of the herbivorous tobacco hornworm |CITS:[17273867]|. Plants with reduced levels of JAR4 transcripts produce lower amounts of JA-isoleucine |CITS:[17273867][17085687]|, JA-leucine, and JA-valine |CITS:[17273867]|, suggesting that this enzyme is involved in the production of those compounds &lt;i&gt;in vivo&lt;/i&gt;.</Comment>
+      <Property key="UniqueID" value="MONOMER-14776" />
+      <Property key="Synonym_1" value="JA-amino synthetase" />
+      <Property key="Synonym_2" value="JA-amido conjugate synthetase" />
+      <Property key="Synonym_3" value="jasmonic acid:amino acid synthetase" />
+      <Property key="Synonym_4" value="jasmonate:amino acid synthetase" />
+      <Property key="Synonym_5" value="jasmonate:amino acid ligase (AMP-forming)" />
+      <Property key="Synonym_6" value="jasmonyl-amino acid synthetase" />
+      <Property key="Catalyzes" value="RXN-16411, RXN-16410, RXN-16405" />
+      <Property key="CatalyzesCount" value="3" />
+      <Property key="EnzymeNotUsedIn" value="RXN-10437, RXN-10436, RXN-10435" />
+      <Property key="Gene" value="G-11278" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="TAX-49451" />
+      <CitationRef elementRef="citation_PUB_17273867" />
+      <CitationRef elementRef="citation_PUB_17085687" />
+    </DataNode>
+    <DataNode elementId="AT2G46370-MONOMER" textLabel="jasmonoyl-amino acid synthetase" type="Protein">
+      <Xref identifier="Q9SKE2" dataSource="uniprot" />
+      <Graphics centerX="527.0133056640625" centerY="50.0" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">JAR1 is a jasmonate:amino acid transferase that plays an important role in jasmonic acid metabolism and jasmonic acid signaling in |FRAME: ORG-5993 &quot;&lt;i&gt;Arabidopsis thaliana&lt;/i&gt;&quot;| |CITS: [15258265] [17291501] [18247047]|. It is structurally related to the acyl adenylate-forming firefly luciferase superfamily of enzymes and it has adenylation activity &lt;i&gt;in vitro&lt;/i&gt;|CITS:[12084835]|. &lt;i&gt;In vivo&lt;/i&gt;, JAR1 appears to be primarily involved in the production of |FRAME:Jasmonoyl-Isoleucines| (JA-Ile). This compound has been shown to be an active form of jasmonic acid that promotes the interaction between COI1 (an F-box) protein and the JAZ1 repressor protein in &lt;i&gt;Arabidopsis thaliana&lt;/i&gt;. In this manner, JA-Ile is believed to help destabilize the JAZ1 repressor and thereby promote JA-responsive transcription |CITS:[17637677]|. &lt;i&gt; In vitro&lt;/i&gt;, JAR1 can catalyze the addition of many different amino acids to jasmonate |CITS: [15258265] [17291501][18247047]|. A few of these JA-amino acid conjugates have been identified in Arabidopsis thaliana, including JA-Val, JA-Leu, JA-Phe, and JA-ACC, but their levels do not change in a jar1 mutant suggesting that other enzymes must catalyze the formation of these products &lt;i&gt;in vivo&lt;/i&gt; |CITS: [15258265]|. &lt;i&gt;In vitro&lt;/i&gt; analyses of JAR1 show that its Km for isoleucine (0.03 mM), is more than 60-fold lower than its Km for leucine (1.93 mM), phenylalanine (1.84 mM), and valine (2.49 mM) and provide an explanation for the &lt;i&gt;in vivo&lt;/i&gt; production of JA-Ile by this enzyme. In addition, although JAR1 can act on |FRAME: CPD-5943| and OPC-4 (3-oxo-2-(2Z-pentenyl)-cyclopentane-1-butyric acid) &lt;i&gt;in vitro&lt;/i&gt;, it shows the highest rate of activity with |FRAME:CPD-734||CITS: [15258265]| . 12-OH-jasmonyl-isoleucine, another JA conjugate identified in Arabidopsis thaliana, can also be formed &lt;i&gt;in vitro&lt;/i&gt; by JAR1 but the physiological significance of this reaction is unknown |CITS: [17291501]|. There is increasing evidence that different stereoisomers of JA-Ile have very different biological activities. For example, initial studies suggested that |FRAME: CPD-11232 &quot;(-)-JA-Ile&quot;| was a biologically active phytohormone |CITS: [SEMBDER93][17291501]|. However, later work shows that |FRAME: CPD-11259| is the biologically active form of the compound |CITS: [19349968]|. This compound exists at low levels in most commercial preparations of |FRAME: CPD-11232| and may explain the observed biologically activity originally associated with the (-)-JA-Ile stereoisomer. A pure preparation of (-)-JA-Ile does does not promote JAZ/COI1 binding &lt;i&gt;in vitro&lt;/i&gt; |CITS: [19349968]|. Interestingly, the biologically active form, |FRAME: CPD-11259|, more closely resembles the potent bacterial phytotoxin coronatine than |FRAME: CPD-11232| does |CITS: [19349968][19377448]|. More work will be needed to determine whether JAR1 acts on |FRAME:CPD-731| to generate |FRAME: CPD-11259| or whether this arises from the spontaneous epimerization of |FRAME: CPD-11232| after it has been synthesized by JAR1. Several &lt;i&gt;jar1&lt;/i&gt; mutants have been identified and studied |CITS:[12084835] [18247047] [15258265]|. These mutants demonstrate that JAR1 activity is required for wounding responses |CITS:[18247047]|, protection against ozone damage, resistance to fungi and pathogens, and other jasmonate-related responses (see references in |CITS:[15258265]|). Outside of the realm of jasmonate metabolism, JAR1 can also promote the formation of pA4 (|FRAME: CPD-607|) from tripolyphosphate (|FRAME:P3I|) and ATP &lt;i&gt;in vitro&lt;/i&gt;. It therefore remains possible that JAR1 could affect the pools of uncommon nucleoside polyphosphates present in Arabidopsis plants, but, no &lt;i&gt;in vivo&lt;/i&gt; confirmation of this activity has been reported to date |CITS: [17291501]|.</Comment>
+      <Property key="UniqueID" value="AT2G46370-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT2G46370.4" />
+      <Property key="AlternativeId_Uniprot" value="Q9SKE2" />
+      <Property key="AlternativeId_Tair" value="At2g46370" />
+      <Property key="Synonym_1" value="jasmonyl-amino acid synthetase" />
+      <Property key="Synonym_2" value="jasmonate:amino acid ligase (AMP-forming)" />
+      <Property key="Synonym_3" value="jasmonic acid:amino acid synthetase" />
+      <Property key="Synonym_4" value="JA-amido conjugate synthetase" />
+      <Property key="Synonym_5" value="JA-amino synthetase" />
+      <Property key="Synonym_6" value="jasmonate:amino acid synthetase" />
+      <Property key="Catalyzes" value="RXN-16388, RXN-16444" />
+      <Property key="CatalyzesCount" value="2" />
+      <Property key="Accession1" value="AT2G46370.4" />
+      <Property key="Gene" value="AT2G46370" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_12084835" />
+      <CitationRef elementRef="citation_PUB_17637677" />
+      <CitationRef elementRef="citation_PUB_15258265" />
+      <CitationRef elementRef="citation_PUB_17291501" />
+      <CitationRef elementRef="citation_PUB_19349968" />
+      <CitationRef elementRef="citation_PUB_18247047" />
+    </DataNode>
+    <DataNode elementId="MONOMER-14777" textLabel="jasmonoyl-amino acid synthetase" type="Protein">
+      <Xref identifier="MONOMER-14777" dataSource="plantcyc" />
+      <Graphics centerX="1027.2471923828125" centerY="69.58975219726562" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="THE-ARABIDOPSIS-INFORMATION-RESOURCE, dreher">JAR6 is a jasmonyl-amino acid synthetase that is up-regulated, at the transcriptional level, in response to wounding, or wounding and treatment with the oral secretions of the herbivorous tobacco hornworm |CITS:[17273867]|. Plants with reduced levels of JAR6 transcripts produce lower amounts of JA-isoleucine, JA-leucine, and JA-valine, suggesting that this enzyme is involved in the production of those compounds &lt;i&gt;in vivo&lt;/i&gt; |CITS:[17273867]|.</Comment>
+      <Property key="UniqueID" value="MONOMER-14777" />
+      <Property key="Synonym_1" value="jasmonate:amino acid ligase (AMP-forming)" />
+      <Property key="Synonym_2" value="jasmonate:amino acid synthetase" />
+      <Property key="Synonym_3" value="JA-amino acid synthetase" />
+      <Property key="Synonym_4" value="JA-amino synthetase" />
+      <Property key="Synonym_5" value="JA-amido conjugate synthetase" />
+      <Property key="Synonym_6" value="jasmonyl-amino acid synthetase" />
+      <Property key="Catalyzes" value="RXN-16414, RXN-16413, RXN-16412" />
+      <Property key="CatalyzesCount" value="3" />
+      <Property key="EnzymeNotUsedIn" value="RXN-10437, RXN-10436, RXN-10435" />
+      <Property key="Gene" value="G-11279" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="TAX-49451" />
+      <CitationRef elementRef="citation_PUB_17273867" />
+    </DataNode>
+    <DataNode elementId="VAL" textLabel="L-valine" type="Metabolite">
+      <Xref identifier="KZSNJWFQEVHDMF-BYPYZUCNSA-N" dataSource="InChIKey" />
+      <Graphics centerX="747.5916137695312" centerY="492.33624267578125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="VAL" />
+      <Property key="AlternativeId_Zinc" value="ZINC000000895099" />
+      <Property key="AlternativeId_Mediadb" value="compounds/179/" />
+      <Property key="AlternativeId_Metanetx" value="MNXM199" />
+      <Property key="AlternativeId_Refmet" value="Valine" />
+      <Property key="AlternativeId_Bigg" value="val__L" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57762" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00883" />
+      <Property key="AlternativeId_Chebi" value="57762" />
+      <Property key="AlternativeId_Pubchem" value="6971018" />
+      <Property key="AlternativeId_LigandCpd" value="C00183" />
+      <Property key="AlternativeId_Cas" value="72-18-4" />
+      <Property key="Synonym_1" value="V" />
+      <Property key="Synonym_2" value="valine" />
+      <Property key="Synonym_3" value="L-val" />
+      <Property key="ChemicalFormula" value="(C 5) (H 11) (N 1) (O 2)" />
+      <Property key="AbbrevName" value="val" />
+      <Property key="AtomCharges" value="(7 -1), (6 1)" />
+      <Property key="Gibbs0" value="27.262316" />
+      <Property key="Inchi" value="InChI=1S/C5H11NO2/c1-3(2)4(6)5(7)8/h3-4H,6H2,1-2H3,(H,7,8)/t4-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=KZSNJWFQEVHDMF-BYPYZUCNSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="117.147" />
+      <Property key="MonoisotopicMw" value="117.0789786025" />
+      <Property key="NonStandardInchi" value="InChI=1S/C5H11NO2/c1-3(2)4(6)5(7)8/h3-4H,6H2,1-2H3,(H,7,8)/t4-/m0/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-8337, REG-9504, REG-9925, REG-8118, REG-10286, REG0-8717" />
+      <Property key="Smiles" value="CC(C)[C@H]([NH3+])C([O-])=O" />
+    </DataNode>
+    <DataNode elementId="PPI" textLabel="pyrophosphate" type="Metabolite">
+      <Xref identifier="XPPKVPWEQAFLFU-UHFFFAOYSA-K" dataSource="InChIKey" />
+      <Graphics centerX="841.656494140625" centerY="734.0635375976562" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PPI" />
+      <Property key="AlternativeId_Chebi" value="33019" />
+      <Property key="AlternativeId_Pubchem" value="4097574" />
+      <Property key="AlternativeId_Bigg" value="ppi" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC33019" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00250" />
+      <Property key="AlternativeId_Drugbank" value="DB04160" />
+      <Property key="AlternativeId_Chemspider" value="996" />
+      <Property key="AlternativeId_LigandCpd" value="C00013" />
+      <Property key="AlternativeId_Cas" value="2466-09-3" />
+      <Property key="Synonym_1" value="PPi" />
+      <Property key="Synonym_2" value="PP" />
+      <Property key="Synonym_3" value="pyrophosphate" />
+      <Property key="ChemicalFormula" value="(H 1) (O 7) (P 2)" />
+      <Property key="AtomCharges" value="(3 -1), (5 -1), (4 -1)" />
+      <Property key="Gibbs0" value="-473.4674" />
+      <Property key="Inchi" value="InChI=1S/H4O7P2/c1-8(2,3)7-9(4,5)6/h(H2,1,2,3)(H2,4,5,6)/p-3" />
+      <Property key="InchiKey" value="InChIKey=XPPKVPWEQAFLFU-UHFFFAOYSA-K" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="174.951" />
+      <Property key="MonoisotopicMw" value="177.9432255031" />
+      <Property key="NonStandardInchi" value="InChI=1S/H4O7P2/c1-8(2,3)7-9(4,5)6/h(H2,1,2,3)(H2,4,5,6)/p-3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-8724, REG0-8483, REG-12877, REG-9488, REG-12060, REG0-8756, REG-13025, REG-9934, REG-8081, REG0-9977, REG-13335, REG0-8836, REG0-7229, REG0-7537, REG0-8365, REG0-8912, REG-11188, REG-8675, REG0-8919, REG0-8467, REG0-7304, REG-7117, REG-8030, REG-9450" />
+      <Property key="Smiles" value="O=P(O)(OP([O-])([O-])=O)[O-]" />
+      <CitationRef elementRef="citation_PUB_18493048" />
+    </DataNode>
+    <DataNode elementId="GLN" textLabel="L-glutamine" type="Metabolite">
+      <Xref identifier="ZDXPYRJPNDTMRX-VKHMYHEASA-N" dataSource="InChIKey" />
+      <Graphics centerX="343.76123046875" centerY="1321.732421875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="GLN" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001532526" />
+      <Property key="AlternativeId_Mediadb" value="compounds/62/" />
+      <Property key="AlternativeId_Metanetx" value="MNXM37" />
+      <Property key="AlternativeId_Refmet" value="Glutamine" />
+      <Property key="AlternativeId_Bigg" value="gln__L" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC58359" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00641" />
+      <Property key="AlternativeId_Chebi" value="58359" />
+      <Property key="AlternativeId_Pubchem" value="6992086" />
+      <Property key="AlternativeId_LigandCpd" value="C00064" />
+      <Property key="AlternativeId_Cas" value="56-85-9" />
+      <Property key="Synonym_1" value="Q" />
+      <Property key="Synonym_2" value="proglumide" />
+      <Property key="Synonym_3" value="glum" />
+      <Property key="Synonym_4" value="glutamine" />
+      <Property key="Synonym_5" value="glumin" />
+      <Property key="Synonym_6" value="2-aminoglutaramic acid" />
+      <Property key="Synonym_7" value="glutamic acid 5-amide" />
+      <Property key="Synonym_8" value="L-gln" />
+      <Property key="ChemicalFormula" value="(C 5) (H 10) (N 2) (O 3)" />
+      <Property key="AbbrevName" value="gln" />
+      <Property key="AtomCharges" value="(10 -1), (6 1)" />
+      <Property key="Gibbs0" value="-23.488802" />
+      <Property key="Inchi" value="InChI=1S/C5H10N2O3/c6-3(5(9)10)1-2-4(7)8/h3H,1-2,6H2,(H2,7,8)(H,9,10)/t3-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=ZDXPYRJPNDTMRX-VKHMYHEASA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="146.146" />
+      <Property key="MonoisotopicMw" value="146.0691421977" />
+      <Property key="NonStandardInchi" value="InChI=1S/C5H10N2O3/c6-3(5(9)10)1-2-4(7)8/h3H,1-2,6H2,(H2,7,8)(H,9,10)/t3-/m0/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Pka1" value="2.17" />
+      <Property key="Pka2" value="9.13" />
+      <Property key="Regulates" value="REG-9519, REG0-7747" />
+      <Property key="Smiles" value="C(=O)(N)CC[C@H]([NH3+])C([O-])=O" />
+      <CitationRef elementRef="citation_PUB_18493048" />
+      <CitationRef elementRef="citation_PUB_16306140" />
+    </DataNode>
+    <DataNode elementId="Jasmonoyl-Isoleucines" textLabel="a jasmonoyl-L-isoleucine" type="Metabolite">
+      <Xref identifier="IBZYPBGPOGJMBF-PHZNYZCBSA-M" dataSource="InChIKey" />
+      <Graphics centerX="1589.62646484375" centerY="979.3924560546875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>Jasmonoyl-isoleucine (JA-Ile) has been detected in Arabidopsis thaliana |CITS: [15258265]| and a number of other plant species |CITS: [18812165][SEMBDER93][17273867]|. There are two different naturally occurring stereoisomers of this compound, |FRAME: CPD-11232| and |FRAME:CPD-11259|, that can spontaneously interconvert through epimerization |CITS: [19349968]|. In Arabidopsis thaliana, JA-Ile promotes binding between the COI1 F-box protein and the JAZ1 repressor involved in jasmonic acid-mediated signaling |CITS: [17637677]|. Therefore, JA-Ile promotes the degradation of JAZ1. Initial studies suggested that |FRAME: CPD-11232 &quot;(-)-JA-Ile&quot;| was a biologically active phytohormone |CITS: [SEMBDER93][17291501]|. However, later work shows that |FRAME: CPD-11259| is the biologically active form of the compound |CITS: [19349968 ]|. This compound exists at low levels in most commercial preparations of |FRAME: CPD-11232| and may explain the observed biological activity originally associated with |FRAME: CPD-11232 &quot;(-)-JA-Ile&quot;|. A pure preparation of that stereoisomer does not promote JAZ/COI1 binding &lt;i&gt;in vitro&lt;/i&gt; |CITS: [19349968]|. JA-Ile has also been detected in |FRAME: TAX-49451| and plays a role in defense responses |CITS: [17085687]| but it is unclear which form of JA-Ile is active in this process.</Comment>
+      <Property key="UniqueID" value="Jasmonoyl-Isoleucines" />
+      <Property key="AlternativeId_Seed" value="cpd27321" />
+      <Property key="AlternativeId_Metanetx" value="MNXM18786" />
+      <Property key="Synonym_1" value="a JA-Ile" />
+      <Property key="Synonym_2" value="a jasmonate-isoleucine" />
+      <Property key="Synonym_3" value="a jasmonic acid-isoleucine" />
+      <Property key="Synonym_4" value="a jasmonic acid-isoleucine conjugate" />
+      <Property key="Synonym_5" value="a jasmonyl isoleucine" />
+      <Property key="ChemicalFormula" value="(C 18) (H 28) (N 1) (O 4)" />
+      <Property key="AtomCharges" value="(23 -1)" />
+      <Property key="Gibbs0" value="189.2093" />
+      <Property key="Inchi" value="InChI=1S/C18H29NO4/c1-4-6-7-8-14-13(9-10-15(14)20)11-16(21)19-17(18(22)23)12(3)5-2/h6-7,12-14,17H,4-5,8-11H2,1-3H3,(H,19,21)(H,22,23)/p-1/b7-6-/t12-,13?,14?,17-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=IBZYPBGPOGJMBF-PHZNYZCBSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="322.423" />
+      <Property key="MonoisotopicMw" value="323.2096584245" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC\C=C/CC1(C(=O)CCC1CC(N[C@@H]([C@@H](C)CC)C([O-])=O)=O)" />
+      <CitationRef elementRef="citation_PUB_15258265" />
+      <CitationRef elementRef="citation_PUB_19349968" />
+      <CitationRef elementRef="citation_PUB_17637677" />
+      <CitationRef elementRef="citation_PUB_17085687" />
+    </DataNode>
+    <DataNode elementId="Jasmonoyl-Glutamines" textLabel="a jasmonoyl-glutamine" type="Metabolite">
+      <Xref identifier="NQOXCBDTLUTPNO-OTFPUDJKSA-M" dataSource="InChIKey" />
+      <Graphics centerX="1065.604736328125" centerY="784.5849609375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>This compound can be detected in the leaves of |FRAME: TAX-49451| plants after they have been treated with oral secretions of the herbivorus tobacco hornworm (|FRAME:TAX-7130|) |CITS:[17273867]|. It is likely that at least two steroisomers of this compound exist. The biological activity of these isomers has not been assessed.</Comment>
+      <Property key="UniqueID" value="Jasmonoyl-Glutamines" />
+      <Property key="AlternativeId_Seed" value="cpd27320" />
+      <Property key="AlternativeId_Metanetx" value="MNXM18785" />
+      <Property key="Synonym_1" value="a JA-Gln" />
+      <Property key="Synonym_2" value="a jasmonate-glutamine" />
+      <Property key="Synonym_3" value="a jasmonic acid-glutamine" />
+      <Property key="Synonym_4" value="a jasmonic acid-glutamine conjugate" />
+      <Property key="Synonym_5" value="a jasmonyl-glutamine" />
+      <Property key="ChemicalFormula" value="(C 17) (H 25) (N 2) (O 5)" />
+      <Property key="AtomCharges" value="(24 -1)" />
+      <Property key="Gibbs0" value="121.57598" />
+      <Property key="Inchi" value="InChI=1S/C17H26N2O5/c1-2-3-4-5-12-11(6-8-14(12)20)10-16(22)19-13(17(23)24)7-9-15(18)21/h3-4,11-13H,2,5-10H2,1H3,(H2,18,21)(H,19,22)(H,23,24)/p-1/b4-3-/t11?,12?,13-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=NQOXCBDTLUTPNO-OTFPUDJKSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="337.395" />
+      <Property key="MonoisotopicMw" value="338.1841719555" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC\C=C/CC1(C(=O)CCC1CC(N[C@@H](CCC(N)=O)C([O-])=O)=O)" />
+      <CitationRef elementRef="citation_PUB_17273867" />
+    </DataNode>
+    <DataNode elementId="Jasmonoyl-Valines" textLabel="a jasmonoyl-L-valine" type="Metabolite">
+      <Xref identifier="LZPFFKBGBPBJAW-KHXRIMTESA-M" dataSource="InChIKey" />
+      <Graphics centerX="1600.0" centerY="223.7015380859375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>Jasmonoyl-valine (JA-Val) has been detected in Arabidopsis thaliana |CITS: [15258265]| and a number of other plant species |CITS: [SEMBDER93][17273867]|. Two stereoisomers of this compound may exist in plants. |FRAME: CPD-11233| is one naturally occurring form of the compound |CITS: [19349968]|. JA-Val may not be a biologically active form of the hormone in some species. It does not appear to function in herbivory defense responses in |FRAME: TAX-49451| |CITS: [18065562]|. The |FRAME: CPD-11233| isomer also does not affect seedling root growth in Arabidopsis thaliana nor does it promote JAZ/COI1 interactions &lt;i&gt;in vitro&lt;/i&gt;|CITS: [19349968]|.</Comment>
+      <Property key="UniqueID" value="Jasmonoyl-Valines" />
+      <Property key="AlternativeId_Seed" value="cpd27324" />
+      <Property key="AlternativeId_Metanetx" value="MNXM18789" />
+      <Property key="Synonym_1" value="a jasmonate-valine" />
+      <Property key="Synonym_2" value="a jasmonic acid-valine" />
+      <Property key="Synonym_3" value="a jasmonic acid-valine conjugate" />
+      <Property key="Synonym_4" value="a jasmonyl-valine" />
+      <Property key="Synonym_5" value="a JA-Val" />
+      <Property key="ChemicalFormula" value="(C 17) (H 26) (N 1) (O 4)" />
+      <Property key="AtomCharges" value="(22 -1)" />
+      <Property key="Gibbs0" value="167.04707" />
+      <Property key="Inchi" value="InChI=1S/C17H27NO4/c1-4-5-6-7-13-12(8-9-14(13)19)10-15(20)18-16(11(2)3)17(21)22/h5-6,11-13,16H,4,7-10H2,1-3H3,(H,18,20)(H,21,22)/p-1/b6-5-/t12?,13?,16-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=LZPFFKBGBPBJAW-KHXRIMTESA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="308.397" />
+      <Property key="MonoisotopicMw" value="309.1940083603" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC\C=C/CC1(C(=O)CCC1CC(N[C@@H](C(C)C)C([O-])=O)=O)" />
+      <CitationRef elementRef="citation_PUB_15258265" />
+      <CitationRef elementRef="citation_PUB_19349968" />
+      <CitationRef elementRef="citation_PUB_18065562" />
+    </DataNode>
+    <DataNode elementId="ATP" textLabel="ATP" type="Metabolite">
+      <Xref identifier="ZKHQWZAMYRWXGA-KQYNXXCUSA-J" dataSource="InChIKey" />
+      <Graphics centerX="369.6741027832031" centerY="505.560546875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ATP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004261765" />
+      <Property key="AlternativeId_Mediadb" value="compounds/2/" />
+      <Property key="AlternativeId_Seed" value="cpd00002" />
+      <Property key="AlternativeId_Metanetx" value="MNXM3" />
+      <Property key="AlternativeId_Refmet" value="ATP" />
+      <Property key="AlternativeId_Bigg" value="atp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC30616" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00538" />
+      <Property key="AlternativeId_Chemspider" value="4574455" />
+      <Property key="AlternativeId_Chebi" value="30616" />
+      <Property key="AlternativeId_Pubchem" value="5461108" />
+      <Property key="AlternativeId_LigandCpd" value="C00002" />
+      <Property key="AlternativeId_Cas" value="56-65-5" />
+      <Property key="Synonym_1" value="adenylpyrophosphate" />
+      <Property key="Synonym_2" value="adenosine-triphosphate" />
+      <Property key="Synonym_3" value="adenosine-5&apos;-triphosphate" />
+      <Property key="ChemicalFormula" value="(C 10) (H 12) (N 5) (O 13) (P 3)" />
+      <Property key="AtomCharges" value="(20 -1), (19 -1), (24 -1), (22 -1)" />
+      <Property key="CofactorsOf" value="ENZRXN-12212" />
+      <Property key="Gibbs0" value="-553.6995" />
+      <Property key="Inchi" value="InChI=1S/C10H16N5O13P3/c11-8-5-9(13-2-12-8)15(3-14-5)10-7(17)6(16)4(26-10)1-25-30(21,22)28-31(23,24)27-29(18,19)20/h2-4,6-7,10,16-17H,1H2,(H,21,22)(H,23,24)(H2,11,12,13)(H2,18,19,20)/p-4/t4-,6-,7-,10-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=ZKHQWZAMYRWXGA-KQYNXXCUSA-J" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="503.152" />
+      <Property key="MonoisotopicMw" value="506.99574515689994" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-12909, REG-12890, REG-14488, REG-9772, REG-14329, REG0-6781, REG0-7497, REG0-7707, REG-13176, REG-14419, REG-14422, REG0-8315, REG0-8212, REG-10429, REG0-7195, REG-8742, REG0-8749, REG-10985, REG-11599, REG0-8040, REG0-8166, REG0-7200, REG-9547, REG0-10640, REG-12493, REG0-6737, REG-12901, REG0-8975, REG0-8830, REG-7496, REG-6229, REG0-7802, REG-9667, REG-8008, REG0-8732, REG-8477, REG-6695, REG-6569, REG-6589, REG-6588, REG0-6967, REG-6554, REG-8022, REG-5951, REG-5950, REG-12145, REG-12092, REG-5953, REG-11615, REG-11617, REG-7073, REG-6927, REG-6086" />
+      <Property key="Smiles" value="C(OP(=O)([O-])OP(=O)([O-])OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3)" />
+    </DataNode>
+    <DataNode elementId="LEU" textLabel="L-leucine" type="Metabolite">
+      <Xref identifier="ROHFNLRQFUQHCH-YFKPBYRVSA-N" dataSource="InChIKey" />
+      <Graphics centerX="719.9034423828125" centerY="1463.174072265625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="LEU" />
+      <Property key="AlternativeId_Zinc" value="ZINC000003645145" />
+      <Property key="AlternativeId_Mediadb" value="compounds/120/" />
+      <Property key="AlternativeId_Metanetx" value="MNXM140" />
+      <Property key="AlternativeId_Refmet" value="Leucine" />
+      <Property key="AlternativeId_Bigg" value="leu__L" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57427" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00687" />
+      <Property key="AlternativeId_Chebi" value="57427" />
+      <Property key="AlternativeId_Pubchem" value="7045798" />
+      <Property key="AlternativeId_LigandCpd" value="C00123" />
+      <Property key="AlternativeId_Nci" value="46709" />
+      <Property key="AlternativeId_Cas" value="61-90-5" />
+      <Property key="Synonym_1" value="(2S)-&amp;alpha;-2-amino-4-methylvaleric acid" />
+      <Property key="Synonym_2" value="L" />
+      <Property key="Synonym_3" value="leu" />
+      <Property key="Synonym_4" value="leucine" />
+      <Property key="Synonym_5" value="2-amino-4-methylvaleric acid" />
+      <Property key="Synonym_6" value="(2S)-&amp;alpha;-leucine" />
+      <Property key="Synonym_7" value="L-leu" />
+      <Property key="ChemicalFormula" value="(C 6) (H 13) (N 1) (O 2)" />
+      <Property key="AbbrevName" value="leu" />
+      <Property key="AtomCharges" value="(9 -1), (7 1)" />
+      <Property key="Gibbs0" value="49.32457" />
+      <Property key="Inchi" value="InChI=1S/C6H13NO2/c1-4(2)3-5(7)6(8)9/h4-5H,3,7H2,1-2H3,(H,8,9)/t5-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=ROHFNLRQFUQHCH-YFKPBYRVSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="131.174" />
+      <Property key="MonoisotopicMw" value="131.0946286667" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-7014, REG0-7813, REG0-8170, REG-9505, REG-9922, REG0-8970, REG0-9121" />
+      <Property key="Smiles" value="CC(C)C[C@H]([NH3+])C([O-])=O" />
+    </DataNode>
+    <DataNode elementId="AMP" textLabel="AMP" type="Metabolite">
+      <Xref identifier="UDMBCSSLTHHNCD-KQYNXXCUSA-L" dataSource="InChIKey" />
+      <Graphics centerX="1074.667724609375" centerY="1318.973876953125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AMP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000003860156" />
+      <Property key="AlternativeId_Refmet" value="AMP" />
+      <Property key="AlternativeId_Bigg" value="amp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC456215" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00045" />
+      <Property key="AlternativeId_Chemspider" value="10239183" />
+      <Property key="AlternativeId_Chebi" value="456215" />
+      <Property key="AlternativeId_Pubchem" value="15938965" />
+      <Property key="AlternativeId_LigandCpd" value="C00020" />
+      <Property key="AlternativeId_Cas" value="61-19-8" />
+      <Property key="AlternativeId_Nci" value="20264" />
+      <Property key="Synonym_1" value="5&apos;-AMP" />
+      <Property key="Synonym_2" value="adenosine-monophosphate" />
+      <Property key="Synonym_3" value="adenylic acid" />
+      <Property key="Synonym_4" value="adenosine 5&apos;-phosphate" />
+      <Property key="Synonym_5" value="adenosine 5&apos;-monophosphate" />
+      <Property key="Synonym_6" value="adenylate" />
+      <Property key="Synonym_7" value="5&apos;-adenylic acid" />
+      <Property key="Synonym_8" value="5&apos;-adenosine monophosphate" />
+      <Property key="Synonym_9" value="adenine ribotide" />
+      <Property key="ChemicalFormula" value="(C 10) (H 12) (N 5) (O 7) (P 1)" />
+      <Property key="AtomCharges" value="(20 -1), (19 -1)" />
+      <Property key="Gibbs0" value="-135.89479" />
+      <Property key="Inchi" value="InChI=1S/C10H14N5O7P/c11-8-5-9(13-2-12-8)15(3-14-5)10-7(17)6(16)4(22-10)1-21-23(18,19)20/h2-4,6-7,10,16-17H,1H2,(H2,11,12,13)(H2,18,19,20)/p-2/t4-,6-,7-,10-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=UDMBCSSLTHHNCD-KQYNXXCUSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="345.208" />
+      <Property key="MonoisotopicMw" value="347.0630843401" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-15683, REG-9765, REG-14330, REG0-7202, REG-14235, REG-14236, REG0-8379, REG-14416, REG-14425, REG0-6727, REG-12062, REG-8740, REG-8449, REG0-8757, REG-10983, REG-11597, REG0-8715, REG-9775, REG0-7230, REG0-9061, REG0-8911, REG0-8145, REG0-8148, REG0-8901, REG-6551, REG0-7067, REG0-9117, REG0-6999, REG-11627" />
+      <Property key="Smiles" value="C(OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3)" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="100.0" centerY="862.7262573242188" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="ChemicalFormula" value="(H 1)" />
+      <Property key="AtomCharges" value="(1 1)" />
+      <Property key="Gibbs0" value="0.42906138" />
+      <Property key="Inchi" value="InChI=1S/p+1" />
+      <Property key="InchiKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicMw" value="1.0078250321" />
+      <Property key="NonStandardInchi" value="InChI=1S/p+1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="[H+]" />
+    </DataNode>
+    <DataNode elementId="Jasmonoyl-Leucines" textLabel="a jasmonoyl-L-leucine" type="Metabolite">
+      <Xref identifier="BDUIIOHQSYPXRT-GJKCTVFGSA-M" dataSource="InChIKey" />
+      <Graphics centerX="838.089111328125" centerY="935.685302734375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>Jasmonoyl-leucine (JA-Leu) has been detected in Arabidopsis thaliana |CITS: [15258265]| and a number of other plant species |CITS: [SEMBDER93][17273867]|. Two stereoisomers of this compound may exist in plants. |FRAME: CPD-11234| is one naturally occurring form of the compound |CITS: [19349968]|. JA-Leu may not be a biologically active form of the hormone in all species. It does not appear to function in herbivory defense responses in |FRAME: TAX-49451| |CITS: [18065562]|. The |FRAME: CPD-11234| isomer also does not affect seedling root growth in Arabidopsis thaliana nor does it promote JAZ/COI1 interactions &lt;i&gt;in vitro&lt;/i&gt; |CITS: [19349968]|. However, JA-Leu can elicit phytoalexin production in rice |CITS:[9013895]|.</Comment>
+      <Property key="UniqueID" value="Jasmonoyl-Leucines" />
+      <Property key="AlternativeId_Seed" value="cpd27322" />
+      <Property key="AlternativeId_Metanetx" value="MNXM18787" />
+      <Property key="Synonym_1" value="a JA-Leu" />
+      <Property key="Synonym_2" value="a jasmonate-leucine" />
+      <Property key="Synonym_3" value="a jasmonic acid-leucine" />
+      <Property key="Synonym_4" value="a jasmonic acid-leucine conjugate" />
+      <Property key="Synonym_5" value="a jasmonyl-leucine" />
+      <Property key="ChemicalFormula" value="(C 18) (H 28) (N 1) (O 4)" />
+      <Property key="AtomCharges" value="(23 -1)" />
+      <Property key="Gibbs0" value="189.2093" />
+      <Property key="Inchi" value="InChI=1S/C18H29NO4/c1-4-5-6-7-14-13(8-9-16(14)20)11-17(21)19-15(18(22)23)10-12(2)3/h5-6,12-15H,4,7-11H2,1-3H3,(H,19,21)(H,22,23)/p-1/b6-5-/t13?,14?,15-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=BDUIIOHQSYPXRT-GJKCTVFGSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="322.423" />
+      <Property key="MonoisotopicMw" value="323.2096584245" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC\C=C/CC1(C(=O)CCC1CC(N[C@@H](CC(C)C)C([O-])=O)=O)" />
+      <CitationRef elementRef="citation_PUB_15258265" />
+      <CitationRef elementRef="citation_PUB_19349968" />
+      <CitationRef elementRef="citation_PUB_18065562" />
+      <CitationRef elementRef="citation_PUB_9013895" />
+    </DataNode>
+    <DataNode elementId="Jasmonic-Acids" textLabel="a jasmonate" type="Metabolite">
+      <Xref identifier="ZNJFBWYDHIGLCU-ARJAWSKDSA-M" dataSource="InChIKey" />
+      <Graphics centerX="1025.8199462890625" centerY="544.0452270507812" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>The |FRAME: Jasmonates jasmonates| are a group of important phytohormones, structurally similar to animal |FRAME: Prostaglandins prostaglandins| and ubiquitous in the plant kingdom. Many forms exist, based on the structure of |FRAME: Jasmonic-Acids &quot;Jasmonate&quot;| (jasmonic acid, JA). The jasmonates act as regulatory molecules in many developmental processes that include fertility, sex determination, root elongation and fruit ripening. They are also potent signals activating plant defences against pathogens, herbivory, wounding and abiotic stress. The jasmonate regulation system includes the COI1 receptor protein and several JAZ (&lt;b&gt;JA&lt;/b&gt;smonate &lt;b&gt;Z&lt;/b&gt;IM domain) repressors, which, in the absence of jasmonate, are bound to the MYC2 transcription factors, preventing transcription. In the presence of active jasmonate molecules, COI1 interacts with the JAZ repressors, causing their |FRAME: PWY-7511 ubiquitylation|. The ubiquitylated repressors are targeted for proteasome degradation, releasing the MYC2 transcription factors and activating transcription |CITS: [19716757]|. Only two of the four stereoisomers of jasmonate occur naturally: |FRAME: CPD-731| and |FRAME: CPD-734| |CITS: [8074303][19349968]|. These two forms are present in equilibrium within cells and can interconvert spontaneously through epimerization |CITS: [8074303][19349968]|. The exact ratio of these stereoisomers within a cell has not been conclusively determined, and it may vary based on species, cell type, and physiological state. But, in the systems tested so far, |FRAME: CPD-734| is found at higher levels than |FRAME: CPD-731| |CITS:[19349968]|. The biological activity of these stereoisomers can be quite different |CITS: [8074303]|. In addition, enzymes involved in JA metabolism may have different preferences for the different stereoisomers |CITS: [17291501]|.</Comment>
+      <Property key="UniqueID" value="Jasmonic-Acids" />
+      <Property key="Synonym_1" value="a jasmonic acid" />
+      <Property key="Synonym_2" value="a JA" />
+      <Property key="ChemicalFormula" value="(C 12) (H 17) (O 3)" />
+      <Property key="AtomCharges" value="(14 -1)" />
+      <Property key="Gibbs0" value="103.947" />
+      <Property key="Inchi" value="InChI=1S/C12H18O3/c1-2-3-4-5-10-9(8-12(14)15)6-7-11(10)13/h3-4,9-10H,2,5-8H2,1H3,(H,14,15)/p-1/b4-3-" />
+      <Property key="InchiKey" value="InChIKey=ZNJFBWYDHIGLCU-ARJAWSKDSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="209.264" />
+      <Property key="MonoisotopicMw" value="210.1255944441" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC\C=C/CC1(C(=O)CCC1CC([O-])=O)" />
+      <CitationRef elementRef="citation_PUB_19716757" />
+      <CitationRef elementRef="citation_PUB_19349968" />
+      <CitationRef elementRef="citation_PUB_8074303" />
+      <CitationRef elementRef="citation_PUB_17291501" />
+    </DataNode>
+    <DataNode elementId="ILE" textLabel="L-isoleucine" type="Metabolite">
+      <Xref identifier="AGPKZVBTJJNPAG-WHFBIAKZSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1060.599609375" centerY="1004.3284912109375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ILE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000003581355" />
+      <Property key="AlternativeId_Mediadb" value="compounds/390/" />
+      <Property key="AlternativeId_Seed" value="cpd00322" />
+      <Property key="AlternativeId_Metanetx" value="MNXM231" />
+      <Property key="AlternativeId_Refmet" value="Isoleucine" />
+      <Property key="AlternativeId_Bigg" value="ile__L" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC58045" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00172" />
+      <Property key="AlternativeId_Chebi" value="58045" />
+      <Property key="AlternativeId_Pubchem" value="7043901" />
+      <Property key="AlternativeId_Cas" value="73-32-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00407" />
+      <Property key="Synonym_1" value="I" />
+      <Property key="Synonym_2" value="iso-leucine" />
+      <Property key="Synonym_3" value="L-ile" />
+      <Property key="ChemicalFormula" value="(C 6) (H 13) (N 1) (O 2)" />
+      <Property key="AbbrevName" value="ile" />
+      <Property key="AtomCharges" value="(8 -1), (7 1)" />
+      <Property key="Gibbs0" value="51.324574" />
+      <Property key="Inchi" value="InChI=1S/C6H13NO2/c1-3-4(2)5(7)6(8)9/h4-5H,3,7H2,1-2H3,(H,8,9)/t4-,5-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=AGPKZVBTJJNPAG-WHFBIAKZSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="131.174" />
+      <Property key="MonoisotopicMw" value="131.0946286667" />
+      <Property key="NonStandardInchi" value="InChI=1S/C6H13NO2/c1-3-4(2)5(7)6(8)9/h4-5H,3,7H2,1-2H3,(H,8,9)/t4-,5-/m0/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-9506, REG-9926, REG0-9122" />
+      <Property key="Smiles" value="CC[C@H](C)[C@H]([NH3+])C(=O)[O-]" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="1441.7005615234375" y="1550.0" elementRef="AT2G46370" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="482.0133056640625" y="50.0" elementRef="AT2G46370-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_1_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_1_0_0" x="637.0474853515625" y="887.57861328125" elementRef="G-11279" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_1_0_0" arrowHead="TranscriptionTranslation" x="982.2471923828125" y="69.58975219726562" elementRef="MONOMER-14777" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_2_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_2_0_0" x="1416.09228515625" y="567.6700439453125" elementRef="G-11278" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_2_0_0" arrowHead="TranscriptionTranslation" x="861.1542358398438" y="791.9630126953125" elementRef="MONOMER-14776" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10455">
+      <Xref identifier="EC-6.3.2.52" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10455_start" x="1070.8199462890625" y="544.0452270507812" elementRef="Jasmonic-Acids" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-10455_end" arrowHead="Conversion" x="1544.62646484375" y="979.3924560546875" elementRef="Jasmonoyl-Isoleucines" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-10455_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-10455" />
+      <Property key="EC_Number" value="EC-6.3.2.52" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-6220, PWY-6233" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="Jasmonic-Acids + ILE + ATP =&gt; Jasmonoyl-Isoleucines + AMP + PPI + PROTON" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXN-16388, ENZRXN-16413, ENZRXN-16405" />
+      <Property key="EnzymaticReactionCount" value="3" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="NIL" />
+      <Property key="Gibbs0" value="-21.295898" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <CitationRef elementRef="citation_PUB_17291501" />
+    </Interaction>
+    <Interaction elementId="RXN-10455_ENZRXN-16413">
+      <Waypoints>
+        <Point elementId="RXN-10455_ENZRXN-16413_start" x="1027.2471923828125" y="82.08975219726562" elementRef="MONOMER-14777" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-10455_ENZRXN-16413_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-10455_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10455_ENZRXN-16388">
+      <Waypoints>
+        <Point elementId="RXN-10455_ENZRXN-16388_start" x="527.0133056640625" y="62.5" elementRef="AT2G46370-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-10455_ENZRXN-16388_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-10455_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10455_ENZRXN-16405">
+      <Waypoints>
+        <Point elementId="RXN-10455_ENZRXN-16405_start" x="906.1542358398438" y="804.4630126953125" elementRef="MONOMER-14776" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-10455_ENZRXN-16405_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-10455_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10455_anchor_reactant_1">
+      <Xref identifier="EC-6.3.2.52" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10455_anchor_reactant_start_1" x="1105.599609375" y="1004.3284912109375" elementRef="ILE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-10455_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-10455_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10455_anchor_reactant_2">
+      <Xref identifier="EC-6.3.2.52" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10455_anchor_reactant_start_2" x="414.6741027832031" y="505.560546875" elementRef="ATP" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-10455_anchor_reactant_end_2" x="0" y="0" elementRef="RXN-10455_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10455_anchor_product_1">
+      <Xref identifier="EC-6.3.2.52" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10455_anchor_product_start_1" x="0" y="0" elementRef="RXN-10455_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-10455_anchor_product_end_1" arrowHead="Conversion" x="1029.667724609375" y="1318.973876953125" elementRef="AMP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10455_anchor_product_2">
+      <Xref identifier="EC-6.3.2.52" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10455_anchor_product_start_2" x="0" y="0" elementRef="RXN-10455_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-10455_anchor_product_end_2" arrowHead="Conversion" x="796.656494140625" y="734.0635375976562" elementRef="PPI" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10455_anchor_product_3">
+      <Xref identifier="EC-6.3.2.52" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10455_anchor_product_start_3" x="0" y="0" elementRef="RXN-10455_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-10455_anchor_product_end_3" arrowHead="Conversion" x="55.0" y="862.7262573242188" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10449">
+      <Xref identifier="EC-6.3.2.52" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10449_start" x="1070.8199462890625" y="544.0452270507812" elementRef="Jasmonic-Acids" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-10449_end" arrowHead="Conversion" x="1020.604736328125" y="784.5849609375" elementRef="Jasmonoyl-Glutamines" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-10449_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Comment source="BioCyc">Although this reaction has not been observed, both JA and JA-Gln have been detected in |FRAME:TAX-49451| |CITS: [17273867]|.</Comment>
+      <Property key="UniqueID" value="RXN-10449" />
+      <Property key="EC_Number" value="EC-6.3.2.52" />
+      <Property key="Pathways" value="PWY-6233" />
+      <Property key="ReactionEquation" value="Jasmonic-Acids + GLN + ATP =&gt; Jasmonoyl-Glutamines + AMP + PPI + PROTON" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="Gibbs0" value="-14.115845" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <CitationRef elementRef="citation_PUB_17273867" />
+    </Interaction>
+    <Interaction elementId="RXN-10449_anchor_reactant_1">
+      <Xref identifier="EC-6.3.2.52" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10449_anchor_reactant_start_1" x="388.76123046875" y="1321.732421875" elementRef="GLN" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-10449_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-10449_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10449_anchor_reactant_2">
+      <Xref identifier="EC-6.3.2.52" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10449_anchor_reactant_start_2" x="414.6741027832031" y="505.560546875" elementRef="ATP" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-10449_anchor_reactant_end_2" x="0" y="0" elementRef="RXN-10449_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10449_anchor_product_1">
+      <Xref identifier="EC-6.3.2.52" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10449_anchor_product_start_1" x="0" y="0" elementRef="RXN-10449_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-10449_anchor_product_end_1" arrowHead="Conversion" x="1029.667724609375" y="1318.973876953125" elementRef="AMP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10449_anchor_product_2">
+      <Xref identifier="EC-6.3.2.52" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10449_anchor_product_start_2" x="0" y="0" elementRef="RXN-10449_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-10449_anchor_product_end_2" arrowHead="Conversion" x="796.656494140625" y="734.0635375976562" elementRef="PPI" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10449_anchor_product_3">
+      <Xref identifier="EC-6.3.2.52" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10449_anchor_product_start_3" x="0" y="0" elementRef="RXN-10449_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-10449_anchor_product_end_3" arrowHead="Conversion" x="55.0" y="862.7262573242188" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10459">
+      <Xref identifier="EC-6.3.2.52" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10459_start" x="1070.8199462890625" y="544.0452270507812" elementRef="Jasmonic-Acids" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-10459_end" arrowHead="Conversion" x="793.089111328125" y="935.685302734375" elementRef="Jasmonoyl-Leucines" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-10459_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Comment source="BioCyc">There is evidence that this reaction takes place in vitro in Arabidopsis thaliana, and JA-Leu is a naturally occurring compound |CITS: [18247047][15258265]|.</Comment>
+      <Property key="UniqueID" value="RXN-10459" />
+      <Property key="EC_Number" value="EC-6.3.2.52" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-6220, PWY-6233" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="Jasmonic-Acids + LEU + ATP =&gt; Jasmonoyl-Leucines + AMP + PPI + PROTON" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXN-16412, ENZRXN-16411" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="Gibbs0" value="-19.295868" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-10459_ENZRXN-16412">
+      <Waypoints>
+        <Point elementId="RXN-10459_ENZRXN-16412_start" x="1027.2471923828125" y="82.08975219726562" elementRef="MONOMER-14777" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-10459_ENZRXN-16412_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-10459_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10459_ENZRXN-16411">
+      <Waypoints>
+        <Point elementId="RXN-10459_ENZRXN-16411_start" x="906.1542358398438" y="804.4630126953125" elementRef="MONOMER-14776" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-10459_ENZRXN-16411_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-10459_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10459_anchor_reactant_1">
+      <Xref identifier="EC-6.3.2.52" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10459_anchor_reactant_start_1" x="764.9034423828125" y="1463.174072265625" elementRef="LEU" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-10459_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-10459_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10459_anchor_reactant_2">
+      <Xref identifier="EC-6.3.2.52" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10459_anchor_reactant_start_2" x="414.6741027832031" y="505.560546875" elementRef="ATP" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-10459_anchor_reactant_end_2" x="0" y="0" elementRef="RXN-10459_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10459_anchor_product_1">
+      <Xref identifier="EC-6.3.2.52" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10459_anchor_product_start_1" x="0" y="0" elementRef="RXN-10459_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-10459_anchor_product_end_1" arrowHead="Conversion" x="1029.667724609375" y="1318.973876953125" elementRef="AMP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10459_anchor_product_2">
+      <Xref identifier="EC-6.3.2.52" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10459_anchor_product_start_2" x="0" y="0" elementRef="RXN-10459_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-10459_anchor_product_end_2" arrowHead="Conversion" x="796.656494140625" y="734.0635375976562" elementRef="PPI" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10459_anchor_product_3">
+      <Xref identifier="EC-6.3.2.52" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10459_anchor_product_start_3" x="0" y="0" elementRef="RXN-10459_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-10459_anchor_product_end_3" arrowHead="Conversion" x="55.0" y="862.7262573242188" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10457">
+      <Xref identifier="EC-6.3.2.52" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10457_start" x="1070.8199462890625" y="544.0452270507812" elementRef="Jasmonic-Acids" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-10457_end" arrowHead="Conversion" x="1555.0" y="223.7015380859375" elementRef="Jasmonoyl-Valines" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-10457_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Comment source="BioCyc">There is evidence that this reaction takes place in vitro in Arabidopsis thaliana, and JA-Val is a naturally occurring compound |CITS: [18247047][15258265]|.</Comment>
+      <Property key="UniqueID" value="RXN-10457" />
+      <Property key="EC_Number" value="EC-6.3.2.52" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-6220, PWY-6233" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="Jasmonic-Acids + VAL + ATP =&gt; Jasmonoyl-Valines + AMP + PPI + PROTON" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXN-16414, ENZRXN-16410" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="Gibbs0" value="-19.395874" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-10457_ENZRXN-16414">
+      <Waypoints>
+        <Point elementId="RXN-10457_ENZRXN-16414_start" x="1027.2471923828125" y="82.08975219726562" elementRef="MONOMER-14777" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-10457_ENZRXN-16414_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-10457_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10457_ENZRXN-16410">
+      <Waypoints>
+        <Point elementId="RXN-10457_ENZRXN-16410_start" x="906.1542358398438" y="804.4630126953125" elementRef="MONOMER-14776" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-10457_ENZRXN-16410_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-10457_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10457_anchor_reactant_1">
+      <Xref identifier="EC-6.3.2.52" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10457_anchor_reactant_start_1" x="792.5916137695312" y="492.33624267578125" elementRef="VAL" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-10457_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-10457_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10457_anchor_reactant_2">
+      <Xref identifier="EC-6.3.2.52" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10457_anchor_reactant_start_2" x="414.6741027832031" y="505.560546875" elementRef="ATP" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-10457_anchor_reactant_end_2" x="0" y="0" elementRef="RXN-10457_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10457_anchor_product_1">
+      <Xref identifier="EC-6.3.2.52" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10457_anchor_product_start_1" x="0" y="0" elementRef="RXN-10457_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-10457_anchor_product_end_1" arrowHead="Conversion" x="1029.667724609375" y="1318.973876953125" elementRef="AMP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10457_anchor_product_2">
+      <Xref identifier="EC-6.3.2.52" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10457_anchor_product_start_2" x="0" y="0" elementRef="RXN-10457_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-10457_anchor_product_end_2" arrowHead="Conversion" x="796.656494140625" y="734.0635375976562" elementRef="PPI" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-10457_anchor_product_3">
+      <Xref identifier="EC-6.3.2.52" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-10457_anchor_product_start_3" x="0" y="0" elementRef="RXN-10457_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-10457_anchor_product_end_3" arrowHead="Conversion" x="55.0" y="862.7262573242188" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_PUB_18493048">
+      <Xref identifier="18493048" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_16306140">
+      <Xref identifier="16306140" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_17291501">
+      <Xref identifier="17291501" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_18458331">
+      <Xref identifier="18458331" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_18065562">
+      <Xref identifier="18065562" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_9733548">
+      <Xref identifier="9733548" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_9315685">
+      <Xref identifier="9315685" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_9013895">
+      <Xref identifier="9013895" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_17273867">
+      <Xref identifier="17273867" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_12084835">
+      <Xref identifier="12084835" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_17637677">
+      <Xref identifier="17637677" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_18247047">
+      <Xref identifier="18247047" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_17513307">
+      <Xref identifier="17513307" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_15258265">
+      <Xref identifier="15258265" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_9141491">
+      <Xref identifier="9141491" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_19716757">
+      <Xref identifier="19716757" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_19349968">
+      <Xref identifier="19349968" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_18812165">
+      <Xref identifier="18812165" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_17085687">
+      <Xref identifier="17085687" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_8074303">
+      <Xref identifier="8074303" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

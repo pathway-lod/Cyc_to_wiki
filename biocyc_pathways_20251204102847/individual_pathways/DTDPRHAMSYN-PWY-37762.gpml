@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="dTDP-β-L-rhamnose biosynthesis" organism="Escherichia coli" source="PlantCyc" version="20251204102847">
+  <Description>|FRAME: CPD0-1112 &amp;beta;-L-rhamnopyranose| is a deoxysugar that functions as a building block of the glycan component of the lipopolysaccharide present in ECA, the enterobacterial common antigen, and of the O-antigens of many bacterial species |CITS: [11114506][14670712]|. |FRAME: L-rhamnose L-rhamnose| is also a component of the plant cell wall pectic polysaccharides |FRAME: Rhamnogalacturonans-I &quot;rhamnogalacturonan type I&quot;| and |FRAME: CPD-14581 &quot;rhamnogalacturonan type II&quot;| and is present in diverse plant secondary metabolites including anthocyanins, flavonoids and triterpenoids. |FRAME: L-rhamnose L-rhamnose| has also been observed in archaebacteria. For example, it is the terminal saccharide of the tetrasaccharide attached to the surface (S)-layer glycoprotein Asn-498 of the halophilic archaeon |FRAME: TAX-2246 &lt;i&gt;Haloferax volcanii&lt;/i&gt;| |CITS: [22029420][24194539][24831810]|. Some bacteria such as the actinomycete |FRAME: TAX-60894 &lt;i&gt;Saccharopolyspora spinosa&lt;/i&gt;| also utilize |FRAME: CPD0-1112 &amp;beta;-L-rhamnopyranose| as a component of secondary metabolites (see |FRAME: PWY-7100 spinosyn A biosynthesis| for an example) |CITS: [11544225 ]| |CITS: [19126547]|. Like most deoxysugars, |FRAME: CPD0-1112 &amp;beta;-L-rhamnopyranose| is synthesized in the activated form of a nucleotide sugar - |FRAME: DTDP-RHAMNOSE dTDP-&amp;beta;-L-rhamnose|. However, at least in some plants, such as mung bean (|FRAME: TAX-157791 &lt;i&gt;Vigna radiata&lt;/i&gt;|), both |FRAME: DTDP-RHAMNOSE dTDP-&amp;beta;-L-rhamnose| and |FRAME: UDP-L-RHAMNOSE UDP-&amp;beta;-L-rhamnose| act as sugar donors for the rhamnosylation of flavonoids |CITS: [13864832 ]|. Biosynthesis starts with |FRAME: GLC-1-P &amp;alpha;-D-glucopyranose 1-phosphate|, which is activated by |FRAME: TTP dTTP| and converted to |FRAME: DTDP-DEOH-DEOXY-GLUCOSE dTDP-4-dehydro-6-deoxy-&amp;alpha;-D-glucopyranose| in two steps. The first enzyme of the pathway, RmlA (RfbA) (|FRAME: EC-2.7.7.24 &quot;EC 2.7.7.24&quot;|), catalyzes the transfer of a thymidylmonophosphate nucleotide to |FRAME: GLC-1-P &amp;alpha;-D-glucopyranose 1-phosphate| |CITS: [11053865]|. The second enzyme, RmlB (|FRAME: EC-4.2.1.46 &quot;EC 4.2.1.46&quot;|), catalyzes the oxidation of the C4 hydroxyl group of the sugar, followed by dehydration |CITS: [10666612][11243820]|. These two steps are common in the synthesis of many modified sugars used for O-antigen synthesis (see |FRAME: PWY-7317 superpathway of dTDP-glucose-derived O-antigen building blocks biosynthesis|). |FRAME: DTDP-DEOH-DEOXY-GLUCOSE dTDP-4-dehydro-6-deoxy-&amp;alpha;-D-glucopyranose| is then converted to |FRAME:DTDP-DEOH-DEOXY-MANNOSE dTDP-4-dehydro-&amp;beta;-L-rhamnose| by the action of RmlC (|FRAME: EC-5.1.3.13 &quot;EC 5.1.3.13&quot;|) |CITS: [10089454][10802738]|. In most organisms this enzyme only participates in |FRAME: CPD0-1112 &amp;beta;-L-rhamnopyranose| production, although in some streptomyces species it also participates in synthesis of |FRAME: CPD-15496 dTDP-4-&lt;i&gt;O&lt;/i&gt;-demethyl-&amp;beta;-L-noviose| (see |FRAME: PWY-7301 dTDP-4-&lt;i&gt;O&lt;/i&gt;-demethyl-&amp;beta;-L-noviose biosynthesis|) |CITS: [15752721]|. The final enzyme of this pathway, |FRAME: EC-1.1.1.133 EC 1.1.1.133, dTDP-4-dehydrorhamnose reductase|, reduces the carbon at the 4th position, resulting in |FRAME: CPD0-1112 &amp;beta;-L-rhamnopyranose| |CITS: [10666586]|. The pathway is ubiquitous and highly conserved in both Gram-positive and Gram-negative bacteria. It is also found in plants, fungi, and lower eukaryotes |CITS: [27009306]|. The last two enzymatic activities (epimerase and reductase) are performed in plants by one bifunctional enzyme, NRS/ER |CITS: [15020741]|.</Description>
+  <Authors>
+    <Author name="SRI" />
+    <Author name="caspi" />
+    <Author name="fulcher" />
+    <Author name="O-18" />
+    <Author name="riley" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="DTDPRHAMSYN-PWY" />
+  <Property key="Type" value="dTDP-Sugar-Biosynthesis" />
+  <Property key="ReactionCount" value="5" />
+  <Property key="ReactionIDs" value="PHOSPHOGLUCMUT-RXN, DTDPGLUCDEHYDRAT-RXN, DTDPGLUCOSEPP-RXN, DTDPDEHYRHAMREDUCT-RXN, DTDPDEHYDRHAMEPIM-RXN" />
+  <Property key="PredecessorCount" value="5" />
+  <Property key="PrimaryCompoundCount" value="2" />
+  <Property key="Organism" value="Caenorhabditis elegans, Escherichia coli, Haloferax volcanii, Saccharopolyspora spinosa, Arabidopsis thaliana" />
+  <Property key="TaxonomicRange_1" value="Eukaryota" />
+  <Property key="TaxonomicRange_2" value="Archaea" />
+  <Property key="TaxonomicRange_3" value="Bacteria &lt;bacteria&gt;" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_PUB_11114506" />
+  <CitationRef elementRef="citation_PUB_24831810" />
+  <CitationRef elementRef="citation_PUB_11544225" />
+  <CitationRef elementRef="citation_PUB_19126547" />
+  <CitationRef elementRef="citation_PUB_11053865" />
+  <CitationRef elementRef="citation_PUB_15752721" />
+  <CitationRef elementRef="citation_PUB_10666586" />
+  <CitationRef elementRef="citation_PUB_27009306" />
+  <CitationRef elementRef="citation_PUB_15020741" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="AT1G63000" textLabel="NRS/ER" type="GeneProduct">
+      <Xref identifier="AY513232" dataSource="Entrez Gene" />
+      <Graphics centerX="897.8856201171875" centerY="649.4304809570312" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT1G63000" />
+      <Property key="AlternativeId_Entrez" value="AY513232" />
+      <Property key="AlternativeId_Tair" value="At1g63000" />
+      <Property key="Synonym_1" value="At1g63000" />
+      <Property key="Product" value="AT1G63000-MONOMER" />
+      <Property key="StartPosition" value="23346058" />
+      <Property key="EndPosition" value="23347778" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+      <Property key="Accession1" value="AT1G63000" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+      <CitationRef elementRef="citation_PUB_15020741" />
+    </DataNode>
+    <DataNode elementId="AT5G51820" textLabel="PGM" type="GeneProduct">
+      <Xref identifier="AT5G51820" dataSource="TAIR" />
+      <Graphics centerX="1600.0" centerY="1166.5634765625" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT5G51820" />
+      <Property key="AlternativeId_Tair" value="AT5G51820" />
+      <Property key="AlternativeId_String" value="3702.AT5G51820.1" />
+      <Property key="Product" value="AT5G51820-MONOMER" />
+      <Property key="StartPosition" value="21080594" />
+      <Property key="EndPosition" value="21085283" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+      <Property key="Accession1" value="AT5G51820" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="AT1G63000-MONOMER" textLabel="dTDP-4-dehydrorhamnose 3,5-epimerase//UDP-4-keto-rhamnose-4-keto-reductase//dTDP-4-dehydrorhamnose reductase//UDP-4-keto-6-deoxy-glucose-3,5-epimerase" type="Protein">
+      <Xref identifier="Q9LQ04" dataSource="uniprot" />
+      <Graphics centerX="1128.435791015625" centerY="567.0402221679688" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">The enzyme encoded by the &lt;i&gt;Arabidopsis NRS/ER&lt;/i&gt; gene has been shown to act as a nucleotide-rhamnose synthase able to convert both UDP-glucose and dTDP-glucose into UDP-rhamnose and TDP-rhamnose, respectively |CITS:[15020741]|. The complete enzymatic characterization of NRS/ER was not possible due to low conversion rates of UDP-glucose to UDP-4-keto-6-deoxy-glucose, allowing for small amounts of substrate for NRS/ER |CITS:[15020741]|.</Comment>
+      <Property key="UniqueID" value="AT1G63000-MONOMER" />
+      <Property key="AlternativeId_Smr" value="Q9LQ04" />
+      <Property key="AlternativeId_Pride" value="Q9LQ04" />
+      <Property key="AlternativeId_Pfam" value="PF04321" />
+      <Property key="AlternativeId_Phylomedb" value="Q9LQ04" />
+      <Property key="AlternativeId_Interpro" value="IPR036291" />
+      <Property key="AlternativeId_Pdb" value="4QQR" />
+      <Property key="AlternativeId_Araport" value="AT1G63000.1" />
+      <Property key="AlternativeId_Swissmodel" value="Q9LQ04" />
+      <Property key="AlternativeId_Modbase" value="Q9LQ04" />
+      <Property key="AlternativeId_Pid" value="AAR99502" />
+      <Property key="AlternativeId_Uniprot" value="Q9LQ04" />
+      <Property key="Synonym_1" value="nucleotide-rhamnose synthase/epimerase-reductase" />
+      <Property key="Synonym_2" value="dTDP-4-dehydrorhamnose reductase" />
+      <Property key="Catalyzes" value="RXN-26512, RXN-26513, RXN-7201, RXN-7262, RXN-10073, RXN-ARA-823" />
+      <Property key="CatalyzesCount" value="6" />
+      <Property key="Accession1" value="AT1G63000.1" />
+      <Property key="Gene" value="AT1G63000" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="MolecularWeightExp" value="35." />
+      <Property key="MolecularWeightKd" value="35." />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_15020741" />
+    </DataNode>
+    <DataNode elementId="AT5G51820-MONOMER" textLabel="phosphoglucomutase" type="Protein">
+      <Xref identifier="Q9SCY0" dataSource="uniprot" />
+      <Graphics centerX="869.3309936523438" centerY="764.467041015625" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT5G51820-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT5G51820.1" />
+      <Property key="AlternativeId_Uniprot" value="Q9SCY0" />
+      <Property key="AlternativeId_Smr" value="Q9SCY0" />
+      <Property key="AlternativeId_Prints" value="PR00509" />
+      <Property key="AlternativeId_Pride" value="Q9SCY0" />
+      <Property key="AlternativeId_Interpro" value="IPR005841" />
+      <Property key="AlternativeId_Pfam" value="PF00408" />
+      <Property key="AlternativeId_Phylomedb" value="Q9SCY0" />
+      <Property key="AlternativeId_Prosite" value="PS00710" />
+      <Property key="Catalyzes" value="RXN-6415" />
+      <Property key="Accession1" value="AT5G51820.1" />
+      <Property key="Gene" value="AT5G51820" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="ORG-5993" />
+    </DataNode>
+    <DataNode elementId="PPI" textLabel="pyrophosphate" type="Metabolite">
+      <Xref identifier="XPPKVPWEQAFLFU-UHFFFAOYSA-K" dataSource="InChIKey" />
+      <Graphics centerX="503.5667724609375" centerY="1550.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PPI" />
+      <Property key="AlternativeId_Chebi" value="33019" />
+      <Property key="AlternativeId_Pubchem" value="4097574" />
+      <Property key="AlternativeId_Bigg" value="ppi" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC33019" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00250" />
+      <Property key="AlternativeId_Drugbank" value="DB04160" />
+      <Property key="AlternativeId_Chemspider" value="996" />
+      <Property key="AlternativeId_LigandCpd" value="C00013" />
+      <Property key="AlternativeId_Cas" value="2466-09-3" />
+      <Property key="Synonym_1" value="PPi" />
+      <Property key="Synonym_2" value="PP" />
+      <Property key="Synonym_3" value="pyrophosphate" />
+      <Property key="ChemicalFormula" value="(H 1) (O 7) (P 2)" />
+      <Property key="AtomCharges" value="(3 -1), (5 -1), (4 -1)" />
+      <Property key="Gibbs0" value="-473.4674" />
+      <Property key="Inchi" value="InChI=1S/H4O7P2/c1-8(2,3)7-9(4,5)6/h(H2,1,2,3)(H2,4,5,6)/p-3" />
+      <Property key="InchiKey" value="InChIKey=XPPKVPWEQAFLFU-UHFFFAOYSA-K" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="174.951" />
+      <Property key="MonoisotopicMw" value="177.9432255031" />
+      <Property key="NonStandardInchi" value="InChI=1S/H4O7P2/c1-8(2,3)7-9(4,5)6/h(H2,1,2,3)(H2,4,5,6)/p-3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-8724, REG0-8483, REG-12877, REG-9488, REG-12060, REG0-8756, REG-13025, REG-9934, REG-8081, REG0-9977, REG-13335, REG0-8836, REG0-7229, REG0-7537, REG0-8365, REG0-8912, REG-11188, REG-8675, REG0-8919, REG0-8467, REG0-7304, REG-7117, REG-8030, REG-9450" />
+      <Property key="Smiles" value="O=P(O)(OP([O-])([O-])=O)[O-]" />
+      <CitationRef elementRef="citation_PUB_18493048" />
+    </DataNode>
+    <DataNode elementId="NADPH" textLabel="NADPH" type="Metabolite">
+      <Xref identifier="ACFIXJIJDZMPPO-NNYOXOHSSA-J" dataSource="InChIKey" />
+      <Graphics centerX="828.8619384765625" centerY="1164.886962890625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: NAD| and |FRAME: NADP| are dinucleotides containing one |FRAME: NIACINAMIDE| base and one |FRAME: ADENINE| base. Each nucleotide is connected to a ribose sugar at position 1, and the two riboses are connected at their 5 position via a diphosphate. The only difference between the two is that in NADP there is an additional phosphate group at the 2&apos; position of the ribose that carries the adenine moiety. These molecules are biological carriers of reductive equivalents (i.e. high potential electrons). Most of the time they function as cosubstrates, and in some cases they function as |FRAME: Cofactors cofactors|. They are often referred to by the obsolete term &quot;coenzymes&quot;. The most common function of |FRAME: NAD| is to accept two electrons and a proton (a hydride ion) from a substrate that is being oxidized. This reduction converts |FRAME: NAD| to |FRAME: NADH|, the reduced form. NADH then diffuses or is transported to a terminal oxidase, where the electrons are passed on, regenerating the oxidized form. |FRAME: NADPH|, on the other hand, is mostly involved in biosynthetic reactions, where it serves as an electron donor. NADPH is formed by reduction of |FRAME: NADP|, which occurs by different mechanisms in different types of organisms. In photosynthetic organisms |FRAME: NADP| is reduced by |FRAME: CPLX-84|. In heterotrophic organisms it is reduced by central metabolism processes such as the pentose phosphate pathway (see |FRAME: OXIDATIVEPENT-PWY|).</Comment>
+      <Property key="UniqueID" value="NADPH" />
+      <Property key="AlternativeId_Metanetx" value="MNXM6" />
+      <Property key="AlternativeId_Seed" value="cpd00005" />
+      <Property key="AlternativeId_Refmet" value="NADPH" />
+      <Property key="AlternativeId_Bigg" value="33486" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57783" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00221" />
+      <Property key="AlternativeId_Chemspider" value="10239199" />
+      <Property key="AlternativeId_Chebi" value="57783" />
+      <Property key="AlternativeId_Pubchem" value="15983949" />
+      <Property key="AlternativeId_Cas" value="2646-71-1" />
+      <Property key="AlternativeId_LigandCpd" value="C00005" />
+      <Property key="Synonym_1" value="&amp;beta;-nicotinamide adenine dinucleotide phosphate, reduced" />
+      <Property key="Synonym_2" value="&amp;beta;-NADPH" />
+      <Property key="Synonym_3" value="reduced NADP" />
+      <Property key="Synonym_4" value="reduced dihydrotriphosphopyridine nucleotide" />
+      <Property key="Synonym_5" value="reduced nicotinamide adenine dinucleotide phosphate" />
+      <Property key="Synonym_6" value="Nicotinamide adenine dinucleotide phosphate - reduced" />
+      <Property key="Synonym_7" value="NADPH+H+" />
+      <Property key="Synonym_8" value="NADPH2" />
+      <Property key="Synonym_9" value="NADPH&lt;SUB&gt;2&lt;/SUB&gt;" />
+      <Property key="Synonym_10" value="dihydrotriphosphopyridine nucleotide" />
+      <Property key="Synonym_11" value="dihydrotriphosphopyridine nucleotide reduced" />
+      <Property key="Synonym_12" value="dihydronicotinamide adenine dinucleotide phosphate" />
+      <Property key="Synonym_13" value="dihydronicotinamide adenine dinucleotide phosphate reduced" />
+      <Property key="Synonym_14" value="NADP-reduced" />
+      <Property key="Synonym_15" value="NADP-red" />
+      <Property key="Synonym_16" value="NADPH&lt;SUP&gt;+&lt;/SUP&gt;H&lt;SUP&gt;+&lt;/SUP&gt;" />
+      <Property key="Synonym_17" value="TPNH" />
+      <Property key="Synonym_18" value="dihydronicotinamide adenine dinucleotide-P" />
+      <Property key="Synonym_19" value="NADP(H)" />
+      <Property key="ChemicalFormula" value="(C 21) (H 26) (N 7) (O 17) (P 3)" />
+      <Property key="AtomCharges" value="(35 -1), (33 -1), (39 -1), (37 -1)" />
+      <Property key="CofactorsOf" value="ENZRXN-33, ENZRXN-14497" />
+      <Property key="Gibbs0" value="-551.72284" />
+      <Property key="Inchi" value="InChI=1S/C21H30N7O17P3/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(44-46(33,34)35)14(30)11(43-21)6-41-48(38,39)45-47(36,37)40-5-10-13(29)15(31)20(42-10)27-3-1-2-9(4-27)18(23)32/h1,3-4,7-8,10-11,13-16,20-21,29-31H,2,5-6H2,(H2,23,32)(H,36,37)(H,38,39)(H2,22,24,25)(H2,33,34,35)/p-4/t10-,11-,13-,14-,15-,16-,20-,21-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=ACFIXJIJDZMPPO-NNYOXOHSSA-J" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="741.394" />
+      <Property key="MonoisotopicMw" value="745.0911021051" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-8210, REG-6520, REG0-8743, REG-13684, REG0-9021, REG-8494, REG0-7642, REG0-7643" />
+      <Property key="Smiles" value="C1(\N(/C=C(C\C=1)/C(=O)N)[C@@H]2(O[C@@H]([C@H]([C@H]2O)O)COP(OP(OC[C@H]5(O[C@@H](N3(C4(\C(\N=C/3)=C(N)/N=C\N=4)))[C@H](OP([O-])(=O)[O-])[C@H](O)5))(=O)[O-])(=O)[O-]))" />
+    </DataNode>
+    <DataNode elementId="DTDP-DEOH-DEOXY-GLUCOSE" textLabel="dTDP-4-dehydro-6-deoxy-α-D-glucopyranose" type="Metabolite">
+      <Xref identifier="PSXWNITXWWECNY-UCBTUHGZSA-L" dataSource="InChIKey" />
+      <Graphics centerX="1593.7969970703125" centerY="570.51220703125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="DTDP-DEOH-DEOXY-GLUCOSE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000018206939" />
+      <Property key="AlternativeId_Seed" value="cpd00521" />
+      <Property key="AlternativeId_Metanetx" value="MNXM451" />
+      <Property key="AlternativeId_Bigg" value="dtdp4d6dg" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57649" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01399" />
+      <Property key="AlternativeId_Chebi" value="57649" />
+      <Property key="AlternativeId_Pubchem" value="25244163" />
+      <Property key="AlternativeId_LigandCpd" value="C11907" />
+      <Property key="Synonym_1" value="TDP-4-keto-6-deoxy--&amp;alpha;-D-glucose" />
+      <Property key="Synonym_2" value="TDP-4-oxo-6-deoxy--&amp;alpha;-D-glucose" />
+      <Property key="Synonym_3" value="dTDP-4-oxo-6-deoxy--&amp;alpha;-D-glucose" />
+      <Property key="Synonym_4" value="dTDP-6-deoxy-&amp;alpha;-D-&lt;i&gt;xylo&lt;/i&gt;-4-hexosulose" />
+      <Property key="Synonym_5" value="dTDP-6-deoxy-&amp;alpha;-D-xylohex-4-ulose" />
+      <Property key="Synonym_6" value="dTDP-4-dehydro-6-deoxy-&amp;alpha;-D-glucose" />
+      <Property key="ChemicalFormula" value="(C 16) (H 22) (N 2) (O 15) (P 2)" />
+      <Property key="AtomCharges" value="(28 -1), (26 -1)" />
+      <Property key="Gibbs0" value="-485.84363" />
+      <Property key="Inchi" value="InChI=1S/C16H24N2O15P2/c1-6-4-18(16(24)17-14(6)23)10-3-8(19)9(31-10)5-29-34(25,26)33-35(27,28)32-15-13(22)12(21)11(20)7(2)30-15/h4,7-10,12-13,15,19,21-22H,3,5H2,1-2H3,(H,25,26)(H,27,28)(H,17,23,24)/p-2/t7-,8+,9-,10-,12+,13-,15-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=PSXWNITXWWECNY-UCBTUHGZSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="544.302" />
+      <Property key="MonoisotopicMw" value="546.0651911323" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC1(\C(=O)NC(N(\C=1)[C@H]3(C[C@H](O)[C@@H](COP(=O)([O-])OP(O[C@H]2(O[C@H](C)C(=O)[C@H](O)[C@@H](O)2))(=O)[O-])O3))=O)" />
+      <Property key="Superatoms" value="DTDP-GROUP" />
+    </DataNode>
+    <DataNode elementId="DTDP-D-GLUCOSE" textLabel="dTDP-α-D-glucose" type="Metabolite">
+      <Xref identifier="YSYKRGRSMLTJNL-URARBOGNSA-L" dataSource="InChIKey" />
+      <Graphics centerX="1364.1553955078125" centerY="50.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="DTDP-D-GLUCOSE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000008216406" />
+      <Property key="AlternativeId_Seed" value="cpd00626" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1376" />
+      <Property key="AlternativeId_Refmet" value="dTDP-glucose" />
+      <Property key="AlternativeId_Bigg" value="dtdpglu" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57477" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01328" />
+      <Property key="AlternativeId_Pubchem" value="25202390" />
+      <Property key="AlternativeId_Chebi" value="57477" />
+      <Property key="AlternativeId_Cas" value="2009-24-7" />
+      <Property key="AlternativeId_LigandCpd" value="C00842" />
+      <Property key="Synonym_1" value="TDP-glucose" />
+      <Property key="Synonym_2" value="dTDP-glucose" />
+      <Property key="Synonym_3" value="dTDP-D-glucose" />
+      <Property key="Synonym_4" value="thymidine-5&apos;-diphospho-&amp;alpha;-D-glucose" />
+      <Property key="ChemicalFormula" value="(C 16) (H 24) (N 2) (O 16) (P 2)" />
+      <Property key="AtomCharges" value="(29 -1), (27 -1)" />
+      <Property key="Gibbs0" value="-508.09137" />
+      <Property key="GroupCoords2d" value="(41 41), (93 41)" />
+      <Property key="Inchi" value="InChI=1S/C16H26N2O16P2/c1-6-3-18(16(25)17-14(6)24)10-2-7(20)9(31-10)5-30-35(26,27)34-36(28,29)33-15-13(23)12(22)11(21)8(4-19)32-15/h3,7-13,15,19-23H,2,4-5H2,1H3,(H,26,27)(H,28,29)(H,17,24,25)/p-2/t7-,8+,9+,10+,11+,12-,13+,15+/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=YSYKRGRSMLTJNL-URARBOGNSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="562.317" />
+      <Property key="MonoisotopicMw" value="564.0757558186" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-11790, REG0-8918" />
+      <Property key="Smiles" value="CC1(\C(=O)NC(N(\C=1)[C@H]3(C[C@H](O)[C@@H](COP([O-])(=O)OP([O-])(=O)O[C@H]2(O[C@H](CO)[C@@H](O)[C@H](O)[C@@H](O)2))O3))=O)" />
+      <Property key="StructureGroups" value="A-DGLC-HEX-1:5, TDP" />
+      <Property key="StructureLinks" value="(2 1 N -1 X 1)" />
+      <Property key="Superatoms" value="DTDP-GROUP" />
+    </DataNode>
+    <DataNode elementId="NADP" textLabel="NADP⁺" type="Metabolite">
+      <Xref identifier="XJLXINKUBYWONI-NNYOXOHSSA-K" dataSource="InChIKey" />
+      <Graphics centerX="904.28173828125" centerY="65.69835662841797" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: NAD| and |FRAME: NADP| are dinucleotides containing one |FRAME: NIACINAMIDE| base and one |FRAME: ADENINE| base. Each nucleotide is connected to a ribose sugar at position 1, and the two riboses are connected at their 5 position via a diphosphate. The only difference between the two is that in NADP there is an additional phosphate group at the 2&apos; position of the ribose that carries the adenine moiety. These molecules are biological carriers of reductive equivalents (i.e. high potential electrons). Most of the time they function as cosubstrates, and in some cases they function as |FRAME: Cofactors cofactors|. They are often referred to by the obsolete term &quot;coenzymes&quot;. The most common function of |FRAME: NAD| is to accept two electrons and a proton (a hydride ion) from a substrate that is being oxidized. This reduction converts |FRAME: NAD| to |FRAME: NADH|, the reduced form. NADH then diffuses or is transported to a terminal oxidase, where the electrons are passed on, regenerating the oxidized form. |FRAME: NADPH|, on the other hand, is mostly involved in biosynthetic reactions, where it serves as an electron donor. NADPH is formed by reduction of |FRAME: NADP|, which occurs by different mechanisms in different types of organisms. In photosynthetic organisms |FRAME: NADP| is reduced by |FRAME: CPLX-84|. In heterotrophic organisms it is reduced by central metabolism processes such as the pentose phosphate pathway (see |FRAME: OXIDATIVEPENT-PWY|).</Comment>
+      <Property key="UniqueID" value="NADP" />
+      <Property key="AlternativeId_Metanetx" value="MNXM5" />
+      <Property key="AlternativeId_Seed" value="cpd00006" />
+      <Property key="AlternativeId_Refmet" value="NADP+" />
+      <Property key="AlternativeId_Bigg" value="33488" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC58349" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00217" />
+      <Property key="AlternativeId_Chemspider" value="10239198" />
+      <Property key="AlternativeId_Chebi" value="58349" />
+      <Property key="AlternativeId_Pubchem" value="15938972" />
+      <Property key="AlternativeId_LigandCpd" value="C00006" />
+      <Property key="AlternativeId_Cas" value="53-59-8" />
+      <Property key="Synonym_1" value="&amp;beta;-NADP&lt;sup&gt;+&lt;/sup&gt;" />
+      <Property key="Synonym_2" value="coenzyme II" />
+      <Property key="Synonym_3" value="triphosphopyridine nucleotide" />
+      <Property key="Synonym_4" value="nicotinamide adenine dinucleotide phosphate" />
+      <Property key="Synonym_5" value="NADP-oxidized" />
+      <Property key="Synonym_6" value="NADP-ox" />
+      <Property key="Synonym_7" value="NADP+" />
+      <Property key="Synonym_8" value="TPN" />
+      <Property key="Synonym_9" value="TPN+" />
+      <Property key="Synonym_10" value="TPN-ox" />
+      <Property key="Synonym_11" value="nicotinamide adenine dinucleotide-P" />
+      <Property key="Synonym_12" value="NADP(+)" />
+      <Property key="Synonym_13" value="NADP" />
+      <Property key="ChemicalFormula" value="(C 21) (H 25) (N 7) (O 17) (P 3)" />
+      <Property key="AtomCharges" value="(27 1), (35 -1), (33 -1), (39 -1), (37 -1)" />
+      <Property key="CofactorsOf" value="ENZRXN-12451, ENZRXN-14499, ENZRXN-14500" />
+      <Property key="Gibbs0" value="-563.64954" />
+      <Property key="Inchi" value="InChI=1S/C21H28N7O17P3/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(44-46(33,34)35)14(30)11(43-21)6-41-48(38,39)45-47(36,37)40-5-10-13(29)15(31)20(42-10)27-3-1-2-9(4-27)18(23)32/h1-4,7-8,10-11,13-16,20-21,29-31H,5-6H2,(H7-,22,23,24,25,32,33,34,35,36,37,38,39)/p-3/t10-,11-,13-,14-,15-,16-,20-,21-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=XJLXINKUBYWONI-NNYOXOHSSA-K" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="740.386" />
+      <Property key="MonoisotopicMw" value="745.0911021051" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-14905, REG-8367, REG0-8229, REG-9121, REG-9500, REG-8442, REG0-8744, REG-8497, REG-11605, REG0-7963, REG-8650, REG0-8843, REG0-7614, REG0-7593, REG-6711, REG-6710, REG-7292" />
+      <Property key="Smiles" value="C5(/C=C\C(\C(=O)N)=C/[N+](/[C@@H]1(O[C@@H]([C@H]([C@H]1O)O)COP(OP(OC[C@H]4(O[C@@H](N2(C3(\C(\N=C/2)=C(N)/N=C\N=3)))[C@H](OP([O-])(=O)[O-])[C@H](O)4))(=O)[O-])(=O)[O-]))=5)" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="536.3644409179688" centerY="894.79296875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="ChemicalFormula" value="(H 1)" />
+      <Property key="AtomCharges" value="(1 1)" />
+      <Property key="Gibbs0" value="0.42906138" />
+      <Property key="Inchi" value="InChI=1S/p+1" />
+      <Property key="InchiKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicMw" value="1.0078250321" />
+      <Property key="NonStandardInchi" value="InChI=1S/p+1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="[H+]" />
+    </DataNode>
+    <DataNode elementId="DTDP-RHAMNOSE" textLabel="dTDP-β-L-rhamnose" type="Metabolite">
+      <Xref identifier="ZOSQFDVXNQFKBY-CGAXJHMRSA-L" dataSource="InChIKey" />
+      <Graphics centerX="100.0" centerY="410.4552001953125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="DTDP-RHAMNOSE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000008218444" />
+      <Property key="AlternativeId_Seed" value="cpd02113" />
+      <Property key="AlternativeId_Metanetx" value="MNXM899" />
+      <Property key="AlternativeId_Bigg" value="dtdprmn" />
+      <Property key="AlternativeId_Hmdb" value="HMDB06354" />
+      <Property key="AlternativeId_Chebi" value="57510" />
+      <Property key="AlternativeId_Pubchem" value="25245982" />
+      <Property key="AlternativeId_Cas" value="572-96-3" />
+      <Property key="AlternativeId_LigandCpd" value="C03319" />
+      <Property key="Synonym_1" value="dTDP-6-deoxy-&amp;beta;-L-mannose" />
+      <Property key="Synonym_2" value="dTDP-L-rhamnose" />
+      <Property key="Synonym_3" value="dTDP-L-Rha" />
+      <Property key="ChemicalFormula" value="(C 16) (H 24) (N 2) (O 15) (P 2)" />
+      <Property key="AtomCharges" value="(28 -1), (26 -1)" />
+      <Property key="Gibbs0" value="-471.8614" />
+      <Property key="GroupCoords2d" value="(41 41), (96 41)" />
+      <Property key="Inchi" value="InChI=1S/C16H26N2O15P2/c1-6-4-18(16(24)17-14(6)23)10-3-8(19)9(31-10)5-29-34(25,26)33-35(27,28)32-15-13(22)12(21)11(20)7(2)30-15/h4,7-13,15,19-22H,3,5H2,1-2H3,(H,25,26)(H,27,28)(H,17,23,24)/p-2/t7-,8-,9+,10+,11-,12+,13+,15+/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=ZOSQFDVXNQFKBY-CGAXJHMRSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="546.317" />
+      <Property key="MonoisotopicMw" value="548.0808411964999" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-10068, REG0-8917" />
+      <Property key="Smiles" value="CC1(\C(=O)NC(=O)N(\C=1)[C@H]3(C[C@H](O)[C@@H](COP(=O)([O-])OP(=O)([O-])O[C@H]2(O[C@@H](C)[C@H](O)[C@@H](O)[C@@H](O)2))O3))" />
+      <Property key="StructureGroups" value="B-LMAN-HEX-1:5_6:D, TDP" />
+      <Property key="StructureLinks" value="(2 1 N -1 X 1)" />
+      <Property key="Superatoms" value="DTDP-GROUP" />
+    </DataNode>
+    <DataNode elementId="WATER" textLabel="H₂O" type="Metabolite">
+      <Xref identifier="XLYOFNOQVPJJNP-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1152.60498046875" centerY="927.1348876953125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="WATER" />
+      <Property key="AlternativeId_Bigg" value="33474" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15377" />
+      <Property key="AlternativeId_Hmdb" value="HMDB02111" />
+      <Property key="AlternativeId_Chemspider" value="937" />
+      <Property key="AlternativeId_Chebi" value="15377" />
+      <Property key="AlternativeId_Pubchem" value="962" />
+      <Property key="AlternativeId_LigandCpd" value="C00001" />
+      <Property key="AlternativeId_Cas" value="7732-18-5" />
+      <Property key="Synonym_1" value="H&lt;sub&gt;2&lt;/sub&gt;0" />
+      <Property key="Synonym_2" value="H2O" />
+      <Property key="Synonym_3" value="H20" />
+      <Property key="Synonym_4" value="hydrogen oxide" />
+      <Property key="Synonym_5" value="water" />
+      <Property key="ChemicalFormula" value="(H 2) (O 1)" />
+      <Property key="Gibbs0" value="-36.144756" />
+      <Property key="Inchi" value="InChI=1S/H2O/h1H2" />
+      <Property key="InchiKey" value="InChIKey=XLYOFNOQVPJJNP-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="18.015" />
+      <Property key="MonoisotopicMw" value="18.0105646863" />
+      <Property key="NonStandardInchi" value="InChI=1S/H2O/h1H2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="O" />
+    </DataNode>
+    <DataNode elementId="GLC-1-P" textLabel="α-D-glucopyranose 1-phosphate" type="Metabolite">
+      <Xref identifier="HXXFSFRBOHSIMQ-VFUOTHLCSA-L" dataSource="InChIKey" />
+      <Graphics centerX="1142.1500244140625" centerY="1504.8450927734375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="GLC-1-P" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004073375" />
+      <Property key="AlternativeId_Refmet" value="Glucose-1-phosphate" />
+      <Property key="AlternativeId_Bigg" value="g1p" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC58601" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01586" />
+      <Property key="AlternativeId_Chemspider" value="5441206" />
+      <Property key="AlternativeId_Chebi" value="58601" />
+      <Property key="AlternativeId_Pubchem" value="7091266" />
+      <Property key="AlternativeId_Cas" value="59-56-3" />
+      <Property key="Synonym_1" value="glucose 1-phosphate" />
+      <Property key="Synonym_2" value="cori ester" />
+      <Property key="Synonym_3" value="D-glucose 1-phosphate" />
+      <Property key="Synonym_4" value="glucose-1P" />
+      <Property key="Synonym_5" value="&amp;alpha;-glucose-1-phosphate" />
+      <Property key="Synonym_6" value="D-glucose-&amp;alpha;-1-phosphate" />
+      <Property key="Synonym_7" value="&amp;alpha;-D-glucose-1-P" />
+      <Property key="Synonym_8" value="D-glucose-1-phosphate" />
+      <Property key="Synonym_9" value="&amp;alpha;-D-glucose 1-phosphate" />
+      <Property key="ChemicalFormula" value="(C 6) (H 11) (O 9) (P 1)" />
+      <Property key="AtomCharges" value="(12 -1), (11 -1)" />
+      <Property key="Gibbs0" value="-319.04593" />
+      <Property key="GroupCoords2d" value="(41 52), (41 64)" />
+      <Property key="Inchi" value="InChI=1S/C6H13O9P/c7-1-2-3(8)4(9)5(10)6(14-2)15-16(11,12)13/h2-10H,1H2,(H2,11,12,13)/p-2/t2-,3-,4+,5-,6-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=HXXFSFRBOHSIMQ-VFUOTHLCSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="258.121" />
+      <Property key="MonoisotopicMw" value="260.0297185262" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-7407, REG-8027" />
+      <Property key="Smiles" value="C(O)[C@H]1(O[C@H](OP(=O)([O-])[O-])[C@H](O)[C@@H](O)[C@H](O)1)" />
+      <Property key="StructureGroups" value="A-DGLC-HEX-1:5, GLYCO-CT-PHOSPHATE" />
+      <Property key="StructureLinks" value="(1 2 O 1 N 1)" />
+    </DataNode>
+    <DataNode elementId="DTDP-DEOH-DEOXY-MANNOSE" textLabel="dTDP-4-dehydro-β-L-rhamnose" type="Metabolite">
+      <Xref identifier="PSXWNITXWWECNY-LPVGZGSHSA-L" dataSource="InChIKey" />
+      <Graphics centerX="854.1558837890625" centerY="870.5422973632812" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="DTDP-DEOH-DEOXY-MANNOSE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000008551220" />
+      <Property key="AlternativeId_Metanetx" value="MNXM2371" />
+      <Property key="AlternativeId_Bigg" value="dtdp4d6dm" />
+      <Property key="AlternativeId_Chebi" value="62830" />
+      <Property key="AlternativeId_Pubchem" value="53356769" />
+      <Property key="AlternativeId_LigandCpd" value="C00688" />
+      <Property key="Synonym_1" value="dTDP-4-oxo-6-deoxy-&amp;beta;-L-mannose" />
+      <Property key="Synonym_2" value="dTDP-4-oxo-&amp;beta;-L-rhamnose" />
+      <Property key="Synonym_3" value="dTDP-4-dehydro-6-deoxy-&amp;beta;-L-mannose" />
+      <Property key="Synonym_4" value="dTDP-4-keto-L-rhamnose" />
+      <Property key="ChemicalFormula" value="(C 16) (H 22) (N 2) (O 15) (P 2)" />
+      <Property key="AtomCharges" value="(28 -1), (26 -1)" />
+      <Property key="Gibbs0" value="-485.84363" />
+      <Property key="Inchi" value="InChI=1S/C16H24N2O15P2/c1-6-4-18(16(24)17-14(6)23)10-3-8(19)9(31-10)5-29-34(25,26)33-35(27,28)32-15-13(22)12(21)11(20)7(2)30-15/h4,7-10,12-13,15,19,21-22H,3,5H2,1-2H3,(H,25,26)(H,27,28)(H,17,23,24)/p-2/t7-,8-,9+,10+,12+,13+,15+/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=PSXWNITXWWECNY-LPVGZGSHSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="544.302" />
+      <Property key="MonoisotopicMw" value="546.0651911323" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC1(\C(=O)NC(=O)N(\C=1)[C@H]3(C[C@H](O)[C@@H](COP(=O)([O-])OP(=O)([O-])O[C@H]2(O[C@@H](C)C(=O)[C@@H](O)[C@@H](O)2))O3))" />
+      <Property key="Superatoms" value="DTDP-GROUP" />
+    </DataNode>
+    <DataNode elementId="D-glucopyranose-6-phosphate" textLabel="D-glucopyranose 6-phosphate" type="Metabolite">
+      <Xref identifier="NBSCHQHZLSJFNQ-GASJEMHNSA-L" dataSource="InChIKey" />
+      <Graphics centerX="120.82223510742188" centerY="1047.638916015625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="D-glucopyranose-6-phosphate" />
+      <Property key="AlternativeId_Mediadb" value="compounds/90/" />
+      <Property key="AlternativeId_ReactomeCpd" value="1629756" />
+      <Property key="AlternativeId_Metanetx" value="MNXM160" />
+      <Property key="AlternativeId_Chebi" value="4170" />
+      <Property key="AlternativeId_LigandCpd" value="C00092" />
+      <Property key="Synonym_1" value="D-glucopyranose-6-P" />
+      <Property key="ChemicalFormula" value="(C 6) (H 11) (O 9) (P 1)" />
+      <Property key="AtomCharges" value="(12 -1), (11 -1)" />
+      <Property key="FastEquilibratingInstances?" value="T" />
+      <Property key="Gibbs0" value="-319.04593" />
+      <Property key="GroupCoords2d" value="(41 52), (41 41)" />
+      <Property key="Inchi" value="InChI=1S/C6H13O9P/c7-3-2(1-14-16(11,12)13)15-6(10)5(9)4(3)8/h2-10H,1H2,(H2,11,12,13)/p-2/t2-,3-,4+,5-,6?/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=NBSCHQHZLSJFNQ-GASJEMHNSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="258.121" />
+      <Property key="MonoisotopicMw" value="260.0297185262" />
+      <Property key="NonStandardInchi" value="InChI=1S/C6H13O9P/c7-3-2(1-14-16(11,12)13)15-6(10)5(9)4(3)8/h2-10H,1H2,(H2,11,12,13)/p-2/t2-,3-,4+,5-,6?/m1/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C([C@H]1(OC([C@@H]([C@H]([C@@H]1O)O)O)O))OP([O-])([O-])=O" />
+      <Property key="StructureGroups" value="X-DGLC-HEX-1:5, GLYCO-CT-PHOSPHATE" />
+      <Property key="StructureLinks" value="(1 2 O 6 N 1)" />
+    </DataNode>
+    <DataNode elementId="TTP" textLabel="dTTP" type="Metabolite">
+      <Xref identifier="NHVNXKFIZYSCEB-XLPZGREQSA-J" dataSource="InChIKey" />
+      <Graphics centerX="510.15350341796875" centerY="173.4296875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="TTP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000008215959" />
+      <Property key="AlternativeId_Seed" value="cpd00357" />
+      <Property key="AlternativeId_Metanetx" value="MNXM394" />
+      <Property key="AlternativeId_Refmet" value="TTP" />
+      <Property key="AlternativeId_Bigg" value="dttp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC37568" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01342" />
+      <Property key="AlternativeId_Chemspider" value="10160750" />
+      <Property key="AlternativeId_Pubchem" value="11988283" />
+      <Property key="AlternativeId_Chebi" value="37568" />
+      <Property key="AlternativeId_LigandCpd" value="C00459" />
+      <Property key="AlternativeId_Cas" value="365-08-2" />
+      <Property key="Synonym_1" value="thymidine triphosphate" />
+      <Property key="Synonym_2" value="thymidine 5&apos;-triphosphate" />
+      <Property key="Synonym_3" value="TTP" />
+      <Property key="ChemicalFormula" value="(C 10) (H 13) (N 2) (O 14) (P 3)" />
+      <Property key="AtomCharges" value="(22 -1), (20 -1), (18 -1), (17 -1)" />
+      <Property key="Gibbs0" value="-559.63837" />
+      <Property key="Inchi" value="InChI=1S/C10H17N2O14P3/c1-5-3-12(10(15)11-9(5)14)8-2-6(13)7(24-8)4-23-28(19,20)26-29(21,22)25-27(16,17)18/h3,6-8,13H,2,4H2,1H3,(H,19,20)(H,21,22)(H,11,14,15)(H2,16,17,18)/p-4/t6-,7+,8+/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=NHVNXKFIZYSCEB-XLPZGREQSA-J" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="478.139" />
+      <Property key="MonoisotopicMw" value="481.9892627955" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-13531, REG0-6783, REG0-7484, REG0-8727, REG0-8469" />
+      <Property key="Smiles" value="CC1(\C(=O)NC(=O)N(\C=1)[C@H]2(C[C@H](O)[C@@H](COP(=O)([O-])OP(=O)([O-])OP(=O)([O-])[O-])O2))" />
+      <Property key="SystematicName" value="thymidine 5&apos;-(tetrahydrogen triphosphate)" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="942.8856201171875" y="649.4304809570312" elementRef="AT1G63000" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="1083.435791015625" y="567.0402221679688" elementRef="AT1G63000-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_1_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_1_0_0" x="1645.0" y="1166.5634765625" elementRef="AT5G51820" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_1_0_0" arrowHead="TranscriptionTranslation" x="824.3309936523438" y="764.467041015625" elementRef="AT5G51820-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="PHOSPHOGLUCMUT-RXN">
+      <Xref identifier="23536" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="PHOSPHOGLUCMUT-RXN_start" x="165.82223510742188" y="1047.638916015625" elementRef="D-glucopyranose-6-phosphate" relX="1.0" relY="0.0" />
+        <Point elementId="PHOSPHOGLUCMUT-RXN_end" arrowHead="Conversion" x="1097.1500244140625" y="1504.8450927734375" elementRef="GLC-1-P" relX="-1.0" relY="0.0" />
+        <Anchor elementId="PHOSPHOGLUCMUT-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Rhea" value="23536" />
+      <Property key="AlternativeId_Uniprot" value="P36871" />
+      <Property key="AlternativeId_Pir" value="A41801" />
+      <Property key="UniqueID" value="PHOSPHOGLUCMUT-RXN" />
+      <Property key="EC_Number" value="EC-5.4.2.2" />
+      <Property key="Pathways" value="DTDPRHAMSYN-PWY, PWY-7343, PWY-7238, PWY-5661, PWY-6317, PWY-3801, PWY-622, PWYQT-4466" />
+      <Property key="PathwayCount" value="8" />
+      <Property key="ReactionEquation" value="GLC-1-P &lt;=&gt; D-glucopyranose-6-phosphate" />
+      <Property key="ReactionDirection" value="REVERSIBLE" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXNQT-6415, ENZRXN-1902" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="Synonym_1" value="Glucose phosphomutase" />
+      <Property key="Synonym_2" value="Phosphoglucose mutase" />
+      <Property key="ReactionTypes" value="Composite-Reactions, Small-Molecule-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="0." />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="ReactionList" value="RXN-16997, RXN-16998" />
+      <Property key="Synonyms" value="Glucose phosphomutase, Phosphoglucose mutase" />
+    </Interaction>
+    <Interaction elementId="PHOSPHOGLUCMUT-RXN_ENZRXNQT-6415">
+      <Waypoints>
+        <Point elementId="PHOSPHOGLUCMUT-RXN_ENZRXNQT-6415_start" x="869.3309936523438" y="776.967041015625" elementRef="AT5G51820-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="PHOSPHOGLUCMUT-RXN_ENZRXNQT-6415_end" arrowHead="Catalysis" x="0" y="0" elementRef="PHOSPHOGLUCMUT-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="PHOSPHOGLUCMUT-RXN_anchor_reactant_0">
+      <Xref identifier="23536" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="PHOSPHOGLUCMUT-RXN_anchor_reactant_start_0" x="1187.1500244140625" y="1504.8450927734375" elementRef="GLC-1-P" relX="1.0" relY="0.0" />
+        <Point elementId="PHOSPHOGLUCMUT-RXN_anchor_reactant_end_0" x="0" y="0" elementRef="PHOSPHOGLUCMUT-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="PHOSPHOGLUCMUT-RXN_anchor_product_0">
+      <Xref identifier="23536" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="PHOSPHOGLUCMUT-RXN_anchor_product_start_0" x="0" y="0" elementRef="PHOSPHOGLUCMUT-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="PHOSPHOGLUCMUT-RXN_anchor_product_end_0" arrowHead="Conversion" x="75.82223510742188" y="1047.638916015625" elementRef="D-glucopyranose-6-phosphate" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DTDPGLUCDEHYDRAT-RXN">
+      <Xref identifier="17221" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DTDPGLUCDEHYDRAT-RXN_start" x="1409.1553955078125" y="50.0" elementRef="DTDP-D-GLUCOSE" relX="1.0" relY="0.0" />
+        <Point elementId="DTDPGLUCDEHYDRAT-RXN_end" arrowHead="Conversion" x="1548.7969970703125" y="570.51220703125" elementRef="DTDP-DEOH-DEOXY-GLUCOSE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="DTDPGLUCDEHYDRAT-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Uniprot" value="Q9R5L1" />
+      <Property key="AlternativeId_Rhea" value="17221" />
+      <Property key="AlternativeId_Pir" value="A44835" />
+      <Property key="UniqueID" value="DTDPGLUCDEHYDRAT-RXN" />
+      <Property key="EC_Number" value="EC-4.2.1.46" />
+      <Property key="Pathways" value="DTDPRHAMSYN-PWY, PWY-3221" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="DTDP-D-GLUCOSE =&gt; WATER + DTDP-DEOH-DEOXY-GLUCOSE" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Chemical-Reactions, Small-Molecule-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-13.897034" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="DTDPGLUCDEHYDRAT-RXN_anchor_product_0">
+      <Xref identifier="17221" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DTDPGLUCDEHYDRAT-RXN_anchor_product_start_0" x="0" y="0" elementRef="DTDPGLUCDEHYDRAT-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="DTDPGLUCDEHYDRAT-RXN_anchor_product_end_0" arrowHead="Conversion" x="1107.60498046875" y="927.1348876953125" elementRef="WATER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DTDPGLUCOSEPP-RXN">
+      <Xref identifier="15228" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DTDPGLUCOSEPP-RXN_start" x="1187.1500244140625" y="1504.8450927734375" elementRef="GLC-1-P" relX="1.0" relY="0.0" />
+        <Point elementId="DTDPGLUCOSEPP-RXN_end" arrowHead="Conversion" x="1319.1553955078125" y="50.0" elementRef="DTDP-D-GLUCOSE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="DTDPGLUCOSEPP-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Uniprot" value="P55256" />
+      <Property key="AlternativeId_Rhea" value="15228" />
+      <Property key="UniqueID" value="DTDPGLUCOSEPP-RXN" />
+      <Property key="EC_Number" value="EC-2.7.7.24" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="DTDPRHAMSYN-PWY, PWY-3221" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="PROTON + GLC-1-P + TTP =&gt; DTDP-D-GLUCOSE + PPI" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-103.30353" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="DTDPGLUCOSEPP-RXN_anchor_reactant_0">
+      <Xref identifier="15228" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DTDPGLUCOSEPP-RXN_anchor_reactant_start_0" x="581.3644409179688" y="894.79296875" elementRef="PROTON" relX="1.0" relY="0.0" />
+        <Point elementId="DTDPGLUCOSEPP-RXN_anchor_reactant_end_0" x="0" y="0" elementRef="DTDPGLUCOSEPP-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DTDPGLUCOSEPP-RXN_anchor_reactant_2">
+      <Xref identifier="15228" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DTDPGLUCOSEPP-RXN_anchor_reactant_start_2" x="555.1535034179688" y="173.4296875" elementRef="TTP" relX="1.0" relY="0.0" />
+        <Point elementId="DTDPGLUCOSEPP-RXN_anchor_reactant_end_2" x="0" y="0" elementRef="DTDPGLUCOSEPP-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DTDPGLUCOSEPP-RXN_anchor_product_1">
+      <Xref identifier="15228" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DTDPGLUCOSEPP-RXN_anchor_product_start_1" x="0" y="0" elementRef="DTDPGLUCOSEPP-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="DTDPGLUCOSEPP-RXN_anchor_product_end_1" arrowHead="Conversion" x="458.5667724609375" y="1550.0" elementRef="PPI" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DTDPDEHYRHAMREDUCT-RXN">
+      <Xref identifier="21796" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DTDPDEHYRHAMREDUCT-RXN_start" x="899.1558837890625" y="870.5422973632812" elementRef="DTDP-DEOH-DEOXY-MANNOSE" relX="1.0" relY="0.0" />
+        <Point elementId="DTDPDEHYRHAMREDUCT-RXN_end" arrowHead="Conversion" x="55.0" y="410.4552001953125" elementRef="DTDP-RHAMNOSE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="DTDPDEHYRHAMREDUCT-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Uniprot" value="Q9JV74" />
+      <Property key="AlternativeId_Rhea" value="21796" />
+      <Property key="UniqueID" value="DTDPDEHYRHAMREDUCT-RXN" />
+      <Property key="EC_Number" value="EC-1.1.1.133" />
+      <Property key="Pathways" value="DTDPRHAMSYN-PWY" />
+      <Property key="ReactionEquation" value="DTDP-RHAMNOSE + NADP =&gt; DTDP-DEOH-DEOXY-MANNOSE + NADPH + PROTON" />
+      <Property key="ReactionDirection" value="PHYSIOL-RIGHT-TO-LEFT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXN-26513, ENZRXNARA-823" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="Synonym_1" value="dTDP-4-keto-L-rhamnose reductase" />
+      <Property key="Synonym_2" value="dTDP-6-deoxy-L-mannose dehydrogenase" />
+      <Property key="ReactionTypes" value="Chemical-Reactions, Small-Molecule-Reactions" />
+      <Property key="AtomMappings" value=":UNBALANCED" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-1.6263428" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="Synonyms" value="dTDP-4-keto-L-rhamnose reductase, dTDP-6-deoxy-L-mannose dehydrogenase" />
+    </Interaction>
+    <Interaction elementId="DTDPDEHYRHAMREDUCT-RXN_ENZRXN-26513">
+      <Waypoints>
+        <Point elementId="DTDPDEHYRHAMREDUCT-RXN_ENZRXN-26513_start" x="1128.435791015625" y="579.5402221679688" elementRef="AT1G63000-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="DTDPDEHYRHAMREDUCT-RXN_ENZRXN-26513_end" arrowHead="Catalysis" x="0" y="0" elementRef="DTDPDEHYRHAMREDUCT-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DTDPDEHYRHAMREDUCT-RXN_ENZRXNARA-823">
+      <Waypoints>
+        <Point elementId="DTDPDEHYRHAMREDUCT-RXN_ENZRXNARA-823_start" x="1128.435791015625" y="579.5402221679688" elementRef="AT1G63000-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="DTDPDEHYRHAMREDUCT-RXN_ENZRXNARA-823_end" arrowHead="Catalysis" x="0" y="0" elementRef="DTDPDEHYRHAMREDUCT-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DTDPDEHYRHAMREDUCT-RXN_anchor_reactant_0">
+      <Xref identifier="21796" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DTDPDEHYRHAMREDUCT-RXN_anchor_reactant_start_0" x="145.0" y="410.4552001953125" elementRef="DTDP-RHAMNOSE" relX="1.0" relY="0.0" />
+        <Point elementId="DTDPDEHYRHAMREDUCT-RXN_anchor_reactant_end_0" x="0" y="0" elementRef="DTDPDEHYRHAMREDUCT-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DTDPDEHYRHAMREDUCT-RXN_anchor_reactant_1">
+      <Xref identifier="21796" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DTDPDEHYRHAMREDUCT-RXN_anchor_reactant_start_1" x="949.28173828125" y="65.69835662841797" elementRef="NADP" relX="1.0" relY="0.0" />
+        <Point elementId="DTDPDEHYRHAMREDUCT-RXN_anchor_reactant_end_1" x="0" y="0" elementRef="DTDPDEHYRHAMREDUCT-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DTDPDEHYRHAMREDUCT-RXN_anchor_product_0">
+      <Xref identifier="21796" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DTDPDEHYRHAMREDUCT-RXN_anchor_product_start_0" x="0" y="0" elementRef="DTDPDEHYRHAMREDUCT-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="DTDPDEHYRHAMREDUCT-RXN_anchor_product_end_0" arrowHead="Conversion" x="809.1558837890625" y="870.5422973632812" elementRef="DTDP-DEOH-DEOXY-MANNOSE" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DTDPDEHYRHAMREDUCT-RXN_anchor_product_1">
+      <Xref identifier="21796" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DTDPDEHYRHAMREDUCT-RXN_anchor_product_start_1" x="0" y="0" elementRef="DTDPDEHYRHAMREDUCT-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="DTDPDEHYRHAMREDUCT-RXN_anchor_product_end_1" arrowHead="Conversion" x="783.8619384765625" y="1164.886962890625" elementRef="NADPH" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DTDPDEHYRHAMREDUCT-RXN_anchor_product_2">
+      <Xref identifier="21796" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DTDPDEHYRHAMREDUCT-RXN_anchor_product_start_2" x="0" y="0" elementRef="DTDPDEHYRHAMREDUCT-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="DTDPDEHYRHAMREDUCT-RXN_anchor_product_end_2" arrowHead="Conversion" x="491.36444091796875" y="894.79296875" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DTDPDEHYDRHAMEPIM-RXN">
+      <Xref identifier="16969" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DTDPDEHYDRHAMEPIM-RXN_start" x="1638.7969970703125" y="570.51220703125" elementRef="DTDP-DEOH-DEOXY-GLUCOSE" relX="1.0" relY="0.0" />
+        <Point elementId="DTDPDEHYDRHAMEPIM-RXN_end" arrowHead="Conversion" x="809.1558837890625" y="870.5422973632812" elementRef="DTDP-DEOH-DEOXY-MANNOSE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="DTDPDEHYDRHAMEPIM-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Uniprot" value="Q9JWX1" />
+      <Property key="AlternativeId_Rhea" value="16969" />
+      <Property key="UniqueID" value="DTDPDEHYDRHAMEPIM-RXN" />
+      <Property key="EC_Number" value="EC-5.1.3.13" />
+      <Property key="Pathways" value="DTDPRHAMSYN-PWY" />
+      <Property key="ReactionEquation" value="DTDP-DEOH-DEOXY-GLUCOSE =&gt; DTDP-DEOH-DEOXY-MANNOSE" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXN-26512, ENZRXNQT-10073" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="Synonym_1" value="dTDP-4-keto-6-deoxyglucose 3,5-epimerase" />
+      <Property key="Synonym_2" value="Thymidine diphospho-4-ketorhamnose 3,5-epimerase" />
+      <Property key="ReactionTypes" value="Chemical-Reactions, Small-Molecule-Reactions" />
+      <Property key="AtomMappings" value=":UNBALANCED" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="0." />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="Synonyms" value="dTDP-4-keto-6-deoxyglucose 3,5-epimerase, Thymidine diphospho-4-ketorhamnose 3,5-epimerase" />
+    </Interaction>
+    <Interaction elementId="DTDPDEHYDRHAMEPIM-RXN_ENZRXN-26512">
+      <Waypoints>
+        <Point elementId="DTDPDEHYDRHAMEPIM-RXN_ENZRXN-26512_start" x="1128.435791015625" y="579.5402221679688" elementRef="AT1G63000-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="DTDPDEHYDRHAMEPIM-RXN_ENZRXN-26512_end" arrowHead="Catalysis" x="0" y="0" elementRef="DTDPDEHYDRHAMEPIM-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DTDPDEHYDRHAMEPIM-RXN_ENZRXNQT-10073">
+      <Waypoints>
+        <Point elementId="DTDPDEHYDRHAMEPIM-RXN_ENZRXNQT-10073_start" x="1128.435791015625" y="579.5402221679688" elementRef="AT1G63000-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="DTDPDEHYDRHAMEPIM-RXN_ENZRXNQT-10073_end" arrowHead="Catalysis" x="0" y="0" elementRef="DTDPDEHYDRHAMEPIM-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_PUB_18493048">
+      <Xref identifier="18493048" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_10666586">
+      <Xref identifier="10666586" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_10929100">
+      <Xref identifier="10929100" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation__10929100_">
+      <Xref identifier="[10929100]" dataSource="PlantCyc" />
+    </Citation>
+    <Citation elementId="citation_PUB_11114506">
+      <Xref identifier="11114506" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_11053865">
+      <Xref identifier="11053865" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_11544225">
+      <Xref identifier="11544225" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_15752721">
+      <Xref identifier="15752721" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_27009306">
+      <Xref identifier="27009306" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_15020741">
+      <Xref identifier="15020741" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_19126547">
+      <Xref identifier="19126547" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_24831810">
+      <Xref identifier="24831810" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

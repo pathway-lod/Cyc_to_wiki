@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="adenosine deoxyribonucleotides de novo biosynthesis I" organism="Salmonella enterica" source="PlantCyc" version="20251204102847">
+  <Description>Once |FRAME: ADP ADP| is formed (see |FRAME: PWY-7219 adenosine ribonucleotides &lt;i&gt;de novo&lt;/i&gt; biosynthesis|) it can be converted to the deoxy form, |FRAME: DADP dADP| (dADP), by the enzyme ribonucleoside diphosphate reductase. The enzyme can only accept ribonucleoside diphosphates, and is inacative with the mono- or triphosphate forms. dADP is phosphorylated to the DNA precursor |FRAME: DATP dATP| (dATP) by the broad-substrate range |FRAME: NUCLEOSIDE-DIP-KIN-CPLX nucleoside diphosphate kinase|.</Description>
+  <Authors>
+    <Author name="SRI" />
+    <Author name="caspi" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-7227" />
+  <Property key="Type" value="Adenosine-Deoxy-Denovo-Bbiosynthesis" />
+  <Property key="ReactionCount" value="2" />
+  <Property key="ReactionIDs" value="DADPKIN-RXN, ADPREDUCT-RXN" />
+  <Property key="PrimaryCompoundCount" value="2" />
+  <Property key="PathwayLinks" value="(ADP PWY-7219)" />
+  <Property key="Organism" value="Salmonella enterica, Homo sapiens, Escherichia coli, Arabidopsis thaliana" />
+  <Property key="TaxonomicRange_1" value="Eukaryota" />
+  <Property key="TaxonomicRange_2" value="Archaea" />
+  <Property key="TaxonomicRange_3" value="Bacteria &lt;bacteria&gt;" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_PUB_COLISALII" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="CPLXQT-11" textLabel="ribonucleoside-pyrophosphate reductase large subunit dimer" type="Protein" groupRef="CPLXQT-6">
+      <Xref identifier="CPLXQT-11" dataSource="plantcyc" />
+      <Graphics centerX="1283.797607421875" centerY="268.5750732421875" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPLXQT-11" />
+      <Property key="ComplexComponents" value="AT2G21790-MONOMER" />
+      <Property key="ComponentCount" value="1" />
+      <Property key="IsComplex" value="true" />
+      <Property key="ComponentOf" value="CPLXQT-6" />
+      <Property key="^coefficient" value="2" />
+      <Property key="InstanceNameTemplate" value="CPLX-*" />
+      <Property key="Species" value="ORG-5993" />
+    </DataNode>
+    <DataNode elementId="CPLXQT-12" textLabel="ribonucleoside-pyrophosphate reductase small subunit dimer" type="Protein" groupRef="CPLXQT-6">
+      <Xref identifier="CPLXQT-12" dataSource="plantcyc" />
+      <Graphics centerX="1373.797607421875" centerY="268.5750732421875" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPLXQT-12" />
+      <Property key="ComplexComponents" value="AT3G23580-MONOMER" />
+      <Property key="ComponentCount" value="1" />
+      <Property key="IsComplex" value="true" />
+      <Property key="ComponentOf" value="CPLXQT-6" />
+      <Property key="^coefficient" value="2" />
+      <Property key="InstanceNameTemplate" value="CPLX-*" />
+      <Property key="MolecularWeightExp" value="78." />
+      <Property key="MolecularWeightKd" value="78." />
+      <Property key="Species" value="ORG-5993" />
+    </DataNode>
+    <DataNode elementId="AT5G40942-MONOMER" textLabel="RNR2B subunit" type="Protein" groupRef="CPLXQT-13">
+      <Xref identifier="AT5G40942-MONOMER" dataSource="plantcyc" />
+      <Graphics centerX="397.913818359375" centerY="1550.0" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT5G40942-MONOMER" />
+      <Property key="ComponentOf" value="CPLXQT-13" />
+      <Property key="Gene" value="AT5G40942" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="ORG-5993" />
+    </DataNode>
+    <DataNode elementId="DADP" textLabel="dADP" type="Metabolite">
+      <Xref identifier="DAEAPNUQQAICNR-RRKCRQDMSA-K" dataSource="InChIKey" />
+      <Graphics centerX="1600.0" centerY="1031.1671142578125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="DADP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000008215728" />
+      <Property key="AlternativeId_ReactomeCpd" value="500087" />
+      <Property key="AlternativeId_Seed" value="cpd00177" />
+      <Property key="AlternativeId_Metanetx" value="MNXM374" />
+      <Property key="AlternativeId_Refmet" value="dADP" />
+      <Property key="AlternativeId_Bigg" value="dadp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57667" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01508" />
+      <Property key="AlternativeId_Chemspider" value="19992628" />
+      <Property key="AlternativeId_Chebi" value="57667" />
+      <Property key="AlternativeId_Pubchem" value="21125569" />
+      <Property key="AlternativeId_LigandCpd" value="C00206" />
+      <Property key="AlternativeId_Cas" value="2793-06-8" />
+      <Property key="Synonym_1" value="2&apos;-deoxyadenosine-5&apos;-diphosphate" />
+      <Property key="Synonym_2" value="deoxyadenosine-diphosphate" />
+      <Property key="Synonym_3" value="2&apos;-Deoxyadenosine 5&apos;-diphosphate" />
+      <Property key="ChemicalFormula" value="(C 10) (H 12) (N 5) (O 9) (P 2)" />
+      <Property key="AtomCharges" value="(19 -1), (18 -1), (21 -1)" />
+      <Property key="Gibbs0" value="-350.8241" />
+      <Property key="Inchi" value="InChI=1S/C10H15N5O9P2/c11-9-8-10(13-3-12-9)15(4-14-8)7-1-5(16)6(23-7)2-22-26(20,21)24-25(17,18)19/h3-7,16H,1-2H2,(H,20,21)(H2,11,12,13)(H2,17,18,19)/p-3/t5-,6+,7+/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=DAEAPNUQQAICNR-RRKCRQDMSA-K" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="408.18" />
+      <Property key="MonoisotopicMw" value="411.0345001264" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-7492" />
+      <Property key="Smiles" value="C(OP(=O)([O-])OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))C[C@H](O)3)" />
+      <Property key="SystematicName" value="2&apos;-deoxyadenosine 5&apos;-(trihydrogen diphosphate)" />
+    </DataNode>
+    <DataNode elementId="Ox-Thioredoxin" textLabel="Ox-Thioredoxin" type="Metabolite">
+      <Xref identifier="Ox-Thioredoxin" dataSource="" />
+      <Graphics centerX="670.0719604492188" centerY="50.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="AAAAAA" borderStyle="Solid" borderWidth="1.0" fillColor="F0F0F0" shapeType="Rectangle" />
+      <Property key="IsPlaceholder" value="true" />
+    </DataNode>
+    <DataNode elementId="DATP" textLabel="dATP" type="Metabolite">
+      <Xref identifier="SUYVUBYJARFZHO-RRKCRQDMSA-J" dataSource="InChIKey" />
+      <Graphics centerX="572.8299560546875" centerY="972.519287109375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="DATP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000008215662" />
+      <Property key="AlternativeId_ReactomeCpd" value="110644" />
+      <Property key="AlternativeId_Seed" value="cpd00115" />
+      <Property key="AlternativeId_Metanetx" value="MNXM286" />
+      <Property key="AlternativeId_Refmet" value="dATP" />
+      <Property key="AlternativeId_Bigg" value="datp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC61404" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01532" />
+      <Property key="AlternativeId_Chebi" value="61404" />
+      <Property key="AlternativeId_Pubchem" value="25320183" />
+      <Property key="AlternativeId_LigandCpd" value="C00131" />
+      <Property key="AlternativeId_Cas" value="1927-31-7" />
+      <Property key="Synonym_1" value="2&apos;-deoxyATP" />
+      <Property key="Synonym_2" value="2&apos;-deoxyadenosine triphosphate" />
+      <Property key="Synonym_3" value="deoxy-ATP" />
+      <Property key="Synonym_4" value="deoxyadenosine-triphosphate" />
+      <Property key="Synonym_5" value="2&apos;-deoxyadenosine-5&apos;-triphosphate" />
+      <Property key="ChemicalFormula" value="(C 10) (H 12) (N 5) (O 12) (P 3)" />
+      <Property key="AtomCharges" value="(19 -1), (18 -1), (23 -1), (21 -1)" />
+      <Property key="Gibbs0" value="-464.60852" />
+      <Property key="Inchi" value="InChI=1S/C10H16N5O12P3/c11-9-8-10(13-3-12-9)15(4-14-8)7-1-5(16)6(25-7)2-24-29(20,21)27-30(22,23)26-28(17,18)19/h3-7,16H,1-2H2,(H,20,21)(H,22,23)(H2,11,12,13)(H2,17,18,19)/p-4/t5-,6+,7+/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=SUYVUBYJARFZHO-RRKCRQDMSA-J" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="487.152" />
+      <Property key="MonoisotopicMw" value="491.0008305348" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-12891, REG0-7486, REG0-7705, REG-13171, REG-13175" />
+      <Property key="Smiles" value="C(OP(=O)([O-])OP(=O)([O-])OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))C[C@H](O)3)" />
+    </DataNode>
+    <DataNode elementId="ATP" textLabel="ATP" type="Metabolite">
+      <Xref identifier="ZKHQWZAMYRWXGA-KQYNXXCUSA-J" dataSource="InChIKey" />
+      <Graphics centerX="1028.52685546875" centerY="1405.95751953125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ATP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004261765" />
+      <Property key="AlternativeId_Mediadb" value="compounds/2/" />
+      <Property key="AlternativeId_Seed" value="cpd00002" />
+      <Property key="AlternativeId_Metanetx" value="MNXM3" />
+      <Property key="AlternativeId_Refmet" value="ATP" />
+      <Property key="AlternativeId_Bigg" value="atp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC30616" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00538" />
+      <Property key="AlternativeId_Chemspider" value="4574455" />
+      <Property key="AlternativeId_Chebi" value="30616" />
+      <Property key="AlternativeId_Pubchem" value="5461108" />
+      <Property key="AlternativeId_LigandCpd" value="C00002" />
+      <Property key="AlternativeId_Cas" value="56-65-5" />
+      <Property key="Synonym_1" value="adenylpyrophosphate" />
+      <Property key="Synonym_2" value="adenosine-triphosphate" />
+      <Property key="Synonym_3" value="adenosine-5&apos;-triphosphate" />
+      <Property key="ChemicalFormula" value="(C 10) (H 12) (N 5) (O 13) (P 3)" />
+      <Property key="AtomCharges" value="(20 -1), (19 -1), (24 -1), (22 -1)" />
+      <Property key="CofactorsOf" value="ENZRXN-12212" />
+      <Property key="Gibbs0" value="-553.6995" />
+      <Property key="Inchi" value="InChI=1S/C10H16N5O13P3/c11-8-5-9(13-2-12-8)15(3-14-5)10-7(17)6(16)4(26-10)1-25-30(21,22)28-31(23,24)27-29(18,19)20/h2-4,6-7,10,16-17H,1H2,(H,21,22)(H,23,24)(H2,11,12,13)(H2,18,19,20)/p-4/t4-,6-,7-,10-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=ZKHQWZAMYRWXGA-KQYNXXCUSA-J" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="503.152" />
+      <Property key="MonoisotopicMw" value="506.99574515689994" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-12909, REG-12890, REG-14488, REG-9772, REG-14329, REG0-6781, REG0-7497, REG0-7707, REG-13176, REG-14419, REG-14422, REG0-8315, REG0-8212, REG-10429, REG0-7195, REG-8742, REG0-8749, REG-10985, REG-11599, REG0-8040, REG0-8166, REG0-7200, REG-9547, REG0-10640, REG-12493, REG0-6737, REG-12901, REG0-8975, REG0-8830, REG-7496, REG-6229, REG0-7802, REG-9667, REG-8008, REG0-8732, REG-8477, REG-6695, REG-6569, REG-6589, REG-6588, REG0-6967, REG-6554, REG-8022, REG-5951, REG-5950, REG-12145, REG-12092, REG-5953, REG-11615, REG-11617, REG-7073, REG-6927, REG-6086" />
+      <Property key="Smiles" value="C(OP(=O)([O-])OP(=O)([O-])OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3)" />
+    </DataNode>
+    <DataNode elementId="WATER" textLabel="H₂O" type="Metabolite">
+      <Xref identifier="XLYOFNOQVPJJNP-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="762.7890625" centerY="600.6002197265625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="WATER" />
+      <Property key="AlternativeId_Bigg" value="33474" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15377" />
+      <Property key="AlternativeId_Hmdb" value="HMDB02111" />
+      <Property key="AlternativeId_Chemspider" value="937" />
+      <Property key="AlternativeId_Chebi" value="15377" />
+      <Property key="AlternativeId_Pubchem" value="962" />
+      <Property key="AlternativeId_LigandCpd" value="C00001" />
+      <Property key="AlternativeId_Cas" value="7732-18-5" />
+      <Property key="Synonym_1" value="H&lt;sub&gt;2&lt;/sub&gt;0" />
+      <Property key="Synonym_2" value="H2O" />
+      <Property key="Synonym_3" value="H20" />
+      <Property key="Synonym_4" value="hydrogen oxide" />
+      <Property key="Synonym_5" value="water" />
+      <Property key="ChemicalFormula" value="(H 2) (O 1)" />
+      <Property key="Gibbs0" value="-36.144756" />
+      <Property key="Inchi" value="InChI=1S/H2O/h1H2" />
+      <Property key="InchiKey" value="InChIKey=XLYOFNOQVPJJNP-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="18.015" />
+      <Property key="MonoisotopicMw" value="18.0105646863" />
+      <Property key="NonStandardInchi" value="InChI=1S/H2O/h1H2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="O" />
+    </DataNode>
+    <DataNode elementId="Red-Thioredoxin" textLabel="Red-Thioredoxin" type="Metabolite">
+      <Xref identifier="Red-Thioredoxin" dataSource="" />
+      <Graphics centerX="100.0" centerY="563.677490234375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="AAAAAA" borderStyle="Solid" borderWidth="1.0" fillColor="F0F0F0" shapeType="Rectangle" />
+      <Property key="IsPlaceholder" value="true" />
+    </DataNode>
+    <DataNode elementId="ADP" textLabel="ADP" type="Metabolite">
+      <Xref identifier="XTWYTFMLZFPYCI-KQYNXXCUSA-K" dataSource="InChIKey" />
+      <Graphics centerX="1044.56591796875" centerY="856.974609375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ADP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000012360703" />
+      <Property key="AlternativeId_Seed" value="cpd00008" />
+      <Property key="AlternativeId_Metanetx" value="MNXM7" />
+      <Property key="AlternativeId_Refmet" value="ADP" />
+      <Property key="AlternativeId_Bigg" value="adp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC456216" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01341" />
+      <Property key="AlternativeId_Chemspider" value="5414423" />
+      <Property key="AlternativeId_Chebi" value="456216" />
+      <Property key="AlternativeId_Pubchem" value="7058055" />
+      <Property key="AlternativeId_LigandCpd" value="C00008" />
+      <Property key="AlternativeId_Cas" value="58-64-0" />
+      <Property key="Synonym_1" value="adenosine pyrophosphate" />
+      <Property key="Synonym_2" value="adenosine 5&apos;-pyrophosphate" />
+      <Property key="Synonym_3" value="adenosine-5&apos;-diphosphate" />
+      <Property key="Synonym_4" value="adenosine-diphosphate" />
+      <Property key="Synonym_5" value="adenosine-5-diphosphate" />
+      <Property key="ChemicalFormula" value="(C 10) (H 12) (N 5) (O 10) (P 2)" />
+      <Property key="AtomCharges" value="(20 -1), (19 -1), (22 -1)" />
+      <Property key="ComponentOf" value="CPD0-1651" />
+      <Property key="Gibbs0" value="-344.92508" />
+      <Property key="Inchi" value="InChI=1S/C10H15N5O10P2/c11-8-5-9(13-2-12-8)15(3-14-5)10-7(17)6(16)4(24-10)1-23-27(21,22)25-26(18,19)20/h2-4,6-7,10,16-17H,1H2,(H,21,22)(H2,11,12,13)(H2,18,19,20)/p-3/t4-,6-,7-,10-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=XTWYTFMLZFPYCI-KQYNXXCUSA-K" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="424.18" />
+      <Property key="MonoisotopicMw" value="427.0294147485" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-15215, REG-12883, REG-9764, REG-14332, REG0-11364, REG0-7057, REG0-7058, REG-8584, REG0-8479, REG-8233, REG-13527, REG-11339, REG0-8211, REG-12064, REG-8041, REG-8743, REG0-8748, REG-10984, REG0-7474, REG-11598, REG-9546, REG-13336, REG-12492, REG0-8828, REG0-8831, REG0-6887, REG0-7923, REG-9477, REG-8731, REG-8051, REG-9668, REG-8004, REG0-8726, REG-8119, REG0-8154, REG-6690, REG-6691, REG-6637, REG-6636, REG-6552, REG-7113, REG-7072" />
+      <Property key="Smiles" value="C(OP(=O)([O-])OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3)" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="DADPKIN-RXN">
+      <Xref identifier="27674" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DADPKIN-RXN_start" x="1645.0" y="1031.1671142578125" elementRef="DADP" relX="1.0" relY="0.0" />
+        <Point elementId="DADPKIN-RXN_end" arrowHead="Conversion" x="527.8299560546875" y="972.519287109375" elementRef="DATP" relX="-1.0" relY="0.0" />
+        <Anchor elementId="DADPKIN-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Rhea" value="27674" />
+      <Property key="UniqueID" value="DADPKIN-RXN" />
+      <Property key="EC_Number" value="EC-2.7.4.6" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-7227, PWY-7224" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="DADP + ATP =&gt; DATP + ADP" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXNQT-7446" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="AtomMappings" value="(:NO-HYDROGEN-ENCODING (27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 48 52 49 46 47 50 51 53 56 55 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 45 43 44 20 21 17 19 22 23 18 24 54 26 25) (((ADP 0 26) (DATP 27 56)) ((DADP 0 25) (ATP 26 56))))" />
+      <Property key="^official?" value="NIL" />
+      <Property key="Gibbs0" value="94.98999" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="DADPKIN-RXN_anchor_reactant_1">
+      <Xref identifier="27674" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DADPKIN-RXN_anchor_reactant_start_1" x="1073.52685546875" y="1405.95751953125" elementRef="ATP" relX="1.0" relY="0.0" />
+        <Point elementId="DADPKIN-RXN_anchor_reactant_end_1" x="0" y="0" elementRef="DADPKIN-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DADPKIN-RXN_anchor_product_1">
+      <Xref identifier="27674" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="DADPKIN-RXN_anchor_product_start_1" x="0" y="0" elementRef="DADPKIN-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="DADPKIN-RXN_anchor_product_end_1" arrowHead="Conversion" x="999.56591796875" y="856.974609375" elementRef="ADP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ADPREDUCT-RXN">
+      <Xref identifier="28034" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="ADPREDUCT-RXN_start" x="1089.56591796875" y="856.974609375" elementRef="ADP" relX="1.0" relY="0.0" />
+        <Point elementId="ADPREDUCT-RXN_end" arrowHead="Conversion" x="1555.0" y="1031.1671142578125" elementRef="DADP" relX="-1.0" relY="0.0" />
+        <Anchor elementId="ADPREDUCT-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Rhea" value="28034" />
+      <Property key="UniqueID" value="ADPREDUCT-RXN" />
+      <Property key="ReactionName" value="ADP reductase" />
+      <Property key="EC_Number" value="EC-1.17.4.1" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-7227" />
+      <Property key="ReactionEquation" value="DADP + Ox-Thioredoxin + WATER =&gt; ADP + Red-Thioredoxin" />
+      <Property key="ReactionDirection" value="PHYSIOL-RIGHT-TO-LEFT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXNQT-7296, ENZRXNQT-7608" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="ReactionType" value="Protein-Modification-Reactions" />
+      <Property key="AtomMappings" value="(:NO-HYDROGEN-ENCODING (6 0 1 2 5 3 9 4 7 8 10 11 12 13 14 15 17 18 19 20 21 22 23 24 25 26 27 28 32 33 34 35 36 38 39 40 41 42 43 44 48 49 45 31 30 47 37 29 46 50 16) (((ADP 0 26) (|Red-Thioredoxin| 27 50)) ((DADP 0 25) (|Ox-Thioredoxin| 26 49) (WATER 50 50))))" />
+      <Property key="^official?" value="NIL" />
+      <Property key="Gibbs0" value="34.87375" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="ADPREDUCT-RXN_ENZRXNQT-7296_0">
+      <Waypoints>
+        <Point elementId="ADPREDUCT-RXN_ENZRXNQT-7296_start_0" x="1283.797607421875" y="281.0750732421875" elementRef="CPLXQT-11" relX="0.0" relY="1.0" />
+        <Point elementId="ADPREDUCT-RXN_ENZRXNQT-7296_end_0" arrowHead="Catalysis" x="0" y="0" elementRef="ADPREDUCT-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ADPREDUCT-RXN_ENZRXNQT-7296_1">
+      <Waypoints>
+        <Point elementId="ADPREDUCT-RXN_ENZRXNQT-7296_start_1" x="1373.797607421875" y="281.0750732421875" elementRef="CPLXQT-12" relX="0.0" relY="1.0" />
+        <Point elementId="ADPREDUCT-RXN_ENZRXNQT-7296_end_1" arrowHead="Catalysis" x="0" y="0" elementRef="ADPREDUCT-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ADPREDUCT-RXN_ENZRXNQT-7608">
+      <Waypoints>
+        <Point elementId="ADPREDUCT-RXN_ENZRXNQT-7608_start" x="397.913818359375" y="1562.5" elementRef="AT5G40942-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="ADPREDUCT-RXN_ENZRXNQT-7608_end" arrowHead="Catalysis" x="0" y="0" elementRef="ADPREDUCT-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ADPREDUCT-RXN_anchor_reactant_0">
+      <Xref identifier="28034" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="ADPREDUCT-RXN_anchor_reactant_start_0" x="1645.0" y="1031.1671142578125" elementRef="DADP" relX="1.0" relY="0.0" />
+        <Point elementId="ADPREDUCT-RXN_anchor_reactant_end_0" x="0" y="0" elementRef="ADPREDUCT-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ADPREDUCT-RXN_anchor_reactant_1">
+      <Xref identifier="28034" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="ADPREDUCT-RXN_anchor_reactant_start_1" x="715.0719604492188" y="50.0" elementRef="Ox-Thioredoxin" relX="1.0" relY="0.0" />
+        <Point elementId="ADPREDUCT-RXN_anchor_reactant_end_1" x="0" y="0" elementRef="ADPREDUCT-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ADPREDUCT-RXN_anchor_reactant_2">
+      <Xref identifier="28034" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="ADPREDUCT-RXN_anchor_reactant_start_2" x="807.7890625" y="600.6002197265625" elementRef="WATER" relX="1.0" relY="0.0" />
+        <Point elementId="ADPREDUCT-RXN_anchor_reactant_end_2" x="0" y="0" elementRef="ADPREDUCT-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ADPREDUCT-RXN_anchor_product_0">
+      <Xref identifier="28034" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="ADPREDUCT-RXN_anchor_product_start_0" x="0" y="0" elementRef="ADPREDUCT-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="ADPREDUCT-RXN_anchor_product_end_0" arrowHead="Conversion" x="999.56591796875" y="856.974609375" elementRef="ADP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ADPREDUCT-RXN_anchor_product_1">
+      <Xref identifier="28034" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="ADPREDUCT-RXN_anchor_product_start_1" x="0" y="0" elementRef="ADPREDUCT-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="ADPREDUCT-RXN_anchor_product_end_1" arrowHead="Conversion" x="55.0" y="563.677490234375" elementRef="Red-Thioredoxin" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Groups>
+    <Group elementId="CPLXQT-6" textLabel="ribonucleoside-pyrophosphate reductase" type="Complex">
+      <Xref identifier="CPLXQT-6" dataSource="plantcyc" />
+      <Graphics centerX="1328.797607421875" centerY="268.5750732421875" width="230" height="100" textColor="666666" fontName="Arial" fontSize="10" borderColor="9900CC" borderStyle="Dashed" borderWidth="2.0" fillColor="F5E6FF" shapeType="Rectangle" zOrder="-1" />
+      <Comment source="AU4FS-1, SRI, caspi">&lt;b&gt;General Background&lt;/b&gt; Ribonucleotide reductases (RNRs) catalyze the conversion of ribonucleotides to 2&apos;-deoxyribonucleotides which are the precursors for DNA synthesis and repair. These enzymes are divided into three classes, I, II and III. Class I has been divided into classes Ia and Ib and recently class Ic was added (in |CITS: [19492792]|). All three classes share a conserved active site cysteine residue that is converted to a cysteinyl radical which abstracts a hydrogen atom form the ribose ring of the substrate. Classes I, II and III are distinguished by their metal and cofactor requirements and may vary in subunit composition, residues involved in catalysis, dependence on |FRAME: OXYGEN-MOLECULE|, use of NDP and/or NTP substrates, electron source used as reductant, and number of allosteric sites. Class Ia enzymes are found in eukaryotes, eubacteria, bacteriophages and viruses (see the enzymes from |FRAME: CPLX66-276 humans|, |FRAME: CPLXQT-6 &quot;&lt;i&gt;Arabidopsis thaliana&lt;/i&gt;&quot;| and |FRAME: RIBONUCLEOSIDE-DIP-REDUCTI-CPLX &quot;&lt;i&gt;E. coli&lt;/i&gt;|). Class Ib enzymes are found in eubacteria (see |FRAME: RIBONUCLEOSIDE-DIP-REDUCTII-CPLX| from &lt;i&gt;E. coli&lt;/i&gt;). A |FRAME: CPLX-8116 &quot;class Ic enzyme&quot;| has been identified in |FRAME: TAX-813|. Class II enzymes have been found mostly in archaea and eubacteria (see the |FRAME: CPLX-8111 &quot;enzyme from &lt;i&gt;Thermotoga maritima&lt;/i&gt;&quot;|), although they were also reported from the eukaryotes |FRAME: TAX-3039| and |FRAME: TAX-44689| |CITS: [16368684]|. Class III (anaerobic, oxygen-sensitive) enzymes have been found in archaea, eubacteria and bacteriophages (see |FRAME:RIBONUCLEOSIDE-TRIP-REDUCT-CPLX| from &lt;i&gt;E. coli&lt;/i&gt;). Reviewed in |CITS: [15158709]|. &lt;b&gt;About This Enzyme&lt;/b&gt; The class Ia ribonucleoside-diphosphate reductase (RDPR) from |FRAME: TAX-3702| catalyzes the conversion of all four ribonucleoside diphosphates to deoxyribonucleoside diphosphates. The active protein is a heterotetramer with an &amp;alpha;2&amp;beta;2 structure. The large subunit is encoded by a single gene (|FRAME: AT2G21790|) in the Arabidopsis genome, while the small subunit is encoded by three genes - |FRAME: AT3G23580| |CITS: [7821432]| , TSO2, and RNR2B |CITS: [16399800]|. The cDNAs encoding both subunits of the |FRAME: TAX-3702| ribonucleotide reductase were isolated, and the proteins were recombinantly expressed in &lt;i&gt;E. coli&lt;/i&gt;. The proteins formed an active holoenzyme and demonstrated ribonucleotide reductase activity |CITS: [Saugemerle97][10542051]|. The small subunit provides a dinuclear non-heme iron center and a stable tyrosyl radical |CITS: [Sauge-Merle97]| while the large subunit provides the substrate-binding site, an activation site, and a specificity site. A mutation in the large subunit (clr8- crinkled leaves 8) causes chloroplast malformation and affects leaf development |CITS: [17346262]|.</Comment>
+      <Property key="UniqueID" value="CPLXQT-6" />
+      <Property key="ComplexComponents" value="CPLXQT-11, CPLXQT-12" />
+      <Property key="ComponentCount" value="2" />
+      <Property key="IsComplex" value="true" />
+      <Property key="Catalyzes" value="RXN-7297, RXN-7296, RXN-7300, RXN-5056, RXN-7298" />
+      <Property key="CatalyzesCount" value="5" />
+      <Property key="^coefficient" value="1, 1" />
+      <Property key="InstanceNameTemplate" value="CPLX-*" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_SAUGEMERLE97" />
+      <CitationRef elementRef="citation_PUB_10542051" />
+      <CitationRef elementRef="citation_PUB_17346262" />
+      <CitationRef elementRef="citation_PUB_19492792" />
+      <CitationRef elementRef="citation_PUB_16368684" />
+      <CitationRef elementRef="citation_PUB_15158709" />
+      <CitationRef elementRef="citation_PUB_7821432" />
+      <CitationRef elementRef="citation_PUB_16399800" />
+    </Group>
+    <Group elementId="CPLXQT-13" textLabel="CPLXQT-13" type="Complex">
+      <Xref identifier="CPLXQT-13" dataSource="plantcyc" />
+      <Graphics centerX="397.913818359375" centerY="1550.0" width="140" height="100" textColor="666666" fontName="Arial" fontSize="10" borderColor="9900CC" borderStyle="Dashed" borderWidth="2.0" fillColor="F5E6FF" shapeType="Rectangle" zOrder="-1" />
+      <Comment source="AU4FS-1">The cDNA encoding the small subunit (R2) of ribonucleotide reductase (RNR) has been identified and characterized in &lt;i&gt;Arabiodpsis thaliana&lt;/i&gt;. The gene (At5g40942, RNR2B) belongs to a small gene family of three members which encode for the small subunit of RNR. Mutation in the RNR2B gene resulted in reduced deoxynucleoside triphosphate levels (dNTP&apos;s) and developmental defects but was not lethal which has been discussed as a consequence of the presence of two more redundant genes (RNR2A, TSO2) encoding for the small subunit or RNR |CITS: [16399800]|.</Comment>
+      <Property key="UniqueID" value="CPLXQT-13" />
+      <Property key="ComplexComponents" value="AT5G40942-MONOMER" />
+      <Property key="ComponentCount" value="1" />
+      <Property key="IsComplex" value="true" />
+      <Property key="Catalyzes" value="RXN-7609, RXN-7608, RXN-6395, RXN-7610" />
+      <Property key="CatalyzesCount" value="4" />
+      <Property key="^coefficient" value="2" />
+      <Property key="InstanceNameTemplate" value="CPLX-*" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_16399800" />
+    </Group>
+  </Groups>
+  <Citations>
+    <Citation elementId="citation_PUB_15158709">
+      <Xref identifier="15158709" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_16399800">
+      <Xref identifier="16399800" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_Sauge_Merle97">
+      <Xref identifier="Sauge-Merle97" dataSource="PlantCyc" />
+    </Citation>
+    <Citation elementId="citation_PUB_10542051">
+      <Xref identifier="10542051" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_16368684">
+      <Xref identifier="16368684" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_7821432">
+      <Xref identifier="7821432" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_15465053">
+      <Xref identifier="15465053" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_SAUGEMERLE97">
+      <Xref identifier="PUB-SAUGEMERLE97 | Ribonucleotide reductase from the higher plant &lt;i&gt;Arabidopsis thaliana&lt;/i&gt; : expression of the R2 co... (Sauge-Merle S, Laulhere J-P, Coves L et al., 1997)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_PUB_17346262">
+      <Xref identifier="17346262" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_19492792">
+      <Xref identifier="19492792" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_COLISALII">
+      <Xref identifier="PUB-COLISALII | &lt;i&gt;Escherichia coli&lt;/i&gt; and Salmonella, Cellular and Molecular Biology, Second Edition (Neidhardt FC, Curtiss III R, Ingraham JL et al.)" dataSource="BioCyc" />
+    </Citation>
+  </Citations>
+</Pathway>
