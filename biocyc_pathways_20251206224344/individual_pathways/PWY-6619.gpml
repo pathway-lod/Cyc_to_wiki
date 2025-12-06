@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="adenine and adenosine salvage VI" organism="Glycine max, Arabidopsis thaliana" source="PlantCyc" version="20251206224344">
+  <Xref identifier="PWY-6619" dataSource="MetaCyc" />
+  <Description>Adenosine nucleotides can be synthesized &lt;i&gt;de novo&lt;/i&gt;. In that route |FRAME: AMP AMP| (AMP) is synthesized via |FRAME: IMP inosine-5&apos;-phosphate| (IMP) and |FRAME: ADENYLOSUCC adenylo-succinate| , which is converted to AMP by the action of |FRAME: ASL-MONOMER adenylosuccinate lyase| (see |FRAME: PWY-6126 adenosine nucleotides &lt;i&gt;de novo&lt;/i&gt; biosynthesis|). Note that the free base |FRAME: ADENINE adenine| or the ribonucleoside |FRAME: ADENOSINE adenosine| are not produced via the &lt;i&gt;de novo&lt;/i&gt; pathway. Many organisms can also recycle adenosine nucleotides by a combination of degradation and salvage pathways. The degradation pathways are responsible for the conversion of the nucleotides to the nucleoside (|FRAME: ADENOSINE adenosine|) and free base form (|FRAME: ADENINE adenine|), and further degradation to compounds that can be catabolized to basic building blocks (for example, see |FRAME: SALVADEHYPOX-PWY adenosine nucleotides degradation II|). However, both |FRAME: ADENOSINE adenosine| and |FRAME: ADENINE adenine| can be salvaged by certain enzymes, and be converted back to nucleotide form. The enzyme |FRAME: HS08097-MONOMER adenosine kinase| (EC 2.7.1.20) can phosphorylate |FRAME: ADENOSINE adenosine| directly to the mono-nucleotide |FRAME: AMP AMP|. The enzyme has been described in bacteria, yeast, plants and animals |CITS: [5092557][8577746][11115893][16511094][17869216][19329636]|. Other routes from |FRAME: ADENOSINE adenosine| to |FRAME: AMP AMP| involve two steps, and are described in |FRAME: P121-PWY adenine and adenosine salvage I| and |FRAME: PWY-6605 adenine and adenosine salvage II|. Either of these routes enables the organism to salvage the degradation products of adenosine nucleotides, and recycle them back to nucleotide form.</Description>
+  <Authors>
+    <Author name="SRI" />
+    <Author name="caspi" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-6619" />
+  <Property key="Type" value="Adenine-Adenosine-Salvage" />
+  <Property key="ReactionIDs" value="ADENOSINE-KINASE-RXN" />
+  <Property key="Organism" value="Glycine max, Arabidopsis thaliana" />
+  <Property key="TaxonomicRange_1" value="Eukaryota" />
+  <Property key="TaxonomicRange_2" value="Bacteria &lt;bacteria&gt;" />
+  <Property key="TaxonomicRange_3" value="Archaea" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_PUB_8577746" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="AT5G03300" textLabel="ADK2" type="GeneProduct">
+      <Xref identifier="AF180895" dataSource="Entrez Gene" />
+      <Graphics centerX="276.804443359375" centerY="1301.957275390625" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT5G03300" />
+      <Property key="AlternativeId_Entrez" value="AF180895" />
+      <Property key="Product" value="AT5G03300-MONOMER" />
+      <Property key="StartPosition" value="796441" />
+      <Property key="EndPosition" value="799175" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+      <Property key="Accession1" value="AT5G03300" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+      <CitationRef elementRef="citation_PUB_11115893" />
+    </DataNode>
+    <DataNode elementId="AT3G09820" textLabel="ADK1" type="GeneProduct">
+      <Xref identifier="AF180894" dataSource="Entrez Gene" />
+      <Graphics centerX="1549.853515625" centerY="958.4120483398438" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT3G09820" />
+      <Property key="AlternativeId_Entrez" value="AF180894" />
+      <Property key="Product" value="AT3G09820-MONOMER" />
+      <Property key="StartPosition" value="3011995" />
+      <Property key="EndPosition" value="3014949" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+      <Property key="Accession1" value="AT3G09820" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+      <CitationRef elementRef="citation_PUB_11115893" />
+    </DataNode>
+    <DataNode elementId="AT3G09820-MONOMER" textLabel="adenosine kinase" type="Protein">
+      <Xref identifier="AT3G09820.1" dataSource="TAIR" />
+      <Graphics centerX="1187.770751953125" centerY="1550.0" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">Arabidopsis has two adenosine kinase genes, ADK1 and ADK2. Both enzymes have similar Kms for adenosine and ATP. A comparison of the Vmax/Km values of ADK1 and ADK2 indicates ADK2 has a 4-fold higher catalytic efficiency towards adenosine. ADK2 activity is sensitive to substrate inhibition by adenosine, whereas ADK1 is not. Both ADK1 and ADK2 are stimulated by phosphate at lower concentrations (5-10 mM), but inhibited at higher concentrations (&gt;50 mM). Although they metabolize both adenosine and cytokinins, their catalytic properties with these substrates indicate they are primarily involved in adenosine salvage.</Comment>
+      <Property key="UniqueID" value="AT3G09820-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT3G09820.1" />
+      <Property key="Catalyzes" value="RXN-12208" />
+      <Property key="Accession1" value="AT3G09820.1" />
+      <Property key="Gene" value="AT3G09820" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="MolecularWeightExp" value="38." />
+      <Property key="MolecularWeightKd" value="38." />
+      <Property key="Pi" value="5.29" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_11115893" />
+    </DataNode>
+    <DataNode elementId="AT5G03300-MONOMER" textLabel="AT5G03300-MONOMER" type="Protein">
+      <Xref identifier="AT5G03300.1" dataSource="TAIR" />
+      <Graphics centerX="863.1161499023438" centerY="50.0" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">Arabidopsis has two adenosine kinase genes, ADK1 and ADK2. Both enzymes have similar Kms for adenosine and ATP. A comparison of the Vmax/Km values of ADK1 and ADK2 indicates ADK2 has a 4-fold higher catalytic efficiency towards adenosine. ADK2 activity is sensitive to substrate inhibition by adenosine, whereas ADK1 is not. Both ADK1 and ADK2 are stimulated by phosphate at lower concentrations (5-10 mM), but inhibited at higher concentrations (&gt;50 mM). Although they metabolize both adenosine and cytokinins, their catalytic properties with these substrates indicate they are primarily involved in adenosine salvage.</Comment>
+      <Property key="UniqueID" value="AT5G03300-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT5G03300.1" />
+      <Property key="Catalyzes" value="RXN-12209" />
+      <Property key="Accession1" value="AT5G03300.1" />
+      <Property key="FunctionalAssignmentStatus" value=":AMBIGUOUS" />
+      <Property key="Gene" value="AT5G03300" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Pi" value="5.14" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_11115893" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="804.9585571289062" centerY="603.5003051757812" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="ChemicalFormula" value="(H 1)" />
+      <Property key="AtomCharges" value="(1 1)" />
+      <Property key="Gibbs0" value="0.42906138" />
+      <Property key="Inchi" value="InChI=1S/p+1" />
+      <Property key="InchiKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicMw" value="1.0078250321" />
+      <Property key="NonStandardInchi" value="InChI=1S/p+1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="[H+]" />
+    </DataNode>
+    <DataNode elementId="ADP" textLabel="ADP" type="Metabolite">
+      <Xref identifier="XTWYTFMLZFPYCI-KQYNXXCUSA-K" dataSource="InChIKey" />
+      <Graphics centerX="1600.0" centerY="360.1690673828125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ADP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000012360703" />
+      <Property key="AlternativeId_Seed" value="cpd00008" />
+      <Property key="AlternativeId_Metanetx" value="MNXM7" />
+      <Property key="AlternativeId_Refmet" value="ADP" />
+      <Property key="AlternativeId_Bigg" value="adp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC456216" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01341" />
+      <Property key="AlternativeId_Chemspider" value="5414423" />
+      <Property key="AlternativeId_Chebi" value="456216" />
+      <Property key="AlternativeId_Pubchem" value="7058055" />
+      <Property key="AlternativeId_LigandCpd" value="C00008" />
+      <Property key="AlternativeId_Cas" value="58-64-0" />
+      <Property key="Synonym_1" value="adenosine pyrophosphate" />
+      <Property key="Synonym_2" value="adenosine 5&apos;-pyrophosphate" />
+      <Property key="Synonym_3" value="adenosine-5&apos;-diphosphate" />
+      <Property key="Synonym_4" value="adenosine-diphosphate" />
+      <Property key="Synonym_5" value="adenosine-5-diphosphate" />
+      <Property key="ChemicalFormula" value="(C 10) (H 12) (N 5) (O 10) (P 2)" />
+      <Property key="AtomCharges" value="(20 -1), (19 -1), (22 -1)" />
+      <Property key="ComponentOf" value="CPD0-1651" />
+      <Property key="Gibbs0" value="-344.92508" />
+      <Property key="Inchi" value="InChI=1S/C10H15N5O10P2/c11-8-5-9(13-2-12-8)15(3-14-5)10-7(17)6(16)4(24-10)1-23-27(21,22)25-26(18,19)20/h2-4,6-7,10,16-17H,1H2,(H,21,22)(H2,11,12,13)(H2,18,19,20)/p-3/t4-,6-,7-,10-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=XTWYTFMLZFPYCI-KQYNXXCUSA-K" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="424.18" />
+      <Property key="MonoisotopicMw" value="427.0294147485" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-15215, REG-12883, REG-9764, REG-14332, REG0-11364, REG0-7057, REG0-7058, REG-8584, REG0-8479, REG-8233, REG-13527, REG-11339, REG0-8211, REG-12064, REG-8041, REG-8743, REG0-8748, REG-10984, REG0-7474, REG-11598, REG-9546, REG-13336, REG-12492, REG0-8828, REG0-8831, REG0-6887, REG0-7923, REG-9477, REG-8731, REG-8051, REG-9668, REG-8004, REG0-8726, REG-8119, REG0-8154, REG-6690, REG-6691, REG-6637, REG-6636, REG-6552, REG-7113, REG-7072" />
+      <Property key="Smiles" value="C(OP(=O)([O-])OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3)" />
+    </DataNode>
+    <DataNode elementId="ATP" textLabel="ATP" type="Metabolite">
+      <Xref identifier="ZKHQWZAMYRWXGA-KQYNXXCUSA-J" dataSource="InChIKey" />
+      <Graphics centerX="909.2780151367188" centerY="796.033447265625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ATP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004261765" />
+      <Property key="AlternativeId_Mediadb" value="compounds/2/" />
+      <Property key="AlternativeId_Seed" value="cpd00002" />
+      <Property key="AlternativeId_Metanetx" value="MNXM3" />
+      <Property key="AlternativeId_Refmet" value="ATP" />
+      <Property key="AlternativeId_Bigg" value="atp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC30616" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00538" />
+      <Property key="AlternativeId_Chemspider" value="4574455" />
+      <Property key="AlternativeId_Chebi" value="30616" />
+      <Property key="AlternativeId_Pubchem" value="5461108" />
+      <Property key="AlternativeId_LigandCpd" value="C00002" />
+      <Property key="AlternativeId_Cas" value="56-65-5" />
+      <Property key="Synonym_1" value="adenylpyrophosphate" />
+      <Property key="Synonym_2" value="adenosine-triphosphate" />
+      <Property key="Synonym_3" value="adenosine-5&apos;-triphosphate" />
+      <Property key="ChemicalFormula" value="(C 10) (H 12) (N 5) (O 13) (P 3)" />
+      <Property key="AtomCharges" value="(20 -1), (19 -1), (24 -1), (22 -1)" />
+      <Property key="CofactorsOf" value="ENZRXN-12212" />
+      <Property key="Gibbs0" value="-553.6995" />
+      <Property key="Inchi" value="InChI=1S/C10H16N5O13P3/c11-8-5-9(13-2-12-8)15(3-14-5)10-7(17)6(16)4(26-10)1-25-30(21,22)28-31(23,24)27-29(18,19)20/h2-4,6-7,10,16-17H,1H2,(H,21,22)(H,23,24)(H2,11,12,13)(H2,18,19,20)/p-4/t4-,6-,7-,10-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=ZKHQWZAMYRWXGA-KQYNXXCUSA-J" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="503.152" />
+      <Property key="MonoisotopicMw" value="506.99574515689994" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-12909, REG-12890, REG-14488, REG-9772, REG-14329, REG0-6781, REG0-7497, REG0-7707, REG-13176, REG-14419, REG-14422, REG0-8315, REG0-8212, REG-10429, REG0-7195, REG-8742, REG0-8749, REG-10985, REG-11599, REG0-8040, REG0-8166, REG0-7200, REG-9547, REG0-10640, REG-12493, REG0-6737, REG-12901, REG0-8975, REG0-8830, REG-7496, REG-6229, REG0-7802, REG-9667, REG-8008, REG0-8732, REG-8477, REG-6695, REG-6569, REG-6589, REG-6588, REG0-6967, REG-6554, REG-8022, REG-5951, REG-5950, REG-12145, REG-12092, REG-5953, REG-11615, REG-11617, REG-7073, REG-6927, REG-6086" />
+      <Property key="Smiles" value="C(OP(=O)([O-])OP(=O)([O-])OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3)" />
+    </DataNode>
+    <DataNode elementId="ADENOSINE" textLabel="adenosine" type="Metabolite">
+      <Xref identifier="OIRDTQYFTABQOQ-KQYNXXCUSA-N" dataSource="InChIKey" />
+      <Graphics centerX="100.0" centerY="539.9154663085938" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ADENOSINE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000002169830" />
+      <Property key="AlternativeId_Seed" value="cpd00182" />
+      <Property key="AlternativeId_Metanetx" value="MNXM212" />
+      <Property key="AlternativeId_Refmet" value="Adenosine" />
+      <Property key="AlternativeId_Bigg" value="adn" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC16335" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00050" />
+      <Property key="AlternativeId_Drugbank" value="DB00640" />
+      <Property key="AlternativeId_Chemspider" value="18660726" />
+      <Property key="AlternativeId_Pubchem" value="60961" />
+      <Property key="AlternativeId_Chebi" value="16335" />
+      <Property key="AlternativeId_LigandCpd" value="C00212" />
+      <Property key="AlternativeId_Cas" value="58-61-7" />
+      <Property key="Synonym_1" value="adenine-D-ribose" />
+      <Property key="Synonym_2" value="9-&amp;beta;-D-ribofuranosyl-9H-purin-6-amine" />
+      <Property key="Synonym_3" value="9-&amp;beta;-D-ribofuranosidoadenine" />
+      <Property key="Synonym_4" value="adenine riboside" />
+      <Property key="ChemicalFormula" value="(C 10) (H 13) (N 5) (O 4)" />
+      <Property key="Gibbs0" value="87.03457" />
+      <Property key="Inchi" value="InChI=1S/C10H13N5O4/c11-8-5-9(13-2-12-8)15(3-14-5)10-7(18)6(17)4(1-16)19-10/h2-4,6-7,10,16-18H,1H2,(H2,11,12,13)/t4-,6-,7-,10-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=OIRDTQYFTABQOQ-KQYNXXCUSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="267.244" />
+      <Property key="MonoisotopicMw" value="267.0967539317" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-12859, REG0-7540, REG-7175, REG-7167, REG-7181, REG0-7920, REG-7132" />
+      <Property key="Smiles" value="C(O)[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3)" />
+      <Property key="SystematicName" value="(2R,3R,4S,5R)-2-(6-aminopurin-9-yl)-5-(hydroxymethyl)oxolane-3,4-diol" />
+    </DataNode>
+    <DataNode elementId="AMP" textLabel="AMP" type="Metabolite">
+      <Xref identifier="UDMBCSSLTHHNCD-KQYNXXCUSA-L" dataSource="InChIKey" />
+      <Graphics centerX="879.8489990234375" centerY="1007.4013671875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AMP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000003860156" />
+      <Property key="AlternativeId_Refmet" value="AMP" />
+      <Property key="AlternativeId_Bigg" value="amp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC456215" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00045" />
+      <Property key="AlternativeId_Chemspider" value="10239183" />
+      <Property key="AlternativeId_Chebi" value="456215" />
+      <Property key="AlternativeId_Pubchem" value="15938965" />
+      <Property key="AlternativeId_LigandCpd" value="C00020" />
+      <Property key="AlternativeId_Cas" value="61-19-8" />
+      <Property key="AlternativeId_Nci" value="20264" />
+      <Property key="Synonym_1" value="5&apos;-AMP" />
+      <Property key="Synonym_2" value="adenosine-monophosphate" />
+      <Property key="Synonym_3" value="adenylic acid" />
+      <Property key="Synonym_4" value="adenosine 5&apos;-phosphate" />
+      <Property key="Synonym_5" value="adenosine 5&apos;-monophosphate" />
+      <Property key="Synonym_6" value="adenylate" />
+      <Property key="Synonym_7" value="5&apos;-adenylic acid" />
+      <Property key="Synonym_8" value="5&apos;-adenosine monophosphate" />
+      <Property key="Synonym_9" value="adenine ribotide" />
+      <Property key="ChemicalFormula" value="(C 10) (H 12) (N 5) (O 7) (P 1)" />
+      <Property key="AtomCharges" value="(20 -1), (19 -1)" />
+      <Property key="Gibbs0" value="-135.89479" />
+      <Property key="Inchi" value="InChI=1S/C10H14N5O7P/c11-8-5-9(13-2-12-8)15(3-14-5)10-7(17)6(16)4(22-10)1-21-23(18,19)20/h2-4,6-7,10,16-17H,1H2,(H2,11,12,13)(H2,18,19,20)/p-2/t4-,6-,7-,10-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=UDMBCSSLTHHNCD-KQYNXXCUSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="345.208" />
+      <Property key="MonoisotopicMw" value="347.0630843401" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-15683, REG-9765, REG-14330, REG0-7202, REG-14235, REG-14236, REG0-8379, REG-14416, REG-14425, REG0-6727, REG-12062, REG-8740, REG-8449, REG0-8757, REG-10983, REG-11597, REG0-8715, REG-9775, REG0-7230, REG0-9061, REG0-8911, REG0-8145, REG0-8148, REG0-8901, REG-6551, REG0-7067, REG0-9117, REG0-6999, REG-11627" />
+      <Property key="Smiles" value="C(OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3)" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="321.804443359375" y="1301.957275390625" elementRef="AT5G03300" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="818.1161499023438" y="50.0" elementRef="AT5G03300-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_1_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_1_0_0" x="1594.853515625" y="958.4120483398438" elementRef="AT3G09820" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_1_0_0" arrowHead="TranscriptionTranslation" x="1142.770751953125" y="1550.0" elementRef="AT3G09820-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ADENOSINE-KINASE-RXN">
+      <Xref identifier="EC-2.7.1.20" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="ADENOSINE-KINASE-RXN_start" x="145.0" y="539.9154663085938" elementRef="ADENOSINE" relX="1.0" relY="0.0" />
+        <Point elementId="ADENOSINE-KINASE-RXN_end" arrowHead="Conversion" x="834.8489990234375" y="1007.4013671875" elementRef="AMP" relX="-1.0" relY="0.0" />
+        <Anchor elementId="ADENOSINE-KINASE-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Uniprot" value="Q64640" />
+      <Property key="AlternativeId_Pir" value="JC7368" />
+      <Property key="UniqueID" value="ADENOSINE-KINASE-RXN" />
+      <Property key="EC_Number" value="EC-2.7.1.20" />
+      <Property key="Pathways" value="PWY-6619" />
+      <Property key="ReactionEquation" value="ADENOSINE + ATP =&gt; PROTON + AMP + ADP" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXN-12209, ENZRXN-12208" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-13.725860" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="ADENOSINE-KINASE-RXN_ENZRXN-12208">
+      <Waypoints>
+        <Point elementId="ADENOSINE-KINASE-RXN_ENZRXN-12208_start" x="1187.770751953125" y="1562.5" elementRef="AT3G09820-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="ADENOSINE-KINASE-RXN_ENZRXN-12208_end" arrowHead="Catalysis" x="0" y="0" elementRef="ADENOSINE-KINASE-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ADENOSINE-KINASE-RXN_ENZRXN-12209">
+      <Waypoints>
+        <Point elementId="ADENOSINE-KINASE-RXN_ENZRXN-12209_start" x="863.1161499023438" y="62.5" elementRef="AT5G03300-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="ADENOSINE-KINASE-RXN_ENZRXN-12209_end" arrowHead="Catalysis" x="0" y="0" elementRef="ADENOSINE-KINASE-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ADENOSINE-KINASE-RXN_anchor_reactant_1">
+      <Xref identifier="EC-2.7.1.20" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="ADENOSINE-KINASE-RXN_anchor_reactant_start_1" x="954.2780151367188" y="796.033447265625" elementRef="ATP" relX="1.0" relY="0.0" />
+        <Point elementId="ADENOSINE-KINASE-RXN_anchor_reactant_end_1" x="0" y="0" elementRef="ADENOSINE-KINASE-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ADENOSINE-KINASE-RXN_anchor_product_0">
+      <Xref identifier="EC-2.7.1.20" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="ADENOSINE-KINASE-RXN_anchor_product_start_0" x="0" y="0" elementRef="ADENOSINE-KINASE-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="ADENOSINE-KINASE-RXN_anchor_product_end_0" arrowHead="Conversion" x="759.9585571289062" y="603.5003051757812" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ADENOSINE-KINASE-RXN_anchor_product_2">
+      <Xref identifier="EC-2.7.1.20" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="ADENOSINE-KINASE-RXN_anchor_product_start_2" x="0" y="0" elementRef="ADENOSINE-KINASE-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="ADENOSINE-KINASE-RXN_anchor_product_end_2" arrowHead="Conversion" x="1555.0" y="360.1690673828125" elementRef="ADP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_PUB_8577746">
+      <Xref identifier="8577746" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_11115893">
+      <Xref identifier="11115893" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

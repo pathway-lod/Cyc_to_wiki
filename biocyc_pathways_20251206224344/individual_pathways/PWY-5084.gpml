@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="2-oxoglutarate decarboxylation to succinyl-CoA" organism="Arabidopsis thaliana" source="PlantCyc" version="20251206224344">
+  <Xref identifier="PWY-5084" dataSource="MetaCyc" />
+  <Description>&lt;b&gt;General Information:&lt;/b&gt; 2-oxo acid dehydrogenase complexes convert 2-oxo acids to the corresponding acyl-CoA derivatives and produce |FRAME:NADH NADH| and |FRAME:CARBON-DIOXIDE CO&lt;SUB&gt;2&lt;/SUB&gt;| in an irreversible reaction. Five members of this family are known at present, including the pyruvate decarboxylase complex (PDHC, see |FRAME:PYRUVDEHYD-PWY pyruvate decarboxylation to acetyl CoA|), the &amp;alpha;-ketoglutarate dehydrogenase complex (OGDHC; this pathway) and the glycine decarboxylase complex (GDHC; see |FRAME:PWY-181 photorespiration|). They all function at strategic points in (usually aerobic) catabolic pathways and are subject to stringent control |CITS:[9655933]|. With the exception of GDHC, the 2-oxo acid dehydrogenase complexes share a common structure. They consist of three main components, namely a 2-oxo acid dehydrogenase (E1), a dihydrolipoamide acyltransferase (E2), and dihydrolipoamide dehydrogenase (E3). In mitochondria, the E1 component is a heterodimer composed of two subunits. E1, which contains a |FRAME:THIAMINE-PYROPHOSPHATE thiamin diphosphate| cofactor, catalyzes the binding of the 2-oxo acid to the lipoyl group of E2, which then transfers an acyl group (the nature of the acyl group depends on the particular enzyme) to |FRAME: CO-A coenzyme A|, forming an acyl-CoA, while reducing the lipoyl group to dihydrolipoyl. E3 then transfers the protons to |FRAME:NAD NAD&lt;sup&gt;+&lt;/sup&gt;|, forming NADH and restoring the dihydrolipoyllysine group back to lipoyllysine. The pathway illustrated here presents the reactions catalyzed by the &amp;alpha;-ketoglutarate dehydrogenase complex, a key enzyme of the |FRAME:PWY-5690 TCA cycle II (plants and fungi)|. These reactions are summarized by the general reaction |FRAME: 2OXOGLUTARATEDEH-RXN 2-oxoglutarate + coenzyme A + NAD&lt;sup&gt;+&lt;/sup&gt; &amp;rarr; succinyl-CoA + CO&lt;SUB&gt;2&lt;/SUB&gt; + NADH|.</Description>
+  <Authors>
+    <Author name="xue" />
+    <Author name="THE-ARABIDOPSIS-INFORMATION-RESOURCE" />
+    <Author name="tissier" />
+    <Author name="SRI" />
+    <Author name="caspi" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-5084" />
+  <Property key="Type" value="Respiration" />
+  <Property key="ReactionCount" value="3" />
+  <Property key="ReactionIDs" value="RXN-7716, RXN0-1147, 2OXOGLUTDECARB-RXN" />
+  <Property key="PredecessorCount" value="3" />
+  <Property key="Organism" value="Arabidopsis thaliana" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_PUB_BROWNLEADER97" />
+  <CitationRef elementRef="citation_PUB_9655933" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="Oxo-glutarate-dehydrogenase-lipoyl" textLabel="a [2-oxoglutarate dehydrogenase E2 protein] N⁶-lipoyl-L-lysine" type="Metabolite">
+      <Xref identifier="MNXM12555" dataSource="MetaNetX" />
+      <Graphics centerX="1328.797607421875" centerY="268.5750732421875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>|FRAME: LIPOIC-ACID &quot;Lipoate&quot;| is an organosulfur compound that is used as an essential cofactor by many enzyme complexes. The functional group of lipoate is a ditholane ring, which is a cyclic disulfide. The enzyme complexes that require lipoate have a dedicated |FRAME: Lipoyl-Protein &quot;lipoyl domain&quot;|, and lipoate is actually produced on this domain. The precursor |FRAME: CPD-195| molecule is first attached to a specific |FRAME: LYS| residue within the lipoyl domain (producing |FRAME: Octanoylated-domains|), and is then converted to lipoate by the enzyme |FRAME: EC-2.8.1.8|, resulting in |FRAME: Lipoyl-Protein-N6-lipoyllysine|. |FRAME: CPLX0-782 &quot;Lipoate synthase&quot;| not only catalyzes the reaction, but is also the source of the two sulfur atoms (see several pathway variants under |FRAME: Lipoate-Biosynthesis|).</Comment>
+      <Property key="UniqueID" value="Oxo-glutarate-dehydrogenase-lipoyl" />
+      <Property key="AlternativeId_Seed" value="cpd27765" />
+      <Property key="AlternativeId_Metanetx" value="MNXM12555" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="NonStandardInchi" value="InChI=1S/C15H28N2O2S2/c1-12(18)14(16)7-4-5-10-17-15(19)8-3-2-6-13-9-11-20-21-13/h13-14H,2-11,16H2,1H3,(H,17,19)/t13-,14-/m0/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C([[2-oxoglutarate dehydrogenase] lipoyl carrier component])C(=O)[C@H](CCCCNC(CCCC[C@@H]1(SSCC1))=O)N[[2-oxoglutarate dehydrogenase] lipoyl carrier component]" />
+    </DataNode>
+    <DataNode elementId="CARBON-DIOXIDE" textLabel="CO₂" type="Metabolite">
+      <Xref identifier="CURLTUGMZLYLDI-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="397.913818359375" centerY="1550.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CARBON-DIOXIDE" />
+      <Property key="AlternativeId_Metanetx" value="MNXM13" />
+      <Property key="AlternativeId_Seed" value="cpd00011" />
+      <Property key="AlternativeId_Bigg" value="33506" />
+      <Property key="AlternativeId_UmBbdCpd" value="c0131" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01967" />
+      <Property key="AlternativeId_LigandCpd" value="C00011" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC16526" />
+      <Property key="AlternativeId_Chemspider" value="274" />
+      <Property key="AlternativeId_Chebi" value="16526" />
+      <Property key="AlternativeId_Pubchem" value="280" />
+      <Property key="AlternativeId_Cas" value="124-38-9" />
+      <Property key="Synonym_1" value="carbonic anhydride" />
+      <Property key="Synonym_2" value="carbonic acid gas" />
+      <Property key="Synonym_3" value="carbon dioxide" />
+      <Property key="ChemicalFormula" value="(C 1) (O 2)" />
+      <Property key="Gibbs0" value="-92.26" />
+      <Property key="Inchi" value="InChI=1S/CO2/c2-1-3" />
+      <Property key="InchiKey" value="InChIKey=CURLTUGMZLYLDI-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="44.01" />
+      <Property key="MonoisotopicMw" value="43.989829244199996" />
+      <Property key="NonStandardInchi" value="InChI=1S/CO2/c2-1-3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C(=O)=O" />
+    </DataNode>
+    <DataNode elementId="CO-A" textLabel="coenzyme A" type="Metabolite">
+      <Xref identifier="RGJOEKWQDUBAIZ-IBOSZNHHSA-J" dataSource="InChIKey" />
+      <Graphics centerX="834.7907104492188" centerY="816.3797607421875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">Coenzyme A (CoA) is a ubiquitous compound found in archaea, bacteria, plants, and animals. It is a common acyl carrier in prokaryotic and eukaryotic cells, and is required for a multitude of reactions for both biosynthetic and degradative pathways, including the oxidation of fatty acids, carbohydrates, and amino acids |CITS: [16415216]|. While the name &quot;coenzyme A&quot; is well established, the correct name for the function of the compound in enzymatic reactions is &quot;cosubstrate&quot;.</Comment>
+      <Property key="UniqueID" value="CO-A" />
+      <Property key="AlternativeId_Metanetx" value="MNXM727276" />
+      <Property key="AlternativeId_Refmet" value="Coenzyme A" />
+      <Property key="AlternativeId_Bigg" value="33502" />
+      <Property key="AlternativeId_Pubchem" value="25113190" />
+      <Property key="AlternativeId_Wikipedia" value="Coenzyme_a" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57287" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01423" />
+      <Property key="AlternativeId_Chebi" value="57287" />
+      <Property key="AlternativeId_Knapsack" value="C00007258" />
+      <Property key="AlternativeId_Cas" value="85-61-0" />
+      <Property key="AlternativeId_LigandCpd" value="C00010" />
+      <Property key="Synonym_1" value="Co-A-SH" />
+      <Property key="Synonym_2" value="CoA" />
+      <Property key="Synonym_3" value="co-A-SH" />
+      <Property key="Synonym_4" value="co-enzyme-A" />
+      <Property key="Synonym_5" value="co-A" />
+      <Property key="Synonym_6" value="HS-CoA" />
+      <Property key="ChemicalFormula" value="(C 21) (H 32) (N 7) (O 16) (P 3) (S 1)" />
+      <Property key="AtomCharges" value="(39 -1), (37 -1), (35 -1), (33 -1)" />
+      <Property key="Gibbs0" value="-493.56613" />
+      <Property key="Inchi" value="InChI=1S/C21H36N7O16P3S/c1-21(2,16(31)19(32)24-4-3-12(29)23-5-6-48)8-41-47(38,39)44-46(36,37)40-7-11-15(43-45(33,34)35)14(30)20(42-11)28-10-27-13-17(22)25-9-26-18(13)28/h9-11,14-16,20,30-31,48H,3-8H2,1-2H3,(H,23,29)(H,24,32)(H,36,37)(H,38,39)(H2,22,25,26)(H2,33,34,35)/p-4/t11-,14-,15-,16+,20-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=RGJOEKWQDUBAIZ-IBOSZNHHSA-J" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="763.502" />
+      <Property key="MonoisotopicMw" value="767.1152083656" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-10749, REG0-9520, REG0-8343, REG0-8346, REG-14465, REG-13932, REG-13248, REG-8110, REG-10174, REG-7984, REG-12031, REG-12173, REG0-7083, REG0-8249, REG0-7409, REG0-7217, REG-8668, REG-7144, REG-7161, REG-6744, REG-6205, REG-6393" />
+      <Property key="Smiles" value="CC(C)(COP([O-])(=O)OP(OC[C@H]3(O[C@@H](N1(C2(\N=C/N=C(C(\N=C/1)=2)/N)))[C@H](O)[C@H](OP([O-])(=O)[O-])3))(=O)[O-])[C@@H](O)C(=O)NCCC(=O)NCCS" />
+      <CitationRef elementRef="citation_PUB_16415216" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1600.0" centerY="1031.1671142578125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="ChemicalFormula" value="(H 1)" />
+      <Property key="AtomCharges" value="(1 1)" />
+      <Property key="Gibbs0" value="0.42906138" />
+      <Property key="Inchi" value="InChI=1S/p+1" />
+      <Property key="InchiKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicMw" value="1.0078250321" />
+      <Property key="NonStandardInchi" value="InChI=1S/p+1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="[H+]" />
+    </DataNode>
+    <DataNode elementId="NADH" textLabel="NADH" type="Metabolite">
+      <Xref identifier="BOPGDPNILDQYTO-NNYOXOHSSA-L" dataSource="InChIKey" />
+      <Graphics centerX="670.0719604492188" centerY="50.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: NAD| and |FRAME: NADP| are dinucleotides containing one |FRAME: NIACINAMIDE| base and one |FRAME: ADENINE| base. Each nucleotide is connected to a ribose sugar at position 1, and the two riboses are connected at their 5 position via a diphosphate. The only difference between the two is that in NADP there is an additional phosphate group at the 2&apos; position of the ribose that carries the adenine moiety. These molecules are biological carriers of reductive equivalents (i.e. high potential electrons). Most of the time they function as cosubstrates, and in some cases they function as |FRAME: Cofactors cofactors|. They are often referred to by the obsolete term &quot;coenzymes&quot;. The most common function of |FRAME: NAD| is to accept two electrons and a proton (a hydride ion) from a substrate that is being oxidized. This reduction converts |FRAME: NAD| to |FRAME: NADH|, the reduced form. NADH then diffuses or is transported to a terminal oxidase, where the electrons are passed on, regenerating the oxidized form. |FRAME: NADPH|, on the other hand, is mostly involved in biosynthetic reactions, where it serves as an electron donor. NADPH is formed by reduction of |FRAME: NADP|, which occurs by different mechanisms in different types of organisms. In photosynthetic organisms |FRAME: NADP| is reduced by |FRAME: CPLX-84|. In heterotrophic organisms it is reduced by central metabolism processes such as the pentose phosphate pathway (see |FRAME: OXIDATIVEPENT-PWY|).</Comment>
+      <Property key="UniqueID" value="NADH" />
+      <Property key="AlternativeId_Seed" value="cpd00004" />
+      <Property key="AlternativeId_Metanetx" value="MNXM10" />
+      <Property key="AlternativeId_Refmet" value="NADH" />
+      <Property key="AlternativeId_Bigg" value="nadh" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57945" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01487" />
+      <Property key="AlternativeId_Chemspider" value="10239197" />
+      <Property key="AlternativeId_Chebi" value="57945" />
+      <Property key="AlternativeId_Pubchem" value="21604869" />
+      <Property key="AlternativeId_Cas" value="58-68-4" />
+      <Property key="AlternativeId_LigandCpd" value="C00004" />
+      <Property key="Synonym_1" value="NADH&lt;sub&gt;2&lt;/sub&gt;" />
+      <Property key="Synonym_2" value="NADH2" />
+      <Property key="Synonym_3" value="dihydrodiphosphopyridine nucleotide" />
+      <Property key="Synonym_4" value="diphosphopyridine nucleotide reduced" />
+      <Property key="Synonym_5" value="dihydronicotinamide adenine dinucleotide" />
+      <Property key="Synonym_6" value="nicotinamide adenine dinucleotide reduced" />
+      <Property key="Synonym_7" value="NAD-reduced" />
+      <Property key="Synonym_8" value="NADH+H+" />
+      <Property key="Synonym_9" value="DPNH" />
+      <Property key="Synonym_10" value="&amp;beta;-NADH" />
+      <Property key="Synonym_11" value="&amp;beta;-nicotinamide adenine dinucleotide, reduced" />
+      <Property key="ChemicalFormula" value="(C 21) (H 27) (N 7) (O 14) (P 2)" />
+      <Property key="AtomCharges" value="(35 -1), (37 -1)" />
+      <Property key="Gibbs0" value="-325.20697" />
+      <Property key="Inchi" value="InChI=1S/C21H29N7O14P2/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(32)14(30)11(41-21)6-39-44(36,37)42-43(34,35)38-5-10-13(29)15(31)20(40-10)27-3-1-2-9(4-27)18(23)33/h1,3-4,7-8,10-11,13-16,20-21,29-32H,2,5-6H2,(H2,23,33)(H,34,35)(H,36,37)(H2,22,24,25)/p-2/t10-,11-,13-,14-,15-,16-,20-,21-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=BOPGDPNILDQYTO-NNYOXOHSSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="663.43" />
+      <Property key="MonoisotopicMw" value="665.1247716966999" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-13296, REG-8720, REG-9482, REG0-8209, REG0-11850, REG-9631, REG-10377, REG-9494, REG-6521, REG-8741, REG0-8745, REG0-9223, REG-11600, REG0-6738, REG0-8782, REG-8495, REG0-7641, REG0-7644, REG0-7960, REG-7340, REG-7356, REG-7350, REG0-9224, REG-11451, REG-6090" />
+      <Property key="Smiles" value="C1(/N(\C=C/CC(/C(N)=O)=1)[C@@H]5(O[C@H](COP(OP(OC[C@H]4(O[C@@H](N2(C3(\C(\N=C/2)=C(N)/N=C\N=3)))[C@H](O)[C@H](O)4))(=O)[O-])(=O)[O-])[C@@H](O)[C@@H](O)5))" />
+    </DataNode>
+    <DataNode elementId="Oxo-glutarate-dehydro-suc-DH-lipoyl" textLabel="a [2-oxoglutarate dehydrogenase E2 protein] N⁶-S-succinyldihydrolipoyl-L-lysine" type="Metabolite">
+      <Xref identifier="MNXM12553" dataSource="MetaNetX" />
+      <Graphics centerX="572.8299560546875" centerY="972.519287109375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="Oxo-glutarate-dehydro-suc-DH-lipoyl" />
+      <Property key="AlternativeId_Seed" value="cpd27763" />
+      <Property key="AlternativeId_Metanetx" value="MNXM12553" />
+      <Property key="AtomCharges" value="(25 -1)" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="NonStandardInchi" value="InChI=1S/C19H34N2O5S2/c1-14(22)16(20)7-4-5-12-21-17(23)8-3-2-6-15(27)11-13-28-19(26)10-9-18(24)25/h15-16,27H,2-13,20H2,1H3,(H,21,23)(H,24,25)/p-1/t15?,16-/m0/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C([[2-oxoglutarate dehydrogenase] lipoyl carrier component])C(=O)[C@H](CCCCNC(CCCCC(S)CCSC(CCC([O-])=O)=O)=O)N[[2-oxoglutarate dehydrogenase] lipoyl carrier component]" />
+    </DataNode>
+    <DataNode elementId="NAD" textLabel="NAD⁺" type="Metabolite">
+      <Xref identifier="BAWFJGJZGIEFAR-NNYOXOHSSA-M" dataSource="InChIKey" />
+      <Graphics centerX="1028.52685546875" centerY="1405.95751953125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: NAD| and |FRAME: NADP| are dinucleotides containing one |FRAME: NIACINAMIDE| base and one |FRAME: ADENINE| base. Each nucleotide is connected to a ribose sugar at position 1, and the two riboses are connected at their 5 position via a diphosphate. The only difference between the two is that in NADP there is an additional phosphate group at the 2&apos; position of the ribose that carries the adenine moiety. These molecules are biological carriers of reductive equivalents (i.e. high potential electrons). Most of the time they function as cosubstrates, and in some cases they function as |FRAME: Cofactors cofactors|. They are often referred to by the obsolete term &quot;coenzymes&quot;. The most common function of |FRAME: NAD| is to accept two electrons and a proton (a hydride ion) from a substrate that is being oxidized. This reduction converts |FRAME: NAD| to |FRAME: NADH|, the reduced form. NADH then diffuses or is transported to a terminal oxidase, where the electrons are passed on, regenerating the oxidized form. |FRAME: NADPH|, on the other hand, is mostly involved in biosynthetic reactions, where it serves as an electron donor. NADPH is formed by reduction of |FRAME: NADP|, which occurs by different mechanisms in different types of organisms. In photosynthetic organisms |FRAME: NADP| is reduced by |FRAME: CPLX-84|. In heterotrophic organisms it is reduced by central metabolism processes such as the pentose phosphate pathway (see |FRAME: OXIDATIVEPENT-PWY|).</Comment>
+      <Property key="UniqueID" value="NAD" />
+      <Property key="AlternativeId_Mediadb" value="compounds/3/" />
+      <Property key="AlternativeId_Seed" value="cpd00003" />
+      <Property key="AlternativeId_Metanetx" value="MNXM8" />
+      <Property key="AlternativeId_Refmet" value="NAD+" />
+      <Property key="AlternativeId_Bigg" value="nad" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57540" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00902" />
+      <Property key="AlternativeId_Chemspider" value="10239196" />
+      <Property key="AlternativeId_Chebi" value="57540" />
+      <Property key="AlternativeId_Pubchem" value="15938971" />
+      <Property key="AlternativeId_LigandCpd" value="C00003" />
+      <Property key="AlternativeId_Cas" value="53-84-9" />
+      <Property key="Synonym_1" value="NAD+" />
+      <Property key="Synonym_2" value="beta-nicotinamide adenine dinucleotide" />
+      <Property key="Synonym_3" value="coenzyme I" />
+      <Property key="Synonym_4" value="diphosphopyridine nucleotide" />
+      <Property key="Synonym_5" value="diphosphopyridine nucleotide oxidized" />
+      <Property key="Synonym_6" value="nicotinamide adenine dinucleotide" />
+      <Property key="Synonym_7" value="nicotinamide adenine dinucleotide oxidized" />
+      <Property key="Synonym_8" value="NAD-oxidized" />
+      <Property key="Synonym_9" value="NAD-ox" />
+      <Property key="Synonym_10" value="DPN+" />
+      <Property key="Synonym_11" value="DPN-ox" />
+      <Property key="Synonym_12" value="DPN" />
+      <Property key="Synonym_13" value="&amp;beta;-nicotinamide adenine dinucleotide" />
+      <Property key="Synonym_14" value="NAD" />
+      <Property key="Synonym_15" value="&amp;beta;-NAD&lt;sup&gt;+&lt;/sup&gt;" />
+      <Property key="ChemicalFormula" value="(C 21) (H 26) (N 7) (O 14) (P 2)" />
+      <Property key="AtomCharges" value="(27 1), (37 -1), (35 -1)" />
+      <Property key="CofactorsOf" value="ENZRXN-12451, ENZRXN-1362, ENZRXNQT-9536, ENZRXN-9141, ENZRXN-9122" />
+      <Property key="Gibbs0" value="-338.38196" />
+      <Property key="Inchi" value="InChI=1S/C21H27N7O14P2/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(32)14(30)11(41-21)6-39-44(36,37)42-43(34,35)38-5-10-13(29)15(31)20(40-10)27-3-1-2-9(4-27)18(23)33/h1-4,7-8,10-11,13-16,20-21,29-32H,5-6H2,(H5-,22,23,24,25,33,34,35,36,37)/p-1/t10-,11-,13-,14-,15-,16-,20-,21-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=BAWFJGJZGIEFAR-NNYOXOHSSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="662.422" />
+      <Property key="MonoisotopicMw" value="665.1247716966999" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-13857, REG-14487, REG0-8643, REG-14636, REG0-8746, REG0-6740, REG0-10411, REG-8498, REG-11606, REG0-8592, REG0-7959, REG-7455, REG-7348, REG-10755, REG-8006, REG0-8151, REG-8140, REG0-7613" />
+      <Property key="Smiles" value="C5(/C(/C(N)=O)=C\C=C/[N+](/[C@@H]4(O[C@H](COP(OP(OC[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3))(=O)[O-])(=O)[O-])[C@@H](O)[C@@H](O)4))=5)" />
+    </DataNode>
+    <DataNode elementId="SUC-COA" textLabel="succinyl-CoA" type="Metabolite">
+      <Xref identifier="VNOYUJKHFWYWIR-ITIYDSSPSA-I" dataSource="InChIKey" />
+      <Graphics centerX="762.7890625" centerY="600.6002197265625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="SUC-COA" />
+      <Property key="AlternativeId_ReactomeCpd" value="70958" />
+      <Property key="AlternativeId_Seed" value="cpd00078" />
+      <Property key="AlternativeId_Metanetx" value="MNXM92" />
+      <Property key="AlternativeId_Refmet" value="Succinyl-CoA" />
+      <Property key="AlternativeId_Bigg" value="succoa" />
+      <Property key="AlternativeId_Pubchem" value="45266545" />
+      <Property key="AlternativeId_Chebi" value="57292" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57292" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01022" />
+      <Property key="AlternativeId_LigandCpd" value="C00091" />
+      <Property key="AlternativeId_Cas" value="604-98-8" />
+      <Property key="Synonym_1" value="succ-coenzyme-A" />
+      <Property key="Synonym_2" value="succ-&lt;i&gt;S&lt;/i&gt;-coenzyme-A" />
+      <Property key="Synonym_3" value="succinyl-S-coenzyme-A" />
+      <Property key="Synonym_4" value="succ-&lt;i&gt;S&lt;/i&gt;-CoA" />
+      <Property key="Synonym_5" value="succinylcoenzyme-A" />
+      <Property key="Synonym_6" value="succ-CoA" />
+      <Property key="Synonym_7" value="suc-CoA" />
+      <Property key="Synonym_8" value="succinyl-&lt;i&gt;S&lt;/i&gt;-CoA" />
+      <Property key="Synonym_9" value="succinyl-coenzyme A" />
+      <Property key="ChemicalFormula" value="(C 25) (H 35) (N 7) (O 19) (P 3) (S 1)" />
+      <Property key="AbbrevName" value="SuccCoA" />
+      <Property key="AtomCharges" value="(42 -1), (40 -1), (45 -1), (43 -1), (35 -1)" />
+      <Property key="Gibbs0" value="-575.61127" />
+      <Property key="Inchi" value="InChI=1S/C25H40N7O19P3S/c1-25(2,20(38)23(39)28-6-5-14(33)27-7-8-55-16(36)4-3-15(34)35)10-48-54(45,46)51-53(43,44)47-9-13-19(50-52(40,41)42)18(37)24(49-13)32-12-31-17-21(26)29-11-30-22(17)32/h11-13,18-20,24,37-38H,3-10H2,1-2H3,(H,27,33)(H,28,39)(H,34,35)(H,43,44)(H,45,46)(H2,26,29,30)(H2,40,41,42)/p-5/t13-,18-,19-,20+,24-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=VNOYUJKHFWYWIR-ITIYDSSPSA-I" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="862.568" />
+      <Property key="MonoisotopicMw" value="867.1312523603" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-8165, REG-12032, REG-12174" />
+      <Property key="Smiles" value="CC(C)([C@@H](O)C(=O)NCCC(=O)NCCSC(=O)CCC(=O)[O-])COP(=O)(OP(=O)(OC[C@@H]1([C@@H](OP([O-])(=O)[O-])[C@@H](O)[C@@H](O1)N2(C3(\N=C/N=C(C(\N=C/2)=3)/N))))[O-])[O-]" />
+      <Property key="Superatoms" value="COA-GROUP" />
+      <Property key="SystematicName" value="3&apos;-phosphoadenosine 5&apos;-{3-[(3R)-4-{[3-({2-[(3-carboxypropanoyl)sulfanyl]ethyl}amino)-3-oxopropyl]amino}-3-hydroxy-2,2-dimethyl-4-oxobutyl] dihydrogen diphosphate}" />
+    </DataNode>
+    <DataNode elementId="Oxo-glutarate-dehydrogenase-DH-lipoyl" textLabel="a [2-oxoglutarate dehydrogenase E2 protein] N⁶-dihydrolipoyl-L-lysine" type="Metabolite">
+      <Xref identifier="MNXM12554" dataSource="MetaNetX" />
+      <Graphics centerX="100.0" centerY="563.677490234375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="Oxo-glutarate-dehydrogenase-DH-lipoyl" />
+      <Property key="AlternativeId_Seed" value="cpd27764" />
+      <Property key="AlternativeId_Metanetx" value="MNXM12554" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="NonStandardInchi" value="InChI=1S/C15H30N2O2S2/c1-12(18)14(16)7-4-5-10-17-15(19)8-3-2-6-13(21)9-11-20/h13-14,20-21H,2-11,16H2,1H3,(H,17,19)/t13?,14-/m0/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C([[2-oxoglutarate dehydrogenase] lipoyl carrier component])C(=O)[C@H](CCCCNC(CCCCC(S)CCS)=O)N[[2-oxoglutarate dehydrogenase] lipoyl carrier component]" />
+    </DataNode>
+    <DataNode elementId="_2-KETOGLUTARATE" textLabel="2-oxoglutarate" type="Metabolite">
+      <Xref identifier="KPGXRSRHYNQIFN-UHFFFAOYSA-L" dataSource="InChIKey" />
+      <Graphics centerX="1044.56591796875" centerY="856.974609375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="2-KETOGLUTARATE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001532519" />
+      <Property key="AlternativeId_Seed" value="cpd00024" />
+      <Property key="AlternativeId_Metanetx" value="MNXM20" />
+      <Property key="AlternativeId_Refmet" value="Oxoglutaric acid" />
+      <Property key="AlternativeId_Bigg" value="akg" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC16810" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00208" />
+      <Property key="AlternativeId_Chemspider" value="144236" />
+      <Property key="AlternativeId_Chebi" value="16810" />
+      <Property key="AlternativeId_Pubchem" value="164533" />
+      <Property key="AlternativeId_Knapsack" value="C00000769" />
+      <Property key="AlternativeId_LigandCpd" value="C00026" />
+      <Property key="AlternativeId_Cas" value="328-50-7" />
+      <Property key="Synonym_1" value="ketoglutarate" />
+      <Property key="Synonym_2" value="&amp;alpha;-ketoglutarate" />
+      <Property key="Synonym_3" value="2-oxoglutaric acid" />
+      <Property key="Synonym_4" value="&amp;alpha;-ketoglutaric acid" />
+      <Property key="Synonym_5" value="&amp;alpha;-oxoglutarate" />
+      <Property key="Synonym_6" value="2-ketoglutaric acid" />
+      <Property key="Synonym_7" value="2-ketoglutarate" />
+      <Property key="Synonym_8" value="2-oxopentanedionic acid" />
+      <Property key="Synonym_9" value="2-oxopentanedionate" />
+      <Property key="Synonym_10" value="a-ketoglutaric acid" />
+      <Property key="ChemicalFormula" value="(C 5) (H 4) (O 5)" />
+      <Property key="AtomCharges" value="(7 -1), (9 -1)" />
+      <Property key="Gibbs0" value="-149.76376" />
+      <Property key="Inchi" value="InChI=1S/C5H6O5/c6-3(5(9)10)1-2-4(7)8/h1-2H2,(H,7,8)(H,9,10)/p-2" />
+      <Property key="InchiKey" value="InChIKey=KPGXRSRHYNQIFN-UHFFFAOYSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="144.084" />
+      <Property key="MonoisotopicMw" value="146.0215233031" />
+      <Property key="NonStandardInchi" value="InChI=1S/C5H6O5/c6-3(5(9)10)1-2-4(7)8/h1-2H2,(H,7,8)(H,9,10)/p-2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-9501, REG0-6736, REG-9990, REG-10227" />
+      <Property key="Smiles" value="C(CC([O-])=O)C(=O)C([O-])=O" />
+      <CitationRef elementRef="citation_PUB_18493048" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="RXN-7716">
+      <Xref identifier="EC-1.8.1.4" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-7716_start" x="145.0" y="563.677490234375" elementRef="Oxo-glutarate-dehydrogenase-DH-lipoyl" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-7716_end" arrowHead="Conversion" x="1283.797607421875" y="268.5750732421875" elementRef="Oxo-glutarate-dehydrogenase-lipoyl" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-7716_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-7716" />
+      <Property key="EC_Number" value="EC-1.8.1.4" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-5084, 2OXOGLUTARATEDEH-RXN" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="Oxo-glutarate-dehydrogenase-DH-lipoyl + NAD =&gt; Oxo-glutarate-dehydrogenase-lipoyl + NADH + PROTON" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionType" value="Protein-Modification-Reactions" />
+      <Property key="^official?" value="NIL" />
+      <Property key="Gibbs0" value="19.404053" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-7716_anchor_reactant_1">
+      <Xref identifier="EC-1.8.1.4" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-7716_anchor_reactant_start_1" x="1073.52685546875" y="1405.95751953125" elementRef="NAD" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-7716_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-7716_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-7716_anchor_product_1">
+      <Xref identifier="EC-1.8.1.4" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-7716_anchor_product_start_1" x="0" y="0" elementRef="RXN-7716_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-7716_anchor_product_end_1" arrowHead="Conversion" x="625.0719604492188" y="50.0" elementRef="NADH" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-7716_anchor_product_2">
+      <Xref identifier="EC-1.8.1.4" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-7716_anchor_product_start_2" x="0" y="0" elementRef="RXN-7716_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-7716_anchor_product_end_2" arrowHead="Conversion" x="1555.0" y="1031.1671142578125" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN0-1147">
+      <Xref identifier="EC-2.3.1.61" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN0-1147_start" x="617.8299560546875" y="972.519287109375" elementRef="Oxo-glutarate-dehydro-suc-DH-lipoyl" relX="1.0" relY="0.0" />
+        <Point elementId="RXN0-1147_end" arrowHead="Conversion" x="55.0" y="563.677490234375" elementRef="Oxo-glutarate-dehydrogenase-DH-lipoyl" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN0-1147_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN0-1147" />
+      <Property key="EC_Number" value="EC-2.3.1.61" />
+      <Property key="Pathways" value="PWY-5084, 2OXOGLUTARATEDEH-RXN" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="SUC-COA + Oxo-glutarate-dehydrogenase-DH-lipoyl =&gt; CO-A + Oxo-glutarate-dehydro-suc-DH-lipoyl" />
+      <Property key="ReactionDirection" value="RIGHT-TO-LEFT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionType" value="Protein-Modification-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-28.316956" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN0-1147_anchor_reactant_0">
+      <Xref identifier="EC-2.3.1.61" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN0-1147_anchor_reactant_start_0" x="807.7890625" y="600.6002197265625" elementRef="SUC-COA" relX="1.0" relY="0.0" />
+        <Point elementId="RXN0-1147_anchor_reactant_end_0" x="0" y="0" elementRef="RXN0-1147_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN0-1147_anchor_reactant_1">
+      <Xref identifier="EC-2.3.1.61" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN0-1147_anchor_reactant_start_1" x="145.0" y="563.677490234375" elementRef="Oxo-glutarate-dehydrogenase-DH-lipoyl" relX="1.0" relY="0.0" />
+        <Point elementId="RXN0-1147_anchor_reactant_end_1" x="0" y="0" elementRef="RXN0-1147_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN0-1147_anchor_product_0">
+      <Xref identifier="EC-2.3.1.61" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN0-1147_anchor_product_start_0" x="0" y="0" elementRef="RXN0-1147_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN0-1147_anchor_product_end_0" arrowHead="Conversion" x="789.7907104492188" y="816.3797607421875" elementRef="CO-A" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN0-1147_anchor_product_1">
+      <Xref identifier="EC-2.3.1.61" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN0-1147_anchor_product_start_1" x="0" y="0" elementRef="RXN0-1147_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN0-1147_anchor_product_end_1" arrowHead="Conversion" x="527.8299560546875" y="972.519287109375" elementRef="Oxo-glutarate-dehydro-suc-DH-lipoyl" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2OXOGLUTDECARB-RXN">
+      <Xref identifier="EC-1.2.4.2" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_2OXOGLUTDECARB-RXN_start" x="1373.797607421875" y="268.5750732421875" elementRef="Oxo-glutarate-dehydrogenase-lipoyl" relX="1.0" relY="0.0" />
+        <Point elementId="_2OXOGLUTDECARB-RXN_end" arrowHead="Conversion" x="527.8299560546875" y="972.519287109375" elementRef="Oxo-glutarate-dehydro-suc-DH-lipoyl" relX="-1.0" relY="0.0" />
+        <Anchor elementId="_2OXOGLUTDECARB-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Pir" value="T50644" />
+      <Property key="UniqueID" value="2OXOGLUTDECARB-RXN" />
+      <Property key="EC_Number" value="EC-1.2.4.2" />
+      <Property key="Pathways" value="PWY-5084, 2OXOGLUTARATEDEH-RXN" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="2-KETOGLUTARATE + Oxo-glutarate-dehydrogenase-lipoyl + PROTON =&gt; Oxo-glutarate-dehydro-suc-DH-lipoyl + CARBON-DIOXIDE" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="Synonym_1" value="2-oxoglutarate decarboxylation" />
+      <Property key="Synonym_2" value="Oxoglutarate decarboxylase" />
+      <Property key="ReactionType" value="Protein-Modification-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-59.08737" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="Synonyms" value="2-oxoglutarate decarboxylation, Oxoglutarate decarboxylase" />
+    </Interaction>
+    <Interaction elementId="_2OXOGLUTDECARB-RXN_anchor_reactant_0">
+      <Xref identifier="EC-1.2.4.2" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_2OXOGLUTDECARB-RXN_anchor_reactant_start_0" x="1089.56591796875" y="856.974609375" elementRef="_2-KETOGLUTARATE" relX="1.0" relY="0.0" />
+        <Point elementId="_2OXOGLUTDECARB-RXN_anchor_reactant_end_0" x="0" y="0" elementRef="_2OXOGLUTDECARB-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2OXOGLUTDECARB-RXN_anchor_reactant_2">
+      <Xref identifier="EC-1.2.4.2" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_2OXOGLUTDECARB-RXN_anchor_reactant_start_2" x="1645.0" y="1031.1671142578125" elementRef="PROTON" relX="1.0" relY="0.0" />
+        <Point elementId="_2OXOGLUTDECARB-RXN_anchor_reactant_end_2" x="0" y="0" elementRef="_2OXOGLUTDECARB-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="_2OXOGLUTDECARB-RXN_anchor_product_1">
+      <Xref identifier="EC-1.2.4.2" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="_2OXOGLUTDECARB-RXN_anchor_product_start_1" x="0" y="0" elementRef="_2OXOGLUTDECARB-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="_2OXOGLUTDECARB-RXN_anchor_product_end_1" arrowHead="Conversion" x="352.913818359375" y="1550.0" elementRef="CARBON-DIOXIDE" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_PUB_BROWNLEADER97">
+      <Xref identifier="PUB-BROWNLEADER97 | Carbohydrate metabolism: primary metabolism of monosaccharides (Brownleader, M.D., Harborne, J.B., Dey, P.M., 1997)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_PUB_16415216">
+      <Xref identifier="16415216" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_18493048">
+      <Xref identifier="18493048" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_9655933">
+      <Xref identifier="9655933" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

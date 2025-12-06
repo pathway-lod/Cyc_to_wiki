@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="spermine biosynthesis" organism="Arabidopsis thaliana" source="PlantCyc" version="20251206224344">
+  <Description>&lt;b&gt;General Information:&lt;/b&gt; The polyamines (the most common of which are |FRAME:PUTRESCINE putrescine|, |FRAME:SPERMIDINE spermidine| and |FRAME:SPERMINE spermine|) are a group of positively charged organic polycations that are involved in many biological processes, including binding to nucleic acids, stabilizing membranes, and stimulating several enzymes. In plants, polyamines have been involved in senescence and morphogenesis |CITS:[11537482]|. Their specific molecular functions &lt;i&gt;in vivo&lt;/i&gt; are however not yet fully understood. |FRAME:PUTRESCINE putrescine| and |FRAME:SPERMIDINE spermidine| are found in all life forms, and |FRAME:SPERMINE spermine| is found mostly in eukaryotes. |FRAME:SPERMINE spermine| is formed by the addition of a propylamine moiety to |FRAME:SPERMIDINE spermidine|, catalyzed by an aminopropyltransferase termed spermine synthase. The propylamine group is transferred from |FRAME: S-ADENOSYLMETHIONINAMINE &lt;i&gt;S&lt;/i&gt;-adenosyl 3-(methylthio)propylamine|, which is produced by the action of the pyruvoyl-containing enzyme adenosylmethionine decarboxylase. The other product of the aminopropyltransferase reaction is |FRAME:5-METHYLTHIOADENOSINE &lt;i&gt;S&lt;/i&gt;-methyl-5&apos;-thioadenosine| (MTA), which is recycled back to |FRAME: MET L-methionine|.</Description>
+  <Authors>
+    <Author name="caspi" />
+    <Author name="SRI" />
+    <Author name="hying" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="ARGSPECAT-PWY" />
+  <Property key="Type" value="Polyamine-Biosynthesis" />
+  <Property key="ReactionCount" value="2" />
+  <Property key="ReactionIDs" value="SAMDECARB-RXN, SPERMINE-SYNTHASE-RXN" />
+  <Property key="PathwayLinks" value="(SPERMINE PWY-3981), (SPERMIDINE BSUBPOLYAMSYN-PWY)" />
+  <Property key="Organism" value="Arabidopsis thaliana" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_PUB_KRAMER96" />
+  <CitationRef elementRef="citation_PUB_12782327" />
+  <CitationRef elementRef="citation_PUB_12220656" />
+  <CitationRef elementRef="citation_PUB_11537482" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="AT5G19530" textLabel="ACL5" type="GeneProduct">
+      <Xref identifier="AT5G19530" dataSource="TAIR" />
+      <Graphics centerX="925.16162109375" centerY="595.4088134765625" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT5G19530" />
+      <Property key="Synonym_1" value="ACAULIS5" />
+      <Property key="Product" value="AT5G19530-MONOMER" />
+      <Property key="StartPosition" value="6588960" />
+      <Property key="EndPosition" value="6591365" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="Accession1" value="AT5G19530" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="AT5G53120" textLabel="SPDS3" type="GeneProduct">
+      <Xref identifier="AT5G53120" dataSource="TAIR" />
+      <Graphics centerX="1138.2791748046875" centerY="835.8812255859375" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT5G53120" />
+      <Property key="Product" value="AT5G53120-MONOMER" />
+      <Property key="StartPosition" value="21551776" />
+      <Property key="EndPosition" value="21555042" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="Accession1" value="AT5G53120" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="AT5G53120-MONOMER" textLabel="spermine synthase" type="Protein">
+      <Xref identifier="AT5G53120.6" dataSource="TAIR" />
+      <Graphics centerX="615.9423828125" centerY="233.54481506347656" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">The &lt;i&gt;Arabidopsis SPDS3&lt;/i&gt; gene was expressed in two heterologous expression systems: yeast and &lt;i&gt;E. coli&lt;/i&gt; |CITS:[12220656]|. The enzyme was shown to have potentially both spermidine and spermine synthase activities, however, the authors have not discarded the possibility that the enzyme might have an altogether different activity in vivo as a Phe residue that is invariant in all known spermidine synthases and likely contributes to the formation of a putrescine-binding cavity |CITS:[11731804]| is substituted by Val236 in SPDS3 |CITS:[12220656]|.</Comment>
+      <Property key="UniqueID" value="AT5G53120-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT5G53120.6" />
+      <Property key="Catalyzes" value="RXN-9641, RXN-6665" />
+      <Property key="CatalyzesCount" value="2" />
+      <Property key="Accession1" value="AT5G53120.6" />
+      <Property key="Gene" value="AT5G53120" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_12220656" />
+      <CitationRef elementRef="citation_PUB_11731804" />
+    </DataNode>
+    <DataNode elementId="AT3G02470-MONOMER-BETA" textLabel="adenosylmethionine decarboxylase β-subunit" type="Protein" groupRef="CPLXQT-25">
+      <Xref identifier="AT3G02470-MONOMER-BETA" dataSource="plantcyc" />
+      <Graphics centerX="882.69873046875" centerY="786.853515625" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, THE-ARABIDOPSIS-INFORMATION-RESOURCE, tissier">Both &amp;alpha; and &amp;beta; subunits of the complex are encoded by the same gene. The &lt;i&gt;SAMDC&lt;/i&gt; gene encodes a precursor protein that is cleaved to form both subunits |CITS:[10578049]|.</Comment>
+      <Property key="UniqueID" value="AT3G02470-MONOMER-BETA" />
+      <Property key="Synonym_1" value="adenosylmethionine decarboxylase" />
+      <Property key="Accession1" value="AT3G02470.1" />
+      <Property key="ComponentOf" value="CPLXQT-25" />
+      <Property key="FunctionalAssignmentStatus" value=":PROBABLE-ENZYME" />
+      <Property key="Gene" value="AT3G02470" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="MolecularWeightExp" value="8." />
+      <Property key="MolecularWeightKd" value="8." />
+      <Property key="Species" value="ORG-5993" />
+    </DataNode>
+    <DataNode elementId="AT5G19530-MONOMER" textLabel="spermine synthase" type="Protein">
+      <Xref identifier="AT5G19530.1" dataSource="TAIR" />
+      <Graphics centerX="1162.22607421875" centerY="50.0" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">The &lt;i&gt;Arabidopsis ACL5&lt;/i&gt; gene was expressed in an &lt;i&gt;E. coli&lt;/i&gt; heterologous expression system |CITS:[10944107]|. The enzyme was shown to be able to catalyze the conversion of radiolabeled spermidine into spermine.</Comment>
+      <Property key="UniqueID" value="AT5G19530-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT5G19530.1" />
+      <Property key="Catalyzes" value="RXN-6763" />
+      <Property key="Accession1" value="AT5G19530.1" />
+      <Property key="Gene" value="AT5G19530" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_10944107" />
+    </DataNode>
+    <DataNode elementId="CARBON-DIOXIDE" textLabel="CO₂" type="Metabolite">
+      <Xref identifier="CURLTUGMZLYLDI-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="277.49188232421875" centerY="1256.724609375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CARBON-DIOXIDE" />
+      <Property key="AlternativeId_Metanetx" value="MNXM13" />
+      <Property key="AlternativeId_Seed" value="cpd00011" />
+      <Property key="AlternativeId_Bigg" value="33506" />
+      <Property key="AlternativeId_UmBbdCpd" value="c0131" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01967" />
+      <Property key="AlternativeId_LigandCpd" value="C00011" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC16526" />
+      <Property key="AlternativeId_Chemspider" value="274" />
+      <Property key="AlternativeId_Chebi" value="16526" />
+      <Property key="AlternativeId_Pubchem" value="280" />
+      <Property key="AlternativeId_Cas" value="124-38-9" />
+      <Property key="Synonym_1" value="carbonic anhydride" />
+      <Property key="Synonym_2" value="carbonic acid gas" />
+      <Property key="Synonym_3" value="carbon dioxide" />
+      <Property key="ChemicalFormula" value="(C 1) (O 2)" />
+      <Property key="Gibbs0" value="-92.26" />
+      <Property key="Inchi" value="InChI=1S/CO2/c2-1-3" />
+      <Property key="InchiKey" value="InChIKey=CURLTUGMZLYLDI-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="44.01" />
+      <Property key="MonoisotopicMw" value="43.989829244199996" />
+      <Property key="NonStandardInchi" value="InChI=1S/CO2/c2-1-3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C(=O)=O" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="917.6902465820312" centerY="1550.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="ChemicalFormula" value="(H 1)" />
+      <Property key="AtomCharges" value="(1 1)" />
+      <Property key="Gibbs0" value="0.42906138" />
+      <Property key="Inchi" value="InChI=1S/p+1" />
+      <Property key="InchiKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicMw" value="1.0078250321" />
+      <Property key="NonStandardInchi" value="InChI=1S/p+1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="[H+]" />
+    </DataNode>
+    <DataNode elementId="SPERMIDINE" textLabel="spermidine" type="Metabolite">
+      <Xref identifier="ATHGHQPFGPMSJY-UHFFFAOYSA-Q" dataSource="InChIKey" />
+      <Graphics centerX="1521.139892578125" centerY="1219.484619140625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="SPERMIDINE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001532612" />
+      <Property key="AlternativeId_Seed" value="cpd00264" />
+      <Property key="AlternativeId_Metanetx" value="MNXM124" />
+      <Property key="AlternativeId_Refmet" value="Spermidine" />
+      <Property key="AlternativeId_Bigg" value="spmd" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57834" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01257" />
+      <Property key="AlternativeId_Chemspider" value="5360248" />
+      <Property key="AlternativeId_Chebi" value="57834" />
+      <Property key="AlternativeId_Pubchem" value="6992097" />
+      <Property key="AlternativeId_LigandCpd" value="C00315" />
+      <Property key="AlternativeId_Cas" value="124-20-9" />
+      <Property key="Synonym_1" value="&lt;i&gt;N&lt;/i&gt;-(3-aminopropyl)butane-1,4-diamine" />
+      <Property key="ChemicalFormula" value="(C 7) (H 22) (N 3)" />
+      <Property key="AtomCharges" value="(9 1), (10 1), (8 1)" />
+      <Property key="Gibbs0" value="227.9461" />
+      <Property key="Inchi" value="InChI=1S/C7H19N3/c8-4-1-2-6-10-7-3-5-9/h10H,1-9H2/p+3" />
+      <Property key="InchiKey" value="InChIKey=ATHGHQPFGPMSJY-UHFFFAOYSA-Q" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="148.271" />
+      <Property key="MonoisotopicMw" value="145.1578976255" />
+      <Property key="NonStandardInchi" value="InChI=1S/C7H19N3/c8-4-1-2-6-10-7-3-5-9/h10H,1-9H2/p+3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-7777, REG0-7175, REG0-7794, REG0-7626, REG0-7680, REG0-8769, REG0-7040, REG0-7219, REG0-6933" />
+      <Property key="Smiles" value="C([NH3+])CC[NH2+]CCCC[NH3+]" />
+    </DataNode>
+    <DataNode elementId="SPERMINE" textLabel="spermine" type="Metabolite">
+      <Xref identifier="PFNFFQXMRSDOHW-UHFFFAOYSA-R" dataSource="InChIKey" />
+      <Graphics centerX="1600.0" centerY="537.4297485351562" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">The history of |FRAME: SPERMINE| biochemistry goes back more than 300 years. When Antoni van Leeuwenhoek looked at human semen through the lenses of his microscope in 1678, he noted the formation of crystals in aging sperm. More than 200 years later, the basic component of these phosphate crystals was named spermine, after the source |CITS: [11537482]|.</Comment>
+      <Property key="UniqueID" value="SPERMINE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001532734" />
+      <Property key="AlternativeId_Seed" value="cpd00558" />
+      <Property key="AlternativeId_Metanetx" value="MNXM408" />
+      <Property key="AlternativeId_Refmet" value="Spermine" />
+      <Property key="AlternativeId_Drugbank" value="DB02564" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC45725" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01256" />
+      <Property key="AlternativeId_Chemspider" value="394003" />
+      <Property key="AlternativeId_Chebi" value="45725" />
+      <Property key="AlternativeId_Pubchem" value="446718" />
+      <Property key="AlternativeId_LigandCpd" value="C00750" />
+      <Property key="AlternativeId_Cas" value="71-44-3" />
+      <Property key="Synonym_1" value="gerontine" />
+      <Property key="Synonym_2" value="musculamine" />
+      <Property key="Synonym_3" value="neuridine" />
+      <Property key="Synonym_4" value="diaminopropyl-tetramethylenediamine" />
+      <Property key="ChemicalFormula" value="(C 10) (H 30) (N 4)" />
+      <Property key="AtomCharges" value="(11 1), (14 1), (12 1), (13 1)" />
+      <Property key="Gibbs0" value="318.74066" />
+      <Property key="Inchi" value="InChI=1S/C10H26N4/c11-5-3-9-13-7-1-2-8-14-10-4-6-12/h13-14H,1-12H2/p+4" />
+      <Property key="InchiKey" value="InChIKey=PFNFFQXMRSDOHW-UHFFFAOYSA-R" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="206.374" />
+      <Property key="MonoisotopicMw" value="202.2157468554" />
+      <Property key="NonStandardInchi" value="InChI=1S/C10H26N4/c11-5-3-9-13-7-1-2-8-14-10-4-6-12/h13-14H,1-12H2/p+4" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-6952, REG-12861, REG0-7041" />
+      <Property key="Smiles" value="C(CCC[NH2+]CCC[NH3+])[NH2+]CCC[NH3+]" />
+      <Property key="SystematicName" value="N,N&apos;-bis(3-aminopropyl)-1,4-butane-diamine" />
+      <CitationRef elementRef="citation_PUB_11537482" />
+    </DataNode>
+    <DataNode elementId="S-ADENOSYLMETHIONINE" textLabel="S-adenosyl-L-methionine" type="Metabolite">
+      <Xref identifier="MEFKEPWMEQBLKI-FCKMPRQPSA-O" dataSource="InChIKey" />
+      <Graphics centerX="617.195556640625" centerY="778.5057983398438" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: S-ADENOSYLMETHIONINE| (AdoMet, SAM) is a sulfonium compound in which each of the carbons attached to the sulfur is activated toward nucleophilic attack. It is the most common methyl group donor for methyltransferase enzymes. In addition, AdoMet is cleaved reductively by a large number of iron-sulfur cluster-containing enzymes (known as radical SAM or radical AdoMet enzymes) to produce |FRAME: CPD-15400|, which they use to activate their substrates. Another major role of AdoMet is in polyamine biosynthesis, where it is decarboxylated by |FRAME: EC-4.1.1.50|, to form |FRAME: S-ADENOSYLMETHIONINAMINE|, which serves as a propylamine group donor. AdoMet is formed by |FRAME: EC-2.5.1.6| and bears an &lt;i&gt;S&lt;/i&gt; configuration at the sulfur atom. The chiral sulfonium of AdoMet spontaneously racemizes under physiological conditions to form a mixture of &lt;i&gt;S&lt;/i&gt; and &lt;i&gt;R&lt;/i&gt; isomers. This results in reduced activity, as the |FRAME: CPD0-2554 &quot;&lt;i&gt;R&lt;/i&gt; isomer&quot;| is not accepted as a substrate for AdoMet-dependent methyltransferases |CITS: [12419350]|.</Comment>
+      <Property key="UniqueID" value="S-ADENOSYLMETHIONINE" />
+      <Property key="AlternativeId_Pubchem" value="24762165" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004214738" />
+      <Property key="AlternativeId_Seed" value="cpd00017" />
+      <Property key="AlternativeId_Metanetx" value="MNXM16" />
+      <Property key="AlternativeId_Refmet" value="S-adenosyl-L-methioninate" />
+      <Property key="AlternativeId_Bigg" value="amet" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC59789" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01185" />
+      <Property key="AlternativeId_Chebi" value="59789" />
+      <Property key="AlternativeId_LigandCpd" value="C00019" />
+      <Property key="AlternativeId_Cas" value="29908-03-0" />
+      <Property key="Synonym_1" value="(&lt;i&gt;S&lt;/i&gt;)-S-adenosyl-L-methionine" />
+      <Property key="Synonym_2" value="AdoMet" />
+      <Property key="Synonym_3" value="SAM" />
+      <Property key="Synonym_4" value="2-&lt;i&gt;S&lt;/i&gt;-adenosyl-L-methionine" />
+      <Property key="Synonym_5" value="&lt;i&gt;S&lt;/i&gt;-adenosyl-methionine" />
+      <Property key="Synonym_6" value="adenosylmethionine" />
+      <Property key="Synonym_7" value="&lt;i&gt;S&lt;/i&gt;-adenosylmethionine" />
+      <Property key="ChemicalFormula" value="(C 15) (H 23) (N 6) (O 5) (S 1)" />
+      <Property key="AbbrevName" value="SAM" />
+      <Property key="AtomCharges" value="(27 1), (24 -1), (16 1)" />
+      <Property key="Gibbs0" value="124.03472" />
+      <Property key="Inchi" value="InChI=1S/C15H22N6O5S/c1-27(3-2-7(16)15(24)25)4-8-10(22)11(23)14(26-8)21-6-20-9-12(17)18-5-19-13(9)21/h5-8,10-11,14,22-23H,2-4,16H2,1H3,(H2-,17,18,19,24,25)/p+1/t7-,8+,10+,11+,14+,27-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=MEFKEPWMEQBLKI-FCKMPRQPSA-O" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="399.444" />
+      <Property key="MonoisotopicMw" value="400.1528886021" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-15570, REG-12359, REG-9936, REG-9937, REG-8082, REG0-8461, REG-7118" />
+      <Property key="Smiles" value="C[S+](C[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3))CC[C@@H](C(=O)[O-])[NH3+]" />
+      <CitationRef elementRef="citation_PUB_12419350" />
+    </DataNode>
+    <DataNode elementId="_5-METHYLTHIOADENOSINE" textLabel="S-methyl-5&apos;-thioadenosine" type="Metabolite">
+      <Xref identifier="WUUGFSXJNOTRMR-IOSLPCCCSA-N" dataSource="InChIKey" />
+      <Graphics centerX="850.3519897460938" centerY="1025.885986328125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="5-METHYLTHIOADENOSINE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004228245" />
+      <Property key="AlternativeId_Seed" value="cpd00147" />
+      <Property key="AlternativeId_Metanetx" value="MNXM150" />
+      <Property key="AlternativeId_Refmet" value="5&apos;-Methylthioadenosine" />
+      <Property key="AlternativeId_Bigg" value="5mta" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC17509" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01173" />
+      <Property key="AlternativeId_Drugbank" value="DB02282" />
+      <Property key="AlternativeId_Chemspider" value="388321" />
+      <Property key="AlternativeId_Pubchem" value="439176" />
+      <Property key="AlternativeId_Chebi" value="17509" />
+      <Property key="AlternativeId_LigandCpd" value="C00170" />
+      <Property key="AlternativeId_Cas" value="2457-80-9" />
+      <Property key="Synonym_1" value="methylthioadenosine" />
+      <Property key="Synonym_2" value="5&apos;-methylthioadenosine" />
+      <Property key="Synonym_3" value="MTA" />
+      <Property key="Synonym_4" value="5&apos;-deoxy-5&apos;-(methylsulfanyl)adenosine" />
+      <Property key="Synonym_5" value="5&apos;-deoxy-5&apos;-(methylthio)adenosine" />
+      <Property key="ChemicalFormula" value="(C 11) (H 15) (N 5) (O 3) (S 1)" />
+      <Property key="Gibbs0" value="110.0778" />
+      <Property key="Inchi" value="InChI=1S/C11H15N5O3S/c1-20-2-5-7(17)8(18)11(19-5)16-4-15-6-9(12)13-3-14-10(6)16/h3-5,7-8,11,17-18H,2H2,1H3,(H2,12,13,14)/t5-,7-,8-,11-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=WUUGFSXJNOTRMR-IOSLPCCCSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="297.331" />
+      <Property key="MonoisotopicMw" value="297.08956006380004" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-6951" />
+      <Property key="Smiles" value="CSC[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3)" />
+    </DataNode>
+    <DataNode elementId="S-ADENOSYLMETHIONINAMINE" textLabel="S-adenosyl 3-(methylsulfanyl)propylamine" type="Metabolite">
+      <Xref identifier="ZUNBITIXDCPNSD-LSRJEVITSA-O" dataSource="InChIKey" />
+      <Graphics centerX="100.0" centerY="525.5509643554688" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="S-ADENOSYLMETHIONINAMINE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004095557" />
+      <Property key="AlternativeId_Seed" value="cpd00837" />
+      <Property key="AlternativeId_Metanetx" value="MNXM321" />
+      <Property key="AlternativeId_Refmet" value="S-Adenosylmethioninamine" />
+      <Property key="AlternativeId_Bigg" value="ametam" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57443" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00988" />
+      <Property key="AlternativeId_Chebi" value="57443" />
+      <Property key="AlternativeId_Pubchem" value="25203490" />
+      <Property key="AlternativeId_LigandCpd" value="C01137" />
+      <Property key="Synonym_1" value="&lt;i&gt;S&lt;/i&gt;-adenosyl-(5&apos;)-3-methylthiopropylamine" />
+      <Property key="Synonym_2" value="dcSAM" />
+      <Property key="Synonym_3" value="decarboxylated AdoMet" />
+      <Property key="Synonym_4" value="(5-deoxy-5-adenosyl)(3-aminopropyl) methylsulfonium salt" />
+      <Property key="Synonym_5" value="decarboxylated SAM" />
+      <Property key="Synonym_6" value="&lt;i&gt;S&lt;/i&gt;-adenosylmethioninamine" />
+      <Property key="Synonym_7" value="decarboxylated S-adenosylmethionine" />
+      <Property key="Synonym_8" value="&lt;i&gt;S&lt;/i&gt;-methyl-&lt;i&gt;S&lt;/i&gt;-adenosyl homocysteamine" />
+      <Property key="Synonym_9" value="3-amino-propyl-&lt;i&gt;S&lt;/i&gt;-adenosine" />
+      <Property key="Synonym_10" value="&lt;i&gt;S&lt;/i&gt;-adenosyl-L-methioninamine" />
+      <Property key="Synonym_11" value="&lt;i&gt;S&lt;/i&gt;-adenosyl 3-(methylthio)propylamine" />
+      <Property key="ChemicalFormula" value="(C 14) (H 24) (N 6) (O 3) (S 1)" />
+      <Property key="AbbrevName" value="dAdoMet" />
+      <Property key="AtomCharges" value="(15 1), (24 1)" />
+      <Property key="Gibbs0" value="213.00967" />
+      <Property key="Inchi" value="InChI=1S/C14H23N6O3S/c1-24(4-2-3-15)5-8-10(21)11(22)14(23-8)20-7-19-9-12(16)17-6-18-13(9)20/h6-8,10-11,14,21-22H,2-5,15H2,1H3,(H2,16,17,18)/q+1/p+1/t8-,10-,11-,14-,24?/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=ZUNBITIXDCPNSD-LSRJEVITSA-O" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="356.442" />
+      <Property key="MonoisotopicMw" value="356.1630593579" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-14239, REG0-9840" />
+      <Property key="Smiles" value="C[S+](CCC[NH3+])C[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3)" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="970.16162109375" y="595.4088134765625" elementRef="AT5G19530" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="1117.22607421875" y="50.0" elementRef="AT5G19530-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_1_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_1_0_0" x="1183.2791748046875" y="835.8812255859375" elementRef="AT5G53120" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_1_0_0" arrowHead="TranscriptionTranslation" x="570.9423828125" y="233.54481506347656" elementRef="AT5G53120-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="SAMDECARB-RXN">
+      <Xref identifier="15981" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="SAMDECARB-RXN_start" x="662.195556640625" y="778.5057983398438" elementRef="S-ADENOSYLMETHIONINE" relX="1.0" relY="0.0" />
+        <Point elementId="SAMDECARB-RXN_end" arrowHead="Conversion" x="55.0" y="525.5509643554688" elementRef="S-ADENOSYLMETHIONINAMINE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="SAMDECARB-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Rhea" value="15981" />
+      <Property key="AlternativeId_Uniprot" value="P82184" />
+      <Property key="AlternativeId_Pir" value="T22361" />
+      <Property key="UniqueID" value="SAMDECARB-RXN" />
+      <Property key="EC_Number" value="EC-4.1.1.50" />
+      <Property key="Pathways" value="BSUBPOLYAMSYN-PWY, ARGSPECAT-PWY" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="S-ADENOSYLMETHIONINE + PROTON =&gt; CARBON-DIOXIDE + S-ADENOSYLMETHIONINAMINE" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXNQT-9642" />
+      <Property key="Synonym_1" value="S-adenosyl-L-methionine decarboxylase" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-3.7141113" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="Synonyms" value="S-adenosyl-L-methionine decarboxylase" />
+    </Interaction>
+    <Interaction elementId="SAMDECARB-RXN_ENZRXNQT-9642">
+      <Waypoints>
+        <Point elementId="SAMDECARB-RXN_ENZRXNQT-9642_start" x="882.69873046875" y="799.353515625" elementRef="AT3G02470-MONOMER-BETA" relX="0.0" relY="1.0" />
+        <Point elementId="SAMDECARB-RXN_ENZRXNQT-9642_end" arrowHead="Catalysis" x="0" y="0" elementRef="SAMDECARB-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="SAMDECARB-RXN_anchor_reactant_1">
+      <Xref identifier="15981" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="SAMDECARB-RXN_anchor_reactant_start_1" x="962.6902465820312" y="1550.0" elementRef="PROTON" relX="1.0" relY="0.0" />
+        <Point elementId="SAMDECARB-RXN_anchor_reactant_end_1" x="0" y="0" elementRef="SAMDECARB-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="SAMDECARB-RXN_anchor_product_0">
+      <Xref identifier="15981" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="SAMDECARB-RXN_anchor_product_start_0" x="0" y="0" elementRef="SAMDECARB-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="SAMDECARB-RXN_anchor_product_end_0" arrowHead="Conversion" x="232.49188232421875" y="1256.724609375" elementRef="CARBON-DIOXIDE" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="SPERMINE-SYNTHASE-RXN">
+      <Xref identifier="19973" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="SPERMINE-SYNTHASE-RXN_start" x="1566.139892578125" y="1219.484619140625" elementRef="SPERMIDINE" relX="1.0" relY="0.0" />
+        <Point elementId="SPERMINE-SYNTHASE-RXN_end" arrowHead="Conversion" x="1555.0" y="537.4297485351562" elementRef="SPERMINE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="SPERMINE-SYNTHASE-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Uniprot" value="P52788" />
+      <Property key="AlternativeId_Rhea" value="19973" />
+      <Property key="AlternativeId_Pir" value="S54160" />
+      <Property key="UniqueID" value="SPERMINE-SYNTHASE-RXN" />
+      <Property key="EC_Number" value="EC-2.5.1.22" />
+      <Property key="Pathways" value="POLYAMINSYN3-PWY, ARGSPECAT-PWY" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="SPERMIDINE + S-ADENOSYLMETHIONINAMINE =&gt; PROTON + SPERMINE + 5-METHYLTHIOADENOSINE" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXNQT-6763, ENZRXNQT-9641" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="Synonym_1" value="Spermidine aminopropyltransferase" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-11.708252" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="Synonyms" value="Spermidine aminopropyltransferase" />
+    </Interaction>
+    <Interaction elementId="SPERMINE-SYNTHASE-RXN_ENZRXNQT-9641">
+      <Waypoints>
+        <Point elementId="SPERMINE-SYNTHASE-RXN_ENZRXNQT-9641_start" x="615.9423828125" y="246.04481506347656" elementRef="AT5G53120-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="SPERMINE-SYNTHASE-RXN_ENZRXNQT-9641_end" arrowHead="Catalysis" x="0" y="0" elementRef="SPERMINE-SYNTHASE-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="SPERMINE-SYNTHASE-RXN_ENZRXNQT-6763">
+      <Waypoints>
+        <Point elementId="SPERMINE-SYNTHASE-RXN_ENZRXNQT-6763_start" x="1162.22607421875" y="62.5" elementRef="AT5G19530-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="SPERMINE-SYNTHASE-RXN_ENZRXNQT-6763_end" arrowHead="Catalysis" x="0" y="0" elementRef="SPERMINE-SYNTHASE-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="SPERMINE-SYNTHASE-RXN_anchor_reactant_1">
+      <Xref identifier="19973" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="SPERMINE-SYNTHASE-RXN_anchor_reactant_start_1" x="145.0" y="525.5509643554688" elementRef="S-ADENOSYLMETHIONINAMINE" relX="1.0" relY="0.0" />
+        <Point elementId="SPERMINE-SYNTHASE-RXN_anchor_reactant_end_1" x="0" y="0" elementRef="SPERMINE-SYNTHASE-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="SPERMINE-SYNTHASE-RXN_anchor_product_0">
+      <Xref identifier="19973" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="SPERMINE-SYNTHASE-RXN_anchor_product_start_0" x="0" y="0" elementRef="SPERMINE-SYNTHASE-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="SPERMINE-SYNTHASE-RXN_anchor_product_end_0" arrowHead="Conversion" x="872.6902465820312" y="1550.0" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="SPERMINE-SYNTHASE-RXN_anchor_product_2">
+      <Xref identifier="19973" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="SPERMINE-SYNTHASE-RXN_anchor_product_start_2" x="0" y="0" elementRef="SPERMINE-SYNTHASE-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="SPERMINE-SYNTHASE-RXN_anchor_product_end_2" arrowHead="Conversion" x="805.3519897460938" y="1025.885986328125" elementRef="_5-METHYLTHIOADENOSINE" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Groups>
+    <Group elementId="CPLXQT-25" textLabel="CPLXQT-25" type="Complex">
+      <Xref identifier="CPLXQT-25" dataSource="plantcyc" />
+      <Graphics centerX="882.69873046875" centerY="786.853515625" width="140" height="100" textColor="666666" fontName="Arial" fontSize="10" borderColor="9900CC" borderStyle="Dashed" borderWidth="2.0" fillColor="F5E6FF" shapeType="Rectangle" zOrder="-1" />
+      <Comment source="AU4FS-1, THE-ARABIDOPSIS-INFORMATION-RESOURCE, tissier">The &lt;i&gt;Arabidopsis SAMDC&lt;/i&gt; gene was expressed in an &lt;i&gt;E. coli&lt;/i&gt; heterologous expression system |CITS:[10578049]|. The purified enzyme was shown to catalyze the conversion of |FRAME:S-ADENOSYLMETHIONINE| into |FRAME:S-ADENOSYLMETHIONINAMINE|. In addition, the enzyme was also shown to catalyze the decarboxylation of |FRAME:LYS| |CITS:[10578049]|. The catalytic complex is a &amp;alpha;&lt;sub&gt;2&lt;/sub&gt;&amp;beta;&lt;sub&gt;2&lt;/sub&gt; heterotetramer. Both subunits are encoded by the same gene, which is first translated into a preprotein that is differentially cleaved into subunits &amp;alpha; and &amp;beta;. Several mutants were analyzed: the K81A and C83A mutants showed higher specific activities towards lysine, 6- and 2-fold higher than wild type AdoMetDC, respectively. In the case of the K81A mutant, the enzymatic activities towards ornithine and arginine were also increased 2- and 4-fold, respectively. However, the C50A and C230A mutants showed enzymatic activities similar to wild type. The mutation in K81A affected primarily the substrate binding without a significant effect on the catalytic activity.</Comment>
+      <Property key="UniqueID" value="CPLXQT-25" />
+      <Property key="ComplexComponents" value="AT3G02470-MONOMER-BETA, AT3G02470-MONOMER" />
+      <Property key="ComponentCount" value="2" />
+      <Property key="IsComplex" value="true" />
+      <Property key="Catalyzes" value="RXN-9643, RXN-9642" />
+      <Property key="CatalyzesCount" value="2" />
+      <Property key="^coefficient" value="2, 2" />
+      <Property key="InstanceNameTemplate" value="CPLX-*" />
+      <Property key="MolecularWeightExp" value="80." />
+      <Property key="MolecularWeightKd" value="80." />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_10578049" />
+    </Group>
+  </Groups>
+  <Citations>
+    <Citation elementId="citation_PUB_10944107">
+      <Xref identifier="10944107" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_11537482">
+      <Xref identifier="11537482" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_KRAMER96">
+      <Xref identifier="PUB-KRAMER96 | Polyamine inhibitors and analogs. (Kramer, D. L., 1996)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_PUB_11731804">
+      <Xref identifier="11731804" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_10578049">
+      <Xref identifier="10578049" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_12220656">
+      <Xref identifier="12220656" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_12419350">
+      <Xref identifier="12419350" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_12782327">
+      <Xref identifier="12782327" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

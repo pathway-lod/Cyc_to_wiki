@@ -44,9 +44,12 @@ def sanitize_element_id(element_id):
     """
     if not element_id:
         return element_id
-    if element_id[0].isdigit():
-        return f"_{element_id}"
-    return re.sub(r'[^a-zA-Z0-9_.-]', '_', element_id)
+    #replace invalid characters with underscores
+    sanitized = re.sub(r'[^a-zA-Z0-9_.-]', '_', element_id)
+    # check with extra sanitization?
+    if sanitized and not (sanitized[0].isalpha() or sanitized[0] == '_'):
+        sanitized = f"_{sanitized}"
+    return sanitized
 
 
 class IDManager:
