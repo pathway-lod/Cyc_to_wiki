@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="RXN-15815" organism="cellular organisms" source="PlantCyc" version="20251206225519">
+  <Description>Single reaction view for RXN-15815: RXN-15815</Description>
+  <Authors>
+    <Author name="BioCyc" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from BioCyc single reaction data.</Comment>
+  <Property key="UniqueID" value="RXN-15815" />
+  <Graphics boardWidth="1200" boardHeight="800" />
+  <DataNodes>
+    <DataNode elementId="Cytochromes-C-Oxidized" textLabel="Cytochromes-C-Oxidized" type="Metabolite">
+      <Xref identifier="Cytochromes-C-Oxidized" dataSource="" />
+      <Graphics centerX="200" centerY="210" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="AAAAAA" borderStyle="Solid" borderWidth="1.0" fillColor="F0F0F0" shapeType="Rectangle" />
+      <Property key="IsPlaceholder" value="true" />
+    </DataNode>
+    <DataNode elementId="Cytochromes-C-Reduced" textLabel="Cytochromes-C-Reduced" type="Metabolite">
+      <Xref identifier="Cytochromes-C-Reduced" dataSource="" />
+      <Graphics centerX="350" centerY="210" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="AAAAAA" borderStyle="Solid" borderWidth="1.0" fillColor="F0F0F0" shapeType="Rectangle" />
+      <Property key="IsPlaceholder" value="true" />
+    </DataNode>
+    <DataNode elementId="E-" textLabel="E-" type="Metabolite">
+      <Xref identifier="E-" dataSource="" />
+      <Graphics centerX="500" centerY="210" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="AAAAAA" borderStyle="Solid" borderWidth="1.0" fillColor="F0F0F0" shapeType="Rectangle" />
+      <Property key="IsPlaceholder" value="true" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="RXN-15815">
+      <Xref identifier="RXN-15815" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-15815_start" x="245.0" y="210" elementRef="Cytochromes-C-Oxidized" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-15815_end" arrowHead="Conversion" x="305.0" y="210" elementRef="Cytochromes-C-Reduced" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-15815_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-15815" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="1.10.2.2-RXN, CYTOCHROME-C-OXIDASE-RXN" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="Cytochromes-C-Oxidized + E- =&gt; Cytochromes-C-Reduced" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="StandardReductionPotential" value="0.254" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionType" value="Redox-Half-Reactions" />
+      <Property key="AtomMappings" value=":CPDS-LACK-STRUCTURE" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="^compartment" value="CCO-OUT, CCO-OUT" />
+    </Interaction>
+    <Interaction elementId="RXN-15815_anchor_reactant_1">
+      <Xref identifier="RXN-15815" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-15815_anchor_reactant_start_1" x="545.0" y="210" elementRef="E-" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-15815_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-15815_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+</Pathway>

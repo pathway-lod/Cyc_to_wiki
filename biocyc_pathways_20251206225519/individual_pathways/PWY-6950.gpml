@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="DIMBOA-glucoside biosynthesis" organism="Zea mays, Aphelandra squarrosa, Coix lacryma-jobi, Triticum aestivum, Zea mays" source="PlantCyc" version="20251206225519">
+  <Description>&lt;b&gt;General Background&lt;/b&gt; Benzoxazinoids were identified in the early 1960s as secondary metabolites of the grasses (including the major agricultural crops maize (|FRAME: TAX-4577 &lt;i&gt;Zea mays&lt;/i&gt;|), wheat (|FRAME: TAX-4565 &lt;i&gt;Triticum aestivum&lt;/i&gt;|), and rye (|FRAME: TAX-4550 &lt;i&gt;Secale cereale&lt;/i&gt;|)) that function as natural pesticides and exhibit allelopathic properties |CITS:[BARNES87][10804466]|. Benzoxazinoids are synthesized in two subfamilies of the |FRAME: TAX-4479 &lt;i&gt;Poaceae&lt;/i&gt;| and sporadically in single species of the dicots |CITS: [19577780]|. They play an important role in defense against pests such as insects, pathogenic fungi and bacteria |CITS:[niemeyer88]|. The most common benzoxazinoids are |FRAME: CPD-6365 DIBOA| and |FRAME: CPD-6366 DIMBOA|. Since the aglycone benzoxazinoids are autotoxic, they are stored in glucosylated forms that have reduced chemical reactivity |CITS: [10804466]|. The glucosides are stored in the vacuoles |CITS:[12239364]|. This allows the plants to store the toxic compounds in anticipation of pathogen attacks, prompting the suggestion to name these compounds &quot;phytoanticipins&quot;. For the sythesis of |FRAME: CPD-13811 DIBOA-&amp;beta;-D-glucoside|, please see |FRAME: PWY-6949 DIBOA-glucoside biosynthesis|. &lt;b&gt;About This Pathway&lt;/b&gt; While |FRAME: CPD-6365 DIBOA| is the main benzoxazinoid in some plants, including barley, in most other benzoxazinoid-producing plants, such as maize, |FRAME: CPD-13811 DIBOA-&amp;beta;-D-glucoside| is further converted to |FRAME: CPD-6562 DIMBOA-&amp;beta;-D-glucoside| |CITS: [19577780]| by a two-step hydroxylation/methylation at position C7, catalyzed by |FRAME: G-7822 Bx6| and |FRAME: G-14794 Bx7|, respectively |CITS:[18192444]|. In addition, |FRAME: CPD-6562 DIMBOA-&amp;beta;-D-glucoside| has been reported to be further methylated in maize into |FRAME: CPD-6561 HMDBOA-glucoside| |CITS:[12359519]|. |FRAME: CPD-6561 HMDBOA-glucoside| is relatively lipophilic amongst benzoxazinoid glucosides, a property that may affect its absorption by pathogens at the site of interaction |CITS:[12359519]|. A number of defense reaction elicitors (chitin and chitosan fragments, heavy metal ions such as copper and jasmonic acid) have been shown to lead to the production of HDMBOA-glucoside in wheat, maize and Job&apos;s Tears plants |CITS:[11314951][12359519]|.</Description>
+  <Authors>
+    <Author name="SRI" />
+    <Author name="caspi" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-6950" />
+  <Property key="Type" value="PHYTOALEXIN-SYN" />
+  <Property key="ReactionCount" value="2" />
+  <Property key="ReactionIDs" value="RXN-6685, RXN-6687" />
+  <Property key="PathwayLinks" value="(CPD-6562 RXN-7061), (PWY-6949)" />
+  <Property key="Organism" value="Zea mays, Aphelandra squarrosa, Coix lacryma-jobi, Triticum aestivum, Zea mays" />
+  <Property key="TaxonomicRange_1" value="Magnoliopsida" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_PUB_18192444" />
+  <CitationRef elementRef="citation_PUB_12359519" />
+  <CitationRef elementRef="citation_PUB_19577780" />
+  <CitationRef elementRef="citation_PUB_10804466" />
+  <CitationRef elementRef="citation_PUB_12239364" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="G-7822" textLabel="Bx6" type="GeneProduct">
+      <Xref identifier="G-7822" dataSource="plantcyc" />
+      <Graphics centerX="820.23095703125" centerY="793.5639038085938" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="G-7822" />
+      <Property key="Product" value="MONOMER-10142" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+      <CitationRef elementRef="citation_PUB_12620350" />
+    </DataNode>
+    <DataNode elementId="G-14794" textLabel="Bx7" type="GeneProduct">
+      <Xref identifier="G-14794" dataSource="plantcyc" />
+      <Graphics centerX="924.0947265625" centerY="50.0" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="G-14794" />
+      <Property key="Product" value="MONOMER-16976" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+      <CitationRef elementRef="citation_PUB_18192444" />
+    </DataNode>
+    <DataNode elementId="GDQC-114717" textLabel="bx7" type="GeneProduct">
+      <Xref identifier="GDQC-114717" dataSource="plantcyc" />
+      <Graphics centerX="1297.2874755859375" centerY="1062.01953125" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1">Expression high in young seedlings |CITS: [18192444]|; not associated with significant QTL for DIMBOA synthesis |CITS: [19911162]|</Comment>
+      <Property key="UniqueID" value="GDQC-114717" />
+      <Property key="Synonym_1" value="GRMZM2G441753" />
+      <Property key="Synonym_2" value="benzoxazinoid synthesis7" />
+      <Property key="Product" value="MONOMERDQC-6" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+      <CitationRef elementRef="citation_PUB_18192444" />
+      <CitationRef elementRef="citation_PUB_19911162" />
+    </DataNode>
+    <DataNode elementId="MONOMER-16976" textLabel="TRIBOA-glucoside methyltransferase" type="Protein">
+      <Xref identifier="MONOMER-16976" dataSource="plantcyc" />
+      <Graphics centerX="891.4937133789062" centerY="1150.3841552734375" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="SRI, caspi">|FRAME: CPD-13812 TRIBOA-&amp;beta;-D-glucoside| was used as substrate to purify the putative O-methyltransferase that catalyzes the last step in benzoxazinoid biosynthesis of maize. Analysis of individual active fractions on SDS-PAGE gels revealed a band with a molecular mass of about 40 kD. The protein was purified from the band and subjected to amino-acid sequencing. The sequence was used to identify the |FRAME: G-14794 Bx7| gene |CITS: [18192444]|. The protein belongs to the family of class II OMTs, and is predominantly expressed in the maize seedling. The gene was cloned and expressed in E. coli as a His-tagged protein, and the recombinant protein was purified to homogeneity. The only substance that served as a substrate for the purified protein was |FRAME: CPD-13812 TRIBOA-&amp;beta;-D-glucoside| |CITS: [18192444]|.</Comment>
+      <Property key="UniqueID" value="MONOMER-16976" />
+      <Property key="Catalyzes" value="RXN-19785" />
+      <Property key="Gene" value="G-14794" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="MolecularWeightExp" value="40." />
+      <Property key="MolecularWeightKd" value="42.131, 40." />
+      <Property key="MolecularWeightSeq" value="42.131" />
+      <Property key="Species" value="TAX-4577" />
+      <CitationRef elementRef="citation_PUB_18192444" />
+    </DataNode>
+    <DataNode elementId="MONOMER-10142" textLabel="2-oxoglutarate-dependent dioxygenase" type="Protein">
+      <Xref identifier="Q84TC2" dataSource="uniprot" />
+      <Graphics centerX="483.9380187988281" centerY="1489.05615234375" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, O-28, pujar">Maize mutants having a disrupted &lt;i&gt;Bx6&lt;/i&gt; gene no longer accumulate DIMBOA and instead show elevated amounts of DIBOA |CITS:[12620350]|. This gene is thought to encode a 2-oxoglutarate-dependent dioxygenase responsible for the C-7 hydroxylation of DIBOA into TRIBOA. The exact nature of the substrate for this enzyme, however, remains to be confirmed. At the time of this review, this enzyme has not been purified and no enzymatic information is yet available.</Comment>
+      <Property key="UniqueID" value="MONOMER-10142" />
+      <Property key="AlternativeId_Uniprot" value="Q84TC2" />
+      <Property key="AlternativeId_Pid" value="ACF85899" />
+      <Property key="Synonym_1" value="1-aminocyclopropane-1-carboxylate oxidase" />
+      <Property key="Catalyzes" value="RXN-10282" />
+      <Property key="Gene" value="G-7822" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="MolecularWeightKd" value="41.3" />
+      <Property key="MolecularWeightSeq" value="41.3" />
+      <Property key="Species" value="TAX-381124" />
+      <CitationRef elementRef="citation_PUB_12620350" />
+    </DataNode>
+    <DataNode elementId="MONOMERDQC-6" textLabel="TRIBOA glucoside methylase" type="Protein">
+      <Xref identifier="MONOMERDQC-6" dataSource="plantcyc" />
+      <Graphics centerX="798.333740234375" centerY="622.1215209960938" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="MONOMERDQC-6" />
+      <Property key="Catalyzes" value="RXN-DQC-131735" />
+      <Property key="Gene" value="GDQC-114717" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="TAX-381124" />
+    </DataNode>
+    <DataNode elementId="CPD-13811" textLabel="DIBOA-β-D-glucoside" type="Metabolite">
+      <Xref identifier="OUSLYTBGQGKTME-BJPDSMLBSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1600.0" centerY="720.4365844726562" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-13811" />
+      <Property key="AlternativeId_Pubchem" value="5316752" />
+      <Property key="AlternativeId_Seed" value="cpd24055" />
+      <Property key="AlternativeId_Metanetx" value="MNXM3260" />
+      <Property key="AlternativeId_Chebi" value="80091" />
+      <Property key="AlternativeId_LigandCpd" value="C15772" />
+      <Property key="Synonym_1" value="(2&lt;i&gt;R&lt;/i&gt;)-4-hydroxy-3-oxo-3,4-dihydro-2&lt;i&gt;H&lt;/i&gt;-1,4-benzoxazin-2-yl &amp;beta;-D-glucopyranoside" />
+      <Property key="ChemicalFormula" value="(C 14) (H 17) (N 1) (O 9)" />
+      <Property key="AbbrevName" value="DIBOA-Glc" />
+      <Property key="Gibbs0" value="-87.67095" />
+      <Property key="Inchi" value="InChI=1S/C14H17NO9/c16-5-8-9(17)10(18)11(19)13(23-8)24-14-12(20)15(21)6-3-1-2-4-7(6)22-14/h1-4,8-11,13-14,16-19,21H,5H2/t8-,9-,10+,11-,13+,14?/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=OUSLYTBGQGKTME-BJPDSMLBSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="343.29" />
+      <Property key="MonoisotopicMw" value="343.0903311498" />
+      <Property key="NonStandardInchi" value="InChI=1S/C14H17NO9/c16-5-8-9(17)10(18)11(19)13(23-8)24-14-12(20)15(21)6-3-1-2-4-7(6)22-14/h1-4,8-11,13-14,16-19,21H,5H2/t8-,9-,10+,11-,13?,14?/m1/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-8998" />
+      <Property key="Smiles" value="C3(\C=C2(C(/OC(O[C@@H]1(O[C@H](CO)[C@@H](O)[C@H](O)[C@@H](O)1))C(=O)N(O)2)=C\C=3))" />
+      <CitationRef elementRef="citation_PUB_11314951" />
+    </DataNode>
+    <DataNode elementId="SUC" textLabel="succinate" type="Metabolite">
+      <Xref identifier="KDYFGRWQOYBRFD-UHFFFAOYSA-L" dataSource="InChIKey" />
+      <Graphics centerX="885.278564453125" centerY="867.5921630859375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="SUC" />
+      <Property key="AlternativeId_Zinc" value="ZINC000000895030" />
+      <Property key="AlternativeId_Mediadb" value="compounds/42/" />
+      <Property key="AlternativeId_Seed" value="cpd00036" />
+      <Property key="AlternativeId_Metanetx" value="MNXM25" />
+      <Property key="AlternativeId_Refmet" value="Succinic acid" />
+      <Property key="AlternativeId_Bigg" value="succ" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC30031" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00254" />
+      <Property key="AlternativeId_Chemspider" value="140973" />
+      <Property key="AlternativeId_Chebi" value="30031" />
+      <Property key="AlternativeId_Pubchem" value="160419" />
+      <Property key="AlternativeId_Knapsack" value="C00001205" />
+      <Property key="AlternativeId_LigandCpd" value="C00042" />
+      <Property key="AlternativeId_Cas" value="110-15-6" />
+      <Property key="Synonym_1" value="succinic acid" />
+      <Property key="Synonym_2" value="suc" />
+      <Property key="Synonym_3" value="succ" />
+      <Property key="Synonym_4" value="butanedioic acid" />
+      <Property key="Synonym_5" value="ethylenesuccinic acid" />
+      <Property key="ChemicalFormula" value="(C 4) (H 4) (O 4)" />
+      <Property key="AtomCharges" value="(8 -1), (6 -1)" />
+      <Property key="Gibbs0" value="-125.16375" />
+      <Property key="Inchi" value="InChI=1S/C4H6O4/c5-3(6)1-2-4(7)8/h1-2H2,(H,5,6)(H,7,8)/p-2" />
+      <Property key="InchiKey" value="InChIKey=KDYFGRWQOYBRFD-UHFFFAOYSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="116.073" />
+      <Property key="MonoisotopicMw" value="118.026608681" />
+      <Property key="NonStandardInchi" value="InChI=1S/C4H6O4/c5-3(6)1-2-4(7)8/h1-2H2,(H,5,6)(H,7,8)/p-2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-11781, REG-9498, REG-8440, REG-6519, REG0-8573, REG0-7156, REG-8023, REG-6749, REG-8214, REG-8264, REG-10747, REG-9433, REG-10094, REG-8201" />
+      <Property key="Smiles" value="C(C([O-])=O)CC([O-])=O" />
+    </DataNode>
+    <DataNode elementId="CPD-6562" textLabel="DIMBOA-β-D-glucoside" type="Metabolite">
+      <Xref identifier="WTGXAWKVZMQEDA-XGHDNVSXSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1264.08642578125" centerY="341.2349853515625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-6562" />
+      <Property key="AlternativeId_Pubchem" value="11132470" />
+      <Property key="AlternativeId_Zinc" value="ZINC000013481679" />
+      <Property key="AlternativeId_Metanetx" value="MNXM7309" />
+      <Property key="AlternativeId_Chebi" value="16603" />
+      <Property key="AlternativeId_LigandCpd" value="C15768" />
+      <Property key="Synonym_1" value="(2&lt;i&gt;R&lt;/i&gt;)-4-hydroxy-7-methoxy-3-oxo-3,4-dihydro-2&lt;i&gt;H&lt;/i&gt;-1,4-benzoxazin-2-yl &amp;beta;-D-glucopyranoside" />
+      <Property key="Synonym_2" value="DIMBOA-Glc" />
+      <Property key="ChemicalFormula" value="(C 15) (H 19) (N 1) (O 10)" />
+      <Property key="Gibbs0" value="-91.95871" />
+      <Property key="Inchi" value="InChI=1S/C15H19NO10/c1-23-6-2-3-7-8(4-6)24-15(13(21)16(7)22)26-14-12(20)11(19)10(18)9(5-17)25-14/h2-4,9-12,14-15,17-20,22H,5H2,1H3/t9-,10-,11+,12-,14+,15?/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=WTGXAWKVZMQEDA-XGHDNVSXSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="373.316" />
+      <Property key="MonoisotopicMw" value="373.1008958361" />
+      <Property key="NonStandardInchi" value="InChI=1S/C15H19NO10/c1-23-6-2-3-7-8(4-6)24-15(13(21)16(7)22)26-14-12(20)11(19)10(18)9(5-17)25-14/h2-4,9-12,14-15,17-20,22H,5H2,1H3/t9-,10-,11+,12-,14?,15?/m1/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="COC3(\C=C1(C(/N(O)C(=O)C(O1)O[C@@H]2(O[C@H](CO)[C@@H](O)[C@H](O)[C@@H](O)2))=C\C=3))" />
+      <CitationRef elementRef="citation_PUB_11314951" />
+    </DataNode>
+    <DataNode elementId="OXYGEN-MOLECULE" textLabel="dioxygen" type="Metabolite">
+      <Xref identifier="MYMOFIZGZYHOMD-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1041.8255615234375" centerY="684.0226440429688" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="OXYGEN-MOLECULE" />
+      <Property key="AlternativeId_Metanetx" value="MNXM4" />
+      <Property key="AlternativeId_Seed" value="cpd00007" />
+      <Property key="AlternativeId_Bigg" value="33493" />
+      <Property key="AlternativeId_Pubchem" value="977" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15379" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01377" />
+      <Property key="AlternativeId_Chemspider" value="952" />
+      <Property key="AlternativeId_Chebi" value="15379" />
+      <Property key="AlternativeId_LigandCpd" value="C00007" />
+      <Property key="AlternativeId_Cas" value="7782-44-7" />
+      <Property key="Synonym_1" value="molecular oxygen" />
+      <Property key="Synonym_2" value="oxygen" />
+      <Property key="Synonym_3" value="oxygen molecule" />
+      <Property key="ChemicalFormula" value="(O 2)" />
+      <Property key="AbbrevName" value="O&lt;sub&gt;2&lt;/sub&gt;" />
+      <Property key="Gibbs0" value="3.92" />
+      <Property key="Inchi" value="InChI=1S/O2/c1-2" />
+      <Property key="InchiKey" value="InChIKey=MYMOFIZGZYHOMD-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="31.999" />
+      <Property key="MonoisotopicMw" value="31.9898292442" />
+      <Property key="NonStandardInchi" value="InChI=1S/O2/c1-2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-6231, REG0-11284, REG-13683, REG-5882" />
+      <Property key="Smiles" value="O=O" />
+      <Property key="SystematicName" value="dioxygen" />
+    </DataNode>
+    <DataNode elementId="_2-KETOGLUTARATE" textLabel="2-oxoglutarate" type="Metabolite">
+      <Xref identifier="KPGXRSRHYNQIFN-UHFFFAOYSA-L" dataSource="InChIKey" />
+      <Graphics centerX="551.8201293945312" centerY="683.7205810546875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="2-KETOGLUTARATE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001532519" />
+      <Property key="AlternativeId_Seed" value="cpd00024" />
+      <Property key="AlternativeId_Metanetx" value="MNXM20" />
+      <Property key="AlternativeId_Refmet" value="Oxoglutaric acid" />
+      <Property key="AlternativeId_Bigg" value="akg" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC16810" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00208" />
+      <Property key="AlternativeId_Chemspider" value="144236" />
+      <Property key="AlternativeId_Chebi" value="16810" />
+      <Property key="AlternativeId_Pubchem" value="164533" />
+      <Property key="AlternativeId_Knapsack" value="C00000769" />
+      <Property key="AlternativeId_LigandCpd" value="C00026" />
+      <Property key="AlternativeId_Cas" value="328-50-7" />
+      <Property key="Synonym_1" value="ketoglutarate" />
+      <Property key="Synonym_2" value="&amp;alpha;-ketoglutarate" />
+      <Property key="Synonym_3" value="2-oxoglutaric acid" />
+      <Property key="Synonym_4" value="&amp;alpha;-ketoglutaric acid" />
+      <Property key="Synonym_5" value="&amp;alpha;-oxoglutarate" />
+      <Property key="Synonym_6" value="2-ketoglutaric acid" />
+      <Property key="Synonym_7" value="2-ketoglutarate" />
+      <Property key="Synonym_8" value="2-oxopentanedionic acid" />
+      <Property key="Synonym_9" value="2-oxopentanedionate" />
+      <Property key="Synonym_10" value="a-ketoglutaric acid" />
+      <Property key="ChemicalFormula" value="(C 5) (H 4) (O 5)" />
+      <Property key="AtomCharges" value="(7 -1), (9 -1)" />
+      <Property key="Gibbs0" value="-149.76376" />
+      <Property key="Inchi" value="InChI=1S/C5H6O5/c6-3(5(9)10)1-2-4(7)8/h1-2H2,(H,7,8)(H,9,10)/p-2" />
+      <Property key="InchiKey" value="InChIKey=KPGXRSRHYNQIFN-UHFFFAOYSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="144.084" />
+      <Property key="MonoisotopicMw" value="146.0215233031" />
+      <Property key="NonStandardInchi" value="InChI=1S/C5H6O5/c6-3(5(9)10)1-2-4(7)8/h1-2H2,(H,7,8)(H,9,10)/p-2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-9501, REG0-6736, REG-9990, REG-10227" />
+      <Property key="Smiles" value="C(CC([O-])=O)C(=O)C([O-])=O" />
+      <CitationRef elementRef="citation_PUB_18493048" />
+    </DataNode>
+    <DataNode elementId="ADENOSYL-HOMO-CYS" textLabel="S-adenosyl-L-homocysteine" type="Metabolite">
+      <Xref identifier="ZJUKTBDSGOFHSH-WFMPWKQPSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1100.6424560546875" centerY="1550.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ADENOSYL-HOMO-CYS" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004228232" />
+      <Property key="AlternativeId_Seed" value="cpd00019" />
+      <Property key="AlternativeId_Metanetx" value="MNXM19" />
+      <Property key="AlternativeId_Pubchem" value="25246222" />
+      <Property key="AlternativeId_Refmet" value="S-Adenosylhomocysteine" />
+      <Property key="AlternativeId_Bigg" value="ahcys" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57856" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00939" />
+      <Property key="AlternativeId_Chebi" value="57856" />
+      <Property key="AlternativeId_LigandCpd" value="C00021" />
+      <Property key="AlternativeId_Cas" value="979-92-0" />
+      <Property key="Synonym_1" value="S-adenosyl-L-homocysteine" />
+      <Property key="Synonym_2" value="SAH" />
+      <Property key="Synonym_3" value="S-adenosylhomocysteine" />
+      <Property key="Synonym_4" value="2-S-adenosyl-L-homocysteine" />
+      <Property key="Synonym_5" value="AdoHcy" />
+      <Property key="Synonym_6" value="2-&lt;i&gt;S&lt;/i&gt;-adenosyl-L-homocysteine" />
+      <Property key="Synonym_7" value="&lt;i&gt;S&lt;/i&gt;-adenosyl-homocysteine" />
+      <Property key="Synonym_8" value="&lt;i&gt;S&lt;/i&gt;-adenosylhomocysteine" />
+      <Property key="Synonym_9" value="adenosyl-homo-cys" />
+      <Property key="Synonym_10" value="adenosylhomocysteine" />
+      <Property key="Synonym_11" value="adenosylhomo-cys" />
+      <Property key="Synonym_12" value="&lt;i&gt;S&lt;/i&gt;-(5&apos;-adenosyl)-homocysteine" />
+      <Property key="ChemicalFormula" value="(C 14) (H 20) (N 6) (O 5) (S 1)" />
+      <Property key="AbbrevName" value="SAH" />
+      <Property key="AtomCharges" value="(23 -1), (15 1)" />
+      <Property key="Gibbs0" value="84.0534" />
+      <Property key="Inchi" value="InChI=1S/C14H20N6O5S/c15-6(14(23)24)1-2-26-3-7-9(21)10(22)13(25-7)20-5-19-8-11(16)17-4-18-12(8)20/h4-7,9-10,13,21-22H,1-3,15H2,(H,23,24)(H2,16,17,18)/t6-,7+,9+,10+,13+/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=ZJUKTBDSGOFHSH-WFMPWKQPSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="384.409" />
+      <Property key="MonoisotopicMw" value="384.1215884737" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-7326, REG-8467, REG-14064, REG-14069, REG-14088, REG-14789, REG-14060, REG-13740, REG-13741, REG0-10277, REG-12210, REG-13289, REG-8730, REG-12209, REG-7945, REG-11566, REG-7947, REG-8997, REG-11533, REG-7961, REG-6204, REG-6764, REG-6118, REG-6119, REG-11189, REG-9060, REG-8992, REG-7408" />
+      <Property key="Smiles" value="C(SC[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3))C[C@@H](C(=O)[O-])[NH3+]" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="100.0" centerY="518.2261352539062" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="ChemicalFormula" value="(H 1)" />
+      <Property key="AtomCharges" value="(1 1)" />
+      <Property key="Gibbs0" value="0.42906138" />
+      <Property key="Inchi" value="InChI=1S/p+1" />
+      <Property key="InchiKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicMw" value="1.0078250321" />
+      <Property key="NonStandardInchi" value="InChI=1S/p+1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="[H+]" />
+    </DataNode>
+    <DataNode elementId="CPD-13812" textLabel="TRIBOA-β-D-glucoside" type="Metabolite">
+      <Xref identifier="YCPMEKOJGFYFJJ-BJPDSMLBSA-N" dataSource="InChIKey" />
+      <Graphics centerX="507.3695068359375" centerY="209.42410278320312" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-13812" />
+      <Property key="AlternativeId_Pubchem" value="46174045" />
+      <Property key="AlternativeId_Seed" value="cpd24056" />
+      <Property key="AlternativeId_Metanetx" value="MNXM2738" />
+      <Property key="AlternativeId_LigandCpd" value="C18062" />
+      <Property key="AlternativeId_Chebi" value="81477" />
+      <Property key="Synonym_1" value="(2&lt;i&gt;R&lt;/i&gt;)-4,7-dihydroxy-3-oxo-3,4-dihydro-2&lt;i&gt;H&lt;/i&gt;-1,4-benzoxazin-2-yl &amp;beta;-D-glucopyranoside" />
+      <Property key="ChemicalFormula" value="(C 14) (H 17) (N 1) (O 10)" />
+      <Property key="Gibbs0" value="-127.150955" />
+      <Property key="Inchi" value="InChI=1S/C14H17NO10/c16-4-8-9(18)10(19)11(20)13(24-8)25-14-12(21)15(22)6-2-1-5(17)3-7(6)23-14/h1-3,8-11,13-14,16-20,22H,4H2/t8-,9-,10+,11-,13+,14?/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=YCPMEKOJGFYFJJ-BJPDSMLBSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="359.289" />
+      <Property key="MonoisotopicMw" value="359.0852457719" />
+      <Property key="NonStandardInchi" value="InChI=1S/C14H17NO10/c16-4-8-9(18)10(19)11(20)13(24-8)25-14-12(21)15(22)6-2-1-5(17)3-7(6)23-14/h1-3,8-11,13-14,16-20,22H,4H2/t8-,9-,10+,11-,13?,14?/m1/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C3(/C=C2(C(/OC(O[C@@H]1(O[C@H](CO)[C@@H](O)[C@H](O)[C@@H](O)1))C(=O)N(O)2)=C\C(\O)=3))" />
+      <CitationRef elementRef="citation_PUB_18192444" />
+    </DataNode>
+    <DataNode elementId="S-ADENOSYLMETHIONINE" textLabel="S-adenosyl-L-methionine" type="Metabolite">
+      <Xref identifier="MEFKEPWMEQBLKI-FCKMPRQPSA-O" dataSource="InChIKey" />
+      <Graphics centerX="650.2091064453125" centerY="953.399658203125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: S-ADENOSYLMETHIONINE| (AdoMet, SAM) is a sulfonium compound in which each of the carbons attached to the sulfur is activated toward nucleophilic attack. It is the most common methyl group donor for methyltransferase enzymes. In addition, AdoMet is cleaved reductively by a large number of iron-sulfur cluster-containing enzymes (known as radical SAM or radical AdoMet enzymes) to produce |FRAME: CPD-15400|, which they use to activate their substrates. Another major role of AdoMet is in polyamine biosynthesis, where it is decarboxylated by |FRAME: EC-4.1.1.50|, to form |FRAME: S-ADENOSYLMETHIONINAMINE|, which serves as a propylamine group donor. AdoMet is formed by |FRAME: EC-2.5.1.6| and bears an &lt;i&gt;S&lt;/i&gt; configuration at the sulfur atom. The chiral sulfonium of AdoMet spontaneously racemizes under physiological conditions to form a mixture of &lt;i&gt;S&lt;/i&gt; and &lt;i&gt;R&lt;/i&gt; isomers. This results in reduced activity, as the |FRAME: CPD0-2554 &quot;&lt;i&gt;R&lt;/i&gt; isomer&quot;| is not accepted as a substrate for AdoMet-dependent methyltransferases |CITS: [12419350]|.</Comment>
+      <Property key="UniqueID" value="S-ADENOSYLMETHIONINE" />
+      <Property key="AlternativeId_Pubchem" value="24762165" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004214738" />
+      <Property key="AlternativeId_Seed" value="cpd00017" />
+      <Property key="AlternativeId_Metanetx" value="MNXM16" />
+      <Property key="AlternativeId_Refmet" value="S-adenosyl-L-methioninate" />
+      <Property key="AlternativeId_Bigg" value="amet" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC59789" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01185" />
+      <Property key="AlternativeId_Chebi" value="59789" />
+      <Property key="AlternativeId_LigandCpd" value="C00019" />
+      <Property key="AlternativeId_Cas" value="29908-03-0" />
+      <Property key="Synonym_1" value="(&lt;i&gt;S&lt;/i&gt;)-S-adenosyl-L-methionine" />
+      <Property key="Synonym_2" value="AdoMet" />
+      <Property key="Synonym_3" value="SAM" />
+      <Property key="Synonym_4" value="2-&lt;i&gt;S&lt;/i&gt;-adenosyl-L-methionine" />
+      <Property key="Synonym_5" value="&lt;i&gt;S&lt;/i&gt;-adenosyl-methionine" />
+      <Property key="Synonym_6" value="adenosylmethionine" />
+      <Property key="Synonym_7" value="&lt;i&gt;S&lt;/i&gt;-adenosylmethionine" />
+      <Property key="ChemicalFormula" value="(C 15) (H 23) (N 6) (O 5) (S 1)" />
+      <Property key="AbbrevName" value="SAM" />
+      <Property key="AtomCharges" value="(27 1), (24 -1), (16 1)" />
+      <Property key="Gibbs0" value="124.03472" />
+      <Property key="Inchi" value="InChI=1S/C15H22N6O5S/c1-27(3-2-7(16)15(24)25)4-8-10(22)11(23)14(26-8)21-6-20-9-12(17)18-5-19-13(9)21/h5-8,10-11,14,22-23H,2-4,16H2,1H3,(H2-,17,18,19,24,25)/p+1/t7-,8+,10+,11+,14+,27-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=MEFKEPWMEQBLKI-FCKMPRQPSA-O" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="399.444" />
+      <Property key="MonoisotopicMw" value="400.1528886021" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-15570, REG-12359, REG-9936, REG-9937, REG-8082, REG0-8461, REG-7118" />
+      <Property key="Smiles" value="C[S+](C[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3))CC[C@@H](C(=O)[O-])[NH3+]" />
+      <CitationRef elementRef="citation_PUB_12419350" />
+    </DataNode>
+    <DataNode elementId="CARBON-DIOXIDE" textLabel="CO₂" type="Metabolite">
+      <Xref identifier="CURLTUGMZLYLDI-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="205.83229064941406" centerY="1052.6748046875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CARBON-DIOXIDE" />
+      <Property key="AlternativeId_Metanetx" value="MNXM13" />
+      <Property key="AlternativeId_Seed" value="cpd00011" />
+      <Property key="AlternativeId_Bigg" value="33506" />
+      <Property key="AlternativeId_UmBbdCpd" value="c0131" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01967" />
+      <Property key="AlternativeId_LigandCpd" value="C00011" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC16526" />
+      <Property key="AlternativeId_Chemspider" value="274" />
+      <Property key="AlternativeId_Chebi" value="16526" />
+      <Property key="AlternativeId_Pubchem" value="280" />
+      <Property key="AlternativeId_Cas" value="124-38-9" />
+      <Property key="Synonym_1" value="carbonic anhydride" />
+      <Property key="Synonym_2" value="carbonic acid gas" />
+      <Property key="Synonym_3" value="carbon dioxide" />
+      <Property key="ChemicalFormula" value="(C 1) (O 2)" />
+      <Property key="Gibbs0" value="-92.26" />
+      <Property key="Inchi" value="InChI=1S/CO2/c2-1-3" />
+      <Property key="InchiKey" value="InChIKey=CURLTUGMZLYLDI-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="44.01" />
+      <Property key="MonoisotopicMw" value="43.989829244199996" />
+      <Property key="NonStandardInchi" value="InChI=1S/CO2/c2-1-3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C(=O)=O" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="865.23095703125" y="793.5639038085938" elementRef="G-7822" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="438.9380187988281" y="1489.05615234375" elementRef="MONOMER-10142" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_1_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_1_0_0" x="969.0947265625" y="50.0" elementRef="G-14794" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_1_0_0" arrowHead="TranscriptionTranslation" x="846.4937133789062" y="1150.3841552734375" elementRef="MONOMER-16976" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_2_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_2_0_0" x="1342.2874755859375" y="1062.01953125" elementRef="GDQC-114717" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_2_0_0" arrowHead="TranscriptionTranslation" x="753.333740234375" y="622.1215209960938" elementRef="MONOMERDQC-6" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-6685">
+      <Xref identifier="EC-1.14.11.59" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-6685_start" x="1645.0" y="720.4365844726562" elementRef="CPD-13811" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-6685_end" arrowHead="Conversion" x="462.3695068359375" y="209.42410278320312" elementRef="CPD-13812" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-6685_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Comment source="BioCyc">The enzyme is involved in the biosynthesis of protective and allelophatic benzoxazinoids in the family of Poacea (grasses).</Comment>
+      <Property key="UniqueID" value="RXN-6685" />
+      <Property key="EC_Number" value="EC-1.14.11.59" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-6950" />
+      <Property key="ReactionEquation" value="CPD-13811 + OXYGEN-MOLECULE + 2-KETOGLUTARATE =&gt; CPD-13812 + SUC + CARBON-DIOXIDE" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-10282" />
+      <Property key="Synonym_1" value="DIBOA-glucoside dioxygenase" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-111.06003" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="Synonyms" value="DIBOA-glucoside dioxygenase" />
+      <CitationRef elementRef="citation_PUB_18192444" />
+    </Interaction>
+    <Interaction elementId="RXN-6685_ENZRXN-10282">
+      <Waypoints>
+        <Point elementId="RXN-6685_ENZRXN-10282_start" x="483.9380187988281" y="1501.55615234375" elementRef="MONOMER-10142" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-6685_ENZRXN-10282_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-6685_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-6685_anchor_reactant_1">
+      <Xref identifier="EC-1.14.11.59" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-6685_anchor_reactant_start_1" x="1086.8255615234375" y="684.0226440429688" elementRef="OXYGEN-MOLECULE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-6685_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-6685_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-6685_anchor_reactant_2">
+      <Xref identifier="EC-1.14.11.59" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-6685_anchor_reactant_start_2" x="596.8201293945312" y="683.7205810546875" elementRef="_2-KETOGLUTARATE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-6685_anchor_reactant_end_2" x="0" y="0" elementRef="RXN-6685_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-6685_anchor_product_1">
+      <Xref identifier="EC-1.14.11.59" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-6685_anchor_product_start_1" x="0" y="0" elementRef="RXN-6685_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-6685_anchor_product_end_1" arrowHead="Conversion" x="840.278564453125" y="867.5921630859375" elementRef="SUC" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-6685_anchor_product_2">
+      <Xref identifier="EC-1.14.11.59" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-6685_anchor_product_start_2" x="0" y="0" elementRef="RXN-6685_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-6685_anchor_product_end_2" arrowHead="Conversion" x="160.83229064941406" y="1052.6748046875" elementRef="CARBON-DIOXIDE" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-6687">
+      <Xref identifier="EC-2.1.1.241" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-6687_start" x="552.3695068359375" y="209.42410278320312" elementRef="CPD-13812" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-6687_end" arrowHead="Conversion" x="1219.08642578125" y="341.2349853515625" elementRef="CPD-6562" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-6687_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Comment source="BioCyc">The enzyme is involved in the biosynthesis of the protective and allelophatic benzoxazinoid DIMBOA ((2R)-4-hydroxy-7-methoxy-3-oxo-3,4-dihydro-2H-1,4-benzoxazin) in some plants, most commonly from the family of Poacea (grasses).</Comment>
+      <Property key="UniqueID" value="RXN-6687" />
+      <Property key="EC_Number" value="EC-2.1.1.241" />
+      <Property key="Pathways" value="PWY-6950" />
+      <Property key="ReactionEquation" value="S-ADENOSYLMETHIONINE + CPD-13812 =&gt; CPD-6562 + ADENOSYL-HOMO-CYS + PROTON" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXNDQC-131735, ENZRXN-19785" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-4.3599854" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <CitationRef elementRef="citation_PUB_18192444" />
+    </Interaction>
+    <Interaction elementId="RXN-6687_ENZRXN-19785">
+      <Waypoints>
+        <Point elementId="RXN-6687_ENZRXN-19785_start" x="891.4937133789062" y="1162.8841552734375" elementRef="MONOMER-16976" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-6687_ENZRXN-19785_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-6687_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-6687_ENZRXNDQC-131735">
+      <Waypoints>
+        <Point elementId="RXN-6687_ENZRXNDQC-131735_start" x="798.333740234375" y="634.6215209960938" elementRef="MONOMERDQC-6" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-6687_ENZRXNDQC-131735_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-6687_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-6687_anchor_reactant_0">
+      <Xref identifier="EC-2.1.1.241" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-6687_anchor_reactant_start_0" x="695.2091064453125" y="953.399658203125" elementRef="S-ADENOSYLMETHIONINE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-6687_anchor_reactant_end_0" x="0" y="0" elementRef="RXN-6687_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-6687_anchor_product_1">
+      <Xref identifier="EC-2.1.1.241" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-6687_anchor_product_start_1" x="0" y="0" elementRef="RXN-6687_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-6687_anchor_product_end_1" arrowHead="Conversion" x="1055.6424560546875" y="1550.0" elementRef="ADENOSYL-HOMO-CYS" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-6687_anchor_product_2">
+      <Xref identifier="EC-2.1.1.241" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-6687_anchor_product_start_2" x="0" y="0" elementRef="RXN-6687_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-6687_anchor_product_end_2" arrowHead="Conversion" x="55.0" y="518.2261352539062" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_PUB_10804466">
+      <Xref identifier="10804466" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_18192444">
+      <Xref identifier="18192444" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_12359519">
+      <Xref identifier="12359519" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_18493048">
+      <Xref identifier="18493048" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_12419350">
+      <Xref identifier="12419350" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_12239364">
+      <Xref identifier="12239364" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_19911162">
+      <Xref identifier="19911162" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_11314951">
+      <Xref identifier="11314951" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_12620350">
+      <Xref identifier="12620350" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_19577780">
+      <Xref identifier="19577780" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

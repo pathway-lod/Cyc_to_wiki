@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="FATTY-ACYL-COA-SYNTHASE-RXN" organism="cellular organisms" source="PlantCyc" version="20251206225519">
+  <Description>Single reaction view for FATTY-ACYL-COA-SYNTHASE-RXN: FATTY-ACYL-COA-SYNTHASE-RXN</Description>
+  <Authors>
+    <Author name="BioCyc" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from BioCyc single reaction data.</Comment>
+  <Property key="UniqueID" value="FATTY-ACYL-COA-SYNTHASE-RXN" />
+  <Graphics boardWidth="1200" boardHeight="800" />
+  <DataNodes>
+    <DataNode elementId="MALONYL-COA" textLabel="malonyl-CoA" type="Metabolite">
+      <Xref identifier="LTYOQGRJFJAKNA-DVVLENMVSA-I" dataSource="InChIKey" />
+      <Graphics centerX="200" centerY="210" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="MALONYL-COA" />
+      <Property key="AlternativeId_Metanetx" value="MNXM40" />
+      <Property key="AlternativeId_Refmet" value="Malonyl-CoA" />
+      <Property key="AlternativeId_Pubchem" value="25246281" />
+      <Property key="AlternativeId_Bigg" value="33789" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57384" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01175" />
+      <Property key="AlternativeId_Chebi" value="57384" />
+      <Property key="AlternativeId_LigandCpd" value="C00083" />
+      <Property key="AlternativeId_Cas" value="524-14-1" />
+      <Property key="Synonym_1" value="malonyl coenzyme A" />
+      <Property key="Synonym_2" value="malonylCoenzyme A" />
+      <Property key="ChemicalFormula" value="(C 24) (H 33) (N 7) (O 19) (P 3) (S 1)" />
+      <Property key="AbbrevName" value="MalCoA" />
+      <Property key="AtomCharges" value="(41 -1), (39 -1), (44 -1), (42 -1), (34 -1)" />
+      <Property key="Gibbs0" value="-597.77356" />
+      <Property key="Inchi" value="InChI=1S/C24H38N7O19P3S/c1-24(2,19(37)22(38)27-4-3-13(32)26-5-6-54-15(35)7-14(33)34)9-47-53(44,45)50-52(42,43)46-8-12-18(49-51(39,40)41)17(36)23(48-12)31-11-30-16-20(25)28-10-29-21(16)31/h10-12,17-19,23,36-37H,3-9H2,1-2H3,(H,26,32)(H,27,38)(H,33,34)(H,42,43)(H,44,45)(H2,25,28,29)(H2,39,40,41)/p-5/t12-,17-,18-,19+,23-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=LTYOQGRJFJAKNA-DVVLENMVSA-I" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="848.541" />
+      <Property key="MonoisotopicMw" value="853.1156022961001" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-12034, REG-12175" />
+      <Property key="Smiles" value="CC(C)([C@@H](O)C(=O)NCCC(=O)NCCSC(=O)CC(=O)[O-])COP(=O)(OP(=O)(OC[C@@H]1([C@@H](OP([O-])(=O)[O-])[C@@H](O)[C@@H](O1)N2(C3(\N=C/N=C(C(\N=C/2)=3)/N))))[O-])[O-]" />
+      <Property key="Superatoms" value="COA-GROUP" />
+    </DataNode>
+    <DataNode elementId="Long-Chain-Acyl-CoAs" textLabel="a long-chain fatty acyl-CoA" type="Metabolite">
+      <Xref identifier="33184" dataSource="ChEBI" />
+      <Graphics centerX="350" centerY="210" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AUN7V-2">Fatty acyl-CoAs are |FRAME: ACYL-COA &quot;acyl-CoAs&quot;| derived from |FRAME: Fatty-Acids &quot;fatty acids&quot;|. Many enzymes that act on fatty acids, as well as the corresponding |FRAME: Fatty-Acyl-CoAs &quot;fatty acyl-CoAs&quot;|, alcohols, and aldehydes, have evolved to recognize substrates with a limited range of chain lengths. To classify these enzymes, it is helpful to divide the substrates into smaller groups based on their chain length. The following subgroups have been defined: |FRAME: Short-Chain-Acyl-CoAs &quot;Short-chain acyl-CoAs&quot;| are derived from |FRAME: Short-chain-fatty-acids &quot;fatty acids that have 3-5 carbons in the longest chain&quot;|. |FRAME: Medium-Chain-Acyl-CoAs &quot;Medium-chain acyl-CoAs&quot;| are derived from |FRAME: Medium-chain-fatty-acids &quot;fatty acids that have 6-12 carbons in the longest chain&quot;|. |FRAME: Long-Chain-Acyl-CoAs &quot;Long-chain acyl-CoAs&quot;| are derived from |FRAME: Long-Chain-Fatty-Acids &quot;fatty acids that have 13-22 carbons in the longest chain&quot;|. |FRAME: VERY-LONG-CHAIN-FATTY-ACYL-COA &quot;Very-long-chain fatty acyl-CoAs&quot;| are derived from |FRAME: Very-long-chain-fatty-acids &quot;fatty acids that have 23-27 carbons in the longest chain&quot;|. |FRAME: Ultra-Long-Chain-Acyl-CoAs &quot;Ultra-long-chain fatty acyl-CoAs&quot;| are derived from |FRAME: Ultra-long-chain-fatty-acids &quot;fatty acids that have more than 27 carbons in the longest chain&quot;|.</Comment>
+      <Property key="UniqueID" value="Long-Chain-Acyl-CoAs" />
+      <Property key="AlternativeId_Seed" value="cpd29330" />
+      <Property key="AlternativeId_Metanetx" value="MNXM3299" />
+      <Property key="AlternativeId_LigandCpd" value="C02843" />
+      <Property key="AlternativeId_Chebi" value="33184" />
+      <Property key="AtomCharges" value="(52 -1), (50 -1), (49 -1), (47 -1)" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="N+1Name" value="a long-chain acyl&lt;sub&gt;n+2&lt;/sub&gt;-CoA" />
+      <Property key="N1Name" value="a long-chain acyl&lt;sub&gt;n-2&lt;/sub&gt;-CoA" />
+      <Property key="NName" value="a long-chain acyl&lt;sub&gt;n&lt;/sub&gt;-CoA" />
+      <Property key="NonStandardInchi" value="InChI=1S/C34H60N7O17P3S/c1-4-5-6-7-8-9-10-11-12-13-14-25(43)62-18-17-36-24(42)15-16-37-32(46)29(45)34(2,3)20-55-61(52,53)58-60(50,51)54-19-23-28(57-59(47,48)49)27(44)33(56-23)41-22-40-26-30(35)38-21-39-31(26)41/h21-23,27-29,33,44-45H,4-20H2,1-3H3,(H,36,42)(H,37,46)(H,50,51)(H,52,53)(H2,35,38,39)(H2,47,48,49)/p-4/t23-,27-,28-,29+,33-/m1/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C(CCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)[C@H](O)C(C)(C)COP(=O)(OP(=O)(OC[C@@H]1([C@@H](OP([O-])(=O)[O-])[C@@H](O)[C@@H](O1)N2(C3(\N=C/N=C(C(\N=C/2)=3)/N))))[O-])[O-])[R]" />
+      <Property key="Superatoms" value="COA-GROUP" />
+      <CitationRef elementRef="citation__STRYER_" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="500" centerY="210" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="ChemicalFormula" value="(H 1)" />
+      <Property key="AtomCharges" value="(1 1)" />
+      <Property key="Gibbs0" value="0.42906138" />
+      <Property key="Inchi" value="InChI=1S/p+1" />
+      <Property key="InchiKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicMw" value="1.0078250321" />
+      <Property key="NonStandardInchi" value="InChI=1S/p+1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="[H+]" />
+    </DataNode>
+    <DataNode elementId="NADP" textLabel="NADP⁺" type="Metabolite">
+      <Xref identifier="XJLXINKUBYWONI-NNYOXOHSSA-K" dataSource="InChIKey" />
+      <Graphics centerX="200" centerY="310" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: NAD| and |FRAME: NADP| are dinucleotides containing one |FRAME: NIACINAMIDE| base and one |FRAME: ADENINE| base. Each nucleotide is connected to a ribose sugar at position 1, and the two riboses are connected at their 5 position via a diphosphate. The only difference between the two is that in NADP there is an additional phosphate group at the 2&apos; position of the ribose that carries the adenine moiety. These molecules are biological carriers of reductive equivalents (i.e. high potential electrons). Most of the time they function as cosubstrates, and in some cases they function as |FRAME: Cofactors cofactors|. They are often referred to by the obsolete term &quot;coenzymes&quot;. The most common function of |FRAME: NAD| is to accept two electrons and a proton (a hydride ion) from a substrate that is being oxidized. This reduction converts |FRAME: NAD| to |FRAME: NADH|, the reduced form. NADH then diffuses or is transported to a terminal oxidase, where the electrons are passed on, regenerating the oxidized form. |FRAME: NADPH|, on the other hand, is mostly involved in biosynthetic reactions, where it serves as an electron donor. NADPH is formed by reduction of |FRAME: NADP|, which occurs by different mechanisms in different types of organisms. In photosynthetic organisms |FRAME: NADP| is reduced by |FRAME: CPLX-84|. In heterotrophic organisms it is reduced by central metabolism processes such as the pentose phosphate pathway (see |FRAME: OXIDATIVEPENT-PWY|).</Comment>
+      <Property key="UniqueID" value="NADP" />
+      <Property key="AlternativeId_Metanetx" value="MNXM5" />
+      <Property key="AlternativeId_Seed" value="cpd00006" />
+      <Property key="AlternativeId_Refmet" value="NADP+" />
+      <Property key="AlternativeId_Bigg" value="33488" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC58349" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00217" />
+      <Property key="AlternativeId_Chemspider" value="10239198" />
+      <Property key="AlternativeId_Chebi" value="58349" />
+      <Property key="AlternativeId_Pubchem" value="15938972" />
+      <Property key="AlternativeId_LigandCpd" value="C00006" />
+      <Property key="AlternativeId_Cas" value="53-59-8" />
+      <Property key="Synonym_1" value="&amp;beta;-NADP&lt;sup&gt;+&lt;/sup&gt;" />
+      <Property key="Synonym_2" value="coenzyme II" />
+      <Property key="Synonym_3" value="triphosphopyridine nucleotide" />
+      <Property key="Synonym_4" value="nicotinamide adenine dinucleotide phosphate" />
+      <Property key="Synonym_5" value="NADP-oxidized" />
+      <Property key="Synonym_6" value="NADP-ox" />
+      <Property key="Synonym_7" value="NADP+" />
+      <Property key="Synonym_8" value="TPN" />
+      <Property key="Synonym_9" value="TPN+" />
+      <Property key="Synonym_10" value="TPN-ox" />
+      <Property key="Synonym_11" value="nicotinamide adenine dinucleotide-P" />
+      <Property key="Synonym_12" value="NADP(+)" />
+      <Property key="Synonym_13" value="NADP" />
+      <Property key="ChemicalFormula" value="(C 21) (H 25) (N 7) (O 17) (P 3)" />
+      <Property key="AtomCharges" value="(27 1), (35 -1), (33 -1), (39 -1), (37 -1)" />
+      <Property key="CofactorsOf" value="ENZRXN-12451, ENZRXN-14499, ENZRXN-14500" />
+      <Property key="Gibbs0" value="-563.64954" />
+      <Property key="Inchi" value="InChI=1S/C21H28N7O17P3/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(44-46(33,34)35)14(30)11(43-21)6-41-48(38,39)45-47(36,37)40-5-10-13(29)15(31)20(42-10)27-3-1-2-9(4-27)18(23)32/h1-4,7-8,10-11,13-16,20-21,29-31H,5-6H2,(H7-,22,23,24,25,32,33,34,35,36,37,38,39)/p-3/t10-,11-,13-,14-,15-,16-,20-,21-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=XJLXINKUBYWONI-NNYOXOHSSA-K" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="740.386" />
+      <Property key="MonoisotopicMw" value="745.0911021051" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-14905, REG-8367, REG0-8229, REG-9121, REG-9500, REG-8442, REG0-8744, REG-8497, REG-11605, REG0-7963, REG-8650, REG0-8843, REG0-7614, REG0-7593, REG-6711, REG-6710, REG-7292" />
+      <Property key="Smiles" value="C5(/C=C\C(\C(=O)N)=C/[N+](/[C@@H]1(O[C@@H]([C@H]([C@H]1O)O)COP(OP(OC[C@H]4(O[C@@H](N2(C3(\C(\N=C/2)=C(N)/N=C\N=3)))[C@H](OP([O-])(=O)[O-])[C@H](O)4))(=O)[O-])(=O)[O-]))=5)" />
+    </DataNode>
+    <DataNode elementId="ACETYL-COA" textLabel="acetyl-CoA" type="Metabolite">
+      <Xref identifier="ZSLZBFCDCINBPY-ZSJPKINUSA-J" dataSource="InChIKey" />
+      <Graphics centerX="350" centerY="310" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ACETYL-COA" />
+      <Property key="AlternativeId_Seed" value="cpd00022" />
+      <Property key="AlternativeId_Metanetx" value="MNXM21" />
+      <Property key="AlternativeId_Refmet" value="Acetyl-CoA" />
+      <Property key="AlternativeId_Bigg" value="accoa" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57288" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01206" />
+      <Property key="AlternativeId_Chebi" value="57288" />
+      <Property key="AlternativeId_Pubchem" value="45266541" />
+      <Property key="AlternativeId_Knapsack" value="C00007259" />
+      <Property key="AlternativeId_Cas" value="72-89-9" />
+      <Property key="AlternativeId_UmBbdCpd" value="c0031" />
+      <Property key="AlternativeId_LigandCpd" value="C00024" />
+      <Property key="Synonym_1" value="acetyl coenzyme-A" />
+      <Property key="Synonym_2" value="ac-CoA" />
+      <Property key="Synonym_3" value="acetylcoenzyme-A" />
+      <Property key="Synonym_4" value="acetyl-&lt;i&gt;S&lt;/i&gt;-CoA" />
+      <Property key="Synonym_5" value="ac-&lt;i&gt;S&lt;/i&gt;-CoA" />
+      <Property key="ChemicalFormula" value="(C 23) (H 34) (N 7) (O 17) (P 3) (S 1)" />
+      <Property key="AtomCharges" value="(38 -1), (37 -1), (39 -1), (41 -1)" />
+      <Property key="Gibbs0" value="-506.8639" />
+      <Property key="Inchi" value="InChI=1S/C23H38N7O17P3S/c1-12(31)51-7-6-25-14(32)4-5-26-21(35)18(34)23(2,3)9-44-50(41,42)47-49(39,40)43-8-13-17(46-48(36,37)38)16(33)22(45-13)30-11-29-15-19(24)27-10-28-20(15)30/h10-11,13,16-18,22,33-34H,4-9H2,1-3H3,(H,25,32)(H,26,35)(H,39,40)(H,41,42)(H2,24,27,28)(H2,36,37,38)/p-4/t13-,16-,17-,18+,22-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=ZSLZBFCDCINBPY-ZSJPKINUSA-J" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="805.54" />
+      <Property key="MonoisotopicMw" value="809.1257730519" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-13931, REG-11719, REG0-6743, REG0-7082, REG0-7410, REG0-7273, REG0-7612, REG-6799, REG-6399, REG-6392" />
+      <Property key="Smiles" value="CC(=O)SCCNC(=O)CCNC(=O)[C@H](O)C(C)(C)COP(OP([O-])(OC[C@@H]1([C@@H](OP([O-])([O-])=O)[C@@H](O)[C@@H](O1)N2(C3(\N=C/N=C(C(\N=C/2)=3)/N))))=O)([O-])=O" />
+      <Property key="Superatoms" value="COA-GROUP" />
+    </DataNode>
+    <DataNode elementId="CO-A" textLabel="coenzyme A" type="Metabolite">
+      <Xref identifier="RGJOEKWQDUBAIZ-IBOSZNHHSA-J" dataSource="InChIKey" />
+      <Graphics centerX="500" centerY="310" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">Coenzyme A (CoA) is a ubiquitous compound found in archaea, bacteria, plants, and animals. It is a common acyl carrier in prokaryotic and eukaryotic cells, and is required for a multitude of reactions for both biosynthetic and degradative pathways, including the oxidation of fatty acids, carbohydrates, and amino acids |CITS: [16415216]|. While the name &quot;coenzyme A&quot; is well established, the correct name for the function of the compound in enzymatic reactions is &quot;cosubstrate&quot;.</Comment>
+      <Property key="UniqueID" value="CO-A" />
+      <Property key="AlternativeId_Metanetx" value="MNXM727276" />
+      <Property key="AlternativeId_Refmet" value="Coenzyme A" />
+      <Property key="AlternativeId_Bigg" value="33502" />
+      <Property key="AlternativeId_Pubchem" value="25113190" />
+      <Property key="AlternativeId_Wikipedia" value="Coenzyme_a" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57287" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01423" />
+      <Property key="AlternativeId_Chebi" value="57287" />
+      <Property key="AlternativeId_Knapsack" value="C00007258" />
+      <Property key="AlternativeId_Cas" value="85-61-0" />
+      <Property key="AlternativeId_LigandCpd" value="C00010" />
+      <Property key="Synonym_1" value="Co-A-SH" />
+      <Property key="Synonym_2" value="CoA" />
+      <Property key="Synonym_3" value="co-A-SH" />
+      <Property key="Synonym_4" value="co-enzyme-A" />
+      <Property key="Synonym_5" value="co-A" />
+      <Property key="Synonym_6" value="HS-CoA" />
+      <Property key="ChemicalFormula" value="(C 21) (H 32) (N 7) (O 16) (P 3) (S 1)" />
+      <Property key="AtomCharges" value="(39 -1), (37 -1), (35 -1), (33 -1)" />
+      <Property key="Gibbs0" value="-493.56613" />
+      <Property key="Inchi" value="InChI=1S/C21H36N7O16P3S/c1-21(2,16(31)19(32)24-4-3-12(29)23-5-6-48)8-41-47(38,39)44-46(36,37)40-7-11-15(43-45(33,34)35)14(30)20(42-11)28-10-27-13-17(22)25-9-26-18(13)28/h9-11,14-16,20,30-31,48H,3-8H2,1-2H3,(H,23,29)(H,24,32)(H,36,37)(H,38,39)(H2,22,25,26)(H2,33,34,35)/p-4/t11-,14-,15-,16+,20-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=RGJOEKWQDUBAIZ-IBOSZNHHSA-J" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="763.502" />
+      <Property key="MonoisotopicMw" value="767.1152083656" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-10749, REG0-9520, REG0-8343, REG0-8346, REG-14465, REG-13932, REG-13248, REG-8110, REG-10174, REG-7984, REG-12031, REG-12173, REG0-7083, REG0-8249, REG0-7409, REG0-7217, REG-8668, REG-7144, REG-7161, REG-6744, REG-6205, REG-6393" />
+      <Property key="Smiles" value="CC(C)(COP([O-])(=O)OP(OC[C@H]3(O[C@@H](N1(C2(\N=C/N=C(C(\N=C/1)=2)/N)))[C@H](O)[C@H](OP([O-])(=O)[O-])3))(=O)[O-])[C@@H](O)C(=O)NCCC(=O)NCCS" />
+      <CitationRef elementRef="citation_PUB_16415216" />
+    </DataNode>
+    <DataNode elementId="NADPH" textLabel="NADPH" type="Metabolite">
+      <Xref identifier="ACFIXJIJDZMPPO-NNYOXOHSSA-J" dataSource="InChIKey" />
+      <Graphics centerX="200" centerY="410" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: NAD| and |FRAME: NADP| are dinucleotides containing one |FRAME: NIACINAMIDE| base and one |FRAME: ADENINE| base. Each nucleotide is connected to a ribose sugar at position 1, and the two riboses are connected at their 5 position via a diphosphate. The only difference between the two is that in NADP there is an additional phosphate group at the 2&apos; position of the ribose that carries the adenine moiety. These molecules are biological carriers of reductive equivalents (i.e. high potential electrons). Most of the time they function as cosubstrates, and in some cases they function as |FRAME: Cofactors cofactors|. They are often referred to by the obsolete term &quot;coenzymes&quot;. The most common function of |FRAME: NAD| is to accept two electrons and a proton (a hydride ion) from a substrate that is being oxidized. This reduction converts |FRAME: NAD| to |FRAME: NADH|, the reduced form. NADH then diffuses or is transported to a terminal oxidase, where the electrons are passed on, regenerating the oxidized form. |FRAME: NADPH|, on the other hand, is mostly involved in biosynthetic reactions, where it serves as an electron donor. NADPH is formed by reduction of |FRAME: NADP|, which occurs by different mechanisms in different types of organisms. In photosynthetic organisms |FRAME: NADP| is reduced by |FRAME: CPLX-84|. In heterotrophic organisms it is reduced by central metabolism processes such as the pentose phosphate pathway (see |FRAME: OXIDATIVEPENT-PWY|).</Comment>
+      <Property key="UniqueID" value="NADPH" />
+      <Property key="AlternativeId_Metanetx" value="MNXM6" />
+      <Property key="AlternativeId_Seed" value="cpd00005" />
+      <Property key="AlternativeId_Refmet" value="NADPH" />
+      <Property key="AlternativeId_Bigg" value="33486" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57783" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00221" />
+      <Property key="AlternativeId_Chemspider" value="10239199" />
+      <Property key="AlternativeId_Chebi" value="57783" />
+      <Property key="AlternativeId_Pubchem" value="15983949" />
+      <Property key="AlternativeId_Cas" value="2646-71-1" />
+      <Property key="AlternativeId_LigandCpd" value="C00005" />
+      <Property key="Synonym_1" value="&amp;beta;-nicotinamide adenine dinucleotide phosphate, reduced" />
+      <Property key="Synonym_2" value="&amp;beta;-NADPH" />
+      <Property key="Synonym_3" value="reduced NADP" />
+      <Property key="Synonym_4" value="reduced dihydrotriphosphopyridine nucleotide" />
+      <Property key="Synonym_5" value="reduced nicotinamide adenine dinucleotide phosphate" />
+      <Property key="Synonym_6" value="Nicotinamide adenine dinucleotide phosphate - reduced" />
+      <Property key="Synonym_7" value="NADPH+H+" />
+      <Property key="Synonym_8" value="NADPH2" />
+      <Property key="Synonym_9" value="NADPH&lt;SUB&gt;2&lt;/SUB&gt;" />
+      <Property key="Synonym_10" value="dihydrotriphosphopyridine nucleotide" />
+      <Property key="Synonym_11" value="dihydrotriphosphopyridine nucleotide reduced" />
+      <Property key="Synonym_12" value="dihydronicotinamide adenine dinucleotide phosphate" />
+      <Property key="Synonym_13" value="dihydronicotinamide adenine dinucleotide phosphate reduced" />
+      <Property key="Synonym_14" value="NADP-reduced" />
+      <Property key="Synonym_15" value="NADP-red" />
+      <Property key="Synonym_16" value="NADPH&lt;SUP&gt;+&lt;/SUP&gt;H&lt;SUP&gt;+&lt;/SUP&gt;" />
+      <Property key="Synonym_17" value="TPNH" />
+      <Property key="Synonym_18" value="dihydronicotinamide adenine dinucleotide-P" />
+      <Property key="Synonym_19" value="NADP(H)" />
+      <Property key="ChemicalFormula" value="(C 21) (H 26) (N 7) (O 17) (P 3)" />
+      <Property key="AtomCharges" value="(35 -1), (33 -1), (39 -1), (37 -1)" />
+      <Property key="CofactorsOf" value="ENZRXN-33, ENZRXN-14497" />
+      <Property key="Gibbs0" value="-551.72284" />
+      <Property key="Inchi" value="InChI=1S/C21H30N7O17P3/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(44-46(33,34)35)14(30)11(43-21)6-41-48(38,39)45-47(36,37)40-5-10-13(29)15(31)20(42-10)27-3-1-2-9(4-27)18(23)32/h1,3-4,7-8,10-11,13-16,20-21,29-31H,2,5-6H2,(H2,23,32)(H,36,37)(H,38,39)(H2,22,24,25)(H2,33,34,35)/p-4/t10-,11-,13-,14-,15-,16-,20-,21-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=ACFIXJIJDZMPPO-NNYOXOHSSA-J" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="741.394" />
+      <Property key="MonoisotopicMw" value="745.0911021051" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-8210, REG-6520, REG0-8743, REG-13684, REG0-9021, REG-8494, REG0-7642, REG0-7643" />
+      <Property key="Smiles" value="C1(\N(/C=C(C\C=1)/C(=O)N)[C@@H]2(O[C@@H]([C@H]([C@H]2O)O)COP(OP(OC[C@H]5(O[C@@H](N3(C4(\C(\N=C/3)=C(N)/N=C\N=4)))[C@H](OP([O-])(=O)[O-])[C@H](O)5))(=O)[O-])(=O)[O-]))" />
+    </DataNode>
+    <DataNode elementId="CARBON-DIOXIDE" textLabel="CO₂" type="Metabolite">
+      <Xref identifier="CURLTUGMZLYLDI-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="350" centerY="410" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CARBON-DIOXIDE" />
+      <Property key="AlternativeId_Metanetx" value="MNXM13" />
+      <Property key="AlternativeId_Seed" value="cpd00011" />
+      <Property key="AlternativeId_Bigg" value="33506" />
+      <Property key="AlternativeId_UmBbdCpd" value="c0131" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01967" />
+      <Property key="AlternativeId_LigandCpd" value="C00011" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC16526" />
+      <Property key="AlternativeId_Chemspider" value="274" />
+      <Property key="AlternativeId_Chebi" value="16526" />
+      <Property key="AlternativeId_Pubchem" value="280" />
+      <Property key="AlternativeId_Cas" value="124-38-9" />
+      <Property key="Synonym_1" value="carbonic anhydride" />
+      <Property key="Synonym_2" value="carbonic acid gas" />
+      <Property key="Synonym_3" value="carbon dioxide" />
+      <Property key="ChemicalFormula" value="(C 1) (O 2)" />
+      <Property key="Gibbs0" value="-92.26" />
+      <Property key="Inchi" value="InChI=1S/CO2/c2-1-3" />
+      <Property key="InchiKey" value="InChIKey=CURLTUGMZLYLDI-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="44.01" />
+      <Property key="MonoisotopicMw" value="43.989829244199996" />
+      <Property key="NonStandardInchi" value="InChI=1S/CO2/c2-1-3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C(=O)=O" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="FATTY-ACYL-COA-SYNTHASE-RXN">
+      <Xref identifier="EC-2.3.1.86" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="FATTY-ACYL-COA-SYNTHASE-RXN_start" x="395.0" y="310" elementRef="ACETYL-COA" relX="1.0" relY="0.0" />
+        <Point elementId="FATTY-ACYL-COA-SYNTHASE-RXN_end" arrowHead="Conversion" x="305.0" y="210" elementRef="Long-Chain-Acyl-CoAs" relX="-1.0" relY="0.0" />
+        <Anchor elementId="FATTY-ACYL-COA-SYNTHASE-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="FATTY-ACYL-COA-SYNTHASE-RXN" />
+      <Property key="EC_Number" value="EC-2.3.1.86" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="ReactionEquation" value="ACETYL-COA + MALONYL-COA + NADPH + PROTON =&gt; Long-Chain-Acyl-CoAs + CO-A + CARBON-DIOXIDE + NADP" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED-UNFIXABLE" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="Synonym_1" value="Yeast fatty acid synthase" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="CannotBalance?" value="T" />
+      <Property key="^official?" value="T" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="^coefficient" value="n, 2n, 4n, n, n, 2n" />
+      <Property key="Synonyms" value="Yeast fatty acid synthase" />
+    </Interaction>
+    <Interaction elementId="FATTY-ACYL-COA-SYNTHASE-RXN_anchor_reactant_1">
+      <Xref identifier="EC-2.3.1.86" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="FATTY-ACYL-COA-SYNTHASE-RXN_anchor_reactant_start_1" x="245.0" y="210" elementRef="MALONYL-COA" relX="1.0" relY="0.0" />
+        <Point elementId="FATTY-ACYL-COA-SYNTHASE-RXN_anchor_reactant_end_1" x="0" y="0" elementRef="FATTY-ACYL-COA-SYNTHASE-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="FATTY-ACYL-COA-SYNTHASE-RXN_anchor_reactant_2">
+      <Xref identifier="EC-2.3.1.86" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="FATTY-ACYL-COA-SYNTHASE-RXN_anchor_reactant_start_2" x="245.0" y="410" elementRef="NADPH" relX="1.0" relY="0.0" />
+        <Point elementId="FATTY-ACYL-COA-SYNTHASE-RXN_anchor_reactant_end_2" x="0" y="0" elementRef="FATTY-ACYL-COA-SYNTHASE-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="FATTY-ACYL-COA-SYNTHASE-RXN_anchor_reactant_3">
+      <Xref identifier="EC-2.3.1.86" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="FATTY-ACYL-COA-SYNTHASE-RXN_anchor_reactant_start_3" x="545.0" y="210" elementRef="PROTON" relX="1.0" relY="0.0" />
+        <Point elementId="FATTY-ACYL-COA-SYNTHASE-RXN_anchor_reactant_end_3" x="0" y="0" elementRef="FATTY-ACYL-COA-SYNTHASE-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="FATTY-ACYL-COA-SYNTHASE-RXN_anchor_product_1">
+      <Xref identifier="EC-2.3.1.86" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="FATTY-ACYL-COA-SYNTHASE-RXN_anchor_product_start_1" x="0" y="0" elementRef="FATTY-ACYL-COA-SYNTHASE-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="FATTY-ACYL-COA-SYNTHASE-RXN_anchor_product_end_1" arrowHead="Conversion" x="455.0" y="310" elementRef="CO-A" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="FATTY-ACYL-COA-SYNTHASE-RXN_anchor_product_2">
+      <Xref identifier="EC-2.3.1.86" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="FATTY-ACYL-COA-SYNTHASE-RXN_anchor_product_start_2" x="0" y="0" elementRef="FATTY-ACYL-COA-SYNTHASE-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="FATTY-ACYL-COA-SYNTHASE-RXN_anchor_product_end_2" arrowHead="Conversion" x="305.0" y="410" elementRef="CARBON-DIOXIDE" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="FATTY-ACYL-COA-SYNTHASE-RXN_anchor_product_3">
+      <Xref identifier="EC-2.3.1.86" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="FATTY-ACYL-COA-SYNTHASE-RXN_anchor_product_start_3" x="0" y="0" elementRef="FATTY-ACYL-COA-SYNTHASE-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="FATTY-ACYL-COA-SYNTHASE-RXN_anchor_product_end_3" arrowHead="Conversion" x="155.0" y="310" elementRef="NADP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation__STRYER_">
+      <Xref identifier="[STRYER]" dataSource="PlantCyc" />
+    </Citation>
+    <Citation elementId="citation_PUB_16415216">
+      <Xref identifier="16415216" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>
