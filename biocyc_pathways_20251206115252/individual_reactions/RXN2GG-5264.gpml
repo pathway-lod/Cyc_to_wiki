@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="glucosyltransferase" organism="cellular organisms" source="PlantCyc" version="20251206115252">
+  <Description>Single reaction view for RXN2GG-5264: glucosyltransferase</Description>
+  <Authors>
+    <Author name="BioCyc" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from BioCyc single reaction data.</Comment>
+  <Property key="UniqueID" value="RXN2GG-5264" />
+  <Graphics boardWidth="1200" boardHeight="800" />
+  <DataNodes>
+    <DataNode elementId="CPD2GG-5240" textLabel="medicagenic acid" type="Metabolite">
+      <Graphics centerX="200" centerY="210" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD2GG-5240" />
+      <Property key="ChemicalFormula" value="(C 30) (H 46) (O 6)" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="502.69" />
+      <Property key="MonoisotopicMw" value="502.32943920919996" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC12(CC(C(C(C1CCC4(C2C\C=C5(C3(CC(CCC3(CCC45C)C(O)=O)(C)C)))C)(C)C(O)=O)O)O)" />
+    </DataNode>
+    <DataNode elementId="CPD2GG-5257" textLabel="3-glc-glc-rha, 28-glc medicagenic acid" type="Metabolite">
+      <Graphics centerX="350" centerY="210" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD2GG-5257" />
+      <Property key="ChemicalFormula" value="(C 54) (H 86) (O 25)" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="1135.258" />
+      <Property key="MonoisotopicMw" value="1134.5458183131" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC15(C(C(C(C(C1)O)OC2(OC(C(C(C2O)OC3(OC(C(C(C3O)OC4(OC(C(C(C4O)O)O)C))O)CO))O)CO))(C)C(O)=O)CCC7(C5C\C=C6(C8(CC(CCC(CCC67C)8C(=O)OC9(OC(C(O)C(O)C(O)9)CO))(C)C)))C)" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="RXN2GG-5264">
+      <Xref identifier="EC-2.4" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN2GG-5264_start" x="245.0" y="210" elementRef="CPD2GG-5240" relX="1.0" relY="0.0" />
+        <Point elementId="RXN2GG-5264_end" arrowHead="Conversion" x="305.0" y="210" elementRef="CPD2GG-5257" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN2GG-5264_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN2GG-5264" />
+      <Property key="ReactionName" value="glucosyltransferase" />
+      <Property key="EC_Number" value="EC-2.4" />
+      <Property key="ReactionEquation" value="CPD2GG-5240 =&gt; CPD2GG-5257" />
+      <Property key="BalanceStatus" value=":UNBALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+  </Interactions>
+</Pathway>

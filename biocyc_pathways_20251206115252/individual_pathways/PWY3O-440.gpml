@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="pyruvate fermentation to acetoin" organism="Triticum aestivum" source="PlantCyc" version="20251206115252">
+  <Description>Many bacterial and yeast species can ferment pyruvate to |FRAME: ACETOIN acetoin|. While the principal function of pyruvate decarboxylase (PDC) is to convert pyruvate into acetaldehyde, it is well documented that a small fraction of the pyruvate is converted to acetoin, as a by-product from the hydroxyethyl-thiamin diphosphate reaction intermediate. As a matter of fact, acetoin production is thought to be an adjunct of acetadehyde production by all enzymes capable of decarboxylating pyruvate |CITS: [Juni61]|. Acetoin production by pyruvate decarboxylase from wheat was first reported in 1952 by Singer and Pensky |CITS: [Singer52]| and verified in later work |CITS: [Crout86]|. It is also well documented that the enzyme can catalyze an aldol type condensation reaction between two molecules of acetaldehyde to form acetoin |CITS:[4754749][6383467][8257682][8536715]|. In this reaction the active acetaldehyde intermediate bound to the enzyme is condensed with a second acetaldehyde to form acetoin. This reaction is often called the carboligase activity |CITS: [11029594]|. Acetoin is often fermented further to 2,3-butanediol by the enzyme acetoin(diacetyl) reductase (see pathways under |FRAME:Butanediol-Biosynthesis Butanediol Biosynthesis|).</Description>
+  <Authors>
+    <Author name="O-16" />
+    <Author name="krieger" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY3O-440" />
+  <Property key="Type" value="Acetoin-Biosynthesis" />
+  <Property key="ReactionCount" value="3" />
+  <Property key="ReactionIDs" value="RXN-6161, RXN3O-470, RXN0-2022" />
+  <Property key="PredecessorCount" value="2" />
+  <Property key="PrimaryCompoundCount" value="3" />
+  <Property key="PathwayLinks" value="(ACETOIN |Butanediol-Biosynthesis|)" />
+  <Property key="Organism" value="Triticum aestivum" />
+  <Property key="TaxonomicRange_1" value="Magnoliopsida" />
+  <Property key="TaxonomicRange_2" value="Fungi" />
+  <Property key="TaxonomicRange_3" value="Bacteria &lt;bacteria&gt;" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_PUB_8257682" />
+  <CitationRef elementRef="citation_PUB_11029594" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="G-11539" textLabel="PDC1" type="GeneProduct">
+      <Xref identifier="G-11539" dataSource="plantcyc" />
+      <Graphics centerX="276.804443359375" centerY="1301.957275390625" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="G-11539" />
+      <Property key="Product" value="MONOMER-15104" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+      <CitationRef elementRef="citation_PUB_8647075" />
+    </DataNode>
+    <DataNode elementId="MONOMER-15096" textLabel="MONOMER-15096" type="Protein">
+      <Xref identifier="MONOMER-15096" dataSource="plantcyc" />
+      <Graphics centerX="1549.853515625" centerY="958.4120483398438" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="PMN, zhang, O-28, pujar">** Please note that this enzyme was characterized from &lt;i&gt;Populus deltoides&lt;/i&gt; |CITS: [16665586]|. An enzyme with pyruvate decarboxylase (PDC) actvity was purified from leaf veins of |FRAME: TAX-3696 &lt;i&gt;Populus deltoides&lt;/i&gt;|. The enzyme was purified by ammonium sulfate precipitation and phenyl sepharose chromatography. The activity of PDC was highly localized to the viens, followed by the petioles. The PDC has a high affinity for |FRAME: PYRUVATE pyruvate| and rapidly decarboxylates it to |FRAME: ACETALD acetaldehyde| and CO2 |CITS: [16665586]|. The purified PDC also decarboxylates 2-ketobutyric acid.</Comment>
+      <Property key="UniqueID" value="MONOMER-15096" />
+      <Property key="Synonym_1" value="pyruvate decarboxylase" />
+      <Property key="Synonym_2" value="leaf pyruvate decarboxylase" />
+      <Property key="Catalyzes" value="RXN-16894" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="MolecularWeightExp" value="67." />
+      <Property key="MolecularWeightKd" value="67." />
+      <Property key="Species" value="TAX-3694" />
+      <CitationRef elementRef="citation_PUB_16665586" />
+    </DataNode>
+    <DataNode elementId="MONOMER-9201" textLabel="pyruvate decarboxylase" type="Protein">
+      <Xref identifier="MONOMER-9201" dataSource="plantcyc" />
+      <Graphics centerX="1187.770751953125" centerY="1550.0" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">A pyruvate decarboxylase (PDC), catalyzing the decarboxylation of pyruvate to acetaldehyde, was isolated from roots of anaerobically treated maize seedlings. Under anaerobic conditions, the activity of this enzyme is greatly enhanced. The cytoplasmic pH is thought to regulate PDC activity: under aerobically metabolizing tissue the cytoplasmic pH renders PDC inactive; the pH of anaerobically metabolizing tissues is significantly lower and allows PDC function. Moreover, root PDC is cooperative with respect to pyruvate at physiological (anaerobic) cytoplasmic pH of 6.6, with a Hill coefficient increasing with decreasing pyruvate concentrations. This cooperative binding decreases as pH decreases rendering the enzyme less dependent upon pyruvate for activation |CITS:[LEE85]|. Potassium was shown to act as competitive inhibitor of root PDC but not phosphate.</Comment>
+      <Property key="UniqueID" value="MONOMER-9201" />
+      <Property key="Synonym_1" value="PDC" />
+      <Property key="Catalyzes" value="RXN-9361" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="MolecularWeightExp" value="59." />
+      <Property key="MolecularWeightKd" value="59." />
+      <Property key="Species" value="TAX-381124" />
+    </DataNode>
+    <DataNode elementId="MONOMER-15104" textLabel="MONOMER-15104" type="Protein">
+      <Xref identifier="P51850" dataSource="uniprot" />
+      <Graphics centerX="863.1161499023438" centerY="50.0" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="O-28, pujar">A cDNA clone was isolated from anaerobically treated roots of Pisum sativum. The enzymes were also purified from one day old imbibed seeds. The cDNA was cloned in E.coli and functionally characterized |CITS: [8647075]|.</Comment>
+      <Property key="UniqueID" value="MONOMER-15104" />
+      <Property key="AlternativeId_Uniprot" value="P51850" />
+      <Property key="AlternativeId_Pid" value="CAA91444" />
+      <Property key="Synonym_1" value="pyruvate decarboxylase" />
+      <Property key="Synonym_2" value="pyruvate decarboxylase isozyme 1" />
+      <Property key="Catalyzes" value="RXN-16908" />
+      <Property key="Gene" value="G-11539" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="MolecularWeightExp" value="64." />
+      <Property key="MolecularWeightKd" value="64., 64." />
+      <Property key="MolecularWeightSeq" value="64." />
+      <Property key="Species" value="TAX-3888" />
+      <CitationRef elementRef="citation_PUB_8647075" />
+    </DataNode>
+    <DataNode elementId="PYRUVATE" textLabel="pyruvate" type="Metabolite">
+      <Xref identifier="LCTONWCANYUPML-UHFFFAOYSA-M" dataSource="InChIKey" />
+      <Graphics centerX="804.9585571289062" centerY="603.5003051757812" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PYRUVATE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001532517" />
+      <Property key="AlternativeId_Mediadb" value="compounds/22/" />
+      <Property key="AlternativeId_Seed" value="cpd00020" />
+      <Property key="AlternativeId_Metanetx" value="MNXM23" />
+      <Property key="AlternativeId_Refmet" value="Pyruvic acid" />
+      <Property key="AlternativeId_Bigg" value="pyr" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15361" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00243" />
+      <Property key="AlternativeId_Chemspider" value="96901" />
+      <Property key="AlternativeId_Pubchem" value="107735" />
+      <Property key="AlternativeId_Knapsack" value="C00001200" />
+      <Property key="AlternativeId_Chebi" value="15361" />
+      <Property key="AlternativeId_LigandCpd" value="C00022" />
+      <Property key="AlternativeId_Cas" value="127-17-3" />
+      <Property key="AlternativeId_UmBbdCpd" value="c0159" />
+      <Property key="Synonym_1" value="alpha-ketopropionic acid" />
+      <Property key="Synonym_2" value="BTS" />
+      <Property key="Synonym_3" value="&amp;alpha;-ketopropionic acid" />
+      <Property key="Synonym_4" value="acetylformic acid" />
+      <Property key="Synonym_5" value="pyroracemic acid" />
+      <Property key="Synonym_6" value="2-oxopropanoic acid" />
+      <Property key="Synonym_7" value="pyruvic acid" />
+      <Property key="Synonym_8" value="2-oxopropanoate" />
+      <Property key="Synonym_9" value="2-oxo-propionic acid" />
+      <Property key="ChemicalFormula" value="(C 3) (H 3) (O 3)" />
+      <Property key="AbbrevName" value="pyruvate" />
+      <Property key="AtomCharges" value="(6 -1)" />
+      <Property key="Gibbs0" value="-82.398705" />
+      <Property key="Inchi" value="InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)/p-1" />
+      <Property key="InchiKey" value="InChIKey=LCTONWCANYUPML-UHFFFAOYSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="InternalsOfGroup" value="GLYCO-CT-PYR" />
+      <Property key="MolecularWeight" value="87.055" />
+      <Property key="MonoisotopicMw" value="88.0160439947" />
+      <Property key="NonStandardInchi" value="InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)/p-1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-9094, REG0-12383, REG0-8339, REG0-11787, REG0-10864, REG0-8218, REG0-10866, REG0-7196, REG0-8057, REG-9991, REG0-9120, REG-7142, REG-7159" />
+      <Property key="Smiles" value="CC(=O)C(=O)[O-]" />
+      <CitationRef elementRef="citation_PUB_18493048" />
+      <CitationRef elementRef="citation_PUB_16306140" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1600.0" centerY="360.1690673828125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="ChemicalFormula" value="(H 1)" />
+      <Property key="AtomCharges" value="(1 1)" />
+      <Property key="Gibbs0" value="0.42906138" />
+      <Property key="Inchi" value="InChI=1S/p+1" />
+      <Property key="InchiKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicMw" value="1.0078250321" />
+      <Property key="NonStandardInchi" value="InChI=1S/p+1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="[H+]" />
+    </DataNode>
+    <DataNode elementId="ACETALD" textLabel="acetaldehyde" type="Metabolite">
+      <Xref identifier="IKHGUXGNUITLKF-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="909.2780151367188" centerY="796.033447265625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ACETALD" />
+      <Property key="AlternativeId_Seed" value="cpd00071" />
+      <Property key="AlternativeId_Metanetx" value="MNXM75" />
+      <Property key="AlternativeId_Refmet" value="Acetaldehyde" />
+      <Property key="AlternativeId_Bigg" value="acald" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15343" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00990" />
+      <Property key="AlternativeId_Chemspider" value="172" />
+      <Property key="AlternativeId_Pubchem" value="177" />
+      <Property key="AlternativeId_Chebi" value="15343" />
+      <Property key="AlternativeId_LigandCpd" value="C00084" />
+      <Property key="AlternativeId_UmBbdCpd" value="c0160" />
+      <Property key="AlternativeId_Cas" value="75-07-0" />
+      <Property key="Synonym_1" value="acetic aldehyde" />
+      <Property key="Synonym_2" value="ethanal" />
+      <Property key="Synonym_3" value="aldehyde" />
+      <Property key="Synonym_4" value="ethyl aldehyde" />
+      <Property key="ChemicalFormula" value="(C 2) (H 4) (O 1)" />
+      <Property key="Gibbs0" value="7.6844816" />
+      <Property key="Inchi" value="InChI=1S/C2H4O/c1-2-3/h2H,1H3" />
+      <Property key="InchiKey" value="InChIKey=IKHGUXGNUITLKF-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="44.053" />
+      <Property key="MonoisotopicMw" value="44.026214750499996" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC=O" />
+    </DataNode>
+    <DataNode elementId="CARBON-DIOXIDE" textLabel="CO₂" type="Metabolite">
+      <Xref identifier="CURLTUGMZLYLDI-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="100.0" centerY="539.9154663085938" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CARBON-DIOXIDE" />
+      <Property key="AlternativeId_Metanetx" value="MNXM13" />
+      <Property key="AlternativeId_Seed" value="cpd00011" />
+      <Property key="AlternativeId_Bigg" value="33506" />
+      <Property key="AlternativeId_UmBbdCpd" value="c0131" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01967" />
+      <Property key="AlternativeId_LigandCpd" value="C00011" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC16526" />
+      <Property key="AlternativeId_Chemspider" value="274" />
+      <Property key="AlternativeId_Chebi" value="16526" />
+      <Property key="AlternativeId_Pubchem" value="280" />
+      <Property key="AlternativeId_Cas" value="124-38-9" />
+      <Property key="Synonym_1" value="carbonic anhydride" />
+      <Property key="Synonym_2" value="carbonic acid gas" />
+      <Property key="Synonym_3" value="carbon dioxide" />
+      <Property key="ChemicalFormula" value="(C 1) (O 2)" />
+      <Property key="Gibbs0" value="-92.26" />
+      <Property key="Inchi" value="InChI=1S/CO2/c2-1-3" />
+      <Property key="InchiKey" value="InChIKey=CURLTUGMZLYLDI-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="44.01" />
+      <Property key="MonoisotopicMw" value="43.989829244199996" />
+      <Property key="NonStandardInchi" value="InChI=1S/CO2/c2-1-3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C(=O)=O" />
+    </DataNode>
+    <DataNode elementId="ACETOIN" textLabel="acetoin" type="Metabolite">
+      <Xref identifier="ROWKJAVDOGWPAT-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="879.8489990234375" centerY="1007.4013671875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>Acetoin, along with diacetyl, is one of the compounds that gives butter its characteristic taste. It is natuarally found in apples, butter, yogurt, asparagus, black currants, blackberry, wheat, broccoli, brussels sprouts, and cantaloupe. Many bacteria can grow on acetoin, some of which degrade it to acetaldehyde and acetyl-CoA |CITS: [8110297]|.</Comment>
+      <Property key="UniqueID" value="ACETOIN" />
+      <Property key="AlternativeId_Pubchem" value="179" />
+      <Property key="AlternativeId_Seed" value="cpd00361" />
+      <Property key="AlternativeId_Hmdb" value="HMDB03243" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1268" />
+      <Property key="AlternativeId_Chebi" value="15688" />
+      <Property key="AlternativeId_LigandCpd" value="C00466" />
+      <Property key="AlternativeId_Nci" value="7609" />
+      <Property key="AlternativeId_Cas" value="513-86-0" />
+      <Property key="Synonym_1" value="acetylmethylcarbinol" />
+      <Property key="Synonym_2" value="3-hydroxy-2-butanone" />
+      <Property key="Synonym_3" value="dimethylketol" />
+      <Property key="Synonym_4" value="3-hydroxybutan-2-one" />
+      <Property key="ChemicalFormula" value="(C 4) (H 8) (O 2)" />
+      <Property key="Gibbs0" value="10.048964" />
+      <Property key="Inchi" value="InChI=1S/C4H8O2/c1-3(5)4(2)6/h3,5H,1-2H3" />
+      <Property key="InchiKey" value="InChIKey=ROWKJAVDOGWPAT-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="88.106" />
+      <Property key="MonoisotopicMw" value="88.05242950099999" />
+      <Property key="NonStandardInchi" value="InChI=1S/C4H8O2/c1-3(5)4(2)6/h3,5H,1-2H3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC(O)C(=O)C" />
+      <CitationRef elementRef="citation_PUB_8110297" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="321.804443359375" y="1301.957275390625" elementRef="G-11539" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="818.1161499023438" y="50.0" elementRef="MONOMER-15104" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-6161">
+      <Xref identifier="EC-4.1.1.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-6161_start" x="849.9585571289062" y="603.5003051757812" elementRef="PYRUVATE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-6161_end" arrowHead="Conversion" x="864.2780151367188" y="796.033447265625" elementRef="ACETALD" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-6161_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-6161" />
+      <Property key="EC_Number" value="EC-4.1.1.1" />
+      <Property key="Pathways" value="RXN0-2022, PWY-5486, PWY3O-440, PWY-6330" />
+      <Property key="PathwayCount" value="4" />
+      <Property key="ReactionEquation" value="PROTON + PYRUVATE =&gt; ACETALD + CARBON-DIOXIDE" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXN-9361, ENZRXN-16894, ENZRXN-16908" />
+      <Property key="EnzymaticReactionCount" value="3" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="NIL" />
+      <Property key="Gibbs0" value="-2.6058807" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-6161_ENZRXN-9361">
+      <Waypoints>
+        <Point elementId="RXN-6161_ENZRXN-9361_start" x="1187.770751953125" y="1562.5" elementRef="MONOMER-9201" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-6161_ENZRXN-9361_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-6161_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-6161_ENZRXN-16894">
+      <Waypoints>
+        <Point elementId="RXN-6161_ENZRXN-16894_start" x="1549.853515625" y="970.9120483398438" elementRef="MONOMER-15096" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-6161_ENZRXN-16894_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-6161_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-6161_ENZRXN-16908">
+      <Waypoints>
+        <Point elementId="RXN-6161_ENZRXN-16908_start" x="863.1161499023438" y="62.5" elementRef="MONOMER-15104" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-6161_ENZRXN-16908_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-6161_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-6161_anchor_reactant_0">
+      <Xref identifier="EC-4.1.1.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-6161_anchor_reactant_start_0" x="1645.0" y="360.1690673828125" elementRef="PROTON" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-6161_anchor_reactant_end_0" x="0" y="0" elementRef="RXN-6161_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-6161_anchor_product_1">
+      <Xref identifier="EC-4.1.1.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-6161_anchor_product_start_1" x="0" y="0" elementRef="RXN-6161_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-6161_anchor_product_end_1" arrowHead="Conversion" x="55.0" y="539.9154663085938" elementRef="CARBON-DIOXIDE" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN3O-470">
+      <Xref identifier="RXN3O-470" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN3O-470_start" x="954.2780151367188" y="796.033447265625" elementRef="ACETALD" relX="1.0" relY="0.0" />
+        <Point elementId="RXN3O-470_end" arrowHead="Conversion" x="834.8489990234375" y="1007.4013671875" elementRef="ACETOIN" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN3O-470_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN3O-470" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="RXN0-2022, PWY3O-440" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="ACETALD =&gt; ACETOIN" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="AtomMappings" value="(:NO-HYDROGEN-ENCODING (0 3 1 4 2 5) (((ACETALD 0 2) ((ACETALD 1) 3 5)) ((ACETOIN 0 5))))" />
+      <Property key="Gibbs0" value="-5.3199997" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="^coefficient" value="2" />
+    </Interaction>
+    <Interaction elementId="RXN0-2022">
+      <Xref identifier="RXN0-2022" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN0-2022_start" x="849.9585571289062" y="603.5003051757812" elementRef="PYRUVATE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN0-2022_end" arrowHead="Conversion" x="834.8489990234375" y="1007.4013671875" elementRef="ACETOIN" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN0-2022_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN0-2022" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY3O-440" />
+      <Property key="ReactionEquation" value="PROTON + PYRUVATE + ACETALD =&gt; ACETOIN + CARBON-DIOXIDE" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Composite-Reactions, Small-Molecule-Reactions" />
+      <Property key="AtomMappings" value="(:NO-HYDROGEN-ENCODING (0 3 1 4 2 6 5 7 8) (((ACETALD 0 2) (PYRUVATE 3 8)) ((ACETOIN 0 5) (CARBON-DIOXIDE 6 8))))" />
+      <Property key="Gibbs0" value="-7.925873" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="ReactionList" value="RXN-6161, RXN3O-470" />
+      <CitationRef elementRef="citation_PUB_8424670" />
+    </Interaction>
+    <Interaction elementId="RXN0-2022_anchor_reactant_0">
+      <Xref identifier="RXN0-2022" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN0-2022_anchor_reactant_start_0" x="1645.0" y="360.1690673828125" elementRef="PROTON" relX="1.0" relY="0.0" />
+        <Point elementId="RXN0-2022_anchor_reactant_end_0" x="0" y="0" elementRef="RXN0-2022_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN0-2022_anchor_reactant_2">
+      <Xref identifier="RXN0-2022" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN0-2022_anchor_reactant_start_2" x="954.2780151367188" y="796.033447265625" elementRef="ACETALD" relX="1.0" relY="0.0" />
+        <Point elementId="RXN0-2022_anchor_reactant_end_2" x="0" y="0" elementRef="RXN0-2022_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN0-2022_anchor_product_1">
+      <Xref identifier="RXN0-2022" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN0-2022_anchor_product_start_1" x="0" y="0" elementRef="RXN0-2022_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN0-2022_anchor_product_end_1" arrowHead="Conversion" x="55.0" y="539.9154663085938" elementRef="CARBON-DIOXIDE" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_PUB_8424670">
+      <Xref identifier="8424670" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_8257682">
+      <Xref identifier="8257682" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_16306140">
+      <Xref identifier="16306140" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_11029594">
+      <Xref identifier="11029594" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_8110297">
+      <Xref identifier="8110297" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_16665586">
+      <Xref identifier="16665586" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_18493048">
+      <Xref identifier="18493048" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_8647075">
+      <Xref identifier="8647075" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

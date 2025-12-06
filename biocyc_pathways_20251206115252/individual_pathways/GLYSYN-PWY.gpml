@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="glycine biosynthesis I" organism="Arabidopsis thaliana" source="PlantCyc" version="20251206115252">
+  <Description>&lt;b&gt;General Background&lt;/b&gt; |FRAME: TAX-4932 &lt;i&gt;Saccharomyces cerevisiae&lt;/i&gt;| can biosynthesize |FRAME: GLY glycine| via three different pathways. When the cells are grown with glucose as the carbon source, two alternative pathways operate. In one pathway |FRAME:ENZRXN-13666 L-threonine aldolase|, encoded by |FRAME: G-9836 GLY1|, produces glycine from |FRAME:THR L-threonine| (which is produced from the glycolytic intermediate oxaloacetate) (see |FRAME: GLYSYN-THR-PWY glycine biosynthesis IV|). In the other pathway glycine is formed from |FRAME:SER L-serine| (a product of |FRAME: G3P 3-phospho-D-glycerate|, another glycolytic intermediate) via two serine hydroxymethyltransferases - a cytosolic enzyme (SHMT2) and a mitochondrial enzyme (SHMT1) (see |FRAME: GLYSYN-PWY glycine biosynthesis I|). The two isoforms are reported to work in opposite directions, depending on the culture conditions |CITS: [9398220]|. When the cells are grown with a non-fermentable carbon source, such as |FRAME:ETOH ethanol| and |FRAME:ACET acetate|, glycine is produced from |FRAME: GLYOX glyoxylate|, a product of the |FRAME: GLYOXYLATE-BYPASS glyoxylate cycle|, by the enzyme |FRAME: CPLX-7560 alanine--glyoxylate aminotransferase 1| (see |FRAME: GLYSYN-ALA-PWY glycine biosynthesis III|). &lt;b&gt;About This Pathway&lt;/b&gt; This single reaction pathway, catalyzed by |FRAME: GLYOHMETRANS-CPLX serine hydroxymethyltransferase|, is the major pathway for biosynthesis of |FRAME: GLY glycine| in |FRAME: TAX-83333 &lt;i&gt;Escherichia coli&lt;/i&gt; K-12|, and the main source for one carbon units, which are stored in the form of |FRAME: METHYLENE-THF 5,10-methylenetetrahydropteroyl mono-L-glutamate|. In |FRAME: TAX-4932 &lt;i&gt;Saccharomyces cerevisiae&lt;/i&gt;|, mitochondrial and cytoplasmic serine hydroxymethyltransferase (SHMT) isozymes are encoded by distinct nuclear genes (|FRAME: YBR263W SHM1| and |FRAME: YLR058C SHM2|). As in |FRAME:TAX-562 &lt;i&gt;Escherichia coli&lt;/i&gt;|, SHMT is the major provider of not only |FRAME: GLY glycine|, but also of one-carbon units |CITS: [9398220]|. When yeast was grown on |FRAME: SER L-serine| as the primary one-carbon source, the cytoplasmic isozyme was the main provider of glycine and one-carbon groups for purine synthesis. When grown on |FRAME: GLY glycine|, the mitochondrial SHMT was the predominant isozyme catalyzing the synthesis of serine from glycine and one-carbon units. However, when both serine and glycine were present, the mitochondrial SHMT made a significant contribution of one-carbon units, but not glycine, for purine synthesis |CITS: [9398220]|.</Description>
+  <Authors>
+    <Author name="PMN" />
+    <Author name="zhang" />
+    <Author name="SRI" />
+    <Author name="caspi" />
+    <Author name="O-18" />
+    <Author name="riley" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="GLYSYN-PWY" />
+  <Property key="Type" value="GLYCINE-SYN" />
+  <Property key="ReactionIDs" value="GLYOHMETRANS-RXN" />
+  <Property key="Organism" value="Arabidopsis thaliana" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_PUB_9398220" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="AT4G37930" textLabel="AT4G37930" type="GeneProduct">
+      <Xref identifier="AT4G37930" dataSource="TAIR" />
+      <Graphics centerX="1079.625" centerY="1017.04052734375" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT4G37930" />
+      <Property key="Synonym_1" value="STM" />
+      <Property key="Synonym_2" value="SHMT1" />
+      <Property key="Synonym_3" value="SHM1" />
+      <Property key="Product" value="AT4G37930-MONOMER" />
+      <Property key="StartPosition" value="17831725" />
+      <Property key="EndPosition" value="17834921" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+      <Property key="Accession1" value="AT4G37930" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="AT4G37930-MONOMER" textLabel="serine hydroxymethyltransferase" type="Protein">
+      <Xref identifier="Q9SZJ5" dataSource="uniprot" />
+      <Graphics centerX="514.4826049804688" centerY="1404.770751953125" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">A mutant of the serine hydroxymethyltransferase (originally called stm |CITS:[16661733]| and later renamed shmt1 |CITS:[15659103]| and shm1 |CITS[10806255]|) has been reported in Arabidopsis |CITS:[16661733][OGREN84]| and later mapped to |FRAME: AT4G37930|. Several potential homologs of this enzyme are reported for Arabidopsis (see Gene-Reaction schematic below). Serine hydroxymethyltransferase (SHMT) catalyzes the reversible conversion of 5,10-methylene-tetrahydrofolate and glycine to form serine and tetrahydrofolate. It was demonstrated that this enzyme possesses a second catalytic activity converting 5,10-methenyl-tetrahydrofolate to 5-formyl-tetrahydrofolate in the presence of glycine as shown for isolated SHMT from rabbit liver and &lt;i&gt;E. coli&lt;/i&gt; |CITS: [2201683]| |CITS: [1536856]|. The SHMT prefers polyglutamylated substrates (Km = 40 uM) to monoglutamylated substrates (140 uM). This enzyme is thought to be the main catalyst for 5-formyl-tetrahydrofolate (5-CHO-THF) formation in plants as well but a spontaneous hydrolysis of 5,10-methenyl-tetrahydrofolate to 5-CHO-THF may also occur |CITS: [11087421][15888445]|. The role of 5-CHO-THF in the C1-metabolism still remains to be solved. 5-CHO-THF is the most stable natural folate and the only one that does not serve as a cofactor in one-carbon metabolism. Instead, 5-CHO-THF is a potent inhibitor of SHMT and most other folatedependent enzymes in vitro and thought to be regulated by 5-formyltetrahydrofolate cycloligase during photorespiration |CITS: [8480361]| |CITS: [15888445]|.</Comment>
+      <Property key="UniqueID" value="AT4G37930-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT4G37930.1" />
+      <Property key="AlternativeId_Panther" value="PTHR11680" />
+      <Property key="AlternativeId_Smr" value="Q9SZJ5" />
+      <Property key="AlternativeId_String" value="Q9SZJ5" />
+      <Property key="AlternativeId_Pride" value="Q9SZJ5" />
+      <Property key="AlternativeId_Interpro" value="IPR019798" />
+      <Property key="AlternativeId_Pfam" value="PF00464" />
+      <Property key="AlternativeId_Phylomedb" value="Q9SZJ5" />
+      <Property key="AlternativeId_Prosite" value="PS00096" />
+      <Property key="AlternativeId_Uniprot" value="Q9SZJ5" />
+      <Property key="Synonym_1" value="SHMT" />
+      <Property key="Synonym_2" value="serine transhydroxymethylase" />
+      <Property key="Catalyzes" value="RXN-6111" />
+      <Property key="Accession1" value="AT4G37930.1" />
+      <Property key="Gene" value="AT4G37930" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_16661733" />
+      <CitationRef elementRef="citation_PUB_15659103" />
+      <CitationRef elementRef="citation_PUB_2201683" />
+      <CitationRef elementRef="citation_PUB_1536856" />
+      <CitationRef elementRef="citation_PUB_8480361" />
+      <CitationRef elementRef="citation_PUB_15888445" />
+    </DataNode>
+    <DataNode elementId="MONOMER-845" textLabel="serine hydroxymethyltransferase" type="Protein">
+      <Xref identifier="MONOMER-845" dataSource="plantcyc" />
+      <Graphics centerX="1600.0" centerY="600.3720703125" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">A mutant of the serine hydroxymethyltransferase has been reported in Arabidopsis|CITS: [OGREN84]| and later mapped to |FRAME: AT4G37930|, but several potential homologs of this enzyme are reported for Arabidopsis (see Gene-Reaction schematic below). Serine hydroxymethyltransferase (SHMT) catalyzes the reversible conversion of 5,10-methylene-tetrahydrofolate and glycine to form serine and tetrahydrofolate. It was demonstrated that this enzyme possesses a second catalytic activity converting 5,10-methenyl-tetrahydrofolate to 5-formyl-tetrahydrofolate in the presence of glycine as shown for isolated SHMT from rabbit liver and &lt;i&gt;E. coli&lt;/i&gt; |CITS: [2201683]| |CITS: [1536856]|. The SHMT prefers polyglutamylated substrates (Km = 40 uM) to monoglutamylated substrates (140 uM). This enzyme is thought to be the main catalyst for 5-formyl-tetrahydrofolate (5-CHO-THF) formation in plants as well but a spontaneous hydrolysis of 5,10-methenyl-tetrahydrofolate to 5-CHO-THF may also occur |CITS: [11087421]|. The role of 5-CHO-THF in the C1-metabolism still remains to be solved. 5-CHO-THF is the most stable natural folate and the only one that does not serve as a cofactor in one-carbon metabolism. Instead, 5-CHO-THF is a potent inhibitor of SHMT and most other folatedependent enzymes in vitro and thought to be regulated by 5-formyltetrahydrofolate cycloligase during photorespiration |CITS: [8480361]| |CITS: [15888445]|.</Comment>
+      <Property key="UniqueID" value="MONOMER-845" />
+      <Property key="Catalyzes" value="RXN-2362, RXN-9624" />
+      <Property key="CatalyzesCount" value="2" />
+      <Property key="GOTerms" value="GO:0005739" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Locations" value="CCO-MIT" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation__OGREN84_" />
+      <CitationRef elementRef="citation_PUB_2201683" />
+      <CitationRef elementRef="citation_PUB_1536856" />
+      <CitationRef elementRef="citation_PUB_11087421" />
+      <CitationRef elementRef="citation_PUB_8480361" />
+      <CitationRef elementRef="citation_PUB_15888445" />
+    </DataNode>
+    <DataNode elementId="THF-GLU-N" textLabel="a tetrahydrofolate" type="Metabolite">
+      <Xref identifier="25202940" dataSource="PubChem-compound" />
+      <Graphics centerX="100.0" centerY="654.4005126953125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>|FRAME: THF-GLU-N Tetrahydrofolate| (vitamin B9) and its derivatives, commonly termed folates, are required in a variety of reactions in both prokaryotes and eukaryotes, where they act as carriers of one-carbon units in various oxidation states. These one-carbon units are utilized in the biosynthesis of various cellular components, including glycine, methionine, formylmethionine, thymidylate, pantothenate and purine nucleotides. During folate biosynthesis (as described in |FRAME:FOLSYN-PWY|) the enzyme |FRAME: EC-6.3.2.12|, adds a glutamate residue to |FRAME: 7-8-DIHYDROPTEROATE|, resulting in |FRAME: DIHYDROFOLATE|, also known as H&lt;sub&gt;2&lt;/sub&gt;PteGlu&lt;sub&gt;1&lt;/sub&gt;. This molecule in turn is reduced by |FRAME:EC-1.5.1.3| (FolA) to |FRAME: THF| (H&lt;sub&gt;4&lt;/sub&gt;PteGlu&lt;sub&gt;1&lt;/sub&gt;, or tetrahydrofolate), which can be converted to several other folate molecules |CITS: [11501996]|. Most folate molecules are modified in cells by successive additions of glutamate residues, forming folate polyglutamates (or folylpoly-&amp;gamma;-glutamates). The glutamate residues are added by an amide linkage to the &amp;gamma;-carboxylate group of the folate or folate derivative. Since these isopeptide bonds are not the normal amide bonds they are not hydrolyzed by peptidases or proteases, which are specific for &amp;alpha;-carboxyl-linked peptide bonds. The addition of glutamyl residues probably occurs after the reduction of newly synthesized dihydrofolate to tetrahydrofolate and its conversion to other tetrahydrofolate derivatives. The glutamylation of folate residues serves several goals: it prevents the efflux of folates out of the cell, it increases the binding of folate cofactors to the enzymes of folate interconversion and biosynthesis, and in mammals, it allows the accumulation of folates in the mitochondria, which is required for glycine synthesis |CITS: [10598551]|. This class stands for tetrahydrofolates with an unspecified number of glutamate residues.</Comment>
+      <Property key="UniqueID" value="THF-GLU-N" />
+      <Property key="AlternativeId_Seed" value="cpd28218" />
+      <Property key="AlternativeId_Metanetx" value="MNXM13027" />
+      <Property key="AlternativeId_Chebi" value="28624" />
+      <Property key="AlternativeId_Pubchem" value="25202940" />
+      <Property key="AlternativeId_LigandCpd" value="C03541" />
+      <Property key="Synonym_1" value="tetrahydropteroyl polyglutamate" />
+      <Property key="Synonym_2" value="THF(glu)&lt;sub&gt;n&lt;/sub&gt;" />
+      <Property key="Synonym_3" value="H&lt;sub&gt;4&lt;/sub&gt;PteGlu&lt;sub&gt;n&lt;/sub&gt;" />
+      <Property key="Synonym_4" value="a tetrahydrofolate-glutamate" />
+      <Property key="Synonym_5" value="THF" />
+      <Property key="Synonym_6" value="THF polyglutamate" />
+      <Property key="AtomCharges" value="(31 -1)" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="N+1Name" value="tetrahydropteroyl-[&amp;gamma;-Glu]&lt;sub&gt;(n+1)&lt;/sub&gt;" />
+      <Property key="N1Name" value="tetrahydropteroyl-[&amp;gamma;-Glu]&lt;sub&gt;(n-1)&lt;/sub&gt;" />
+      <Property key="NName" value="tetrahydropteroyl-[&amp;gamma;-Glu]&lt;sub&gt;(n)&lt;/sub&gt;" />
+      <Property key="NonStandardInchi" value="InChI=1S/C19H23N7O5/c20-19-25-15-14(17(29)26-19)23-12(9-22-15)8-21-11-5-3-10(4-6-11)16(28)24-13(18(30)31)2-1-7-27/h3-7,12-13,21,23H,1-2,8-9H2,(H,24,28)(H,30,31)(H4,20,22,25,26,29)/p-1/t12-,13-/m0/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C([C@@H]1(NC2(\C(NC(/N)=N/C(\NC1)=2)=O)))NC3(\C=C/C(/C(N[C@H](C(=O)[O-])CCC([R])=O)=O)=C\C=3)" />
+      <CitationRef elementRef="citation_PUB_11501996" />
+      <CitationRef elementRef="citation_PUB_10598551" />
+    </DataNode>
+    <DataNode elementId="GLY" textLabel="glycine" type="Metabolite">
+      <Xref identifier="DHMQDGOQFOQNFH-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1398.232666015625" centerY="1550.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="GLY" />
+      <Property key="AlternativeId_Mediadb" value="compounds/37/" />
+      <Property key="AlternativeId_Seed" value="cpd00033" />
+      <Property key="AlternativeId_Metanetx" value="MNXM29" />
+      <Property key="AlternativeId_Chebi" value="57305" />
+      <Property key="AlternativeId_Refmet" value="Glycine" />
+      <Property key="AlternativeId_Bigg" value="gly" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15428" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00123" />
+      <Property key="AlternativeId_Drugbank" value="DB00145" />
+      <Property key="AlternativeId_Chemspider" value="730" />
+      <Property key="AlternativeId_Pubchem" value="5257127" />
+      <Property key="AlternativeId_Knapsack" value="C00001361" />
+      <Property key="AlternativeId_LigandCpd" value="C00037" />
+      <Property key="AlternativeId_Cas" value="56-40-6" />
+      <Property key="Synonym_1" value="G" />
+      <Property key="Synonym_2" value="aminoacetic acid" />
+      <Property key="Synonym_3" value="gly" />
+      <Property key="ChemicalFormula" value="(C 2) (H 5) (N 1) (O 2)" />
+      <Property key="AbbrevName" value="gly" />
+      <Property key="AtomCharges" value="(4 -1), (3 1)" />
+      <Property key="Gibbs0" value="-37.2444" />
+      <Property key="Inchi" value="InChI=1S/C2H5NO2/c3-1-2(4)5/h1,3H2,(H,4,5)" />
+      <Property key="InchiKey" value="InChIKey=DHMQDGOQFOQNFH-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="75.067" />
+      <Property key="MonoisotopicMw" value="75.0320284099" />
+      <Property key="NonStandardInchi" value="InChI=1S/C2H5NO2/c3-1-2(4)5/h1,3H2,(H,4,5)" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-9347, REG-9502, REG0-8041, REG0-8905" />
+      <Property key="Smiles" value="C([NH3+])C([O-])=O" />
+      <CitationRef elementRef="citation_PUB_18493048" />
+      <CitationRef elementRef="citation_PUB_16306140" />
+    </DataNode>
+    <DataNode elementId="WATER" textLabel="H₂O" type="Metabolite">
+      <Xref identifier="XLYOFNOQVPJJNP-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="919.5747680664062" centerY="849.7426147460938" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="WATER" />
+      <Property key="AlternativeId_Bigg" value="33474" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15377" />
+      <Property key="AlternativeId_Hmdb" value="HMDB02111" />
+      <Property key="AlternativeId_Chemspider" value="937" />
+      <Property key="AlternativeId_Chebi" value="15377" />
+      <Property key="AlternativeId_Pubchem" value="962" />
+      <Property key="AlternativeId_LigandCpd" value="C00001" />
+      <Property key="AlternativeId_Cas" value="7732-18-5" />
+      <Property key="Synonym_1" value="H&lt;sub&gt;2&lt;/sub&gt;0" />
+      <Property key="Synonym_2" value="H2O" />
+      <Property key="Synonym_3" value="H20" />
+      <Property key="Synonym_4" value="hydrogen oxide" />
+      <Property key="Synonym_5" value="water" />
+      <Property key="ChemicalFormula" value="(H 2) (O 1)" />
+      <Property key="Gibbs0" value="-36.144756" />
+      <Property key="Inchi" value="InChI=1S/H2O/h1H2" />
+      <Property key="InchiKey" value="InChIKey=XLYOFNOQVPJJNP-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="18.015" />
+      <Property key="MonoisotopicMw" value="18.0105646863" />
+      <Property key="NonStandardInchi" value="InChI=1S/H2O/h1H2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="O" />
+    </DataNode>
+    <DataNode elementId="METHYLENE-THF-GLU-N" textLabel="a 5,10-methylenetetrahydrofolate" type="Metabolite">
+      <Xref identifier="MNXM162297" dataSource="MetaNetX" />
+      <Graphics centerX="736.1954345703125" centerY="643.0485229492188" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="keseler, SRI">|FRAME: THF-GLU-N Tetrahydrofolate| (vitamin B9) and its derivatives, commonly termed folates, are required in a variety of reactions in both prokaryotes and eukaryotes, where they act as carriers of one-carbon units in various oxidation states. These one-carbon units are utilized in the biosynthesis of various cellular components, including glycine, methionine, formylmethionine, thymidylate, pantothenate and purine nucleotides. During folate biosynthesis (as described in |FRAME:FOLSYN-PWY|) the enzyme |FRAME: EC-6.3.2.12|, adds a glutamate residue to |FRAME: 7-8-DIHYDROPTEROATE|, resulting in |FRAME: DIHYDROFOLATE|, also known as H&lt;sub&gt;2&lt;/sub&gt;PteGlu&lt;sub&gt;1&lt;/sub&gt;. This molecule in turn is reduced by |FRAME:EC-1.5.1.3| (FolA) to |FRAME: THF| (H&lt;sub&gt;4&lt;/sub&gt;PteGlu&lt;sub&gt;1&lt;/sub&gt;, or tetrahydrofolate), which can be converted to several other folate molecules |CITS: [11501996]|. Most folate molecules are modified in cells by successive additions of glutamate residues, forming folate polyglutamates (or folylpoly-&amp;gamma;-glutamates). The glutamate residues are added by an amide linkage to the &amp;gamma;-carboxylate group of the folate or folate derivative. Since these isopeptide bonds are not the normal amide bonds they are not hydrolyzed by peptidases or proteases, which are specific for &amp;alpha;-carboxyl-linked peptide bonds. The addition of glutamyl residues probably occurs after the reduction of newly synthesized dihydrofolate to tetrahydrofolate and its conversion to other tetrahydrofolate derivatives. The glutamylation of folate residues serves several goals: it prevents the efflux of folates out of the cell, it increases the binding of folate cofactors to the enzymes of folate interconversion and biosynthesis, and in mammals, it allows the accumulation of folates in the mitochondria, which is required for glycine synthesis |CITS: [10598551]|. This class stands for 5,10-methylene-tetrahydrofolates with an unspecified number of glutamate residues.</Comment>
+      <Property key="UniqueID" value="METHYLENE-THF-GLU-N" />
+      <Property key="AlternativeId_Seed" value="cpd27449" />
+      <Property key="AlternativeId_Metanetx" value="MNXM162297" />
+      <Property key="Synonym_1" value="(-)CH&lt;sub&gt;2&lt;/sub&gt;H&lt;sub&gt;4&lt;/sub&gt;folate" />
+      <Property key="Synonym_2" value="(-)5,10-methylene-5,6,7,8-tetrahydrofolate" />
+      <Property key="Synonym_3" value="methylene-H4PteGlu(n)" />
+      <Property key="Synonym_4" value="methylene-THF(glu)&lt;sub&gt;n&lt;/sub&gt;" />
+      <Property key="Synonym_5" value="methylene-H&lt;sub&gt;4&lt;/sub&gt;PteGlu&lt;sub&gt;n&lt;/sub&gt;" />
+      <Property key="Synonym_6" value="methylene-tetrahydropteroylpolyglutamates" />
+      <Property key="AtomCharges" value="(32 -1)" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="N+1Name" value="methylene-tetrahydropteroyl-[&amp;gamma;-Glu]&lt;sub&gt;(n+1)&lt;/sub&gt;" />
+      <Property key="NName" value="methylene-tetrahydropteroyl-[&amp;gamma;-Glu]&lt;sub&gt;(n)&lt;/sub&gt;" />
+      <Property key="NonStandardInchi" value="InChI=1S/C20H23N7O5/c21-20-24-16-15(18(30)25-20)27-10-26(9-13(27)8-22-16)12-5-3-11(4-6-12)17(29)23-14(19(31)32)2-1-7-28/h3-7,13-14H,1-2,8-10H2,(H,23,29)(H,31,32)(H4,21,22,24,25,30)/p-1/t13-,14+/m1/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-7907" />
+      <Property key="Smiles" value="C3(NC4(/N=C(N)\NC(=O)C(/N2(CN(C1(\C=C/C(/C(=O)N[C@@H](CCC([R])=O)C([O-])=O)=C\C=1))C[C@@H]23))=4))" />
+      <CitationRef elementRef="citation_PUB_11501996" />
+      <CitationRef elementRef="citation_PUB_10598551" />
+    </DataNode>
+    <DataNode elementId="SER" textLabel="L-serine" type="Metabolite">
+      <Xref identifier="MTCFGRXMJLQNBG-REOHCLBHSA-N" dataSource="InChIKey" />
+      <Graphics centerX="994.316650390625" centerY="50.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="SER" />
+      <Property key="AlternativeId_Zinc" value="ZINC000000895034" />
+      <Property key="AlternativeId_Mediadb" value="compounds/63/" />
+      <Property key="AlternativeId_Refmet" value="Serine" />
+      <Property key="AlternativeId_Bigg" value="ser__L" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC33384" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00187" />
+      <Property key="AlternativeId_Chebi" value="33384" />
+      <Property key="AlternativeId_Pubchem" value="6857581" />
+      <Property key="AlternativeId_LigandCpd" value="C00065" />
+      <Property key="AlternativeId_Cas" value="56-45-1" />
+      <Property key="Synonym_1" value="S" />
+      <Property key="Synonym_2" value="serine" />
+      <Property key="Synonym_3" value="L-ser" />
+      <Property key="ChemicalFormula" value="(C 3) (H 7) (N 1) (O 3)" />
+      <Property key="AbbrevName" value="ser" />
+      <Property key="AtomCharges" value="(6 -1), (4 1)" />
+      <Property key="Gibbs0" value="-50.20216" />
+      <Property key="Inchi" value="InChI=1S/C3H7NO3/c4-2(1-5)3(6)7/h2,5H,1,4H2,(H,6,7)/t2-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=MTCFGRXMJLQNBG-REOHCLBHSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="105.093" />
+      <Property key="MonoisotopicMw" value="105.0425930962" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-9507, REG0-8044, REG0-8020, REG0-8906, REG-7929" />
+      <Property key="Smiles" value="C(O)[C@H]([NH3+])C(=O)[O-]" />
+      <CitationRef elementRef="citation_PUB_18493048" />
+      <CitationRef elementRef="citation_PUB_16306140" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="1124.625" y="1017.04052734375" elementRef="AT4G37930" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="469.48260498046875" y="1404.770751953125" elementRef="AT4G37930-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="GLYOHMETRANS-RXN">
+      <Xref identifier="EC-2.1.2.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="GLYOHMETRANS-RXN_start" x="1039.316650390625" y="50.0" elementRef="SER" relX="1.0" relY="0.0" />
+        <Point elementId="GLYOHMETRANS-RXN_end" arrowHead="Conversion" x="1353.232666015625" y="1550.0" elementRef="GLY" relX="-1.0" relY="0.0" />
+        <Anchor elementId="GLYOHMETRANS-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Comment source="BioCyc">This reaction converts serine to glycine, and is also a major source of one-carbon addition for the cell. The enzyme is a pyridoxal-phosphate protein. It also catalyses the reaction of glycine with acetaldehyde to form L-threonine, and with 4-trimethylammoniobutanal to form 3-hydroxy-N6,N6,N6-trimethyl-L-lysine. This reaction converts serine to glycine, and is also a major source of one-carbon addition for the cell. The enzyme is a pyridoxal-phosphate protein. It also catalyses the reaction of glycine with acetaldehyde to form L-threonine, and with 4-trimethylammoniobutanal to form 3-hydroxy-N6,N6,N6-trimethyl-L-lysine.</Comment>
+      <Property key="AlternativeId_Uniprot" value="P35623" />
+      <Property key="AlternativeId_Pir" value="A33696" />
+      <Property key="UniqueID" value="GLYOHMETRANS-RXN" />
+      <Property key="EC_Number" value="EC-2.1.2.1" />
+      <Property key="Pathways" value="PWY-3841, PWY-181, PWY-2161, GLYSYN2-PWY, GLYSYN-PWY" />
+      <Property key="PathwayCount" value="5" />
+      <Property key="ReactionEquation" value="SER + THF-GLU-N &lt;=&gt; GLY + METHYLENE-THF-GLU-N + WATER" />
+      <Property key="ReactionDirection" value="REVERSIBLE" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXNQT-6111, ENZRXN-2362" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="Synonym_1" value="Serine hydroxymethyltransferase" />
+      <Property key="Synonym_2" value="Serine aldolase" />
+      <Property key="Synonym_3" value="Threonine aldolase" />
+      <Property key="Synonym_4" value="Serine hydroxymethylase" />
+      <Property key="ReactionTypes" value="Chemical-Reactions, Small-Molecule-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-2.8670044" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="Synonyms" value="Serine hydroxymethyltransferase, Serine aldolase, Threonine aldolase, Serine hydroxymethylase" />
+    </Interaction>
+    <Interaction elementId="GLYOHMETRANS-RXN_ENZRXN-2362">
+      <Waypoints>
+        <Point elementId="GLYOHMETRANS-RXN_ENZRXN-2362_start" x="1600.0" y="612.8720703125" elementRef="MONOMER-845" relX="0.0" relY="1.0" />
+        <Point elementId="GLYOHMETRANS-RXN_ENZRXN-2362_end" arrowHead="Catalysis" x="0" y="0" elementRef="GLYOHMETRANS-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="GLYOHMETRANS-RXN_ENZRXNQT-6111">
+      <Waypoints>
+        <Point elementId="GLYOHMETRANS-RXN_ENZRXNQT-6111_start" x="514.4826049804688" y="1417.270751953125" elementRef="AT4G37930-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="GLYOHMETRANS-RXN_ENZRXNQT-6111_end" arrowHead="Catalysis" x="0" y="0" elementRef="GLYOHMETRANS-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="GLYOHMETRANS-RXN_anchor_reactant_1">
+      <Xref identifier="EC-2.1.2.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="GLYOHMETRANS-RXN_anchor_reactant_start_1" x="145.0" y="654.4005126953125" elementRef="THF-GLU-N" relX="1.0" relY="0.0" />
+        <Point elementId="GLYOHMETRANS-RXN_anchor_reactant_end_1" x="0" y="0" elementRef="GLYOHMETRANS-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="GLYOHMETRANS-RXN_anchor_product_1">
+      <Xref identifier="EC-2.1.2.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="GLYOHMETRANS-RXN_anchor_product_start_1" x="0" y="0" elementRef="GLYOHMETRANS-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="GLYOHMETRANS-RXN_anchor_product_end_1" arrowHead="Conversion" x="691.1954345703125" y="643.0485229492188" elementRef="METHYLENE-THF-GLU-N" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="GLYOHMETRANS-RXN_anchor_product_2">
+      <Xref identifier="EC-2.1.2.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="GLYOHMETRANS-RXN_anchor_product_start_2" x="0" y="0" elementRef="GLYOHMETRANS-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="GLYOHMETRANS-RXN_anchor_product_end_2" arrowHead="Conversion" x="874.5747680664062" y="849.7426147460938" elementRef="WATER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_PUB_16306140">
+      <Xref identifier="16306140" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_1536856">
+      <Xref identifier="1536856" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_10598551">
+      <Xref identifier="10598551" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation__OGREN84_">
+      <Xref identifier="[OGREN84]" dataSource="PlantCyc" />
+    </Citation>
+    <Citation elementId="citation_PUB_11501996">
+      <Xref identifier="11501996" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_8480361">
+      <Xref identifier="8480361" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_16661733">
+      <Xref identifier="16661733" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_15888445">
+      <Xref identifier="15888445" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_2201683">
+      <Xref identifier="2201683" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_15659103">
+      <Xref identifier="15659103" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_11087421">
+      <Xref identifier="11087421" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_18493048">
+      <Xref identifier="18493048" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_9398220">
+      <Xref identifier="9398220" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>
