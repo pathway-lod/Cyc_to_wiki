@@ -1,0 +1,21 @@
+name: build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: "Validate XSD files"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Validate XSD files conform to the specs
+        uses: phpcsstandards/xmllint-validate@v1
+        with:
+          pattern: "biocyc_pathways_*/individual_pathways/*.xml"
+          xsd-url: "https://raw.githubusercontent.com/PathVisio/GPML/refs/heads/master/GPML2021/GPML2021.xsd"
