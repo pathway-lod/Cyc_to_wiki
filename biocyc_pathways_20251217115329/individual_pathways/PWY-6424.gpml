@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="26,27-dehydrozymosterol metabolism" organism="Glycine max" source="PlantCyc" version="20251217115329">
+  <Description>Phytosterols are ancient molecules in plants; they are part of the cell membrane architectural components. The specific structural feature of phytosterols are the 24-alkyl group in the sterol side chain |CITS: [11111078 ]|. This has evolved into more complex forms from single cellular organisms to vascular plants. Fungi, algae and protozoa, synthesize 24&amp;beta;- methyl sterols or ergosterols, plants synthesize 24 &amp;alpha;- ethyl sterols like sitosterols. Alkyl steroids have immense variation in the structures in nature and only small fractions of them have been identified |CITS: [19818974]|. The sterol methylations are catalyzed by (S)-adenosyl-L-methionine: Delta(24)-sterol methyl transferase (SMT). Animal systems do not have these enzymes. Several fungi and plant SMT&apos;s have been cloned and extensively characterized |CITS: [9208946]|. The transformation of olefins into structurally variable C-methylated products by SMT&apos;s are complex and under investigations for over 50 years. Although SMT&apos;s from lower organisms and plants appear to be distinct their mechanistic behavior and mode of sterol transformation appears to be similar |CITS: [12946407]|. In this pathway, the SMT isoforms SMT2-1 and SMT2-2 show differential expression in distinct developmental stages, such as flowering and seed development, where SMT2-2 levels during seed development are higher than SMT2-1 and SMT1. This indicates the genes of the SMT&apos;s have undergone divergent evolution. The authors of this study hypothesize that the primitive SMT gene to have been bifunctional and catalytically promiscuous |CITS: [19818974]|.</Description>
+  <Authors>
+    <Author name="O-28" />
+    <Author name="pujar" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-6424" />
+  <Property key="Type" value="Sterol-Biosynthesis" />
+  <Property key="ReactionCount" value="3" />
+  <Property key="ReactionIDs" value="RXN-11203, RXN-11202, RXN-11201" />
+  <Property key="PredecessorCount" value="2" />
+  <Property key="PrimaryCompoundCount" value="3" />
+  <Property key="Organism" value="Glycine max" />
+  <Property key="TaxonomicRange_1" value="Stramenopiles" />
+  <Property key="TaxonomicRange_2" value="Viridiplantae" />
+  <Property key="TaxonomicRange_3" value="Fungi" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_PUB_19818974" />
+  <CitationRef elementRef="citation_PUB_9208946" />
+  <CitationRef elementRef="citation_PUB_12946407" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="G-11789" textLabel="SMT2-1" type="GeneProduct">
+      <Xref identifier="G-11789" dataSource="plantcyc" />
+      <Graphics centerX="925.16162109375" centerY="595.4088134765625" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="G-11789" />
+      <Property key="Product" value="MONOMER-15391" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+      <CitationRef elementRef="citation_PUB_9746350" />
+    </DataNode>
+    <DataNode elementId="MONOMER-15391" textLabel="MONOMER-15391" type="Protein">
+      <Xref identifier="MONOMER-15391" dataSource="plantcyc" />
+      <Graphics centerX="1138.2791748046875" centerY="835.8812255859375" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="PMN, zhang, O-28, pujar">A cDNA clone was isolated from soybean tissues. The cDNA was recombinantly expressed and the protein was functionally characterized in E.coli and the gene was named SMT2-1. This protein has homology with SMT1 and participates in the transalkylation pathway. SMT2-1 catalyzes the conversion of 24(28)-methylene lophenol to 24(28)Z-ethylidene lophenol |CITS: [19818974]|.</Comment>
+      <Property key="UniqueID" value="MONOMER-15391" />
+      <Property key="Catalyzes" value="RXN-22044, RXN-17432, RXN-17431, RXN-17428" />
+      <Property key="CatalyzesCount" value="4" />
+      <Property key="Gene" value="G-11789" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="MolecularWeightExp" value="161." />
+      <Property key="MolecularWeightKd" value="161." />
+      <Property key="Species" value="TAX-3847" />
+      <CitationRef elementRef="citation_PUB_19818974" />
+    </DataNode>
+    <DataNode elementId="MONOMER-15392" textLabel="MONOMER-15392" type="Protein" groupRef="CPLX-8724">
+      <Xref identifier="D2D5G4" dataSource="uniprot" />
+      <Graphics centerX="615.9423828125" centerY="233.54481506347656" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="PMN, zhang, O-28, pujar">A cDNA clone was isolated from soybean tissues. The cDNA was recombinantly expressed and the protein was functionally characterized in E.coli and the gene was named SMT2-2. This protein has homology with SMT1 and participates in the transalkylation pathway. SMT2-1 catalyzes the conversion of 24(28)-methylene lophenol to 24(28)Z-ethylidene lophenol |CITS: [19818974]|.</Comment>
+      <Property key="UniqueID" value="MONOMER-15392" />
+      <Property key="AlternativeId_Uniprot" value="D2D5G4" />
+      <Property key="AlternativeId_Pfam" value="PF08241" />
+      <Property key="AlternativeId_Interpro" value="IPR025769" />
+      <Property key="AlternativeId_Prosite" value="PS51596" />
+      <Property key="AlternativeId_Pid" value="ACS93764" />
+      <Property key="ComponentOf" value="CPLX-8724" />
+      <Property key="Gene" value="G-11790" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="MolecularWeightExp" value="40., 161." />
+      <Property key="MolecularWeightKd" value="40., 161." />
+      <Property key="Species" value="TAX-3847" />
+    </DataNode>
+    <DataNode elementId="ADENOSYL-HOMO-CYS" textLabel="S-adenosyl-L-homocysteine" type="Metabolite">
+      <Xref identifier="ZJUKTBDSGOFHSH-WFMPWKQPSA-N" dataSource="InChIKey" />
+      <Graphics centerX="882.69873046875" centerY="786.853515625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ADENOSYL-HOMO-CYS" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004228232" />
+      <Property key="AlternativeId_Seed" value="cpd00019" />
+      <Property key="AlternativeId_Metanetx" value="MNXM19" />
+      <Property key="AlternativeId_Pubchem" value="25246222" />
+      <Property key="AlternativeId_Refmet" value="S-Adenosylhomocysteine" />
+      <Property key="AlternativeId_Bigg" value="ahcys" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57856" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00939" />
+      <Property key="AlternativeId_Chebi" value="57856" />
+      <Property key="AlternativeId_LigandCpd" value="C00021" />
+      <Property key="AlternativeId_Cas" value="979-92-0" />
+      <Property key="Synonym_1" value="S-adenosyl-L-homocysteine" />
+      <Property key="Synonym_2" value="SAH" />
+      <Property key="Synonym_3" value="S-adenosylhomocysteine" />
+      <Property key="Synonym_4" value="2-S-adenosyl-L-homocysteine" />
+      <Property key="Synonym_5" value="AdoHcy" />
+      <Property key="Synonym_6" value="2-&lt;i&gt;S&lt;/i&gt;-adenosyl-L-homocysteine" />
+      <Property key="Synonym_7" value="&lt;i&gt;S&lt;/i&gt;-adenosyl-homocysteine" />
+      <Property key="Synonym_8" value="&lt;i&gt;S&lt;/i&gt;-adenosylhomocysteine" />
+      <Property key="Synonym_9" value="adenosyl-homo-cys" />
+      <Property key="Synonym_10" value="adenosylhomocysteine" />
+      <Property key="Synonym_11" value="adenosylhomo-cys" />
+      <Property key="Synonym_12" value="&lt;i&gt;S&lt;/i&gt;-(5&apos;-adenosyl)-homocysteine" />
+      <Property key="ChemicalFormula" value="(C 14) (H 20) (N 6) (O 5) (S 1)" />
+      <Property key="AbbrevName" value="SAH" />
+      <Property key="AtomCharges" value="(23 -1), (15 1)" />
+      <Property key="Gibbs0" value="84.0534" />
+      <Property key="Inchi" value="InChI=1S/C14H20N6O5S/c15-6(14(23)24)1-2-26-3-7-9(21)10(22)13(25-7)20-5-19-8-11(16)17-4-18-12(8)20/h4-7,9-10,13,21-22H,1-3,15H2,(H,23,24)(H2,16,17,18)/t6-,7+,9+,10+,13+/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=ZJUKTBDSGOFHSH-WFMPWKQPSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="384.409" />
+      <Property key="MonoisotopicMw" value="384.1215884737" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-7326, REG-8467, REG-14064, REG-14069, REG-14088, REG-14789, REG-14060, REG-13740, REG-13741, REG0-10277, REG-12210, REG-13289, REG-8730, REG-12209, REG-7945, REG-11566, REG-7947, REG-8997, REG-11533, REG-7961, REG-6204, REG-6764, REG-6118, REG-6119, REG-11189, REG-9060, REG-8992, REG-7408" />
+      <Property key="Smiles" value="C(SC[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3))C[C@@H](C(=O)[O-])[NH3+]" />
+    </DataNode>
+    <DataNode elementId="CPD-12159" textLabel="26,27-dehydrozymosterol" type="Metabolite">
+      <Xref identifier="PARCYOHVCUKSCA-BJDKXSRUSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1162.22607421875" centerY="50.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-12159" />
+      <Property key="AlternativeId_Seed" value="cpd23274" />
+      <Property key="AlternativeId_Metanetx" value="MNXM8080" />
+      <Property key="AlternativeId_Chebi" value="136770" />
+      <Property key="AlternativeId_Pubchem" value="91820155" />
+      <Property key="ChemicalFormula" value="(C 27) (H 42) (O 1)" />
+      <Property key="Gibbs0" value="501.63712" />
+      <Property key="Inchi" value="InChI=1S/C27H42O/c1-18(5-4-6-19-7-8-19)23-11-12-24-22-10-9-20-17-21(28)13-15-26(20,2)25(22)14-16-27(23,24)3/h6,18,20-21,23-24,28H,4-5,7-17H2,1-3H3/t18-,20+,21+,23-,24+,26+,27-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=PARCYOHVCUKSCA-BJDKXSRUSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="382.628" />
+      <Property key="MonoisotopicMw" value="382.32356597029997" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C[C@H](CCC=C1(CC1))[C@H]3(CC[C@H]4(C5(\CC[C@H]2(C[C@@H](O)CC[C@@](C)2C(\CC[C@](C)34)=5))))" />
+      <CitationRef elementRef="citation_PUB_19818974" />
+    </DataNode>
+    <DataNode elementId="METOH" textLabel="methanol" type="Metabolite">
+      <Xref identifier="OKKJLVBELUTLKV-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="277.49188232421875" centerY="1256.724609375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="METOH" />
+      <Property key="AlternativeId_Mediadb" value="compounds/129/" />
+      <Property key="AlternativeId_Refmet" value="Methanol" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC17790" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01875" />
+      <Property key="AlternativeId_Chemspider" value="864" />
+      <Property key="AlternativeId_Chebi" value="17790" />
+      <Property key="AlternativeId_Pubchem" value="887" />
+      <Property key="AlternativeId_LigandCpd" value="C00132" />
+      <Property key="AlternativeId_Cas" value="67-56-1" />
+      <Property key="Synonym_1" value="MetOH" />
+      <Property key="Synonym_2" value="carbinol" />
+      <Property key="Synonym_3" value="MeOH" />
+      <Property key="Synonym_4" value="methyl alcohol" />
+      <Property key="Synonym_5" value="wood alcohol" />
+      <Property key="Synonym_6" value="CH&lt;sub&gt;3&lt;/sub&gt;OH" />
+      <Property key="ChemicalFormula" value="(C 1) (H 4) (O 1)" />
+      <Property key="AbbrevName" value="MeOH" />
+      <Property key="Gibbs0" value="-0.83551717" />
+      <Property key="Inchi" value="InChI=1S/CH4O/c1-2/h2H,1H3" />
+      <Property key="InchiKey" value="InChIKey=OKKJLVBELUTLKV-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="32.042" />
+      <Property key="MonoisotopicMw" value="32.026214750499996" />
+      <Property key="NonStandardInchi" value="InChI=1S/CH4O/c1-2/h2H,1H3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CO" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="917.6902465820312" centerY="1550.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="ChemicalFormula" value="(H 1)" />
+      <Property key="AtomCharges" value="(1 1)" />
+      <Property key="Gibbs0" value="0.42906138" />
+      <Property key="Inchi" value="InChI=1S/p+1" />
+      <Property key="InchiKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicMw" value="1.0078250321" />
+      <Property key="NonStandardInchi" value="InChI=1S/p+1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="[H+]" />
+    </DataNode>
+    <DataNode elementId="CPD-12160" textLabel="24-alkyl sterol 1" type="Metabolite">
+      <Xref identifier="VBNWAWCGTCKMJY-VOTSOKGWSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1521.139892578125" centerY="1219.484619140625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="O-28, pujar">The authors have not named this compound and refer to all the products of this pathway as 24-alkyl sterol products |CITS: [19818974]|.</Comment>
+      <Property key="UniqueID" value="CPD-12160" />
+      <Property key="AlternativeId_Pubchem" value="46173091" />
+      <Property key="ChemicalFormula" value="(C 28) (H 44) (O 1)" />
+      <Property key="Inchi" value="InChI=1S/C28H44O/c1-19(2)8-6-7-9-20(3)24-12-13-25-23-11-10-21-18-22(29)14-16-27(21,4)26(23)15-17-28(24,25)5/h6-7,20-22,24-25,29H,1,8-18H2,2-5H3/b7-6+" />
+      <Property key="InchiKey" value="InChIKey=VBNWAWCGTCKMJY-VOTSOKGWSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="396.655" />
+      <Property key="MonoisotopicMw" value="396.3392160345" />
+      <Property key="NonStandardInchi" value="InChI=1S/C28H44O/c1-19(2)8-6-7-9-20(3)24-12-13-25-23-11-10-21-18-22(29)14-16-27(21,4)26(23)15-17-28(24,25)5/h6-7,20-22,24-25,29H,1,8-18H2,2-5H3/b7-6+" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C=C(C)C/C=C/CC(C)C1(C2(C)(C(CC1)C3(\CCC4(C(C)(C(\CC2)=3)CCC(O)C4))))" />
+      <CitationRef elementRef="citation_PUB_19818974" />
+    </DataNode>
+    <DataNode elementId="CPD-12162" textLabel="26-hydroxy-27-methyl-zymosterol" type="Metabolite">
+      <Xref identifier="VEQLCAQNWTZKGV-WOBPUILZSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1600.0" centerY="537.4297485351562" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-12162" />
+      <Property key="AlternativeId_Metanetx" value="MNXM14422" />
+      <Property key="AlternativeId_Pubchem" value="91820109" />
+      <Property key="ChemicalFormula" value="(C 28) (H 46) (O 2)" />
+      <Property key="Gibbs0" value="484.05154" />
+      <Property key="Inchi" value="InChI=1S/C28H46O2/c1-5-20(18-29)8-6-7-19(2)24-11-12-25-23-10-9-21-17-22(30)13-15-27(21,3)26(23)14-16-28(24,25)4/h8,19,21-22,24-25,29-30H,5-7,9-18H2,1-4H3/b20-8-/t19-,21+,22+,24-,25+,27+,28-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=VEQLCAQNWTZKGV-WOBPUILZSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="414.67" />
+      <Property key="MonoisotopicMw" value="414.34978072079997" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CCC(\CO)=C\CC[C@@H](C)[C@H]2(CC[C@H]1(C3(\CC[C@H]4(C[C@@H](O)CC[C@](C)(C(\CC[C@@](C)12)=3)4))))" />
+      <CitationRef elementRef="citation_PUB_19818974" />
+    </DataNode>
+    <DataNode elementId="METHYL-GROUP" textLabel="a methyl group" type="Metabolite">
+      <Graphics centerX="617.195556640625" centerY="778.5057983398438" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="METHYL-GROUP" />
+      <Property key="ChemicalFormula" value="(C 1) (H 4)" />
+      <Property key="AbbrevName" value="methyl" />
+      <Property key="Gibbs0" value="44.764484" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="InternalsOfGroup" value="GLYCO-CT-METHYL" />
+      <Property key="MolecularWeight" value="16.043" />
+      <Property key="NonStandardInchi" value="InChI=1S/CH4/h1H4" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C" />
+    </DataNode>
+    <DataNode elementId="S-ADENOSYLMETHIONINE" textLabel="S-adenosyl-L-methionine" type="Metabolite">
+      <Xref identifier="MEFKEPWMEQBLKI-FCKMPRQPSA-O" dataSource="InChIKey" />
+      <Graphics centerX="850.3519897460938" centerY="1025.885986328125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: S-ADENOSYLMETHIONINE| (AdoMet, SAM) is a sulfonium compound in which each of the carbons attached to the sulfur is activated toward nucleophilic attack. It is the most common methyl group donor for methyltransferase enzymes. In addition, AdoMet is cleaved reductively by a large number of iron-sulfur cluster-containing enzymes (known as radical SAM or radical AdoMet enzymes) to produce |FRAME: CPD-15400|, which they use to activate their substrates. Another major role of AdoMet is in polyamine biosynthesis, where it is decarboxylated by |FRAME: EC-4.1.1.50|, to form |FRAME: S-ADENOSYLMETHIONINAMINE|, which serves as a propylamine group donor. AdoMet is formed by |FRAME: EC-2.5.1.6| and bears an &lt;i&gt;S&lt;/i&gt; configuration at the sulfur atom. The chiral sulfonium of AdoMet spontaneously racemizes under physiological conditions to form a mixture of &lt;i&gt;S&lt;/i&gt; and &lt;i&gt;R&lt;/i&gt; isomers. This results in reduced activity, as the |FRAME: CPD0-2554 &quot;&lt;i&gt;R&lt;/i&gt; isomer&quot;| is not accepted as a substrate for AdoMet-dependent methyltransferases |CITS: [12419350]|.</Comment>
+      <Property key="UniqueID" value="S-ADENOSYLMETHIONINE" />
+      <Property key="AlternativeId_Pubchem" value="24762165" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004214738" />
+      <Property key="AlternativeId_Seed" value="cpd00017" />
+      <Property key="AlternativeId_Metanetx" value="MNXM16" />
+      <Property key="AlternativeId_Refmet" value="S-adenosyl-L-methioninate" />
+      <Property key="AlternativeId_Bigg" value="amet" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC59789" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01185" />
+      <Property key="AlternativeId_Chebi" value="59789" />
+      <Property key="AlternativeId_LigandCpd" value="C00019" />
+      <Property key="AlternativeId_Cas" value="29908-03-0" />
+      <Property key="Synonym_1" value="(&lt;i&gt;S&lt;/i&gt;)-S-adenosyl-L-methionine" />
+      <Property key="Synonym_2" value="AdoMet" />
+      <Property key="Synonym_3" value="SAM" />
+      <Property key="Synonym_4" value="2-&lt;i&gt;S&lt;/i&gt;-adenosyl-L-methionine" />
+      <Property key="Synonym_5" value="&lt;i&gt;S&lt;/i&gt;-adenosyl-methionine" />
+      <Property key="Synonym_6" value="adenosylmethionine" />
+      <Property key="Synonym_7" value="&lt;i&gt;S&lt;/i&gt;-adenosylmethionine" />
+      <Property key="ChemicalFormula" value="(C 15) (H 23) (N 6) (O 5) (S 1)" />
+      <Property key="AbbrevName" value="SAM" />
+      <Property key="AtomCharges" value="(27 1), (24 -1), (16 1)" />
+      <Property key="Gibbs0" value="124.03472" />
+      <Property key="Inchi" value="InChI=1S/C15H22N6O5S/c1-27(3-2-7(16)15(24)25)4-8-10(22)11(23)14(26-8)21-6-20-9-12(17)18-5-19-13(9)21/h5-8,10-11,14,22-23H,2-4,16H2,1H3,(H2-,17,18,19,24,25)/p+1/t7-,8+,10+,11+,14+,27-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=MEFKEPWMEQBLKI-FCKMPRQPSA-O" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="399.444" />
+      <Property key="MonoisotopicMw" value="400.1528886021" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-15570, REG-12359, REG-9936, REG-9937, REG-8082, REG0-8461, REG-7118" />
+      <Property key="Smiles" value="C[S+](C[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3))CC[C@@H](C(=O)[O-])[NH3+]" />
+      <CitationRef elementRef="citation_PUB_12419350" />
+    </DataNode>
+    <DataNode elementId="CPD-12161" textLabel="24-alkyl sterol 2" type="Metabolite">
+      <Xref identifier="YBLHASCZKLAOQF-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="100.0" centerY="525.5509643554688" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="O-28, pujar">The authors have not named this compound and refer to all the products of this pathway as 24-alkyl sterol products |CITS: [19818974]|.</Comment>
+      <Property key="UniqueID" value="CPD-12161" />
+      <Property key="AlternativeId_Pubchem" value="46173432" />
+      <Property key="ChemicalFormula" value="(C 28) (H 46) (O 2)" />
+      <Property key="Inchi" value="InChI=1S/C28H46O2/c1-18(2)16-21(29)8-6-19(3)24-10-11-25-23-9-7-20-17-22(30)12-14-27(20,4)26(23)13-15-28(24,25)5/h19-22,24-25,29-30H,1,6-17H2,2-5H3" />
+      <Property key="InchiKey" value="InChIKey=YBLHASCZKLAOQF-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="414.67" />
+      <Property key="MonoisotopicMw" value="414.34978072079997" />
+      <Property key="NonStandardInchi" value="InChI=1S/C28H46O2/c1-18(2)16-21(29)8-6-19(3)24-10-11-25-23-9-7-20-17-22(30)12-14-27(20,4)26(23)13-15-28(24,25)5/h19-22,24-25,29-30H,1,6-17H2,2-5H3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C=C(C)CC(O)CCC(C)C1(C2(C)(C(CC1)C3(\CCC4(C(C)(C(\CC2)=3)CCC(O)C4))))" />
+      <CitationRef elementRef="citation_PUB_19818974" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="970.16162109375" y="595.4088134765625" elementRef="G-11789" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="1093.2791748046875" y="835.8812255859375" elementRef="MONOMER-15391" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-11203">
+      <Xref identifier="RXN-11203" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-11203_start" x="1207.22607421875" y="50.0" elementRef="CPD-12159" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-11203_end" arrowHead="Conversion" x="1555.0" y="537.4297485351562" elementRef="CPD-12162" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-11203_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-11203" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-6424" />
+      <Property key="ReactionEquation" value="S-ADENOSYLMETHIONINE + CPD-12159 + METOH + PROTON =&gt; CPD-12162 + ADENOSYL-HOMO-CYS + METHYL-GROUP" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXN-17430, ENZRXN-17431" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <CitationRef elementRef="citation_PUB_19818974" />
+    </Interaction>
+    <Interaction elementId="RXN-11203_ENZRXN-17431">
+      <Waypoints>
+        <Point elementId="RXN-11203_ENZRXN-17431_start" x="1138.2791748046875" y="848.3812255859375" elementRef="MONOMER-15391" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-11203_ENZRXN-17431_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-11203_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-11203_ENZRXN-17430">
+      <Waypoints>
+        <Point elementId="RXN-11203_ENZRXN-17430_start" x="615.9423828125" y="246.04481506347656" elementRef="MONOMER-15392" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-11203_ENZRXN-17430_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-11203_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-11203_anchor_reactant_0">
+      <Xref identifier="RXN-11203" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-11203_anchor_reactant_start_0" x="895.3519897460938" y="1025.885986328125" elementRef="S-ADENOSYLMETHIONINE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-11203_anchor_reactant_end_0" x="0" y="0" elementRef="RXN-11203_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-11203_anchor_reactant_2">
+      <Xref identifier="RXN-11203" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-11203_anchor_reactant_start_2" x="322.49188232421875" y="1256.724609375" elementRef="METOH" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-11203_anchor_reactant_end_2" x="0" y="0" elementRef="RXN-11203_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-11203_anchor_reactant_3">
+      <Xref identifier="RXN-11203" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-11203_anchor_reactant_start_3" x="962.6902465820312" y="1550.0" elementRef="PROTON" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-11203_anchor_reactant_end_3" x="0" y="0" elementRef="RXN-11203_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-11203_anchor_product_1">
+      <Xref identifier="RXN-11203" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-11203_anchor_product_start_1" x="0" y="0" elementRef="RXN-11203_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-11203_anchor_product_end_1" arrowHead="Conversion" x="837.69873046875" y="786.853515625" elementRef="ADENOSYL-HOMO-CYS" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-11203_anchor_product_2">
+      <Xref identifier="RXN-11203" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-11203_anchor_product_start_2" x="0" y="0" elementRef="RXN-11203_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-11203_anchor_product_end_2" arrowHead="Conversion" x="572.195556640625" y="778.5057983398438" elementRef="METHYL-GROUP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-11202">
+      <Xref identifier="RXN-11202" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-11202_start" x="1207.22607421875" y="50.0" elementRef="CPD-12159" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-11202_end" arrowHead="Conversion" x="55.0" y="525.5509643554688" elementRef="CPD-12161" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-11202_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-11202" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-6424" />
+      <Property key="ReactionEquation" value="S-ADENOSYLMETHIONINE + CPD-12159 + METOH + PROTON =&gt; CPD-12161 + ADENOSYL-HOMO-CYS + METHYL-GROUP" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXN-17433, ENZRXN-17432" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <CitationRef elementRef="citation_PUB_19818974" />
+    </Interaction>
+    <Interaction elementId="RXN-11202_ENZRXN-17432">
+      <Waypoints>
+        <Point elementId="RXN-11202_ENZRXN-17432_start" x="1138.2791748046875" y="848.3812255859375" elementRef="MONOMER-15391" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-11202_ENZRXN-17432_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-11202_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-11202_ENZRXN-17433">
+      <Waypoints>
+        <Point elementId="RXN-11202_ENZRXN-17433_start" x="615.9423828125" y="246.04481506347656" elementRef="MONOMER-15392" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-11202_ENZRXN-17433_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-11202_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-11202_anchor_reactant_0">
+      <Xref identifier="RXN-11202" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-11202_anchor_reactant_start_0" x="895.3519897460938" y="1025.885986328125" elementRef="S-ADENOSYLMETHIONINE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-11202_anchor_reactant_end_0" x="0" y="0" elementRef="RXN-11202_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-11202_anchor_reactant_2">
+      <Xref identifier="RXN-11202" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-11202_anchor_reactant_start_2" x="322.49188232421875" y="1256.724609375" elementRef="METOH" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-11202_anchor_reactant_end_2" x="0" y="0" elementRef="RXN-11202_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-11202_anchor_reactant_3">
+      <Xref identifier="RXN-11202" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-11202_anchor_reactant_start_3" x="962.6902465820312" y="1550.0" elementRef="PROTON" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-11202_anchor_reactant_end_3" x="0" y="0" elementRef="RXN-11202_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-11202_anchor_product_1">
+      <Xref identifier="RXN-11202" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-11202_anchor_product_start_1" x="0" y="0" elementRef="RXN-11202_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-11202_anchor_product_end_1" arrowHead="Conversion" x="837.69873046875" y="786.853515625" elementRef="ADENOSYL-HOMO-CYS" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-11202_anchor_product_2">
+      <Xref identifier="RXN-11202" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-11202_anchor_product_start_2" x="0" y="0" elementRef="RXN-11202_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-11202_anchor_product_end_2" arrowHead="Conversion" x="572.195556640625" y="778.5057983398438" elementRef="METHYL-GROUP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-11201">
+      <Xref identifier="EC-2.1.1.43" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-11201_start" x="1207.22607421875" y="50.0" elementRef="CPD-12159" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-11201_end" arrowHead="Conversion" x="1476.139892578125" y="1219.484619140625" elementRef="CPD-12160" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-11201_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-11201" />
+      <Property key="ReactionName" value="sterol 24C methyltransferase" />
+      <Property key="EC_Number" value="EC-2.1.1.43" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-6424" />
+      <Property key="ReactionEquation" value="S-ADENOSYLMETHIONINE + CPD-12159 =&gt; CPD-12160 + ADENOSYL-HOMO-CYS" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED-UNFIXABLE" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXN-17428, ENZRXN-17429" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="CannotBalance?" value="T" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <CitationRef elementRef="citation_PUB_19818974" />
+    </Interaction>
+    <Interaction elementId="RXN-11201_ENZRXN-17428">
+      <Waypoints>
+        <Point elementId="RXN-11201_ENZRXN-17428_start" x="1138.2791748046875" y="848.3812255859375" elementRef="MONOMER-15391" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-11201_ENZRXN-17428_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-11201_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-11201_ENZRXN-17429">
+      <Waypoints>
+        <Point elementId="RXN-11201_ENZRXN-17429_start" x="615.9423828125" y="246.04481506347656" elementRef="MONOMER-15392" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-11201_ENZRXN-17429_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-11201_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-11201_anchor_reactant_0">
+      <Xref identifier="EC-2.1.1.43" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-11201_anchor_reactant_start_0" x="895.3519897460938" y="1025.885986328125" elementRef="S-ADENOSYLMETHIONINE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-11201_anchor_reactant_end_0" x="0" y="0" elementRef="RXN-11201_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-11201_anchor_product_1">
+      <Xref identifier="EC-2.1.1.43" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-11201_anchor_product_start_1" x="0" y="0" elementRef="RXN-11201_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-11201_anchor_product_end_1" arrowHead="Conversion" x="837.69873046875" y="786.853515625" elementRef="ADENOSYL-HOMO-CYS" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Groups>
+    <Group elementId="CPLX-8724" textLabel="CPLX-8724" type="Complex">
+      <Xref identifier="CPLX-8724" dataSource="plantcyc" />
+      <Graphics centerX="615.9423828125" centerY="233.54481506347656" width="140" height="100" textColor="666666" fontName="Arial" fontSize="10" borderColor="9900CC" borderStyle="Dashed" borderWidth="2.0" fillColor="F5E6FF" shapeType="Rectangle" zOrder="-1" />
+      <Comment source="PMN, zhang, O-28, hartmut">A cDNA clone was isolated from soybean tissues. The cDNA was recombinantly expressed and the protein was functionally characterized in E.coli and the gene was named SMT2-1. This protein has homology with SMT1 and participates in the transalkylation pathway. The homotetrameric SMT2-2 catalyzes the conversion of |FRAME:CPD-4101 24-methylenelophenol| to |FRAME:CPD-4124 24-ethylidenelophenol| |CITS:[19818974]|. It also reacts with the mechanism-based inhibitor |FRAME:CPD-12159 26,27-dehydrozymosterol| which either binds the SMT enzyme covalently (see |FRAME:CPD-12160 24-alkyl sterol 1| and |FRAME:CPD-12162 24-alkyl sterol 3|) or is converted into |FRAME:CPD-12161 24-alkyl sterol 2| which can enter the sterol pathway |CITS: [19818974]|. It has been shown that SMT2-2 is ubiquitous expressed in all tissues investigated and that it can be induced by environmental cues such as cold, dehydration and |FRAME:INDOLE_ACETATE_AUXIN indole-3-acetate| |CITS:[20865301]|.</Comment>
+      <Property key="UniqueID" value="CPLX-8724" />
+      <Property key="ComplexComponents" value="MONOMER-15392" />
+      <Property key="ComponentCount" value="1" />
+      <Property key="IsComplex" value="true" />
+      <Property key="Catalyzes" value="RXN-22043, RXN-17429, RXN-17430, RXN-17433" />
+      <Property key="CatalyzesCount" value="4" />
+      <Property key="^coefficient" value="4" />
+      <Property key="InstanceNameTemplate" value="CPLX-*" />
+      <Property key="MolecularWeightExp" value="161." />
+      <Property key="MolecularWeightKd" value="161." />
+      <Property key="Species" value="TAX-3847" />
+      <CitationRef elementRef="citation_PUB_19818974" />
+      <CitationRef elementRef="citation_PUB_20865301" />
+    </Group>
+  </Groups>
+  <Citations>
+    <Citation elementId="citation_PUB_19818974">
+      <Xref identifier="19818974" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_12946407">
+      <Xref identifier="12946407" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_12419350">
+      <Xref identifier="12419350" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_9746350">
+      <Xref identifier="9746350" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_9208946">
+      <Xref identifier="9208946" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_20865301">
+      <Xref identifier="20865301" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

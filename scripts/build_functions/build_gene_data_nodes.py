@@ -50,7 +50,6 @@ def get_primary_gene_xref(db_refs, record=None):
     Returns:
         Xref: Primary external reference or None
     """
-    # Priority order based on WikiPathways best practices:
     # 1. Entrez Gene - Most stable, comprehensive gene database
     # 2. HGNC - Official human gene nomenclature
     # 3. Ensembl - Genomic context
@@ -94,7 +93,7 @@ def get_primary_gene_xref(db_refs, record=None):
         'CHLAMYCYC1': 'biocyc',
 
         # Plant-specific databases
-        'TAIR': 'TAIR',
+        'TAIR': 'TAIR gene name',
         'MAIZEGDB': 'Gramene Maize',
         'GRAMENE-GENES-DB': 'Gramene Genes DB',
         'GRAMENE': 'Gramene Genes DB',
@@ -140,7 +139,7 @@ def get_primary_gene_xref(db_refs, record=None):
     if record and 'UNIQUE-ID' in record:
         unique_id = str(record['UNIQUE-ID'])
         if unique_id.startswith('AT') and 'G' in unique_id:
-            return Xref(identifier=unique_id, dataSource='TAIR')
+            return Xref(identifier=unique_id, dataSource='TAIR gene name')
 
     # Final fallback: use PlantCyc unique-id if available
     if record and 'UNIQUE-ID' in record:

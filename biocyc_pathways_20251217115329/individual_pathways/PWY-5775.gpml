@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="rotenoid biosynthesis I" organism="Amorpha fruticosa" source="PlantCyc" version="20251217115329">
+  <Description>&lt;b&gt;General Background&lt;/b&gt; Rotenoid compounds are a class of plant secondary metabolites that derive from isoflavones. They are commonly found in leguminous species, but also occur in other families, such as the Iridiceae (see refs in |CITS: [11711058]|). These compounds play a role in plant interactions with insects |CITS: [Birch85]|. But, they have also been extracted for use by humans. Rotenone, perhaps the most commonly known member of the family, has a long history of use as a fish poison |CITS: [Leonard39]|, and it is also the major bioactive component of a commerically available insecticide |CITS: [16332203]|. Rotenone is also used in scientific experiments due to its ability to interfere with the electron transport chain |CITS: [4295606]| and it can also interfere with tubulin self-assembly |CITS: [568944]|. Other studies suggest that rotenone can promote Parkinson&apos;s Disease |CITS: [18155613]|. However, several rotenoids also have medicinal qualities. For example, amorphigenin |CITS: [8350086]|, |FRAME: CPD-12163 deguelin|, and alpha-toxicarol |CITS: [14765285], [17125241]| seem to have anti-tumor effects. &lt;b&gt;About This Pathway&lt;/b&gt; Rotenone and amorphigenin are two closely related rotenoid compounds that have been studied in Derris elliptica and |FRAME: TAX-48131 &lt;i&gt;Amorpha fruticosa&lt;/i&gt;|, though they can be produced by other species |CITS: [11711058], [17125241], [14733510]|. An extensive series of radiotracer studies have elucidated the primary steps in the synthesis of rotenone and amorphigenin as they progress through the early stages of the isoflavone synthesis, and then undergo rotenoid-specific prenylation and cyclization steps. The biosynthesis of the common precursor to several rotenoids is depicted in |FRAME: PWY-6427 rot-2&apos;-enonate biosynthesis|, whereas the specific steps required to produce several rotenoids identified in |FRAME: TAX-48131 &lt;i&gt;Amorpha fruticosa&lt;/i&gt;| are shown here. Several other rotenoid compounds can be generated through modifications of rotenone, amorphigenin, or their precursors |CITS: [11711058]|.</Description>
+  <Authors>
+    <Author name="THE-ARABIDOPSIS-INFORMATION-RESOURCE" />
+    <Author name="dreher" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-5775" />
+  <Property key="Type" value="Rotenoids-Biosynthesis" />
+  <Property key="ReactionCount" value="6" />
+  <Property key="ReactionIDs" value="RXN-9062, RXN-9064, RXN-9063, RXN-9061, RXN-9060, RXN-9059" />
+  <Property key="PredecessorCount" value="3" />
+  <Property key="PathwayLinks" value="(CPD-9534 PWY-6427)" />
+  <Property key="Organism" value="Amorpha fruticosa" />
+  <Property key="TaxonomicRange_1" value="Fabaceae" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_PUB_11711058" />
+  <CitationRef elementRef="citation_PUB_BHANDARI92" />
+  <CitationRef elementRef="citation_PUB_BHANDARI92B" />
+  <CitationRef elementRef="citation_PUB_16332203" />
+  <CitationRef elementRef="citation_PUB_4295606" />
+  <CitationRef elementRef="citation_PUB_568944" />
+  <CitationRef elementRef="citation_PUB_18155613" />
+  <CitationRef elementRef="citation_PUB_8350086" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="OXYGEN-MOLECULE" textLabel="dioxygen" type="Metabolite">
+      <Xref identifier="MYMOFIZGZYHOMD-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1328.797607421875" centerY="268.5750732421875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="OXYGEN-MOLECULE" />
+      <Property key="AlternativeId_Metanetx" value="MNXM4" />
+      <Property key="AlternativeId_Seed" value="cpd00007" />
+      <Property key="AlternativeId_Bigg" value="33493" />
+      <Property key="AlternativeId_Pubchem" value="977" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15379" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01377" />
+      <Property key="AlternativeId_Chemspider" value="952" />
+      <Property key="AlternativeId_Chebi" value="15379" />
+      <Property key="AlternativeId_LigandCpd" value="C00007" />
+      <Property key="AlternativeId_Cas" value="7782-44-7" />
+      <Property key="Synonym_1" value="molecular oxygen" />
+      <Property key="Synonym_2" value="oxygen" />
+      <Property key="Synonym_3" value="oxygen molecule" />
+      <Property key="ChemicalFormula" value="(O 2)" />
+      <Property key="AbbrevName" value="O&lt;sub&gt;2&lt;/sub&gt;" />
+      <Property key="Gibbs0" value="3.92" />
+      <Property key="Inchi" value="InChI=1S/O2/c1-2" />
+      <Property key="InchiKey" value="InChIKey=MYMOFIZGZYHOMD-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="31.999" />
+      <Property key="MonoisotopicMw" value="31.9898292442" />
+      <Property key="NonStandardInchi" value="InChI=1S/O2/c1-2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-6231, REG0-11284, REG-13683, REG-5882" />
+      <Property key="Smiles" value="O=O" />
+      <Property key="SystematicName" value="dioxygen" />
+    </DataNode>
+    <DataNode elementId="CPD-9535" textLabel="4&apos;-hydroxy-rot-2&apos;-enonate" type="Metabolite">
+      <Xref identifier="STQIAJVGXVCTSD-OIZWPPBTSA-M" dataSource="InChIKey" />
+      <Graphics centerX="397.913818359375" centerY="1550.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-9535" />
+      <Property key="AlternativeId_Zinc" value="ZINC000059211645" />
+      <Property key="AlternativeId_Seed" value="cpd25724" />
+      <Property key="AlternativeId_Metanetx" value="MNXM10137" />
+      <Property key="AlternativeId_Pubchem" value="25245900" />
+      <Property key="Synonym_1" value="4&apos;-hydroxy-rot-2&apos;-enonic acid" />
+      <Property key="ChemicalFormula" value="(C 23) (H 23) (O 7)" />
+      <Property key="AtomCharges" value="(25 -1)" />
+      <Property key="Gibbs0" value="114.14370" />
+      <Property key="Inchi" value="InChI=1S/C23H24O7/c1-12(10-24)4-5-13-16(25)7-6-14-22(26)21-15-8-18(27-2)19(28-3)9-17(15)29-11-20(21)30-23(13)14/h4,6-9,20-21,24-25H,5,10-11H2,1-3H3/p-1/b12-4+/t20-,21+/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=STQIAJVGXVCTSD-OIZWPPBTSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="411.43" />
+      <Property key="MonoisotopicMw" value="412.15220312509996" />
+      <Property key="NonStandardInchi" value="InChI=1S/C23H24O7/c1-12(10-24)4-5-13-16(25)7-6-14-22(26)21-15-8-18(27-2)19(28-3)9-17(15)29-11-20(21)30-23(13)14/h4,6-9,20-21,24-25H,5,10-11H2,1-3H3/p-1/b12-4+/t20-,21+/m1/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC(/CO)=C\CC4(/C(/[O-])=C\C=C2(C(/O[C@@H]1(COC3(/C=C(C(/OC)=C\C(\[C@@H]1C2=O)=3)/OC)))=4))" />
+      <CitationRef elementRef="citation_PUB_11711058" />
+    </DataNode>
+    <DataNode elementId="CPD-9534" textLabel="rot-2&apos;-enonate" type="Metabolite">
+      <Xref identifier="GBVCHRDRVDOMQV-RTWAWAEBSA-M" dataSource="InChIKey" />
+      <Graphics centerX="834.7907104492188" centerY="816.3797607421875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-9534" />
+      <Property key="AlternativeId_Zinc" value="ZINC000003978468" />
+      <Property key="AlternativeId_Seed" value="cpd25723" />
+      <Property key="AlternativeId_Chebi" value="92599" />
+      <Property key="AlternativeId_Metanetx" value="MNXM6424" />
+      <Property key="AlternativeId_Pubchem" value="25201136" />
+      <Property key="Synonym_1" value="rot-2&apos;-enonic acid" />
+      <Property key="ChemicalFormula" value="(C 23) (H 23) (O 6)" />
+      <Property key="AtomCharges" value="(24 -1)" />
+      <Property key="Gibbs0" value="150.3737" />
+      <Property key="Inchi" value="InChI=1S/C23H24O6/c1-12(2)5-6-13-16(24)8-7-14-22(25)21-15-9-18(26-3)19(27-4)10-17(15)28-11-20(21)29-23(13)14/h5,7-10,20-21,24H,6,11H2,1-4H3/p-1/t20-,21+/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=GBVCHRDRVDOMQV-RTWAWAEBSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="395.431" />
+      <Property key="MonoisotopicMw" value="396.15728850299996" />
+      <Property key="NonStandardInchi" value="InChI=1S/C23H24O6/c1-12(2)5-6-13-16(24)8-7-14-22(25)21-15-9-18(26-3)19(27-4)10-17(15)28-11-20(21)29-23(13)14/h5,7-10,20-21,24H,6,11H2,1-4H3/p-1/t20-,21+/m1/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC(C)=CCC4(/C(/[O-])=C\C=C2(C(/O[C@@H]1(COC3(/C=C(C(/OC)=C\C(\[C@@H]1C2=O)=3)/OC)))=4))" />
+      <CitationRef elementRef="citation_PUB_11711058" />
+    </DataNode>
+    <DataNode elementId="CPD-9536" textLabel="5&apos;-hydroxy-rot-2&apos;-enonate" type="Metabolite">
+      <Xref identifier="STQIAJVGXVCTSD-UKQHVQKXSA-M" dataSource="InChIKey" />
+      <Graphics centerX="1600.0" centerY="1031.1671142578125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-9536" />
+      <Property key="AlternativeId_Zinc" value="ZINC000059206118" />
+      <Property key="AlternativeId_Seed" value="cpd25725" />
+      <Property key="AlternativeId_Metanetx" value="MNXM10272" />
+      <Property key="AlternativeId_Pubchem" value="25243887" />
+      <Property key="Synonym_1" value="5&apos;-hydroxy-rot-2&apos;-enonic acid" />
+      <Property key="ChemicalFormula" value="(C 23) (H 23) (O 7)" />
+      <Property key="AtomCharges" value="(25 -1)" />
+      <Property key="Gibbs0" value="114.14370" />
+      <Property key="Inchi" value="InChI=1S/C23H24O7/c1-12(10-24)4-5-13-16(25)7-6-14-22(26)21-15-8-18(27-2)19(28-3)9-17(15)29-11-20(21)30-23(13)14/h4,6-9,20-21,24-25H,5,10-11H2,1-3H3/p-1/b12-4-/t20-,21+/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=STQIAJVGXVCTSD-UKQHVQKXSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="411.43" />
+      <Property key="MonoisotopicMw" value="412.15220312509996" />
+      <Property key="NonStandardInchi" value="InChI=1S/C23H24O7/c1-12(10-24)4-5-13-16(25)7-6-14-22(26)21-15-8-18(27-2)19(28-3)9-17(15)29-11-20(21)30-23(13)14/h4,6-9,20-21,24-25H,5,10-11H2,1-3H3/p-1/b12-4-/t20-,21+/m1/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC(\CO)=C\CC4(/C(/[O-])=C\C=C2(C(/O[C@@H]1(COC3(/C=C(C(/OC)=C\C(\[C@@H]1C2=O)=3)/OC)))=4))" />
+      <CitationRef elementRef="citation_PUB_11711058" />
+    </DataNode>
+    <DataNode elementId="CPD-9544" textLabel="amorphigenin" type="Metabolite">
+      <Xref identifier="ZJMLELXRQUXRIU-HBGVWJBISA-N" dataSource="InChIKey" />
+      <Graphics centerX="670.0719604492188" centerY="50.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-9544" />
+      <Property key="AlternativeId_Zinc" value="ZINC000003947515" />
+      <Property key="AlternativeId_Chebi" value="183897" />
+      <Property key="AlternativeId_Seed" value="cpd25726" />
+      <Property key="AlternativeId_Metanetx" value="MNXM8293" />
+      <Property key="AlternativeId_Chemspider" value="83246" />
+      <Property key="AlternativeId_Pubchem" value="92207" />
+      <Property key="Synonym_1" value="8&apos;-hydroxyrotenone" />
+      <Property key="Synonym_2" value="3&apos;-hydroxyrotenone" />
+      <Property key="ChemicalFormula" value="(C 23) (H 22) (O 7)" />
+      <Property key="Gibbs0" value="104.14464" />
+      <Property key="Inchi" value="InChI=1S/C23H22O7/c1-11(9-24)16-7-14-15(29-16)5-4-12-22(25)21-13-6-18(26-2)19(27-3)8-17(13)28-10-20(21)30-23(12)14/h4-6,8,16,20-21,24H,1,7,9-10H2,2-3H3/t16-,20-,21+/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=ZJMLELXRQUXRIU-HBGVWJBISA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="410.423" />
+      <Property key="MonoisotopicMw" value="410.1365530609" />
+      <Property key="NonStandardInchi" value="InChI=1S/C23H22O7/c1-11(9-24)16-7-14-15(29-16)5-4-12-22(25)21-13-6-18(26-2)19(27-3)8-17(13)28-10-20(21)30-23(12)14/h4-6,8,16,20-21,24H,1,7,9-10H2,2-3H3/t16-,20-,21+/m1/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C=C(CO)[C@H]1(CC5(/C(/O1)=C\C=C3(C(/O[C@@H]2(COC4(/C=C(C(/OC)=C\C(\[C@@H]2C3=O)=4)/OC)))=5)))" />
+      <CitationRef elementRef="citation_PUB_11711058" />
+    </DataNode>
+    <DataNode elementId="CPD-5741" textLabel="rotenone" type="Metabolite">
+      <Xref identifier="JUVIOZPCNVVQFO-HBGVWJBISA-N" dataSource="InChIKey" />
+      <Graphics centerX="572.8299560546875" centerY="972.519287109375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-5741" />
+      <Property key="AlternativeId_Zinc" value="ZINC000003860715" />
+      <Property key="AlternativeId_Seed" value="cpd04758" />
+      <Property key="AlternativeId_Metanetx" value="MNXM6425" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC28201" />
+      <Property key="AlternativeId_Hmdb" value="HMDB34436" />
+      <Property key="AlternativeId_Chemspider" value="6500" />
+      <Property key="AlternativeId_Pubchem" value="6758" />
+      <Property key="AlternativeId_Chebi" value="28201" />
+      <Property key="AlternativeId_LigandCpd" value="C07593" />
+      <Property key="ChemicalFormula" value="(C 23) (H 22) (O 6)" />
+      <Property key="Gibbs0" value="140.37463" />
+      <Property key="Inchi" value="InChI=1S/C23H22O6/c1-11(2)16-8-14-15(28-16)6-5-12-22(24)21-13-7-18(25-3)19(26-4)9-17(13)27-10-20(21)29-23(12)14/h5-7,9,16,20-21H,1,8,10H2,2-4H3/t16-,20-,21+/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=JUVIOZPCNVVQFO-HBGVWJBISA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="394.423" />
+      <Property key="MonoisotopicMw" value="394.1416384388" />
+      <Property key="NonStandardInchi" value="InChI=1S/C23H22O6/c1-11(2)16-8-14-15(28-16)6-5-12-22(24)21-13-7-18(25-3)19(26-4)9-17(13)27-10-20(21)29-23(12)14/h5-7,9,16,20-21H,1,8,10H2,2-4H3/t16-,20-,21+/m1/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C=C(C)[C@H]1(CC5(/C(/O1)=C\C=C3(C(/O[C@@H]2(COC4(/C=C(C(/OC)=C\C(\[C@@H]2C3=O)=4)/OC)))=5)))" />
+    </DataNode>
+    <DataNode elementId="Acceptor" textLabel="an oxidized electron carrier" type="Metabolite">
+      <Xref identifier="15339" dataSource="ChEBI" />
+      <Graphics centerX="1028.52685546875" centerY="1405.95751953125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>In general, an electron carrier is a chemical entity that can accept or donate electrons from/to another chemical entity. When accepting electrons, it acts as an &quot;electron acceptor&quot;. By accepting the electrons, the acceptor is reduced, and thus prior to receiving the electrons the entity is called &quot;an oxidized electron acceptor&quot; and after receiving them it is called &quot;a reduced electron acceptor&quot;. Many reduced electron acceptors are able to transfer the electrons to other molecules, becoming oxidized in the process. Thus the distinction between an electron acceptor and an electron donor is often not determined by the actual chemical entity, but by the role it plays in a particular reaction. However, some acceptors in biological reactions only accept electrons and do not transfer them further. Those are often known as &quot;terminal electron acceptors&quot;. While in general every chemical reaction in which electrons are transferred includes an electron donor and an electron acceptor, several molecules are commonly used in metabolism solely for the purpose of electron transfer, and are referred to in biology as electron carriers. Different biological electron carriers differ in the number of electrons that they transfer and in their electron affinity. Some of the common biological electron carriers transfer only a single electron (e.g. |FRAME: Cytochromes cytochromes|, |FRAME: Blue-Copper-Proteins &quot;blue copper proteins&quot;|, and some |FRAME: Ferredoxins ferredoxins|), some transfer two electrons (e.g. some |FRAME: Ferredoxins ferredoxins|), some transfer a hydride ion ( e.g. |FRAME: NAD| and |FRAME: NADP|), and some transfer two electrons and two protons (|FRAME: ETR-Quinones quinones|, |FRAME: FAD| and |FRAME: FMN|). In addition, a number of inorganic small molecules (e.g. oxygen, nitrate, iron (III), manganese (IV), sulfate) are often used as terminal electron acceptors. In many cases, purified enzymes can act &lt;i&gt;in vitro&lt;/i&gt; using an artificial electron carrier, and their &lt;i&gt;in vivo&lt;/i&gt; electron carrier is not known. This class of &quot;unknown electron carriers&quot; is used to describe such reactions, which are incompletely characterized.</Comment>
+      <Property key="UniqueID" value="Acceptor" />
+      <Property key="AlternativeId_ReactomeCpd" value="5359011" />
+      <Property key="AlternativeId_Metanetx" value="MNXM8975" />
+      <Property key="AlternativeId_LigandCpd" value="C00028" />
+      <Property key="AlternativeId_Chebi" value="15339" />
+      <Property key="Synonym_1" value="A" />
+      <Property key="Synonym_2" value="an oxidized unknown electron donor" />
+      <Property key="Synonym_3" value="an oxidized unknown electron acceptor" />
+      <Property key="AbbrevName" value="A" />
+      <Property key="HasNoStructure?" value="T" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="NName" value="acceptors" />
+      <Property key="Osmolarity" value="0" />
+    </DataNode>
+    <DataNode elementId="Donor-H2" textLabel="a reduced two electron carrier" type="Metabolite">
+      <Xref identifier="17499" dataSource="ChEBI" />
+      <Graphics centerX="762.7890625" centerY="600.6002197265625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>In general, an electron carrier is a chemical entity that can accept or donate electrons from/to another chemical entity. When accepting electrons, it acts as an &quot;electron acceptor&quot;. By accepting the electrons, the acceptor is reduced, and thus prior to receiving the electrons the entity is called &quot;an oxidized electron acceptor&quot; and after receiving them it is called &quot;a reduced electron acceptor&quot;. Many reduced electron acceptors are able to transfer the electrons to other molecules, becoming oxidized in the process. Thus the distinction between an electron acceptor and an electron donor is often not determined by the actual chemical entity, but by the role it plays in a particular reaction. However, some acceptors in biological reactions only accept electrons and do not transfer them further. Those are often known as &quot;terminal electron acceptors&quot;. While in general every chemical reaction in which electrons are transferred includes an electron donor and an electron acceptor, several molecules are commonly used in metabolism solely for the purpose of electron transfer, and are referred to in biology as electron carriers. Different biological electron carriers differ in the number of electrons that they transfer and in their electron affinity. Some of the common biological electron carriers transfer only a single electron (e.g. |FRAME: Cytochromes cytochromes|, |FRAME: Blue-Copper-Proteins &quot;blue copper proteins&quot;|, and some |FRAME: Ferredoxins ferredoxins|), some transfer two electrons (e.g. some |FRAME: Ferredoxins ferredoxins|), some transfer a hydride ion ( e.g. |FRAME: NAD| and |FRAME: NADP|), and some transfer two electrons and two protons (|FRAME: ETR-Quinones quinones|, |FRAME: FAD| and |FRAME: FMN|). In addition, a number of inorganic small molecules (e.g. oxygen, nitrate, iron (III), manganese (IV), sulfate) are often used as terminal electron acceptors. In many cases, purified enzymes can act &lt;i&gt;in vitro&lt;/i&gt; using an artificial electron carrier, and their &lt;i&gt;in vivo&lt;/i&gt; electron carrier is not known. The classes of &quot;unknown electron carriers&quot; are used to describe such reactions, which are incompletely characterized.</Comment>
+      <Property key="UniqueID" value="Donor-H2" />
+      <Property key="AlternativeId_Seed" value="cpd26978" />
+      <Property key="AlternativeId_Metanetx" value="MNXM36" />
+      <Property key="AlternativeId_Chebi" value="17499" />
+      <Property key="AlternativeId_LigandCpd" value="C00030" />
+      <Property key="Synonym_1" value="a reduced unknown two electron donor" />
+      <Property key="Synonym_2" value="A(H2)" />
+      <Property key="Synonym_3" value="a reduced unknown two electron acceptor" />
+      <Property key="AbbrevName" value="A(H2)" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="NName" value="reduced acceptors" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="[an oxidized electron carrier]" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="100.0" centerY="563.677490234375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="ChemicalFormula" value="(H 1)" />
+      <Property key="AtomCharges" value="(1 1)" />
+      <Property key="Gibbs0" value="0.42906138" />
+      <Property key="Inchi" value="InChI=1S/p+1" />
+      <Property key="InchiKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicMw" value="1.0078250321" />
+      <Property key="NonStandardInchi" value="InChI=1S/p+1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="[H+]" />
+    </DataNode>
+    <DataNode elementId="WATER" textLabel="H₂O" type="Metabolite">
+      <Xref identifier="XLYOFNOQVPJJNP-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1044.56591796875" centerY="856.974609375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="WATER" />
+      <Property key="AlternativeId_Bigg" value="33474" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15377" />
+      <Property key="AlternativeId_Hmdb" value="HMDB02111" />
+      <Property key="AlternativeId_Chemspider" value="937" />
+      <Property key="AlternativeId_Chebi" value="15377" />
+      <Property key="AlternativeId_Pubchem" value="962" />
+      <Property key="AlternativeId_LigandCpd" value="C00001" />
+      <Property key="AlternativeId_Cas" value="7732-18-5" />
+      <Property key="Synonym_1" value="H&lt;sub&gt;2&lt;/sub&gt;0" />
+      <Property key="Synonym_2" value="H2O" />
+      <Property key="Synonym_3" value="H20" />
+      <Property key="Synonym_4" value="hydrogen oxide" />
+      <Property key="Synonym_5" value="water" />
+      <Property key="ChemicalFormula" value="(H 2) (O 1)" />
+      <Property key="Gibbs0" value="-36.144756" />
+      <Property key="Inchi" value="InChI=1S/H2O/h1H2" />
+      <Property key="InchiKey" value="InChIKey=XLYOFNOQVPJJNP-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="18.015" />
+      <Property key="MonoisotopicMw" value="18.0105646863" />
+      <Property key="NonStandardInchi" value="InChI=1S/H2O/h1H2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="O" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="RXN-9062">
+      <Xref identifier="EC-1.14.99" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-9062_start" x="617.8299560546875" y="972.519287109375" elementRef="CPD-5741" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9062_end" arrowHead="Conversion" x="625.0719604492188" y="50.0" elementRef="CPD-9544" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9062_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9062" />
+      <Property key="EC_Number" value="EC-1.14.99" />
+      <Property key="Pathways" value="PWY-5775" />
+      <Property key="ReactionEquation" value="CPD-5741 + OXYGEN-MOLECULE + Donor-H2 =&gt; CPD-9544 + WATER + Acceptor" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="CannotBalance?" value="NIL" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <CitationRef elementRef="citation_PUB_BHANDARI92B" />
+    </Interaction>
+    <Interaction elementId="RXN-9062_anchor_reactant_1">
+      <Xref identifier="EC-1.14.99" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-9062_anchor_reactant_start_1" x="1373.797607421875" y="268.5750732421875" elementRef="OXYGEN-MOLECULE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9062_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-9062_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9062_anchor_reactant_2">
+      <Xref identifier="EC-1.14.99" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-9062_anchor_reactant_start_2" x="807.7890625" y="600.6002197265625" elementRef="Donor-H2" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9062_anchor_reactant_end_2" x="0" y="0" elementRef="RXN-9062_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9062_anchor_product_1">
+      <Xref identifier="EC-1.14.99" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-9062_anchor_product_start_1" x="0" y="0" elementRef="RXN-9062_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-9062_anchor_product_end_1" arrowHead="Conversion" x="999.56591796875" y="856.974609375" elementRef="WATER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9062_anchor_product_2">
+      <Xref identifier="EC-1.14.99" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-9062_anchor_product_start_2" x="0" y="0" elementRef="RXN-9062_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-9062_anchor_product_end_2" arrowHead="Conversion" x="983.52685546875" y="1405.95751953125" elementRef="Acceptor" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9064">
+      <Xref identifier="RXN-9064" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9064_start" x="1645.0" y="1031.1671142578125" elementRef="CPD-9536" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9064_end" arrowHead="Conversion" x="625.0719604492188" y="50.0" elementRef="CPD-9544" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9064_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9064" />
+      <Property key="Pathways" value="PWY-5775" />
+      <Property key="ReactionEquation" value="CPD-9536 + Acceptor + PROTON =&gt; CPD-9544 + Donor-H2" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <CitationRef elementRef="citation_PUB_BHANDARI92B" />
+    </Interaction>
+    <Interaction elementId="RXN-9064_anchor_reactant_1">
+      <Xref identifier="RXN-9064" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9064_anchor_reactant_start_1" x="1073.52685546875" y="1405.95751953125" elementRef="Acceptor" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9064_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-9064_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9064_anchor_reactant_2">
+      <Xref identifier="RXN-9064" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9064_anchor_reactant_start_2" x="145.0" y="563.677490234375" elementRef="PROTON" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9064_anchor_reactant_end_2" x="0" y="0" elementRef="RXN-9064_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9064_anchor_product_1">
+      <Xref identifier="RXN-9064" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9064_anchor_product_start_1" x="0" y="0" elementRef="RXN-9064_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-9064_anchor_product_end_1" arrowHead="Conversion" x="717.7890625" y="600.6002197265625" elementRef="Donor-H2" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9063">
+      <Xref identifier="RXN-9063" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9063_start" x="442.913818359375" y="1550.0" elementRef="CPD-9535" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9063_end" arrowHead="Conversion" x="625.0719604492188" y="50.0" elementRef="CPD-9544" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9063_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9063" />
+      <Property key="Pathways" value="PWY-5775" />
+      <Property key="ReactionEquation" value="CPD-9535 + Acceptor + PROTON =&gt; CPD-9544 + Donor-H2" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <CitationRef elementRef="citation_PUB_BHANDARI92B" />
+    </Interaction>
+    <Interaction elementId="RXN-9063_anchor_reactant_1">
+      <Xref identifier="RXN-9063" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9063_anchor_reactant_start_1" x="1073.52685546875" y="1405.95751953125" elementRef="Acceptor" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9063_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-9063_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9063_anchor_reactant_2">
+      <Xref identifier="RXN-9063" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9063_anchor_reactant_start_2" x="145.0" y="563.677490234375" elementRef="PROTON" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9063_anchor_reactant_end_2" x="0" y="0" elementRef="RXN-9063_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9063_anchor_product_1">
+      <Xref identifier="RXN-9063" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9063_anchor_product_start_1" x="0" y="0" elementRef="RXN-9063_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-9063_anchor_product_end_1" arrowHead="Conversion" x="717.7890625" y="600.6002197265625" elementRef="Donor-H2" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9061">
+      <Xref identifier="RXN-9061" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9061_start" x="879.7907104492188" y="816.3797607421875" elementRef="CPD-9534" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9061_end" arrowHead="Conversion" x="527.8299560546875" y="972.519287109375" elementRef="CPD-5741" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9061_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9061" />
+      <Property key="Pathways" value="PWY-6425, PWY-5775" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="CPD-9534 + Acceptor + PROTON =&gt; CPD-5741 + Donor-H2" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <CitationRef elementRef="citation_PUB_BHANDARI92B" />
+    </Interaction>
+    <Interaction elementId="RXN-9061_anchor_reactant_1">
+      <Xref identifier="RXN-9061" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9061_anchor_reactant_start_1" x="1073.52685546875" y="1405.95751953125" elementRef="Acceptor" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9061_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-9061_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9061_anchor_reactant_2">
+      <Xref identifier="RXN-9061" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9061_anchor_reactant_start_2" x="145.0" y="563.677490234375" elementRef="PROTON" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9061_anchor_reactant_end_2" x="0" y="0" elementRef="RXN-9061_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9061_anchor_product_1">
+      <Xref identifier="RXN-9061" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9061_anchor_product_start_1" x="0" y="0" elementRef="RXN-9061_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-9061_anchor_product_end_1" arrowHead="Conversion" x="717.7890625" y="600.6002197265625" elementRef="Donor-H2" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-9060">
+      <Xref identifier="RXN-9060" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9060_start" x="879.7907104492188" y="816.3797607421875" elementRef="CPD-9534" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9060_end" arrowHead="Conversion" x="1555.0" y="1031.1671142578125" elementRef="CPD-9536" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9060_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9060" />
+      <Property key="Pathways" value="PWY-5775" />
+      <Property key="ReactionEquation" value="CPD-9534 =&gt; CPD-9536" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED-UNFIXABLE" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="CannotBalance?" value="T" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <CitationRef elementRef="citation_PUB_BHANDARI92B" />
+    </Interaction>
+    <Interaction elementId="RXN-9059">
+      <Xref identifier="RXN-9059" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-9059_start" x="879.7907104492188" y="816.3797607421875" elementRef="CPD-9534" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-9059_end" arrowHead="Conversion" x="352.913818359375" y="1550.0" elementRef="CPD-9535" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-9059_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-9059" />
+      <Property key="Pathways" value="PWY-5775" />
+      <Property key="ReactionEquation" value="CPD-9534 =&gt; CPD-9535" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED-UNFIXABLE" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="CannotBalance?" value="T" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <CitationRef elementRef="citation_PUB_BHANDARI92B" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_PUB_568944">
+      <Xref identifier="568944" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_BHANDARI92">
+      <Xref identifier="PUB-BHANDARI92 | Biosynthesis of the A/B/C/D-Ring System of the Rotenoid Amorphigenin
+by Amorpha fruticosa SeedIings (Bhandari, P., Crombie, L., Daniels, P. et al., 1992)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_PUB_11711058">
+      <Xref identifier="11711058" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_8350086">
+      <Xref identifier="8350086" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_4295606">
+      <Xref identifier="4295606" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_18155613">
+      <Xref identifier="18155613" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_BHANDARI92B">
+      <Xref identifier="PUB-BHANDARI92B | Biosynthesis of rotenone and amorphigenin. Study of the origins of isopropenyl-substituted dihydrofu... (Bhandari, P., Crombie, L., Kilbee, G.W. et al., 1992)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_PUB_16332203">
+      <Xref identifier="16332203" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

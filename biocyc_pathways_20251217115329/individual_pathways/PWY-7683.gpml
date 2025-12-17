@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="nitrite reduction (hemoglobin)" organism="Oryza sativa, Synechocystis sp. PCC 6803" source="PlantCyc" version="20251217115329">
+  <Authors>
+    <Author name="SRI" />
+    <Author name="caspi" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-7683" />
+  <Property key="Type" value="NITROGEN-DEG" />
+  <Property key="ReactionCount" value="3" />
+  <Property key="ReactionIDs" value="RXN-16805, RXN-16809, RXN-16818" />
+  <Property key="PredecessorCount" value="2" />
+  <Property key="PrimaryCompoundCount" value="2" />
+  <Property key="PathwayLinks" value="(NITRITE PWY-381)" />
+  <Property key="Organism" value="Oryza sativa, Synechocystis sp. PCC 6803" />
+  <Property key="TaxonomicRange_1" value="Cyanobacteriota" />
+  <Property key="TaxonomicRange_2" value="Viridiplantae" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_PUB_21495624" />
+  <CitationRef elementRef="citation_PUB_22080728" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="G-44085" textLabel="HB1" type="GeneProduct">
+      <Xref identifier="39947.LOC_Os03g13140.1" dataSource="string" />
+      <Graphics centerX="1328.797607421875" centerY="268.5750732421875" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="G-44085" />
+      <Property key="AlternativeId_String" value="39947.LOC_Os03g13140.1" />
+      <Property key="Synonym_1" value="GLB1A" />
+      <Property key="Product" value="MONOMER-19374" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="Accession1" value="Os03g0233900" />
+      <Property key="Accession2" value="LOC_Os03g13140" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="MONOMER-19374" textLabel="non-symbiotic hemoglobin 1" type="Protein">
+      <Xref identifier="O04986" dataSource="uniprot" />
+      <Graphics centerX="397.913818359375" centerY="1550.0" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="SRI, caspi">Hemoglobins from plants and cyanobacteria, which are not oxygen transporters, have been shown to catalyze the conversion of |FRAME: NITRITE nitrite| to |FRAME: NITRIC-OXIDE nitric oxide| at rates up to 10-fold higher than animal hemoglobins |CITS: [21495624]|. These organisms, when under hypoxic conditions, also contain much higher (millimolar) nitrite concentrations (resulting from their assimilatory nitrogen metabolism). These rate constants, along with the relatively high concentrations of nitrite present during hypoxia, suggest that plant and cyanobacterial hemoglobins could serve as anaerobic nitrite reductases &lt;i&gt;in vivo&lt;/i&gt; |CITS: [21495624]|. While the fate of NO is not yet known with certainty, it has been shown that the plant and cyanobacterial enzymes can also reduce |FRAME: HYDROXYLAMINE hydroxylamine| to |FRAME: AMMONIUM ammonium|, at rates 100-2500 times faster than animal hemoglobins |CITS: [22080728]|. The authors proposed that during extreme hypoxia plant and cyanobacterial hemoglobins catalyze the sequential reduction of nitrite to ammonium in a series of steps similar to that observed in siroheme containing nitrite/sulfite reductases, including the one-electron reduction of nitrite to NO, the three-electron reduction of NO to |FRAME: HYDROXYLAMINE hydroxylamine|, and the two-electron reduction of |FRAME: HYDROXYLAMINE hydroxylamine| to |FRAME: AMMONIUM ammonium| |CITS: [22080728]|.</Comment>
+      <Property key="UniqueID" value="MONOMER-19374" />
+      <Property key="AlternativeId_Interpro" value="IPR019824" />
+      <Property key="AlternativeId_Pfam" value="PF00042" />
+      <Property key="AlternativeId_Pdb" value="2GNW" />
+      <Property key="AlternativeId_Smr" value="O04986" />
+      <Property key="AlternativeId_Prosite" value="PS00208" />
+      <Property key="AlternativeId_Prints" value="PR00188" />
+      <Property key="AlternativeId_Uniprot" value="O04986" />
+      <Property key="Catalyzes" value="RXN-23972, RXN-23971" />
+      <Property key="CatalyzesCount" value="2" />
+      <Property key="Gene" value="G-44085" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="MolecularWeightKd" value="18.444" />
+      <Property key="MolecularWeightSeq" value="18.444" />
+      <Property key="Species" value="TAX-39947" />
+      <CitationRef elementRef="citation_PUB_21495624" />
+      <CitationRef elementRef="citation_PUB_22080728" />
+    </DataNode>
+    <DataNode elementId="Ferrihemoglobins" textLabel="Ferrihemoglobins" type="Metabolite">
+      <Xref identifier="Ferrihemoglobins" dataSource="" />
+      <Graphics centerX="834.7907104492188" centerY="816.3797607421875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="AAAAAA" borderStyle="Solid" borderWidth="1.0" fillColor="F0F0F0" shapeType="Rectangle" />
+      <Property key="IsPlaceholder" value="true" />
+    </DataNode>
+    <DataNode elementId="NITRIC-OXIDE" textLabel="nitric oxide" type="Metabolite">
+      <Xref identifier="MWUXSHHQAYIFBG-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1600.0" centerY="1031.1671142578125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">Nitric oxide is a free radical, consisting of one nitrogen and one oxygen atom. In the vasculature, nitric oxide, which is the active moiety of the endothelium-derived relaxing factor, relaxes smooth muscle and inhibits platelet and leukocyte adhesion. Outside the vasculature, NO participates in the immunologic response to infection and serves as a neurotransmitter.</Comment>
+      <Property key="UniqueID" value="NITRIC-OXIDE" />
+      <Property key="AlternativeId_Metanetx" value="MNXM228" />
+      <Property key="AlternativeId_Bigg" value="no" />
+      <Property key="AlternativeId_Pubchem" value="145068" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC16480" />
+      <Property key="AlternativeId_Hmdb" value="HMDB03378" />
+      <Property key="AlternativeId_Drugbank" value="DB00435" />
+      <Property key="AlternativeId_Chebi" value="16480" />
+      <Property key="AlternativeId_Chemspider" value="2272768" />
+      <Property key="AlternativeId_LigandCpd" value="C00533" />
+      <Property key="AlternativeId_Cas" value="10102-43-9" />
+      <Property key="Synonym_1" value="NO" />
+      <Property key="Synonym_2" value="nitrogen monoxide" />
+      <Property key="Synonym_3" value="nitrogen protoxide" />
+      <Property key="ChemicalFormula" value="(N 1) (O 1)" />
+      <Property key="Gibbs0" value="-54.5" />
+      <Property key="Inchi" value="InChI=1S/NO/c1-2" />
+      <Property key="InchiKey" value="InChIKey=MWUXSHHQAYIFBG-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="30.006" />
+      <Property key="MonoisotopicMw" value="29.9979886273" />
+      <Property key="NonStandardInchi" value="InChI=1S/NO/c1-2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="RadicalAtoms" value="(1 :DOUBLET)" />
+      <Property key="Smiles" value="N=O" />
+    </DataNode>
+    <DataNode elementId="NITRITE" textLabel="nitrite" type="Metabolite">
+      <Xref identifier="IOVCWXUNBOPUCH-UHFFFAOYSA-M" dataSource="InChIKey" />
+      <Graphics centerX="670.0719604492188" centerY="50.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">Nitrous acid exists at physiological pH as the charged anion nitrite. pKa = 3.3 at 18 &amp;deg;C</Comment>
+      <Property key="UniqueID" value="NITRITE" />
+      <Property key="AlternativeId_ReactomeCpd" value="1222379" />
+      <Property key="AlternativeId_Seed" value="cpd00075" />
+      <Property key="AlternativeId_Metanetx" value="MNXM107" />
+      <Property key="AlternativeId_Bigg" value="no2" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC16301" />
+      <Property key="AlternativeId_Hmdb" value="HMDB02786" />
+      <Property key="AlternativeId_Chemspider" value="921" />
+      <Property key="AlternativeId_Pubchem" value="946" />
+      <Property key="AlternativeId_Chebi" value="16301" />
+      <Property key="AlternativeId_Cas" value="14797-65-0" />
+      <Property key="AlternativeId_LigandCpd" value="C00088" />
+      <Property key="Synonym_1" value="NO&lt;sub&gt;2&lt;/sub&gt;" />
+      <Property key="Synonym_2" value="NO&lt;sub&gt;2&lt;/sub&gt;&lt;sup&gt;-&lt;/sup&gt;" />
+      <Property key="Synonym_3" value="nitrous acid" />
+      <Property key="ChemicalFormula" value="(N 1) (O 2)" />
+      <Property key="AtomCharges" value="(2 -1)" />
+      <Property key="Gibbs0" value="-65.91206" />
+      <Property key="Inchi" value="InChI=1S/HNO2/c2-1-3/h(H,2,3)/p-1" />
+      <Property key="InchiKey" value="InChIKey=IOVCWXUNBOPUCH-UHFFFAOYSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="46.005" />
+      <Property key="MonoisotopicMw" value="47.0007282815" />
+      <Property key="NonStandardInchi" value="InChI=1S/HNO2/c2-1-3/h(H,2,3)/p-1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-8366, REG-15376" />
+      <Property key="Smiles" value="N([O-])=O" />
+    </DataNode>
+    <DataNode elementId="HYDROXYLAMINE" textLabel="hydroxylamine" type="Metabolite">
+      <Xref identifier="AVXURJPOCDRRFD-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="572.8299560546875" centerY="972.519287109375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="HYDROXYLAMINE" />
+      <Property key="AlternativeId_Seed" value="cpd00165" />
+      <Property key="AlternativeId_Metanetx" value="MNXM433" />
+      <Property key="AlternativeId_Refmet" value="Hydroxylamine" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15429" />
+      <Property key="AlternativeId_Hmdb" value="HMDB03338" />
+      <Property key="AlternativeId_Chemspider" value="766" />
+      <Property key="AlternativeId_Pubchem" value="787" />
+      <Property key="AlternativeId_Chebi" value="15429" />
+      <Property key="AlternativeId_LigandCpd" value="C00192" />
+      <Property key="AlternativeId_Cas" value="7803-49-8" />
+      <Property key="Synonym_1" value="NH2OH" />
+      <Property key="ChemicalFormula" value="(H 3) (N 1) (O 1)" />
+      <Property key="Gibbs0" value="-8.646637" />
+      <Property key="Inchi" value="InChI=1S/H3NO/c1-2/h2H,1H2" />
+      <Property key="InchiKey" value="InChIKey=AVXURJPOCDRRFD-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="33.03" />
+      <Property key="MonoisotopicMw" value="33.0214637236" />
+      <Property key="NonStandardInchi" value="InChI=1S/H3NO/c1-2/h2H,1H2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-8073, REG-12118, REG-5864, REG-13764, REG-10427, REG-9492, REG-8441, REG-6831, REG0-7757, REG0-8159, REG-10248, REG-6957, REG-6247, REG-10120, REG-10942, REG-9381, REG-9359, REG-7417" />
+      <Property key="Smiles" value="NO" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1028.52685546875" centerY="1405.95751953125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="ChemicalFormula" value="(H 1)" />
+      <Property key="AtomCharges" value="(1 1)" />
+      <Property key="Gibbs0" value="0.42906138" />
+      <Property key="Inchi" value="InChI=1S/p+1" />
+      <Property key="InchiKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicMw" value="1.0078250321" />
+      <Property key="NonStandardInchi" value="InChI=1S/p+1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="[H+]" />
+    </DataNode>
+    <DataNode elementId="Ferrohemoglobins" textLabel="Ferrohemoglobins" type="Metabolite">
+      <Xref identifier="Ferrohemoglobins" dataSource="" />
+      <Graphics centerX="762.7890625" centerY="600.6002197265625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="AAAAAA" borderStyle="Solid" borderWidth="1.0" fillColor="F0F0F0" shapeType="Rectangle" />
+      <Property key="IsPlaceholder" value="true" />
+    </DataNode>
+    <DataNode elementId="OH" textLabel="OH⁻" type="Metabolite">
+      <Xref identifier="XLYOFNOQVPJJNP-UHFFFAOYSA-M" dataSource="InChIKey" />
+      <Graphics centerX="100.0" centerY="563.677490234375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="OH" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01039" />
+      <Property key="AlternativeId_Chemspider" value="936" />
+      <Property key="AlternativeId_Chebi" value="16234" />
+      <Property key="AlternativeId_Pubchem" value="961" />
+      <Property key="AlternativeId_LigandCpd" value="C01328" />
+      <Property key="AlternativeId_Cas" value="14280-30-9" />
+      <Property key="Synonym_1" value="hydroxyl" />
+      <Property key="Synonym_2" value="hydroxyl ion" />
+      <Property key="Synonym_3" value="OH" />
+      <Property key="Synonym_4" value="hydroxide" />
+      <Property key="Synonym_5" value="hydroxide ion" />
+      <Property key="ChemicalFormula" value="(H 1) (O 1)" />
+      <Property key="AtomCharges" value="(1 -1)" />
+      <Property key="Gibbs0" value="9.959062" />
+      <Property key="Inchi" value="InChI=1S/H2O/h1H2/p-1" />
+      <Property key="InchiKey" value="InChIKey=XLYOFNOQVPJJNP-UHFFFAOYSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="17.007" />
+      <Property key="MonoisotopicMw" value="18.0105646863" />
+      <Property key="NonStandardInchi" value="InChI=1S/H2O/h1H2/p-1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="[OH-]" />
+    </DataNode>
+    <DataNode elementId="AMMONIUM" textLabel="ammonium" type="Metabolite">
+      <Xref identifier="QGZKDVFQNNGYKY-UHFFFAOYSA-O" dataSource="InChIKey" />
+      <Graphics centerX="1044.56591796875" centerY="856.974609375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AMMONIUM" />
+      <Property key="AlternativeId_Mediadb" value="compounds/1211/" />
+      <Property key="AlternativeId_Bigg" value="nh4" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC28938" />
+      <Property key="AlternativeId_Hmdb" value="HMDB41827" />
+      <Property key="AlternativeId_Chebi" value="28938" />
+      <Property key="AlternativeId_Chemspider" value="218" />
+      <Property key="AlternativeId_Pubchem" value="223" />
+      <Property key="AlternativeId_LigandCpd" value="C01342" />
+      <Property key="AlternativeId_Cas" value="14798-03-9" />
+      <Property key="Synonym_1" value="NH&lt;SUB&gt;4&lt;/SUB&gt;&lt;SUP&gt;+&lt;/SUP&gt;" />
+      <Property key="ChemicalFormula" value="(H 4) (N 1)" />
+      <Property key="AtomCharges" value="(1 1)" />
+      <Property key="ComponentOf" value="CPD-8916, NH4CL, NH42SO4" />
+      <Property key="Gibbs0" value="21.812426" />
+      <Property key="Inchi" value="InChI=1S/H3N/h1H3/p+1" />
+      <Property key="InchiKey" value="InChIKey=QGZKDVFQNNGYKY-UHFFFAOYSA-O" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="InternalsOfGroup" value="GLYCO-CT-AMINO" />
+      <Property key="MolecularWeight" value="18.038" />
+      <Property key="MonoisotopicMw" value="18.0343741336" />
+      <Property key="NonStandardInchi" value="InChI=1S/H3N/h1H3/p+1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-8579, REG0-6780, REG0-8381, REG-11230, REG0-7382, REG-6227, REG-6239, REG-6310, REG-8194, REG0-8119, REG0-7391, REG-6983, REG-6320, REG-7120, REG0-7616" />
+      <Property key="Smiles" value="[NH4+]" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="1373.797607421875" y="268.5750732421875" elementRef="G-44085" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="352.913818359375" y="1550.0" elementRef="MONOMER-19374" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-16805">
+      <Xref identifier="EC-1.7.2" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-16805_start" x="715.0719604492188" y="50.0" elementRef="NITRITE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-16805_end" arrowHead="Conversion" x="1555.0" y="1031.1671142578125" elementRef="NITRIC-OXIDE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-16805_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-16805" />
+      <Property key="EC_Number" value="EC-1.7.2" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-7683" />
+      <Property key="ReactionEquation" value="Ferrihemoglobins + NITRIC-OXIDE + OH =&gt; Ferrohemoglobins + NITRITE + PROTON" />
+      <Property key="ReactionDirection" value="PHYSIOL-RIGHT-TO-LEFT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-23971" />
+      <Property key="ReactionType" value="Protein-Modification-Reactions" />
+      <Property key="AtomMappings" value="(:NO-HYDROGEN-ENCODING (0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 56 55 57) (((|Ferrihemoglobins| 0 54) (OH 55 55) (NITRIC-OXIDE 56 57)) ((|Ferrohemoglobins| 0 54) (NITRITE 55 57))))" />
+      <Property key="Gibbs0" value="-21.25412" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="^compartment" value="CCO-IN, CCO-IN, CCO-IN, CCO-IN, CCO-IN, CCO-IN" />
+      <CitationRef elementRef="citation_PUB_21495624" />
+    </Interaction>
+    <Interaction elementId="RXN-16805_ENZRXN-23971">
+      <Waypoints>
+        <Point elementId="RXN-16805_ENZRXN-23971_start" x="397.913818359375" y="1562.5" elementRef="MONOMER-19374" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-16805_ENZRXN-23971_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-16805_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-16805_anchor_reactant_0">
+      <Xref identifier="EC-1.7.2" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-16805_anchor_reactant_start_0" x="879.7907104492188" y="816.3797607421875" elementRef="Ferrihemoglobins" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-16805_anchor_reactant_end_0" x="0" y="0" elementRef="RXN-16805_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-16805_anchor_reactant_1">
+      <Xref identifier="EC-1.7.2" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-16805_anchor_reactant_start_1" x="1645.0" y="1031.1671142578125" elementRef="NITRIC-OXIDE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-16805_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-16805_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-16805_anchor_reactant_2">
+      <Xref identifier="EC-1.7.2" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-16805_anchor_reactant_start_2" x="145.0" y="563.677490234375" elementRef="OH" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-16805_anchor_reactant_end_2" x="0" y="0" elementRef="RXN-16805_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-16805_anchor_product_0">
+      <Xref identifier="EC-1.7.2" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-16805_anchor_product_start_0" x="0" y="0" elementRef="RXN-16805_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-16805_anchor_product_end_0" arrowHead="Conversion" x="717.7890625" y="600.6002197265625" elementRef="Ferrohemoglobins" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-16805_anchor_product_1">
+      <Xref identifier="EC-1.7.2" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-16805_anchor_product_start_1" x="0" y="0" elementRef="RXN-16805_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-16805_anchor_product_end_1" arrowHead="Conversion" x="625.0719604492188" y="50.0" elementRef="NITRITE" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-16805_anchor_product_2">
+      <Xref identifier="EC-1.7.2" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-16805_anchor_product_start_2" x="0" y="0" elementRef="RXN-16805_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-16805_anchor_product_end_2" arrowHead="Conversion" x="983.52685546875" y="1405.95751953125" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-16809">
+      <Xref identifier="EC-1.7.2" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-16809_start" x="617.8299560546875" y="972.519287109375" elementRef="HYDROXYLAMINE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-16809_end" arrowHead="Conversion" x="999.56591796875" y="856.974609375" elementRef="AMMONIUM" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-16809_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-16809" />
+      <Property key="EC_Number" value="EC-1.7.2" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-7683" />
+      <Property key="ReactionEquation" value="Ferrihemoglobins + AMMONIUM + OH =&gt; Ferrohemoglobins + HYDROXYLAMINE + PROTON" />
+      <Property key="ReactionDirection" value="PHYSIOL-RIGHT-TO-LEFT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-23972" />
+      <Property key="ReactionType" value="Protein-Modification-Reactions" />
+      <Property key="AtomMappings" value="(:NO-HYDROGEN-ENCODING (0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 111 110) ((((|Ferrihemoglobins| 1) 0 54) ((|Ferrihemoglobins| 2) 55 109) (OH 110 110) (AMMONIUM 111 111)) (((|Ferrohemoglobins| 1) 0 54) ((|Ferrohemoglobins| 2) 55 109) (HYDROXYLAMINE 110 111))))" />
+      <Property key="Gibbs0" value="-40.18412" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="^coefficient" value="2, 2, 2" />
+      <Property key="^compartment" value="CCO-IN, CCO-IN, CCO-IN, CCO-IN, CCO-IN, CCO-IN" />
+      <CitationRef elementRef="citation_PUB_22080728" />
+    </Interaction>
+    <Interaction elementId="RXN-16809_ENZRXN-23972">
+      <Waypoints>
+        <Point elementId="RXN-16809_ENZRXN-23972_start" x="397.913818359375" y="1562.5" elementRef="MONOMER-19374" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-16809_ENZRXN-23972_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-16809_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-16809_anchor_reactant_0">
+      <Xref identifier="EC-1.7.2" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-16809_anchor_reactant_start_0" x="879.7907104492188" y="816.3797607421875" elementRef="Ferrihemoglobins" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-16809_anchor_reactant_end_0" x="0" y="0" elementRef="RXN-16809_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-16809_anchor_reactant_1">
+      <Xref identifier="EC-1.7.2" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-16809_anchor_reactant_start_1" x="1089.56591796875" y="856.974609375" elementRef="AMMONIUM" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-16809_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-16809_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-16809_anchor_reactant_2">
+      <Xref identifier="EC-1.7.2" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-16809_anchor_reactant_start_2" x="145.0" y="563.677490234375" elementRef="OH" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-16809_anchor_reactant_end_2" x="0" y="0" elementRef="RXN-16809_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-16809_anchor_product_0">
+      <Xref identifier="EC-1.7.2" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-16809_anchor_product_start_0" x="0" y="0" elementRef="RXN-16809_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-16809_anchor_product_end_0" arrowHead="Conversion" x="717.7890625" y="600.6002197265625" elementRef="Ferrohemoglobins" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-16809_anchor_product_1">
+      <Xref identifier="EC-1.7.2" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-16809_anchor_product_start_1" x="0" y="0" elementRef="RXN-16809_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-16809_anchor_product_end_1" arrowHead="Conversion" x="527.8299560546875" y="972.519287109375" elementRef="HYDROXYLAMINE" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-16809_anchor_product_2">
+      <Xref identifier="EC-1.7.2" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-16809_anchor_product_start_2" x="0" y="0" elementRef="RXN-16809_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-16809_anchor_product_end_2" arrowHead="Conversion" x="983.52685546875" y="1405.95751953125" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-16818">
+      <Xref identifier="EC-1.7.2" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-16818_start" x="1645.0" y="1031.1671142578125" elementRef="NITRIC-OXIDE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-16818_end" arrowHead="Conversion" x="527.8299560546875" y="972.519287109375" elementRef="HYDROXYLAMINE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-16818_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-16818" />
+      <Property key="EC_Number" value="EC-1.7.2" />
+      <Property key="Pathways" value="PWY-7683" />
+      <Property key="ReactionEquation" value="Ferrihemoglobins + HYDROXYLAMINE =&gt; Ferrohemoglobins + NITRIC-OXIDE + PROTON" />
+      <Property key="ReactionDirection" value="PHYSIOL-RIGHT-TO-LEFT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionType" value="Protein-Modification-Reactions" />
+      <Property key="AtomMappings" value="(:NO-HYDROGEN-ENCODING (0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166) ((((|Ferrihemoglobins| 1) 0 54) ((|Ferrihemoglobins| 2) 55 109) ((|Ferrihemoglobins| 3) 110 164) (HYDROXYLAMINE 165 166)) (((|Ferrohemoglobins| 1) 0 54) ((|Ferrohemoglobins| 2) 55 109) ((|Ferrohemoglobins| 3) 110 164) (NITRIC-OXIDE 165 166))))" />
+      <Property key="Gibbs0" value="-45.502357" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="^coefficient" value="3, 3, 3" />
+      <Property key="^compartment" value="CCO-IN, CCO-IN, CCO-IN, CCO-IN, CCO-IN" />
+      <CitationRef elementRef="citation_PUB_22080728" />
+    </Interaction>
+    <Interaction elementId="RXN-16818_anchor_reactant_0">
+      <Xref identifier="EC-1.7.2" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-16818_anchor_reactant_start_0" x="879.7907104492188" y="816.3797607421875" elementRef="Ferrihemoglobins" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-16818_anchor_reactant_end_0" x="0" y="0" elementRef="RXN-16818_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-16818_anchor_reactant_1">
+      <Xref identifier="EC-1.7.2" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-16818_anchor_reactant_start_1" x="617.8299560546875" y="972.519287109375" elementRef="HYDROXYLAMINE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-16818_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-16818_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-16818_anchor_product_0">
+      <Xref identifier="EC-1.7.2" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-16818_anchor_product_start_0" x="0" y="0" elementRef="RXN-16818_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-16818_anchor_product_end_0" arrowHead="Conversion" x="717.7890625" y="600.6002197265625" elementRef="Ferrohemoglobins" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-16818_anchor_product_1">
+      <Xref identifier="EC-1.7.2" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-16818_anchor_product_start_1" x="0" y="0" elementRef="RXN-16818_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-16818_anchor_product_end_1" arrowHead="Conversion" x="1555.0" y="1031.1671142578125" elementRef="NITRIC-OXIDE" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-16818_anchor_product_2">
+      <Xref identifier="EC-1.7.2" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-16818_anchor_product_start_2" x="0" y="0" elementRef="RXN-16818_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-16818_anchor_product_end_2" arrowHead="Conversion" x="983.52685546875" y="1405.95751953125" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_PUB_22080728">
+      <Xref identifier="22080728" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_21495624">
+      <Xref identifier="21495624" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="L-ascorbate degradation III" organism="Paul&apos;s Scarlet Climber Rose, Pelargonium crispum" source="PlantCyc" version="20251217115329">
+  <Description>&lt;b&gt;General Background&lt;/b&gt; |FRAME: ASCORBATE L-ascorbate|, also known as vitamin C, fulfils multiple essential roles in both plants and animals. Being a strong reducing agent, it functions as an antioxidant and a redox buffer. It is also a cofactor for several enzymes, which are involved in many important pathways, including collagen hydroxylation, carnitine biosynthesis, norepinephrine biosynthesis, and hormone and tyrosine metabolism. In plants L-ascorbate is also implicated in defense against pathogens and in control of plant growth and development. A significant proportion of a plants ascorbate is found in the apoplast (the aqueous solution permeating the cell walls) |CITS: [15608627]|. Under aerobic conditions L-ascorbate is oxidized in cells to |FRAME: CPD-13907 dehydroascorbate| (via the radical |FRAME: CPD-318 monodehydroascorbate|), which can be recycled back to ascorbate by the |FRAME: PWY-2261 ascorbate glutathione cycle|. However, once formed, dehydroascorbate can be further broken down &lt;i&gt;in vivo&lt;/i&gt; by irreversible reactions, escaping the |FRAME: PWY-2261 ascorbate glutathione cycle|. Several pathways for the irreversible catabolism of ascorbate have been described. Facultatively aerobic bacteria such as |FRAME: TAX-562 &lt;i&gt;Escherichia coli&lt;/i&gt;| and |FRAME: TAX-573 &lt;i&gt;Klebsiella pneumoniae&lt;/i&gt;| degrade L-ascorbate by different pathways under aerobic and anaerobic conditions (see |FRAME: PWY-6961 L-ascorbate degradation II (bacterial, aerobic)| and |FRAME: PWY0-301 L-ascorbate degradation I (bacterial, anaerobic)|). The anaerobic pathway begins with phosphorylation of ascorbate (mediated by a PTS-type transporter), while the aerobic pathway proceeds via |FRAME: CPD-334 2,3-dioxo-L-gulonate|. Both pathways produce |FRAME: XYLULOSE-5-PHOSPHATE D-xylulose 5-phosphate|, a centeral metabolite that is fed into the pentose phosphate pathway |CITS: [18708499]|. Plants from the |FRAME: TAX-3602 &lt;i&gt;Vitaceae&lt;/i&gt;| family (e.g. grapes) metabolize ascorbate to |FRAME: TARTRATE L-tartrate| via the intermediates |FRAME: CPD-13059 2-keto-L-gulonate| and |FRAME: L-IDONATE L-idonate| (see pathway |FRAME: PWY-6704 L-ascorbate degradation IV|). The tartrate skeleton is derived from carbons 1-4 of L-ascorbate, indicating a cleavage between carbons 4 and 5 |CITS: [Loewus99][16567629]|. The geraniaceous plant |FRAME: ORG-6199 &lt;i&gt;Pelargonium crispum&lt;/i&gt;| metabolizes ascorbate to |FRAME: TARTRATE L-tartrate| and |FRAME: OXALATE oxalate| via a different pathway, with |FRAME: L-THREONATE L-threonate|, rather than L-idonate, as an intermediate (see pathway |FRAME: PWY-6960 L-ascorbate degradation III|). In this case the tartrate skeleton is derived from carbons 3-6 of L-ascorbate, indicating a cleavage between carbons 2 and 3 |CITS:[Loewus99][15862089]|. Grapes are also known to accumulate |FRAME: OXALATE oxalate| |CITS: [DeBolt04]|, and thus may be using both pathways to generate tartrate. &lt;b&gt;About This Pathway&lt;/b&gt; |FRAME: TARTRATE L-tartrate| is found in many plants, particularly in grapes, bananas and tamarinds. It is the principle acid found in wine, contributing important aspects to the taste, mouthfeel and aging potential of wine. |FRAME: ORG-6199 &lt;i&gt;Pelargonium crispum&lt;/i&gt;| accumulates |FRAME: TARTRATE L-tartrate| |CITS: [Stafford61]| which it produces from |FRAME: ASCORBATE L-ascorbate| with concomitant production of |FRAME: OXALATE oxalate| |CITS: [16658623]|. Radio-tracer studies have shown that |FRAME: TARTRATE L-tartrate| is produced from |FRAME: L-THREONATE L-threonate|, which is derived from carbons 3-6 of ascorbate, indicating cleavage between C2 and C3 carbons of ascorbate (unlike the |FRAME:PWY-6704 &quot;alternative pathway&quot;| found in grapes, where theronate is derived from carbons 1-4 of ascorbate, cleaved between C4 and C5). The pathway is believed to exist in many plant families |CITS: [16660361]|. While the existence of the pathway has been documented for quite a long time, it has been poorly understood until recent times. A study of ascorbate degradation by cultured cells of |FRAME: ORG-6200 &lt;i&gt;Paul&apos;s Scarlet Climber Rose&lt;/i&gt;| revealed that the pathway, which is extracellular, proceeds via the intermediates |FRAME: CPD-13914 cyclic-2,3-&lt;i&gt;O&lt;/i&gt;-oxalyl-L-threonate|, |FRAME: CPD-13910 cyclic- 3,4-&lt;i&gt;O&lt;/i&gt;-oxalyl-L-threonate|, and |FRAME: CPD-13911 4-&lt;i&gt;O&lt;/i&gt;-oxalyl-L-threonate| |CITS: [15608627]|. While the pathway can proceed non-enzymatically, it was shown that several steps are enzymatically catalyzed, including the initial oxidation of L-ascorbate, the conversion of |FRAME: CPD-13910 cyclic- 3,4-&lt;i&gt;O&lt;/i&gt;-oxalyl-L-threonate| to |FRAME: CPD-13911 4-&lt;i&gt;O&lt;/i&gt;-oxalyl-L-threonate|, and the hydrolysis of |FRAME: CPD-13911 4-&lt;i&gt;O&lt;/i&gt;-oxalyl-L-threonate| to |FRAME: L-THREONATE L-threonate| and |FRAME: OXALATE oxalate| |CITS: [15608627]|.</Description>
+  <Authors>
+    <Author name="SRI" />
+    <Author name="caspi" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-6960" />
+  <Property key="Type" value="Ascorbate-Degradation" />
+  <Property key="ReactionCount" value="6" />
+  <Property key="ReactionIDs" value="RXN-12875, RXN-12869, RXN-12872, RXN-12873, RXN-12874, RXN-12440" />
+  <Property key="PredecessorCount" value="5" />
+  <Property key="PathwayLinks" value="(OXALATE PWY-6697)" />
+  <Property key="Organism" value="Paul&apos;s Scarlet Climber Rose, Pelargonium crispum" />
+  <Property key="TaxonomicRange_1" value="Viridiplantae" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_PUB_15608627" />
+  <CitationRef elementRef="citation_PUB_18708499" />
+  <CitationRef elementRef="citation_PUB_16658623" />
+  <CitationRef elementRef="citation_PUB_16660361" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="MONOMER-17018" textLabel="MONOMER-17018" type="Protein">
+      <Xref identifier="MONOMER-17018" dataSource="plantcyc" />
+      <Graphics centerX="399.92242431640625" centerY="438.0157775878906" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="SRI, caspi">When concentrationsof different intermediates of the L-ascorbate degradation pathway were measured in spent medium of |FRAME: ORG-6200 &lt;i&gt;Paul&apos;s Scarlet Climber Rose&lt;/i&gt;| culture cells, the concentration of cyclic-oxalyl-L-threonate was 11-fold higher in boiled spent medium than in non-boiled spent medium, suggesting that its hydrolysis to |FRAME: L-THREONATE L-threonate| and |FRAME: OXALATE oxalate| is enzymatically catalyzed |CITS: [15608627]|.</Comment>
+      <Property key="UniqueID" value="MONOMER-17018" />
+      <Property key="Catalyzes" value="RXN-19848" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="ORG-6200" />
+      <CitationRef elementRef="citation_PUB_15608627" />
+    </DataNode>
+    <DataNode elementId="MONOMER-17016" textLabel="MONOMER-17016" type="Protein">
+      <Xref identifier="MONOMER-17016" dataSource="plantcyc" />
+      <Graphics centerX="927.5966186523438" centerY="871.935791015625" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="SRI, caspi">When xxx was incubated in freshly autoclaved medium, it was stable. However, when incubated with spent medium of |FRAME: ORG-6200 &lt;i&gt;Paul&apos;s Scarlet Climber Rose&lt;/i&gt;| cells, it was rapidly degraded, indicating the presence of an oxalyl esterase |CITS: [15608627]|. The presence of live cells did not alter the results, suggesting that the esterase must act predominantly in solution in the apoplast</Comment>
+      <Property key="UniqueID" value="MONOMER-17016" />
+      <Property key="Catalyzes" value="RXN-19845" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="ORG-6200" />
+      <CitationRef elementRef="citation_PUB_15608627" />
+    </DataNode>
+    <DataNode elementId="MONOMER-17017" textLabel="L-ascorbate peroxidase" type="Protein">
+      <Xref identifier="MONOMER-17017" dataSource="plantcyc" />
+      <Graphics centerX="1516.2528076171875" centerY="937.5484619140625" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="SRI, caspi">Non-enzymatic ascorbate loss was measured in both freshly autoclaved medium and boiled spent medium and found to be about 50% of the rate in a culture of |FRAME: ORG-6200 &lt;i&gt;Paul&apos;s Scarlet Climber Rose&lt;/i&gt;| cultured cells. This indicates that the reaction is at least partially enzymatically catalyzed &lt;i&gt;in vivo&lt;/i&gt; |CITS: [15608627]|.</Comment>
+      <Property key="UniqueID" value="MONOMER-17017" />
+      <Property key="Catalyzes" value="RXN-19846" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="ORG-6200" />
+      <CitationRef elementRef="citation_PUB_15608627" />
+    </DataNode>
+    <DataNode elementId="OXYGEN-MOLECULE" textLabel="dioxygen" type="Metabolite">
+      <Xref identifier="MYMOFIZGZYHOMD-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1120.1859130859375" centerY="778.3566284179688" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="OXYGEN-MOLECULE" />
+      <Property key="AlternativeId_Metanetx" value="MNXM4" />
+      <Property key="AlternativeId_Seed" value="cpd00007" />
+      <Property key="AlternativeId_Bigg" value="33493" />
+      <Property key="AlternativeId_Pubchem" value="977" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15379" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01377" />
+      <Property key="AlternativeId_Chemspider" value="952" />
+      <Property key="AlternativeId_Chebi" value="15379" />
+      <Property key="AlternativeId_LigandCpd" value="C00007" />
+      <Property key="AlternativeId_Cas" value="7782-44-7" />
+      <Property key="Synonym_1" value="molecular oxygen" />
+      <Property key="Synonym_2" value="oxygen" />
+      <Property key="Synonym_3" value="oxygen molecule" />
+      <Property key="ChemicalFormula" value="(O 2)" />
+      <Property key="AbbrevName" value="O&lt;sub&gt;2&lt;/sub&gt;" />
+      <Property key="Gibbs0" value="3.92" />
+      <Property key="Inchi" value="InChI=1S/O2/c1-2" />
+      <Property key="InchiKey" value="InChIKey=MYMOFIZGZYHOMD-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="31.999" />
+      <Property key="MonoisotopicMw" value="31.9898292442" />
+      <Property key="NonStandardInchi" value="InChI=1S/O2/c1-2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-6231, REG0-11284, REG-13683, REG-5882" />
+      <Property key="Smiles" value="O=O" />
+      <Property key="SystematicName" value="dioxygen" />
+    </DataNode>
+    <DataNode elementId="CPD-13910" textLabel="cyclic-3,4-O-oxalyl-L-threonate" type="Metabolite">
+      <Xref identifier="FTDFTFXOJYXVTH-UHFFFAOYSA-M" dataSource="InChIKey" />
+      <Graphics centerX="809.8748779296875" centerY="1038.9283447265625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-13910" />
+      <Property key="AlternativeId_Seed" value="cpd24088" />
+      <Property key="AlternativeId_Metanetx" value="MNXM11221" />
+      <Property key="AlternativeId_Pubchem" value="90658084" />
+      <Property key="Synonym_1" value="3,4-cyclic oxalyl theronolactone" />
+      <Property key="ChemicalFormula" value="(C 6) (H 5) (O 7)" />
+      <Property key="AtomCharges" value="(8 -1)" />
+      <Property key="Gibbs0" value="-199.99646" />
+      <Property key="Inchi" value="InChI=1S/C6H6O7/c7-3(4(8)9)2-1-12-5(10)6(11)13-2/h2-3,7H,1H2,(H,8,9)/p-1" />
+      <Property key="InchiKey" value="InChIKey=FTDFTFXOJYXVTH-UHFFFAOYSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="189.101" />
+      <Property key="MonoisotopicMw" value="190.0113525473" />
+      <Property key="NonStandardInchi" value="InChI=1S/C6H6O7/c7-3(4(8)9)2-1-12-5(10)6(11)13-2/h2-3,7H,1H2,(H,8,9)/p-1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C1(OC(=O)C(=O)OC(C(O)C(=O)[O-])1)" />
+      <CitationRef elementRef="citation_PUB_21846329" />
+    </DataNode>
+    <DataNode elementId="ASCORBATE" textLabel="L-ascorbate" type="Metabolite">
+      <Xref identifier="CIWBSHSKHKDKBQ-JLAZNSOCSA-M" dataSource="InChIKey" />
+      <Graphics centerX="1600.0" centerY="413.7033386230469" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: ASCORBATE|, also known as vitamin C, fulfils multiple essential roles in both plants and animals. Being a strong reducing agent, it functions as the primary water soluble antioxidant in cells, interacting with reactive oxygen species generated during oxidative stress and protecting cell constituents from oxidative damage |CITS: [ 10727845]|. Ascorbate is also a cofactor for a number of enzymes, particulariy dioxygenases, in which it maintains the reduced form of the Fe cofactor. Ascorbate-dependent enzymes are involved in many important pathways, including collagen hydroxylation, carnitine biosynthesis, norepinephrine biosynthesis, and hormone and tyrosine metabolism. In plants L-ascorbate is also implicated in defense against pathogens and in control of plant growth and development. A significant proportion of a plants ascorbate is found in the apoplast (the aqueous solution permeating the cell walls) |CITS: [15608627]|. While most organisms synthesize L-ascorbate, not all do. Examples for organisms that are not able to synthesize L-ascorbate include simians and humans.</Comment>
+      <Property key="UniqueID" value="ASCORBATE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000100006770" />
+      <Property key="AlternativeId_Mediadb" value="compounds/70/" />
+      <Property key="AlternativeId_Seed" value="cpd00059" />
+      <Property key="AlternativeId_Metanetx" value="MNXM129" />
+      <Property key="AlternativeId_Refmet" value="Vitamin C" />
+      <Property key="AlternativeId_Bigg" value="ascb__L" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC38290" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00044" />
+      <Property key="AlternativeId_Chemspider" value="102746" />
+      <Property key="AlternativeId_Pubchem" value="54679076" />
+      <Property key="AlternativeId_Chebi" value="38290" />
+      <Property key="AlternativeId_Knapsack" value="C00001179" />
+      <Property key="AlternativeId_LigandCpd" value="C00072" />
+      <Property key="AlternativeId_Cas" value="50-81-7" />
+      <Property key="Synonym_1" value="L-ascorbic acid" />
+      <Property key="Synonym_2" value="vitamin C" />
+      <Property key="Synonym_3" value="ascorbic acid" />
+      <Property key="ChemicalFormula" value="(C 6) (H 7) (O 6)" />
+      <Property key="AtomCharges" value="(9 -1)" />
+      <Property key="CofactorsOf" value="ENZRXN-3404" />
+      <Property key="Gibbs0" value="-146.72423" />
+      <Property key="Inchi" value="InChI=1S/C6H8O6/c7-1-2(8)5-3(9)4(10)6(11)12-5/h2,5,7-10H,1H2/p-1/t2-,5+/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=CIWBSHSKHKDKBQ-JLAZNSOCSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="175.118" />
+      <Property key="MonoisotopicMw" value="176.0320879894" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-13755, REG-6055, REG-6993, REG-8493, REG-6448, REG-6447, REG0-8736, REG-7927, REG-6750, REG-5999" />
+      <Property key="Smiles" value="C(O)[C@H](O)[C@@H]1(C(\[O-])=C(C(=O)O1)\O)" />
+      <Property key="SystematicName" value="(2R)-2-[(1S)-1,2-dihydroxyethyl]-4-hydroxy-5-oxo-2,5-dihydrofuran-3-olate" />
+      <CitationRef elementRef="citation_PUB_15608627" />
+    </DataNode>
+    <DataNode elementId="L-THREONATE" textLabel="L-threonate" type="Metabolite">
+      <Xref identifier="JPIJQSOTBSSVTP-STHAYSLISA-M" dataSource="InChIKey" />
+      <Graphics centerX="524.0918579101562" centerY="1462.5997314453125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="L-THREONATE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000000901061" />
+      <Property key="AlternativeId_Seed" value="cpd01138" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1677" />
+      <Property key="AlternativeId_Refmet" value="Threonic acid" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57561" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00943" />
+      <Property key="AlternativeId_Chemspider" value="20015779" />
+      <Property key="AlternativeId_Chebi" value="57561" />
+      <Property key="AlternativeId_Pubchem" value="21145021" />
+      <Property key="AlternativeId_LigandCpd" value="C01620" />
+      <Property key="AlternativeId_Cas" value="7306-96-9" />
+      <Property key="Synonym_1" value="L-threonic acid" />
+      <Property key="Synonym_2" value="(2R,3S)-2,3,4-trihydroxybutanoate" />
+      <Property key="ChemicalFormula" value="(C 4) (H 7) (O 5)" />
+      <Property key="AtomCharges" value="(8 -1)" />
+      <Property key="Gibbs0" value="-124.23424" />
+      <Property key="Inchi" value="InChI=1S/C4H8O5/c5-1-2(6)3(7)4(8)9/h2-3,5-7H,1H2,(H,8,9)/p-1/t2-,3+/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=JPIJQSOTBSSVTP-STHAYSLISA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="135.096" />
+      <Property key="MonoisotopicMw" value="136.0371733673" />
+      <Property key="NonStandardInchi" value="InChI=1S/C4H8O5/c5-1-2(6)3(7)4(8)9/h2-3,5-7H,1H2,(H,8,9)/p-1/t2-,3+/m0/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C([C@@H]([C@H](C(=O)[O-])O)O)O" />
+    </DataNode>
+    <DataNode elementId="L-DEHYDRO-ASCORBATE" textLabel="dehydroascorbate" type="Metabolite">
+      <Xref identifier="OESHPIGALOBJLM-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1065.406982421875" centerY="1045.5374755859375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: ASCORBATE| is oxidized in cells to |FRAME: CPD-13907 dehydroascorbate| via the radical |FRAME: CPD-318|. |FRAME: CPD-13907 Dehydroascorbate| can be recycled back to ascorbate by the |FRAME: PWY-2261|, or it can be further broken down &lt;i&gt;in vivo&lt;/i&gt; by irreversible reactions. The structure shown here is the one found in most text books. However, it appears to be incorrect. Dehydroascorbic acid in solution absorbs a single water molecule and forms a |FRAME: CPD-13907 &quot;bicyclic monohydrate&quot;| structure |CITS: [Kerber08]|.</Comment>
+      <Property key="UniqueID" value="L-DEHYDRO-ASCORBATE" />
+      <Property key="AlternativeId_Pubchem" value="49791981" />
+      <Property key="AlternativeId_Zinc" value="ZINC000100082301" />
+      <Property key="AlternativeId_Seed" value="cpd00335" />
+      <Property key="AlternativeId_Metanetx" value="MNXM250" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC58070" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01264" />
+      <Property key="AlternativeId_Chebi" value="58070" />
+      <Property key="AlternativeId_LigandCpd" value="C05422" />
+      <Property key="Synonym_1" value="L-dehydro-ascorbate" />
+      <Property key="Synonym_2" value="dehydroascorbide" />
+      <Property key="Synonym_3" value="dehydroascorbic acid" />
+      <Property key="ChemicalFormula" value="(C 6) (H 5) (O 6)" />
+      <Property key="AtomCharges" value="(5 -1)" />
+      <Property key="Gibbs0" value="-136.1133" />
+      <Property key="Inchi" value="InChI=1S/C6H5O6/c7-1-2(8)5-3(9)4(10)6(11)12-5/h2,7-8H,1H2/q-1" />
+      <Property key="InchiKey" value="InChIKey=OESHPIGALOBJLM-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="173.102" />
+      <Property key="MonoisotopicMw" value="174.0164379252" />
+      <Property key="NonStandardInchi" value="InChI=1S/C6H6O6/c7-1-2(8)5-3(9)4(10)6(11)12-5/h2,5,7-8H,1H2/t2-,5+/m0/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-6994, REG-8037" />
+      <Property key="Smiles" value="C(O)C(O)[C-]1(C(=O)C(=O)C(=O)O1)" />
+    </DataNode>
+    <DataNode elementId="TARTRATE" textLabel="L-tartrate" type="Metabolite">
+      <Xref identifier="FEWJPZIEWOKRBE-JCYAYHJZSA-L" dataSource="InChIKey" />
+      <Graphics centerX="1018.9190673828125" centerY="1550.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>|FRAME: TARTRATE| is widely distributed in higher plants, especially in fruits such as grapes.</Comment>
+      <Property key="UniqueID" value="TARTRATE" />
+      <Property key="AlternativeId_Seed" value="cpd00666" />
+      <Property key="AlternativeId_Metanetx" value="MNXM816" />
+      <Property key="AlternativeId_Refmet" value="Tartaric acid" />
+      <Property key="AlternativeId_Bigg" value="tartr__L" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00956" />
+      <Property key="AlternativeId_Chemspider" value="106644" />
+      <Property key="AlternativeId_Pubchem" value="119400" />
+      <Property key="AlternativeId_Chebi" value="30924" />
+      <Property key="AlternativeId_Cas" value="87-69-4" />
+      <Property key="AlternativeId_LigandCpd" value="C00898" />
+      <Property key="Synonym_1" value="weinsaeure" />
+      <Property key="Synonym_2" value="(+)-tartrate" />
+      <Property key="Synonym_3" value="tartrate" />
+      <Property key="Synonym_4" value="tartaric acid" />
+      <Property key="Synonym_5" value="(R,R)-tartrate" />
+      <Property key="Synonym_6" value="L-tartaric acid" />
+      <Property key="Synonym_7" value="L(+)-tartaric acid" />
+      <Property key="Synonym_8" value="(2R,3R)-tartaric acid" />
+      <Property key="Synonym_9" value="(2R,3R)-tartrate" />
+      <Property key="Synonym_10" value="L-tartarate" />
+      <Property key="Synonym_11" value="L-threarate" />
+      <Property key="ChemicalFormula" value="(C 4) (H 4) (O 6)" />
+      <Property key="AtomCharges" value="(9 -1), (7 -1)" />
+      <Property key="Gibbs0" value="-199.20375" />
+      <Property key="Inchi" value="InChI=1S/C4H6O6/c5-1(3(7)8)2(6)4(9)10/h1-2,5-6H,(H,7,8)(H,9,10)/p-2/t1-,2-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=FEWJPZIEWOKRBE-JCYAYHJZSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="148.072" />
+      <Property key="MonoisotopicMw" value="150.0164379252" />
+      <Property key="NonStandardInchi" value="InChI=1S/C4H6O6/c5-1(3(7)8)2(6)4(9)10/h1-2,5-6H,(H,7,8)(H,9,10)/p-2/t1-,2-/m1/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C([C@@H]([C@H](C([O-])=O)O)O)([O-])=O" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="100.0" centerY="1035.55712890625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="ChemicalFormula" value="(H 1)" />
+      <Property key="AtomCharges" value="(1 1)" />
+      <Property key="Gibbs0" value="0.42906138" />
+      <Property key="Inchi" value="InChI=1S/p+1" />
+      <Property key="InchiKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicMw" value="1.0078250321" />
+      <Property key="NonStandardInchi" value="InChI=1S/p+1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="[H+]" />
+    </DataNode>
+    <DataNode elementId="HYDROGEN-PEROXIDE" textLabel="hydrogen peroxide" type="Metabolite">
+      <Xref identifier="MHAJPDPJQMAIIY-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="547.7672119140625" centerY="857.0543823242188" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="HYDROGEN-PEROXIDE" />
+      <Property key="AlternativeId_Seed" value="cpd00025" />
+      <Property key="AlternativeId_Metanetx" value="MNXM22" />
+      <Property key="AlternativeId_Bigg" value="h2o2" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC16240" />
+      <Property key="AlternativeId_Hmdb" value="HMDB03125" />
+      <Property key="AlternativeId_Pubchem" value="784" />
+      <Property key="AlternativeId_Chemspider" value="763" />
+      <Property key="AlternativeId_Chebi" value="16240" />
+      <Property key="AlternativeId_LigandCpd" value="C00027" />
+      <Property key="AlternativeId_Cas" value="7722-84-1" />
+      <Property key="Synonym_1" value="hydroperoxide" />
+      <Property key="Synonym_2" value="perhydrol" />
+      <Property key="Synonym_3" value="H&lt;SUB&gt;2&lt;/SUB&gt;O&lt;SUB&gt;2&lt;/SUB&gt;" />
+      <Property key="ChemicalFormula" value="(H 2) (O 2)" />
+      <Property key="Gibbs0" value="-11.457759" />
+      <Property key="Inchi" value="InChI=1S/H2O2/c1-2/h1-2H" />
+      <Property key="InchiKey" value="InChIKey=MHAJPDPJQMAIIY-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="34.015" />
+      <Property key="MonoisotopicMw" value="34.0054793084" />
+      <Property key="NonStandardInchi" value="InChI=1S/H2O2/c1-2/h1-2H" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-5978, REG-6172, REG-6248, REG-10316, REG-8348" />
+      <Property key="Smiles" value="OO" />
+    </DataNode>
+    <DataNode elementId="CPD-13911" textLabel="4-O-oxalyl-L-threonate" type="Metabolite">
+      <Xref identifier="ABFIJCKNMGMYAX-UHFFFAOYSA-L" dataSource="InChIKey" />
+      <Graphics centerX="1037.6368408203125" centerY="441.268310546875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-13911" />
+      <Property key="AlternativeId_Seed" value="cpd24089" />
+      <Property key="AlternativeId_Metanetx" value="MNXM10231" />
+      <Property key="AlternativeId_Pubchem" value="90659104" />
+      <Property key="ChemicalFormula" value="(C 6) (H 6) (O 8)" />
+      <Property key="AtomCharges" value="(9 -1), (11 -1)" />
+      <Property key="Gibbs0" value="-249.88156" />
+      <Property key="Inchi" value="InChI=1S/C6H8O8/c7-2(3(8)4(9)10)1-14-6(13)5(11)12/h2-3,7-8H,1H2,(H,9,10)(H,11,12)/p-2" />
+      <Property key="InchiKey" value="InChIKey=ABFIJCKNMGMYAX-UHFFFAOYSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="206.109" />
+      <Property key="MonoisotopicMw" value="208.0219172336" />
+      <Property key="NonStandardInchi" value="InChI=1S/C6H8O8/c7-2(3(8)4(9)10)1-14-6(13)5(11)12/h2-3,7-8H,1H2,(H,9,10)(H,11,12)/p-2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C(=O)([O-])C(O)C(O)COC(=O)C(=O)[O-]" />
+      <CitationRef elementRef="citation_PUB_21846329" />
+    </DataNode>
+    <DataNode elementId="CPD-13914" textLabel="cyclic-2,3-O-oxalyl-L-threonate" type="Metabolite">
+      <Xref identifier="NKBSFRFTBUHMJF-UHFFFAOYSA-M" dataSource="InChIKey" />
+      <Graphics centerX="853.0275268554688" centerY="759.06396484375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-13914" />
+      <Property key="AlternativeId_Seed" value="cpd24092" />
+      <Property key="AlternativeId_Metanetx" value="MNXM11222" />
+      <Property key="AlternativeId_Pubchem" value="90659383" />
+      <Property key="Synonym_1" value="2,3-cyclic oxalyl theronolactone" />
+      <Property key="ChemicalFormula" value="(C 6) (H 5) (O 7)" />
+      <Property key="AtomCharges" value="(8 -1)" />
+      <Property key="Gibbs0" value="-201.79648" />
+      <Property key="Inchi" value="InChI=1S/C6H6O7/c7-1-2-3(4(8)9)13-6(11)5(10)12-2/h2-3,7H,1H2,(H,8,9)/p-1" />
+      <Property key="InchiKey" value="InChIKey=NKBSFRFTBUHMJF-UHFFFAOYSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="189.101" />
+      <Property key="MonoisotopicMw" value="190.0113525473" />
+      <Property key="NonStandardInchi" value="InChI=1S/C6H6O7/c7-1-2-3(4(8)9)13-6(11)5(10)12-2/h2-3,7H,1H2,(H,8,9)/p-1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C(O)C1(OC(=O)C(=O)OC(C(=O)[O-])1)" />
+      <CitationRef elementRef="citation_PUB_15608627" />
+      <CitationRef elementRef="citation_PUB_21846329" />
+    </DataNode>
+    <DataNode elementId="OXALATE" textLabel="oxalate" type="Metabolite">
+      <Xref identifier="MUBZPKHOEPUJKR-UHFFFAOYSA-L" dataSource="InChIKey" />
+      <Graphics centerX="1552.216552734375" centerY="1412.616943359375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: OXALATE Oxalate| is the most oxidized two-carbon compound. It is made in high concentrations by some plants and fungi and can reach high micromolar concentrations in soil. Oxalate is toxic to mammals but is metabolized by many bacteria and plants by various pathways. In high concentrations, it causes death in humans and animals because of its corrosive effects, while smaller amounts can cause various pathological disorders, including hyperoxaluria, calcium oxalate stones, pyridoxine deficiency, and even renal failure. In oxalate-accumulating plants, calcium oxalate crystal accumulation occurs in specialized idioblast cells. The crystals are thought to deter herbivore feeding |CITS: [16514014]| and may also serve a role in regulating free calcium levels |CITS: [15862089]|.</Comment>
+      <Property key="UniqueID" value="OXALATE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000006021239" />
+      <Property key="AlternativeId_ReactomeCpd" value="389819" />
+      <Property key="AlternativeId_Seed" value="cpd00180" />
+      <Property key="AlternativeId_Metanetx" value="MNXM291" />
+      <Property key="AlternativeId_Refmet" value="Oxalic acid" />
+      <Property key="AlternativeId_Drugbank" value="DB02737" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC30623" />
+      <Property key="AlternativeId_Hmdb" value="HMDB02329" />
+      <Property key="AlternativeId_Chemspider" value="64235" />
+      <Property key="AlternativeId_Chebi" value="30623" />
+      <Property key="AlternativeId_Pubchem" value="71081" />
+      <Property key="AlternativeId_LigandCpd" value="C00209" />
+      <Property key="AlternativeId_Cas" value="144-62-7" />
+      <Property key="Synonym_1" value="oxalic acid" />
+      <Property key="Synonym_2" value="ethanedioic acid" />
+      <Property key="ChemicalFormula" value="(C 2) (O 4)" />
+      <Property key="AtomCharges" value="(6 -1), (3 -1)" />
+      <Property key="Gibbs0" value="-162.34824" />
+      <Property key="Inchi" value="InChI=1S/C2H2O4/c3-1(4)2(5)6/h(H,3,4)(H,5,6)/p-2" />
+      <Property key="InchiKey" value="InChIKey=MUBZPKHOEPUJKR-UHFFFAOYSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="88.02" />
+      <Property key="MonoisotopicMw" value="89.9953085526" />
+      <Property key="NonStandardInchi" value="InChI=1S/C2H2O4/c3-1(4)2(5)6/h(H,3,4)(H,5,6)/p-2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-15646, REG0-7499, REG0-12382, REG-7379, REG0-8575, REG0-7158, REG-8009, REG-11618, REG-11616, REG-10225, REG-9356" />
+      <Property key="Smiles" value="C([O-])(C(=O)[O-])=O" />
+      <CitationRef elementRef="citation_PUB_21255608" />
+      <CitationRef elementRef="citation_PUB_16514014" />
+      <CitationRef elementRef="citation_PUB_15862089" />
+    </DataNode>
+    <DataNode elementId="WATER" textLabel="H₂O" type="Metabolite">
+      <Xref identifier="XLYOFNOQVPJJNP-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="813.8902587890625" centerY="50.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="WATER" />
+      <Property key="AlternativeId_Bigg" value="33474" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15377" />
+      <Property key="AlternativeId_Hmdb" value="HMDB02111" />
+      <Property key="AlternativeId_Chemspider" value="937" />
+      <Property key="AlternativeId_Chebi" value="15377" />
+      <Property key="AlternativeId_Pubchem" value="962" />
+      <Property key="AlternativeId_LigandCpd" value="C00001" />
+      <Property key="AlternativeId_Cas" value="7732-18-5" />
+      <Property key="Synonym_1" value="H&lt;sub&gt;2&lt;/sub&gt;0" />
+      <Property key="Synonym_2" value="H2O" />
+      <Property key="Synonym_3" value="H20" />
+      <Property key="Synonym_4" value="hydrogen oxide" />
+      <Property key="Synonym_5" value="water" />
+      <Property key="ChemicalFormula" value="(H 2) (O 1)" />
+      <Property key="Gibbs0" value="-36.144756" />
+      <Property key="Inchi" value="InChI=1S/H2O/h1H2" />
+      <Property key="InchiKey" value="InChIKey=XLYOFNOQVPJJNP-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="18.015" />
+      <Property key="MonoisotopicMw" value="18.0105646863" />
+      <Property key="NonStandardInchi" value="InChI=1S/H2O/h1H2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="O" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="RXN-12875">
+      <Xref identifier="RXN-12875" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-12875_start" x="569.0918579101562" y="1462.5997314453125" elementRef="L-THREONATE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-12875_end" arrowHead="Conversion" x="973.9190673828125" y="1550.0" elementRef="TARTRATE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-12875_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Comment source="BioCyc">In many plants |FRAME: L-THREONATE L-threonate| yields |FRAME: TARTRATE L-tartrate| &lt;i&gt;in vivo&lt;/i&gt; |CITS: [16662405]|. At this time nothing is known of the enzyme(s) catalyzing this four-electron oxidation. Theoretically, there could be two H2O2-generating oxidases, with |FRAME: CPD-13061 L-&lt;i&gt;threo&lt;/i&gt;-tetruronate| as intermediate |CITS: [15608627]|.</Comment>
+      <Property key="UniqueID" value="RXN-12875" />
+      <Property key="Pathways" value="PWY-6960" />
+      <Property key="ReactionEquation" value="L-THREONATE =&gt; TARTRATE" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":UNBALANCED-UNFIXABLE" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Unknown-Conversions" />
+      <Property key="CannotBalance?" value="T" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <CitationRef elementRef="citation_PUB_16662405" />
+      <CitationRef elementRef="citation_PUB_15608627" />
+    </Interaction>
+    <Interaction elementId="RXN-12869">
+      <Xref identifier="RXN-12869" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-12869_start" x="1110.406982421875" y="1045.5374755859375" elementRef="L-DEHYDRO-ASCORBATE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-12869_end" arrowHead="Conversion" x="808.0275268554688" y="759.06396484375" elementRef="CPD-13914" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-12869_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-12869" />
+      <Property key="Spontaneous" value="T" />
+      <Property key="Pathways" value="PWY-6960" />
+      <Property key="ReactionEquation" value="L-DEHYDRO-ASCORBATE + OXYGEN-MOLECULE =&gt; CPD-13914" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="NIL" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="Gibbs0" value="-134.42825" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="^coefficient" value="2, 2" />
+      <CitationRef elementRef="citation_PUB_15608627" />
+    </Interaction>
+    <Interaction elementId="RXN-12869_anchor_reactant_1">
+      <Xref identifier="RXN-12869" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-12869_anchor_reactant_start_1" x="1165.1859130859375" y="778.3566284179688" elementRef="OXYGEN-MOLECULE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-12869_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-12869_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-12872">
+      <Xref identifier="RXN-12872" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-12872_start" x="898.0275268554688" y="759.06396484375" elementRef="CPD-13914" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-12872_end" arrowHead="Conversion" x="764.8748779296875" y="1038.9283447265625" elementRef="CPD-13910" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-12872_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-12872" />
+      <Property key="Spontaneous" value="T" />
+      <Property key="Pathways" value="PWY-6960" />
+      <Property key="ReactionEquation" value="CPD-13914 =&gt; CPD-13910" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="NIL" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="Gibbs0" value="1.8000183" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <CitationRef elementRef="citation_PUB_15608627" />
+    </Interaction>
+    <Interaction elementId="RXN-12873">
+      <Xref identifier="RXN-12873" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-12873_start" x="854.8748779296875" y="1038.9283447265625" elementRef="CPD-13910" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-12873_end" arrowHead="Conversion" x="992.6368408203125" y="441.268310546875" elementRef="CPD-13911" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-12873_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-12873" />
+      <Property key="Pathways" value="PWY-6960" />
+      <Property key="ReactionEquation" value="CPD-13910 + WATER =&gt; CPD-13911 + PROTON" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-19848" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="Gibbs0" value="-13.311280" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <CitationRef elementRef="citation_PUB_15608627" />
+    </Interaction>
+    <Interaction elementId="RXN-12873_ENZRXN-19848">
+      <Waypoints>
+        <Point elementId="RXN-12873_ENZRXN-19848_start" x="399.92242431640625" y="450.5157775878906" elementRef="MONOMER-17018" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-12873_ENZRXN-19848_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-12873_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-12873_anchor_reactant_1">
+      <Xref identifier="RXN-12873" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-12873_anchor_reactant_start_1" x="858.8902587890625" y="50.0" elementRef="WATER" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-12873_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-12873_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-12873_anchor_product_1">
+      <Xref identifier="RXN-12873" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-12873_anchor_product_start_1" x="0" y="0" elementRef="RXN-12873_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-12873_anchor_product_end_1" arrowHead="Conversion" x="55.0" y="1035.55712890625" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-12874">
+      <Xref identifier="RXN-12874" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-12874_start" x="1082.6368408203125" y="441.268310546875" elementRef="CPD-13911" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-12874_end" arrowHead="Conversion" x="479.09185791015625" y="1462.5997314453125" elementRef="L-THREONATE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-12874_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-12874" />
+      <Property key="Pathways" value="PWY-6960" />
+      <Property key="ReactionEquation" value="CPD-13911 + WATER =&gt; L-THREONATE + OXALATE + PROTON" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-19845" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="Gibbs0" value="-0.12710571" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <CitationRef elementRef="citation_PUB_15608627" />
+    </Interaction>
+    <Interaction elementId="RXN-12874_ENZRXN-19845">
+      <Waypoints>
+        <Point elementId="RXN-12874_ENZRXN-19845_start" x="927.5966186523438" y="884.435791015625" elementRef="MONOMER-17016" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-12874_ENZRXN-19845_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-12874_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-12874_anchor_reactant_1">
+      <Xref identifier="RXN-12874" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-12874_anchor_reactant_start_1" x="858.8902587890625" y="50.0" elementRef="WATER" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-12874_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-12874_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-12874_anchor_product_1">
+      <Xref identifier="RXN-12874" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-12874_anchor_product_start_1" x="0" y="0" elementRef="RXN-12874_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-12874_anchor_product_end_1" arrowHead="Conversion" x="1507.216552734375" y="1412.616943359375" elementRef="OXALATE" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-12874_anchor_product_2">
+      <Xref identifier="RXN-12874" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN-12874_anchor_product_start_2" x="0" y="0" elementRef="RXN-12874_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-12874_anchor_product_end_2" arrowHead="Conversion" x="55.0" y="1035.55712890625" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-12440">
+      <Xref identifier="EC-1.11.1.11" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-12440_start" x="1645.0" y="413.7033386230469" elementRef="ASCORBATE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-12440_end" arrowHead="Conversion" x="1555.0" y="413.7033386230469" elementRef="ASCORBATE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-12440_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-12440" />
+      <Property key="EC_Number" value="EC-1.11.1.11" />
+      <Property key="Spontaneous" value="T" />
+      <Property key="Pathways" value="PWY-6960" />
+      <Property key="ReactionEquation" value="ASCORBATE + HYDROGEN-PEROXIDE =&gt; ASCORBATE + L-DEHYDRO-ASCORBATE + WATER" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-19846" />
+      <Property key="ReactionTypes" value="Composite-Reactions, Small-Molecule-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-50.64987" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="^coefficient" value="2, 2" />
+      <Property key="ReactionList" value="RXN-3521, RXN-3523" />
+    </Interaction>
+    <Interaction elementId="RXN-12440_ENZRXN-19846">
+      <Waypoints>
+        <Point elementId="RXN-12440_ENZRXN-19846_start" x="1516.2528076171875" y="950.0484619140625" elementRef="MONOMER-17017" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-12440_ENZRXN-19846_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-12440_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-12440_anchor_reactant_1">
+      <Xref identifier="EC-1.11.1.11" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-12440_anchor_reactant_start_1" x="592.7672119140625" y="857.0543823242188" elementRef="HYDROGEN-PEROXIDE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-12440_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-12440_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-12440_anchor_product_1">
+      <Xref identifier="EC-1.11.1.11" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-12440_anchor_product_start_1" x="0" y="0" elementRef="RXN-12440_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-12440_anchor_product_end_1" arrowHead="Conversion" x="1020.406982421875" y="1045.5374755859375" elementRef="L-DEHYDRO-ASCORBATE" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-12440_anchor_product_2">
+      <Xref identifier="EC-1.11.1.11" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-12440_anchor_product_start_2" x="0" y="0" elementRef="RXN-12440_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-12440_anchor_product_end_2" arrowHead="Conversion" x="768.8902587890625" y="50.0" elementRef="WATER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_PUB_21255608">
+      <Xref identifier="21255608" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_16662405">
+      <Xref identifier="16662405" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_16658623">
+      <Xref identifier="16658623" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_15862089">
+      <Xref identifier="15862089" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_21846329">
+      <Xref identifier="21846329" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_16514014">
+      <Xref identifier="16514014" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_15608627">
+      <Xref identifier="15608627" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_16660361">
+      <Xref identifier="16660361" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_18708499">
+      <Xref identifier="18708499" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

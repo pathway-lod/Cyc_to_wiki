@@ -52,7 +52,6 @@ def get_primary_protein_xref(db_refs, record=None):
         Xref: Primary external reference or None
     """
     # BridgeDb protein database mapping
-    # Priority order based on WikiPathways best practices:
     # 1. Entrez Gene - Most stable, comprehensive gene database
     # 2. HGNC - Official human gene nomenclature
     # 3. Ensembl - Genomic context
@@ -118,9 +117,9 @@ def get_primary_protein_xref(db_refs, record=None):
         'TTD': 'ttd.target',
 
         # Plant-specific protein databases
-        'TAIR': 'TAIR',
-        'TAIR-PROTEIN': 'TAIR',
-        'ARAPORT': 'TAIR',
+        'TAIR': 'TAIR gene name',
+        'TAIR-PROTEIN': 'TAIR gene name',
+        'ARAPORT': 'TAIR gene name',
 
         # Other sequence databases
         'REFSEQ': 'refseq',

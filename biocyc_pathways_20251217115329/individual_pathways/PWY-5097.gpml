@@ -1,0 +1,1667 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="L-lysine biosynthesis VI" organism="Zea mays, Glycine max, Arabidopsis thaliana, Populus trichocarpa x Populus deltoides, Synechocystis, Zea mays" source="PlantCyc" version="20251217115329">
+  <Xref identifier="PWY-5097" dataSource="MetaCyc" />
+  <Description>Lysine biosynthesis in plants was thought to be identical to the prokaryotic DAP (diaminopimelate) pathway that uses N-succinylated intermediates |CITS: [15652176]| (See |FRAME: DAPLYSINESYN-PWY| in MetaCyc). However the Arabidopsis genome does not contain a tetrahydrodipicolinate succinylase homolog catalyzing reaction EC 2.3.1.117. Further more, the Arabidopsis homologs of N-succinyldiaminopimelate-aminotransferase and N-succinyl-L-diaminopimelate desuccinylase, catalyzing the consequent steps 2.6.1.17 and 3.5.1.18, respectively, are not likely to function in lysine biosynthesis|CITS: [15652176]|. It suggested that plants may synthesize lysine via an enzyme that by pass the three reactions by directly converting tetrahydrodipicolinate to L,L-diaminopimelate. An recent article by Hudson and colleagues |CITS: [16361515]| indeed demonstrated that Arabidopsis has an functional L,L-diaminopimelate aminotransferase that fulfills the catalytic activity. In addition, this enzymatic activity was detected in several other plant species including soybean, spinach, and moss (&lt;i&gt;P. patens&lt;/i&gt;) |CITS: [16361515]|. The Arabidopsis enzyme catalyzes a reversible reaction. Although the forward reaction towards lysine biosynthesis is unfavorable, the enzyme was shown to be involved in lysine biosynthesis under physiological conditions by functional complementation of the E.coli lysine biosynthesis double mutant of dapD and dapE. The first committed enzyme of lysine biosynthesis, dihydrodipicolinate synthase, is feedback regulated by lysine|CITS: [8000011]|. Its catalyzed reaction is the rate-limiting step for lysine biosynthesis. L,L-diaminopimelate aminotransferase may impose another regulation point of lysine biosynthesis. Using maize cultured embryo cells, it was shown that the overall rate of lysine synthesis is in the same range of the forward reaction catalyzed by L,L-diaminopimelate aminotransferase |CITS: [16361515]|. Lysine biosynthesis occurs within chloroplasts. No evidence exists for extra plastidic location of the pathway |CITS: [15652176]|. &lt;b&gt;General Background&lt;/b&gt; Several pathways have been recognized in bacteria, most algae, fungi and higher plants for the biosynthesis of lysine. They are divided into two groups - the diaminopimelate (DAP) pathways, and the |FRAME:CPD-468| (AAA) pathways. In the pathways that belong to the DAP group, lysine is produced from aspartate (along with methionine, threonine and isoleucine). All of these pathways share the upper segments, which include the four steps required for conversion of L-aspartate to |FRAME: DELTA1-PIPERIDEINE-2-6-DICARBOXYLATE|. They also share the last step, which is the conversion of the intermediate |FRAME: MESO-DIAMINOPIMELATE| (D,L-DAP, or &lt;i&gt;meso&lt;/i&gt;-DAP) to lysine. However, these pathways differ in the routes leading from |FRAME: DELTA1-PIPERIDEINE-2-6-DICARBOXYLATE| to |FRAME:MESO-DIAMINOPIMELATE|. The four variations include: (I) the succinylase variant (see |FRAME: DAPLYSINESYN-PWY|), which involves succinylated intermediates. In this route |FRAME: DELTA1-PIPERIDEINE-2-6-DICARBOXYLATE| is coverted to |FRAME:MESO-DIAMINOPIMELATE| in four enzymatic steps. (II) the acetylase variant (see |FRAME: PWY-2941|), which involves acetylated intermediates. This route also involves four enzymatic steps for the conversion of |FRAME: DELTA1-PIPERIDEINE-2-6-DICARBOXYLATE| to |FRAME:MESO-DIAMINOPIMELATE|. (III) the dehydrogenase variant (see |FRAME: PWY-2942|), in which |FRAME: DELTA1-PIPERIDEINE-2-6-DICARBOXYLATE| is converted to |FRAME:MESO-DIAMINOPIMELATE| in a single enzymatic step. (IV) the diaminopimelate-aminotransferase variant (see |FRAME: PWY-5097|), in which |FRAME: DELTA1-PIPERIDEINE-2-6-DICARBOXYLATE| is converted to |FRAME:MESO-DIAMINOPIMELATE| in two steps. (VI) the L,L-diaminopimelate aminotransferase variant (this pathway), in which |FRAME: DELTA1-PIPERIDEINE-2-6-DICARBOXYLATE| is converted to |FRAME: LL-DIAMINOPIMELATE| in a single step. In addition to lysine, the pathways in this group also produce &lt;i&gt;meso&lt;/i&gt;-DAP, which is an important metabolite on its own (for example, as a constituent of bacterial cell wall peptidoglycan). The two other pathways belong to the |FRAME: CPD-468| group. They are found in organisms that have no requirement for &lt;i&gt;meso&lt;/i&gt;-DAP, as it is not a component of their cell walls. These pathways also share the first segments, leading to the synthesis of the intermediate &amp;alpha;-aminoadipate. However, in yeast and fungi, as well as &lt;i&gt;Euglena&lt;/i&gt;, the pathway continues with the key enzyme &amp;alpha;-aminoadipate reductase, leading to the intermediate saccharopine (see |FRAME: LYSINE-AMINOAD-PWY|), while in prokaryotes the pathway continues in a path similar to bacterial arginine biosynthesis (see |FRAME: PWY-3081|). Most of the bacteria which have been investigated in detail appear to utilize only one of these pathways |CITS: [1906065]|. A few exceptions include &lt;i&gt;Paenibacillus macerans&lt;/i&gt;, in which variants (II) and (III) seem to coexist |CITS: [BARTLETT85]|, and &lt;i&gt;Corynebacterium glutamicum&lt;/i&gt;, in which variant (I) and (III) coexist |CITS: [1906065]|. Lysine is one of the 10 essential amino acids that mammals are unable to synthesize, and must therefore acquire in their diets.</Description>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-5097" />
+  <Property key="Type" value="LYSINE-SYN" />
+  <Property key="ReactionCount" value="7" />
+  <Property key="ReactionIDs" value="RXN-14014, DIAMINOPIMDECARB-RXN, DIAMINOPIMEPIM-RXN, RXN-7737, DIHYDRODIPICSYN-RXN, ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN, ASPARTATEKIN-RXN" />
+  <Property key="PredecessorCount" value="6" />
+  <Property key="PrimaryCompoundCount" value="6" />
+  <Property key="Organism" value="Zea mays, Glycine max, Arabidopsis thaliana, Populus trichocarpa x Populus deltoides, Synechocystis, Zea mays" />
+  <Property key="TaxonomicRange_1" value="Methanobacteria" />
+  <Property key="TaxonomicRange_2" value="Chlamydiae/Verrucomicrobia group" />
+  <Property key="TaxonomicRange_3" value="Cyanobacteriota" />
+  <Property key="TaxonomicRange_4" value="Magnoliopsida" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_PUB_15652176" />
+  <CitationRef elementRef="citation_PUB_16361515" />
+  <CitationRef elementRef="citation_PUB_8000011" />
+  <CitationRef elementRef="citation_PUB_7948877" />
+  <CitationRef elementRef="citation_PUB_TYAGI82" />
+  <CitationRef elementRef="citation_PUB_TYAGI83" />
+  <CitationRef elementRef="citation_PUB_1906065" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="AT5G11880" textLabel="AT5G11880" type="GeneProduct">
+      <Xref identifier="AT5G11880" dataSource="TAIR gene name" />
+      <Graphics centerX="817.8861083984375" centerY="1160.07666015625" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT5G11880" />
+      <Property key="Product" value="AT5G11880-MONOMER" />
+      <Property key="StartPosition" value="3827527" />
+      <Property key="EndPosition" value="3829987" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+      <Property key="Accession1" value="AT5G11880" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="AT3G14390" textLabel="AT3G14390" type="GeneProduct">
+      <Xref identifier="AT3G14390" dataSource="TAIR gene name" />
+      <Graphics centerX="1055.397216796875" centerY="621.3614501953125" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT3G14390" />
+      <Property key="Product" value="AT3G14390-MONOMER" />
+      <Property key="StartPosition" value="4806732" />
+      <Property key="EndPosition" value="4809440" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+      <Property key="Accession1" value="AT3G14390" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="AT4G19710" textLabel="AK-HSDH2" type="GeneProduct">
+      <Xref identifier="AT4G19710" dataSource="TAIR gene name" />
+      <Graphics centerX="166.025146484375" centerY="440.71466064453125" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT4G19710" />
+      <Property key="Product" value="AT4G19710-MONOMER" />
+      <Property key="StartPosition" value="10724865" />
+      <Property key="EndPosition" value="10729778" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="Accession1" value="AT4G19710" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="AT4G33680" textLabel="AT4G33680" type="GeneProduct">
+      <Xref identifier="AT4G33680" dataSource="TAIR gene name" />
+      <Graphics centerX="893.9229736328125" centerY="613.3536987304688" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT4G33680" />
+      <Property key="Synonym_1" value="AGD2" />
+      <Property key="Product" value="AT4G33680-MONOMER" />
+      <Property key="StartPosition" value="16171697" />
+      <Property key="EndPosition" value="16174689" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+      <Property key="Accession1" value="AT4G33680" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+      <CitationRef elementRef="citation_PUB_16361515" />
+    </DataNode>
+    <DataNode elementId="GM-DAPA" textLabel="DapA" type="GeneProduct">
+      <Xref identifier="GM-DAPA" dataSource="plantcyc" />
+      <Graphics centerX="885.6072998046875" centerY="803.496337890625" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="GM-DAPA" />
+      <Property key="Product" value="MONOMER-11881" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+      <CitationRef elementRef="citation_PUB_8000011" />
+    </DataNode>
+    <DataNode elementId="AT1G31230" textLabel="AK-HSDH1" type="GeneProduct">
+      <Xref identifier="AT1G31230" dataSource="TAIR gene name" />
+      <Graphics centerX="209.3729705810547" centerY="1177.808837890625" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT1G31230" />
+      <Property key="Product" value="AT1G31230-MONOMER" />
+      <Property key="StartPosition" value="11158599" />
+      <Property key="EndPosition" value="11163255" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="Accession1" value="AT1G31230" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="AT3G60880" textLabel="AT3G60880" type="GeneProduct">
+      <Xref identifier="AT3G60880" dataSource="TAIR gene name" />
+      <Graphics centerX="1436.840576171875" centerY="681.0425415039062" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT3G60880" />
+      <Property key="Synonym_1" value="DHDPS" />
+      <Property key="Synonym_2" value="DHDPS1" />
+      <Property key="Product" value="AT3G60880-MONOMER" />
+      <Property key="StartPosition" value="22505827" />
+      <Property key="EndPosition" value="22507672" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+      <Property key="Accession1" value="AT3G60880" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="AT3G53580" textLabel="AT3G53580" type="GeneProduct">
+      <Xref identifier="AT3G53580" dataSource="TAIR gene name" />
+      <Graphics centerX="755.0006103515625" centerY="829.8470458984375" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT3G53580" />
+      <Property key="Product" value="AT3G53580-MONOMER" />
+      <Property key="StartPosition" value="19875742" />
+      <Property key="EndPosition" value="19878112" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+      <Property key="Accession1" value="AT3G53580" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="AT2G45440" textLabel="AT2G45440" type="GeneProduct">
+      <Xref identifier="AT2G45440" dataSource="TAIR gene name" />
+      <Graphics centerX="981.911376953125" centerY="1030.090087890625" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT2G45440" />
+      <Property key="Synonym_1" value="DHDPS2" />
+      <Property key="Product" value="AT2G45440-MONOMER" />
+      <Property key="StartPosition" value="18737914" />
+      <Property key="EndPosition" value="18740089" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+      <Property key="Accession1" value="AT2G45440" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="AT3G02020" textLabel="AT3G02020" type="GeneProduct">
+      <Xref identifier="AT3G02020" dataSource="TAIR gene name" />
+      <Graphics centerX="963.5036010742188" centerY="871.5166015625" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT3G02020" />
+      <Property key="Synonym_1" value="AK-LYS3" />
+      <Property key="Synonym_2" value="AK-HSDH1" />
+      <Property key="Synonym_3" value="AK3" />
+      <Property key="Product" value="AT3G02020-MONOMER" />
+      <Property key="StartPosition" value="340563" />
+      <Property key="EndPosition" value="343842" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="Accession1" value="AT3G02020" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+      <CitationRef elementRef="citation_PUB_11569502" />
+      <CitationRef elementRef="citation_PUB_16216875" />
+    </DataNode>
+    <DataNode elementId="AT3G60880-MONOMER" textLabel="dihydrodipicolinate synthase" type="Protein">
+      <Xref identifier="Q9LZX6" dataSource="uniprot" />
+      <Graphics centerX="384.2132568359375" centerY="921.7415161132812" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">There is evidence that this enzyme has activity when the apoprotein is expressed in &lt;i&gt;E.coli&lt;/i&gt; |CITS: [10758475]|. It is sensitive to lysine inhibition, but the substitution of an arginine for an important tryptophan makes the enzyme insensitive to lysline-mediated inhibition |CITS: [10758475]|.</Comment>
+      <Property key="UniqueID" value="AT3G60880-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT3G60880.2" />
+      <Property key="AlternativeId_Uniprot" value="Q9LZX6" />
+      <Property key="Catalyzes" value="RXN-5428" />
+      <Property key="Accession1" value="AT3G60880.2" />
+      <Property key="Gene" value="AT3G60880" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_10758475" />
+    </DataNode>
+    <DataNode elementId="AT2G45440-MONOMER" textLabel="dihydrodipicolinate synthase" type="Protein">
+      <Xref identifier="Q9FVC8" dataSource="uniprot" />
+      <Graphics centerX="846.6463623046875" centerY="428.86053466796875" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">Plants that have a mutation in this gene generate lower levels of lysine and accumulate higher levels of its precursor aspartate |CITS: [11069709]|.</Comment>
+      <Property key="UniqueID" value="AT2G45440-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT2G45440.1" />
+      <Property key="AlternativeId_Uniprot" value="Q9FVC8" />
+      <Property key="Catalyzes" value="RXN-5202" />
+      <Property key="Accession1" value="AT2G45440.1" />
+      <Property key="Gene" value="AT2G45440" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_11069709" />
+    </DataNode>
+    <DataNode elementId="AT4G19710-MONOMER" textLabel="AT4G19710-MONOMER" type="Protein">
+      <Xref identifier="AT4G19710.2" dataSource="TAIR gene name" />
+      <Graphics centerX="618.05029296875" centerY="361.4317321777344" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">The &lt;i&gt;Arabidopsis&lt;/i&gt; gene &lt;i&gt;AK-HSDH2&lt;/i&gt; was overexpressed in &lt;i&gt;E. coli&lt;/i&gt;, purified to homogeneity, and characterized |CITS:[16216875]|. The enzyme was shown to be bifunctional and to have both aspartate kinase and homoserine dehydrogenase activities |CITS:[16216875]|.</Comment>
+      <Property key="UniqueID" value="AT4G19710-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT4G19710.2" />
+      <Property key="Synonym_1" value="AK2" />
+      <Property key="Synonym_2" value="HSDH2" />
+      <Property key="Catalyzes" value="RXN-5976, RXN-5975" />
+      <Property key="CatalyzesCount" value="2" />
+      <Property key="Accession1" value="AT4G19710.2" />
+      <Property key="Gene" value="AT4G19710" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_16216875" />
+    </DataNode>
+    <DataNode elementId="MONOMER-11884" textLabel="diaminopimelate epimerase" type="Protein">
+      <Xref identifier="MONOMER-11884" dataSource="plantcyc" />
+      <Graphics centerX="822.4892578125" centerY="965.7099609375" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">The partially purified maize enzyme was shown catalyzing the reversible interconversion of L,L and meso-diaminopimelate. The equilibrium favors the formation of meso-diaminopimelate |CITS: [Tyagi82]|.</Comment>
+      <Property key="UniqueID" value="MONOMER-11884" />
+      <Property key="Catalyzes" value="RXN-12390" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="TAX-381124" />
+    </DataNode>
+    <DataNode elementId="MONOMER-11881" textLabel="MONOMER-11881" type="Protein">
+      <Xref identifier="MONOMER-11881" dataSource="plantcyc" />
+      <Graphics centerX="834.3264770507812" centerY="744.1607055664062" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="PMN, zhang">Dihydrodipicolinate synthase (DS) catalyzing the first committed, and rate-limiting step in lysine biosynthesis. Plant DS is feedback inhibited by lysine. Whereas, E. coli DS is much less sensitive to lysine inhibition. Comparing to the E. coli DS which is 50% inhibited by 400 uM lysine, the soybean DS is 50% inhibited by 35 uM lysine |CITS: [8000011]|. Mutant plants, with less sensitivity to lysine feedback inhibition and thus accumulated higher level of free lysine, were isolated from several plant species including maize and soybean. The mutants were shown carry point mutations of the DapA gene |CITS: [8700867][9106516]|.</Comment>
+      <Property key="UniqueID" value="MONOMER-11881" />
+      <Property key="Catalyzes" value="RXN-12387" />
+      <Property key="GOTerms" value="GO:0009536" />
+      <Property key="Gene" value="GM-DAPA" />
+      <Property key="^citations" value="8000011" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Locations" value="CCO-PLASTID" />
+      <Property key="Species" value="TAX-3847" />
+      <CitationRef elementRef="citation_PUB_8000011" />
+      <CitationRef elementRef="citation_PUB_8700867" />
+      <CitationRef elementRef="citation_PUB_9106516" />
+    </DataNode>
+    <DataNode elementId="AT4G33680-MONOMER" textLabel="AT4G33680-MONOMER" type="Protein">
+      <Xref identifier="Q93ZN9" dataSource="uniprot" />
+      <Graphics centerX="1147.7677001953125" centerY="920.0357666015625" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT4G33680-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT4G33680.1" />
+      <Property key="AlternativeId_Uniprot" value="Q93ZN9" />
+      <Property key="Catalyzes" value="RXN-12389" />
+      <Property key="Accession1" value="AT4G33680.1" />
+      <Property key="FunctionalAssignmentStatus" value=":PROBABLE-ENZYME" />
+      <Property key="Gene" value="AT4G33680" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="ORG-5993" />
+    </DataNode>
+    <DataNode elementId="AT1G14810-MONOMER" textLabel="aspartate-semialdehyde dehydrogenase" type="Protein" groupRef="CPLX-7018">
+      <Xref identifier="Q8VYI4" dataSource="uniprot" />
+      <Graphics centerX="1505.507568359375" centerY="1192.474609375" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT1G14810-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT1G14810.1" />
+      <Property key="AlternativeId_Uniprot" value="Q8VYI4" />
+      <Property key="Accession1" value="AT1G14810.1" />
+      <Property key="ComponentOf" value="CPLX-7018" />
+      <Property key="Gene" value="AT1G14810" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="MolecularWeightExp" value="36." />
+      <Property key="MolecularWeightKd" value="36." />
+      <Property key="Species" value="ORG-5993" />
+    </DataNode>
+    <DataNode elementId="AT5G11880-MONOMER" textLabel="diaminopimelate decarboxylase" type="Protein">
+      <Xref identifier="Q94A94" dataSource="uniprot" />
+      <Graphics centerX="620.1240234375" centerY="889.332763671875" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">NIL Diaminopimelate decarboxylase activity was detected from plants in the 60&apos;s. The gene(s) encoding the enzyme has only been recently identified. Arabidopsis contains two diaminopimelate decarboxylase genes, both were able to functionally complement the E. coli lysA mutant.</Comment>
+      <Property key="UniqueID" value="AT5G11880-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT5G11880.1" />
+      <Property key="AlternativeId_Uniprot" value="Q94A94" />
+      <Property key="Catalyzes" value="RXN-12392" />
+      <Property key="Accession1" value="AT5G11880.1" />
+      <Property key="Gene" value="AT5G11880" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_15652176" />
+    </DataNode>
+    <DataNode elementId="AT3G53580-MONOMER" textLabel="diaminopimelate epimerase" type="Protein">
+      <Xref identifier="Q9LFG2" dataSource="uniprot" />
+      <Graphics centerX="687.573486328125" centerY="561.4720458984375" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT3G53580-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT3G53580.1" />
+      <Property key="AlternativeId_Uniprot" value="Q9LFG2" />
+      <Property key="Catalyzes" value="RXN-5409" />
+      <Property key="Accession1" value="AT3G53580.1" />
+      <Property key="Gene" value="AT3G53580" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="ORG-5993" />
+    </DataNode>
+    <DataNode elementId="AT1G31230-MONOMER" textLabel="AT1G31230-MONOMER" type="Protein">
+      <Xref identifier="AT1G31230.1" dataSource="TAIR gene name" />
+      <Graphics centerX="852.476806640625" centerY="798.7686767578125" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">The &lt;i&gt;Arabidopsis&lt;/i&gt; gene &lt;i&gt;AK-HSDH1&lt;/i&gt; was overexpressed in &lt;i&gt;E. coli&lt;/i&gt;, purified to homogeneity, and characterized |CITS:[16216875]|. The enzyme was shown to be bifunctional and to have both aspartate kinase and homoserine dehydrogenase activities |CITS:[16216875]|.</Comment>
+      <Property key="UniqueID" value="AT1G31230-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT1G31230.1" />
+      <Property key="Synonym_1" value="AK1" />
+      <Property key="Synonym_2" value="HSDH1" />
+      <Property key="Catalyzes" value="RXN-4433, RXN-4432" />
+      <Property key="CatalyzesCount" value="2" />
+      <Property key="Accession1" value="AT1G31230.1" />
+      <Property key="Gene" value="AT1G31230" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_16216875" />
+    </DataNode>
+    <DataNode elementId="AT3G14390-MONOMER" textLabel="diaminopimelate decarboxylase" type="Protein">
+      <Xref identifier="Q949X7" dataSource="uniprot" />
+      <Graphics centerX="100.0" centerY="844.7037353515625" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">NIL Diaminopimelate decarboxylase activity was detected from plants in the 60&apos;s. The gene(s) encoding the enzyme has only been recently identified. Arabidopsis contains two diaminopimelate decarboxylase genes, both were able to functionally complement the E. coli lysA mutant.</Comment>
+      <Property key="UniqueID" value="AT3G14390-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT3G14390.1" />
+      <Property key="AlternativeId_Uniprot" value="Q949X7" />
+      <Property key="Catalyzes" value="RXN-12391" />
+      <Property key="Accession1" value="AT3G14390.1" />
+      <Property key="Gene" value="AT3G14390" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_15652176" />
+    </DataNode>
+    <DataNode elementId="AT3G02020-MONOMER" textLabel="aspartate kinase" type="Protein">
+      <Xref identifier="Q9S702" dataSource="uniprot" />
+      <Graphics centerX="976.344970703125" centerY="1550.0" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">Aspartate kinase (AK) is a key enzyme in the biosynthsis of aspartate family amino acids such as lysine, threonine, isoleucine, and methionine. In plants, two types of AK are known: one is sensitive to feedback inhibition by threonine and carries both AK and homoserine dehydrogenase (HSD) activities catalyzing the first and third step of threonine biosynthesis. The other one is monofunctional, sensitive to lysine and synergistically S-adenosylmethionine, and has only AK activity. In Arabidopsis, there are two bifunctional AK/HSD genes and three reported monofunctional AK genes.</Comment>
+      <Property key="UniqueID" value="AT3G02020-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT3G02020.1" />
+      <Property key="AlternativeId_Uniprot" value="Q9S702" />
+      <Property key="Catalyzes" value="RXN-5251, RXN-12385" />
+      <Property key="CatalyzesCount" value="2" />
+      <Property key="Accession1" value="AT3G02020.1" />
+      <Property key="Gene" value="AT3G02020" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_12602885" />
+    </DataNode>
+    <DataNode elementId="NADP" textLabel="NADP⁺" type="Metabolite">
+      <Xref identifier="XJLXINKUBYWONI-NNYOXOHSSA-K" dataSource="InChIKey" />
+      <Graphics centerX="1268.5760498046875" centerY="1443.3349609375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: NAD| and |FRAME: NADP| are dinucleotides containing one |FRAME: NIACINAMIDE| base and one |FRAME: ADENINE| base. Each nucleotide is connected to a ribose sugar at position 1, and the two riboses are connected at their 5 position via a diphosphate. The only difference between the two is that in NADP there is an additional phosphate group at the 2&apos; position of the ribose that carries the adenine moiety. These molecules are biological carriers of reductive equivalents (i.e. high potential electrons). Most of the time they function as cosubstrates, and in some cases they function as |FRAME: Cofactors cofactors|. They are often referred to by the obsolete term &quot;coenzymes&quot;. The most common function of |FRAME: NAD| is to accept two electrons and a proton (a hydride ion) from a substrate that is being oxidized. This reduction converts |FRAME: NAD| to |FRAME: NADH|, the reduced form. NADH then diffuses or is transported to a terminal oxidase, where the electrons are passed on, regenerating the oxidized form. |FRAME: NADPH|, on the other hand, is mostly involved in biosynthetic reactions, where it serves as an electron donor. NADPH is formed by reduction of |FRAME: NADP|, which occurs by different mechanisms in different types of organisms. In photosynthetic organisms |FRAME: NADP| is reduced by |FRAME: CPLX-84|. In heterotrophic organisms it is reduced by central metabolism processes such as the pentose phosphate pathway (see |FRAME: OXIDATIVEPENT-PWY|).</Comment>
+      <Property key="UniqueID" value="NADP" />
+      <Property key="AlternativeId_Metanetx" value="MNXM5" />
+      <Property key="AlternativeId_Seed" value="cpd00006" />
+      <Property key="AlternativeId_Refmet" value="NADP+" />
+      <Property key="AlternativeId_Bigg" value="33488" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC58349" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00217" />
+      <Property key="AlternativeId_Chemspider" value="10239198" />
+      <Property key="AlternativeId_Chebi" value="58349" />
+      <Property key="AlternativeId_Pubchem" value="15938972" />
+      <Property key="AlternativeId_LigandCpd" value="C00006" />
+      <Property key="AlternativeId_Cas" value="53-59-8" />
+      <Property key="Synonym_1" value="&amp;beta;-NADP&lt;sup&gt;+&lt;/sup&gt;" />
+      <Property key="Synonym_2" value="coenzyme II" />
+      <Property key="Synonym_3" value="triphosphopyridine nucleotide" />
+      <Property key="Synonym_4" value="nicotinamide adenine dinucleotide phosphate" />
+      <Property key="Synonym_5" value="NADP-oxidized" />
+      <Property key="Synonym_6" value="NADP-ox" />
+      <Property key="Synonym_7" value="NADP+" />
+      <Property key="Synonym_8" value="TPN" />
+      <Property key="Synonym_9" value="TPN+" />
+      <Property key="Synonym_10" value="TPN-ox" />
+      <Property key="Synonym_11" value="nicotinamide adenine dinucleotide-P" />
+      <Property key="Synonym_12" value="NADP(+)" />
+      <Property key="Synonym_13" value="NADP" />
+      <Property key="ChemicalFormula" value="(C 21) (H 25) (N 7) (O 17) (P 3)" />
+      <Property key="AtomCharges" value="(27 1), (35 -1), (33 -1), (39 -1), (37 -1)" />
+      <Property key="CofactorsOf" value="ENZRXN-12451, ENZRXN-14499, ENZRXN-14500" />
+      <Property key="Gibbs0" value="-563.64954" />
+      <Property key="Inchi" value="InChI=1S/C21H28N7O17P3/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(44-46(33,34)35)14(30)11(43-21)6-41-48(38,39)45-47(36,37)40-5-10-13(29)15(31)20(42-10)27-3-1-2-9(4-27)18(23)32/h1-4,7-8,10-11,13-16,20-21,29-31H,5-6H2,(H7-,22,23,24,25,32,33,34,35,36,37,38,39)/p-3/t10-,11-,13-,14-,15-,16-,20-,21-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=XJLXINKUBYWONI-NNYOXOHSSA-K" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="740.386" />
+      <Property key="MonoisotopicMw" value="745.0911021051" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-14905, REG-8367, REG0-8229, REG-9121, REG-9500, REG-8442, REG0-8744, REG-8497, REG-11605, REG0-7963, REG-8650, REG0-8843, REG0-7614, REG0-7593, REG-6711, REG-6710, REG-7292" />
+      <Property key="Smiles" value="C5(/C=C\C(\C(=O)N)=C/[N+](/[C@@H]1(O[C@@H]([C@H]([C@H]1O)O)COP(OP(OC[C@H]4(O[C@@H](N2(C3(\C(\N=C/2)=C(N)/N=C\N=3)))[C@H](OP([O-])(=O)[O-])[C@H](O)4))(=O)[O-])(=O)[O-]))=5)" />
+    </DataNode>
+    <DataNode elementId="LYS" textLabel="L-lysine" type="Metabolite">
+      <Xref identifier="KDXKERNSBIXSRK-YFKPBYRVSA-O" dataSource="InChIKey" />
+      <Graphics centerX="1502.4422607421875" centerY="362.13311767578125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="LYS" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001532522" />
+      <Property key="AlternativeId_Mediadb" value="compounds/47/" />
+      <Property key="AlternativeId_Metanetx" value="MNXM78" />
+      <Property key="AlternativeId_Refmet" value="Lysine" />
+      <Property key="AlternativeId_Bigg" value="lys__L" />
+      <Property key="AlternativeId_Chemspider" value="5747" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC32551" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00182" />
+      <Property key="AlternativeId_Chebi" value="32551" />
+      <Property key="AlternativeId_Pubchem" value="5460926" />
+      <Property key="AlternativeId_LigandCpd" value="C00047" />
+      <Property key="AlternativeId_Cas" value="56-87-1" />
+      <Property key="Synonym_1" value="K" />
+      <Property key="Synonym_2" value="lysine" />
+      <Property key="Synonym_3" value="L-lys" />
+      <Property key="Synonym_4" value="lys" />
+      <Property key="Synonym_5" value="2,6-diaminohexanoic acid" />
+      <Property key="Synonym_6" value="lysine acid" />
+      <Property key="ChemicalFormula" value="(C 6) (H 15) (N 2) (O 2)" />
+      <Property key="AbbrevName" value="lys" />
+      <Property key="AtomCharges" value="(10 -1), (8 1), (7 1)" />
+      <Property key="Gibbs0" value="69.714745" />
+      <Property key="Inchi" value="InChI=1S/C6H14N2O2/c7-4-2-1-3-5(8)6(9)10/h5H,1-4,7-8H2,(H,9,10)/p+1/t5-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=KDXKERNSBIXSRK-YFKPBYRVSA-O" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="147.197" />
+      <Property key="MonoisotopicMw" value="146.105527704" />
+      <Property key="NonStandardInchi" value="InChI=1S/C6H14N2O2/c7-4-2-1-3-5(8)6(9)10/h5H,1-4,7-8H2,(H,9,10)/p+1/t5-/m0/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Pka1" value="2.2" />
+      <Property key="Pka2" value="8.9" />
+      <Property key="Pka3" value="10.28" />
+      <Property key="Regulates" value="REG-7304, REG-9514, REG0-7795, REG-9914, REG-8193, REG-11555, REG0-8978, REG0-8971, REG0-7875, REG-10965, REG0-8051" />
+      <Property key="Smiles" value="C([NH3+])CCC[C@H]([NH3+])C([O-])=O" />
+    </DataNode>
+    <DataNode elementId="ATP" textLabel="ATP" type="Metabolite">
+      <Xref identifier="ZKHQWZAMYRWXGA-KQYNXXCUSA-J" dataSource="InChIKey" />
+      <Graphics centerX="639.0634155273438" centerY="50.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ATP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004261765" />
+      <Property key="AlternativeId_Mediadb" value="compounds/2/" />
+      <Property key="AlternativeId_Seed" value="cpd00002" />
+      <Property key="AlternativeId_Metanetx" value="MNXM3" />
+      <Property key="AlternativeId_Refmet" value="ATP" />
+      <Property key="AlternativeId_Bigg" value="atp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC30616" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00538" />
+      <Property key="AlternativeId_Chemspider" value="4574455" />
+      <Property key="AlternativeId_Chebi" value="30616" />
+      <Property key="AlternativeId_Pubchem" value="5461108" />
+      <Property key="AlternativeId_LigandCpd" value="C00002" />
+      <Property key="AlternativeId_Cas" value="56-65-5" />
+      <Property key="Synonym_1" value="adenylpyrophosphate" />
+      <Property key="Synonym_2" value="adenosine-triphosphate" />
+      <Property key="Synonym_3" value="adenosine-5&apos;-triphosphate" />
+      <Property key="ChemicalFormula" value="(C 10) (H 12) (N 5) (O 13) (P 3)" />
+      <Property key="AtomCharges" value="(20 -1), (19 -1), (24 -1), (22 -1)" />
+      <Property key="CofactorsOf" value="ENZRXN-12212" />
+      <Property key="Gibbs0" value="-553.6995" />
+      <Property key="Inchi" value="InChI=1S/C10H16N5O13P3/c11-8-5-9(13-2-12-8)15(3-14-5)10-7(17)6(16)4(26-10)1-25-30(21,22)28-31(23,24)27-29(18,19)20/h2-4,6-7,10,16-17H,1H2,(H,21,22)(H,23,24)(H2,11,12,13)(H2,18,19,20)/p-4/t4-,6-,7-,10-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=ZKHQWZAMYRWXGA-KQYNXXCUSA-J" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="503.152" />
+      <Property key="MonoisotopicMw" value="506.99574515689994" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-12909, REG-12890, REG-14488, REG-9772, REG-14329, REG0-6781, REG0-7497, REG0-7707, REG-13176, REG-14419, REG-14422, REG0-8315, REG0-8212, REG-10429, REG0-7195, REG-8742, REG0-8749, REG-10985, REG-11599, REG0-8040, REG0-8166, REG0-7200, REG-9547, REG0-10640, REG-12493, REG0-6737, REG-12901, REG0-8975, REG0-8830, REG-7496, REG-6229, REG0-7802, REG-9667, REG-8008, REG0-8732, REG-8477, REG-6695, REG-6569, REG-6589, REG-6588, REG0-6967, REG-6554, REG-8022, REG-5951, REG-5950, REG-12145, REG-12092, REG-5953, REG-11615, REG-11617, REG-7073, REG-6927, REG-6086" />
+      <Property key="Smiles" value="C(OP(=O)([O-])OP(=O)([O-])OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3)" />
+    </DataNode>
+    <DataNode elementId="GLT" textLabel="L-glutamate" type="Metabolite">
+      <Xref identifier="WHUUTDBJXJRKMK-VKHMYHEASA-M" dataSource="InChIKey" />
+      <Graphics centerX="733.2100830078125" centerY="712.239990234375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: GLT| is one of the proteinogenic amino acids. It is named after wheat gluten, from which it was described in 1866 by the German chemist Karl Heinrich Ritthausen. |FRAME: GLT| plays an important role in nitrogen metabolism in the cell. Once cells take up ammonium, it is fixed by incorporation into the TCA cycle intermediate |FRAME: 2-KETOGLUTARATE| by |FRAME: EC-1.4.1.4|, forming |FRAME: GLT| |CITS: [13239305]| (an additional ammonium molecule can be fixed into L-glutamate, e.g. by |FRAME: EC-6.3.1.2|, forming |FRAME: GLN| |CITS: [14833423]|). Glutamate then becomes the central source for passing amino groups on to other molecules by the action of transaminase (=aminotransferase) enzymes, distributing nitrogen throughout the cell. For example, glutamate can transfer the amino group to the common metabolites |FRAME: PYRUVATE| and |FRAME: OXALACETIC_ACID|, forming |FRAME: L-ALPHA-ALANINE| and |FRAME: L-ASPARTATE|, respectively. It has been estimated that glutamate and glutamine provide 75% and 25%, respectively, of all cellular nitrogen |CITS: [30026566]|. In addition to its protein building role, |FRAME: GLT| is the most abundant excitatory neurotransmitter in the vertebrate nervous system, acting on ionotropic and metabotropic (G-protein coupled) receptors |CITS: [10736372]|. |FRAME: GLT| interacts with the umami taste receptors, which sense glutamates and nucleotides, imparting &quot;meaty&quot;, &quot;savory&quot;, and &quot;broth-like&quot; flavor. The monosodium salt of glutamate (MSG), which is found naturally in some foods, is often added to foodstuff for flavoring |CITS: [1679557]|. Although MSG is commnly believed to cause headaches, all scientific studies found no such effect |CITS: [27189588]|.</Comment>
+      <Property key="UniqueID" value="GLT" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001482113" />
+      <Property key="AlternativeId_Mediadb" value="compounds/25/" />
+      <Property key="AlternativeId_Refmet" value="Glutamic acid" />
+      <Property key="AlternativeId_Bigg" value="glu__L" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC29985" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00148" />
+      <Property key="AlternativeId_Chemspider" value="4573882" />
+      <Property key="AlternativeId_Pubchem" value="5460299" />
+      <Property key="AlternativeId_Knapsack" value="C00001358" />
+      <Property key="AlternativeId_Chebi" value="29985" />
+      <Property key="AlternativeId_LigandCpd" value="C00025" />
+      <Property key="AlternativeId_Cas" value="56-86-0" />
+      <Property key="Synonym_1" value="1-amino-propane-1,3-dicarboxylic acid" />
+      <Property key="Synonym_2" value="glutacid" />
+      <Property key="Synonym_3" value="glutaminic acid" />
+      <Property key="Synonym_4" value="L-glutamic acid" />
+      <Property key="Synonym_5" value="&amp;alpha;-aminoglutaric acid" />
+      <Property key="Synonym_6" value="E" />
+      <Property key="Synonym_7" value="glt" />
+      <Property key="Synonym_8" value="glut" />
+      <Property key="Synonym_9" value="L-glu" />
+      <Property key="Synonym_10" value="2-aminopentanedioic acid" />
+      <Property key="ChemicalFormula" value="(C 5) (H 8) (N 1) (O 4)" />
+      <Property key="AbbrevName" value="glu" />
+      <Property key="AtomCharges" value="(10 -1), (7 -1), (6 1)" />
+      <Property key="Gibbs0" value="-82.27311" />
+      <Property key="Inchi" value="InChI=1S/C5H9NO4/c6-3(5(9)10)1-2-4(7)8/h3H,1-2,6H2,(H,7,8)(H,9,10)/p-1/t3-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=WHUUTDBJXJRKMK-VKHMYHEASA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="146.122" />
+      <Property key="MonoisotopicMw" value="147.0531577825" />
+      <Property key="NonStandardInchi" value="InChI=1S/C5H9NO4/c6-3(5(9)10)1-2-4(7)8/h3H,1-2,6H2,(H,7,8)(H,9,10)/p-1/t3-/m0/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Pka1" value="2.19" />
+      <Property key="Pka2" value="4.25" />
+      <Property key="Pka3" value="9.67" />
+      <Property key="Regulates" value="REG-15653, REG-9139, REG-12357, REG-9495, REG-8443, REG0-8740, REG0-8754, REG0-7397, REG-8144, REG-9353, REG-5952" />
+      <Property key="Smiles" value="C(CC[C@@H](C(=O)[O-])[NH3+])([O-])=O" />
+      <CitationRef elementRef="citation_PUB_18493048" />
+      <CitationRef elementRef="citation_PUB_16306140" />
+      <CitationRef elementRef="citation_PUB_13239305" />
+      <CitationRef elementRef="citation_PUB_14833423" />
+      <CitationRef elementRef="citation_PUB_30026566" />
+      <CitationRef elementRef="citation_PUB_10736372" />
+      <CitationRef elementRef="citation_PUB_1679557" />
+      <CitationRef elementRef="citation_PUB_27189588" />
+    </DataNode>
+    <DataNode elementId="CARBON-DIOXIDE" textLabel="CO₂" type="Metabolite">
+      <Xref identifier="CURLTUGMZLYLDI-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="544.045654296875" centerY="703.3084106445312" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CARBON-DIOXIDE" />
+      <Property key="AlternativeId_Metanetx" value="MNXM13" />
+      <Property key="AlternativeId_Seed" value="cpd00011" />
+      <Property key="AlternativeId_Bigg" value="33506" />
+      <Property key="AlternativeId_UmBbdCpd" value="c0131" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01967" />
+      <Property key="AlternativeId_LigandCpd" value="C00011" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC16526" />
+      <Property key="AlternativeId_Chemspider" value="274" />
+      <Property key="AlternativeId_Chebi" value="16526" />
+      <Property key="AlternativeId_Pubchem" value="280" />
+      <Property key="AlternativeId_Cas" value="124-38-9" />
+      <Property key="Synonym_1" value="carbonic anhydride" />
+      <Property key="Synonym_2" value="carbonic acid gas" />
+      <Property key="Synonym_3" value="carbon dioxide" />
+      <Property key="ChemicalFormula" value="(C 1) (O 2)" />
+      <Property key="Gibbs0" value="-92.26" />
+      <Property key="Inchi" value="InChI=1S/CO2/c2-1-3" />
+      <Property key="InchiKey" value="InChIKey=CURLTUGMZLYLDI-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="44.01" />
+      <Property key="MonoisotopicMw" value="43.989829244199996" />
+      <Property key="NonStandardInchi" value="InChI=1S/CO2/c2-1-3" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C(=O)=O" />
+    </DataNode>
+    <DataNode elementId="_2-KETOGLUTARATE" textLabel="2-oxoglutarate" type="Metabolite">
+      <Xref identifier="KPGXRSRHYNQIFN-UHFFFAOYSA-L" dataSource="InChIKey" />
+      <Graphics centerX="943.501953125" centerY="743.7182006835938" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="2-KETOGLUTARATE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001532519" />
+      <Property key="AlternativeId_Seed" value="cpd00024" />
+      <Property key="AlternativeId_Metanetx" value="MNXM20" />
+      <Property key="AlternativeId_Refmet" value="Oxoglutaric acid" />
+      <Property key="AlternativeId_Bigg" value="akg" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC16810" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00208" />
+      <Property key="AlternativeId_Chemspider" value="144236" />
+      <Property key="AlternativeId_Chebi" value="16810" />
+      <Property key="AlternativeId_Pubchem" value="164533" />
+      <Property key="AlternativeId_Knapsack" value="C00000769" />
+      <Property key="AlternativeId_LigandCpd" value="C00026" />
+      <Property key="AlternativeId_Cas" value="328-50-7" />
+      <Property key="Synonym_1" value="ketoglutarate" />
+      <Property key="Synonym_2" value="&amp;alpha;-ketoglutarate" />
+      <Property key="Synonym_3" value="2-oxoglutaric acid" />
+      <Property key="Synonym_4" value="&amp;alpha;-ketoglutaric acid" />
+      <Property key="Synonym_5" value="&amp;alpha;-oxoglutarate" />
+      <Property key="Synonym_6" value="2-ketoglutaric acid" />
+      <Property key="Synonym_7" value="2-ketoglutarate" />
+      <Property key="Synonym_8" value="2-oxopentanedionic acid" />
+      <Property key="Synonym_9" value="2-oxopentanedionate" />
+      <Property key="Synonym_10" value="a-ketoglutaric acid" />
+      <Property key="ChemicalFormula" value="(C 5) (H 4) (O 5)" />
+      <Property key="AtomCharges" value="(7 -1), (9 -1)" />
+      <Property key="Gibbs0" value="-149.76376" />
+      <Property key="Inchi" value="InChI=1S/C5H6O5/c6-3(5(9)10)1-2-4(7)8/h1-2H2,(H,7,8)(H,9,10)/p-2" />
+      <Property key="InchiKey" value="InChIKey=KPGXRSRHYNQIFN-UHFFFAOYSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="144.084" />
+      <Property key="MonoisotopicMw" value="146.0215233031" />
+      <Property key="NonStandardInchi" value="InChI=1S/C5H6O5/c6-3(5(9)10)1-2-4(7)8/h1-2H2,(H,7,8)(H,9,10)/p-2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-9501, REG0-6736, REG-9990, REG-10227" />
+      <Property key="Smiles" value="C(CC([O-])=O)C(=O)C([O-])=O" />
+      <CitationRef elementRef="citation_PUB_18493048" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1069.45166015625" centerY="1233.73583984375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="ChemicalFormula" value="(H 1)" />
+      <Property key="AtomCharges" value="(1 1)" />
+      <Property key="Gibbs0" value="0.42906138" />
+      <Property key="Inchi" value="InChI=1S/p+1" />
+      <Property key="InchiKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicMw" value="1.0078250321" />
+      <Property key="NonStandardInchi" value="InChI=1S/p+1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="[H+]" />
+    </DataNode>
+    <DataNode elementId="DELTA1-PIPERIDEINE-2-6-DICARBOXYLATE" textLabel="(S)-2,3,4,5-tetrahydrodipicolinate" type="Metabolite">
+      <Xref identifier="CXMBCXQHOXUCEO-BYPYZUCNSA-L" dataSource="InChIKey" />
+      <Graphics centerX="390.48284912109375" centerY="246.53866577148438" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="DELTA1-PIPERIDEINE-2-6-DICARBOXYLATE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000000901883" />
+      <Property key="AlternativeId_Metanetx" value="MNXM480" />
+      <Property key="AlternativeId_Bigg" value="thdp" />
+      <Property key="AlternativeId_Hmdb" value="HMDB12289" />
+      <Property key="AlternativeId_Chemspider" value="4573939" />
+      <Property key="AlternativeId_Pubchem" value="5460405" />
+      <Property key="AlternativeId_Chebi" value="16845" />
+      <Property key="AlternativeId_Cas" value="52-52-8" />
+      <Property key="AlternativeId_LigandCpd" value="C03972" />
+      <Property key="Synonym_1" value="2,3,4,5-tetrahydrodipicolinate" />
+      <Property key="Synonym_2" value="(&lt;i&gt;S&lt;/i&gt;)-2,3,4,5-tetrahydropyridine-2,6-dicarboxylate" />
+      <Property key="Synonym_3" value="&amp;Delta;&lt;SUP&gt;1&lt;/SUP&gt;-piperideine-2,6-dicarboxylate" />
+      <Property key="Synonym_4" value="tetrahydrodipicolinate" />
+      <Property key="Synonym_5" value="tetrahydropyridine-2,6-dicarboxylate" />
+      <Property key="Synonym_6" value="L-2,3,4,5-tetrahydrodipicolinate" />
+      <Property key="ChemicalFormula" value="(C 7) (H 7) (N 1) (O 4)" />
+      <Property key="AtomCharges" value="(9 -1), (11 -1)" />
+      <Property key="Gibbs0" value="-80.02040" />
+      <Property key="Inchi" value="InChI=1S/C7H9NO4/c9-6(10)4-2-1-3-5(8-4)7(11)12/h4H,1-3H2,(H,9,10)(H,11,12)/p-2/t4-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=CXMBCXQHOXUCEO-BYPYZUCNSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="169.137" />
+      <Property key="MonoisotopicMw" value="171.0531577825" />
+      <Property key="NonStandardInchi" value="InChI=1S/C7H9NO4/c9-6(10)4-2-1-3-5(8-4)7(11)12/h4H,1-3H2,(H,9,10)(H,11,12)/p-2/t4-/m0/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C1(CC(/C([O-])=O)=N\[C@@H](C1)C([O-])=O)" />
+    </DataNode>
+    <DataNode elementId="NADPH" textLabel="NADPH" type="Metabolite">
+      <Xref identifier="ACFIXJIJDZMPPO-NNYOXOHSSA-J" dataSource="InChIKey" />
+      <Graphics centerX="1289.946533203125" centerY="1060.5184326171875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: NAD| and |FRAME: NADP| are dinucleotides containing one |FRAME: NIACINAMIDE| base and one |FRAME: ADENINE| base. Each nucleotide is connected to a ribose sugar at position 1, and the two riboses are connected at their 5 position via a diphosphate. The only difference between the two is that in NADP there is an additional phosphate group at the 2&apos; position of the ribose that carries the adenine moiety. These molecules are biological carriers of reductive equivalents (i.e. high potential electrons). Most of the time they function as cosubstrates, and in some cases they function as |FRAME: Cofactors cofactors|. They are often referred to by the obsolete term &quot;coenzymes&quot;. The most common function of |FRAME: NAD| is to accept two electrons and a proton (a hydride ion) from a substrate that is being oxidized. This reduction converts |FRAME: NAD| to |FRAME: NADH|, the reduced form. NADH then diffuses or is transported to a terminal oxidase, where the electrons are passed on, regenerating the oxidized form. |FRAME: NADPH|, on the other hand, is mostly involved in biosynthetic reactions, where it serves as an electron donor. NADPH is formed by reduction of |FRAME: NADP|, which occurs by different mechanisms in different types of organisms. In photosynthetic organisms |FRAME: NADP| is reduced by |FRAME: CPLX-84|. In heterotrophic organisms it is reduced by central metabolism processes such as the pentose phosphate pathway (see |FRAME: OXIDATIVEPENT-PWY|).</Comment>
+      <Property key="UniqueID" value="NADPH" />
+      <Property key="AlternativeId_Metanetx" value="MNXM6" />
+      <Property key="AlternativeId_Seed" value="cpd00005" />
+      <Property key="AlternativeId_Refmet" value="NADPH" />
+      <Property key="AlternativeId_Bigg" value="33486" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57783" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00221" />
+      <Property key="AlternativeId_Chemspider" value="10239199" />
+      <Property key="AlternativeId_Chebi" value="57783" />
+      <Property key="AlternativeId_Pubchem" value="15983949" />
+      <Property key="AlternativeId_Cas" value="2646-71-1" />
+      <Property key="AlternativeId_LigandCpd" value="C00005" />
+      <Property key="Synonym_1" value="&amp;beta;-nicotinamide adenine dinucleotide phosphate, reduced" />
+      <Property key="Synonym_2" value="&amp;beta;-NADPH" />
+      <Property key="Synonym_3" value="reduced NADP" />
+      <Property key="Synonym_4" value="reduced dihydrotriphosphopyridine nucleotide" />
+      <Property key="Synonym_5" value="reduced nicotinamide adenine dinucleotide phosphate" />
+      <Property key="Synonym_6" value="Nicotinamide adenine dinucleotide phosphate - reduced" />
+      <Property key="Synonym_7" value="NADPH+H+" />
+      <Property key="Synonym_8" value="NADPH2" />
+      <Property key="Synonym_9" value="NADPH&lt;SUB&gt;2&lt;/SUB&gt;" />
+      <Property key="Synonym_10" value="dihydrotriphosphopyridine nucleotide" />
+      <Property key="Synonym_11" value="dihydrotriphosphopyridine nucleotide reduced" />
+      <Property key="Synonym_12" value="dihydronicotinamide adenine dinucleotide phosphate" />
+      <Property key="Synonym_13" value="dihydronicotinamide adenine dinucleotide phosphate reduced" />
+      <Property key="Synonym_14" value="NADP-reduced" />
+      <Property key="Synonym_15" value="NADP-red" />
+      <Property key="Synonym_16" value="NADPH&lt;SUP&gt;+&lt;/SUP&gt;H&lt;SUP&gt;+&lt;/SUP&gt;" />
+      <Property key="Synonym_17" value="TPNH" />
+      <Property key="Synonym_18" value="dihydronicotinamide adenine dinucleotide-P" />
+      <Property key="Synonym_19" value="NADP(H)" />
+      <Property key="ChemicalFormula" value="(C 21) (H 26) (N 7) (O 17) (P 3)" />
+      <Property key="AtomCharges" value="(35 -1), (33 -1), (39 -1), (37 -1)" />
+      <Property key="CofactorsOf" value="ENZRXN-33, ENZRXN-14497" />
+      <Property key="Gibbs0" value="-551.72284" />
+      <Property key="Inchi" value="InChI=1S/C21H30N7O17P3/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(44-46(33,34)35)14(30)11(43-21)6-41-48(38,39)45-47(36,37)40-5-10-13(29)15(31)20(42-10)27-3-1-2-9(4-27)18(23)32/h1,3-4,7-8,10-11,13-16,20-21,29-31H,2,5-6H2,(H2,23,32)(H,36,37)(H,38,39)(H2,22,24,25)(H2,33,34,35)/p-4/t10-,11-,13-,14-,15-,16-,20-,21-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=ACFIXJIJDZMPPO-NNYOXOHSSA-J" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="741.394" />
+      <Property key="MonoisotopicMw" value="745.0911021051" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-8210, REG-6520, REG0-8743, REG-13684, REG0-9021, REG-8494, REG0-7642, REG0-7643" />
+      <Property key="Smiles" value="C1(\N(/C=C(C\C=1)/C(=O)N)[C@@H]2(O[C@@H]([C@H]([C@H]2O)O)COP(OP(OC[C@H]5(O[C@@H](N3(C4(\C(\N=C/3)=C(N)/N=C\N=4)))[C@H](OP([O-])(=O)[O-])[C@H](O)5))(=O)[O-])(=O)[O-]))" />
+    </DataNode>
+    <DataNode elementId="NADH-P-OR-NOP" textLabel="NAD(P)H" type="Metabolite">
+      <Xref identifier="13392" dataSource="ChEBI" />
+      <Graphics centerX="1600.0" centerY="873.563720703125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>|FRAME: NADH-P-OR-NOP| is a class of compounds including the instances |FRAME: NADH| and |FRAME: NADPH|. |FRAME: NAD-P-OR-NOP| is a class of compounds including the instances |FRAME: NAD| and |FRAME: NADP|. |FRAME: NAD| and |FRAME: NADP| are dinucleotides containing one |FRAME: NIACINAMIDE| base and one |FRAME: ADENINE| base. Each nucleotide is connected to a ribose sugar at position 1, and the two riboses are connected at their 5 position via a diphosphate. The only difference between the two is that in NADP there is an additional phosphate group at the 2&apos; position of the ribose that carries the adenine moiety. These molecules are biological carriers of reductive equivalents (i.e. high potential electrons). They are often referred to as coenzymes, although in most of their reactions they function as cosubstrates rather than true coenzymes. The most common function of |FRAME: NAD| is to accept two electrons and a proton (a hydride ion) from a substrate that is being oxidized. This reduction converts |FRAME: NAD| to |FRAME: NADH|, the reduced form. NADH then diffuses or is transported to a terminal oxidase, where the electrons are passed on, regenerating the oxidized form. |FRAME: NADPH|, on the other hand, is mostly involved in biosynthetic reactions, where it serves as an electron donor. NADPH is formed by reduction of |FRAME: NADP|, which occurs by different mechanisms in different types of organisms. In photosynthetic organisms |FRAME: NADP| is reduced by |FRAME: CPLX-84|. In heterotrophic organisms it is reduced by central metabolism processes such as the pentose phosphate pathway (see |FRAME: OXIDATIVEPENT-PWY|).</Comment>
+      <Property key="UniqueID" value="NADH-P-OR-NOP" />
+      <Property key="AlternativeId_Metanetx" value="MNXM162231" />
+      <Property key="AlternativeId_Seed" value="cpd27640" />
+      <Property key="AlternativeId_Chebi" value="13392" />
+      <Property key="Synonym_1" value="&amp;beta;-NAD(P)H" />
+      <Property key="AtomCharges" value="(37 -1), (35 -1)" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C1(/N(\C=C/CC(/C(N)=O)=1)[C@@H]5(O[C@H](COP(=O)([O-])OP(=O)([O-])OC[C@H]2(O[C@H]([C@H](O[R])[C@H](O)2)N3(\C=N/C4(C(/N)=N\C=N/C3=4))))[C@@H](O)[C@@H](O)5))" />
+    </DataNode>
+    <DataNode elementId="PYRUVATE" textLabel="pyruvate" type="Metabolite">
+      <Xref identifier="LCTONWCANYUPML-UHFFFAOYSA-M" dataSource="InChIKey" />
+      <Graphics centerX="486.4544677734375" centerY="1243.932861328125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PYRUVATE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001532517" />
+      <Property key="AlternativeId_Mediadb" value="compounds/22/" />
+      <Property key="AlternativeId_Seed" value="cpd00020" />
+      <Property key="AlternativeId_Metanetx" value="MNXM23" />
+      <Property key="AlternativeId_Refmet" value="Pyruvic acid" />
+      <Property key="AlternativeId_Bigg" value="pyr" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15361" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00243" />
+      <Property key="AlternativeId_Chemspider" value="96901" />
+      <Property key="AlternativeId_Pubchem" value="107735" />
+      <Property key="AlternativeId_Knapsack" value="C00001200" />
+      <Property key="AlternativeId_Chebi" value="15361" />
+      <Property key="AlternativeId_LigandCpd" value="C00022" />
+      <Property key="AlternativeId_Cas" value="127-17-3" />
+      <Property key="AlternativeId_UmBbdCpd" value="c0159" />
+      <Property key="Synonym_1" value="alpha-ketopropionic acid" />
+      <Property key="Synonym_2" value="BTS" />
+      <Property key="Synonym_3" value="&amp;alpha;-ketopropionic acid" />
+      <Property key="Synonym_4" value="acetylformic acid" />
+      <Property key="Synonym_5" value="pyroracemic acid" />
+      <Property key="Synonym_6" value="2-oxopropanoic acid" />
+      <Property key="Synonym_7" value="pyruvic acid" />
+      <Property key="Synonym_8" value="2-oxopropanoate" />
+      <Property key="Synonym_9" value="2-oxo-propionic acid" />
+      <Property key="ChemicalFormula" value="(C 3) (H 3) (O 3)" />
+      <Property key="AbbrevName" value="pyruvate" />
+      <Property key="AtomCharges" value="(6 -1)" />
+      <Property key="Gibbs0" value="-82.398705" />
+      <Property key="Inchi" value="InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)/p-1" />
+      <Property key="InchiKey" value="InChIKey=LCTONWCANYUPML-UHFFFAOYSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="InternalsOfGroup" value="GLYCO-CT-PYR" />
+      <Property key="MolecularWeight" value="87.055" />
+      <Property key="MonoisotopicMw" value="88.0160439947" />
+      <Property key="NonStandardInchi" value="InChI=1S/C3H4O3/c1-2(4)3(5)6/h1H3,(H,5,6)/p-1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-9094, REG0-12383, REG0-8339, REG0-11787, REG0-10864, REG0-8218, REG0-10866, REG0-7196, REG0-8057, REG-9991, REG0-9120, REG-7142, REG-7159" />
+      <Property key="Smiles" value="CC(=O)C(=O)[O-]" />
+      <CitationRef elementRef="citation_PUB_18493048" />
+      <CitationRef elementRef="citation_PUB_16306140" />
+    </DataNode>
+    <DataNode elementId="L-ASPARTATE" textLabel="L-aspartate" type="Metabolite">
+      <Xref identifier="CKLJMWTZIZZHCS-REOHCLBHSA-M" dataSource="InChIKey" />
+      <Graphics centerX="1160.65185546875" centerY="752.4490966796875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="L-ASPARTATE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000000895032" />
+      <Property key="AlternativeId_Mediadb" value="compounds/49/" />
+      <Property key="AlternativeId_Metanetx" value="MNXM42" />
+      <Property key="AlternativeId_Refmet" value="Aspartic acid" />
+      <Property key="AlternativeId_Bigg" value="asp__L" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC29991" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00191" />
+      <Property key="AlternativeId_Chemspider" value="4573879" />
+      <Property key="AlternativeId_Chebi" value="29991" />
+      <Property key="AlternativeId_Pubchem" value="5460294" />
+      <Property key="AlternativeId_LigandCpd" value="C00049" />
+      <Property key="AlternativeId_Cas" value="56-84-8" />
+      <Property key="Synonym_1" value="L-aspartic acid" />
+      <Property key="Synonym_2" value="aspartic acid" />
+      <Property key="Synonym_3" value="D" />
+      <Property key="Synonym_4" value="aspartate" />
+      <Property key="Synonym_5" value="L-asp" />
+      <Property key="ChemicalFormula" value="(C 4) (H 6) (N 1) (O 4)" />
+      <Property key="AbbrevName" value="asp" />
+      <Property key="AtomCharges" value="(8 -1), (6 -1), (5 1)" />
+      <Property key="Gibbs0" value="-105.78535" />
+      <Property key="Inchi" value="InChI=1S/C4H7NO4/c5-2(4(8)9)1-3(6)7/h2H,1,5H2,(H,6,7)(H,8,9)/p-1/t2-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=CKLJMWTZIZZHCS-REOHCLBHSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="132.096" />
+      <Property key="MonoisotopicMw" value="133.0375077183" />
+      <Property key="NonStandardInchi" value="InChI=1S/C4H7NO4/c5-2(4(8)9)1-3(6)7/h2H,1,5H2,(H,6,7)(H,8,9)/p-1/t2-/m0/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-9345, REG-9517, REG-12496, REG-8142, REG-9357, REG-11631, REG0-7270, REG-6926" />
+      <Property key="Smiles" value="C(C(=O)[O-])[C@H]([NH3+])C(=O)[O-]" />
+      <CitationRef elementRef="citation_PUB_18493048" />
+      <CitationRef elementRef="citation_PUB_16306140" />
+    </DataNode>
+    <DataNode elementId="MESO-DIAMINOPIMELATE" textLabel="meso-diaminopimelate" type="Metabolite">
+      <Xref identifier="GMKMEZVLHJARHF-SYDPRGILSA-N" dataSource="InChIKey" />
+      <Graphics centerX="760.3004760742188" centerY="1408.5511474609375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="MESO-DIAMINOPIMELATE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001532722" />
+      <Property key="AlternativeId_Seed" value="cpd00516" />
+      <Property key="AlternativeId_Metanetx" value="MNXM529" />
+      <Property key="AlternativeId_Refmet" value="2,6-diaminopimelic acid" />
+      <Property key="AlternativeId_Bigg" value="26dap__M" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57791" />
+      <Property key="AlternativeId_Chebi" value="57791" />
+      <Property key="AlternativeId_Pubchem" value="1549101" />
+      <Property key="AlternativeId_LigandCpd" value="C00680" />
+      <Property key="AlternativeId_Cas" value="922-54-3" />
+      <Property key="Synonym_1" value="meso-2,6-diaminopimelate" />
+      <Property key="Synonym_2" value="meso-A&lt;SUB&gt;2&lt;/SUB&gt;pm" />
+      <Property key="Synonym_3" value="meso-diaminoheptanedioate" />
+      <Property key="Synonym_4" value="meso-2,6-diaminoheptanedioate" />
+      <Property key="Synonym_5" value="meso-1-&amp;alpha;,&amp;epsilon;-diaminopimelate" />
+      <Property key="Synonym_6" value="D,L-diaminopimelate" />
+      <Property key="Synonym_7" value="D,L-DAP" />
+      <Property key="Synonym_8" value="D,L-meso-diaminoheptanedioate" />
+      <Property key="Synonym_9" value="M-DAP" />
+      <Property key="ChemicalFormula" value="(C 7) (H 14) (N 2) (O 4)" />
+      <Property key="AtomCharges" value="(13 -1), (9 1), (8 1), (11 -1)" />
+      <Property key="Gibbs0" value="-19.884314" />
+      <Property key="Inchi" value="InChI=1S/C7H14N2O4/c8-4(6(10)11)2-1-3-5(9)7(12)13/h4-5H,1-3,8-9H2,(H,10,11)(H,12,13)/t4-,5+" />
+      <Property key="InchiKey" value="InChIKey=GMKMEZVLHJARHF-SYDPRGILSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="190.199" />
+      <Property key="MonoisotopicMw" value="190.0953569482" />
+      <Property key="NonStandardInchi" value="InChI=1S/C7H14N2O4/c8-4(6(10)11)2-1-3-5(9)7(12)13/h4-5H,1-3,8-9H2,(H,10,11)(H,12,13)/t4-,5+" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C([C@H](CCC[C@H](C([O-])=O)[NH3+])[NH3+])([O-])=O" />
+    </DataNode>
+    <DataNode elementId="L-BETA-ASPARTYL-P" textLabel="L-aspartyl-4-phosphate" type="Metabolite">
+      <Xref identifier="IXZNKTPIYKDIGG-REOHCLBHSA-L" dataSource="InChIKey" />
+      <Graphics centerX="837.22119140625" centerY="847.8082885742188" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="L-BETA-ASPARTYL-P" />
+      <Property key="AlternativeId_Zinc" value="ZINC000003870028" />
+      <Property key="AlternativeId_Seed" value="cpd01977" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1177" />
+      <Property key="AlternativeId_Bigg" value="4pasp" />
+      <Property key="AlternativeId_Hmdb" value="HMDB12250" />
+      <Property key="AlternativeId_Chemspider" value="10123241" />
+      <Property key="AlternativeId_Chebi" value="57535" />
+      <Property key="AlternativeId_Pubchem" value="11948925" />
+      <Property key="AlternativeId_LigandCpd" value="C03082" />
+      <Property key="AlternativeId_Cas" value="22138-53-0" />
+      <Property key="Synonym_1" value="4-phospho-L-aspartate" />
+      <Property key="Synonym_2" value="L-4-aspartyl phosphate" />
+      <Property key="Synonym_3" value="L-&amp;beta;-aspartyl-P" />
+      <Property key="Synonym_4" value="L-&amp;beta;-aspartyl-phosphate" />
+      <Property key="Synonym_5" value="L-aspartyl-4-P" />
+      <Property key="Synonym_6" value="L-aspartyl-&amp;beta;-phosphate" />
+      <Property key="Synonym_7" value="4-phosphonato-L-aspartate" />
+      <Property key="ChemicalFormula" value="(C 4) (H 6) (N 1) (O 7) (P 1)" />
+      <Property key="AtomCharges" value="(11 -1), (5 1), (9 -1), (8 -1)" />
+      <Property key="Gibbs0" value="-304.6715" />
+      <Property key="Inchi" value="InChI=1S/C4H8NO7P/c5-2(4(7)8)1-3(6)12-13(9,10)11/h2H,1,5H2,(H,7,8)(H2,9,10,11)/p-2/t2-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=IXZNKTPIYKDIGG-REOHCLBHSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="211.068" />
+      <Property key="MonoisotopicMw" value="213.0038381267" />
+      <Property key="NonStandardInchi" value="InChI=1S/C4H8NO7P/c5-2(4(7)8)1-3(6)12-13(9,10)11/h2H,1,5H2,(H,7,8)(H2,9,10,11)/p-2/t2-/m0/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C([C@H]([NH3+])C(=O)[O-])C(=O)OP([O-])(=O)[O-]" />
+    </DataNode>
+    <DataNode elementId="CPD-14443" textLabel="(2S,4S)-4-hydroxy-2,3,4,5-tetrahydrodipicolinate" type="Metabolite">
+      <Xref identifier="DVTPRYHENFBCII-IMJSIDKUSA-L" dataSource="InChIKey" />
+      <Graphics centerX="1224.3035888671875" centerY="117.43527221679688" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-14443" />
+      <Property key="AlternativeId_Metanetx" value="MNXM30985" />
+      <Property key="AlternativeId_LigandCpd" value="C20258" />
+      <Property key="AlternativeId_Pubchem" value="70678847" />
+      <Property key="AlternativeId_Chebi" value="67139" />
+      <Property key="Synonym_1" value="(4&lt;i&gt;S&lt;/i&gt;)-4-hydroxy-2,3,4,5-tetrahydro-(2&lt;i&gt;S&lt;/i&gt;)-dipicolinate" />
+      <Property key="ChemicalFormula" value="(C 7) (H 7) (N 1) (O 5)" />
+      <Property key="AtomCharges" value="(10 -1), (12 -1)" />
+      <Property key="Gibbs0" value="-119.8604" />
+      <Property key="Inchi" value="InChI=1S/C7H9NO5/c9-3-1-4(6(10)11)8-5(2-3)7(12)13/h3-4,9H,1-2H2,(H,10,11)(H,12,13)/p-2/t3-,4-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=DVTPRYHENFBCII-IMJSIDKUSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="185.136" />
+      <Property key="MonoisotopicMw" value="187.04807240460002" />
+      <Property key="NonStandardInchi" value="InChI=1S/C7H9NO5/c9-3-1-4(6(10)11)8-5(2-3)7(12)13/h3-4,9H,1-2H2,(H,10,11)(H,12,13)/p-2/t3-,4-/m0/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C1([C@H](O)CC(/C([O-])=O)=N\[C@@H]1C([O-])=O)" />
+    </DataNode>
+    <DataNode elementId="WATER" textLabel="H₂O" type="Metabolite">
+      <Xref identifier="XLYOFNOQVPJJNP-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="629.69140625" centerY="1069.4031982421875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="WATER" />
+      <Property key="AlternativeId_Bigg" value="33474" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15377" />
+      <Property key="AlternativeId_Hmdb" value="HMDB02111" />
+      <Property key="AlternativeId_Chemspider" value="937" />
+      <Property key="AlternativeId_Chebi" value="15377" />
+      <Property key="AlternativeId_Pubchem" value="962" />
+      <Property key="AlternativeId_LigandCpd" value="C00001" />
+      <Property key="AlternativeId_Cas" value="7732-18-5" />
+      <Property key="Synonym_1" value="H&lt;sub&gt;2&lt;/sub&gt;0" />
+      <Property key="Synonym_2" value="H2O" />
+      <Property key="Synonym_3" value="H20" />
+      <Property key="Synonym_4" value="hydrogen oxide" />
+      <Property key="Synonym_5" value="water" />
+      <Property key="ChemicalFormula" value="(H 2) (O 1)" />
+      <Property key="Gibbs0" value="-36.144756" />
+      <Property key="Inchi" value="InChI=1S/H2O/h1H2" />
+      <Property key="InchiKey" value="InChIKey=XLYOFNOQVPJJNP-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="18.015" />
+      <Property key="MonoisotopicMw" value="18.0105646863" />
+      <Property key="NonStandardInchi" value="InChI=1S/H2O/h1H2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="O" />
+    </DataNode>
+    <DataNode elementId="NAD-P-OR-NOP" textLabel="NAD(P)⁺" type="Metabolite">
+      <Xref identifier="13390" dataSource="ChEBI" />
+      <Graphics centerX="484.1487731933594" centerY="1522.733154296875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>|FRAME: NAD-P-OR-NOP| is a class of compounds including the instances |FRAME: NAD| and |FRAME: NADP|. |FRAME: NAD| and |FRAME: NADP| are dinucleotides containing one |FRAME: NIACINAMIDE| base and one |FRAME: ADENINE| base. Each nucleotide is connected to a ribose sugar at position 1, and the two riboses are connected at their 5 position via a diphosphate. The only difference between the two is that in NADP there is an additional phosphate group at the 2&apos; position of the ribose that carries the adenine moiety. These molecules are biological carriers of reductive equivalents (i.e. high potential electrons). They are often referred to as coenzymes, although in most of their reactions they function as cosubstrates rather than true coenzymes. The most common function of |FRAME: NAD| is to accept two electrons and a proton (a hydride ion) from a substrate that is being oxidized. This reduction converts |FRAME: NAD| to |FRAME: NADH|, the reduced form. NADH then diffuses or is transported to a terminal oxidase, where the electrons are passed on, regenerating the oxidized form. |FRAME: NADPH|, on the other hand, is mostly involved in biosynthetic reactions, where it serves as an electron donor. NADPH is formed by reduction of |FRAME: NADP|, which occurs by different mechanisms in different types of organisms. In photosynthetic organisms |FRAME: NADP| is reduced by |FRAME: CPLX-84|. In heterotrophic organisms it is reduced by central metabolism processes such as the pentose phosphate pathway (see |FRAME: OXIDATIVEPENT-PWY|).</Comment>
+      <Property key="UniqueID" value="NAD-P-OR-NOP" />
+      <Property key="AlternativeId_Metanetx" value="MNXM137" />
+      <Property key="AlternativeId_Seed" value="cpd27638" />
+      <Property key="AlternativeId_Chebi" value="13390" />
+      <Property key="Synonym_1" value="NAD(P)" />
+      <Property key="Synonym_2" value="NAD(P)+" />
+      <Property key="Synonym_3" value="&amp;beta;-NAD(P)&lt;sup&gt;+&lt;/sup&gt;" />
+      <Property key="AtomCharges" value="(37 -1), (35 -1), (27 1)" />
+      <Property key="CofactorsOf" value="ENZRXNQT-122" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="NonStandardInchi" value="InChI=1S/C21H27N7O14P2/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(32)14(30)11(41-21)6-39-44(36,37)42-43(34,35)38-5-10-13(29)15(31)20(40-10)27-3-1-2-9(4-27)18(23)33/h1-4,7-8,10-11,13-16,20-21,29-32H,5-6H2,(H5-,22,23,24,25,33,34,35,36,37)/p-1/t10-,11-,13-,14-,15-,16-,20-,21-/m1/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C5(/C=C\C(\C(=O)N)=C/[N+](/[C@@H]1(O[C@@H]([C@H]([C@H]1O)O)COP(OP(OC[C@H]4(O[C@@H](N2(C3(\C(\N=C/2)=C(N)/N=C\N=3)))[C@H](O[R])[C@H](O)4))(=O)[O-])(=O)[O-]))=5)" />
+    </DataNode>
+    <DataNode elementId="LL-DIAMINOPIMELATE" textLabel="L,L-diaminopimelate" type="Metabolite">
+      <Xref identifier="GMKMEZVLHJARHF-WHFBIAKZSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1252.6103515625" centerY="487.5196533203125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="LL-DIAMINOPIMELATE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000001532712" />
+      <Property key="AlternativeId_Seed" value="cpd00504" />
+      <Property key="AlternativeId_Metanetx" value="MNXM644" />
+      <Property key="AlternativeId_Bigg" value="26dap_LL" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57609" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01370" />
+      <Property key="AlternativeId_Chebi" value="57609" />
+      <Property key="AlternativeId_Pubchem" value="1549100" />
+      <Property key="AlternativeId_Cas" value="14289-34-0" />
+      <Property key="AlternativeId_LigandCpd" value="C00666" />
+      <Property key="Synonym_1" value="L,L-A2pm" />
+      <Property key="Synonym_2" value="L,L-DAP" />
+      <Property key="Synonym_3" value="L,L-2,6-diaminopimelate" />
+      <Property key="Synonym_4" value="L,L-2,6-diaminoheptanedioate" />
+      <Property key="ChemicalFormula" value="(C 7) (H 14) (N 2) (O 4)" />
+      <Property key="AtomCharges" value="(13 -1), (9 1), (8 1), (11 -1)" />
+      <Property key="Gibbs0" value="-19.884314" />
+      <Property key="Inchi" value="InChI=1S/C7H14N2O4/c8-4(6(10)11)2-1-3-5(9)7(12)13/h4-5H,1-3,8-9H2,(H,10,11)(H,12,13)/t4-,5-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=GMKMEZVLHJARHF-WHFBIAKZSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="190.199" />
+      <Property key="MonoisotopicMw" value="190.0953569482" />
+      <Property key="NonStandardInchi" value="InChI=1S/C7H14N2O4/c8-4(6(10)11)2-1-3-5(9)7(12)13/h4-5H,1-3,8-9H2,(H,10,11)(H,12,13)/t4-,5-/m0/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C([C@H](CCC[C@@H](C([O-])=O)[NH3+])[NH3+])([O-])=O" />
+    </DataNode>
+    <DataNode elementId="ADP" textLabel="ADP" type="Metabolite">
+      <Xref identifier="XTWYTFMLZFPYCI-KQYNXXCUSA-K" dataSource="InChIKey" />
+      <Graphics centerX="345.6195068359375" centerY="629.7183227539062" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="ADP" />
+      <Property key="AlternativeId_Zinc" value="ZINC000012360703" />
+      <Property key="AlternativeId_Seed" value="cpd00008" />
+      <Property key="AlternativeId_Metanetx" value="MNXM7" />
+      <Property key="AlternativeId_Refmet" value="ADP" />
+      <Property key="AlternativeId_Bigg" value="adp" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC456216" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01341" />
+      <Property key="AlternativeId_Chemspider" value="5414423" />
+      <Property key="AlternativeId_Chebi" value="456216" />
+      <Property key="AlternativeId_Pubchem" value="7058055" />
+      <Property key="AlternativeId_LigandCpd" value="C00008" />
+      <Property key="AlternativeId_Cas" value="58-64-0" />
+      <Property key="Synonym_1" value="adenosine pyrophosphate" />
+      <Property key="Synonym_2" value="adenosine 5&apos;-pyrophosphate" />
+      <Property key="Synonym_3" value="adenosine-5&apos;-diphosphate" />
+      <Property key="Synonym_4" value="adenosine-diphosphate" />
+      <Property key="Synonym_5" value="adenosine-5-diphosphate" />
+      <Property key="ChemicalFormula" value="(C 10) (H 12) (N 5) (O 10) (P 2)" />
+      <Property key="AtomCharges" value="(20 -1), (19 -1), (22 -1)" />
+      <Property key="ComponentOf" value="CPD0-1651" />
+      <Property key="Gibbs0" value="-344.92508" />
+      <Property key="Inchi" value="InChI=1S/C10H15N5O10P2/c11-8-5-9(13-2-12-8)15(3-14-5)10-7(17)6(16)4(24-10)1-23-27(21,22)25-26(18,19)20/h2-4,6-7,10,16-17H,1H2,(H,21,22)(H2,11,12,13)(H2,18,19,20)/p-3/t4-,6-,7-,10-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=XTWYTFMLZFPYCI-KQYNXXCUSA-K" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="424.18" />
+      <Property key="MonoisotopicMw" value="427.0294147485" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-15215, REG-12883, REG-9764, REG-14332, REG0-11364, REG0-7057, REG0-7058, REG-8584, REG0-8479, REG-8233, REG-13527, REG-11339, REG0-8211, REG-12064, REG-8041, REG-8743, REG0-8748, REG-10984, REG0-7474, REG-11598, REG-9546, REG-13336, REG-12492, REG0-8828, REG0-8831, REG0-6887, REG0-7923, REG-9477, REG-8731, REG-8051, REG-9668, REG-8004, REG0-8726, REG-8119, REG0-8154, REG-6690, REG-6691, REG-6637, REG-6636, REG-6552, REG-7113, REG-7072" />
+      <Property key="Smiles" value="C(OP(=O)([O-])OP(=O)([O-])[O-])[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3)" />
+    </DataNode>
+    <DataNode elementId="L-ASPARTATE-SEMIALDEHYDE" textLabel="L-aspartate 4-semialdehyde" type="Metabolite">
+      <Xref identifier="HOSWPDPVFBCLSY-VKHMYHEASA-N" dataSource="InChIKey" />
+      <Graphics centerX="914.3775024414062" centerY="85.98347473144531" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="L-ASPARTATE-SEMIALDEHYDE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000000895231" />
+      <Property key="AlternativeId_Seed" value="cpd00346" />
+      <Property key="AlternativeId_Metanetx" value="MNXM361" />
+      <Property key="AlternativeId_Refmet" value="Aspartate-semialdehyde" />
+      <Property key="AlternativeId_Bigg" value="aspsa" />
+      <Property key="AlternativeId_Hmdb" value="HMDB12249" />
+      <Property key="AlternativeId_Chebi" value="537519" />
+      <Property key="AlternativeId_Pubchem" value="5287708" />
+      <Property key="AlternativeId_LigandCpd" value="C00441" />
+      <Property key="AlternativeId_Cas" value="15106-57-7" />
+      <Property key="Synonym_1" value="L-aspartic 4-semialdehyde" />
+      <Property key="Synonym_2" value="L-aspartate-semialdehyde" />
+      <Property key="Synonym_3" value="L-aspartate &amp;beta;-semialdehyde" />
+      <Property key="ChemicalFormula" value="(C 4) (H 7) (N 1) (O 3)" />
+      <Property key="AtomCharges" value="(8 -1), (5 1)" />
+      <Property key="Gibbs0" value="-41.152164" />
+      <Property key="Inchi" value="InChI=1S/C4H7NO3/c5-3(1-2-6)4(7)8/h2-3H,1,5H2,(H,7,8)/t3-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=HOSWPDPVFBCLSY-VKHMYHEASA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="117.104" />
+      <Property key="MonoisotopicMw" value="117.0425930962" />
+      <Property key="NonStandardInchi" value="InChI=1S/C4H7NO3/c5-3(1-2-6)4(7)8/h2-3H,1,5H2,(H,7,8)/t3-/m0/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C(=O)C[C@H]([NH3+])C(=O)[O-]" />
+    </DataNode>
+    <DataNode elementId="Pi" textLabel="phosphate" type="Metabolite">
+      <Xref identifier="NBIIXXVUZAFLBC-UHFFFAOYSA-L" dataSource="InChIKey" />
+      <Graphics centerX="1044.5447998046875" centerY="350.6430358886719" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">The most abundant form of the phosphate ion at pH 7.3 is hydrogenphosphate. To simplify the presentation of reactions taking place at physiological pH, MetaCyc does not distinguish between the two forms, and uses the name &quot;phosphate&quot; even though the structure shown is that of hydrogenphosphate.</Comment>
+      <Property key="UniqueID" value="Pi" />
+      <Property key="AlternativeId_Refmet" value="Phosphoric acid" />
+      <Property key="AlternativeId_Bigg" value="pi" />
+      <Property key="AlternativeId_Pubchem" value="3681305" />
+      <Property key="AlternativeId_Chebi" value="43474" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC43474" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00973" />
+      <Property key="AlternativeId_Knapsack" value="C00007408" />
+      <Property key="AlternativeId_Cas" value="14265-44-2" />
+      <Property key="Synonym_1" value="inorganic phosphate" />
+      <Property key="Synonym_2" value="phosphate-inorganic" />
+      <Property key="Synonym_3" value="Pi" />
+      <Property key="Synonym_4" value="orthophosphate" />
+      <Property key="Synonym_5" value="PO&lt;SUB&gt;4&lt;/SUB&gt;&lt;SUP&gt;3-&lt;/SUP&gt;" />
+      <Property key="Synonym_6" value="HPO&lt;SUB&gt;4&lt;/SUB&gt;&lt;SUP&gt;2-&lt;/SUP&gt;" />
+      <Property key="Synonym_7" value="HPO&lt;SUB&gt;4&lt;/SUB&gt;&lt;SUP&gt;-2&lt;/SUP&gt;" />
+      <Property key="Synonym_8" value="hydrogenphosphate" />
+      <Property key="ChemicalFormula" value="(H 1) (O 4) (P 1)" />
+      <Property key="AtomCharges" value="(4 -1), (1 -1)" />
+      <Property key="ComponentOf" value="CPD-9010" />
+      <Property key="Gibbs0" value="-252.94714" />
+      <Property key="Inchi" value="InChI=1S/H3O4P/c1-5(2,3)4/h(H3,1,2,3,4)/p-2" />
+      <Property key="InchiKey" value="InChIKey=NBIIXXVUZAFLBC-UHFFFAOYSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="InternalsOfGroup" value="GLYCO-CT-PHOSPHATE" />
+      <Property key="MolecularWeight" value="95.979" />
+      <Property key="MonoisotopicMw" value="97.9768950947" />
+      <Property key="NonStandardInchi" value="InChI=1S/H3O4P/c1-5(2,3)4/h(H3,1,2,3,4)/p-2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-13915, REG0-8013, REG-12892, REG0-7059, REG-12878, REG-8321, REG-13930, REG-8651, REG-7453, REG0-9498, REG0-9501, REG-10989, REG0-10704, REG0-9976, REG-10770, REG-6237, REG0-11039, REG-11289, REG-11169, REG-8708, REG0-8513, REG0-9096, REG-7176, REG-7170, REG-7182, REG-8534, REG-9306, REG-11141, REG-6443, REG-6437, REG-12171, REG-6318, REG0-8734, REG-6642, REG0-6968, REG-6684, REG0-8071, REG0-7210, REG-7116, REG0-7425, REG-11628, REG-7075" />
+      <Property key="Smiles" value="[O-]P(=O)(O)[O-]" />
+      <CitationRef elementRef="citation_PUB_18493048" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="862.8861083984375" y="1160.07666015625" elementRef="AT5G11880" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="575.1240234375" y="889.332763671875" elementRef="AT5G11880-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_1_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_1_0_0" x="1100.397216796875" y="621.3614501953125" elementRef="AT3G14390" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_1_0_0" arrowHead="TranscriptionTranslation" x="55.0" y="844.7037353515625" elementRef="AT3G14390-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_2_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_2_0_0" x="211.025146484375" y="440.71466064453125" elementRef="AT4G19710" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_2_0_0" arrowHead="TranscriptionTranslation" x="573.05029296875" y="361.4317321777344" elementRef="AT4G19710-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_3_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_3_0_0" x="938.9229736328125" y="613.3536987304688" elementRef="AT4G33680" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_3_0_0" arrowHead="TranscriptionTranslation" x="1102.7677001953125" y="920.0357666015625" elementRef="AT4G33680-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_4_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_4_0_0" x="930.6072998046875" y="803.496337890625" elementRef="GM-DAPA" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_4_0_0" arrowHead="TranscriptionTranslation" x="789.3264770507812" y="744.1607055664062" elementRef="MONOMER-11881" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_5_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_5_0_0" x="254.3729705810547" y="1177.808837890625" elementRef="AT1G31230" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_5_0_0" arrowHead="TranscriptionTranslation" x="807.476806640625" y="798.7686767578125" elementRef="AT1G31230-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_6_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_6_0_0" x="1481.840576171875" y="681.0425415039062" elementRef="AT3G60880" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_6_0_0" arrowHead="TranscriptionTranslation" x="339.2132568359375" y="921.7415161132812" elementRef="AT3G60880-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_7_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_7_0_0" x="800.0006103515625" y="829.8470458984375" elementRef="AT3G53580" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_7_0_0" arrowHead="TranscriptionTranslation" x="642.573486328125" y="561.4720458984375" elementRef="AT3G53580-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_8_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_8_0_0" x="1026.911376953125" y="1030.090087890625" elementRef="AT2G45440" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_8_0_0" arrowHead="TranscriptionTranslation" x="801.6463623046875" y="428.86053466796875" elementRef="AT2G45440-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_9_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_9_0_0" x="1008.5036010742188" y="871.5166015625" elementRef="AT3G02020" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_9_0_0" arrowHead="TranscriptionTranslation" x="931.344970703125" y="1550.0" elementRef="AT3G02020-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-14014">
+      <Xref identifier="EC-1.17.1.8" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-14014_start" x="1269.3035888671875" y="117.43527221679688" elementRef="CPD-14443" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-14014_end" arrowHead="Conversion" x="345.48284912109375" y="246.53866577148438" elementRef="DELTA1-PIPERIDEINE-2-6-DICARBOXYLATE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-14014_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-14014" />
+      <Property key="EC_Number" value="EC-1.17.1.8" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-5097" />
+      <Property key="ReactionEquation" value="DELTA1-PIPERIDEINE-2-6-DICARBOXYLATE + NAD-P-OR-NOP + WATER =&gt; CPD-14443 + NADH-P-OR-NOP + PROTON" />
+      <Property key="ReactionDirection" value="RIGHT-TO-LEFT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Chemical-Reactions, Small-Molecule-Reactions" />
+      <Property key="AtomMappings" value="(:NO-HYDROGEN-ENCODING (0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 49 50 48 51 52 53 54 55 60 56 57 58 59) (((NADP 0 47) (DELTA1-PIPERIDEINE-2-6-DICARBOXYLATE 48 59) (WATER 60 60)) ((NADPH 0 47) (CPD-14443 48 60))))" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-0.36236572" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-14014_anchor_reactant_0">
+      <Xref identifier="EC-1.17.1.8" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-14014_anchor_reactant_start_0" x="435.48284912109375" y="246.53866577148438" elementRef="DELTA1-PIPERIDEINE-2-6-DICARBOXYLATE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-14014_anchor_reactant_end_0" x="0" y="0" elementRef="RXN-14014_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-14014_anchor_reactant_1">
+      <Xref identifier="EC-1.17.1.8" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-14014_anchor_reactant_start_1" x="529.1488037109375" y="1522.733154296875" elementRef="NAD-P-OR-NOP" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-14014_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-14014_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-14014_anchor_reactant_2">
+      <Xref identifier="EC-1.17.1.8" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-14014_anchor_reactant_start_2" x="674.69140625" y="1069.4031982421875" elementRef="WATER" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-14014_anchor_reactant_end_2" x="0" y="0" elementRef="RXN-14014_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-14014_anchor_product_0">
+      <Xref identifier="EC-1.17.1.8" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-14014_anchor_product_start_0" x="0" y="0" elementRef="RXN-14014_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-14014_anchor_product_end_0" arrowHead="Conversion" x="1179.3035888671875" y="117.43527221679688" elementRef="CPD-14443" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-14014_anchor_product_1">
+      <Xref identifier="EC-1.17.1.8" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-14014_anchor_product_start_1" x="0" y="0" elementRef="RXN-14014_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-14014_anchor_product_end_1" arrowHead="Conversion" x="1555.0" y="873.563720703125" elementRef="NADH-P-OR-NOP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-14014_anchor_product_2">
+      <Xref identifier="EC-1.17.1.8" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-14014_anchor_product_start_2" x="0" y="0" elementRef="RXN-14014_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-14014_anchor_product_end_2" arrowHead="Conversion" x="1024.45166015625" y="1233.73583984375" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DIAMINOPIMDECARB-RXN">
+      <Xref identifier="EC-4.1.1.20" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="DIAMINOPIMDECARB-RXN_start" x="805.3004760742188" y="1408.5511474609375" elementRef="MESO-DIAMINOPIMELATE" relX="1.0" relY="0.0" />
+        <Point elementId="DIAMINOPIMDECARB-RXN_end" arrowHead="Conversion" x="1457.4422607421875" y="362.13311767578125" elementRef="LYS" relX="-1.0" relY="0.0" />
+        <Anchor elementId="DIAMINOPIMDECARB-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Uniprot" value="P19572" />
+      <Property key="AlternativeId_Pir" value="T10458" />
+      <Property key="UniqueID" value="DIAMINOPIMDECARB-RXN" />
+      <Property key="EC_Number" value="EC-4.1.1.20" />
+      <Property key="Pathways" value="PWY-5097" />
+      <Property key="ReactionEquation" value="PROTON + MESO-DIAMINOPIMELATE =&gt; CARBON-DIOXIDE + LYS" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXN-12392, ENZRXN-12391" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="Synonym_1" value="DAP decarboxylase" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-3.0900116" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="Synonyms" value="DAP decarboxylase" />
+    </Interaction>
+    <Interaction elementId="DIAMINOPIMDECARB-RXN_ENZRXN-12391">
+      <Waypoints>
+        <Point elementId="DIAMINOPIMDECARB-RXN_ENZRXN-12391_start" x="100.0" y="857.2037353515625" elementRef="AT3G14390-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="DIAMINOPIMDECARB-RXN_ENZRXN-12391_end" arrowHead="Catalysis" x="0" y="0" elementRef="DIAMINOPIMDECARB-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DIAMINOPIMDECARB-RXN_ENZRXN-12392">
+      <Waypoints>
+        <Point elementId="DIAMINOPIMDECARB-RXN_ENZRXN-12392_start" x="620.1240234375" y="901.832763671875" elementRef="AT5G11880-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="DIAMINOPIMDECARB-RXN_ENZRXN-12392_end" arrowHead="Catalysis" x="0" y="0" elementRef="DIAMINOPIMDECARB-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DIAMINOPIMDECARB-RXN_anchor_reactant_0">
+      <Xref identifier="EC-4.1.1.20" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="DIAMINOPIMDECARB-RXN_anchor_reactant_start_0" x="1114.45166015625" y="1233.73583984375" elementRef="PROTON" relX="1.0" relY="0.0" />
+        <Point elementId="DIAMINOPIMDECARB-RXN_anchor_reactant_end_0" x="0" y="0" elementRef="DIAMINOPIMDECARB-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DIAMINOPIMDECARB-RXN_anchor_product_0">
+      <Xref identifier="EC-4.1.1.20" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="DIAMINOPIMDECARB-RXN_anchor_product_start_0" x="0" y="0" elementRef="DIAMINOPIMDECARB-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="DIAMINOPIMDECARB-RXN_anchor_product_end_0" arrowHead="Conversion" x="499.045654296875" y="703.3084106445312" elementRef="CARBON-DIOXIDE" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DIAMINOPIMEPIM-RXN">
+      <Xref identifier="EC-5.1.1.7" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="DIAMINOPIMEPIM-RXN_start" x="1297.6103515625" y="487.5196533203125" elementRef="LL-DIAMINOPIMELATE" relX="1.0" relY="0.0" />
+        <Point elementId="DIAMINOPIMEPIM-RXN_end" arrowHead="Conversion" x="715.3004760742188" y="1408.5511474609375" elementRef="MESO-DIAMINOPIMELATE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="DIAMINOPIMEPIM-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Uniprot" value="Q9PMD8" />
+      <Property key="AlternativeId_Pir" value="T10459" />
+      <Property key="UniqueID" value="DIAMINOPIMEPIM-RXN" />
+      <Property key="EC_Number" value="EC-5.1.1.7" />
+      <Property key="Pathways" value="PWY-5097" />
+      <Property key="ReactionEquation" value="LL-DIAMINOPIMELATE &lt;=&gt; MESO-DIAMINOPIMELATE" />
+      <Property key="ReactionDirection" value="REVERSIBLE" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXN-12390, ENZRXNQT-5409" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="0." />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="DIAMINOPIMEPIM-RXN_ENZRXN-12390">
+      <Waypoints>
+        <Point elementId="DIAMINOPIMEPIM-RXN_ENZRXN-12390_start" x="822.4892578125" y="978.2099609375" elementRef="MONOMER-11884" relX="0.0" relY="1.0" />
+        <Point elementId="DIAMINOPIMEPIM-RXN_ENZRXN-12390_end" arrowHead="Catalysis" x="0" y="0" elementRef="DIAMINOPIMEPIM-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DIAMINOPIMEPIM-RXN_ENZRXNQT-5409">
+      <Waypoints>
+        <Point elementId="DIAMINOPIMEPIM-RXN_ENZRXNQT-5409_start" x="687.573486328125" y="573.9720458984375" elementRef="AT3G53580-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="DIAMINOPIMEPIM-RXN_ENZRXNQT-5409_end" arrowHead="Catalysis" x="0" y="0" elementRef="DIAMINOPIMEPIM-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-7737">
+      <Xref identifier="EC-2.6.1.83" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-7737_start" x="435.48284912109375" y="246.53866577148438" elementRef="DELTA1-PIPERIDEINE-2-6-DICARBOXYLATE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-7737_end" arrowHead="Conversion" x="1207.6103515625" y="487.5196533203125" elementRef="LL-DIAMINOPIMELATE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-7737_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-7737" />
+      <Property key="EC_Number" value="EC-2.6.1.83" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-5097" />
+      <Property key="ReactionEquation" value="LL-DIAMINOPIMELATE + 2-KETOGLUTARATE &lt;=&gt; DELTA1-PIPERIDEINE-2-6-DICARBOXYLATE + GLT + WATER + PROTON" />
+      <Property key="ReactionDirection" value="REVERSIBLE" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-12389" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-28.36113" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN-7737_ENZRXN-12389">
+      <Waypoints>
+        <Point elementId="RXN-7737_ENZRXN-12389_start" x="1147.7677001953125" y="932.5357666015625" elementRef="AT4G33680-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="RXN-7737_ENZRXN-12389_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN-7737_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-7737_anchor_reactant_0">
+      <Xref identifier="EC-2.6.1.83" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-7737_anchor_reactant_start_0" x="1297.6103515625" y="487.5196533203125" elementRef="LL-DIAMINOPIMELATE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-7737_anchor_reactant_end_0" x="0" y="0" elementRef="RXN-7737_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-7737_anchor_reactant_1">
+      <Xref identifier="EC-2.6.1.83" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-7737_anchor_reactant_start_1" x="988.501953125" y="743.7182006835938" elementRef="_2-KETOGLUTARATE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-7737_anchor_reactant_end_1" x="0" y="0" elementRef="RXN-7737_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-7737_anchor_product_0">
+      <Xref identifier="EC-2.6.1.83" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-7737_anchor_product_start_0" x="0" y="0" elementRef="RXN-7737_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-7737_anchor_product_end_0" arrowHead="Conversion" x="345.48284912109375" y="246.53866577148438" elementRef="DELTA1-PIPERIDEINE-2-6-DICARBOXYLATE" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-7737_anchor_product_1">
+      <Xref identifier="EC-2.6.1.83" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-7737_anchor_product_start_1" x="0" y="0" elementRef="RXN-7737_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-7737_anchor_product_end_1" arrowHead="Conversion" x="688.2100830078125" y="712.239990234375" elementRef="GLT" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-7737_anchor_product_2">
+      <Xref identifier="EC-2.6.1.83" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-7737_anchor_product_start_2" x="0" y="0" elementRef="RXN-7737_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-7737_anchor_product_end_2" arrowHead="Conversion" x="584.69140625" y="1069.4031982421875" elementRef="WATER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-7737_anchor_product_3">
+      <Xref identifier="EC-2.6.1.83" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-7737_anchor_product_start_3" x="0" y="0" elementRef="RXN-7737_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN-7737_anchor_product_end_3" arrowHead="Conversion" x="1024.45166015625" y="1233.73583984375" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DIHYDRODIPICSYN-RXN">
+      <Xref identifier="EC-4.3.3.7" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="DIHYDRODIPICSYN-RXN_start" x="959.3775024414062" y="85.98347473144531" elementRef="L-ASPARTATE-SEMIALDEHYDE" relX="1.0" relY="0.0" />
+        <Point elementId="DIHYDRODIPICSYN-RXN_end" arrowHead="Conversion" x="1179.3035888671875" y="117.43527221679688" elementRef="CPD-14443" relX="-1.0" relY="0.0" />
+        <Anchor elementId="DIHYDRODIPICSYN-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Uniprot" value="P43797" />
+      <Property key="AlternativeId_Pir" value="WZZMP" />
+      <Property key="UniqueID" value="DIHYDRODIPICSYN-RXN" />
+      <Property key="EC_Number" value="EC-4.3.3.7" />
+      <Property key="Pathways" value="PWY-5097" />
+      <Property key="ReactionEquation" value="PYRUVATE + L-ASPARTATE-SEMIALDEHYDE =&gt; CPD-14443 + WATER + PROTON" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXNQT-5202, ENZRXNQT-5428, ENZRXN-12387" />
+      <Property key="EnzymaticReactionCount" value="3" />
+      <Property key="Synonym_1" value="Dihydrodipicolinate synthetase" />
+      <Property key="Synonym_2" value="DHDPS" />
+      <Property key="Synonym_3" value="dihydropicolinate synthetase" />
+      <Property key="Synonym_4" value="dihydrodipicolinic acid synthase" />
+      <Property key="Synonym_5" value="&lt;small&gt;L&lt;/small&gt;-aspartate-4-semialdehyde hydro-lyase (adding pyruvate and cyclizing)" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-32.025223" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="Synonyms" value="Dihydrodipicolinate synthetase, DHDPS, dihydropicolinate synthetase, dihydrodipicolinic acid synthase, &lt;small&gt;L&lt;/small&gt;-aspartate-4-semialdehyde hydro-lyase (adding pyruvate and cyclizing)" />
+    </Interaction>
+    <Interaction elementId="DIHYDRODIPICSYN-RXN_ENZRXNQT-5428">
+      <Waypoints>
+        <Point elementId="DIHYDRODIPICSYN-RXN_ENZRXNQT-5428_start" x="384.2132568359375" y="934.2415161132812" elementRef="AT3G60880-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="DIHYDRODIPICSYN-RXN_ENZRXNQT-5428_end" arrowHead="Catalysis" x="0" y="0" elementRef="DIHYDRODIPICSYN-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DIHYDRODIPICSYN-RXN_ENZRXNQT-5202">
+      <Waypoints>
+        <Point elementId="DIHYDRODIPICSYN-RXN_ENZRXNQT-5202_start" x="846.6463623046875" y="441.36053466796875" elementRef="AT2G45440-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="DIHYDRODIPICSYN-RXN_ENZRXNQT-5202_end" arrowHead="Catalysis" x="0" y="0" elementRef="DIHYDRODIPICSYN-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DIHYDRODIPICSYN-RXN_ENZRXN-12387">
+      <Waypoints>
+        <Point elementId="DIHYDRODIPICSYN-RXN_ENZRXN-12387_start" x="834.3264770507812" y="756.6607055664062" elementRef="MONOMER-11881" relX="0.0" relY="1.0" />
+        <Point elementId="DIHYDRODIPICSYN-RXN_ENZRXN-12387_end" arrowHead="Catalysis" x="0" y="0" elementRef="DIHYDRODIPICSYN-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DIHYDRODIPICSYN-RXN_anchor_reactant_0">
+      <Xref identifier="EC-4.3.3.7" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="DIHYDRODIPICSYN-RXN_anchor_reactant_start_0" x="531.4544677734375" y="1243.932861328125" elementRef="PYRUVATE" relX="1.0" relY="0.0" />
+        <Point elementId="DIHYDRODIPICSYN-RXN_anchor_reactant_end_0" x="0" y="0" elementRef="DIHYDRODIPICSYN-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DIHYDRODIPICSYN-RXN_anchor_product_1">
+      <Xref identifier="EC-4.3.3.7" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="DIHYDRODIPICSYN-RXN_anchor_product_start_1" x="0" y="0" elementRef="DIHYDRODIPICSYN-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="DIHYDRODIPICSYN-RXN_anchor_product_end_1" arrowHead="Conversion" x="584.69140625" y="1069.4031982421875" elementRef="WATER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DIHYDRODIPICSYN-RXN_anchor_product_2">
+      <Xref identifier="EC-4.3.3.7" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="DIHYDRODIPICSYN-RXN_anchor_product_start_2" x="0" y="0" elementRef="DIHYDRODIPICSYN-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="DIHYDRODIPICSYN-RXN_anchor_product_end_2" arrowHead="Conversion" x="1024.45166015625" y="1233.73583984375" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN">
+      <Xref identifier="EC-1.2.1.11" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_start" x="882.22119140625" y="847.8082885742188" elementRef="L-BETA-ASPARTYL-P" relX="1.0" relY="0.0" />
+        <Point elementId="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_end" arrowHead="Conversion" x="869.3775024414062" y="85.98347473144531" elementRef="L-ASPARTATE-SEMIALDEHYDE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Uniprot" value="P10539" />
+      <Property key="AlternativeId_Pir" value="T42373" />
+      <Property key="UniqueID" value="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN" />
+      <Property key="EC_Number" value="EC-1.2.1.11" />
+      <Property key="Pathways" value="HOMOSERSYN-PWY, PWY-5097" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="NADP + Pi + L-ASPARTATE-SEMIALDEHYDE &lt;=&gt; PROTON + NADPH + L-BETA-ASPARTYL-P" />
+      <Property key="ReactionDirection" value="REVERSIBLE" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXN-12386" />
+      <Property key="Synonym_1" value="L-aspartate-beta-semialdehyde dehydrogenase" />
+      <Property key="Synonym_2" value="Aspartic semialdehyde dehydrogenase" />
+      <Property key="Synonym_3" value="L-aspartate-&amp;beta;-semialdehyde dehydrogenase" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="1.7835693" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="Synonyms" value="L-aspartate-beta-semialdehyde dehydrogenase, Aspartic semialdehyde dehydrogenase, L-aspartate-&amp;beta;-semialdehyde dehydrogenase" />
+    </Interaction>
+    <Interaction elementId="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_ENZRXN-12386">
+      <Waypoints>
+        <Point elementId="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_ENZRXN-12386_start" x="1505.507568359375" y="1204.974609375" elementRef="AT1G14810-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_ENZRXN-12386_end" arrowHead="Catalysis" x="0" y="0" elementRef="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_anchor_reactant_0">
+      <Xref identifier="EC-1.2.1.11" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_anchor_reactant_start_0" x="1313.5760498046875" y="1443.3349609375" elementRef="NADP" relX="1.0" relY="0.0" />
+        <Point elementId="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_anchor_reactant_end_0" x="0" y="0" elementRef="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_anchor_reactant_1">
+      <Xref identifier="EC-1.2.1.11" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_anchor_reactant_start_1" x="1089.5447998046875" y="350.6430358886719" elementRef="Pi" relX="1.0" relY="0.0" />
+        <Point elementId="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_anchor_reactant_end_1" x="0" y="0" elementRef="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_anchor_reactant_2">
+      <Xref identifier="EC-1.2.1.11" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_anchor_reactant_start_2" x="959.3775024414062" y="85.98347473144531" elementRef="L-ASPARTATE-SEMIALDEHYDE" relX="1.0" relY="0.0" />
+        <Point elementId="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_anchor_reactant_end_2" x="0" y="0" elementRef="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_anchor_product_0">
+      <Xref identifier="EC-1.2.1.11" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_anchor_product_start_0" x="0" y="0" elementRef="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_anchor_product_end_0" arrowHead="Conversion" x="1024.45166015625" y="1233.73583984375" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_anchor_product_1">
+      <Xref identifier="EC-1.2.1.11" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_anchor_product_start_1" x="0" y="0" elementRef="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_anchor_product_end_1" arrowHead="Conversion" x="1244.946533203125" y="1060.5184326171875" elementRef="NADPH" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_anchor_product_2">
+      <Xref identifier="EC-1.2.1.11" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_anchor_product_start_2" x="0" y="0" elementRef="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="ASPARTATE-SEMIALDEHYDE-DEHYDROGENASE-RXN_anchor_product_end_2" arrowHead="Conversion" x="792.22119140625" y="847.8082885742188" elementRef="L-BETA-ASPARTYL-P" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ASPARTATEKIN-RXN">
+      <Xref identifier="EC-2.7.2.4" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="ASPARTATEKIN-RXN_start" x="1205.65185546875" y="752.4490966796875" elementRef="L-ASPARTATE" relX="1.0" relY="0.0" />
+        <Point elementId="ASPARTATEKIN-RXN_end" arrowHead="Conversion" x="792.22119140625" y="847.8082885742188" elementRef="L-BETA-ASPARTYL-P" relX="-1.0" relY="0.0" />
+        <Anchor elementId="ASPARTATEKIN-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Uniprot" value="P08495" />
+      <Property key="AlternativeId_Pir" value="T06246" />
+      <Property key="UniqueID" value="ASPARTATEKIN-RXN" />
+      <Property key="EC_Number" value="EC-2.7.2.4" />
+      <Property key="Pathways" value="HOMOSERSYN-PWY, PWY-5097" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="L-ASPARTATE + ATP =&gt; L-BETA-ASPARTYL-P + ADP" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXNQT-4433, ENZRXNQT-5251, ENZRXNQT-5976, ENZRXN-12385" />
+      <Property key="EnzymaticReactionCount" value="4" />
+      <Property key="Synonym_1" value="Aspartokinase" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="9.888306" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="Synonyms" value="Aspartokinase" />
+    </Interaction>
+    <Interaction elementId="ASPARTATEKIN-RXN_ENZRXNQT-5251">
+      <Waypoints>
+        <Point elementId="ASPARTATEKIN-RXN_ENZRXNQT-5251_start" x="976.344970703125" y="1562.5" elementRef="AT3G02020-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="ASPARTATEKIN-RXN_ENZRXNQT-5251_end" arrowHead="Catalysis" x="0" y="0" elementRef="ASPARTATEKIN-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ASPARTATEKIN-RXN_ENZRXN-12385">
+      <Waypoints>
+        <Point elementId="ASPARTATEKIN-RXN_ENZRXN-12385_start" x="976.344970703125" y="1562.5" elementRef="AT3G02020-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="ASPARTATEKIN-RXN_ENZRXN-12385_end" arrowHead="Catalysis" x="0" y="0" elementRef="ASPARTATEKIN-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ASPARTATEKIN-RXN_ENZRXNQT-5976">
+      <Waypoints>
+        <Point elementId="ASPARTATEKIN-RXN_ENZRXNQT-5976_start" x="618.05029296875" y="373.9317321777344" elementRef="AT4G19710-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="ASPARTATEKIN-RXN_ENZRXNQT-5976_end" arrowHead="Catalysis" x="0" y="0" elementRef="ASPARTATEKIN-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ASPARTATEKIN-RXN_ENZRXNQT-4433">
+      <Waypoints>
+        <Point elementId="ASPARTATEKIN-RXN_ENZRXNQT-4433_start" x="852.476806640625" y="811.2686767578125" elementRef="AT1G31230-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="ASPARTATEKIN-RXN_ENZRXNQT-4433_end" arrowHead="Catalysis" x="0" y="0" elementRef="ASPARTATEKIN-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ASPARTATEKIN-RXN_anchor_reactant_1">
+      <Xref identifier="EC-2.7.2.4" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="ASPARTATEKIN-RXN_anchor_reactant_start_1" x="684.0634155273438" y="50.0" elementRef="ATP" relX="1.0" relY="0.0" />
+        <Point elementId="ASPARTATEKIN-RXN_anchor_reactant_end_1" x="0" y="0" elementRef="ASPARTATEKIN-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="ASPARTATEKIN-RXN_anchor_product_1">
+      <Xref identifier="EC-2.7.2.4" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="ASPARTATEKIN-RXN_anchor_product_start_1" x="0" y="0" elementRef="ASPARTATEKIN-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="ASPARTATEKIN-RXN_anchor_product_end_1" arrowHead="Conversion" x="300.6195068359375" y="629.7183227539062" elementRef="ADP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="DIHYDRODIPICSYN-RXN_regulation_0">
+      <Waypoints>
+        <Point elementId="DIHYDRODIPICSYN-RXN_regulation_start_0" x="1547.4422607421875" y="362.13311767578125" elementRef="LYS" relX="1.0" relY="0.0" />
+        <Point elementId="DIHYDRODIPICSYN-RXN_regulation_end_0" arrowHead="Inhibition" x="1069.340576171875" y="101.7093734741211" elementRef="DIHYDRODIPICSYN-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="RegulationID" value="REG-7304" />
+      <Property key="RegulationMode" value="-" />
+      <Property key="RegulationType" value="inhibition" />
+      <Property key="Mechanism" value=":COMPETITIVE" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="RegulatedEntity" value="ENZRXN-12387" />
+      <Property key="Regulator" value="LYS" />
+      <Property key="RegulationType" value="Regulation-of-Enzyme-Activity" />
+      <Property key="InstanceNameTemplate" value="REG-*" />
+      <CitationRef elementRef="citation_PUB_8000011" />
+    </Interaction>
+  </Interactions>
+  <Groups>
+    <Group elementId="CPLX-7018" textLabel="CPLX-7018" type="Complex">
+      <Xref identifier="CPLX-7018" dataSource="plantcyc" />
+      <Graphics centerX="1505.507568359375" centerY="1192.474609375" width="140" height="100" textColor="666666" fontName="Arial" fontSize="10" borderColor="9900CC" borderStyle="Dashed" borderWidth="2.0" fillColor="F5E6FF" shapeType="Rectangle" zOrder="-1" />
+      <Comment source="AU4FS-1">Aspartate semialdehyde dehydrogenase (ASDH) produces the branch point intermediate between the lysine and threonine/methionine pathways.</Comment>
+      <Property key="UniqueID" value="CPLX-7018" />
+      <Property key="ComplexComponents" value="AT1G14810-MONOMER" />
+      <Property key="ComponentCount" value="1" />
+      <Property key="IsComplex" value="true" />
+      <Property key="Catalyzes" value="RXN-12386" />
+      <Property key="^coefficient" value="2" />
+      <Property key="InstanceNameTemplate" value="CPLX-*" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_11812229" />
+    </Group>
+  </Groups>
+  <Citations>
+    <Citation elementId="citation_PUB_9106516">
+      <Xref identifier="9106516" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_27189588">
+      <Xref identifier="27189588" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_11812229">
+      <Xref identifier="11812229" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_13239305">
+      <Xref identifier="13239305" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_10736372">
+      <Xref identifier="10736372" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_TYAGI82">
+      <Xref identifier="PUB-TYAGI82 | Occurrence of diaminopimelate epimerase in maize (Tyagi, V.V.S., Henke, R.R., Farkas, W.R., 1982)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_PUB_8000011">
+      <Xref identifier="8000011" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_TYAGI83">
+      <Xref identifier="PUB-TYAGI83 | Partial purification and characterization of dihydrodipicolinate reductase from maize (Tyagi, Vijai, Henke, Randolph, Karkas, Walter, 1983)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_PUB_12602885">
+      <Xref identifier="12602885" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_16216875">
+      <Xref identifier="16216875" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_8700867">
+      <Xref identifier="8700867" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_11069709">
+      <Xref identifier="11069709" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_16306140">
+      <Xref identifier="16306140" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_14833423">
+      <Xref identifier="14833423" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_16361515">
+      <Xref identifier="16361515" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_18493048">
+      <Xref identifier="18493048" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_11569502">
+      <Xref identifier="11569502" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_1906065">
+      <Xref identifier="1906065" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_1679557">
+      <Xref identifier="1679557" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_30026566">
+      <Xref identifier="30026566" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_10758475">
+      <Xref identifier="10758475" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_7948877">
+      <Xref identifier="7948877" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_15652176">
+      <Xref identifier="15652176" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

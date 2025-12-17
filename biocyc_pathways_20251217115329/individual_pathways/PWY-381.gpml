@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="nitrate reduction II (assimilatory)" organism="Arabidopsis thaliana" source="PlantCyc" version="20251217115329">
+  <Xref identifier="PWY-381" dataSource="MetaCyc" />
+  <Description>In plants, nitrate is an important source of nitrogen. Nitrate assimilation begins with the uptake of nitrate from the soil by the root. Root epidermal and cortical cells are the first to actively transport nitrate into their cytosols. Nitrate then crosses the endodermis of the root and is released into the xylem. After long distance transport up the xylem, nitrate is again actively transported into the cells of the leaf. Once in the cell, nitrate can be stored in the vacuole (due to toxicity) or reduced to nitrite by the enzyme nitrate reductase (NR). Nitrite is transported into the chloroplast, where it is reduced to ammonia by nitrite reductase (NiR). The final step of the pathway is the incorporation of ammonia into glutamine by glutamine synthetase.</Description>
+  <Authors>
+    <Author name="xue" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-381" />
+  <Property key="Type" value="Nitrate-Reduction" />
+  <Property key="ReactionCount" value="2" />
+  <Property key="ReactionIDs" value="FERREDOXIN--NITRITE-REDUCTASE-RXN, NITRATE-REDUCTASE-NADH-RXN" />
+  <Property key="Organism" value="Arabidopsis thaliana" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_PUB_12091153" />
+  <CitationRef elementRef="citation__ARABIDOPSIS94_" />
+  <CitationRef elementRef="citation__PLANTBIOCHEMISTRY97_" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="AT1G37130-MONOMER" textLabel="nitrate reductase 2 subunit" type="Protein" groupRef="CPLX-7198">
+      <Xref identifier="AT1G37130.1" dataSource="TAIR gene name" />
+      <Graphics centerX="1438.729736328125" centerY="314.0827331542969" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT1G37130-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT1G37130.1" />
+      <Property key="Synonym_1" value="nitrate reductase (NADH)" />
+      <Property key="Accession1" value="AT1G37130.1" />
+      <Property key="ComponentOf" value="CPLX-7198" />
+      <Property key="FunctionalAssignmentStatus" value=":AMBIGUOUS" />
+      <Property key="Gene" value="AT1G37130" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="MolecularWeightKd" value="103." />
+      <Property key="MolecularWeightSeq" value="103." />
+      <Property key="Species" value="ORG-5993" />
+    </DataNode>
+    <DataNode elementId="Oxidized-ferredoxins" textLabel="Oxidized-ferredoxins" type="Metabolite">
+      <Xref identifier="Oxidized-ferredoxins" dataSource="" />
+      <Graphics centerX="794.5946655273438" centerY="810.146728515625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="AAAAAA" borderStyle="Solid" borderWidth="1.0" fillColor="F0F0F0" shapeType="Rectangle" />
+      <Property key="IsPlaceholder" value="true" />
+    </DataNode>
+    <DataNode elementId="NITRITE" textLabel="nitrite" type="Metabolite">
+      <Xref identifier="IOVCWXUNBOPUCH-UHFFFAOYSA-M" dataSource="InChIKey" />
+      <Graphics centerX="642.791015625" centerY="933.2229614257812" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">Nitrous acid exists at physiological pH as the charged anion nitrite. pKa = 3.3 at 18 &amp;deg;C</Comment>
+      <Property key="UniqueID" value="NITRITE" />
+      <Property key="AlternativeId_ReactomeCpd" value="1222379" />
+      <Property key="AlternativeId_Seed" value="cpd00075" />
+      <Property key="AlternativeId_Metanetx" value="MNXM107" />
+      <Property key="AlternativeId_Bigg" value="no2" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC16301" />
+      <Property key="AlternativeId_Hmdb" value="HMDB02786" />
+      <Property key="AlternativeId_Chemspider" value="921" />
+      <Property key="AlternativeId_Pubchem" value="946" />
+      <Property key="AlternativeId_Chebi" value="16301" />
+      <Property key="AlternativeId_Cas" value="14797-65-0" />
+      <Property key="AlternativeId_LigandCpd" value="C00088" />
+      <Property key="Synonym_1" value="NO&lt;sub&gt;2&lt;/sub&gt;" />
+      <Property key="Synonym_2" value="NO&lt;sub&gt;2&lt;/sub&gt;&lt;sup&gt;-&lt;/sup&gt;" />
+      <Property key="Synonym_3" value="nitrous acid" />
+      <Property key="ChemicalFormula" value="(N 1) (O 2)" />
+      <Property key="AtomCharges" value="(2 -1)" />
+      <Property key="Gibbs0" value="-65.91206" />
+      <Property key="Inchi" value="InChI=1S/HNO2/c2-1-3/h(H,2,3)/p-1" />
+      <Property key="InchiKey" value="InChIKey=IOVCWXUNBOPUCH-UHFFFAOYSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="46.005" />
+      <Property key="MonoisotopicMw" value="47.0007282815" />
+      <Property key="NonStandardInchi" value="InChI=1S/HNO2/c2-1-3/h(H,2,3)/p-1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-8366, REG-15376" />
+      <Property key="Smiles" value="N([O-])=O" />
+    </DataNode>
+    <DataNode elementId="NAD" textLabel="NAD⁺" type="Metabolite">
+      <Xref identifier="BAWFJGJZGIEFAR-NNYOXOHSSA-M" dataSource="InChIKey" />
+      <Graphics centerX="100.0" centerY="974.68017578125" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: NAD| and |FRAME: NADP| are dinucleotides containing one |FRAME: NIACINAMIDE| base and one |FRAME: ADENINE| base. Each nucleotide is connected to a ribose sugar at position 1, and the two riboses are connected at their 5 position via a diphosphate. The only difference between the two is that in NADP there is an additional phosphate group at the 2&apos; position of the ribose that carries the adenine moiety. These molecules are biological carriers of reductive equivalents (i.e. high potential electrons). Most of the time they function as cosubstrates, and in some cases they function as |FRAME: Cofactors cofactors|. They are often referred to by the obsolete term &quot;coenzymes&quot;. The most common function of |FRAME: NAD| is to accept two electrons and a proton (a hydride ion) from a substrate that is being oxidized. This reduction converts |FRAME: NAD| to |FRAME: NADH|, the reduced form. NADH then diffuses or is transported to a terminal oxidase, where the electrons are passed on, regenerating the oxidized form. |FRAME: NADPH|, on the other hand, is mostly involved in biosynthetic reactions, where it serves as an electron donor. NADPH is formed by reduction of |FRAME: NADP|, which occurs by different mechanisms in different types of organisms. In photosynthetic organisms |FRAME: NADP| is reduced by |FRAME: CPLX-84|. In heterotrophic organisms it is reduced by central metabolism processes such as the pentose phosphate pathway (see |FRAME: OXIDATIVEPENT-PWY|).</Comment>
+      <Property key="UniqueID" value="NAD" />
+      <Property key="AlternativeId_Mediadb" value="compounds/3/" />
+      <Property key="AlternativeId_Seed" value="cpd00003" />
+      <Property key="AlternativeId_Metanetx" value="MNXM8" />
+      <Property key="AlternativeId_Refmet" value="NAD+" />
+      <Property key="AlternativeId_Bigg" value="nad" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57540" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00902" />
+      <Property key="AlternativeId_Chemspider" value="10239196" />
+      <Property key="AlternativeId_Chebi" value="57540" />
+      <Property key="AlternativeId_Pubchem" value="15938971" />
+      <Property key="AlternativeId_LigandCpd" value="C00003" />
+      <Property key="AlternativeId_Cas" value="53-84-9" />
+      <Property key="Synonym_1" value="NAD+" />
+      <Property key="Synonym_2" value="beta-nicotinamide adenine dinucleotide" />
+      <Property key="Synonym_3" value="coenzyme I" />
+      <Property key="Synonym_4" value="diphosphopyridine nucleotide" />
+      <Property key="Synonym_5" value="diphosphopyridine nucleotide oxidized" />
+      <Property key="Synonym_6" value="nicotinamide adenine dinucleotide" />
+      <Property key="Synonym_7" value="nicotinamide adenine dinucleotide oxidized" />
+      <Property key="Synonym_8" value="NAD-oxidized" />
+      <Property key="Synonym_9" value="NAD-ox" />
+      <Property key="Synonym_10" value="DPN+" />
+      <Property key="Synonym_11" value="DPN-ox" />
+      <Property key="Synonym_12" value="DPN" />
+      <Property key="Synonym_13" value="&amp;beta;-nicotinamide adenine dinucleotide" />
+      <Property key="Synonym_14" value="NAD" />
+      <Property key="Synonym_15" value="&amp;beta;-NAD&lt;sup&gt;+&lt;/sup&gt;" />
+      <Property key="ChemicalFormula" value="(C 21) (H 26) (N 7) (O 14) (P 2)" />
+      <Property key="AtomCharges" value="(27 1), (37 -1), (35 -1)" />
+      <Property key="CofactorsOf" value="ENZRXN-12451, ENZRXN-1362, ENZRXNQT-9536, ENZRXN-9141, ENZRXN-9122" />
+      <Property key="Gibbs0" value="-338.38196" />
+      <Property key="Inchi" value="InChI=1S/C21H27N7O14P2/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(32)14(30)11(41-21)6-39-44(36,37)42-43(34,35)38-5-10-13(29)15(31)20(40-10)27-3-1-2-9(4-27)18(23)33/h1-4,7-8,10-11,13-16,20-21,29-32H,5-6H2,(H5-,22,23,24,25,33,34,35,36,37)/p-1/t10-,11-,13-,14-,15-,16-,20-,21-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=BAWFJGJZGIEFAR-NNYOXOHSSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="662.422" />
+      <Property key="MonoisotopicMw" value="665.1247716966999" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-13857, REG-14487, REG0-8643, REG-14636, REG0-8746, REG0-6740, REG0-10411, REG-8498, REG-11606, REG0-8592, REG0-7959, REG-7455, REG-7348, REG-10755, REG-8006, REG0-8151, REG-8140, REG0-7613" />
+      <Property key="Smiles" value="C5(/C(/C(N)=O)=C\C=C/[N+](/[C@@H]4(O[C@H](COP(OP(OC[C@H]3(O[C@@H](N1(C2(\C(\N=C/1)=C(N)/N=C\N=2)))[C@H](O)[C@H](O)3))(=O)[O-])(=O)[O-])[C@@H](O)[C@@H](O)4))=5)" />
+    </DataNode>
+    <DataNode elementId="Reduced-ferredoxins" textLabel="Reduced-ferredoxins" type="Metabolite">
+      <Xref identifier="Reduced-ferredoxins" dataSource="" />
+      <Graphics centerX="149.6262969970703" centerY="355.7398986816406" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="AAAAAA" borderStyle="Solid" borderWidth="1.0" fillColor="F0F0F0" shapeType="Rectangle" />
+      <Property key="IsPlaceholder" value="true" />
+    </DataNode>
+    <DataNode elementId="NADH" textLabel="NADH" type="Metabolite">
+      <Xref identifier="BOPGDPNILDQYTO-NNYOXOHSSA-L" dataSource="InChIKey" />
+      <Graphics centerX="763.3211059570312" centerY="50.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">|FRAME: NAD| and |FRAME: NADP| are dinucleotides containing one |FRAME: NIACINAMIDE| base and one |FRAME: ADENINE| base. Each nucleotide is connected to a ribose sugar at position 1, and the two riboses are connected at their 5 position via a diphosphate. The only difference between the two is that in NADP there is an additional phosphate group at the 2&apos; position of the ribose that carries the adenine moiety. These molecules are biological carriers of reductive equivalents (i.e. high potential electrons). Most of the time they function as cosubstrates, and in some cases they function as |FRAME: Cofactors cofactors|. They are often referred to by the obsolete term &quot;coenzymes&quot;. The most common function of |FRAME: NAD| is to accept two electrons and a proton (a hydride ion) from a substrate that is being oxidized. This reduction converts |FRAME: NAD| to |FRAME: NADH|, the reduced form. NADH then diffuses or is transported to a terminal oxidase, where the electrons are passed on, regenerating the oxidized form. |FRAME: NADPH|, on the other hand, is mostly involved in biosynthetic reactions, where it serves as an electron donor. NADPH is formed by reduction of |FRAME: NADP|, which occurs by different mechanisms in different types of organisms. In photosynthetic organisms |FRAME: NADP| is reduced by |FRAME: CPLX-84|. In heterotrophic organisms it is reduced by central metabolism processes such as the pentose phosphate pathway (see |FRAME: OXIDATIVEPENT-PWY|).</Comment>
+      <Property key="UniqueID" value="NADH" />
+      <Property key="AlternativeId_Seed" value="cpd00004" />
+      <Property key="AlternativeId_Metanetx" value="MNXM10" />
+      <Property key="AlternativeId_Refmet" value="NADH" />
+      <Property key="AlternativeId_Bigg" value="nadh" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57945" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01487" />
+      <Property key="AlternativeId_Chemspider" value="10239197" />
+      <Property key="AlternativeId_Chebi" value="57945" />
+      <Property key="AlternativeId_Pubchem" value="21604869" />
+      <Property key="AlternativeId_Cas" value="58-68-4" />
+      <Property key="AlternativeId_LigandCpd" value="C00004" />
+      <Property key="Synonym_1" value="NADH&lt;sub&gt;2&lt;/sub&gt;" />
+      <Property key="Synonym_2" value="NADH2" />
+      <Property key="Synonym_3" value="dihydrodiphosphopyridine nucleotide" />
+      <Property key="Synonym_4" value="diphosphopyridine nucleotide reduced" />
+      <Property key="Synonym_5" value="dihydronicotinamide adenine dinucleotide" />
+      <Property key="Synonym_6" value="nicotinamide adenine dinucleotide reduced" />
+      <Property key="Synonym_7" value="NAD-reduced" />
+      <Property key="Synonym_8" value="NADH+H+" />
+      <Property key="Synonym_9" value="DPNH" />
+      <Property key="Synonym_10" value="&amp;beta;-NADH" />
+      <Property key="Synonym_11" value="&amp;beta;-nicotinamide adenine dinucleotide, reduced" />
+      <Property key="ChemicalFormula" value="(C 21) (H 27) (N 7) (O 14) (P 2)" />
+      <Property key="AtomCharges" value="(35 -1), (37 -1)" />
+      <Property key="Gibbs0" value="-325.20697" />
+      <Property key="Inchi" value="InChI=1S/C21H29N7O14P2/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(32)14(30)11(41-21)6-39-44(36,37)42-43(34,35)38-5-10-13(29)15(31)20(40-10)27-3-1-2-9(4-27)18(23)33/h1,3-4,7-8,10-11,13-16,20-21,29-32H,2,5-6H2,(H2,23,33)(H,34,35)(H,36,37)(H2,22,24,25)/p-2/t10-,11-,13-,14-,15-,16-,20-,21-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=BOPGDPNILDQYTO-NNYOXOHSSA-L" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="663.43" />
+      <Property key="MonoisotopicMw" value="665.1247716966999" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-13296, REG-8720, REG-9482, REG0-8209, REG0-11850, REG-9631, REG-10377, REG-9494, REG-6521, REG-8741, REG0-8745, REG0-9223, REG-11600, REG0-6738, REG0-8782, REG-8495, REG0-7641, REG0-7644, REG0-7960, REG-7340, REG-7356, REG-7350, REG0-9224, REG-11451, REG-6090" />
+      <Property key="Smiles" value="C1(/N(\C=C/CC(/C(N)=O)=1)[C@@H]5(O[C@H](COP(OP(OC[C@H]4(O[C@@H](N2(C3(\C(\N=C/2)=C(N)/N=C\N=3)))[C@H](O)[C@H](O)4))(=O)[O-])(=O)[O-])[C@@H](O)[C@@H](O)5))" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="425.6373291015625" centerY="1550.0" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="ChemicalFormula" value="(H 1)" />
+      <Property key="AtomCharges" value="(1 1)" />
+      <Property key="Gibbs0" value="0.42906138" />
+      <Property key="Inchi" value="InChI=1S/p+1" />
+      <Property key="InchiKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicMw" value="1.0078250321" />
+      <Property key="NonStandardInchi" value="InChI=1S/p+1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="[H+]" />
+    </DataNode>
+    <DataNode elementId="WATER" textLabel="H₂O" type="Metabolite">
+      <Xref identifier="XLYOFNOQVPJJNP-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1062.8291015625" centerY="834.90869140625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="WATER" />
+      <Property key="AlternativeId_Bigg" value="33474" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15377" />
+      <Property key="AlternativeId_Hmdb" value="HMDB02111" />
+      <Property key="AlternativeId_Chemspider" value="937" />
+      <Property key="AlternativeId_Chebi" value="15377" />
+      <Property key="AlternativeId_Pubchem" value="962" />
+      <Property key="AlternativeId_LigandCpd" value="C00001" />
+      <Property key="AlternativeId_Cas" value="7732-18-5" />
+      <Property key="Synonym_1" value="H&lt;sub&gt;2&lt;/sub&gt;0" />
+      <Property key="Synonym_2" value="H2O" />
+      <Property key="Synonym_3" value="H20" />
+      <Property key="Synonym_4" value="hydrogen oxide" />
+      <Property key="Synonym_5" value="water" />
+      <Property key="ChemicalFormula" value="(H 2) (O 1)" />
+      <Property key="Gibbs0" value="-36.144756" />
+      <Property key="Inchi" value="InChI=1S/H2O/h1H2" />
+      <Property key="InchiKey" value="InChIKey=XLYOFNOQVPJJNP-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="18.015" />
+      <Property key="MonoisotopicMw" value="18.0105646863" />
+      <Property key="NonStandardInchi" value="InChI=1S/H2O/h1H2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="O" />
+    </DataNode>
+    <DataNode elementId="NITRATE" textLabel="nitrate" type="Metabolite">
+      <Xref identifier="NHNBFGGVMKEFGY-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="1600.0" centerY="1140.4564208984375" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">Nitrate is the conjugate base of |FRAME: CPD-15028|. It is a common electron acceptor for anaerobic bacteria (see |FRAME: Nitrate-Reduction &quot;nitrate reduction pathways&quot;|), and is also the ultimate product of an ammonia oxidation process known as |FRAME: P282-PWY nitrification|.</Comment>
+      <Property key="UniqueID" value="NITRATE" />
+      <Property key="AlternativeId_Mediadb" value="compounds/239/" />
+      <Property key="AlternativeId_Bigg" value="no3" />
+      <Property key="AlternativeId_Hmdb" value="HMDB02878" />
+      <Property key="AlternativeId_Wikipedia" value="Nitrate" />
+      <Property key="AlternativeId_Chemspider" value="918" />
+      <Property key="AlternativeId_Pubchem" value="943" />
+      <Property key="AlternativeId_Chebi" value="17632" />
+      <Property key="AlternativeId_LigandCpd" value="C00244" />
+      <Property key="AlternativeId_Cas" value="14797-55-8" />
+      <Property key="Synonym_1" value="NO&lt;SUB&gt;3&lt;/SUB&gt;" />
+      <Property key="Synonym_2" value="NO&lt;SUB&gt;3&lt;/SUB&gt;&lt;SUP&gt;-&lt;/SUP&gt;" />
+      <Property key="ChemicalFormula" value="(N 1) (O 3)" />
+      <Property key="AtomCharges" value="(4 -1)" />
+      <Property key="ComponentOf" value="CPD-13508" />
+      <Property key="Gibbs0" value="-26.92206" />
+      <Property key="Inchi" value="InChI=1S/NO3/c2-1(3)4/q-1" />
+      <Property key="InchiKey" value="InChIKey=NHNBFGGVMKEFGY-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="62.005" />
+      <Property key="MonoisotopicMw" value="62.9956429036" />
+      <Property key="NonStandardInchi" value="InChI=1S/NO3/c2-1(3)4/q-1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-13298, REG0-10796" />
+      <Property key="Smiles" value="N(=O)(=O)[O-]" />
+    </DataNode>
+    <DataNode elementId="AMMONIUM" textLabel="ammonium" type="Metabolite">
+      <Xref identifier="QGZKDVFQNNGYKY-UHFFFAOYSA-O" dataSource="InChIKey" />
+      <Graphics centerX="773.7323608398438" centerY="588.0475463867188" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AMMONIUM" />
+      <Property key="AlternativeId_Mediadb" value="compounds/1211/" />
+      <Property key="AlternativeId_Bigg" value="nh4" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC28938" />
+      <Property key="AlternativeId_Hmdb" value="HMDB41827" />
+      <Property key="AlternativeId_Chebi" value="28938" />
+      <Property key="AlternativeId_Chemspider" value="218" />
+      <Property key="AlternativeId_Pubchem" value="223" />
+      <Property key="AlternativeId_LigandCpd" value="C01342" />
+      <Property key="AlternativeId_Cas" value="14798-03-9" />
+      <Property key="Synonym_1" value="NH&lt;SUB&gt;4&lt;/SUB&gt;&lt;SUP&gt;+&lt;/SUP&gt;" />
+      <Property key="ChemicalFormula" value="(H 4) (N 1)" />
+      <Property key="AtomCharges" value="(1 1)" />
+      <Property key="ComponentOf" value="CPD-8916, NH4CL, NH42SO4" />
+      <Property key="Gibbs0" value="21.812426" />
+      <Property key="Inchi" value="InChI=1S/H3N/h1H3/p+1" />
+      <Property key="InchiKey" value="InChIKey=QGZKDVFQNNGYKY-UHFFFAOYSA-O" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="InternalsOfGroup" value="GLYCO-CT-AMINO" />
+      <Property key="MolecularWeight" value="18.038" />
+      <Property key="MonoisotopicMw" value="18.0343741336" />
+      <Property key="NonStandardInchi" value="InChI=1S/H3N/h1H3/p+1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-8579, REG0-6780, REG0-8381, REG-11230, REG0-7382, REG-6227, REG-6239, REG-6310, REG-8194, REG0-8119, REG0-7391, REG-6983, REG-6320, REG-7120, REG0-7616" />
+      <Property key="Smiles" value="[NH4+]" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="FERREDOXIN--NITRITE-REDUCTASE-RXN">
+      <Xref identifier="EC-1.7.7.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="FERREDOXIN--NITRITE-REDUCTASE-RXN_start" x="687.791015625" y="933.2229614257812" elementRef="NITRITE" relX="1.0" relY="0.0" />
+        <Point elementId="FERREDOXIN--NITRITE-REDUCTASE-RXN_end" arrowHead="Conversion" x="728.7323608398438" y="588.0475463867188" elementRef="AMMONIUM" relX="-1.0" relY="0.0" />
+        <Anchor elementId="FERREDOXIN--NITRITE-REDUCTASE-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="FERREDOXIN--NITRITE-REDUCTASE-RXN" />
+      <Property key="EC_Number" value="EC-1.7.7.1" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-381" />
+      <Property key="ReactionEquation" value="AMMONIUM + WATER + Oxidized-ferredoxins =&gt; NITRITE + Reduced-ferredoxins + PROTON" />
+      <Property key="ReactionDirection" value="RIGHT-TO-LEFT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionType" value="Protein-Modification-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-6.3854218" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="^coefficient" value="2, 6, 6, 8" />
+    </Interaction>
+    <Interaction elementId="FERREDOXIN--NITRITE-REDUCTASE-RXN_anchor_reactant_0">
+      <Xref identifier="EC-1.7.7.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="FERREDOXIN--NITRITE-REDUCTASE-RXN_anchor_reactant_start_0" x="818.7323608398438" y="588.0475463867188" elementRef="AMMONIUM" relX="1.0" relY="0.0" />
+        <Point elementId="FERREDOXIN--NITRITE-REDUCTASE-RXN_anchor_reactant_end_0" x="0" y="0" elementRef="FERREDOXIN--NITRITE-REDUCTASE-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="FERREDOXIN--NITRITE-REDUCTASE-RXN_anchor_reactant_1">
+      <Xref identifier="EC-1.7.7.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="FERREDOXIN--NITRITE-REDUCTASE-RXN_anchor_reactant_start_1" x="1107.8291015625" y="834.90869140625" elementRef="WATER" relX="1.0" relY="0.0" />
+        <Point elementId="FERREDOXIN--NITRITE-REDUCTASE-RXN_anchor_reactant_end_1" x="0" y="0" elementRef="FERREDOXIN--NITRITE-REDUCTASE-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="FERREDOXIN--NITRITE-REDUCTASE-RXN_anchor_reactant_2">
+      <Xref identifier="EC-1.7.7.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="FERREDOXIN--NITRITE-REDUCTASE-RXN_anchor_reactant_start_2" x="839.5946655273438" y="810.146728515625" elementRef="Oxidized-ferredoxins" relX="1.0" relY="0.0" />
+        <Point elementId="FERREDOXIN--NITRITE-REDUCTASE-RXN_anchor_reactant_end_2" x="0" y="0" elementRef="FERREDOXIN--NITRITE-REDUCTASE-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="FERREDOXIN--NITRITE-REDUCTASE-RXN_anchor_product_0">
+      <Xref identifier="EC-1.7.7.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="FERREDOXIN--NITRITE-REDUCTASE-RXN_anchor_product_start_0" x="0" y="0" elementRef="FERREDOXIN--NITRITE-REDUCTASE-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="FERREDOXIN--NITRITE-REDUCTASE-RXN_anchor_product_end_0" arrowHead="Conversion" x="597.791015625" y="933.2229614257812" elementRef="NITRITE" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="FERREDOXIN--NITRITE-REDUCTASE-RXN_anchor_product_1">
+      <Xref identifier="EC-1.7.7.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="FERREDOXIN--NITRITE-REDUCTASE-RXN_anchor_product_start_1" x="0" y="0" elementRef="FERREDOXIN--NITRITE-REDUCTASE-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="FERREDOXIN--NITRITE-REDUCTASE-RXN_anchor_product_end_1" arrowHead="Conversion" x="104.62629699707031" y="355.7398986816406" elementRef="Reduced-ferredoxins" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="FERREDOXIN--NITRITE-REDUCTASE-RXN_anchor_product_2">
+      <Xref identifier="EC-1.7.7.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="FERREDOXIN--NITRITE-REDUCTASE-RXN_anchor_product_start_2" x="0" y="0" elementRef="FERREDOXIN--NITRITE-REDUCTASE-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="FERREDOXIN--NITRITE-REDUCTASE-RXN_anchor_product_end_2" arrowHead="Conversion" x="380.6373291015625" y="1550.0" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="NITRATE-REDUCTASE-NADH-RXN">
+      <Xref identifier="EC-1.7.1.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="NITRATE-REDUCTASE-NADH-RXN_start" x="1645.0" y="1140.4564208984375" elementRef="NITRATE" relX="1.0" relY="0.0" />
+        <Point elementId="NITRATE-REDUCTASE-NADH-RXN_end" arrowHead="Conversion" x="597.791015625" y="933.2229614257812" elementRef="NITRITE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="NITRATE-REDUCTASE-NADH-RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Pir" value="A33717" />
+      <Property key="UniqueID" value="NITRATE-REDUCTASE-NADH-RXN" />
+      <Property key="EC_Number" value="EC-1.7.1.1" />
+      <Property key="Pathways" value="PWY-381, PWY4LZ-283" />
+      <Property key="PathwayCount" value="2" />
+      <Property key="ReactionEquation" value="NITRITE + WATER + NAD =&gt; PROTON + NITRATE + NADH" />
+      <Property key="ReactionDirection" value="RIGHT-TO-LEFT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXN-1303, ENZRXN-1302" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="Synonym_1" value="Assimilatory nitrate reductase" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="88.7388" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="Synonyms" value="Assimilatory nitrate reductase" />
+    </Interaction>
+    <Interaction elementId="NITRATE-REDUCTASE-NADH-RXN_ENZRXN-1303">
+      <Waypoints>
+        <Point elementId="NITRATE-REDUCTASE-NADH-RXN_ENZRXN-1303_start" x="1438.729736328125" y="326.5827331542969" elementRef="AT1G37130-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="NITRATE-REDUCTASE-NADH-RXN_ENZRXN-1303_end" arrowHead="Catalysis" x="0" y="0" elementRef="NITRATE-REDUCTASE-NADH-RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="NITRATE-REDUCTASE-NADH-RXN_anchor_reactant_0">
+      <Xref identifier="EC-1.7.1.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="NITRATE-REDUCTASE-NADH-RXN_anchor_reactant_start_0" x="687.791015625" y="933.2229614257812" elementRef="NITRITE" relX="1.0" relY="0.0" />
+        <Point elementId="NITRATE-REDUCTASE-NADH-RXN_anchor_reactant_end_0" x="0" y="0" elementRef="NITRATE-REDUCTASE-NADH-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="NITRATE-REDUCTASE-NADH-RXN_anchor_reactant_1">
+      <Xref identifier="EC-1.7.1.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="NITRATE-REDUCTASE-NADH-RXN_anchor_reactant_start_1" x="1107.8291015625" y="834.90869140625" elementRef="WATER" relX="1.0" relY="0.0" />
+        <Point elementId="NITRATE-REDUCTASE-NADH-RXN_anchor_reactant_end_1" x="0" y="0" elementRef="NITRATE-REDUCTASE-NADH-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="NITRATE-REDUCTASE-NADH-RXN_anchor_reactant_2">
+      <Xref identifier="EC-1.7.1.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="NITRATE-REDUCTASE-NADH-RXN_anchor_reactant_start_2" x="145.0" y="974.68017578125" elementRef="NAD" relX="1.0" relY="0.0" />
+        <Point elementId="NITRATE-REDUCTASE-NADH-RXN_anchor_reactant_end_2" x="0" y="0" elementRef="NITRATE-REDUCTASE-NADH-RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="NITRATE-REDUCTASE-NADH-RXN_anchor_product_0">
+      <Xref identifier="EC-1.7.1.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="NITRATE-REDUCTASE-NADH-RXN_anchor_product_start_0" x="0" y="0" elementRef="NITRATE-REDUCTASE-NADH-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="NITRATE-REDUCTASE-NADH-RXN_anchor_product_end_0" arrowHead="Conversion" x="380.6373291015625" y="1550.0" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="NITRATE-REDUCTASE-NADH-RXN_anchor_product_1">
+      <Xref identifier="EC-1.7.1.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="NITRATE-REDUCTASE-NADH-RXN_anchor_product_start_1" x="0" y="0" elementRef="NITRATE-REDUCTASE-NADH-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="NITRATE-REDUCTASE-NADH-RXN_anchor_product_end_1" arrowHead="Conversion" x="1555.0" y="1140.4564208984375" elementRef="NITRATE" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="NITRATE-REDUCTASE-NADH-RXN_anchor_product_2">
+      <Xref identifier="EC-1.7.1.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="NITRATE-REDUCTASE-NADH-RXN_anchor_product_start_2" x="0" y="0" elementRef="NITRATE-REDUCTASE-NADH-RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="NITRATE-REDUCTASE-NADH-RXN_anchor_product_end_2" arrowHead="Conversion" x="718.3211059570312" y="50.0" elementRef="NADH" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Groups>
+    <Group elementId="CPLX-7198" textLabel="CPLX-7198" type="Complex">
+      <Xref identifier="CPLX-7198" dataSource="plantcyc" />
+      <Graphics centerX="1438.729736328125" centerY="314.0827331542969" width="140" height="100" textColor="666666" fontName="Arial" fontSize="10" borderColor="9900CC" borderStyle="Dashed" borderWidth="2.0" fillColor="F5E6FF" shapeType="Rectangle" zOrder="-1" />
+      <Comment source="AU4FS-1, THE-ARABIDOPSIS-INFORMATION-RESOURCE, hartmut">This |FRAME:ARA| |FRAME:CPLX-7198| belongs to the sulfite oxidase family, which includes both sulfite-oxidizing enzymes (such as sulfite:cytochrome c oxidoreductase) and plant assimilatory nitrate reductases. Like many other plant nitrate reductases (NRs), the Arabidopsis NR protein has three functional domains: a MoCo cofactor binding domain, a heme binding domain which is similar to the one contained in cytochrome b5 super family, and a FAD binding domain|CITS: [3393528]|.</Comment>
+      <Property key="UniqueID" value="CPLX-7198" />
+      <Property key="ComplexComponents" value="AT1G37130-MONOMER" />
+      <Property key="ComponentCount" value="1" />
+      <Property key="IsComplex" value="true" />
+      <Property key="Catalyzes" value="RXN-1303" />
+      <Property key="^coefficient" value="2" />
+      <Property key="InstanceNameTemplate" value="CPLX-*" />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_3393528" />
+    </Group>
+  </Groups>
+  <Citations>
+    <Citation elementId="citation__ARABIDOPSIS94_">
+      <Xref identifier="[ARABIDOPSIS94]" dataSource="PlantCyc" />
+    </Citation>
+    <Citation elementId="citation_PUB_3393528">
+      <Xref identifier="3393528" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation__PLANTBIOCHEMISTRY97_">
+      <Xref identifier="[PLANTBIOCHEMISTRY97]" dataSource="PlantCyc" />
+    </Citation>
+    <Citation elementId="citation_PUB_12091153">
+      <Xref identifier="12091153" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

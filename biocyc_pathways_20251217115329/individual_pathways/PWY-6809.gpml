@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="neoxanthin biosynthesis" organism="Solanum tuberosum, Solanum lycopersicum" source="PlantCyc" version="20251217115329">
+  <Description>|FRAME: CPD1F-135 Neoxanthin| is an allenic xanthophyll recognized as the last product of carotenoid synthesis in green plants |CITS: [11029576 ]|. Neoxanthin is believed to play two key roles: i) it is a part of the light-harvesting complex (LHC) ii) it is a precursor to the plant growth hormone |FRAME: CPD-693 &quot;abscisic acid&quot;| (ABA) |CITS: [11094161]|. Loss of neoxanthin in parasitic plants like Cuscuta, and its impact on LHC, is under investigations |CITS: [ 14610095]|. |FRAME: MONOMER-16625 &quot;Neoxanthin synthase&quot;| catalyzes the conversion of the di-epoxidated precursor |FRAME: CPD1F-133 violaxanthin| into |FRAME: CPD1F-135 &lt;i&gt;trans&lt;/i&gt;-neoxanthin|. The enzyme has been isolated from |FRAME: TAX-4113 &quot;&lt;i&gt;Solanum tuberosum&lt;/i&gt; (potato)&quot;| and |FRAME: TAX-4081 &lt;i&gt;Solanum lycopersicum&lt;/i&gt; (tomato)&quot;| |CITS: [ 11029576]|.</Description>
+  <Authors>
+    <Author name="PMN" />
+    <Author name="zhang" />
+    <Author name="O-28" />
+    <Author name="pujar" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Property key="UniqueID" value="PWY-6809" />
+  <Property key="Type" value="C40-Carotenoids-Biosynthesis" />
+  <Property key="ReactionCount" value="2" />
+  <Property key="ReactionIDs" value="RXN-8074, RXN1F-155" />
+  <Property key="PathwayLinks" value="(CPD1F-133 PWY-5945)" />
+  <Property key="Organism" value="Solanum tuberosum, Solanum lycopersicum" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_PUB_11029576" />
+  <CitationRef elementRef="citation_PUB_11094161" />
+  <Graphics boardWidth="1800.0" boardHeight="1750.0" />
+  <DataNodes>
+    <DataNode elementId="G-14483" textLabel="NYS" type="GeneProduct">
+      <Xref identifier="G-14483" dataSource="plantcyc" />
+      <Graphics centerX="276.804443359375" centerY="1301.957275390625" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="G-14483" />
+      <Property key="Product" value="MONOMER-16625" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="AT1G67080" textLabel="ABA4" type="GeneProduct">
+      <Xref identifier="AT1G67080" dataSource="TAIR gene name" />
+      <Graphics centerX="1549.853515625" centerY="958.4120483398438" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT1G67080" />
+      <Property key="Product" value="AT1G67080-MONOMER" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="Accession1" value="AT1G67080" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="G-9406" textLabel="NSY" type="GeneProduct">
+      <Xref identifier="G-9406" dataSource="plantcyc" />
+      <Graphics centerX="1187.770751953125" centerY="1550.0" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="G-9406" />
+      <Property key="Product" value="MONOMER-12165" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+      <CitationRef elementRef="citation_PUB_11029576" />
+    </DataNode>
+    <DataNode elementId="AT1G67080-MONOMER" textLabel="neoxanthin synthase non-catalytic putative component" type="Protein">
+      <Xref identifier="Q8LFP9" dataSource="uniprot" />
+      <Graphics centerX="863.1161499023438" centerY="50.0" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, THE-ARABIDOPSIS-INFORMATION-RESOURCE, dreher">The ABA4 protein appears to play a role in &lt;i&gt;trans&lt;/i&gt;-neoxanthin production based on analyses of &lt;i&gt;aba4&lt;/i&gt; mutants. However, attempts to demonstrate enzymatic activity for ABA4 &lt;i&gt;in vitro&lt;/i&gt; were unsuccessful, and ABA4 does not possess any known enzymatically active domains |CITS: [17470058]|. It is therefore possible that ABA4 does not directly catalyze the formation of |FRAME: CPD1F-135 &lt;i&gt;trans&lt;/i&gt;-neoxanthin|, or perhaps additional accessory proteins must interact with ABA4 to allow it to function &lt;i&gt;in vitro&lt;/i&gt; |CITS: [17470058]|. ABA4 does have four predicted transmembrane helices that indicate some potential structural similarity between ABA4 and the rhodopsin apoprotein which binds to the structurally-related compound |FRAME: CPD-881 11-cis-Retinal|, and &lt;i&gt;aba4&lt;/i&gt; mutants have elevated levels of |FRAME: CPD1F-133 &quot;&lt;i&gt;trans&lt;/i&gt;-violaxanthin| and &lt;i&gt;cis&lt;/i&gt;-violaxanthin, as well as reduced levels of |FRAME: CPD1F-135 &quot;&lt;i&gt;trans&lt;/i&gt;-neoxanthin| and &lt;i&gt;cis&lt;/i&gt;-neoxanthin |CITS: [17470058]|. Conversely, overexpression of ABA4 increases the levels of |FRAME: CPD1F-135 &lt;i&gt;trans&lt;/i&gt;-neoxanthin| and &lt;i&gt;cis&lt;/i&gt;-neoxanthin |CITS: [17470058]|. Nevertheless, no evidence of catalytic activity for ABA4 has been detected thus far |CITS: [17470058]|. ABA4 transcripts are expressed throughout Arabidopsis plants and do not change appreciably in response to drought stress, but mutant analyses indicate that ABA4 may play a role in protecting plants from water deficits |CITS: [17470058]|. Proteins similar to ABA4 have been identified by sequence homology in other plants and they all seem to possess chloroplast signal peptides. Putative orthologs in cyanobacteria that lack a signal peptide have also been found |CITS: [17470058]|. Further work will be required to determine if any of these proteins have neoxanthin synthase activity alone or in a novel enzymatic complex.</Comment>
+      <Property key="UniqueID" value="AT1G67080-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT1G67080.1" />
+      <Property key="AlternativeId_Uniprot" value="Q8LFP9" />
+      <Property key="AlternativeId_Tair" value="AT1G67080" />
+      <Property key="Catalyzes" value="RXN-17743" />
+      <Property key="GOTerms" value="GO:0031969" />
+      <Property key="Accession1" value="AT1G67080.1" />
+      <Property key="Gene" value="AT1G67080" />
+      <Property key="^citations" value="12766230" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Locations" value="CCO-CHLOR-MEM" />
+      <Property key="MolecularWeightKd" value="17." />
+      <Property key="MolecularWeightSeq" value="17." />
+      <Property key="Species" value="ORG-5993" />
+      <CitationRef elementRef="citation_PUB_17470058" />
+    </DataNode>
+    <DataNode elementId="MONOMER-12165" textLabel="MONOMER-12165" type="Protein">
+      <Xref identifier="Q9LWA6" dataSource="uniprot" />
+      <Graphics centerX="804.9585571289062" centerY="603.5003051757812" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>The lycopene &amp;epsilon;-cyclase found in |FRAME:TAX-4081 &lt;i&gt;Solanum lycopersicum&lt;/i&gt;| was recombinantly expressed into |FRAME:TAX-562 &lt;i&gt;Escherichia coli&lt;/i&gt;| and shown to convert violaxanthin into two isomeric carotenoids: |FRAME:CPD1F-135 &lt;i&gt;trans&lt;/i&gt;-neoxanthin| and |FRAME:CPD-7424 9&apos;-&lt;i&gt;cis&lt;/i&gt;-neoxanthin| |CITS:[11029576]|. In addition, the protein&apos;s function was further analyzed by transiently expressing the gene in |FRAME:TAX-4100 &lt;i&gt;Nicotiana benthamiana&lt;/i&gt;| leaves: after 14 days the pigment composition showed an increase in &lt;i&gt;trans&lt;/i&gt;-neoxanthin and decrease amount of violaxanthin, consistent with neoxanthin synthase activity |CITS:[11029576]|.</Comment>
+      <Property key="UniqueID" value="MONOMER-12165" />
+      <Property key="AlternativeId_Pfam" value="PF05834" />
+      <Property key="AlternativeId_Interpro" value="IPR010108" />
+      <Property key="AlternativeId_Uniprot" value="Q9LWA6" />
+      <Property key="AlternativeId_Pid" value="CAB93342" />
+      <Property key="Catalyzes" value="RXN-12783" />
+      <Property key="Gene" value="G-9406" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="MolecularWeightExp" value="56." />
+      <Property key="MolecularWeightKd" value="56." />
+      <Property key="Species" value="TAX-4081" />
+      <CitationRef elementRef="citation_PUB_11029576" />
+    </DataNode>
+    <DataNode elementId="MONOMER-16625" textLabel="MONOMER-16625" type="Protein">
+      <Xref identifier="Q9M424" dataSource="uniprot" />
+      <Graphics centerX="1600.0" centerY="360.1690673828125" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="O-28, pujar">A cDNA clone was isolated from tomato tissues. The cDNA was recombinantly expressed in E.coli and recombinant protein shows close similarity with lycopene cyclase and capsanthin synthase. The enzyme catalyzes the conversion of violaxanthin to neoxanthin. in vitro experiments of transient expression in tobacco leaves showed an increase of the neoxanthin and decrease of violaxanthin. Neoxanthin synthase appears to be descedent from the lycopene synthase enzyme |CITS: [11029576]|.</Comment>
+      <Property key="UniqueID" value="MONOMER-16625" />
+      <Property key="AlternativeId_Interpro" value="IPR008671" />
+      <Property key="AlternativeId_Pfam" value="PF05834" />
+      <Property key="AlternativeId_Pid" value="CAB92977" />
+      <Property key="AlternativeId_Uniprot" value="Q9M424" />
+      <Property key="Synonym_1" value="neoxanthin synthase, chloroplastic" />
+      <Property key="Catalyzes" value="RXN-19203" />
+      <Property key="Gene" value="G-14483" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="MolecularWeightExp" value="56." />
+      <Property key="MolecularWeightKd" value="56." />
+      <Property key="Species" value="TAX-4113" />
+      <CitationRef elementRef="citation_PUB_11029576" />
+    </DataNode>
+    <DataNode elementId="CPD-7424" textLabel="9&apos;-cis-neoxanthin" type="Metabolite">
+      <Xref identifier="PGYAYSRVSAJXTE-FTLOKQSXSA-N" dataSource="InChIKey" />
+      <Graphics centerX="909.2780151367188" centerY="796.033447265625" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-7424" />
+      <Property key="AlternativeId_Zinc" value="ZINC000008437316" />
+      <Property key="AlternativeId_Seed" value="cpd09433" />
+      <Property key="AlternativeId_Metanetx" value="MNXM2498" />
+      <Property key="AlternativeId_Chemspider" value="10392237" />
+      <Property key="AlternativeId_Pubchem" value="5282217" />
+      <Property key="AlternativeId_Chebi" value="35306" />
+      <Property key="AlternativeId_LigandCpd" value="C13431" />
+      <Property key="Synonym_1" value="9&lt;i&gt;c&lt;/i&gt;Neox" />
+      <Property key="Synonym_2" value="9&lt;i&gt;c&lt;/i&gt;-neoxanthin" />
+      <Property key="ChemicalFormula" value="(C 40) (H 56) (O 4)" />
+      <Property key="Gibbs0" value="630.45276" />
+      <Property key="Inchi" value="InChI=1S/C40H56O4/c1-29(17-13-19-31(3)21-22-35-36(5,6)25-33(41)27-38(35,9)43)15-11-12-16-30(2)18-14-20-32(4)23-24-40-37(7,8)26-34(42)28-39(40,10)44-40/h11-21,23-24,33-34,41-43H,25-28H2,1-10H3/b12-11+,17-13+,18-14+,24-23+,29-15+,30-16+,31-19+,32-20-/t22?,33-,34-,38+,39+,40-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=PGYAYSRVSAJXTE-FTLOKQSXSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="600.88" />
+      <Property key="MonoisotopicMw" value="600.417860286" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC(/C=C/C=C(C)/C=C=C1([C@@](O)(C)C[C@@H](O)CC(C)(C)1))=C\C=C\C=C(C)\C=C\C=C(C)/C=C/[C@]23(C(C)(C)C[C@H](O)C[C@@](C)(O2)3)" />
+    </DataNode>
+    <DataNode elementId="CPD1F-133" textLabel="violaxanthin" type="Metabolite">
+      <Xref identifier="SZCBXWMUOPQSOX-WVJDLNGLSA-N" dataSource="InChIKey" />
+      <Graphics centerX="100.0" centerY="539.9154663085938" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD1F-133" />
+      <Property key="AlternativeId_Zinc" value="ZINC000008221270" />
+      <Property key="AlternativeId_Seed" value="cpd05521" />
+      <Property key="AlternativeId_Metanetx" value="MNXM583" />
+      <Property key="AlternativeId_Pubchem" value="448438" />
+      <Property key="AlternativeId_Chebi" value="35288" />
+      <Property key="AlternativeId_Hmdb" value="HMDB03101" />
+      <Property key="AlternativeId_LigandCpd" value="C08614" />
+      <Property key="Synonym_1" value="5,6,5&apos;,6&apos;-diepoxy-5,6,5&apos;,6&apos;-tetrahydro-&amp;beta;,&amp;beta;-carotene-3,3&apos;-diol" />
+      <Property key="ChemicalFormula" value="(C 40) (H 56) (O 4)" />
+      <Property key="Gibbs0" value="635.9027" />
+      <Property key="Inchi" value="InChI=1S/C40H56O4/c1-29(17-13-19-31(3)21-23-39-35(5,6)25-33(41)27-37(39,9)43-39)15-11-12-16-30(2)18-14-20-32(4)22-24-40-36(7,8)26-34(42)28-38(40,10)44-40/h11-24,33-34,41-42H,25-28H2,1-10H3/b12-11+,17-13+,18-14+,23-21+,24-22+,29-15+,30-16+,31-19+,32-20+/t33-,34-,37+,38+,39-,40-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=SZCBXWMUOPQSOX-WVJDLNGLSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="600.88" />
+      <Property key="MonoisotopicMw" value="600.417860286" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC(/C=C/C=C(C)/C=C/[C@]12(C(C)(C)C[C@H](O)C[C@](O1)(C)2))=C\C=C\C=C(C)\C=C\C=C(C)\C=C\[C@]34(C(C)(C)C[C@H](O)C[C@](O3)(C)4)" />
+    </DataNode>
+    <DataNode elementId="CPD1F-135" textLabel="trans-neoxanthin" type="Metabolite">
+      <Xref identifier="PGYAYSRVSAJXTE-CLONMANBSA-N" dataSource="InChIKey" />
+      <Graphics centerX="879.8489990234375" centerY="1007.4013671875" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD1F-135" />
+      <Property key="AlternativeId_Zinc" value="ZINC000008221256" />
+      <Property key="AlternativeId_Chebi" value="25501" />
+      <Property key="AlternativeId_Metanetx" value="MNXM3211" />
+      <Property key="AlternativeId_Pubchem" value="5281247" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC32446" />
+      <Property key="AlternativeId_Hmdb" value="HMDB03020" />
+      <Property key="AlternativeId_LigandCpd" value="C08606" />
+      <Property key="ChemicalFormula" value="(C 40) (H 56) (O 4)" />
+      <Property key="Gibbs0" value="630.45276" />
+      <Property key="Inchi" value="InChI=1S/C40H56O4/c1-29(17-13-19-31(3)21-22-35-36(5,6)25-33(41)27-38(35,9)43)15-11-12-16-30(2)18-14-20-32(4)23-24-40-37(7,8)26-34(42)28-39(40,10)44-40/h11-21,23-24,33-34,41-43H,25-28H2,1-10H3/b12-11+,17-13+,18-14+,24-23+,29-15+,30-16+,31-19+,32-20+/t22?,33-,34-,38+,39+,40-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=PGYAYSRVSAJXTE-CLONMANBSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="600.88" />
+      <Property key="MonoisotopicMw" value="600.417860286" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="CC(/C=C/C=C(C)/C=C=C1([C@@](O)(C)C[C@@H](O)CC(C)(C)1))=C\C=C\C=C(C)\C=C\C=C(C)\C=C\[C@]23(C(C)(C)C[C@H](O)C[C@@](C)(O2)3)" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="321.804443359375" y="1301.957275390625" elementRef="G-14483" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="1555.0" y="360.1690673828125" elementRef="MONOMER-16625" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_1_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_1_0_0" x="1594.853515625" y="958.4120483398438" elementRef="AT1G67080" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_1_0_0" arrowHead="TranscriptionTranslation" x="818.1161499023438" y="50.0" elementRef="AT1G67080-MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_2_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_2_0_0" x="1232.770751953125" y="1550.0" elementRef="G-9406" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_2_0_0" arrowHead="TranscriptionTranslation" x="759.9585571289062" y="603.5003051757812" elementRef="MONOMER-12165" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN-8074">
+      <Xref identifier="EC-5.2.1" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN-8074_start" x="924.8489990234375" y="1007.4013671875" elementRef="CPD1F-135" relX="1.0" relY="0.0" />
+        <Point elementId="RXN-8074_end" arrowHead="Conversion" x="864.2780151367188" y="796.033447265625" elementRef="CPD-7424" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN-8074_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-8074" />
+      <Property key="ReactionName" value="neoxanthin isomerase" />
+      <Property key="EC_Number" value="EC-5.2.1" />
+      <Property key="Pathways" value="PWY-6809" />
+      <Property key="ReactionEquation" value="CPD1F-135 =&gt; CPD-7424" />
+      <Property key="ReactionDirection" value="LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="Gibbs0" value="0." />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN1F-155">
+      <Xref identifier="10128" dataSource="Rhea" />
+      <Waypoints>
+        <Point elementId="RXN1F-155_start" x="145.0" y="539.9154663085938" elementRef="CPD1F-133" relX="1.0" relY="0.0" />
+        <Point elementId="RXN1F-155_end" arrowHead="Conversion" x="834.8489990234375" y="1007.4013671875" elementRef="CPD1F-135" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN1F-155_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="AlternativeId_Rhea" value="10128" />
+      <Property key="UniqueID" value="RXN1F-155" />
+      <Property key="EC_Number" value="EC-5.3.99.9" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-6809" />
+      <Property key="ReactionEquation" value="CPD1F-133 &lt;=&gt; CPD1F-135" />
+      <Property key="ReactionDirection" value="REVERSIBLE" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXN-17743, ENZRXN-12783, ENZRXN-19203" />
+      <Property key="EnzymaticReactionCount" value="3" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-5.449951" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN1F-155_ENZRXN-19203">
+      <Waypoints>
+        <Point elementId="RXN1F-155_ENZRXN-19203_start" x="1600.0" y="372.6690673828125" elementRef="MONOMER-16625" relX="0.0" relY="1.0" />
+        <Point elementId="RXN1F-155_ENZRXN-19203_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN1F-155_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN1F-155_ENZRXN-17743">
+      <Waypoints>
+        <Point elementId="RXN1F-155_ENZRXN-17743_start" x="863.1161499023438" y="62.5" elementRef="AT1G67080-MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="RXN1F-155_ENZRXN-17743_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN1F-155_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN1F-155_ENZRXN-12783">
+      <Waypoints>
+        <Point elementId="RXN1F-155_ENZRXN-12783_start" x="804.9585571289062" y="616.0003051757812" elementRef="MONOMER-12165" relX="0.0" relY="1.0" />
+        <Point elementId="RXN1F-155_ENZRXN-12783_end" arrowHead="Catalysis" x="0" y="0" elementRef="RXN1F-155_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_PUB_11094161">
+      <Xref identifier="11094161" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_11029576">
+      <Xref identifier="11029576" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_17470058">
+      <Xref identifier="17470058" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>
