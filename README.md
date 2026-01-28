@@ -262,7 +262,7 @@ The converter extracts citations from:
 
 ## Releases 
 
-New releases are automatically archived on Zenodo. 
+New releases are automatically archived on Zenodo. [![DOI](https://zenodo.org/badge/DOI/110.5281/zenodo.18404067.svg)](https://doi.org/10.5281/zenodo.18404067)
 Tag the releases like 
 
 ```bash
