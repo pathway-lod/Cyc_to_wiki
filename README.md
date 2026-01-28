@@ -1,11 +1,13 @@
+# PlantCyc to Wikidata repository 
+
+This repository contains the pipeline to transform data from Biopax format (common in PlantCyc and Biocyc repositories) to GPML2021 format [(Graphical Pathway Markup Language)](https://pathvisio.org/documentation/GPML). 
 
 ## Installation
 
 ```bash
-git clone https://github.com/maxmanmull/plantcyc2wiki.git
-cd plantcyc-gpml-converter
+git clone git@github.com:pathway-lod/Cyc_to_wiki.git
+cd Cyc_to_wiki
 ```
-
 
 ## Usage
 
@@ -256,23 +258,24 @@ The converter extracts citations from:
 
 ---
 
-
-## Contributing
-
-Issues, suggestions, and pull requests welcome at: 
-
 ## License
 
-- The license for the data is available at https://plantcyc.org/downloads/license-agreement
+- The license for the data is available at https://plantcyc.org/?webform=license-agreement or at [LICENSE.txt](LICENSE.txt). This includes the data from PlantCyc transformed in GPML format and available in this repository [/biocyc_pathways](./biocyc_pathways_20251217115329/)
 - The license for the code is available at [GNU AGPL 3.0](https://www.gnu.org/licenses/agpl-3.0)
 
 
 ## References
 
-- BioCyc Database Collection: 
-- GPML2021 Specification: 
-- WikiPathways: 
-- PathVisio: 
+- BioCyc Database Collection: [https://biocyc.org/BioCycUserGuide.shtml](https://biocyc.org/BioCycUserGuide.shtml)
+- GPML2021 Specification: [GPML Documentation](https://pathvisio.org/documentation/GPML)
+- WikiPathways (Agrawal et al. 2024): [https://doi.org/10.1093/nar/gkad960](https://doi.org/10.1093/nar/gkad960)
+- PathVisio: [pathvisio.org/](https://pathvisio.org/)
+- Plant Metabolic Network 16 (Hawkins et al. 2025) : [https://doi.org/10.1093/nar/gkae991](https://doi.org/10.1093/nar/gkae991)
+
+## Contact / Maintainer 
+
+Elena Del Pup, Wageningen University & Research 
+elena.delpup@wur.nl 
 
 ## Use of AI Assistance
 Development of this code involved  assistance from AI tools (Anthropic Claude Code, Opus, and Sonnet 4.5). These tools were used to speed up development, provide debugging suggestions, and help structure portions of the code. All AI-generated content was thoroughly reviewed, verified, and refined by the author.
