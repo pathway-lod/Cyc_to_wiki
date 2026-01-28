@@ -373,9 +373,15 @@ def create_gene_comments_from_record(record):
         comment_text = record['COMMENT']
         if isinstance(comment_text, list):
             for c in comment_text:
-                comments.append(Comment(value=str(c).strip(), source=source_str))
+                # Clean CITS tags from comment text
+                cleaned_text = re.sub(r'\|CITS:\s*\[(\d+)\]\|', '', str(c)).strip()
+                if cleaned_text:
+                    comments.append(Comment(value=cleaned_text, source=source_str))
         elif isinstance(comment_text, str):
-            comments.append(Comment(value=comment_text.strip(), source=source_str))
+            # Clean CITS tags from comment text
+            cleaned_text = re.sub(r'\|CITS:\s*\[(\d+)\]\|', '', comment_text).strip()
+            if cleaned_text:
+                comments.append(Comment(value=cleaned_text, source=source_str))
 
     return comments
 
