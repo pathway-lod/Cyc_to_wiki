@@ -1,5 +1,7 @@
 # PlantCyc to Wikidata repository 
 
+[![DOI](https://zenodo.org/badge/DOI/110.5281/zenodo.18404067.svg)](https://doi.org/10.5281/zenodo.18404067)
+
 This repository contains the pipeline to transform data from Biopax format (common in PlantCyc and Biocyc repositories) to GPML2021 format [(Graphical Pathway Markup Language)](https://pathvisio.org/documentation/GPML). 
 
 ## Installation
@@ -257,6 +259,17 @@ The converter extracts citations from:
 
 
 ---
+
+## Releases 
+
+New releases are automatically archived on Zenodo. 
+Tag the releases like 
+
+```bash
+git tag -a plantcyc17.0.0-gpml2021 -m "PlantCyc 17.0.0 to GPML 2021"
+git push origin plantcyc17.0.0-gpml2021
+``` 
+
 
 ## License
 
