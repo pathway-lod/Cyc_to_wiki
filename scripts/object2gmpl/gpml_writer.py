@@ -1,6 +1,6 @@
 from scripts.data_structure.wiki_data_structure import (
     DataNode, Interaction, Pathway, HAlign, VAlign, BorderStyle, ShapeType, LineStyle,
-    ConnectorType, ArrowHeadType, AnchorShapeType, Point, Anchor, Graphics, Citation
+    ConnectorType, ArrowHeadType, AnchorShapeType, Point, Anchor, Graphics, Citation, Annotation
 )
 
 
@@ -62,6 +62,37 @@ class GPMLWriter:
 
         return interaction.graphics
 
+
+    def write_annotation(self, annotation: Annotation) -> str:
+        """
+        Write an Annotation element to GPML format.
+
+        Args:
+            annotation: Annotation object
+
+        Returns:
+            str: GPML XML string for the Annotation
+        """
+        element_id = self.escape_xml(annotation.elementId)
+        value_str = self.escape_xml(annotation.value)
+        
+        type_str = "Undefined"
+        if annotation.type:
+            type_str = annotation.type.value
+            
+        gpml_output = f'    <Annotation elementId="{element_id}" value="{value_str}" type="{type_str}">\n'
+
+        if annotation.xref:
+            identifier = self.escape_xml(annotation.xref.identifier)
+            data_source = self.escape_xml(annotation.xref.dataSource)
+            gpml_output += f'      <Xref identifier="{identifier}" dataSource="{data_source}" />\n'
+
+        if hasattr(annotation, 'url') and annotation.url:
+            gpml_output += f'      <Url link="{self.escape_xml(annotation.url.link)}" />\n'
+
+        gpml_output += '    </Annotation>\n'
+
+        return gpml_output
 
     def write_datanode(self, datanode: DataNode) -> str:
         """
@@ -703,6 +734,13 @@ class GPMLWriter:
             for group in pathway.groups:
                 gpml_output += self.write_group(group)
             gpml_output += '  </Groups>\n'
+
+        # Annotations
+        if hasattr(pathway, 'annotations') and pathway.annotations:
+            gpml_output += '  <Annotations>\n'
+            for annotation in pathway.annotations:
+                gpml_output += self.write_annotation(annotation)
+            gpml_output += '  </Annotations>\n'
 
         # Citations
         if pathway.citations:
