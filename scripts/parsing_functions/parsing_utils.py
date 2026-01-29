@@ -13,6 +13,12 @@ class FileReader:
 
     def find(self, filename: str) -> Optional[Path]:
         """Search for the file recursively under base_dir."""
+        # Check if filename is absolute - rglob doesn't support absolute paths
+        if Path(filename).is_absolute():
+            # If it's absolute and wasn't found by the direct check in read(),
+            print(f"File '{filename}' is an absolute path but was not found.")
+            return None
+            
         matches = list(self.base_dir.rglob(filename))
         if not matches:
             print(f"File '{filename}' not found under {self.base_dir}")
@@ -31,7 +37,13 @@ class FileReader:
 
     def read(self, filename: str) -> str:
         """Find the file and read it with the appropriate encoding."""
-        file_path = self.find(filename)
+        # First check if the filename is a valid path that exists directly (absolute or relative)
+        path_obj = Path(filename)
+        if path_obj.exists() and path_obj.is_file():
+            file_path = path_obj
+        else:
+            file_path = self.find(filename)
+            
         if file_path is None:
             raise FileNotFoundError(f"Could not find file: {filename}")
 

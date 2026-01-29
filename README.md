@@ -11,6 +11,12 @@ git clone git@github.com:pathway-lod/Cyc_to_wiki.git
 cd Cyc_to_wiki
 ```
 
+Install the dependencies and activate the environment 
+```bash
+conda env create -f environment.yml
+conda activate cyc_2_wiki
+```
+
 ## Usage
 
 ### Basic Command
@@ -18,6 +24,9 @@ cd Cyc_to_wiki
 ```bash
 python build_pathways.py <data_dir> <output_dir> [options]
 ```
+
+- `<data_dir>` is the directory with the flat files 
+- 
 
 ### Options
 
@@ -30,8 +39,10 @@ python build_pathways.py <data_dir> <output_dir> [options]
 # Build pathways only with default grid layout
 python build_pathways.py ./data ./output
 
-# Build pathways AND single reactions
+# Build pathways AND single reactions --> this is to produce the released data 
 python build_pathways.py ./data ./output --include-reactions
+
+python build_pathways.py ~/lustre_link/data/plantcyc/current/plantcyc/17.0.0/data ./plantcyc17.0.0-gpml2021 --include-reactions
 
 # Build with ForceAtlas2 layout 
 python build_pathways.py ./data ./output --layout forceatlas2
@@ -49,6 +60,26 @@ Place all PlantCyc `.dat` files in a directory.
 - **Individual pathway files**: `[output_dir]/biocyc_pathways_[timestamp]/individual_pathways/*.gpml`
 - **Single reaction files** (if `--include-reactions`): `individual_reactions/*.gpml`
 - **Analysis report**: `GPML_STATISTICS_REPORT.txt` - Generated automatically by the analysis script 
+
+## Run the pipeline
+
+1. Change your scripts/config.env
+
+```bash
+PLANTCYC_ROOT="~/plantcyc/current/plantcyc"
+GPML_SNAPSHOT="gpml2021"
+OUT_BASE="./output_gpml"
+```
+2. Activate the environment 
+```bash
+conda activate cyc_2_wiki
+```
+
+3. Run the pipeline 
+
+```bash 
+./scripts/run_pipeline.sh
+```
 
 ## Project Structure
 

@@ -261,6 +261,21 @@ def create_pathway_comments_from_record(record):
         source="Automated Conversion"
     ))
 
+    # Add other comments if they exist (sometimes in COMMENT field too)
+    if 'COMMENT' in record:
+        comment_data = record['COMMENT']
+        if isinstance(comment_data, list):
+            for c in comment_data:
+                # Clean CITS tags from comment text
+                cleaned_text = re.sub(r'\|CITS:\s*\[(\d+)\]\|', '', str(c)).strip()
+                if cleaned_text:
+                    comments.append(Comment(value=cleaned_text, source="BioCyc"))
+        else:
+            # Clean CITS tags from comment text
+            cleaned_text = re.sub(r'\|CITS:\s*\[(\d+)\]\|', '', str(comment_data)).strip()
+            if cleaned_text:
+                comments.append(Comment(value=cleaned_text, source="BioCyc"))
+
     return comments
 
 

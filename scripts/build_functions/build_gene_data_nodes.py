@@ -1,6 +1,7 @@
 from scripts.data_structure.wiki_data_structure import (
     Xref, Graphics, DataNode, DataNodeType, HAlign, VAlign,
-    BorderStyle, ShapeType, Property, Comment, CitationRef, Citation
+    BorderStyle, ShapeType, Property, Comment, CitationRef, Citation,
+    Annotation, AnnotationType, AnnotationRef
 )
 from scripts.parsing_functions import parsing_utils
 from scripts.object2gmpl.gpml_writer import GPMLWriter
@@ -11,6 +12,99 @@ from scripts.utils.property_parser import (
 )
 import uuid
 import re
+from pathlib import Path
+
+
+# Organism mapping cache
+_ORGANISM_MAPPING = None
+
+def load_organism_mapping():
+    """Load organism mapping from org_id_mapping_v2.tsv."""
+    global _ORGANISM_MAPPING
+
+    if _ORGANISM_MAPPING is not None:
+        return _ORGANISM_MAPPING
+
+    _ORGANISM_MAPPING = {}
+
+    # Load mapping file created at pipeline start
+    mapping_file = Path(__file__).parent.parent.parent / 'org_id_mapping_v2.tsv'
+    if mapping_file.exists():
+        with open(mapping_file, 'r', encoding='utf-8') as f:
+            for line in f:
+                if line.startswith('org_id'):  # Skip header
+                    continue
+                parts = line.strip().split('\t')
+                if len(parts) >= 2:
+                    organism_id = parts[0]
+                    latin_name = parts[1]
+                    if latin_name:
+                        _ORGANISM_MAPPING[organism_id] = latin_name
+
+    return _ORGANISM_MAPPING
+
+
+def convert_to_latin_name(organism_id):
+    """
+    Convert ORG-ID or TAX-ID to Latin name.
+
+    Args:
+        organism_id: String like 'ORG-5993' or 'TAX-3702'
+
+    Returns:
+        str: Latin name if found, otherwise original organism_id
+    """
+    if not organism_id:
+        return organism_id
+
+    mapping = load_organism_mapping()
+    organism_id = str(organism_id).strip()
+
+    # Direct lookup (handles both ORG-XXXX and TAX-XXXX)
+    if organism_id in mapping:
+        return mapping[organism_id]
+
+    # Return original if not found
+    return organism_id
+
+
+def create_species_annotation(record):
+    """
+    Create Annotation and AnnotationRef for species/taxonomy.
+
+    Args:
+        record: Gene/Protein record dictionary
+
+    Returns:
+        tuple: (list of Annotation objects, list of AnnotationRef objects)
+    """
+    annotations = []
+    annotation_refs = []
+
+    if 'SPECIES' in record:
+        species_list = record['SPECIES']
+        if not isinstance(species_list, list):
+            species_list = [species_list]
+
+        for species in species_list:
+            species_id = str(species).strip()
+            latin_name = convert_to_latin_name(species_id)
+            
+            # Create a unique ID for the annotation
+            annotation_id = f"taxonomy_{species_id}"
+            # Sanitize ID
+            annotation_id = re.sub(r'[^a-zA-Z0-9_]', '_', annotation_id)
+            
+            annotation = Annotation(
+                elementId=annotation_id,
+                value=latin_name,
+                type=AnnotationType.TAXONOMY,
+                xref=Xref(identifier=species_id, dataSource="Taxonomy")
+            )
+            annotations.append(annotation)
+            annotation_refs.append(AnnotationRef(elementRef=annotation_id))
+
+    return annotations, annotation_refs
 
 
 def parse_gene_dblinks(dblinks):
@@ -279,9 +373,15 @@ def create_gene_comments_from_record(record):
         comment_text = record['COMMENT']
         if isinstance(comment_text, list):
             for c in comment_text:
-                comments.append(Comment(value=str(c).strip(), source=source_str))
+                # Clean CITS tags from comment text
+                cleaned_text = re.sub(r'\|CITS:\s*\[(\d+)\]\|', '', str(c)).strip()
+                if cleaned_text:
+                    comments.append(Comment(value=cleaned_text, source=source_str))
         elif isinstance(comment_text, str):
-            comments.append(Comment(value=comment_text.strip(), source=source_str))
+            # Clean CITS tags from comment text
+            cleaned_text = re.sub(r'\|CITS:\s*\[(\d+)\]\|', '', comment_text).strip()
+            if cleaned_text:
+                comments.append(Comment(value=cleaned_text, source=source_str))
 
     return comments
 
@@ -352,6 +452,9 @@ def create_enhanced_datanode_from_gene(record, citation_manager=None):
     else:
         citations, citation_refs = create_gene_citations_from_record(record)
 
+    # Handle annotations (Species)
+    annotations, annotation_refs = create_species_annotation(record)
+
     # Use  gene graphics
     graphics = standard_graphics.create_gene_graphics(0.0, 0.0)
 
@@ -364,10 +467,11 @@ def create_enhanced_datanode_from_gene(record, citation_manager=None):
         graphics=graphics,
         comments=comments,
         properties=properties,
-        citationRefs=citation_refs if citation_manager else citation_refs
+        citationRefs=citation_refs if citation_manager else citation_refs,
+        annotationRefs=annotation_refs
     )
 
-    return (datanode, []) if citation_manager else (datanode, citations)
+    return (datanode, [], annotations) if citation_manager else (datanode, citations, annotations)
 
 
 def create_citation_refs_from_record(record, citation_manager):
@@ -434,6 +538,7 @@ def create_enhanced_datanodes_from_genes(genes_file, citation_manager=None):
 
     datanodes = []
     all_citations = []
+    all_annotations = []
 
     # Statistics tracking - count per unique record
     xref_stats = {
@@ -498,10 +603,12 @@ def create_enhanced_datanodes_from_genes(genes_file, citation_manager=None):
                     citation_stats['unique_pubmed_ids'].add(citation_str)
 
         # Create datanode
-        datanode, citations = create_enhanced_datanode_from_gene(record, citation_manager)
+        datanode, citations, annotations = create_enhanced_datanode_from_gene(record, citation_manager)
         datanodes.append(datanode)
         if citations:
             all_citations.extend(citations)
+        if annotations:
+            all_annotations.extend(annotations)
 
     # Print statistics
     print("\n" + "="*60)
@@ -523,7 +630,7 @@ def create_enhanced_datanodes_from_genes(genes_file, citation_manager=None):
     print(f"Unique PubMed IDs: {len(citation_stats['unique_pubmed_ids'])}")
     print("="*60 + "\n")
 
-    return datanodes, all_citations
+    return datanodes, all_citations, all_annotations
 
 
 def print_gene_datanode_summary(datanode: DataNode, index):
@@ -561,9 +668,10 @@ def print_gene_datanode_summary(datanode: DataNode, index):
 
 
 if __name__ == "__main__":
-    datanodes, citations = create_enhanced_datanodes_from_genes("genes.dat")
+    datanodes, citations, annotations = create_enhanced_datanodes_from_genes("genes.dat")
     print(f"Created {len(datanodes)} enhanced Gene DataNodes")
     print(f"Found {len(citations)} citations")
+    print(f"Found {len(annotations)} annotations")
 
     for i, node in enumerate(datanodes[:3]):
         print_gene_datanode_summary(node, i)
