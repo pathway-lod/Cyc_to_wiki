@@ -86,6 +86,7 @@ fi
 # Run the pipeline
 echo "==> Running: ${CMD[*]}"
 "${CMD[@]}"
+=======
 
 echo "==> Done."
 echo "==> Output: $OUT_DIR"
