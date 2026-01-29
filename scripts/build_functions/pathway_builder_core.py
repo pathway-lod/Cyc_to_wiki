@@ -23,6 +23,7 @@ import math
 import re
 import copy
 import networkx as nx
+import os
 
 # Check if forceatlas2 layout is available
 try:
@@ -149,6 +150,10 @@ class CompletePathwayBuilderWithGenes:
         print(f"Citation Manager initialized with {len(self.citation_manager.publications)} publications")
         
         self.annotation_index = {} # Map elementId -> Annotation object
+
+        # Store file paths
+        self.genes_file = genes_file
+        self.data_dir = os.path.dirname(genes_file)
 
         # Load all data types
         self._load_compounds(compounds_file)
@@ -355,7 +360,7 @@ class CompletePathwayBuilderWithGenes:
         gene_protein_map = {}
 
         # Load raw gene records
-        genes_processor = parsing_utils.read_and_parse("genes.dat")
+        genes_processor = parsing_utils.read_and_parse(self.genes_file)
 
         # Create gene lookup
         gene_by_id = {}
@@ -396,7 +401,8 @@ class CompletePathwayBuilderWithGenes:
         reaction_to_enzymes = {}
 
         # Load enzrxns.dat to get ENZRXN -> RXN mapping
-        enzrxns_processor = parsing_utils.read_and_parse("enzrxns.dat")
+        enzrxns_file = os.path.join(self.data_dir, "enzrxns.dat")
+        enzrxns_processor = parsing_utils.read_and_parse(enzrxns_file)
 
         enzrxn_to_reaction = {}
         for enzrxn_record in enzrxns_processor.records:
@@ -503,7 +509,8 @@ class CompletePathwayBuilderWithGenes:
         """
         # Load enzrxns.dat to get ENZRXN -> RXN mapping (reuse if available)
         if not hasattr(self, 'enzrxn_to_reaction'):
-            enzrxns_processor = parsing_utils.read_and_parse("enzrxns.dat")
+            enzrxns_file = os.path.join(self.data_dir, "enzrxns.dat")
+            enzrxns_processor = parsing_utils.read_and_parse(enzrxns_file)
 
             self.enzrxn_to_reaction = {}
             for enzrxn_record in enzrxns_processor.records:
