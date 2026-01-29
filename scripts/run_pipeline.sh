@@ -5,7 +5,7 @@ set -euo pipefail
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$REPO_ROOT"
 
-
+# Load machine-local config (not committed)
 CONFIG_FILE="${CONFIG_FILE:-scripts/config.env}"
 if [[ -f "$CONFIG_FILE" ]]; then
   # shellcheck disable=SC1090
@@ -86,5 +86,7 @@ fi
 # Run the pipeline
 echo "==> Running: ${CMD[*]}"
 "${CMD[@]}"
+=======
+
 echo "==> Done."
 echo "==> Output: $OUT_DIR"
