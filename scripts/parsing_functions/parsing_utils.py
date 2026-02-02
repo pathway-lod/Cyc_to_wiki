@@ -238,6 +238,42 @@ class DataProcessor:
         }
 
 
+def parse_file_header(content: str) -> Dict[str, str]:
+    """
+    Parse the header comments of a BioCyc .dat file.
+
+    Extracts fields like 'Version', 'Organism', 'Date and time generated'.
+
+    Args:
+        content (str): Full file content
+
+    Returns:
+        dict: Mapping of header fields to values
+    """
+    header_info = {}
+    for line in content.splitlines():
+        line = line.strip()
+        
+        # skip empty lines
+        if not line:
+            continue
+
+        # Header lines must start with #
+        if not line.startswith('#'):
+            # Stop if we hit a non-comment line (start of data)
+            break
+
+        # Remove leading # and whitespace
+        clean_line = line.lstrip('#').strip()
+
+        # Look for "Key: Value" pattern
+        if ':' in clean_line:
+            key, value = clean_line.split(':', 1)
+            header_info[key.strip()] = value.strip()
+
+    return header_info
+
+
 def read_and_parse(filename: str, base_dir: Optional[Path] = None) -> DataProcessor:
     """Read a file and parse all records into a DataProcessor."""
     reader = FileReader(base_dir)

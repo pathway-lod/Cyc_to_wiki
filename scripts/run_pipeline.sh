@@ -49,7 +49,7 @@ OUT_DIR="${OUT_BASE%/}/${TAG_NAME}__git${SHORT_SHA}__${RUN_TS}"
 mkdir -p "$OUT_DIR"
 
 # Hardcoded: include reactions
-CMD=(python build_pathways.py "$PLANTCYC_DATA_DIR" "$OUT_DIR" --include-reactions)
+CMD=(python "$REPO_ROOT/scripts/build_pathways.py" "$PLANTCYC_DATA_DIR" "$OUT_DIR" --include-reactions --db-version "$PLANTCYC_VERSION")
 
 # Write metadata log (super useful later)
 LOG_FILE="$OUT_DIR/run.metadata.txt"

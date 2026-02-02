@@ -1,63 +1,82 @@
 #!/usr/bin/env python3
 """
-Extract organism names from GPML files and generate organisms.tsv.
-Uses org_id_mapping_v2.tsv to look up NCBI IDs for all organisms.
-Usage: python generate_organisms_tsv.py <directory> [--output FILE] [--existing FILE] [--mapping FILE]
+Extract organism names and NCBI IDs from GPML files (via Annotations) and generate organisms.tsv.
+Usage: python generate_organisms_tsv.py <directory> [--output FILE] [--existing FILE]
 """
 
 import xml.etree.ElementTree as ET
 from pathlib import Path
 import argparse
+import re
 
-def load_organism_mapping(mapping_file='org_id_mapping_v2.tsv'):
-    """Load organism mapping to get NCBI IDs for Latin names."""
-    latin_to_ncbi = {}
+def extract_organism_info(directory):
+    """
+    Extract unique organism info (Latin name, NCBI ID) from GPML files.
+    Looks for <Annotation type="Taxonomy"> elements and the 'organism' attribute in the header.
+    
+    Returns:
+        dict: {latin_name: ncbi_id}
+    """
+    organisms = {}
+    
+    # Hardcoded fallbacks for organisms because i had some errors
+    # Derived from classes.dat
+    FALLBACK_IDS = {
+        'Cirsium': '41549',
+        'Malus hupehensis': '106556',
+        'Aveninae': '640623',
+        'Rauvolfia': '4059',
+        'Secale': '4549',
+        'Arabidopsis thaliana': '3702',
+        'Albizia': '3812'
+    }
 
-    if not Path(mapping_file).exists():
-        print(f"Warning: {mapping_file} not found. Will query NCBI for all organisms.")
-        return latin_to_ncbi
-
-    with open(mapping_file, 'r', encoding='utf-8') as f:
-        for line in f:
-            if line.startswith('org_id'):  # Skip header
-                continue
-            parts = line.strip().split('\t')
-            if len(parts) >= 3:
-                latin_name = parts[1]
-                ncbi_id = parts[2]
-                if latin_name and ncbi_id:
-                    latin_to_ncbi[latin_name] = ncbi_id
-
-    print(f"Loaded {len(latin_to_ncbi)} organism mappings from {mapping_file}")
-    return latin_to_ncbi
-
-def extract_organism_names(directory):
-    """Extract all unique organism Latin names from GPML files."""
-    organisms = set()
+    # XML namespaces
+    ns = {'gpml': 'http://pathvisio.org/GPML/2021'}
+    
+    print(f"Scanning GPML files in {directory}...")
+    
     for gpml_file in Path(directory).rglob("*.gpml"):
         try:
-            root = ET.parse(gpml_file).getroot()
-            # Get organism attribute
-            organism_text = root.get('organism', '')
+            tree = ET.parse(gpml_file)
+            root = tree.getroot()
+            
+            # 1. Check 'organism' attribute in Pathway tag (header)
+            org_attr = root.get('organism')
+            if org_attr:
+                # Handle comma separated list
+                header_orgs = [o.strip() for o in org_attr.split(',') if o.strip()]
+                for org_name in header_orgs:
+                    # Try to resolve ID from fallback
+                    if org_name in FALLBACK_IDS:
+                        organisms[org_name] = FALLBACK_IDS[org_name]
 
-            # Also check Property elements
-            for prop in root.findall('.//{http://pathvisio.org/GPML/2021}Property'):
-                key = prop.get('key', '')
-                if key == 'Organism' or key.startswith('TaxonomicRange'):
-                    organism_text += ', ' + prop.get('value', '')
-
-            # Extract organism names (comma-separated)
-            for part in organism_text.split(','):
-                name = part.strip()
-                # Skip empty, skip TAX-IDs, skip ORG-IDs
-                if name and not name.startswith('TAX-') and not name.startswith('ORG-'):
-                    organisms.add(name)
-        except:
+            # 2. Find all Taxonomy annotations
+            annotations = root.findall('.//gpml:Annotation[@type="Taxonomy"]', ns)
+            if not annotations:
+                annotations = root.findall('.//Annotation[@type="Taxonomy"]')
+                
+            for ann in annotations:
+                latin_name = ann.get('value')
+                
+                # Find Xref child
+                xref = ann.find('gpml:Xref', ns)
+                if xref is None:
+                    xref = ann.find('Xref')
+                    
+                if latin_name and xref is not None:
+                    identifier = xref.get('identifier')
+                    datasource = xref.get('dataSource')
+                    
+                    # Check if it's a valid NCBI Taxon ID (numeric)
+                    if datasource == 'NCBI Taxonomy' and identifier and identifier.isdigit():
+                        organisms[latin_name] = identifier
+                        
+        except Exception as e:
+            # print(f"Error parsing {gpml_file}: {e}")
             pass
 
-    return sorted(organisms)
-
-
+    return organisms
 
 def make_symbols_unique(organisms):
     """Ensure all symbols are unique."""
@@ -120,57 +139,44 @@ def main():
                         help='Directory containing GPML files')
     parser.add_argument('--output', default='organisms.tsv', help='Output TSV file (default: organisms.tsv)')
     parser.add_argument('--existing', default=None, help='Existing organisms.tsv file to merge with (optional)')
-    parser.add_argument('--mapping', default='org_id_mapping_v2.tsv', help='Organism mapping file (default: org_id_mapping_v2.tsv)')
+    # Removed mapping argument
     args = parser.parse_args()
-
-    # Load organism mapping (Latin name -> NCBI ID)
-    latin_to_ncbi = load_organism_mapping(args.mapping)
 
     # Load existing organisms if specified
     existing_organisms = {}
     if args.existing:
         existing_organisms = load_existing_organisms(args.existing)
 
-    # Extract organism Latin names from GPML files
-    print(f"\nExtracting organism names from {args.directory}...")
-    organism_names = extract_organism_names(args.directory)
-    print(f"Found {len(organism_names)} unique organisms in GPML files")
+    # Extract organism info from GPML files
+    organism_info = extract_organism_info(args.directory)
+    print(f"Found {len(organism_info)} unique organisms with NCBI IDs in GPML files")
 
     # Build organism list
-    organisms = []
-    not_found = []
-
-    for latin_name in organism_names:
-        # Skip if we already have it
+    new_organisms = []
+    
+    for latin_name, ncbi_id in organism_info.items():
+        # Skip if we already have this NCBI ID
+        if ncbi_id in existing_organisms:
+            continue
+            
+        # Also check if we have the name but under a different ID (unlikely but safe)
         if any(org['scientific_name'] == latin_name for org in existing_organisms.values()):
             continue
 
-        # Check if we have the NCBI ID in our mapping
-        if latin_name in latin_to_ncbi:
-            ncbi_id = latin_to_ncbi[latin_name]
-            name_parts = latin_name.split()
-            organisms.append({
-                'genus': name_parts[0] if name_parts else '',
-                'species': name_parts[1] if len(name_parts) > 1 else '',
-                'short_name': latin_name,
-                'symbol': name_parts[0][:1].upper() + name_parts[1][:1].lower() if len(name_parts) > 1 else '',
-                'ncbi': ncbi_id,
-                'scientific_name': latin_name
-            })
-        else:
-            # Not found in mapping
-            not_found.append(latin_name)
+        name_parts = latin_name.split()
+        new_organisms.append({
+            'genus': name_parts[0] if name_parts else '',
+            'species': name_parts[1] if len(name_parts) > 1 else '',
+            'short_name': latin_name,
+            'symbol': name_parts[0][:1].upper() + name_parts[1][:1].lower() if len(name_parts) > 1 else '',
+            'ncbi': ncbi_id,
+            'scientific_name': latin_name
+        })
 
-    print(f"  {len(organisms)} organisms resolved from mapping")
-    if not_found:
-        print(f"  Warning: {len(not_found)} organisms not found in mapping:")
-        for name in not_found[:10]:  # Show first 10
-            print(f"    - {name}")
-        if len(not_found) > 10:
-            print(f"    ... and {len(not_found) - 10} more")
+    print(f"  Adding {len(new_organisms)} new organisms")
 
     # Merge with existing organisms
-    all_organisms = list(existing_organisms.values()) + organisms
+    all_organisms = list(existing_organisms.values()) + new_organisms
     make_symbols_unique(all_organisms)
 
     # Sort by genus, species
@@ -184,7 +190,7 @@ def main():
 
     print(f"\nGenerated {args.output} with {len(all_organisms)} organisms")
     print(f"  Existing: {len(existing_organisms)}")
-    print(f"  From mapping: {len(organisms)}")
+    print(f"  New: {len(new_organisms)}")
 
 if __name__ == "__main__":
     main()
