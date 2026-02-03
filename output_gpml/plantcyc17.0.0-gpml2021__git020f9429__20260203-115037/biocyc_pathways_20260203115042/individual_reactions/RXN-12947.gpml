@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="RXN-12947" organism="cellular organisms" source="PlantCyc" version="17.0.0_20260203115042">
+  <Description>Single reaction view for RXN-12947: RXN-12947</Description>
+  <Authors>
+    <Author name="BioCyc" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from BioCyc single reaction data.</Comment>
+  <Property key="UniqueID" value="RXN-12947" />
+  <Graphics boardWidth="1200" boardHeight="800" />
+  <DataNodes>
+    <DataNode elementId="DIHYDROXYPIRIDIN_CPD" textLabel="pyridine-3,4-diol" type="Metabolite">
+      <Xref identifier="ZCUUVWCJGRQCMZ-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="200" centerY="210" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>|FRAME: DIHYDROXYPIRIDIN-CPD| is a tautomer of |FRAME: 3-HYDROXY-4H-PYRID-4-ONE|.</Comment>
+      <Property key="UniqueID" value="DIHYDROXYPIRIDIN-CPD" />
+      <Property key="AlternativeId_Chebi" value="29053" />
+      <Property key="AlternativeId_LigandCpd" value="C02932" />
+      <Property key="Synonym_1" value="3,4-dihydroxypyridine" />
+      <Property key="ChemicalFormula" value="(C 5) (H 5) (N 1) (O 2)" />
+      <Property key="Gibbs0" value="-0.7344004" />
+      <Property key="Inchi" value="InChI=1S/C5H5NO2/c7-4-1-2-6-3-5(4)8/h1-3,8H,(H,6,7)" />
+      <Property key="InchiKey" value="InChIKey=ZCUUVWCJGRQCMZ-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="111.1" />
+      <Property key="MonoisotopicMw" value="111.0320284099" />
+      <Property key="NonStandardInchi" value="InChI=1S/C5H5NO2/c7-4-1-2-6-3-5(4)8/h1-3,8H,(H,6,7)" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C1(\N=C/C(/O)=C(\C=1)/O)" />
+      <Property key="Tautomers" value="3-HYDROXY-4H-PYRID-4-ONE" />
+    </DataNode>
+    <DataNode elementId="_3_HYDROXY_4H_PYRID_4_ONE" textLabel="3-hydroxy-4H-pyrid-4-one" type="Metabolite">
+      <Xref identifier="ZCUUVWCJGRQCMZ-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="350" centerY="210" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="PMN, zhang">|FRAME: DIHYDROXYPIRIDIN-CPD| is a tautomer of |FRAME: 3-HYDROXY-4H-PYRID-4-ONE|.</Comment>
+      <Property key="UniqueID" value="3-HYDROXY-4H-PYRID-4-ONE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000013521874" />
+      <Property key="AlternativeId_Chemspider" value="14526621" />
+      <Property key="AlternativeId_LigandCpd" value="C03927" />
+      <Property key="AlternativeId_Chebi" value="28630" />
+      <Property key="AlternativeId_Pubchem" value="105085" />
+      <Property key="Synonym_1" value="3-Hydroxy-4(1H)-pyridinone" />
+      <Property key="Synonym_2" value="3-hydroxypyridine-4-one" />
+      <Property key="ChemicalFormula" value="(C 5) (H 5) (N 1) (O 2)" />
+      <Property key="Gibbs0" value="4.1756" />
+      <Property key="Inchi" value="InChI=1S/C5H5NO2/c7-4-1-2-6-3-5(4)8/h1-3,8H,(H,6,7)" />
+      <Property key="InchiKey" value="InChIKey=ZCUUVWCJGRQCMZ-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="111.1" />
+      <Property key="MonoisotopicMw" value="111.0320284099" />
+      <Property key="NonStandardInchi" value="InChI=1S/C5H5NO2/c7-4-1-2-6-3-5(4)8/h1-3,8H,(H,6,7)" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C1(/N\C=C/C(=O)C(/O)=1)" />
+      <Property key="Tautomers" value="CPD-26209, DIHYDROXYPIRIDIN-CPD" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="RXN_12947">
+      <Xref identifier="RXN-12947" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN_12947_start" x="395.0" y="210" elementRef="_3_HYDROXY_4H_PYRID_4_ONE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN_12947_end" arrowHead="Conversion" x="155.0" y="210" elementRef="DIHYDROXYPIRIDIN_CPD" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN_12947_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-12947" />
+      <Property key="Spontaneous" value="T" />
+      <Property key="ReactionEquation" value="3-HYDROXY-4H-PYRID-4-ONE &lt;=&gt; DIHYDROXYPIRIDIN-CPD" />
+      <Property key="ReactionDirection" value="REVERSIBLE" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Chemical-Reactions, Small-Molecule-Reactions" />
+      <Property key="AtomMappings" value="(:NO-HYDROGEN-ENCODING (0 1 2 3 4 5 6 7) (((3-HYDROXY-4H-PYRID-4-ONE 0 7)) ((DIHYDROXYPIRIDIN-CPD 0 7))))" />
+      <Property key="Gibbs0" value="-4.91" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+  </Interactions>
+</Pathway>

@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="formaldehyde oxidation II (glutathione-dependent)" organism="Arabidopsis thaliana" source="PlantCyc" version="17.0.0_20260203115042">
+  <Description>This pathway is required for the detoxification of formaldehyde and occurs in both bacteria and eukaryotes. Two enzymes involved in this pathway have been characterized in Arabidopsis thaliana: S-formylglutathione hydrolase |CITS: [HASLAM02][11888210]| and glutathione-dependent formaldehyde dehydrogenase |CITS: [8944774][17087482]|.</Description>
+  <Authors>
+    <Author name="SRI" />
+    <Author name="caspi" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from PlantCyc flatfiles.</Comment>
+  <Comment source="BioCyc">This pathway is required for the detoxification of formaldehyde and occurs in both bacteria and eukaryotes. Two enzymes involved in this pathway have been characterized in Arabidopsis thaliana: S-formylglutathione hydrolase |CITS: [HASLAM02][11888210]| and glutathione-dependent formaldehyde dehydrogenase |CITS: [8944774][17087482]|.</Comment>
+  <Property key="UniqueID" value="PWY-1801" />
+  <Property key="Type" value="Formaldehyde-Oxidation" />
+  <Property key="ReactionCount" value="3" />
+  <Property key="ReactionIDs" value="RXN-2962, RXN-2961, S-FORMYLGLUTATHIONE-HYDROLASE-RXN" />
+  <Property key="PredecessorCount" value="3" />
+  <Property key="PrimaryCompoundCount" value="2" />
+  <Property key="Organism" value="Arabidopsis thaliana" />
+  <Property key="InstanceNameTemplate" value="PWY-*" />
+  <CitationRef elementRef="citation_PUB_11888210" />
+  <CitationRef elementRef="citation_PUB_HASLAM02" />
+  <CitationRef elementRef="citation_PUB_8944774" />
+  <CitationRef elementRef="citation_PUB_17087842" />
+  <Graphics boardWidth="1200" boardHeight="800" />
+  <DataNodes>
+    <DataNode elementId="AT5G43940" textLabel="AT5G43940" type="GeneProduct">
+      <Xref identifier="AT5G43940" dataSource="TAIR gene name" />
+      <Graphics centerX="100" centerY="50" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT5G43940" />
+      <Property key="Synonym_1" value="PAR2" />
+      <Property key="Synonym_2" value="HOT5" />
+      <Property key="Synonym_3" value="GSNOR" />
+      <Property key="Synonym_4" value="GSNOR1" />
+      <Property key="Synonym_5" value="ADH2" />
+      <Property key="Product" value="AT5G43940-MONOMER" />
+      <Property key="StartPosition" value="17701418" />
+      <Property key="EndPosition" value="17703755" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+      <Property key="Accession1" value="AT5G43940" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="AT2G41530" textLabel="AT2G41530" type="GeneProduct">
+      <Xref identifier="AT2G41530" dataSource="TAIR gene name" />
+      <Graphics centerX="220" centerY="50" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT2G41530" />
+      <Property key="Synonym_1" value="SFGH" />
+      <Property key="Product" value="AT2G41530-MONOMER" />
+      <Property key="StartPosition" value="17330573" />
+      <Property key="EndPosition" value="17332689" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="Accession1" value="AT2G41530" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="AT2G41530_MONOMER" textLabel="S-formylglutathione hydrolase//hydrolase, acting on ester bonds" type="Protein">
+      <Xref identifier="Q8LAS8" dataSource="uniprot" />
+      <Graphics centerX="150" centerY="215" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">This protein is believed to act as a homodimer with a molecular mass of ~66 kD (~31 kD per monomer) .</Comment>
+      <Property key="UniqueID" value="AT2G41530-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT2G41530.1" />
+      <Property key="AlternativeId_Uniprot" value="Q8LAS8" />
+      <Property key="Catalyzes" value="RXN-ARA-714" />
+      <Property key="Accession1" value="AT2G41530.1" />
+      <Property key="FunctionalAssignmentStatus" value=":PROBABLE-ENZYME" />
+      <Property key="Gene" value="AT2G41530" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="ORG-5993" />
+      <AnnotationRef elementRef="taxonomy_3702" />
+      <CitationRef elementRef="citation_PUB_11888210" />
+    </DataNode>
+    <DataNode elementId="AT5G43940_MONOMER" textLabel="formaldehyde dehydrogenase (glutathione)//S-nitrosoglutathione reductase//S-(hydroxymethyl)glutathione dehydrogenase" type="Protein">
+      <Xref identifier="Q96533" dataSource="uniprot" />
+      <Graphics centerX="300" centerY="215" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1, pmngroup">Glutathione-dependent formaldehyde dehydrogenase (GS-FDH) belongs to the family of class III alcohol dehydrogenases. Glutathione and formaldehyde combine non-enzymatically to form hydroxymethylglutathione, the true substrate of the GS-FDH catalyzed reaction (represented by two reactions below). This enzyme catalyzes the first step in a formaldehyde detoxification pathway |CITS:[HASLAM02]|. It has also been shown that this enzyme has S-nitrosoglutathione reductase activity .</Comment>
+      <Property key="UniqueID" value="AT5G43940-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT5G43940.2" />
+      <Property key="AlternativeId_Uniprot" value="Q96533" />
+      <Property key="Catalyzes" value="RXN-ARA-934, RXN-6807" />
+      <Property key="CatalyzesCount" value="2" />
+      <Property key="Accession1" value="AT5G43940.2" />
+      <Property key="FunctionalAssignmentStatus" value=":PROBABLE-ENZYME" />
+      <Property key="Gene" value="AT5G43940" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="ORG-5993" />
+      <AnnotationRef elementRef="taxonomy_3702" />
+      <CitationRef elementRef="citation_PUB_18326829" />
+    </DataNode>
+    <DataNode elementId="WATER" textLabel="H₂O" type="Metabolite">
+      <Xref identifier="XLYOFNOQVPJJNP-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="200" centerY="400" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="WATER" />
+      <Property key="AlternativeId_Bigg" value="33474" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15377" />
+      <Property key="AlternativeId_Hmdb" value="HMDB02111" />
+      <Property key="AlternativeId_Chemspider" value="937" />
+      <Property key="AlternativeId_Chebi" value="15377" />
+      <Property key="AlternativeId_Pubchem" value="962" />
+      <Property key="AlternativeId_LigandCpd" value="C00001" />
+      <Property key="AlternativeId_Cas" value="7732-18-5" />
+      <Property key="Synonym_1" value="H&lt;sub&gt;2&lt;/sub&gt;0" />
+      <Property key="Synonym_2" value="H2O" />
+      <Property key="Synonym_3" value="H20" />
+      <Property key="Synonym_4" value="hydrogen oxide" />
+      <Property key="Synonym_5" value="water" />
+      <Property key="ChemicalFormula" value="(H 2) (O 1)" />
+      <Property key="Gibbs0" value="-36.144756" />
+      <Property key="Inchi" value="InChI=1S/H2O/h1H2" />
+      <Property key="InchiKey" value="InChIKey=XLYOFNOQVPJJNP-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="18.015" />
+      <Property key="MonoisotopicMw" value="18.0105646863" />
+      <Property key="NonStandardInchi" value="InChI=1S/H2O/h1H2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="O" />
+    </DataNode>
+    <DataNode elementId="GLUTATHIONE" textLabel="glutathione" type="Metabolite">
+      <Xref identifier="RWSXRVCMGQZWBV-WDSKDSINSA-M" dataSource="InChIKey" />
+      <Graphics centerX="350" centerY="400" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">Thiols play a major role in the detoxification of stress-inducing factors such as reactive oxygen species, free radicals, peroxides, lipid peroxides, and heavy metals. In mammals, the major thiol is the tripeptide |FRAME: GLUTATHIONE| (&amp;gamma;-Glu-Cys-Gly, known as GSH). Toxins are conjugated to GSH in the liver by a dedicated enzyme, resulting in a |FRAME: S-Substituted-L-Cysteines &quot;cysteine-toxin conjugate&quot;|. The conjugate is acetylated in the kidney to form |FRAME: Mercapturates|, and is then excreted |CITS: [8145281]| (see |FRAME: PWY-4061|). In addition to oxidative stress management, low molecular weight thiols have been found to be involved in critical cellular processes including DNA synthesis and formaldehyde reduction |CITS: [Patel98]|. Gluathione is the major thiol not only in eukaryotic organisms but also in Gram negative bacteria and in the majority of Gram positive bacteria. Pathogenic bacteria live in a particularly hostile environment, in which the host deliberately generates toxins, including reactive oxygen species, to destroy the invading organism, thus thiols are particularly important for the survival of these organisms. Despite the ubiquity of GSH, it is not universal. In many organisms, including some eukaryotes, other thiols have taken its role. Some of these thiols are |FRAME: CoM|, |FRAME: TRYPANOTHIONE|, |FRAME: Ergothioneine|, |FRAME: CPD1G-2| and |FRAME: CPD-17028|.</Comment>
+      <Property key="UniqueID" value="GLUTATHIONE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000003830891" />
+      <Property key="AlternativeId_Mediadb" value="compounds/51/" />
+      <Property key="AlternativeId_Seed" value="cpd00042" />
+      <Property key="AlternativeId_Metanetx" value="MNXM57" />
+      <Property key="AlternativeId_Refmet" value="Glutathione" />
+      <Property key="AlternativeId_Bigg" value="gthrd" />
+      <Property key="AlternativeId_Pubchem" value="7048684" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57925" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00125" />
+      <Property key="AlternativeId_Chemspider" value="19589806" />
+      <Property key="AlternativeId_Chebi" value="57925" />
+      <Property key="AlternativeId_Knapsack" value="C00001518" />
+      <Property key="AlternativeId_LigandCpd" value="C00051" />
+      <Property key="AlternativeId_Cas" value="70-18-8" />
+      <Property key="Synonym_1" value="L-&amp;gamma;-glutamyl-L-cysteinylglycine" />
+      <Property key="Synonym_2" value="GSH" />
+      <Property key="Synonym_3" value="reduced glutathione" />
+      <Property key="Synonym_4" value="glutathionate" />
+      <Property key="Synonym_5" value="glutathione reduced" />
+      <Property key="ChemicalFormula" value="(C 10) (H 16) (N 3) (O 6) (S 1)" />
+      <Property key="AtomCharges" value="(19 -1), (16 -1), (11 1)" />
+      <Property key="Gibbs0" value="-56.924126" />
+      <Property key="Inchi" value="InChI=1S/C10H17N3O6S/c11-5(10(18)19)1-2-7(14)13-6(4-20)9(17)12-3-8(15)16/h5-6,20H,1-4,11H2,(H,12,17)(H,13,14)(H,15,16)(H,18,19)/p-1/t5-,6-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=RWSXRVCMGQZWBV-WDSKDSINSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="306.313" />
+      <Property key="MonoisotopicMw" value="307.0838059839" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-15680, REG-12350, REG-10974, REG-10766, REG0-8323, REG-13348, REG0-9055, REG-5948, REG-6243, REG-6168" />
+      <Property key="Smiles" value="C(S)[C@@H](C(NCC([O-])=O)=O)NC(=O)CC[C@H]([NH3+])C([O-])=O" />
+      <CitationRef elementRef="citation_PUB_8145281" />
+    </DataNode>
+    <DataNode elementId="PROTON" textLabel="H⁺" type="Metabolite">
+      <Xref identifier="GPRLSGONYQIRFK-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="500" centerY="400" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="PROTON" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1" />
+      <Property key="AlternativeId_Seed" value="cpd00067" />
+      <Property key="AlternativeId_Bigg" value="33778" />
+      <Property key="AlternativeId_Hmdb" value="HMDB59597" />
+      <Property key="AlternativeId_Chemspider" value="1010" />
+      <Property key="AlternativeId_Pubchem" value="1038" />
+      <Property key="AlternativeId_Chebi" value="15378" />
+      <Property key="AlternativeId_Cas" value="12408-02-5" />
+      <Property key="AlternativeId_LigandCpd" value="C00080" />
+      <Property key="Synonym_1" value="hydrogen ion" />
+      <Property key="Synonym_2" value="proton" />
+      <Property key="Synonym_3" value="H" />
+      <Property key="ChemicalFormula" value="(H 1)" />
+      <Property key="AtomCharges" value="(1 1)" />
+      <Property key="Gibbs0" value="0.42906138" />
+      <Property key="Inchi" value="InChI=1S/p+1" />
+      <Property key="InchiKey" value="InChIKey=GPRLSGONYQIRFK-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="1.008" />
+      <Property key="MonoisotopicMw" value="1.0078250321" />
+      <Property key="NonStandardInchi" value="InChI=1S/p+1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="[H+]" />
+    </DataNode>
+    <DataNode elementId="FORMATE" textLabel="formate" type="Metabolite">
+      <Xref identifier="BDAGIHXWWSANSR-UHFFFAOYSA-M" dataSource="InChIKey" />
+      <Graphics centerX="200" centerY="500" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue">Formate is a one-carbon molecule that was first isolated from distillation of ant bodies, and it was subsequently named using the Latin word for ant, formica |CITS: [Stumper21]|. Ants and other insects accumulate formate in secretory glands and release their content as a mechanism of defense. Formate serves as an intermediate in one-carbon (1C) metabolism in all organisms. It is also a key metabolite for many bacterial and archaeal species. Depending on the physiological conditions, formate serves various roles, such as to act as a reductant in anaerobic respiration, be oxidized aerobically, be secreted, or be converted to hydrogen and CO&lt;sub&gt;2&lt;/sub&gt;. Formate is particularly common in anaerobic habitats, produced as a fermentation product of some species and used as a growth substrate for others. It is crucial compound in many syntrophic associations, in which organisms live close to the thermodynamic limit (for example, sulfate-reducing bacteria and methanogens) |CITS: [18708519][20844539]|. Its redox potential is low (around -420 mV), which allows it to donate an electron for the reduction of fumarate. In eukaryotes formate is produced from a variety of nutrients, and can be fed into a number of biosynthetic pathways. A common source of formate is the catabolism of serine or glycine (via tetrahydrofolate). Another important source is formaldehyde, which is formed by many demethylation enzymes and as a degradation product of methanol. Formate is also produced during sterol synthesis, polyamine synthesis, and tryptophan degradation, and is used during purine synthesis, thymidylate synthesis, and as the source of carbon for methylation reactions via folate and methionine (formate can be assimilated into folate by |FRAME: EC-6.3.4.3| and its carbon transferred to methionine by |FRAME: EC-2.1.1.13|. Methionine is then converted to |FRAME: S-ADENOSYLMETHIONINE|, the most common methyl group donor) |CITS: [31402327]|.</Comment>
+      <Property key="UniqueID" value="FORMATE" />
+      <Property key="AlternativeId_Refmet" value="Formic acid" />
+      <Property key="AlternativeId_Bigg" value="for" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC15740" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00142" />
+      <Property key="AlternativeId_Chemspider" value="277" />
+      <Property key="AlternativeId_Chebi" value="15740" />
+      <Property key="AlternativeId_Pubchem" value="283" />
+      <Property key="AlternativeId_LigandCpd" value="C00058" />
+      <Property key="AlternativeId_Cas" value="64-18-6" />
+      <Property key="Synonym_1" value="formic acid" />
+      <Property key="Synonym_2" value="methanoate" />
+      <Property key="ChemicalFormula" value="(C 1) (H 1) (O 2)" />
+      <Property key="AtomCharges" value="(3 -1)" />
+      <Property key="Gibbs0" value="-73.93095" />
+      <Property key="Inchi" value="InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)/p-1" />
+      <Property key="InchiKey" value="InChIKey=BDAGIHXWWSANSR-UHFFFAOYSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="45.018" />
+      <Property key="MonoisotopicMw" value="46.0054793084" />
+      <Property key="NonStandardInchi" value="InChI=1S/CH2O2/c2-1-3/h1H,(H,2,3)/p-1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG-6186" />
+      <Property key="Smiles" value="C([O-])=O" />
+      <CitationRef elementRef="citation_PUB_31402327" />
+    </DataNode>
+    <DataNode elementId="FORMALDEHYDE" textLabel="formaldehyde" type="Metabolite">
+      <Xref identifier="WSFSSNUMVMOOMR-UHFFFAOYSA-N" dataSource="InChIKey" />
+      <Graphics centerX="350" centerY="500" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="FORMALDEHYDE" />
+      <Property key="AlternativeId_Bigg" value="fald" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC16842" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01426" />
+      <Property key="AlternativeId_Drugbank" value="DB03843" />
+      <Property key="AlternativeId_Chemspider" value="692" />
+      <Property key="AlternativeId_Chebi" value="16842" />
+      <Property key="AlternativeId_Pubchem" value="712" />
+      <Property key="AlternativeId_LigandCpd" value="C00067" />
+      <Property key="AlternativeId_Cas" value="50-00-0" />
+      <Property key="Synonym_1" value="formalin" />
+      <Property key="Synonym_2" value="methanal" />
+      <Property key="Synonym_3" value="formol" />
+      <Property key="ChemicalFormula" value="(C 1) (H 2) (O 1)" />
+      <Property key="Gibbs0" value="-10.65776" />
+      <Property key="Inchi" value="InChI=1S/CH2O/c1-2/h1H2" />
+      <Property key="InchiKey" value="InChIKey=WSFSSNUMVMOOMR-UHFFFAOYSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="30.026" />
+      <Property key="MonoisotopicMw" value="30.0105646863" />
+      <Property key="NonStandardInchi" value="InChI=1S/CH2O/c1-2/h1H2" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-8345, REG-8386" />
+      <Property key="Smiles" value="C=O" />
+    </DataNode>
+    <DataNode elementId="NAD_P_OR_NOP" textLabel="NAD(P)⁺" type="Metabolite">
+      <Xref identifier="13390" dataSource="ChEBI" />
+      <Graphics centerX="500" centerY="500" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>|FRAME: NAD-P-OR-NOP| is a class of compounds including the instances |FRAME: NAD| and |FRAME: NADP|. |FRAME: NAD| and |FRAME: NADP| are dinucleotides containing one |FRAME: NIACINAMIDE| base and one |FRAME: ADENINE| base. Each nucleotide is connected to a ribose sugar at position 1, and the two riboses are connected at their 5 position via a diphosphate. The only difference between the two is that in NADP there is an additional phosphate group at the 2&apos; position of the ribose that carries the adenine moiety. These molecules are biological carriers of reductive equivalents (i.e. high potential electrons). They are often referred to as coenzymes, although in most of their reactions they function as cosubstrates rather than true coenzymes. The most common function of |FRAME: NAD| is to accept two electrons and a proton (a hydride ion) from a substrate that is being oxidized. This reduction converts |FRAME: NAD| to |FRAME: NADH|, the reduced form. NADH then diffuses or is transported to a terminal oxidase, where the electrons are passed on, regenerating the oxidized form. |FRAME: NADPH|, on the other hand, is mostly involved in biosynthetic reactions, where it serves as an electron donor. NADPH is formed by reduction of |FRAME: NADP|, which occurs by different mechanisms in different types of organisms. In photosynthetic organisms |FRAME: NADP| is reduced by |FRAME: CPLX-84|. In heterotrophic organisms it is reduced by central metabolism processes such as the pentose phosphate pathway (see |FRAME: OXIDATIVEPENT-PWY|).</Comment>
+      <Property key="UniqueID" value="NAD-P-OR-NOP" />
+      <Property key="AlternativeId_Metanetx" value="MNXM137" />
+      <Property key="AlternativeId_Seed" value="cpd27638" />
+      <Property key="AlternativeId_Chebi" value="13390" />
+      <Property key="Synonym_1" value="NAD(P)" />
+      <Property key="Synonym_2" value="NAD(P)+" />
+      <Property key="Synonym_3" value="&amp;beta;-NAD(P)&lt;sup&gt;+&lt;/sup&gt;" />
+      <Property key="AtomCharges" value="(37 -1), (35 -1), (27 1)" />
+      <Property key="CofactorsOf" value="ENZRXNQT-122" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="NonStandardInchi" value="InChI=1S/C21H27N7O14P2/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(32)14(30)11(41-21)6-39-44(36,37)42-43(34,35)38-5-10-13(29)15(31)20(40-10)27-3-1-2-9(4-27)18(23)33/h1-4,7-8,10-11,13-16,20-21,29-32H,5-6H2,(H5-,22,23,24,25,33,34,35,36,37)/p-1/t10-,11-,13-,14-,15-,16-,20-,21-/m1/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C5(/C=C\C(\C(=O)N)=C/[N+](/[C@@H]1(O[C@@H]([C@H]([C@H]1O)O)COP(OP(OC[C@H]4(O[C@@H](N2(C3(\C(\N=C/2)=C(N)/N=C\N=3)))[C@H](O[R])[C@H](O)4))(=O)[O-])(=O)[O-]))=5)" />
+    </DataNode>
+    <DataNode elementId="CPD_548" textLabel="S-formylglutathione" type="Metabolite">
+      <Xref identifier="FHXAGOICBFGEBF-BQBZGAKWSA-M" dataSource="InChIKey" />
+      <Graphics centerX="200" centerY="600" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="CPD-548" />
+      <Property key="AlternativeId_Zinc" value="ZINC000003869692" />
+      <Property key="AlternativeId_Seed" value="cpd00759" />
+      <Property key="AlternativeId_Metanetx" value="MNXM952" />
+      <Property key="AlternativeId_Chebi" value="57688" />
+      <Property key="AlternativeId_Bigg" value="Sfglutth" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC57688" />
+      <Property key="AlternativeId_Hmdb" value="HMDB01550" />
+      <Property key="AlternativeId_Pubchem" value="25246250" />
+      <Property key="AlternativeId_LigandCpd" value="C01031" />
+      <Property key="ChemicalFormula" value="(C 11) (H 16) (N 3) (O 7) (S 1)" />
+      <Property key="AtomCharges" value="(21 -1), (18 -1), (12 1)" />
+      <Property key="Gibbs0" value="-89.11414" />
+      <Property key="Inchi" value="InChI=1S/C11H17N3O7S/c12-6(11(20)21)1-2-8(16)14-7(4-22-5-15)10(19)13-3-9(17)18/h5-7H,1-4,12H2,(H,13,19)(H,14,16)(H,17,18)(H,20,21)/p-1/t6-,7-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=FHXAGOICBFGEBF-BQBZGAKWSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="334.323" />
+      <Property key="MonoisotopicMw" value="335.078720606" />
+      <Property key="NonStandardInchi" value="InChI=1S/C11H17N3O7S/c12-6(11(20)21)1-2-8(16)14-7(4-22-5-15)10(19)13-3-9(17)18/h5-7H,1-4,12H2,(H,13,19)(H,14,16)(H,17,18)(H,20,21)/p-1/t6-,7-/m0/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C(NC(=O)[C@H](CSC=O)NC(=O)CC[C@H]([NH3+])C(=O)[O-])C(=O)[O-]" />
+    </DataNode>
+    <DataNode elementId="S_HYDROXYMETHYLGLUTATHIONE" textLabel="S-(hydroxymethyl)glutathione" type="Metabolite">
+      <Xref identifier="PIUSLWSYOYFRFR-BQBZGAKWSA-M" dataSource="InChIKey" />
+      <Graphics centerX="350" centerY="600" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="S-HYDROXYMETHYLGLUTATHIONE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000003870218" />
+      <Property key="AlternativeId_ReactomeCpd" value="5692221" />
+      <Property key="AlternativeId_Metanetx" value="MNXM1051" />
+      <Property key="AlternativeId_Bigg" value="hmgth" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC58758" />
+      <Property key="AlternativeId_Hmdb" value="HMDB04662" />
+      <Property key="AlternativeId_Chebi" value="58758" />
+      <Property key="AlternativeId_Pubchem" value="25244017" />
+      <Property key="AlternativeId_LigandCpd" value="C14180" />
+      <Property key="Synonym_1" value="HMGSH" />
+      <Property key="Synonym_2" value="HM-GSH" />
+      <Property key="Synonym_3" value="GS-CH&lt;SUB&gt;2&lt;/SUB&gt;-OH" />
+      <Property key="Synonym_4" value="(hydroxymethyl)glutathione" />
+      <Property key="ChemicalFormula" value="(C 11) (H 18) (N 3) (O 7) (S 1)" />
+      <Property key="AtomCharges" value="(21 -1), (18 -1), (12 1)" />
+      <Property key="Gibbs0" value="-66.75189" />
+      <Property key="Inchi" value="InChI=1S/C11H19N3O7S/c12-6(11(20)21)1-2-8(16)14-7(4-22-5-15)10(19)13-3-9(17)18/h6-7,15H,1-5,12H2,(H,13,19)(H,14,16)(H,17,18)(H,20,21)/p-1/t6-,7-/m0/s1" />
+      <Property key="InchiKey" value="InChIKey=PIUSLWSYOYFRFR-BQBZGAKWSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="336.339" />
+      <Property key="MonoisotopicMw" value="337.0943706702" />
+      <Property key="NonStandardInchi" value="InChI=1S/C11H19N3O7S/c12-6(11(20)21)1-2-8(16)14-7(4-22-5-15)10(19)13-3-9(17)18/h6-7,15H,1-5,12H2,(H,13,19)(H,14,16)(H,17,18)(H,20,21)/p-1/t6-,7-/m0/s1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C(NC(=O)[C@H](CSCO)NC(=O)CC[C@H]([NH3+])C(=O)[O-])C(=O)[O-]" />
+    </DataNode>
+    <DataNode elementId="NADH_P_OR_NOP" textLabel="NAD(P)H" type="Metabolite">
+      <Xref identifier="13392" dataSource="ChEBI" />
+      <Graphics centerX="500" centerY="600" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>|FRAME: NADH-P-OR-NOP| is a class of compounds including the instances |FRAME: NADH| and |FRAME: NADPH|. |FRAME: NAD-P-OR-NOP| is a class of compounds including the instances |FRAME: NAD| and |FRAME: NADP|. |FRAME: NAD| and |FRAME: NADP| are dinucleotides containing one |FRAME: NIACINAMIDE| base and one |FRAME: ADENINE| base. Each nucleotide is connected to a ribose sugar at position 1, and the two riboses are connected at their 5 position via a diphosphate. The only difference between the two is that in NADP there is an additional phosphate group at the 2&apos; position of the ribose that carries the adenine moiety. These molecules are biological carriers of reductive equivalents (i.e. high potential electrons). They are often referred to as coenzymes, although in most of their reactions they function as cosubstrates rather than true coenzymes. The most common function of |FRAME: NAD| is to accept two electrons and a proton (a hydride ion) from a substrate that is being oxidized. This reduction converts |FRAME: NAD| to |FRAME: NADH|, the reduced form. NADH then diffuses or is transported to a terminal oxidase, where the electrons are passed on, regenerating the oxidized form. |FRAME: NADPH|, on the other hand, is mostly involved in biosynthetic reactions, where it serves as an electron donor. NADPH is formed by reduction of |FRAME: NADP|, which occurs by different mechanisms in different types of organisms. In photosynthetic organisms |FRAME: NADP| is reduced by |FRAME: CPLX-84|. In heterotrophic organisms it is reduced by central metabolism processes such as the pentose phosphate pathway (see |FRAME: OXIDATIVEPENT-PWY|).</Comment>
+      <Property key="UniqueID" value="NADH-P-OR-NOP" />
+      <Property key="AlternativeId_Metanetx" value="MNXM162231" />
+      <Property key="AlternativeId_Seed" value="cpd27640" />
+      <Property key="AlternativeId_Chebi" value="13392" />
+      <Property key="Synonym_1" value="&amp;beta;-NAD(P)H" />
+      <Property key="AtomCharges" value="(37 -1), (35 -1)" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C1(/N(\C=C/CC(/C(N)=O)=1)[C@@H]5(O[C@H](COP(=O)([O-])OP(=O)([O-])OC[C@H]2(O[C@H]([C@H](O[R])[C@H](O)2)N3(\C=N/C4(C(/N)=N\C=N/C3=4))))[C@@H](O)[C@@H](O)5))" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="145.0" y="50" elementRef="AT5G43940" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="255.0" y="215" elementRef="AT5G43940_MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_1_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_1_0_0" x="265.0" y="50" elementRef="AT2G41530" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_1_0_0" arrowHead="TranscriptionTranslation" x="105.0" y="215" elementRef="AT2G41530_MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN_2962">
+      <Xref identifier="EC-1.1.1.284" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN_2962_start" x="395.0" y="600" elementRef="S_HYDROXYMETHYLGLUTATHIONE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN_2962_end" arrowHead="Conversion" x="155.0" y="600" elementRef="CPD_548" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN_2962_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-2962" />
+      <Property key="EC_Number" value="EC-1.1.1.284" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-1801" />
+      <Property key="ReactionEquation" value="S-HYDROXYMETHYLGLUTATHIONE + NAD-P-OR-NOP =&gt; CPD-548 + NADH-P-OR-NOP + PROTON" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXNARA-934" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-19.029358" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN_2962_ENZRXNARA_934_0_0">
+      <Waypoints>
+        <Point elementId="RXN_2962_ENZRXNARA_934_start_0_0" x="300" y="227.5" elementRef="AT5G43940_MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="RXN_2962_ENZRXNARA_934_end_0_0" arrowHead="Catalysis" x="0" y="0" elementRef="RXN_2962_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN_2962_anchor_reactant_1">
+      <Xref identifier="EC-1.1.1.284" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN_2962_anchor_reactant_start_1" x="545.0" y="500" elementRef="NAD_P_OR_NOP" relX="1.0" relY="0.0" />
+        <Point elementId="RXN_2962_anchor_reactant_end_1" x="0" y="0" elementRef="RXN_2962_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN_2962_anchor_product_1">
+      <Xref identifier="EC-1.1.1.284" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN_2962_anchor_product_start_1" x="0" y="0" elementRef="RXN_2962_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN_2962_anchor_product_end_1" arrowHead="Conversion" x="455.0" y="600" elementRef="NADH_P_OR_NOP" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN_2962_anchor_product_2">
+      <Xref identifier="EC-1.1.1.284" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN_2962_anchor_product_start_2" x="0" y="0" elementRef="RXN_2962_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN_2962_anchor_product_end_2" arrowHead="Conversion" x="455.0" y="400" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN_2961">
+      <Xref identifier="EC-4.4.1.22" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN_2961_start" x="395.0" y="500" elementRef="FORMALDEHYDE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN_2961_end" arrowHead="Conversion" x="305.0" y="600" elementRef="S_HYDROXYMETHYLGLUTATHIONE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN_2961_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-2961" />
+      <Property key="EC_Number" value="EC-4.4.1.22" />
+      <Property key="Spontaneous" value="T" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="PWY-1801" />
+      <Property key="ReactionEquation" value="S-HYDROXYMETHYLGLUTATHIONE =&gt; FORMALDEHYDE + GLUTATHIONE" />
+      <Property key="ReactionDirection" value="PHYSIOL-RIGHT-TO-LEFT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-0.8299866" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN_2961_anchor_reactant_0">
+      <Xref identifier="EC-4.4.1.22" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN_2961_anchor_reactant_start_0" x="395.0" y="600" elementRef="S_HYDROXYMETHYLGLUTATHIONE" relX="1.0" relY="0.0" />
+        <Point elementId="RXN_2961_anchor_reactant_end_0" x="0" y="0" elementRef="RXN_2961_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN_2961_anchor_product_0">
+      <Xref identifier="EC-4.4.1.22" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN_2961_anchor_product_start_0" x="0" y="0" elementRef="RXN_2961_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN_2961_anchor_product_end_0" arrowHead="Conversion" x="305.0" y="500" elementRef="FORMALDEHYDE" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN_2961_anchor_product_1">
+      <Xref identifier="EC-4.4.1.22" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="RXN_2961_anchor_product_start_1" x="0" y="0" elementRef="RXN_2961_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN_2961_anchor_product_end_1" arrowHead="Conversion" x="305.0" y="400" elementRef="GLUTATHIONE" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="S_FORMYLGLUTATHIONE_HYDROLASE_RXN">
+      <Xref identifier="EC-3.1.2.12" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="S_FORMYLGLUTATHIONE_HYDROLASE_RXN_start" x="245.0" y="600" elementRef="CPD_548" relX="1.0" relY="0.0" />
+        <Point elementId="S_FORMYLGLUTATHIONE_HYDROLASE_RXN_end" arrowHead="Conversion" x="155.0" y="500" elementRef="FORMATE" relX="-1.0" relY="0.0" />
+        <Anchor elementId="S_FORMYLGLUTATHIONE_HYDROLASE_RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="S-FORMYLGLUTATHIONE-HYDROLASE-RXN" />
+      <Property key="EC_Number" value="EC-3.1.2.12" />
+      <Property key="Pathways" value="PWY-1801" />
+      <Property key="ReactionEquation" value="CPD-548 + WATER =&gt; PROTON + FORMATE + GLUTATHIONE" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReaction" value="ENZRXNARA-714" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="Gibbs0" value="-5.1671143" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="S_FORMYLGLUTATHIONE_HYDROLASE_RXN_ENZRXNARA_714_0_0">
+      <Waypoints>
+        <Point elementId="S_FORMYLGLUTATHIONE_HYDROLASE_RXN_ENZRXNARA_714_start_0_0" x="150" y="227.5" elementRef="AT2G41530_MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="S_FORMYLGLUTATHIONE_HYDROLASE_RXN_ENZRXNARA_714_end_0_0" arrowHead="Catalysis" x="0" y="0" elementRef="S_FORMYLGLUTATHIONE_HYDROLASE_RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="S_FORMYLGLUTATHIONE_HYDROLASE_RXN_anchor_reactant_1">
+      <Xref identifier="EC-3.1.2.12" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="S_FORMYLGLUTATHIONE_HYDROLASE_RXN_anchor_reactant_start_1" x="245.0" y="400" elementRef="WATER" relX="1.0" relY="0.0" />
+        <Point elementId="S_FORMYLGLUTATHIONE_HYDROLASE_RXN_anchor_reactant_end_1" x="0" y="0" elementRef="S_FORMYLGLUTATHIONE_HYDROLASE_RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="S_FORMYLGLUTATHIONE_HYDROLASE_RXN_anchor_product_0">
+      <Xref identifier="EC-3.1.2.12" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="S_FORMYLGLUTATHIONE_HYDROLASE_RXN_anchor_product_start_0" x="0" y="0" elementRef="S_FORMYLGLUTATHIONE_HYDROLASE_RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="S_FORMYLGLUTATHIONE_HYDROLASE_RXN_anchor_product_end_0" arrowHead="Conversion" x="455.0" y="400" elementRef="PROTON" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="S_FORMYLGLUTATHIONE_HYDROLASE_RXN_anchor_product_2">
+      <Xref identifier="EC-3.1.2.12" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="S_FORMYLGLUTATHIONE_HYDROLASE_RXN_anchor_product_start_2" x="0" y="0" elementRef="S_FORMYLGLUTATHIONE_HYDROLASE_RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="S_FORMYLGLUTATHIONE_HYDROLASE_RXN_anchor_product_end_2" arrowHead="Conversion" x="305.0" y="400" elementRef="GLUTATHIONE" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Annotations>
+    <Annotation elementId="taxonomy_3702" value="Arabidopsis thaliana" type="Taxonomy">
+      <Xref identifier="3702" dataSource="NCBI Taxonomy" />
+    </Annotation>
+  </Annotations>
+  <Citations>
+    <Citation elementId="citation_PUB_8145281">
+      <Xref identifier="8145281" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_31402327">
+      <Xref identifier="31402327" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_17087842">
+      <Xref identifier="17087842" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_11888210">
+      <Xref identifier="11888210" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_18326829">
+      <Xref identifier="18326829" dataSource="pubmed" />
+    </Citation>
+    <Citation elementId="citation_PUB_HASLAM02">
+      <Xref identifier="PUB-HASLAM02 | Cloning and characterization of S-formylglutathione hydrolase from
+&lt;i&gt;Arabidopsis thaliana&lt;/i&gt;: a pa... (Haslam, R., Rust, S., Pallett, K. et al., 2002)" dataSource="BioCyc" />
+    </Citation>
+    <Citation elementId="citation_PUB_8944774">
+      <Xref identifier="8944774" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>
