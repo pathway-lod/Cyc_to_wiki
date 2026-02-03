@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="RXN-14904" organism="cellular organisms" source="PlantCyc" version="17.0.0_20260203162556">
+  <Description>Single reaction view for RXN-14904: RXN-14904</Description>
+  <Authors>
+    <Author name="BioCyc" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from BioCyc single reaction data.</Comment>
+  <Property key="UniqueID" value="RXN-14904" />
+  <Graphics boardWidth="1200" boardHeight="800" />
+  <DataNodes>
+    <DataNode elementId="CPD0_1108" textLabel="β-D-ribofuranose" type="Metabolite">
+      <Xref identifier="HMFHBZSHGGEWLO-TXICZTDVSA-N" dataSource="InChIKey" />
+      <Graphics centerX="200" centerY="210" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue, THE-ARABIDOPSIS-INFORMATION-RESOURCE, zhang">|FRAME: RIBOSE D-Ribose| has many different forms in solution. In decreasing order of frequency, the species are |FRAME: CPD0-1110| (59%), |FRAME: CPD-15829| (20%), |FRAME: CPD0-1108| (13%), |FRAME: CPD-10330| (7%) and |FRAME: CPD-15818 &quot;open chain&quot;| (0.1%) |CITS: [Drew98]|.</Comment>
+      <Property key="UniqueID" value="CPD0-1108" />
+      <Property key="AlternativeId_Seed" value="cpd16443" />
+      <Property key="AlternativeId_Metanetx" value="MNXM3548" />
+      <Property key="AlternativeId_Chemspider" value="394477" />
+      <Property key="AlternativeId_LigandCpd" value="C16639" />
+      <Property key="AlternativeId_Chebi" value="47002" />
+      <Property key="AlternativeId_Pubchem" value="447347" />
+      <Property key="ChemicalFormula" value="(C 5) (H 10) (O 5)" />
+      <Property key="Gibbs0" value="-78.908806" />
+      <Property key="Inchi" value="InChI=1S/C5H10O5/c6-1-2-3(7)4(8)5(9)10-2/h2-9H,1H2/t2-,3-,4-,5-/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=HMFHBZSHGGEWLO-TXICZTDVSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="150.131" />
+      <Property key="MonoisotopicMw" value="150.0528234315" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C([C@@H]1([C@@H](O)[C@@H](O)[C@H](O)O1))O" />
+    </DataNode>
+    <DataNode elementId="CPD_10330" textLabel="α-D-ribofuranose" type="Metabolite">
+      <Xref identifier="HMFHBZSHGGEWLO-AIHAYLRMSA-N" dataSource="InChIKey" />
+      <Graphics centerX="350" centerY="210" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="xue, PMN, zhang">|FRAME: RIBOSE D-Ribose| has many different forms in solution. In decreasing order of frequency, the species are |FRAME: CPD0-1110| (59%), |FRAME: CPD-15829| (20%), |FRAME: CPD0-1108| (13%), |FRAME: CPD-10330| (7%) and |FRAME: CPD-15818 &quot;open chain&quot;| (0.1%) |CITS: [Drew98]|.</Comment>
+      <Property key="UniqueID" value="CPD-10330" />
+      <Property key="AlternativeId_Pubchem" value="445894" />
+      <Property key="AlternativeId_Chebi" value="45506" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00283" />
+      <Property key="AlternativeId_Chemspider" value="5575" />
+      <Property key="Synonym_1" value="&amp;alpha; D-ribose" />
+      <Property key="ChemicalFormula" value="(C 5) (H 10) (O 5)" />
+      <Property key="Gibbs0" value="-73.868805" />
+      <Property key="Inchi" value="InChI=1S/C5H10O5/c6-1-2-3(7)4(8)5(9)10-2/h2-9H,1H2/t2-,3-,4-,5+/m1/s1" />
+      <Property key="InchiKey" value="InChIKey=HMFHBZSHGGEWLO-AIHAYLRMSA-N" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="150.131" />
+      <Property key="MonoisotopicMw" value="150.0528234315" />
+      <Property key="NonStandardInchi" value=":STANDARD-INCHI" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="C(O)[C@@H]1([C@H]([C@H]([C@@H](O)O1)O)O)" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="RXN_14904">
+      <Xref identifier="RXN-14904" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN_14904_start" x="395.0" y="210" elementRef="CPD_10330" relX="1.0" relY="0.0" />
+        <Point elementId="RXN_14904_end" arrowHead="Conversion" x="155.0" y="210" elementRef="CPD0_1108" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN_14904_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN-14904" />
+      <Property key="Spontaneous" value="T" />
+      <Property key="ReactionEquation" value="CPD-10330 &lt;=&gt; CPD0-1108" />
+      <Property key="ReactionDirection" value="REVERSIBLE" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionTypes" value="Chemical-Reactions, Small-Molecule-Reactions" />
+      <Property key="AtomMappings" value="(:NO-HYDROGEN-ENCODING (0 1 2 3 4 5 6 7 8 9) (((CPD-10330 0 9)) ((CPD0-1108 0 9))))" />
+      <Property key="Gibbs0" value="-5.0399933" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+  </Interactions>
+</Pathway>

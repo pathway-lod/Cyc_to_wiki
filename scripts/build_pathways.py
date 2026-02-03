@@ -322,6 +322,7 @@ def main():
     data_dir = sys.argv[1]
     output_base_dir = sys.argv[2]
     include_reactions = '--include-reactions' in sys.argv or '--include_reactions' in sys.argv
+    no_timestamp_subdir = '--no-timestamp-subdir' in sys.argv or '--no_timestamp_subdir' in sys.argv
 
     # Parse specific pathway or reaction ID
     specific_pathway_id = None
@@ -395,9 +396,10 @@ def main():
         except Exception as e:
             print(f"  Warning: Could not extract version from header: {e}")
 
-    # Create output directory with timestamp
+    # Create output directory (optionally without timestamp subdir)
     timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
-    output_dir = os.path.join(output_base_dir, f"biocyc_pathways_{timestamp}")
+    output_dir = output_base_dir if no_timestamp_subdir else os.path.join(output_base_dir, f"biocyc_pathways_{timestamp}")
+
     individual_pathways_dir = os.path.join(output_dir, "individual_pathways")
     os.makedirs(individual_pathways_dir, exist_ok=True)
 

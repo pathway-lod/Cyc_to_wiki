@@ -19,7 +19,7 @@ fi
 # Defaults if not set in config
 PLANTCYC_ROOT="${PLANTCYC_ROOT:?PLANTCYC_ROOT must be set in scripts/config.env}"
 GPML_SNAPSHOT="${GPML_SNAPSHOT:-gpml2021}"
-OUT_BASE="${OUT_BASE:-./output_gpml}"
+OUT_BASE="${OUT_BASE:-./output}"
 
 # Read PlantCyc version from default-version.txt (your PlantCyc layout)
 DEFAULT_VER_FILE="$PLANTCYC_ROOT/default-version"
@@ -49,7 +49,7 @@ OUT_DIR="${OUT_BASE%/}/${TAG_NAME}__git${SHORT_SHA}__${RUN_TS}"
 mkdir -p "$OUT_DIR"
 
 # Hardcoded: include reactions
-CMD=(python "$REPO_ROOT/scripts/build_pathways.py" "$PLANTCYC_DATA_DIR" "$OUT_DIR" --include-reactions --db-version "$PLANTCYC_VERSION")
+CMD=(python "$REPO_ROOT/scripts/build_pathways.py" "$PLANTCYC_DATA_DIR" "$OUT_DIR" --include-reactions --db-version "$PLANTCYC_VERSION" --no-timestamp-subdir)
 
 # Write metadata log (super useful later)
 LOG_FILE="$OUT_DIR/run.metadata.txt"
