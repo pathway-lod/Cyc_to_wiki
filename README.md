@@ -81,6 +81,8 @@ conda activate cyc_2_wiki
 ./scripts/run_pipeline.sh
 ```
 
+If you have made edits to the script first make sure it is executable with `chmod +x scripts/run_pipeline.sh` 
+
 ## Project Structure
 
 ```

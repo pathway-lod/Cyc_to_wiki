@@ -3,6 +3,9 @@
 Extract organism names from GPML files and generate organisms.tsv.
 Uses org_id_mapping_v2.tsv to look up NCBI IDs for all organisms.
 Usage: python generate_organisms_tsv.py <directory> [--output FILE] [--existing FILE] [--mapping FILE]
+
+[--existing FILE] : the existing organisms.tsv file from BridgeDB 
+[--mapping FILE] : organism_id_mapping_v2.tsv
 """
 
 import xml.etree.ElementTree as ET
