@@ -426,3 +426,239 @@ if __name__ == "__main__":
 
     for i, regulation_data in enumerate(regulations[:5]):
         print_regulation_interaction_summary(regulation_data, i)
+
+
+def create_pathway_regulation_interactions(pathway_components, regulation_by_reaction, compound_node_map, positioned_node_map, 
+                                           compound_original_to_node, protein_original_to_node, monomer_by_complex, id_manager):
+    """
+    Create regulation interactions for pathways.
+
+    Handles cases where:
+    1. Regulator is a compound -> draws from compound to reaction anchor
+    2. Regulator is a protein -> draws from protein to reaction anchor
+    3. Regulator is missing -> creates placeholder compound and draws regulation
+
+    Args:
+        pathway_components: Dictionary of pathway components
+        regulation_by_reaction: Dictionary mapping reaction IDs to regulation data
+        compound_node_map: Map of compound IDs to positioned compound nodes
+        positioned_node_map: Map of node element IDs to positioned nodes
+        compound_original_to_node: Map of original compound IDs to DataNodes
+        protein_original_to_node: Map of original protein IDs to DataNodes
+        monomer_by_complex: Map of complex IDs to lists of monomer nodes
+        id_manager: IDManager instance
+
+    Returns:
+        tuple: (list of regulation interactions, list of new placeholder nodes, list of new groups)
+    """
+    from scripts.utils import standard_graphics
+    import copy
+    from scripts.data_structure.wiki_data_structure import HAlign, VAlign, BorderStyle, ShapeType
+
+    regulation_interactions = []
+    new_placeholder_nodes = []
+    new_regulator_groups = []
+
+    for reaction_data, original_reaction_id in pathway_components['reactions']:
+        if original_reaction_id not in regulation_by_reaction:
+            continue
+
+        reaction_interaction = reaction_data['interaction']
+        if not reaction_interaction.anchors:
+            continue
+
+        central_anchor = reaction_interaction.anchors[0]
+
+        for reg_idx, reg_data in enumerate(regulation_by_reaction[original_reaction_id]):
+            regulator_id = reg_data.get('regulator')
+            if not regulator_id:
+                continue
+
+            regulator_node = None
+
+            # Try compound
+            if regulator_id in compound_node_map:
+                regulator_node = compound_node_map[regulator_id]
+            elif regulator_id in compound_original_to_node:
+                compound_entity = compound_original_to_node[regulator_id]
+                regulator_node = copy.deepcopy(compound_entity)
+
+                if not hasattr(regulator_node, 'graphics') or regulator_node.graphics is None:
+                    regulator_node.graphics = standard_graphics.create_metabolite_graphics(0.0, 0.0)
+
+                if len(reaction_interaction.waypoints) >= 2:
+                    reaction_center_x = (reaction_interaction.waypoints[0].x + reaction_interaction.waypoints[1].x) / 2
+                    reaction_center_y = (reaction_interaction.waypoints[0].y + reaction_interaction.waypoints[1].y) / 2
+                else:
+                    reaction_center_x = reaction_interaction.waypoints[0].x
+                    reaction_center_y = reaction_interaction.waypoints[0].y
+
+                regulator_node.graphics.centerX = reaction_center_x - 150
+                regulator_node.graphics.centerY = reaction_center_y - 50
+
+                compound_node_map[regulator_id] = regulator_node
+                positioned_node_map[regulator_node.elementId] = regulator_node
+                new_placeholder_nodes.append(regulator_node)
+            # Try protein
+            elif regulator_id in protein_original_to_node:
+                protein_entity = protein_original_to_node[regulator_id]
+                if protein_entity.elementId in positioned_node_map:
+                    regulator_node = positioned_node_map[protein_entity.elementId]
+                else:
+                    # Check if this is a complex (Group object)
+                    # We check type(protein_entity).__name__ to avoid circular imports of Group
+                    if type(protein_entity).__name__ == 'Group':
+                        if regulator_id in monomer_by_complex or protein_entity.elementId in monomer_by_complex:
+                            monomer_key = regulator_id if regulator_id in monomer_by_complex else protein_entity.elementId
+                            monomers = monomer_by_complex[monomer_key]
+
+                            if monomers:
+                                if len(reaction_interaction.waypoints) >= 2:
+                                    reaction_center_x = (reaction_interaction.waypoints[0].x + reaction_interaction.waypoints[1].x) / 2
+                                    reaction_center_y = (reaction_interaction.waypoints[0].y + reaction_interaction.waypoints[1].y) / 2
+                                else:
+                                    reaction_center_x = reaction_interaction.waypoints[0].x
+                                    reaction_center_y = reaction_interaction.waypoints[0].y
+
+                                complex_x = reaction_center_x - 150
+                                complex_y = reaction_center_y - 50
+
+                                num_monomers = len(monomers)
+                                spacing = 90
+                                for i, monomer_template in enumerate(monomers):
+                                    monomer_node = copy.deepcopy(monomer_template)
+
+                                    if not hasattr(monomer_node, 'graphics') or monomer_node.graphics is None:
+                                        monomer_node.graphics = standard_graphics.create_protein_graphics(0.0, 0.0)
+
+                                    offset_x = (i - (num_monomers - 1) / 2) * spacing
+                                    monomer_node.graphics.centerX = complex_x + offset_x
+                                    monomer_node.graphics.centerY = complex_y
+
+                                    positioned_node_map[monomer_node.elementId] = monomer_node
+                                    new_placeholder_nodes.append(monomer_node)
+
+                                first_monomer = copy.deepcopy(monomers[0])
+                                if not hasattr(first_monomer, 'graphics') or first_monomer.graphics is None:
+                                    first_monomer.graphics = standard_graphics.create_protein_graphics(0.0, 0.0)
+                                first_monomer.graphics.centerX = complex_x
+                                first_monomer.graphics.centerY = complex_y
+                                regulator_node = positioned_node_map.get(first_monomer.elementId, first_monomer)
+
+                                complex_group = copy.deepcopy(protein_entity)
+
+                                total_width = spacing * (num_monomers - 1) + 100
+                                group_padding = 20
+                                group_width = total_width + group_padding * 2
+                                group_height = 60 + group_padding * 2
+
+                                complex_group.graphics = Graphics(
+                                    centerX=complex_x,
+                                    centerY=complex_y,
+                                    width=group_width,
+                                    height=group_height,
+                                    textColor='666666',
+                                    fontName='Arial',
+                                    fontWeight=False,
+                                    fontStyle=False,
+                                    fontDecoration=False,
+                                    fontStrikethru=False,
+                                    fontSize=10.0,
+                                    hAlign=HAlign.CENTER,
+                                    vAlign=VAlign.MIDDLE,
+                                    borderColor='9900CC',
+                                    borderStyle=BorderStyle.DASHED,
+                                    borderWidth=2.0,
+                                    fillColor='F5E6FF',
+                                    shapeType=ShapeType.RECTANGLE,
+                                    zOrder=-1
+                                )
+
+                                new_regulator_groups.append(complex_group)
+                            else:
+                                continue
+                        else:
+                            continue
+                    else:
+                        regulator_node = copy.deepcopy(protein_entity)
+
+                        if not hasattr(regulator_node, 'graphics') or regulator_node.graphics is None:
+                            regulator_node.graphics = standard_graphics.create_protein_graphics(0.0, 0.0)
+
+                        if len(reaction_interaction.waypoints) >= 2:
+                            reaction_center_x = (reaction_interaction.waypoints[0].x + reaction_interaction.waypoints[1].x) / 2
+                            reaction_center_y = (reaction_interaction.waypoints[0].y + reaction_interaction.waypoints[1].y) / 2
+                        else:
+                            reaction_center_x = reaction_interaction.waypoints[0].x
+                            reaction_center_y = reaction_interaction.waypoints[0].y
+
+                        regulator_node.graphics.centerX = reaction_center_x - 150
+                        regulator_node.graphics.centerY = reaction_center_y - 50
+
+                        positioned_node_map[regulator_node.elementId] = regulator_node
+                        new_placeholder_nodes.append(regulator_node)
+            else:
+                continue
+
+            if not regulator_node or not hasattr(regulator_node, 'graphics'):
+                continue
+
+            mode = reg_data.get('mode')
+            if mode == '+':
+                arrow_head = ArrowHeadType.STIMULATION
+            elif mode == '-':
+                arrow_head = ArrowHeadType.INHIBITION
+            else:
+                arrow_head = ArrowHeadType.DIRECTED
+
+            regulator_x = regulator_node.graphics.centerX + regulator_node.graphics.width / 2
+            regulator_y = regulator_node.graphics.centerY
+
+            if len(reaction_interaction.waypoints) >= 2:
+                reaction_center_x = (reaction_interaction.waypoints[0].x + reaction_interaction.waypoints[1].x) / 2
+                reaction_center_y = (reaction_interaction.waypoints[0].y + reaction_interaction.waypoints[1].y) / 2
+            else:
+                reaction_center_x = reaction_interaction.waypoints[0].x
+                reaction_center_y = reaction_interaction.waypoints[0].y
+
+            regulation_interaction = Interaction(
+                elementId=id_manager.register_id(
+                    f"{reaction_interaction.elementId}_regulation_{reg_idx}"
+                ),
+                waypoints=[
+                    Point(
+                        elementId=id_manager.register_id(
+                            f"{reaction_interaction.elementId}_regulation_start_{reg_idx}"
+                        ),
+                        x=regulator_x,
+                        y=regulator_y,
+                        arrowHead=ArrowHeadType.UNDIRECTED,
+                        elementRef=regulator_node.elementId,
+                        relX=1.0, relY=0.0
+                    ),
+                    Point(
+                        elementId=id_manager.register_id(
+                            f"{reaction_interaction.elementId}_regulation_end_{reg_idx}"
+                        ),
+                        x=reaction_center_x,
+                        y=reaction_center_y,
+                        arrowHead=arrow_head,
+                        elementRef=central_anchor.elementId,
+                        relX=0.0, relY=0.0
+                    )
+                ],
+                anchors=[],
+                graphics=Graphics(
+                    lineColor='000000',
+                    lineStyle=LineStyle.SOLID,
+                    lineWidth=1.0,
+                    connectorType=ConnectorType.STRAIGHT
+                ),
+                comments=reg_data['interaction'].comments if 'interaction' in reg_data else [],
+                properties=reg_data['interaction'].properties if 'interaction' in reg_data else [],
+                citationRefs=reg_data['interaction'].citationRefs if 'interaction' in reg_data else []
+            )
+
+            regulation_interactions.append(regulation_interaction)
+
+    return regulation_interactions, new_placeholder_nodes, new_regulator_groups

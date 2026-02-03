@@ -31,8 +31,6 @@ python build_pathways.py <data_dir> <output_dir> [options]
 ### Options
 
 - `--include-reactions`: Also build single reaction files for unused reactions
-- `--layout grid`: Use grid layout (default) - fast
-- `--layout forceatlas2`: Use ForceAtlas2 force-directed layout
 
 **Examples**:
 ```bash
@@ -43,12 +41,6 @@ python build_pathways.py ./data ./output
 python build_pathways.py ./data ./output --include-reactions
 
 python build_pathways.py ~/lustre_link/data/plantcyc/current/plantcyc/17.0.0/data ./plantcyc17.0.0-gpml2021 --include-reactions
-
-# Build with ForceAtlas2 layout 
-python build_pathways.py ./data ./output --layout forceatlas2
-
-# Combine options
-python build_pathways.py ./data ./output --include-reactions --layout forceatlas2
 ```
 
 ### Input Files
@@ -212,11 +204,7 @@ FRUCTOSE-1,6-BP <──────○──────── GAP + DHAP
 
 #### 5. Layout Calculation
 
-The converter supports two layout algorithms, configurable via `--layout` option:
-
-##### 5a. Grid Layout (Default)
-
-A three-layer hierarchical grid layout organizes entities by type:
+The converter uses a simple layout algorithm as visualized below
 
 ```
 ┌─────────────────────────────────────────┐
@@ -234,15 +222,6 @@ A three-layer hierarchical grid layout organizes entities by type:
 │  Grid: 3+ columns, 150px spacing        │
 └─────────────────────────────────────────┘
 ```
-
-**Pros**: Fast, predictable, hierarchical view of gene→protein→compound flow
-**Cons**: May have more edge crossings in complex pathways
-
-##### 5b. ForceAtlas2 Layout
-
-Force-directed graph layout that automatically positions nodes to minimize edge crossings and overlap. Using NetworkX module. 
-
-Other layouts can be implemented. 
 
 
 #### 6. Interaction Creation

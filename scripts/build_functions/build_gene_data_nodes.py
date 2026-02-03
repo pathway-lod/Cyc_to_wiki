@@ -10,101 +10,10 @@ from scripts.utils import standard_graphics
 from scripts.utils.property_parser import (
     create_dynamic_properties, handle_unique_id, handle_synonyms
 )
+from scripts.utils.organism_utils import load_organism_mapping, create_species_annotation
 import uuid
 import re
 from pathlib import Path
-
-
-# Organism mapping cache
-_ORGANISM_MAPPING = None
-
-def load_organism_mapping():
-    """Load organism mapping from org_id_mapping_v2.tsv."""
-    global _ORGANISM_MAPPING
-
-    if _ORGANISM_MAPPING is not None:
-        return _ORGANISM_MAPPING
-
-    _ORGANISM_MAPPING = {}
-
-    # Load mapping file created at pipeline start
-    mapping_file = Path(__file__).parent.parent.parent / 'org_id_mapping_v2.tsv'
-    if mapping_file.exists():
-        with open(mapping_file, 'r', encoding='utf-8') as f:
-            for line in f:
-                if line.startswith('org_id'):  # Skip header
-                    continue
-                parts = line.strip().split('\t')
-                if len(parts) >= 2:
-                    organism_id = parts[0]
-                    latin_name = parts[1]
-                    if latin_name:
-                        _ORGANISM_MAPPING[organism_id] = latin_name
-
-    return _ORGANISM_MAPPING
-
-
-def convert_to_latin_name(organism_id):
-    """
-    Convert ORG-ID or TAX-ID to Latin name.
-
-    Args:
-        organism_id: String like 'ORG-5993' or 'TAX-3702'
-
-    Returns:
-        str: Latin name if found, otherwise original organism_id
-    """
-    if not organism_id:
-        return organism_id
-
-    mapping = load_organism_mapping()
-    organism_id = str(organism_id).strip()
-
-    # Direct lookup (handles both ORG-XXXX and TAX-XXXX)
-    if organism_id in mapping:
-        return mapping[organism_id]
-
-    # Return original if not found
-    return organism_id
-
-
-def create_species_annotation(record):
-    """
-    Create Annotation and AnnotationRef for species/taxonomy.
-
-    Args:
-        record: Gene/Protein record dictionary
-
-    Returns:
-        tuple: (list of Annotation objects, list of AnnotationRef objects)
-    """
-    annotations = []
-    annotation_refs = []
-
-    if 'SPECIES' in record:
-        species_list = record['SPECIES']
-        if not isinstance(species_list, list):
-            species_list = [species_list]
-
-        for species in species_list:
-            species_id = str(species).strip()
-            latin_name = convert_to_latin_name(species_id)
-            
-            # Create a unique ID for the annotation
-            annotation_id = f"taxonomy_{species_id}"
-            # Sanitize ID
-            annotation_id = re.sub(r'[^a-zA-Z0-9_]', '_', annotation_id)
-            
-            annotation = Annotation(
-                elementId=annotation_id,
-                value=latin_name,
-                type=AnnotationType.TAXONOMY,
-                xref=Xref(identifier=species_id, dataSource="Taxonomy")
-            )
-            annotations.append(annotation)
-            annotation_refs.append(AnnotationRef(elementRef=annotation_id))
-
-    return annotations, annotation_refs
 
 
 def parse_gene_dblinks(dblinks):
@@ -523,17 +432,21 @@ def create_citation_refs_from_record(record, citation_manager):
     return []
 
 
-def create_enhanced_datanodes_from_genes(genes_file, citation_manager=None):
+def create_enhanced_datanodes_from_genes(genes_file, citation_manager=None, organism_mapping=None):
     """
     Create comprehensive DataNodes from a genes file with citation support.
 
     Args:
         genes_file: Path to the genes.dat file
         citation_manager: CitationManager instance (optional)
+        organism_mapping: Dictionary mapping ORG-IDs to Latin names (optional)
 
     Returns:
         tuple: (list of DataNode objects, list of all Citation objects)
     """
+    if organism_mapping:
+        load_organism_mapping(organism_mapping)
+
     processor = parsing_utils.read_and_parse(genes_file)
 
     datanodes = []
