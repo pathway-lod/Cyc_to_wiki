@@ -15,7 +15,6 @@ echo "Downloading latest organisms.tsv from BridgeDB..."
 if command -v curl &> /dev/null; then
     curl -L -o organisms_bridgedb.tsv https://github.com/bridgedb/datasources/raw/main/organisms.tsv
 elif command -v wget &> /dev/null; then
-    wget -O organisms_bridgedb.tsv https://github.com/bridgedb/datasources/raw/main/organisms.tsv
 else
     echo "Error: curl or wget not found. Cannot download organisms.tsv."
     exit 1
