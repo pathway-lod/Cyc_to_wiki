@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="RXN0-5468" organism="cellular organisms" source="PlantCyc" version="17.0.0_20260203115042">
+  <Description>Single reaction view for RXN0-5468: RXN0-5468</Description>
+  <Authors>
+    <Author name="BioCyc" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from BioCyc single reaction data.</Comment>
+  <Property key="UniqueID" value="RXN0-5468" />
+  <Graphics boardWidth="1200" boardHeight="800" />
+  <DataNodes>
+    <DataNode elementId="Cys2_Peroxiredoxin_Disulfide" textLabel="Cys2-Peroxiredoxin-Disulfide" type="Metabolite">
+      <Xref identifier="Cys2-Peroxiredoxin-Disulfide" dataSource="" />
+      <Graphics centerX="200" centerY="210" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="AAAAAA" borderStyle="Solid" borderWidth="1.0" fillColor="F0F0F0" shapeType="Rectangle" />
+      <Property key="IsPlaceholder" value="true" />
+    </DataNode>
+    <DataNode elementId="Reduced_Cys2_Peroxiredoxins" textLabel="Reduced-Cys2-Peroxiredoxins" type="Metabolite">
+      <Xref identifier="Reduced-Cys2-Peroxiredoxins" dataSource="" />
+      <Graphics centerX="350" centerY="210" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="AAAAAA" borderStyle="Solid" borderWidth="1.0" fillColor="F0F0F0" shapeType="Rectangle" />
+      <Property key="IsPlaceholder" value="true" />
+    </DataNode>
+    <DataNode elementId="Ox_Thioredoxin" textLabel="Ox-Thioredoxin" type="Metabolite">
+      <Xref identifier="Ox-Thioredoxin" dataSource="" />
+      <Graphics centerX="500" centerY="210" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="AAAAAA" borderStyle="Solid" borderWidth="1.0" fillColor="F0F0F0" shapeType="Rectangle" />
+      <Property key="IsPlaceholder" value="true" />
+    </DataNode>
+    <DataNode elementId="Red_Thioredoxin" textLabel="Red-Thioredoxin" type="Metabolite">
+      <Xref identifier="Red-Thioredoxin" dataSource="" />
+      <Graphics centerX="200" centerY="310" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="AAAAAA" borderStyle="Solid" borderWidth="1.0" fillColor="F0F0F0" shapeType="Rectangle" />
+      <Property key="IsPlaceholder" value="true" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="RXN0_5468">
+      <Xref identifier="RXN0-5468" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN0_5468_start" x="245.0" y="310" elementRef="Red_Thioredoxin" relX="1.0" relY="0.0" />
+        <Point elementId="RXN0_5468_end" arrowHead="Conversion" x="455.0" y="210" elementRef="Ox_Thioredoxin" relX="-1.0" relY="0.0" />
+        <Anchor elementId="RXN0_5468_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="RXN0-5468" />
+      <Property key="Orphan" value=":NO" />
+      <Property key="Pathways" value="1.11.1.15-RXN" />
+      <Property key="ReactionEquation" value="Red-Thioredoxin + Cys2-Peroxiredoxin-Disulfide =&gt; Ox-Thioredoxin + Reduced-Cys2-Peroxiredoxins" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="ReactionType" value="Protein-Modification-Reactions" />
+      <Property key="AtomMappings" value="(:NO-HYDROGEN-ENCODING (0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 45 42 41 26 27 28 29 30 44 31 32 33 34 35 36 37 40 46 43 38 39 47) (((&quot;Reduced-Cys2-Peroxiredoxins&quot; 0 23) (&quot;Ox-Thioredoxin&quot; 24 47)) ((&quot;Cys2-Peroxiredoxin-Disulfide&quot; 0 23) (&quot;Red-Thioredoxin&quot; 24 47))))" />
+      <Property key="Gibbs0" value="0." />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+    </Interaction>
+    <Interaction elementId="RXN0_5468_anchor_reactant_1">
+      <Xref identifier="RXN0-5468" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN0_5468_anchor_reactant_start_1" x="245.0" y="210" elementRef="Cys2_Peroxiredoxin_Disulfide" relX="1.0" relY="0.0" />
+        <Point elementId="RXN0_5468_anchor_reactant_end_1" x="0" y="0" elementRef="RXN0_5468_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="RXN0_5468_anchor_product_1">
+      <Xref identifier="RXN0-5468" dataSource="PlantCyc" />
+      <Waypoints>
+        <Point elementId="RXN0_5468_anchor_product_start_1" x="0" y="0" elementRef="RXN0_5468_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="RXN0_5468_anchor_product_end_1" arrowHead="Conversion" x="305.0" y="210" elementRef="Reduced_Cys2_Peroxiredoxins" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+</Pathway>
