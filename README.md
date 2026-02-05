@@ -11,6 +11,12 @@ git clone git@github.com:pathway-lod/Cyc_to_wiki.git
 cd Cyc_to_wiki
 ```
 
+Install the dependencies and activate the environment 
+```bash
+conda env create -f environment.yml
+conda activate cyc_2_wiki
+```
+
 ## Usage
 
 ### Basic Command
@@ -19,25 +25,22 @@ cd Cyc_to_wiki
 python build_pathways.py <data_dir> <output_dir> [options]
 ```
 
+- `<data_dir>` is the directory with the flat files 
+- 
+
 ### Options
 
 - `--include-reactions`: Also build single reaction files for unused reactions
-- `--layout grid`: Use grid layout (default) - fast
-- `--layout forceatlas2`: Use ForceAtlas2 force-directed layout
 
 **Examples**:
 ```bash
 # Build pathways only with default grid layout
 python build_pathways.py ./data ./output
 
-# Build pathways AND single reactions
+# Build pathways AND single reactions --> this is to produce the released data 
 python build_pathways.py ./data ./output --include-reactions
 
-# Build with ForceAtlas2 layout 
-python build_pathways.py ./data ./output --layout forceatlas2
-
-# Combine options
-python build_pathways.py ./data ./output --include-reactions --layout forceatlas2
+python build_pathways.py ~/lustre_link/data/plantcyc/current/plantcyc/17.0.0/data ./plantcyc17.0.0-gpml2021 --include-reactions
 ```
 
 ### Input Files
@@ -49,6 +52,26 @@ Place all PlantCyc `.dat` files in a directory.
 - **Individual pathway files**: `[output_dir]/biocyc_pathways_[timestamp]/individual_pathways/*.gpml`
 - **Single reaction files** (if `--include-reactions`): `individual_reactions/*.gpml`
 - **Analysis report**: `GPML_STATISTICS_REPORT.txt` - Generated automatically by the analysis script 
+
+## Run the pipeline
+
+1. Change your scripts/config.env
+
+```bash
+PLANTCYC_ROOT="~/plantcyc/current/plantcyc"
+GPML_SNAPSHOT="gpml2021"
+OUT_BASE="./output_gpml"
+```
+2. Activate the environment 
+```bash
+conda activate cyc_2_wiki
+```
+
+3. Run the pipeline 
+
+```bash 
+./scripts/run_pipeline.sh
+```
 
 ## Project Structure
 
@@ -181,11 +204,7 @@ FRUCTOSE-1,6-BP <──────○──────── GAP + DHAP
 
 #### 5. Layout Calculation
 
-The converter supports two layout algorithms, configurable via `--layout` option:
-
-##### 5a. Grid Layout (Default)
-
-A three-layer hierarchical grid layout organizes entities by type:
+The converter uses a simple layout algorithm as visualized below
 
 ```
 ┌─────────────────────────────────────────┐
@@ -203,15 +222,6 @@ A three-layer hierarchical grid layout organizes entities by type:
 │  Grid: 3+ columns, 150px spacing        │
 └─────────────────────────────────────────┘
 ```
-
-**Pros**: Fast, predictable, hierarchical view of gene→protein→compound flow
-**Cons**: May have more edge crossings in complex pathways
-
-##### 5b. ForceAtlas2 Layout
-
-Force-directed graph layout that automatically positions nodes to minimize edge crossings and overlap. Using NetworkX module. 
-
-Other layouts can be implemented. 
 
 
 #### 6. Interaction Creation

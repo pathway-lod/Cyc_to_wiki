@@ -1,6 +1,7 @@
 from scripts.data_structure.wiki_data_structure import (
     Xref, Graphics, DataNode, DataNodeType, HAlign, VAlign,
-    BorderStyle, ShapeType, Property, Comment, CitationRef, Citation
+    BorderStyle, ShapeType, Property, Comment, CitationRef, Citation,
+    Annotation, AnnotationType, AnnotationRef
 )
 from scripts.parsing_functions import parsing_utils
 from scripts.object2gmpl.gpml_writer import GPMLWriter
@@ -9,8 +10,10 @@ from scripts.utils import standard_graphics
 from scripts.utils.property_parser import (
     create_dynamic_properties, handle_unique_id, handle_synonyms
 )
+from scripts.utils.organism_utils import load_organism_mapping, create_species_annotation
 import uuid
 import re
+from pathlib import Path
 
 
 def parse_gene_dblinks(dblinks):
@@ -279,9 +282,15 @@ def create_gene_comments_from_record(record):
         comment_text = record['COMMENT']
         if isinstance(comment_text, list):
             for c in comment_text:
-                comments.append(Comment(value=str(c).strip(), source=source_str))
+                # Clean CITS tags from comment text
+                cleaned_text = re.sub(r'\|CITS:\s*\[(\d+)\]\|', '', str(c)).strip()
+                if cleaned_text:
+                    comments.append(Comment(value=cleaned_text, source=source_str))
         elif isinstance(comment_text, str):
-            comments.append(Comment(value=comment_text.strip(), source=source_str))
+            # Clean CITS tags from comment text
+            cleaned_text = re.sub(r'\|CITS:\s*\[(\d+)\]\|', '', comment_text).strip()
+            if cleaned_text:
+                comments.append(Comment(value=cleaned_text, source=source_str))
 
     return comments
 
@@ -352,6 +361,9 @@ def create_enhanced_datanode_from_gene(record, citation_manager=None):
     else:
         citations, citation_refs = create_gene_citations_from_record(record)
 
+    # Handle annotations (Species)
+    annotations, annotation_refs = create_species_annotation(record)
+
     # Use  gene graphics
     graphics = standard_graphics.create_gene_graphics(0.0, 0.0)
 
@@ -364,10 +376,11 @@ def create_enhanced_datanode_from_gene(record, citation_manager=None):
         graphics=graphics,
         comments=comments,
         properties=properties,
-        citationRefs=citation_refs if citation_manager else citation_refs
+        citationRefs=citation_refs if citation_manager else citation_refs,
+        annotationRefs=annotation_refs
     )
 
-    return (datanode, []) if citation_manager else (datanode, citations)
+    return (datanode, [], annotations) if citation_manager else (datanode, citations, annotations)
 
 
 def create_citation_refs_from_record(record, citation_manager):
@@ -419,21 +432,26 @@ def create_citation_refs_from_record(record, citation_manager):
     return []
 
 
-def create_enhanced_datanodes_from_genes(genes_file, citation_manager=None):
+def create_enhanced_datanodes_from_genes(genes_file, citation_manager=None, organism_mapping=None):
     """
     Create comprehensive DataNodes from a genes file with citation support.
 
     Args:
         genes_file: Path to the genes.dat file
         citation_manager: CitationManager instance (optional)
+        organism_mapping: Dictionary mapping ORG-IDs to Latin names (optional)
 
     Returns:
         tuple: (list of DataNode objects, list of all Citation objects)
     """
+    if organism_mapping:
+        load_organism_mapping(organism_mapping)
+
     processor = parsing_utils.read_and_parse(genes_file)
 
     datanodes = []
     all_citations = []
+    all_annotations = []
 
     # Statistics tracking - count per unique record
     xref_stats = {
@@ -498,10 +516,12 @@ def create_enhanced_datanodes_from_genes(genes_file, citation_manager=None):
                     citation_stats['unique_pubmed_ids'].add(citation_str)
 
         # Create datanode
-        datanode, citations = create_enhanced_datanode_from_gene(record, citation_manager)
+        datanode, citations, annotations = create_enhanced_datanode_from_gene(record, citation_manager)
         datanodes.append(datanode)
         if citations:
             all_citations.extend(citations)
+        if annotations:
+            all_annotations.extend(annotations)
 
     # Print statistics
     print("\n" + "="*60)
@@ -523,7 +543,7 @@ def create_enhanced_datanodes_from_genes(genes_file, citation_manager=None):
     print(f"Unique PubMed IDs: {len(citation_stats['unique_pubmed_ids'])}")
     print("="*60 + "\n")
 
-    return datanodes, all_citations
+    return datanodes, all_citations, all_annotations
 
 
 def print_gene_datanode_summary(datanode: DataNode, index):
@@ -561,9 +581,10 @@ def print_gene_datanode_summary(datanode: DataNode, index):
 
 
 if __name__ == "__main__":
-    datanodes, citations = create_enhanced_datanodes_from_genes("genes.dat")
+    datanodes, citations, annotations = create_enhanced_datanodes_from_genes("genes.dat")
     print(f"Created {len(datanodes)} enhanced Gene DataNodes")
     print(f"Found {len(citations)} citations")
+    print(f"Found {len(annotations)} annotations")
 
     for i, node in enumerate(datanodes[:3]):
         print_gene_datanode_summary(node, i)

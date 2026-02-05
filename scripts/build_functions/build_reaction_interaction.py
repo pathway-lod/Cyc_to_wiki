@@ -1,7 +1,7 @@
 from scripts.data_structure.wiki_data_structure import (
     Interaction, Point, Anchor, Graphics, Xref, Property, Comment,
     ArrowHeadType, LineStyle, ConnectorType, AnchorShapeType,
-    CitationRef, Citation
+    CitationRef, Citation, Group
 )
 from scripts.utils.HTML_cleaner import clean_text_label
 from scripts.utils.property_parser import create_dynamic_properties
@@ -25,7 +25,7 @@ def parse_reaction_dblinks(dblinks):
     for dblink in dblinks:
         if isinstance(dblink, str):
             try:
-                match = re.match(r'\((\w+)\s+"([^"]+)"', dblink)
+                match = re.match(r'\((\w+)\s+\"([^\"]+)\"', dblink)
                 if match:
                     db_name = match.group(1)
                     db_id = match.group(2)
@@ -681,3 +681,289 @@ if __name__ == "__main__":
 
     for i, reaction_data in enumerate(reactions[:3]):
         print_reaction_interaction_summary(reaction_data, i)
+
+
+def create_standard_reaction_with_central_anchor(reaction_data, compound_node_map, enzyme_nodes,
+                                                  original_reaction_id, positioned_node_map, id_manager, primary_info=None):
+    """
+    Create reaction visualization with central anchor and enzyme connections.
+
+    Args:
+        reaction_data: Reaction data dictionary
+        compound_node_map: Map of compound IDs to positioned compound nodes
+        enzyme_nodes: List of enzyme information dictionaries
+        original_reaction_id: Original reaction ID (before sanitization)
+        positioned_node_map: Map of element IDs to positioned DataNode objects in pathway
+        id_manager: IDManager instance
+        primary_info: Optional dict with 'left_primaries', 'right_primaries', and 'direction' fields
+    """
+    from scripts.utils import standard_graphics
+    
+    interaction = reaction_data['interaction']
+    interactions_to_add = []
+
+    # Ensure the main interaction has Graphics (use standard conversion graphics)
+    if not hasattr(interaction, 'graphics') or interaction.graphics is None:
+        interaction.graphics = standard_graphics.create_conversion_graphics()
+
+    # Find main reactant and product using primary_info if available
+    main_reactant = None
+    main_product = None
+
+    # Extract primary compound lists and direction
+    left_primaries = []
+    right_primaries = []
+    direction = 'L2R'  # Default to left-to-right
+    if primary_info:
+        left_primaries = primary_info.get('left_primaries', [])
+        right_primaries = primary_info.get('right_primaries', [])
+        direction = primary_info.get('direction', 'L2R')
+
+    # Determine which primaries should be arrow start vs arrow end based on direction
+    if direction == 'R2L':
+        arrow_start_primaries = right_primaries
+        arrow_end_primaries = left_primaries
+    else:
+        arrow_start_primaries = left_primaries
+        arrow_end_primaries = right_primaries
+
+    # Find main reactant
+    if arrow_start_primaries:
+        for reactant in reaction_data['reactants']:
+            if reactant['compound_id'] in arrow_start_primaries:
+                if reactant['compound_id'] in compound_node_map:
+                    main_reactant = compound_node_map[reactant['compound_id']]
+                    break
+
+        if not main_reactant:
+            for product in reaction_data['products']:
+                if product['compound_id'] in arrow_start_primaries:
+                    if product['compound_id'] in compound_node_map:
+                        main_reactant = compound_node_map[product['compound_id']]
+                        break
+    else:
+        if reaction_data['reactants']:
+            reactant_id = reaction_data['reactants'][0]['compound_id']
+            if reactant_id in compound_node_map:
+                main_reactant = compound_node_map[reactant_id]
+
+    # Find main product
+    if arrow_end_primaries:
+        for product in reaction_data['products']:
+            if product['compound_id'] in arrow_end_primaries:
+                if product['compound_id'] in compound_node_map:
+                    main_product = compound_node_map[product['compound_id']]
+                    break
+
+        if not main_product:
+            for reactant in reaction_data['reactants']:
+                if reactant['compound_id'] in arrow_end_primaries:
+                    if reactant['compound_id'] in compound_node_map:
+                        main_product = compound_node_map[reactant['compound_id']]
+                        break
+    else:
+        if reaction_data['products']:
+            product_id = reaction_data['products'][0]['compound_id']
+            if product_id in compound_node_map:
+                main_product = compound_node_map[product_id]
+
+    if not (main_reactant and main_product):
+        return interactions_to_add
+
+    # Create main reaction line with central anchor
+    start_point = Point(
+        elementId=id_manager.register_id(f"{interaction.elementId}_start"),
+        x=main_reactant.graphics.centerX + main_reactant.graphics.width / 2,
+        y=main_reactant.graphics.centerY,
+        arrowHead=ArrowHeadType.UNDIRECTED,
+        elementRef=main_reactant.elementId,
+        relX=1.0, relY=0.0
+    )
+
+    end_point = Point(
+        elementId=id_manager.register_id(f"{interaction.elementId}_end"),
+        x=main_product.graphics.centerX - main_product.graphics.width / 2,
+        y=main_product.graphics.centerY,
+        arrowHead=ArrowHeadType.CONVERSION,
+        elementRef=main_product.elementId,
+        relX=-1.0, relY=0.0
+    )
+
+    central_anchor = Anchor(
+        elementId=id_manager.register_id(f"{interaction.elementId}_anchor"),
+        position=0.5,
+        shapeType=AnchorShapeType.CIRCLE
+    )
+
+    interaction.waypoints = [start_point, end_point]
+    interaction.anchors = [central_anchor]
+    interactions_to_add.append(interaction)
+
+    # Connect enzymes to central anchor with catalysis arrows
+    for i, enzyme_info in enumerate(enzyme_nodes):
+        enzyme_entity = enzyme_info['protein_node']
+        is_complex = enzyme_info.get('is_complex', False)
+        enzrxn_id = enzyme_info.get('enzyme_id', f'enzyme_{i}')  # Use ENZRXN ID or fallback to index
+
+        # Handle complexes vs regular proteins
+        target_enzyme_nodes = []
+        if isinstance(enzyme_entity, Group) or is_complex:
+            # We don't have access to monomer_by_complex here easily without passing it
+            # But the caller (core builder) passes resolved enzyme_nodes.
+            # If enzyme_entity is a Group, we assume it's positioned.
+            target_enzyme_nodes = [enzyme_entity]
+        else:
+            target_enzyme_nodes = [enzyme_entity]
+
+        # Create the catalysis interaction for each target enzyme node
+        for e_idx, enzyme_node in enumerate(target_enzyme_nodes):
+            if not hasattr(enzyme_node, 'graphics') or enzyme_node.graphics is None:
+                continue
+
+            # Use standard catalysis graphics
+            enzyme_graphics = standard_graphics.create_catalysis_graphics()
+
+            # Always include enzyme index (i) and monomer index (e_idx) to ensure uniqueness
+            # even if multiple proteins share the same ENZRXN ID
+            interaction_id = f"{interaction.elementId}_{enzrxn_id}_{i}_{e_idx}"
+            start_point_id = f"{interaction.elementId}_{enzrxn_id}_start_{i}_{e_idx}"
+            end_point_id = f"{interaction.elementId}_{enzrxn_id}_end_{i}_{e_idx}"
+
+            enzyme_interaction = Interaction(
+                elementId=id_manager.register_id(interaction_id),
+                waypoints=[
+                    Point(
+                        elementId=id_manager.register_id(start_point_id),
+                        x=enzyme_node.graphics.centerX,
+                        y=enzyme_node.graphics.centerY + enzyme_node.graphics.height / 2,
+                        arrowHead=ArrowHeadType.UNDIRECTED,
+                        elementRef=enzyme_node.elementId,
+                        relX=0.0, relY=1.0
+                    ),
+                    Point(
+                        elementId=id_manager.register_id(end_point_id),
+                        x=0, y=0,
+                        arrowHead=ArrowHeadType.CATALYSIS,
+                        elementRef=central_anchor.elementId,
+                        relX=0.0, relY=-1.0
+                    )
+                ],
+                anchors=[],
+                graphics=enzyme_graphics,
+                comments=[],
+                properties=[],
+                annotationRefs=[],
+                citationRefs=[],
+                evidenceRefs=[]
+            )
+            interactions_to_add.append(enzyme_interaction)
+    # Connect additional reactants and products to central anchor
+    reaction_xref = interaction.xref if hasattr(interaction, 'xref') else None
+    _add_additional_reactants_products(reaction_data, compound_node_map, central_anchor, interactions_to_add, reaction_xref, primary_info, main_reactant, main_product, id_manager)
+
+    return interactions_to_add
+
+
+def _add_additional_reactants_products(reaction_data, compound_node_map, central_anchor, interactions_to_add, reaction_xref, primary_info, main_reactant, main_product, id_manager):
+    """
+    Add additional reactants and products to central anchor.
+    """
+    from scripts.utils import standard_graphics
+
+    # Determine which compounds are primary (if info available)
+    left_primaries = set()
+    right_primaries = set()
+
+    if primary_info:
+        left_primaries = set(primary_info.get('left_primaries', []))
+        right_primaries = set(primary_info.get('right_primaries', []))
+
+    # Additional reactants
+    main_reactant_id = main_reactant.elementId if main_reactant else None
+
+    for i, reactant in enumerate(reaction_data['reactants']):
+        reactant_id = reactant['compound_id']
+
+        if reactant_id in compound_node_map:
+            if compound_node_map[reactant_id].elementId == main_reactant_id:
+                continue
+
+        if not primary_info and i == 0:
+            continue
+
+        if reactant_id in compound_node_map:
+            reactant_node = compound_node_map[reactant_id]
+            additional_interaction = Interaction(
+                elementId=id_manager.register_id(f"{central_anchor.elementId}_reactant_{i}"),
+                xref=reaction_xref,
+                waypoints=[
+                    Point(
+                        elementId=id_manager.register_id(f"{central_anchor.elementId}_reactant_start_{i}"),
+                        x=reactant_node.graphics.centerX + reactant_node.graphics.width / 2,
+                        y=reactant_node.graphics.centerY,
+                        arrowHead=ArrowHeadType.UNDIRECTED,
+                        elementRef=reactant_node.elementId,
+                        relX=1.0, relY=0.0
+                    ),
+                    Point(
+                        elementId=id_manager.register_id(f"{central_anchor.elementId}_reactant_end_{i}"),
+                        x=0, y=0,
+                        arrowHead=ArrowHeadType.UNDIRECTED,
+                        elementRef=central_anchor.elementId,
+                        relX=0.0, relY=0.0
+                    )
+                ],
+                graphics=standard_graphics.create_conversion_graphics(),
+                anchors=[],
+                comments=[],
+                properties=[],
+                annotationRefs=[],
+                citationRefs=[],
+                evidenceRefs=[]
+            )
+            interactions_to_add.append(additional_interaction)
+
+    # Additional products
+    main_product_id = main_product.elementId if main_product else None
+
+    for i, product in enumerate(reaction_data['products']):
+        product_id = product['compound_id']
+
+        if product_id in compound_node_map:
+            if compound_node_map[product_id].elementId == main_product_id:
+                continue
+
+        if not primary_info and i == 0:
+            continue
+
+        if product_id in compound_node_map:
+            product_node = compound_node_map[product_id]
+            additional_interaction = Interaction(
+                elementId=id_manager.register_id(f"{central_anchor.elementId}_product_{i}"),
+                xref=reaction_xref,
+                waypoints=[
+                    Point(
+                        elementId=id_manager.register_id(f"{central_anchor.elementId}_product_start_{i}"),
+                        x=0, y=0,
+                        arrowHead=ArrowHeadType.UNDIRECTED,
+                        elementRef=central_anchor.elementId,
+                        relX=0.0, relY=0.0
+                    ),
+                    Point(
+                        elementId=id_manager.register_id(f"{central_anchor.elementId}_product_end_{i}"),
+                        x=product_node.graphics.centerX - product_node.graphics.width / 2,
+                        y=product_node.graphics.centerY,
+                        arrowHead=ArrowHeadType.CONVERSION,
+                        elementRef=product_node.elementId,
+                        relX=-1.0, relY=0.0
+                    )
+                ],
+                graphics=standard_graphics.create_conversion_graphics(),
+                anchors=[],
+                comments=[],
+                properties=[],
+                annotationRefs=[],
+                citationRefs=[],
+                evidenceRefs=[]
+            )
+            interactions_to_add.append(additional_interaction)
