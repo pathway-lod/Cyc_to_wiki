@@ -17,5 +17,5 @@ jobs:
       - name: Validate XSD files conform to the specs
         uses: phpcsstandards/xmllint-validate@v1
         with:
-          pattern: "output_gpml/plantcyc*/biocyc_pathways_*/individual_*/*.gpml"
+          pattern: "output_gpml/plantcyc*/individual_*/*.gpml"
           xsd-url: "https://raw.githubusercontent.com/PathVisio/GPML/refs/heads/master/GPML2021/GPML2021.xsd"
