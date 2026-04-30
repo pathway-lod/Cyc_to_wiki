@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Pathway xmlns="http://pathvisio.org/GPML/2021" title="GLYCOLATEDEHYDRO-RXN" organism="cellular organisms" source="PlantCyc" version="17.0.0_20260203162556">
+  <Description>Single reaction view for GLYCOLATEDEHYDRO-RXN: GLYCOLATEDEHYDRO-RXN</Description>
+  <Authors>
+    <Author name="BioCyc" />
+  </Authors>
+  <Comment source="Automated Conversion">This GPML file was automatically generated from BioCyc single reaction data.</Comment>
+  <Property key="UniqueID" value="GLYCOLATEDEHYDRO-RXN" />
+  <Graphics boardWidth="1200" boardHeight="800" />
+  <DataNodes>
+    <DataNode elementId="AT5G06580" textLabel="GDH" type="GeneProduct">
+      <Xref identifier="AT5G06580" dataSource="TAIR gene name" />
+      <Graphics centerX="100" centerY="50" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment source="AU4FS-1">putative glycolate oxidase</Comment>
+      <Property key="UniqueID" value="AT5G06580" />
+      <Property key="Synonym_1" value="AT5G06580.1" />
+      <Property key="Product" value="AT5G06580-MONOMER" />
+      <Property key="StartPosition" value="2011289" />
+      <Property key="EndPosition" value="2016540" />
+      <Property key="GeneType" value="Unclassified-Genes" />
+      <Property key="Accession1" value="AT5G06580" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="GIO2_1906" textLabel="GDH" type="GeneProduct">
+      <Xref identifier="GIO2-1906" dataSource="plantcyc" />
+      <Graphics centerX="220" centerY="50" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="GIO2-1906" />
+      <Property key="Synonym_1" value="Cre06.g288700" />
+      <Property key="Product" value="MONOMERIO2-15" />
+      <Property key="GeneType" value="Genes" />
+      <Property key="Accession1" value="Cre06.g288700" />
+      <Property key="InstanceNameTemplate" value="G-*" />
+    </DataNode>
+    <DataNode elementId="MONOMERIO2_15" textLabel="MONOMERIO2-15" type="Protein">
+      <Xref identifier="Q0ZAZ1" dataSource="uniprot" />
+      <Graphics centerX="150" centerY="215" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="MONOMERIO2-15" />
+      <Property key="AlternativeId_Phytozome" value="Cre06.g288700.t1.2" />
+      <Property key="AlternativeId_Uniprot" value="Q0ZAZ1" />
+      <Property key="Synonym_1" value="Cre06.g288700.t1.2" />
+      <Property key="Catalyzes" value="RXN-4919" />
+      <Property key="Accession1" value="Cre06.g288700.t1.2" />
+      <Property key="Gene" value="GIO2-1906" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Species" value="TAX-3055" />
+      <AnnotationRef elementRef="taxonomy_3055" />
+    </DataNode>
+    <DataNode elementId="AT5G06580_MONOMER" textLabel="D-lactate dehydrogenase" type="Protein" groupRef="CPLXQT-45">
+      <Xref identifier="Q94AX4" dataSource="uniprot" />
+      <Graphics centerX="300" centerY="215" width="90.0" height="25.0" textColor="000000" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="000000" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="AT5G06580-MONOMER" />
+      <Property key="AlternativeId_Araport" value="AT5G06580.1" />
+      <Property key="AlternativeId_Uniprot" value="Q94AX4" />
+      <Property key="Synonym_1" value="AT5G06580" />
+      <Property key="Catalyzes" value="RXN-GO3-ENZRXN" />
+      <Property key="GOTerms" value="GO:0009536" />
+      <Property key="Accession1" value="AT5G06580.1" />
+      <Property key="ComponentOf" value="CPLXQT-45" />
+      <Property key="FunctionalAssignmentStatus" value=":AMBIGUOUS" />
+      <Property key="Gene" value="AT5G06580" />
+      <Property key="InstanceNameTemplate" value="MONOMER-*" />
+      <Property key="Locations" value="CCO-PLASTID" />
+      <Property key="MolecularWeightExp" value="59." />
+      <Property key="MolecularWeightKd" value="59." />
+      <Property key="Species" value="ORG-5993" />
+      <AnnotationRef elementRef="taxonomy_3702" />
+    </DataNode>
+    <DataNode elementId="Donor_H2" textLabel="a reduced two electron carrier" type="Metabolite">
+      <Xref identifier="17499" dataSource="ChEBI" />
+      <Graphics centerX="200" centerY="400" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>In general, an electron carrier is a chemical entity that can accept or donate electrons from/to another chemical entity. When accepting electrons, it acts as an &quot;electron acceptor&quot;. By accepting the electrons, the acceptor is reduced, and thus prior to receiving the electrons the entity is called &quot;an oxidized electron acceptor&quot; and after receiving them it is called &quot;a reduced electron acceptor&quot;. Many reduced electron acceptors are able to transfer the electrons to other molecules, becoming oxidized in the process. Thus the distinction between an electron acceptor and an electron donor is often not determined by the actual chemical entity, but by the role it plays in a particular reaction. However, some acceptors in biological reactions only accept electrons and do not transfer them further. Those are often known as &quot;terminal electron acceptors&quot;. While in general every chemical reaction in which electrons are transferred includes an electron donor and an electron acceptor, several molecules are commonly used in metabolism solely for the purpose of electron transfer, and are referred to in biology as electron carriers. Different biological electron carriers differ in the number of electrons that they transfer and in their electron affinity. Some of the common biological electron carriers transfer only a single electron (e.g. |FRAME: Cytochromes cytochromes|, |FRAME: Blue-Copper-Proteins &quot;blue copper proteins&quot;|, and some |FRAME: Ferredoxins ferredoxins|), some transfer two electrons (e.g. some |FRAME: Ferredoxins ferredoxins|), some transfer a hydride ion ( e.g. |FRAME: NAD| and |FRAME: NADP|), and some transfer two electrons and two protons (|FRAME: ETR-Quinones quinones|, |FRAME: FAD| and |FRAME: FMN|). In addition, a number of inorganic small molecules (e.g. oxygen, nitrate, iron (III), manganese (IV), sulfate) are often used as terminal electron acceptors. In many cases, purified enzymes can act &lt;i&gt;in vitro&lt;/i&gt; using an artificial electron carrier, and their &lt;i&gt;in vivo&lt;/i&gt; electron carrier is not known. The classes of &quot;unknown electron carriers&quot; are used to describe such reactions, which are incompletely characterized.</Comment>
+      <Property key="UniqueID" value="Donor-H2" />
+      <Property key="AlternativeId_Seed" value="cpd26978" />
+      <Property key="AlternativeId_Metanetx" value="MNXM36" />
+      <Property key="AlternativeId_Chebi" value="17499" />
+      <Property key="AlternativeId_LigandCpd" value="C00030" />
+      <Property key="Synonym_1" value="a reduced unknown two electron donor" />
+      <Property key="Synonym_2" value="A(H2)" />
+      <Property key="Synonym_3" value="a reduced unknown two electron acceptor" />
+      <Property key="AbbrevName" value="A(H2)" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="NName" value="reduced acceptors" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Smiles" value="[an oxidized electron carrier]" />
+    </DataNode>
+    <DataNode elementId="Acceptor" textLabel="an oxidized electron carrier" type="Metabolite">
+      <Xref identifier="15339" dataSource="ChEBI" />
+      <Graphics centerX="350" centerY="400" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Comment>In general, an electron carrier is a chemical entity that can accept or donate electrons from/to another chemical entity. When accepting electrons, it acts as an &quot;electron acceptor&quot;. By accepting the electrons, the acceptor is reduced, and thus prior to receiving the electrons the entity is called &quot;an oxidized electron acceptor&quot; and after receiving them it is called &quot;a reduced electron acceptor&quot;. Many reduced electron acceptors are able to transfer the electrons to other molecules, becoming oxidized in the process. Thus the distinction between an electron acceptor and an electron donor is often not determined by the actual chemical entity, but by the role it plays in a particular reaction. However, some acceptors in biological reactions only accept electrons and do not transfer them further. Those are often known as &quot;terminal electron acceptors&quot;. While in general every chemical reaction in which electrons are transferred includes an electron donor and an electron acceptor, several molecules are commonly used in metabolism solely for the purpose of electron transfer, and are referred to in biology as electron carriers. Different biological electron carriers differ in the number of electrons that they transfer and in their electron affinity. Some of the common biological electron carriers transfer only a single electron (e.g. |FRAME: Cytochromes cytochromes|, |FRAME: Blue-Copper-Proteins &quot;blue copper proteins&quot;|, and some |FRAME: Ferredoxins ferredoxins|), some transfer two electrons (e.g. some |FRAME: Ferredoxins ferredoxins|), some transfer a hydride ion ( e.g. |FRAME: NAD| and |FRAME: NADP|), and some transfer two electrons and two protons (|FRAME: ETR-Quinones quinones|, |FRAME: FAD| and |FRAME: FMN|). In addition, a number of inorganic small molecules (e.g. oxygen, nitrate, iron (III), manganese (IV), sulfate) are often used as terminal electron acceptors. In many cases, purified enzymes can act &lt;i&gt;in vitro&lt;/i&gt; using an artificial electron carrier, and their &lt;i&gt;in vivo&lt;/i&gt; electron carrier is not known. This class of &quot;unknown electron carriers&quot; is used to describe such reactions, which are incompletely characterized.</Comment>
+      <Property key="UniqueID" value="Acceptor" />
+      <Property key="AlternativeId_ReactomeCpd" value="5359011" />
+      <Property key="AlternativeId_Metanetx" value="MNXM8975" />
+      <Property key="AlternativeId_LigandCpd" value="C00028" />
+      <Property key="AlternativeId_Chebi" value="15339" />
+      <Property key="Synonym_1" value="A" />
+      <Property key="Synonym_2" value="an oxidized unknown electron donor" />
+      <Property key="Synonym_3" value="an oxidized unknown electron acceptor" />
+      <Property key="AbbrevName" value="A" />
+      <Property key="HasNoStructure?" value="T" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="NName" value="acceptors" />
+      <Property key="Osmolarity" value="0" />
+    </DataNode>
+    <DataNode elementId="GLYCOLLATE" textLabel="glycolate" type="Metabolite">
+      <Xref identifier="AEMRFAOFKBGASW-UHFFFAOYSA-M" dataSource="InChIKey" />
+      <Graphics centerX="500" centerY="400" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="GLYCOLLATE" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004658557" />
+      <Property key="AlternativeId_Mediadb" value="compounds/156/" />
+      <Property key="AlternativeId_ReactomeCpd" value="389822" />
+      <Property key="AlternativeId_Metanetx" value="MNXM222" />
+      <Property key="AlternativeId_Refmet" value="Glycolic acid" />
+      <Property key="AlternativeId_Bigg" value="glyclt" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC29805" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00115" />
+      <Property key="AlternativeId_Drugbank" value="DB03085" />
+      <Property key="AlternativeId_Chemspider" value="4573887" />
+      <Property key="AlternativeId_Pubchem" value="5460308" />
+      <Property key="AlternativeId_Chebi" value="29805" />
+      <Property key="AlternativeId_LigandCpd" value="C00160" />
+      <Property key="AlternativeId_Cas" value="79-14-1" />
+      <Property key="Synonym_1" value="glycollate" />
+      <Property key="Synonym_2" value="hydroxyacetic acid" />
+      <Property key="Synonym_3" value="glycolic acid" />
+      <Property key="ChemicalFormula" value="(C 2) (H 3) (O 3)" />
+      <Property key="AtomCharges" value="(5 -1)" />
+      <Property key="Gibbs0" value="-96.398705" />
+      <Property key="Inchi" value="InChI=1S/C2H4O3/c3-1-2(4)5/h3H,1H2,(H,4,5)/p-1" />
+      <Property key="InchiKey" value="InChIKey=AEMRFAOFKBGASW-UHFFFAOYSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="75.044" />
+      <Property key="MonoisotopicMw" value="76.0160439947" />
+      <Property key="NonStandardInchi" value="InChI=1S/C2H4O3/c3-1-2(4)5/h3H,1H2,(H,4,5)/p-1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-7498, REG-11976, REG-6185" />
+      <Property key="Smiles" value="C(C(=O)[O-])O" />
+      <CitationRef elementRef="citation_PUB_16306140" />
+    </DataNode>
+    <DataNode elementId="GLYOX" textLabel="glyoxylate" type="Metabolite">
+      <Xref identifier="HHLFWLYXYJOTON-UHFFFAOYSA-M" dataSource="InChIKey" />
+      <Graphics centerX="200" centerY="500" width="90.0" height="25.0" textColor="3955e7" fontName="Arial" fontWeight="Normal" fontStyle="Normal" fontDecoration="Normal" fontStrikethru="Normal" fontSize="12" hAlign="Center" vAlign="Middle" borderColor="3955e7" borderStyle="Solid" borderWidth="1.0" fillColor="FFFFFF" shapeType="Rectangle" />
+      <Property key="UniqueID" value="GLYOX" />
+      <Property key="AlternativeId_Zinc" value="ZINC000004658554" />
+      <Property key="AlternativeId_Seed" value="cpd00040" />
+      <Property key="AlternativeId_Metanetx" value="MNXM69" />
+      <Property key="AlternativeId_Chebi" value="36655" />
+      <Property key="AlternativeId_Refmet" value="Glyoxylic acid" />
+      <Property key="AlternativeId_Bigg" value="glx" />
+      <Property key="AlternativeId_Metabolights" value="MTBLC36655" />
+      <Property key="AlternativeId_Hmdb" value="HMDB00119" />
+      <Property key="AlternativeId_Knapsack" value="C00001186" />
+      <Property key="AlternativeId_Pubchem" value="3614358" />
+      <Property key="AlternativeId_LigandCpd" value="C00048" />
+      <Property key="AlternativeId_Cas" value="298-12-4" />
+      <Property key="Synonym_1" value="glyoxalate" />
+      <Property key="Synonym_2" value="glyox" />
+      <Property key="Synonym_3" value="glyoxylic acid" />
+      <Property key="ChemicalFormula" value="(C 2) (H 1) (O 3)" />
+      <Property key="AtomCharges" value="(5 -1)" />
+      <Property key="Gibbs0" value="-102.04095" />
+      <Property key="Inchi" value="InChI=1S/C2H2O3/c3-1-2(4)5/h1H,(H,4,5)/p-1" />
+      <Property key="InchiKey" value="InChIKey=HHLFWLYXYJOTON-UHFFFAOYSA-M" />
+      <Property key="InstanceNameTemplate" value="CPD-*" />
+      <Property key="MolecularWeight" value="73.028" />
+      <Property key="MonoisotopicMw" value="74.0003939305" />
+      <Property key="NonStandardInchi" value="InChI=1S/C2H2O3/c3-1-2(4)5/h1H,(H,4,5)/p-1" />
+      <Property key="Osmolarity" value="0" />
+      <Property key="Regulates" value="REG0-6923, REG-11977, REG-6184, REG-12098, REG0-9119" />
+      <Property key="Smiles" value="C(C(=O)[O-])=O" />
+    </DataNode>
+  </DataNodes>
+  <Interactions>
+    <Interaction elementId="gene_protein_0_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_0_0_0" x="145.0" y="50" elementRef="AT5G06580" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_0_0_0" arrowHead="TranscriptionTranslation" x="255.0" y="215" elementRef="AT5G06580_MONOMER" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="gene_protein_1_0_0">
+      <Waypoints>
+        <Point elementId="gene_protein_start_1_0_0" x="265.0" y="50" elementRef="GIO2_1906" relX="1.0" relY="0.0" />
+        <Point elementId="gene_protein_end_1_0_0" arrowHead="TranscriptionTranslation" x="105.0" y="215" elementRef="MONOMERIO2_15" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="GLYCOLATEDEHYDRO_RXN">
+      <Xref identifier="EC-1.1.99.14" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="GLYCOLATEDEHYDRO_RXN_start" x="395.0" y="400" elementRef="Acceptor" relX="1.0" relY="0.0" />
+        <Point elementId="GLYCOLATEDEHYDRO_RXN_end" arrowHead="Conversion" x="155.0" y="400" elementRef="Donor_H2" relX="-1.0" relY="0.0" />
+        <Anchor elementId="GLYCOLATEDEHYDRO_RXN_anchor" position="0.5" shapeType="Circle" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+      <Property key="UniqueID" value="GLYCOLATEDEHYDRO-RXN" />
+      <Property key="EC_Number" value="EC-1.1.99.14" />
+      <Property key="ReactionEquation" value="Acceptor + GLYCOLLATE =&gt; Donor-H2 + GLYOX" />
+      <Property key="ReactionDirection" value="PHYSIOL-LEFT-TO-RIGHT" />
+      <Property key="BalanceStatus" value=":BALANCED" />
+      <Property key="PhysiologicallyRelevant" value="T" />
+      <Property key="EnzymaticReactions" value="ENZRXNIO2-4919, GO3-ENZRXN" />
+      <Property key="EnzymaticReactionCount" value="2" />
+      <Property key="Synonym_1" value="Glycolate oxidoreductase" />
+      <Property key="Synonym_2" value="Glycolic acid dehydrogenase" />
+      <Property key="ReactionTypes" value="Small-Molecule-Reactions, Chemical-Reactions" />
+      <Property key="^official?" value="T" />
+      <Property key="InstanceNameTemplate" value="RXN-*" />
+      <Property key="Synonyms" value="Glycolate oxidoreductase, Glycolic acid dehydrogenase" />
+    </Interaction>
+    <Interaction elementId="GLYCOLATEDEHYDRO_RXN_ENZRXNIO2_4919_0_0">
+      <Waypoints>
+        <Point elementId="GLYCOLATEDEHYDRO_RXN_ENZRXNIO2_4919_start_0_0" x="150" y="227.5" elementRef="MONOMERIO2_15" relX="0.0" relY="1.0" />
+        <Point elementId="GLYCOLATEDEHYDRO_RXN_ENZRXNIO2_4919_end_0_0" arrowHead="Catalysis" x="0" y="0" elementRef="GLYCOLATEDEHYDRO_RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="GLYCOLATEDEHYDRO_RXN_GO3_ENZRXN_1_0">
+      <Waypoints>
+        <Point elementId="GLYCOLATEDEHYDRO_RXN_GO3_ENZRXN_start_1_0" x="300" y="227.5" elementRef="AT5G06580_MONOMER" relX="0.0" relY="1.0" />
+        <Point elementId="GLYCOLATEDEHYDRO_RXN_GO3_ENZRXN_end_1_0" arrowHead="Catalysis" x="0" y="0" elementRef="GLYCOLATEDEHYDRO_RXN_anchor" relX="0.0" relY="-1.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="GLYCOLATEDEHYDRO_RXN_anchor_reactant_1">
+      <Xref identifier="EC-1.1.99.14" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="GLYCOLATEDEHYDRO_RXN_anchor_reactant_start_1" x="545.0" y="400" elementRef="GLYCOLLATE" relX="1.0" relY="0.0" />
+        <Point elementId="GLYCOLATEDEHYDRO_RXN_anchor_reactant_end_1" x="0" y="0" elementRef="GLYCOLATEDEHYDRO_RXN_anchor" relX="0.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+    <Interaction elementId="GLYCOLATEDEHYDRO_RXN_anchor_product_1">
+      <Xref identifier="EC-1.1.99.14" dataSource="Enzyme Nomenclature" />
+      <Waypoints>
+        <Point elementId="GLYCOLATEDEHYDRO_RXN_anchor_product_start_1" x="0" y="0" elementRef="GLYCOLATEDEHYDRO_RXN_anchor" relX="0.0" relY="0.0" />
+        <Point elementId="GLYCOLATEDEHYDRO_RXN_anchor_product_end_1" arrowHead="Conversion" x="155.0" y="500" elementRef="GLYOX" relX="-1.0" relY="0.0" />
+      </Waypoints>
+      <Graphics lineColor="000000" lineStyle="Solid" lineWidth="1.0" connectorType="Straight" />
+    </Interaction>
+  </Interactions>
+  <Citations>
+    <Citation elementId="citation_PUB_16306140">
+      <Xref identifier="16306140" dataSource="pubmed" />
+    </Citation>
+  </Citations>
+</Pathway>

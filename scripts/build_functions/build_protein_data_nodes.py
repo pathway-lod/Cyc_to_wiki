@@ -1,6 +1,7 @@
 from scripts.data_structure.wiki_data_structure import (
     Xref, Graphics, DataNode, DataNodeType, HAlign, VAlign,
-    BorderStyle, ShapeType, Property, Comment, CitationRef, Citation, Group, GroupType
+    BorderStyle, ShapeType, Property, Comment, CitationRef, Citation, Group, GroupType,
+    Annotation, AnnotationType, AnnotationRef
 )
 from scripts.parsing_functions import parsing_utils
 from scripts.utils.HTML_cleaner import clean_text_label
@@ -10,8 +11,10 @@ from scripts.utils.property_parser import (
     handle_go_terms, create_numbered_properties
 )
 from scripts.object2gmpl.gpml_writer import GPMLWriter
+from scripts.utils.organism_utils import load_organism_mapping, create_species_annotation
 import uuid
 import re
+from pathlib import Path
 
 
 def parse_protein_dblinks(dblinks):
@@ -379,11 +382,16 @@ def create_monomer_datanode(monomer_id, parent_complex_id, monomer_records=None)
 
         properties = create_protein_properties_from_record(monomer_record)
         comments = create_protein_comments_from_record(monomer_record)
+        
+        # Handle annotations
+        annotations, annotation_refs = create_species_annotation(monomer_record)
     else:
         # Minimal properties for unknown monomers
         primary_xref = None
         properties = [Property(key='UniqueID', value=monomer_id)]
         comments = []
+        annotations = []
+        annotation_refs = []
 
     # Use protein graphics
     graphics = standard_graphics.create_protein_graphics(0.0, 0.0)
@@ -398,10 +406,11 @@ def create_monomer_datanode(monomer_id, parent_complex_id, monomer_records=None)
         graphics=graphics,
         comments=comments,
         properties=properties,
-        citationRefs=[]
+        citationRefs=[],
+        annotationRefs=annotation_refs
     )
 
-    return datanode
+    return datanode, annotations
 def create_protein_comments_from_record(record):
     """
     Create Comment elements from protein record data
@@ -423,9 +432,15 @@ def create_protein_comments_from_record(record):
         comment_text = record['COMMENT']
         if isinstance(comment_text, list):
             for c in comment_text:
-                comments.append(Comment(value=str(c).strip(), source=source_str))
+                # Clean CITS tags from comment text
+                cleaned_text = re.sub(r'\|CITS:\s*\[(\d+)\]\|', '', str(c)).strip()
+                if cleaned_text:
+                    comments.append(Comment(value=cleaned_text, source=source_str))
         elif isinstance(comment_text, str):
-            comments.append(Comment(value=comment_text.strip(), source=source_str))
+            # Clean CITS tags from comment text
+            cleaned_text = re.sub(r'\|CITS:\s*\[(\d+)\]\|', '', comment_text).strip()
+            if cleaned_text:
+                comments.append(Comment(value=cleaned_text, source=source_str))
 
     return comments
 
@@ -532,6 +547,9 @@ def create_enhanced_datanode_from_protein(record, citation_manager=None):
     if citation_manager:
         citation_refs = create_citation_refs_from_record(record, citation_manager)
 
+    # Handle annotations
+    annotations, annotation_refs = create_species_annotation(record)
+
     # Use standard protein graphics
     graphics = standard_graphics.create_protein_graphics(0.0, 0.0)
 
@@ -544,27 +562,33 @@ def create_enhanced_datanode_from_protein(record, citation_manager=None):
         graphics=graphics,
         comments=comments,
         properties=properties,
-        citationRefs=citation_refs
+        citationRefs=citation_refs,
+        annotationRefs=annotation_refs
     )
 
-    return (datanode, [])
+    return (datanode, [], annotations)
 
-def create_enhanced_datanodes_from_proteins(proteins_file, citation_manager=None):
+def create_enhanced_datanodes_from_proteins(proteins_file, citation_manager=None, organism_mapping=None):
     """
     Create comprehensive DataNodes and Groups from a proteins file with complex support.
 
     Args:
         proteins_file: Path to the proteins.dat file
         citation_manager: CitationManager instance (optional)
+        organism_mapping: Dictionary mapping ORG-IDs to Latin names
 
     Returns:
         tuple: (list of DataNode objects, list of Group objects, list of all Citation objects)
     """
+    if organism_mapping:
+        load_organism_mapping(organism_mapping)
+
     processor = parsing_utils.read_and_parse(proteins_file)
 
     datanodes = []
     groups = []
     all_citations = []
+    all_annotations = []
 
     # Statistics tracking - count per unique record
     xref_stats = {
@@ -665,18 +689,26 @@ def create_enhanced_datanodes_from_proteins(proteins_file, citation_manager=None
             component_ids = parse_complex_components(record)
             for comp_id in component_ids:
                 if comp_id not in processed_monomers:
-                    monomer_node = create_monomer_datanode(
+                    monomer_node, annotations = create_monomer_datanode(
                         comp_id,
                         complex_group.elementId,
                         protein_records
                     )
                     datanodes.append(monomer_node)
                     processed_monomers.add(comp_id)
+                    if annotations:
+                        all_annotations.extend(annotations)
         else:
             # Regular protein - create as DataNode (only if not already part of a complex)
             if unique_id not in processed_monomers:
                 datanode = create_enhanced_datanode_from_protein(record, citation_manager)
                 protein_node = datanode[0] if isinstance(datanode, tuple) else datanode
+                
+                # Check if we got annotations back (tuple of size 3)
+                if isinstance(datanode, tuple) and len(datanode) >= 3:
+                    if datanode[2]:
+                        all_annotations.extend(datanode[2])
+                
                 datanodes.append(protein_node)
 
     # Final deduplication pass: keep only first occurrence of each elementId
@@ -715,7 +747,7 @@ def create_enhanced_datanodes_from_proteins(proteins_file, citation_manager=None
     print(f"Unique species found: {len(unique_species)}")
     print("="*60 + "\n")
 
-    return datanodes, groups, all_citations
+    return datanodes, groups, all_citations, all_annotations
 
 
 
@@ -755,9 +787,10 @@ def print_protein_datanode_summary(datanode: DataNode, index):
 
 
 if __name__ == "__main__":
-    datanodes, citations = create_enhanced_datanodes_from_proteins("proteins.dat")
+    datanodes, groups, citations, annotations = create_enhanced_datanodes_from_proteins("proteins.dat")
     print(f"Created {len(datanodes)} enhanced Protein DataNodes")
     print(f"Found {len(citations)} citations")
+    print(f"Found {len(annotations)} annotations")
 
     for i, node in enumerate(datanodes[:3]):
         print_protein_datanode_summary(node, i)

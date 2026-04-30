@@ -5,62 +5,10 @@ from scripts.data_structure.wiki_data_structure import (
 from scripts.parsing_functions import parsing_utils
 from scripts.utils.HTML_cleaner import clean_text_label
 from scripts.object2gmpl.gpml_writer import GPMLWriter
+from scripts.utils.organism_utils import load_organism_mapping, convert_to_latin_name
 import uuid
 import re
 from pathlib import Path
-
-
-# Organism mapping cache
-_ORGANISM_MAPPING = None
-
-def load_organism_mapping():
-    """Load organism mapping from org_id_mapping_v2.tsv."""
-    global _ORGANISM_MAPPING
-
-    if _ORGANISM_MAPPING is not None:
-        return _ORGANISM_MAPPING
-
-    _ORGANISM_MAPPING = {}
-
-    # Load mapping file created at pipeline start
-    mapping_file = Path(__file__).parent.parent.parent / 'org_id_mapping_v2.tsv'
-    if mapping_file.exists():
-        with open(mapping_file, 'r', encoding='utf-8') as f:
-            for line in f:
-                if line.startswith('org_id'):  # Skip header
-                    continue
-                parts = line.strip().split('\t')
-                if len(parts) >= 2:
-                    organism_id = parts[0]
-                    latin_name = parts[1]
-                    if latin_name:
-                        _ORGANISM_MAPPING[organism_id] = latin_name
-
-    return _ORGANISM_MAPPING
-
-
-def convert_to_latin_name(organism_id):
-    """
-    Convert ORG-ID or TAX-ID to Latin name.
-
-    Args:
-        organism_id: String like 'ORG-5993' or 'TAX-3702'
-
-    Returns:
-        str: Latin name if found, otherwise original organism_id
-    """
-    if not organism_id:
-        return organism_id
-
-    mapping = load_organism_mapping()
-    organism_id = str(organism_id).strip()
-
-    # Direct lookup (handles both ORG-XXXX and TAX-XXXX)
-    if organism_id in mapping:
-        return mapping[organism_id]
-
-    # Return original if not found
-    return organism_id
 
 
 def parse_pathway_dblinks(dblinks):
@@ -261,6 +209,21 @@ def create_pathway_comments_from_record(record):
         source="Automated Conversion"
     ))
 
+    # Add other comments if they exist (sometimes in COMMENT field too)
+    if 'COMMENT' in record:
+        comment_data = record['COMMENT']
+        if isinstance(comment_data, list):
+            for c in comment_data:
+                # Clean CITS tags from comment text
+                cleaned_text = re.sub(r'\|CITS:\s*\[(\d+)\]\|', '', str(c)).strip()
+                if cleaned_text:
+                    comments.append(Comment(value=cleaned_text, source="BioCyc"))
+        else:
+            # Clean CITS tags from comment text
+            cleaned_text = re.sub(r'\|CITS:\s*\[(\d+)\]\|', '', str(comment_data)).strip()
+            if cleaned_text:
+                comments.append(Comment(value=cleaned_text, source="BioCyc"))
+
     return comments
 
 
@@ -428,18 +391,22 @@ def create_enhanced_pathway_from_record(record, citation_manager=None, version=N
     return pathway
 
 
-def create_enhanced_pathways_from_file(pathways_file, citation_manager=None, version=None):
+def create_enhanced_pathways_from_file(pathways_file, citation_manager=None, version=None, organism_mapping=None):
     """
-    Create comprehensive Pathway objects from a pathways file.
+    Create Pathway objects from BioCyc pathways.dat file.
 
     Args:
-        pathways_file: Path to the pathways.dat file
+        pathways_file: Path to pathways.dat
         citation_manager: CitationManager instance (optional)
-        version: Version string for pathways (optional)
+        version: Version string for the pathways (optional)
+        organism_mapping: Dictionary mapping ORG-IDs to Latin names (optional)
 
     Returns:
-        list: List of enhanced Pathway objects
+        list: List of Pathway objects
     """
+    if organism_mapping:
+        load_organism_mapping(organism_mapping)
+
     processor = parsing_utils.read_and_parse(pathways_file)
 
     pathways = []
