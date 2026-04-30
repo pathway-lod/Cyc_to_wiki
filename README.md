@@ -93,6 +93,10 @@ project/
 └── build_pathways.py                   # Main entry point
 ```
 
+## Validation 
+
+A github action is validating the GPML2021 format with a XSD schema definition from [https://github.com/PathVisio/GPML/blob/master/GPML2021/GPML2021.xsd](https://github.com/PathVisio/GPML/blob/master/GPML2021/GPML2021.xsd). 
+
 ---
 
 ## How It Works: Pathway Building Methodology
