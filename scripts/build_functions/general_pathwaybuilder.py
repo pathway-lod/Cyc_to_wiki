@@ -50,7 +50,7 @@ def build_individual_pathways(builder, all_pathways, individual_pathways_dir, la
 
         try:
             # Build the pathway with specified layout
-            pathway = builder.build_complete_pathway_with_genes(pathway_id, layout_type=layout_type, layout_params=layout_params)
+            pathway = builder.build_complete_pathway_with_genes(pathway_id)
 
             # Deduplicate elements before exporting
             pathway = builder.deduplicate_pathway_elements(pathway)
@@ -82,51 +82,3 @@ def build_individual_pathways(builder, all_pathways, individual_pathways_dir, la
             failed_pathways.append({'pathway_id': pathway_id, 'error': str(e)})
 
     return built_pathways, failed_pathways
-
-
-
-
-def main():
-    """
-    Main execution function for building all pathways.
-
-    Returns:
-        tuple: (builder, built_pathways, failed_pathways)
-    """
-    # Create output directories
-    base_output_dir, individual_pathways_dir = create_output_directories()
-
-    # Initialize builder with BioCyc data files
-    builder = CompletePathwayBuilderWithGenes(
-        compounds_file="compounds.dat",
-        genes_file="genes.dat",
-        proteins_file="proteins.dat",
-        reactions_file="reactions.dat",
-        pathways_file="pathways.dat",
-        pubs_file="pubs.dat",
-        regulation_file="regulation.dat"
-    )
-
-    # Find all pathways
-    all_pathways = builder.find_all_pathways()
-
-    # Build individual pathways
-    built_pathways, failed_pathways = build_individual_pathways(
-        builder, all_pathways, individual_pathways_dir
-    )
-
-    # Print summary
-    print(f"\nBuilt {len(built_pathways)}/{len(all_pathways)} pathways")
-    print(f"Output: {base_output_dir}")
-
-    if failed_pathways:
-        print(f"\nWarning: {len(failed_pathways)} pathway(s) failed to build:")
-        for failure in failed_pathways:
-            print(f"  - {failure['pathway_id']}: {failure['error']}")
-
-    return builder, built_pathways, failed_pathways
-
-
-if __name__ == "__main__":
-    # Run the complete build process
-    builder, built_pathways, failed_pathways = main()
