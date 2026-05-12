@@ -1,8 +1,8 @@
-# PlantCyc to Wikidata repository 
+# PlantCyc to WikiPathways repository 
 
 [![DOI](https://zenodo.org/badge/DOI/110.5281/zenodo.18404067.svg)](https://doi.org/10.5281/zenodo.18404067)
 
-This repository contains the pipeline to transform data from Biopax format (common in PlantCyc and Biocyc repositories) to GPML2021 format [(Graphical Pathway Markup Language)](https://pathvisio.org/documentation/GPML). 
+This repository contains the pipeline to transform data from BioCyc flat-file format (`.dat` files, common in PlantCyc and BioCyc repositories) to GPML2021 format [(Graphical Pathway Markup Language)](https://pathvisio.org/documentation/GPML) for upload to WikiPathways. 
 
 ## Installation
 
@@ -22,25 +22,34 @@ conda activate cyc_2_wiki
 ### Basic Command
 
 ```bash
-python build_pathways.py <data_dir> <output_dir> [options]
+python scripts/build_pathways.py <data_dir> <output_dir> [options]
 ```
 
-- `<data_dir>` is the directory with the flat files 
-- 
+- `<data_dir>`: directory containing the BioCyc `.dat` flat files
+- `<output_dir>`: directory where GPML files will be written
 
 ### Options
 
-- `--include-reactions`: Also build single reaction files for unused reactions
+| Flag | Description |
+|------|-------------|
+| `--include-reactions` | Also build individual GPML files for reactions not part of any pathway |
+| `--pathway-id ID` | Build only a single pathway |
+| `--reaction-id ID` | Build only a single reaction |
+| `--db-version VER` | Explicitly set the database version tag (e.g. `17.0.0`) |
 
 **Examples**:
 ```bash
-# Build pathways only with default grid layout
-python build_pathways.py ./data ./output
+# Build all pathways
+python scripts/build_pathways.py ./data ./output
 
-# Build pathways AND single reactions --> this is to produce the released data 
-python build_pathways.py ./data ./output --include-reactions
+# Build pathways AND individual reaction files (use for releases)
+python scripts/build_pathways.py ./data ./output --include-reactions
 
-python build_pathways.py ~/lustre_link/data/plantcyc/current/plantcyc/17.0.0/data ./plantcyc17.0.0-gpml2021 --include-reactions
+# Build a single pathway
+python scripts/build_pathways.py ./data ./output --pathway-id GLYCOLYSIS
+
+# Full run with explicit version tag
+python scripts/build_pathways.py ~/plantcyc/17.0.0/data ./output_gpml --include-reactions --db-version 17.0.0
 ```
 
 ### Input Files
@@ -49,13 +58,20 @@ Place all PlantCyc `.dat` files in a directory.
 
 ### Output
 
-- **Individual pathway files**: `[output_dir]/biocyc_pathways_[timestamp]/individual_pathways/*.gpml`
-- **Single reaction files** (if `--include-reactions`): `individual_reactions/*.gpml`
-- **Analysis report**: `GPML_STATISTICS_REPORT.txt` - Generated automatically by the analysis script 
+Output is written to a timestamped subdirectory:
+
+```
+output_gpml/
+└── <db_version>-gpml2021__git<hash>__<timestamp>/
+    ├── individual_pathways/*.gpml
+    ├── individual_reactions/*.gpml   # only with --include-reactions
+    ├── GPML_STATISTICS_REPORT.txt
+    └── run.metadata.txt
+```
 
 ## Run the pipeline
 
-1. Change your scripts/config.env
+1. Copy the scripts/config.example.env and adapt scripts/config.env to your directories. 
 
 ```bash
 PLANTCYC_ROOT="~/plantcyc/current/plantcyc"
@@ -78,26 +94,57 @@ If you have made edits to the script first make sure it is executable with `chmo
 ## Project Structure
 
 ```
-project/
+Cyc_to_wiki/
 ├── scripts/
+│   ├── build_pathways.py              # Main entry point (CLI)
+│   ├── run_pipeline.sh                # Shell wrapper (reads config.env)
+│   ├── test_gpml_files.py             # Local GPML validation script
 │   ├── parsing_functions/
-│   │   └── parsing_utils.py           # Parse BioCyc flatfile format
+│   │   └── parsing_utils.py           # BioCyc flat-file parser
 │   ├── data_structure/
 │   │   └── wiki_data_structure.py     # GPML2021 dataclasses (Pathway, DataNode, Interaction, etc.)
 │   ├── build_functions/
-│   │   ├── pathway_builder_core.py    # Main pathway building logic (includes layout)
-│   │   ├── general_pathwaybuilder.py  # Entry point script
-│   │   ├── build_*_data_nodes.py      # Entity builders (genes, proteins, compounds)
-│   │   ├── build_*_interaction.py     # Interaction builders (reactions, regulations)
-│   │   └── citation_manager.py        # Publication and citation management
-│   └── object2gmpl/
-│       └── gpml_writer.py             # Convert Python objects to GPML XML
-└── build_pathways.py                   # Main entry point
+│   │   ├── pathway_builder_core.py    # Core builder + layout
+│   │   ├── general_pathwaybuilder.py  # Iterates over all pathways
+│   │   ├── build_*_data_nodes.py      # Gene / protein / compound nodes
+│   │   ├── build_*_interaction.py     # Reaction / regulation interactions
+│   │   └── citation_manager.py        # Citation extraction & formatting
+│   ├── object2gmpl/
+│   │   └── gpml_writer.py             # Python objects → GPML XML
+│   └── utils/
+│       ├── layout.py                  # Grid-based position calculator
+│       ├── id_manager.py              # Element ID registry
+│       ├── organism_utils.py          # Organism name helpers
+│       ├── build_org_mapping.py       # classes.dat / species.dat parser
+│       ├── analyze_gpml_stats.py      # Stats report (auto-run after build)
+│       ├── HTML_cleaner.py            # Strip HTML from BioCyc fields
+│       └── property_parser.py         # REACTION-LAYOUT field parser
+└── environment.yml
 ```
 
 ## Validation 
 
-A github action is validating the GPML2021 format with a XSD schema definition from [https://github.com/PathVisio/GPML/blob/master/GPML2021/GPML2021.xsd](https://github.com/PathVisio/GPML/blob/master/GPML2021/GPML2021.xsd). 
+A GitHub Action (`.github/workflows/validate.yml`) runs on every push/PR to `main` and validates all `.gpml` files against the GPML2021 XSD schema from [PathVisio/GPML](https://github.com/PathVisio/GPML/blob/master/GPML2021/GPML2021.xsd).
+
+To run the same checks locally before merging:
+
+```bash
+# Validate all GPML files in an output directory
+python scripts/test_gpml_files.py output_gpml/<your-run-directory>
+
+# Validate a single file
+python scripts/test_gpml_files.py path/to/pathway.gpml
+```
+
+The script checks for:
+- XML well-formedness and schema compliance
+- Duplicate element IDs
+- Invalid ID characters
+- Missing cross-references (groupRef, citationRef, elementRef)
+- Missing required fields and attributes
+- Circular group references
+
+It prints a per-file report and a summary at the end (`Total files / Valid / Invalid / Errors / Warnings`). Exit code is `0` if all files are valid, `1` otherwise.
 
 ---
 
@@ -268,7 +315,7 @@ The converter extracts citations from:
    - Standard database identifier that PathVisio/WikiPathways can use to link to PubMed
 2. **DOI** → Creates `<Xref dataSource="doi" identifier="12345678" />`
     - When no PubMed ID is available but DOI is, DOI is set as main Xref 
-4. **BioCyc ID** → Creates `<Xref dataSource="BioCyc" identifier="UNIQUE-ID | Title (Authors, Year)" />` with full bibliographic information:
+3. **BioCyc ID** → Creates `<Xref dataSource="BioCyc" identifier="UNIQUE-ID | Title (Authors, Year)" />` with full bibliographic information:
    - Format: `"UNIQUE-ID | Title (Author1, Author2 et al., Year)"`
    - Includes title (truncated to 100 chars), first 3 authors, and year
    - Why: Provides human-readable citation text when PubMed/DOI unavailable - users can copy and search manually and later lookup might be possible
@@ -289,7 +336,7 @@ git push origin plantcyc17.0.0-gpml2021
 
 ## License
 
-- The license for the data is available at https://plantcyc.org/?webform=license-agreement or at [LICENSE.txt](LICENSE.txt). This includes the data from PlantCyc transformed in GPML format and available in this repository [/biocyc_pathways](./biocyc_pathways_20251217115329/)
+- The license for the data is available at https://plantcyc.org/?webform=license-agreement or at [LICENSE.txt](LICENSE.txt). This includes the PlantCyc data transformed to GPML format and available in the `output_gpml/` directory of this repository.
 - The license for the code is available at [GNU AGPL 3.0](https://www.gnu.org/licenses/agpl-3.0)
 
 
