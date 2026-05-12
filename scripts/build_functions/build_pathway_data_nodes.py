@@ -338,7 +338,9 @@ def create_enhanced_pathway_from_record(record, citation_manager=None, version=N
     db_refs = parse_pathway_dblinks(dblinks)
     xref = get_pathway_xref(db_refs)
 
-    organism, _ = parse_taxonomic_info(record)
+    # Pathway-level species is always Viridiplantae (plant kingdom).
+    # Per-gene/protein species are stored as individual Taxonomy Annotations on DataNodes.
+    organism = "Viridiplantae"
 
     authors = create_pathway_authors_from_record(record)
     properties = create_pathway_properties_from_record(record)

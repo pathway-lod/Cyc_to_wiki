@@ -8,7 +8,7 @@ BioCyc data and building complete pathway networks with genes, proteins, complex
 from scripts.data_structure.wiki_data_structure import (
     Pathway, DataNode, Interaction, Point, Graphics, ArrowHeadType, Anchor, AnchorShapeType,
     LineStyle, ConnectorType, Group, Comment, ShapeType, BorderStyle, DataNodeType,
-    HAlign, VAlign
+    HAlign, VAlign, Annotation, AnnotationType, Xref, AnnotationRef
 )
 from scripts.build_functions.build_pathway_data_nodes import create_enhanced_pathways_from_file
 from scripts.build_functions.build_compounds_data_nodes import create_enhanced_datanodes_from_compounds
@@ -704,7 +704,18 @@ class CompletePathwayBuilderWithGenes:
         for ann_id in referenced_anns:
             if ann_id in self.annotation_index:
                 pathway_annotations.append(self.annotation_index[ann_id])
+
+        # Always include Viridiplantae as the pathway-level taxonomy annotation
+        viridiplantae_id = "taxonomy_33090"
+        if not any(a.elementId == viridiplantae_id for a in pathway_annotations):
+            pathway_annotations.append(Annotation(
+                elementId=viridiplantae_id,
+                value="Viridiplantae",
+                type=AnnotationType.TAXONOMY,
+                xref=Xref(identifier="33090", dataSource="NCBI Taxonomy")
+            ))
         pathway.annotations = pathway_annotations
+        pathway.annotationRefs = [AnnotationRef(elementRef=viridiplantae_id)]
 
         # Check for missing citations
         cited_refs = set()

@@ -707,6 +707,12 @@ class GPMLWriter:
                 ref_id = getattr(citation_ref, 'elementRef', '')
                 gpml_output += f'  <CitationRef elementRef="{self.escape_xml(ref_id)}" />\n'
 
+        # AnnotationRefs at pathway level (e.g. Viridiplantae taxonomy)
+        if hasattr(pathway, 'annotationRefs') and pathway.annotationRefs:
+            for annotation_ref in pathway.annotationRefs:
+                ref_id = getattr(annotation_ref, 'elementRef', '')
+                gpml_output += f'  <AnnotationRef elementRef="{self.escape_xml(ref_id)}" />\n'
+
         # Graphics - board size
         if pathway.graphics:
             gpml_output += f'  <Graphics boardWidth="{pathway.graphics.boardWidth}" boardHeight="{pathway.graphics.boardHeight}"'
