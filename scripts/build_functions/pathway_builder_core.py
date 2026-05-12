@@ -730,7 +730,7 @@ class CompletePathwayBuilderWithGenes:
         
         if missing_refs:
             print(f"Found {len(missing_refs)} missing citations, adding them...")
-            from scripts.data_structure.wiki_data_structure import Citation, Xref
+            from scripts.data_structure.wiki_data_structure import Citation
             for missing in missing_refs:
                 citation = None
                 for _, cit_obj in self.citation_manager.citation_objects.items():

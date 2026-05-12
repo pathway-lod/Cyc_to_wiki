@@ -223,7 +223,7 @@ def build_single_reaction_pathway(builder, reaction_id):
 
         if missing_citation_refs:
             print(f"  Found {len(missing_citation_refs)} missing citations for reaction {reaction_id}, adding them...")
-            from scripts.data_structure.wiki_data_structure import Citation, Xref
+            from scripts.data_structure.wiki_data_structure import Citation
             for missing_ref in missing_citation_refs:
                 # missing_ref is a sanitized elementId like "citation_PUB_12695547"
                 # Check if this citation already exists in citation_objects
