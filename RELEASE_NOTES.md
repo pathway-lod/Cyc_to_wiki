@@ -48,7 +48,12 @@ Go to the repository's **Releases** page on GitHub, select the new tag, and fill
 
 ### 6. Update this file
 
-Add a new release section below (copy the template from the previous release).
+Add a new release section below (copy the template from the previous release) and update:
+- **Code commit** — the git short SHA of the final release build
+- **Build date** — today's date
+- **Zenodo DOI** — once archived
+- **What's new** — bullet points summarising code changes since the last release
+- **Taxonomy annotation coverage** — numbers from `GPML_STATISTICS_REPORT.txt` in the release output directory
 
 ---
 
@@ -60,16 +65,17 @@ Add a new release section below (copy the template from the previous release).
 
 **PlantCyc version:** 17.0.0  
 **GPML snapshot:** GPML2021  
-**Code commit:** `a08bf1f9`  (`feat/species-plants` → `main`)  
-**Build date:** 2026-05-12  
+**Code commit:** `e2a72d55`  (`feat/species-plants` → `main`)  
+**Build date:** 2026-05-15  
 **Zenodo DOI:** [10.5281/zenodo.18404067](https://doi.org/10.5281/zenodo.18404067)
 
 #### What's new
 
 - **Viridiplantae as pathway-level organism** — All GPML pathways now carry `organism="Viridiplantae"` (NCBI Taxonomy 33090) with a structured `<Annotation type="Taxonomy">` element, replacing the previous multi-species comma-separated string that caused XSD validation errors.
-- **Per-entity taxonomy annotations** — Proteins and metabolites with a `SPECIES` field in PlantCyc carry individual `<AnnotationRef>` → `<Annotation type="Taxonomy">` elements with NCBI Taxonomy IDs, enabling downstream RDF conversion to preserve species provenance at the entity level.
+- **Per-entity taxonomy annotations** — Proteins, compounds, and genes with species information now carry individual `<AnnotationRef>` → `<Annotation type="Taxonomy">` elements with NCBI Taxonomy IDs. Genes inherit species from their linked protein product (`PRODUCT` field) since `genes.dat` has no `SPECIES` field.
 - **Fixed `MISSING_GROUP_REF` validation errors** — Protein monomer DataNodes now correctly reference their parent complex group using the sanitized element ID.
-- **Zero validation errors** — All 2,478 GPML files pass XSD schema validation.
+- **Fixed XSD: pathway-level `<AnnotationRef>` not allowed** — The GPML2021 XSD only permits `<CitationRef>` and `<EvidenceRef>` as direct children of `<Pathway>`; the Viridiplantae reference is captured via `organism=` attribute and `<Annotation>` element instead.
+- **Zero validation errors** — All 2,478 GPML files pass both local and XSD schema validation.
 
 #### Build statistics
 
@@ -104,9 +110,9 @@ Add a new release section below (copy the template from the previous release).
 
 | Entity type | Total | Annotated | Coverage |
 |---|---|---|---|
+| GeneProduct | 8,259 | 8,148 | 98.7% |
 | Protein | 10,715 | 10,583 | 98.8% |
 | Metabolite | 23,449 | 33 | 0.1% |
-| GeneProduct | 8,259 | 0 | 0.0% |
 
 Unique species across all DataNodes: **422**  
-Top species (Protein): *Arabidopsis thaliana* (4,117), *Glycine max* (587), *Lotus japonicus* (463), *Zea mays* (336), *Chlamydomonas reinhardtii* (318)
+Top species: *Arabidopsis thaliana* (4,117), *Glycine max* (587), *Lotus japonicus* (463), *Zea mays* (336), *Chlamydomonas reinhardtii* (318)
