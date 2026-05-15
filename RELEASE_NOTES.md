@@ -34,9 +34,11 @@ Open a pull request from your feature branch into `main` and merge once the buil
 From `main`, after merging:
 
 ```bash
-git tag -a plantcycX.Y.Z-gpml2021 -m "PlantCyc X.Y.Z to GPML 2021"
-git push origin plantcycX.Y.Z-gpml2021
+git tag -a plantcycX.Y.Z-gpml2021-vN -m "PlantCyc X.Y.Z to GPML 2021 (vN)"
+git push origin plantcycX.Y.Z-gpml2021-vN
 ```
+
+The version suffix (`v1`, `v2`, …) is set in `scripts/config.env` (`RELEASE_VERSION`). Increment it whenever you re-release the same PlantCyc+GPML combination with updated code. The pipeline script uses it automatically in both the tag name and the output directory name.
 
 The tag triggers automatic archiving on Zenodo (configured via `.zenodo.json` / GitHub integration).
 
