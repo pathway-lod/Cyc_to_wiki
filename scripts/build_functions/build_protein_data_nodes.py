@@ -12,6 +12,7 @@ from scripts.utils.property_parser import (
 )
 from scripts.object2gmpl.gpml_writer import GPMLWriter
 from scripts.utils.organism_utils import load_organism_mapping, create_species_annotation
+from scripts.utils.id_manager import sanitize_element_id
 import uuid
 import re
 from pathlib import Path
@@ -400,7 +401,7 @@ def create_monomer_datanode(monomer_id, parent_complex_id, monomer_records=None)
         elementId=element_id,
         textLabel=str(text_label),
         type=DataNodeType.PROTEIN,
-        groupRef=parent_complex_id,  # Reference to parent complex
+        groupRef=sanitize_element_id(parent_complex_id) if parent_complex_id else None,
         xref=primary_xref,
         states=[],
         graphics=graphics,

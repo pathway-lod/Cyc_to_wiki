@@ -57,10 +57,14 @@ class GPMLAnalyzer:
         self.citations_without_either = 0
         self.unique_citations_without_either = set()
 
-        # Organism/Taxon statistics
-        self.pathway_organisms = set()  # Unique organisms at pathway level
-        self.protein_species = set()  # Unique species from Protein DataNodes
-        self.protein_species_counts = defaultdict(int)  # Species -> count
+        # Taxonomy annotation statistics
+        self.pathway_organisms = set()            # Unique pathway-level organism values
+        self.pathway_organism_counts = defaultdict(int)  # organism -> file count
+        # Per DataNode type: species name -> occurrence count
+        self.taxonomy_by_type = defaultdict(lambda: defaultdict(int))
+        # Per DataNode type: total nodes vs nodes with a taxonomy annotation
+        self.total_by_type = defaultdict(int)
+        self.annotated_by_type = defaultdict(int)
 
         # Pathway vs Reaction file tracking
         self.pathway_files = 0
@@ -69,6 +73,10 @@ class GPMLAnalyzer:
         # Separate stats for pathways vs reactions
         self.pathway_stats = self._create_stats_dict()
         self.reaction_stats = self._create_stats_dict()
+
+        # Keep legacy field so existing callers don't break
+        self.protein_species = set()
+        self.protein_species_counts = defaultdict(int)
 
         # File tracking
         self.files_processed = 0
@@ -109,11 +117,14 @@ class GPMLAnalyzer:
             else:
                 self.pathway_files += 1
 
+            # Build per-file annotation index: elementId -> {value, type}
+            annotation_index = self._build_annotation_index(root, ns)
+
             # Process Pathway organism
             self._process_pathway_organism(root, ns)
 
             # Process DataNodes
-            self._process_datanodes(root, ns, file_stats)
+            self._process_datanodes(root, ns, file_stats, annotation_index)
 
             # Process Groups (for complexes)
             self._process_groups(root, ns, file_stats)
@@ -133,31 +144,36 @@ class GPMLAnalyzer:
             self.files_failed += 1
             print(f"  Error processing {os.path.basename(filepath)}: {e}")
 
+    def _build_annotation_index(self, root, ns):
+        """Build a per-file index of Annotation elements: elementId -> {value, type}."""
+        index = {}
+        for ann in root.findall('.//gpml:Annotation', ns):
+            ann_id = ann.get('elementId', '')
+            if ann_id:
+                index[ann_id] = {
+                    'value': ann.get('value', ''),
+                    'type': ann.get('type', ''),
+                }
+        return index
+
     def _process_pathway_organism(self, root, ns):
         """Process Pathway organism attribute."""
-        pathway = root.find('.//gpml:Pathway', ns)
-        if pathway is None:
-            # Try root element
-            organism = root.get('organism', None)
-        else:
-            organism = pathway.get('organism', None)
-
+        organism = root.get('organism', None)
         if organism:
-            # Split by comma if multiple organisms
-            organisms = [org.strip() for org in organism.split(',')]
-            for org in organisms:
-                if org:
-                    self.pathway_organisms.add(org)
+            self.pathway_organisms.add(organism.strip())
+            self.pathway_organism_counts[organism.strip()] += 1
 
-    def _process_datanodes(self, root, ns, file_stats):
+    def _process_datanodes(self, root, ns, file_stats, annotation_index=None):
         """Process DataNode elements."""
+        if annotation_index is None:
+            annotation_index = {}
+
         for datanode in root.findall('.//gpml:DataNode', ns):
-            # Get type
             node_type = datanode.get('type', 'Unknown')
             self.datanode_types[node_type] += 1
             file_stats['datanode_types'][node_type] += 1
+            self.total_by_type[node_type] += 1
 
-            # Get unique identifier (textLabel or elementId)
             text_label = datanode.get('textLabel', '')
             element_id = datanode.get('elementId', '')
             unique_id = text_label if text_label else element_id
@@ -179,21 +195,21 @@ class GPMLAnalyzer:
                 if data_source and data_source != 'Unknown':
                     self.datanode_type_xrefs[node_type][data_source] += 1
                     file_stats['datanode_type_xrefs'][node_type][data_source] += 1
-                    # Track unique entities with this xref
                     if unique_id:
                         self.datanode_type_xrefs_unique[node_type][data_source].add(unique_id)
 
-            # Get Species for Protein DataNodes
-            if node_type == 'Protein':
-                for prop in datanode.findall('.//gpml:Property', ns):
-                    if prop.get('key') == 'Species':
-                        species = prop.get('value', None)
-                        if species:
-                            self.protein_species.add(species)
-                            self.protein_species_counts[species] += 1
-                            file_stats['protein_species'].add(species)
-                            file_stats['protein_species_counts'][species] += 1
-                        break
+            # Taxonomy annotations via AnnotationRef -> Annotation lookup
+            has_taxonomy = False
+            for ann_ref in datanode.findall('gpml:AnnotationRef', ns):
+                ref_id = ann_ref.get('elementRef', '')
+                ann = annotation_index.get(ref_id, {})
+                if ann.get('type', '').lower() == 'taxonomy':
+                    species_name = ann.get('value', '')
+                    if species_name:
+                        self.taxonomy_by_type[node_type][species_name] += 1
+                        has_taxonomy = True
+            if has_taxonomy:
+                self.annotated_by_type[node_type] += 1
 
     def _process_groups(self, root, ns, file_stats):
         """Process Group elements (protein complexes)."""
@@ -499,26 +515,56 @@ class GPMLAnalyzer:
         print(f"{'With DOI':<40} {self.citations_with_doi:<15,} {len(self.unique_citations_with_doi):<15,} {doi_pct:>6.1f}%")
         print(f"{'Without PubMed/DOI (BioCyc only)':<40} {self.citations_without_either:<15,} {len(self.unique_citations_without_either):<15,} {neither_pct:>6.1f}%")
 
-        # Organism/Taxon Statistics
+        # Taxonomy Statistics
         print("\n" + "="*80)
-        print("ORGANISM/TAXON STATISTICS")
+        print("TAXONOMY ANNOTATION STATISTICS")
         print("="*80)
 
-        print(f"\nUnique pathway-level organisms: {len(self.pathway_organisms)}")
+        # Pathway-level organism
+        print(f"\nPathway-level organism values ({len(self.pathway_organisms)} unique):")
+        for org, count in sorted(self.pathway_organism_counts.items(), key=lambda x: -x[1]):
+            pct = count / self.files_processed * 100 if self.files_processed else 0
+            print(f"  {org:<35} {count:>6,} files  ({pct:.1f}%)")
 
-        print(f"\nUnique protein species (all files): {len(self.protein_species)}")
-        if self.protein_species:
-            print("\nProtein Species (with counts):")
-            print(f"{'Species':<30} {'Count':<15}")
-            print("-"*45)
-            # Sort by count (descending), show top 20
-            top_species = sorted(self.protein_species_counts.keys(),
-                                key=lambda x: self.protein_species_counts[x], reverse=True)[:20]
-            for species in top_species:
-                count = self.protein_species_counts[species]
-                print(f"{species:<30} {count:<15,}")
-            if len(self.protein_species) > 20:
-                print(f"  ... and {len(self.protein_species) - 20} more species")
+        # Per-type taxonomy annotation coverage
+        print("\nDataNode taxonomy annotation coverage:")
+        print(f"{'Type':<20} {'Total':>10} {'Annotated':>12} {'Coverage':>10}")
+        print("-"*55)
+        for node_type in sorted(self.total_by_type.keys()):
+            total = self.total_by_type[node_type]
+            annotated = self.annotated_by_type.get(node_type, 0)
+            pct = annotated / total * 100 if total else 0
+            print(f"{node_type:<20} {total:>10,} {annotated:>12,} {pct:>9.1f}%")
+
+        # Top species per entity type
+        for node_type in sorted(self.taxonomy_by_type.keys()):
+            species_counts = self.taxonomy_by_type[node_type]
+            if not species_counts:
+                continue
+            print(f"\nTop species — {node_type}:")
+            print(f"  {'Species':<35} {'Count':>8}")
+            print("  " + "-"*45)
+            top = sorted(species_counts.items(), key=lambda x: -x[1])[:15]
+            for species, count in top:
+                print(f"  {species:<35} {count:>8,}")
+            if len(species_counts) > 15:
+                print(f"  ... and {len(species_counts) - 15} more species")
+
+        # Species overlap across entity types
+        species_by_type = {t: set(c.keys()) for t, c in self.taxonomy_by_type.items()}
+        all_species = set().union(*species_by_type.values()) if species_by_type else set()
+        overlap = {sp for sp in all_species
+                   if sum(1 for s in species_by_type.values() if sp in s) > 1}
+        print(f"\nUnique species across all DataNodes: {len(all_species)}")
+        if overlap:
+            print(f"Species appearing on multiple entity types ({len(overlap)}):")
+            for sp in sorted(overlap):
+                types_str = ", ".join(
+                    f"{t} ({self.taxonomy_by_type[t][sp]:,})"
+                    for t in sorted(species_by_type)
+                    if sp in species_by_type[t]
+                )
+                print(f"  {sp}: {types_str}")
 
         # Pathway vs Reaction Split
         print("\n" + "="*80)
@@ -587,17 +633,6 @@ class GPMLAnalyzer:
                     count = xrefs[data_source]
                     print(f"{node_type:<20} {data_source:<25} {count:<15,}")
 
-        # Protein species
-        if stats['protein_species']:
-            print(f"\nProtein species: {len(stats['protein_species'])} unique")
-            print("\nTop Protein Species:")
-            print(f"{'Species':<30} {'Count':<15}")
-            print("-"*45)
-            top_species = sorted(stats['protein_species_counts'].keys(),
-                                key=lambda x: stats['protein_species_counts'][x], reverse=True)[:10]
-            for species in top_species:
-                count = stats['protein_species_counts'][species]
-                print(f"{species:<30} {count:<15,}")
 
     def save_report(self, output_file):
         """Save report to file."""

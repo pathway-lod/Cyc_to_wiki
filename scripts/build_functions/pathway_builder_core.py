@@ -8,7 +8,7 @@ BioCyc data and building complete pathway networks with genes, proteins, complex
 from scripts.data_structure.wiki_data_structure import (
     Pathway, DataNode, Interaction, Point, Graphics, ArrowHeadType, Anchor, AnchorShapeType,
     LineStyle, ConnectorType, Group, Comment, ShapeType, BorderStyle, DataNodeType,
-    HAlign, VAlign
+    HAlign, VAlign, Annotation, AnnotationType, Xref, AnnotationRef
 )
 from scripts.build_functions.build_pathway_data_nodes import create_enhanced_pathways_from_file
 from scripts.build_functions.build_compounds_data_nodes import create_enhanced_datanodes_from_compounds
@@ -74,12 +74,17 @@ class CompletePathwayBuilderWithGenes:
         self._load_regulations(regulation_file)
         self._load_pathways(pathways_file)
 
+        # Propagate protein species annotations to gene DataNodes
+        self._propagate_protein_species_to_genes()
+
         # Build biological mappings using MappingBuilder
         self._build_mappings()
 
     def _load_compounds(self, compounds_file):
         """Load and process compound data with citations."""
-        self.compound_nodes = create_enhanced_datanodes_from_compounds(compounds_file, self.citation_manager)
+        self.compound_nodes, compound_annotations = create_enhanced_datanodes_from_compounds(compounds_file, self.citation_manager)
+        for annotation in compound_annotations:
+            self.annotation_index[annotation.elementId] = annotation
         self._register_and_map_nodes(self.compound_nodes)
         self.compound_original_to_node = self._create_original_to_node_map(self.compound_nodes)
 
@@ -135,6 +140,46 @@ class CompletePathwayBuilderWithGenes:
         # Load raw protein records for enzyme mapping
         self.proteins_processor = parsing_utils.read_and_parse(proteins_file)
         self.protein_records = {r['UNIQUE-ID']: r for r in self.proteins_processor.records if 'UNIQUE-ID' in r}
+
+    def _propagate_protein_species_to_genes(self):
+        """Copy species taxonomy annotations from protein DataNodes to their encoding gene DataNodes.
+
+        genes.dat has no SPECIES field, but the protein a gene encodes (PRODUCT field) does.
+        This method reads each gene's Product property, finds the linked protein node, and
+        copies its annotationRefs (and the corresponding Annotation objects) to the gene.
+        """
+        propagated = 0
+        for gene_node in self.gene_nodes:
+            # Collect protein IDs from gene's Property elements
+            product_ids = []
+            for prop in gene_node.properties:
+                if prop.key == 'Product':
+                    product_ids.append(prop.value.strip())
+                elif prop.key == 'Products':
+                    product_ids.extend(p.strip() for p in prop.value.split(','))
+
+            # Gather annotation refs from linked proteins
+            new_refs = {}  # elementRef -> AnnotationRef (deduplicated)
+            for pid in product_ids:
+                protein_node = self.protein_original_to_node.get(pid)
+                if protein_node and hasattr(protein_node, 'annotationRefs'):
+                    for ref in protein_node.annotationRefs:
+                        if ref.elementRef not in new_refs:
+                            new_refs[ref.elementRef] = ref
+
+            if not new_refs:
+                continue
+
+            # Merge into gene node (avoid duplicates)
+            existing_refs = {r.elementRef for r in gene_node.annotationRefs}
+            for ref_id, ref in new_refs.items():
+                if ref_id not in existing_refs:
+                    gene_node.annotationRefs.append(ref)
+                    existing_refs.add(ref_id)
+
+            propagated += 1
+
+        print(f"  Species annotations propagated to {propagated} gene DataNodes from their protein products.")
 
     def _load_reactions(self, reactions_file):
         """Load and process reaction data with citations."""
@@ -704,6 +749,16 @@ class CompletePathwayBuilderWithGenes:
         for ann_id in referenced_anns:
             if ann_id in self.annotation_index:
                 pathway_annotations.append(self.annotation_index[ann_id])
+
+        # Always include Viridiplantae as the pathway-level taxonomy annotation
+        viridiplantae_id = "taxonomy_33090"
+        if not any(a.elementId == viridiplantae_id for a in pathway_annotations):
+            pathway_annotations.append(Annotation(
+                elementId=viridiplantae_id,
+                value="Viridiplantae",
+                type=AnnotationType.TAXONOMY,
+                xref=Xref(identifier="33090", dataSource="NCBI Taxonomy")
+            ))
         pathway.annotations = pathway_annotations
 
         # Check for missing citations
@@ -717,7 +772,7 @@ class CompletePathwayBuilderWithGenes:
         
         if missing_refs:
             print(f"Found {len(missing_refs)} missing citations, adding them...")
-            from scripts.data_structure.wiki_data_structure import Citation, Xref
+            from scripts.data_structure.wiki_data_structure import Citation
             for missing in missing_refs:
                 citation = None
                 for _, cit_obj in self.citation_manager.citation_objects.items():

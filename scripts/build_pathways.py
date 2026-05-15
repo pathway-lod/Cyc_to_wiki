@@ -95,15 +95,15 @@ def get_reaction_info(builder, reaction_id):
 
 def build_single_reaction_pathway(builder, reaction_id):
     """Build a pathway object containing a single reaction."""
-    from scripts.build_functions.build_pathway_data_nodes import convert_to_latin_name
-
     # Get reaction information
     reaction_record = get_reaction_info(builder, reaction_id)
 
     # Get reaction name and EC number
     reaction_name = reaction_id
     ec_number = None
-    organism = " "
+    # Pathway-level species is always Viridiplantae (plant kingdom).
+    # Per-gene/protein species are stored as individual Taxonomy Annotations on DataNodes.
+    organism = "Viridiplantae"
 
     if reaction_record:
         reaction_name = reaction_record.get('COMMON-NAME', reaction_id)
@@ -119,15 +119,6 @@ def build_single_reaction_pathway(builder, reaction_id):
                 if db_name == 'EC':
                     ec_number = db_id
                     break
-
-        # Try to get organism info and convert to Latin name
-        species = reaction_record.get('SPECIES', '')
-        if species:
-            organism = convert_to_latin_name(str(species))
-
-    # Handle missing organism - set to "cellular organisms"
-    if not organism or organism.strip() == "":
-        organism = "cellular organisms"
 
     # Create pathway title
     if ec_number:
@@ -232,7 +223,7 @@ def build_single_reaction_pathway(builder, reaction_id):
 
         if missing_citation_refs:
             print(f"  Found {len(missing_citation_refs)} missing citations for reaction {reaction_id}, adding them...")
-            from scripts.data_structure.wiki_data_structure import Citation, Xref
+            from scripts.data_structure.wiki_data_structure import Citation
             for missing_ref in missing_citation_refs:
                 # missing_ref is a sanitized elementId like "citation_PUB_12695547"
                 # Check if this citation already exists in citation_objects
@@ -259,6 +250,28 @@ def build_single_reaction_pathway(builder, reaction_id):
                 if citation and citation.elementId not in existing_citation_ids:
                     pathway.citations.append(citation)
                     existing_citation_ids.add(citation.elementId)
+
+        # Collect DataNode species annotations and add Viridiplantae pathway annotation
+        from scripts.data_structure.wiki_data_structure import Annotation, AnnotationType, Xref, AnnotationRef
+        pathway_annotations = []
+        referenced_anns = set()
+        for node in pathway_datanodes + pathway.groups:
+            if hasattr(node, 'annotationRefs') and node.annotationRefs:
+                for ref in node.annotationRefs:
+                    referenced_anns.add(ref.elementRef)
+        for ann_id in referenced_anns:
+            if ann_id in builder.annotation_index:
+                pathway_annotations.append(builder.annotation_index[ann_id])
+
+        viridiplantae_id = "taxonomy_33090"
+        if not any(a.elementId == viridiplantae_id for a in pathway_annotations):
+            pathway_annotations.append(Annotation(
+                elementId=viridiplantae_id,
+                value="Viridiplantae",
+                type=AnnotationType.TAXONOMY,
+                xref=Xref(identifier="33090", dataSource="NCBI Taxonomy")
+            ))
+        pathway.annotations = pathway_annotations
 
         builder._update_pathway_board_size(pathway, pathway_datanodes)
 

@@ -5,6 +5,7 @@ from scripts.data_structure.wiki_data_structure import (
 from scripts.parsing_functions import parsing_utils
 from scripts.utils.HTML_cleaner import clean_text_label
 from scripts.utils import standard_graphics
+from scripts.utils.organism_utils import load_organism_mapping, create_species_annotation
 from scripts.utils.property_parser import (
     create_dynamic_properties, handle_unique_id, handle_synonyms,
     handle_chemical_formula
@@ -279,6 +280,9 @@ def create_enhanced_datanode_from_compound(record, citation_manager=None):
     # Get citation references using CitationManager
     citation_refs = create_citation_refs_from_record(record, citation_manager)
 
+    # Handle species annotations (36 compounds in PlantCyc carry a SPECIES field)
+    annotations, annotation_refs = create_species_annotation(record)
+
     # Use standard metabolite graphics
     graphics = standard_graphics.create_metabolite_graphics(0.0, 0.0)
 
@@ -291,10 +295,11 @@ def create_enhanced_datanode_from_compound(record, citation_manager=None):
         graphics=graphics,
         comments=comments,
         properties=properties,
-        citationRefs=citation_refs
+        citationRefs=citation_refs,
+        annotationRefs=annotation_refs
     )
 
-    return datanode
+    return datanode, annotations
 
 
 def create_enhanced_datanodes_from_compounds(compounds_file, citation_manager=None):
@@ -311,6 +316,7 @@ def create_enhanced_datanodes_from_compounds(compounds_file, citation_manager=No
     processor = parsing_utils.read_and_parse(compounds_file)
 
     datanodes = []
+    all_annotations = []
 
     # Statistics tracking - count per unique record
     xref_stats = {
@@ -385,8 +391,10 @@ def create_enhanced_datanodes_from_compounds(compounds_file, citation_manager=No
                     citation_stats['unique_pubmed_ids'].add(citation_str)
 
         # Create datanode
-        datanode = create_enhanced_datanode_from_compound(record, citation_manager)
+        datanode, annotations = create_enhanced_datanode_from_compound(record, citation_manager)
         datanodes.append(datanode)
+        if annotations:
+            all_annotations.extend(annotations)
 
     # Print statistics
     print("\n" + "="*60)
@@ -416,7 +424,7 @@ def create_enhanced_datanodes_from_compounds(compounds_file, citation_manager=No
 
     print("="*60 + "\n")
 
-    return datanodes
+    return datanodes, all_annotations
 
 
 def calculate_inchi_key_stats(datanodes):
