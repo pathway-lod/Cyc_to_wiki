@@ -760,7 +760,6 @@ class CompletePathwayBuilderWithGenes:
                 xref=Xref(identifier="33090", dataSource="NCBI Taxonomy")
             ))
         pathway.annotations = pathway_annotations
-        pathway.annotationRefs = [AnnotationRef(elementRef=viridiplantae_id)]
 
         # Check for missing citations
         cited_refs = set()

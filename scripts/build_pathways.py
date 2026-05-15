@@ -272,7 +272,6 @@ def build_single_reaction_pathway(builder, reaction_id):
                 xref=Xref(identifier="33090", dataSource="NCBI Taxonomy")
             ))
         pathway.annotations = pathway_annotations
-        pathway.annotationRefs = [AnnotationRef(elementRef=viridiplantae_id)]
 
         builder._update_pathway_board_size(pathway, pathway_datanodes)
 
