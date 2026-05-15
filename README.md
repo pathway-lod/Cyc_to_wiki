@@ -1,6 +1,7 @@
 # PlantCyc to WikiPathways repository 
 
 [![DOI](https://zenodo.org/badge/DOI/110.5281/zenodo.18404067.svg)](https://doi.org/10.5281/zenodo.18404067)
+[![Latest Release](https://img.shields.io/github/v/release/pathway-lod/Cyc_to_wiki?label=latest%20release)](https://github.com/pathway-lod/Cyc_to_wiki/releases/latest)
 
 This repository contains the pipeline to transform data from BioCyc flat-file format (`.dat` files, common in PlantCyc and BioCyc repositories) to GPML2021 format [(Graphical Pathway Markup Language)](https://pathvisio.org/documentation/GPML) for upload to WikiPathways. 
 
