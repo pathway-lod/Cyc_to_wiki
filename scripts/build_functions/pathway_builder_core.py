@@ -74,6 +74,9 @@ class CompletePathwayBuilderWithGenes:
         self._load_regulations(regulation_file)
         self._load_pathways(pathways_file)
 
+        # Propagate protein species annotations to gene DataNodes
+        self._propagate_protein_species_to_genes()
+
         # Build biological mappings using MappingBuilder
         self._build_mappings()
 
@@ -137,6 +140,46 @@ class CompletePathwayBuilderWithGenes:
         # Load raw protein records for enzyme mapping
         self.proteins_processor = parsing_utils.read_and_parse(proteins_file)
         self.protein_records = {r['UNIQUE-ID']: r for r in self.proteins_processor.records if 'UNIQUE-ID' in r}
+
+    def _propagate_protein_species_to_genes(self):
+        """Copy species taxonomy annotations from protein DataNodes to their encoding gene DataNodes.
+
+        genes.dat has no SPECIES field, but the protein a gene encodes (PRODUCT field) does.
+        This method reads each gene's Product property, finds the linked protein node, and
+        copies its annotationRefs (and the corresponding Annotation objects) to the gene.
+        """
+        propagated = 0
+        for gene_node in self.gene_nodes:
+            # Collect protein IDs from gene's Property elements
+            product_ids = []
+            for prop in gene_node.properties:
+                if prop.key == 'Product':
+                    product_ids.append(prop.value.strip())
+                elif prop.key == 'Products':
+                    product_ids.extend(p.strip() for p in prop.value.split(','))
+
+            # Gather annotation refs from linked proteins
+            new_refs = {}  # elementRef -> AnnotationRef (deduplicated)
+            for pid in product_ids:
+                protein_node = self.protein_original_to_node.get(pid)
+                if protein_node and hasattr(protein_node, 'annotationRefs'):
+                    for ref in protein_node.annotationRefs:
+                        if ref.elementRef not in new_refs:
+                            new_refs[ref.elementRef] = ref
+
+            if not new_refs:
+                continue
+
+            # Merge into gene node (avoid duplicates)
+            existing_refs = {r.elementRef for r in gene_node.annotationRefs}
+            for ref_id, ref in new_refs.items():
+                if ref_id not in existing_refs:
+                    gene_node.annotationRefs.append(ref)
+                    existing_refs.add(ref_id)
+
+            propagated += 1
+
+        print(f"  Species annotations propagated to {propagated} gene DataNodes from their protein products.")
 
     def _load_reactions(self, reactions_file):
         """Load and process reaction data with citations."""
