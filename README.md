@@ -1,8 +1,9 @@
 # PlantCyc to WikiPathways repository 
 
-[![DOI](https://zenodo.org/badge/DOI/110.5281/zenodo.18404067.svg)](https://doi.org/10.5281/zenodo.18404067)
-[![Latest Release](https://img.shields.io/github/v/release/pathway-lod/Cyc_to_wiki?label=latest%20release)](https://github.com/pathway-lod/Cyc_to_wiki/releases/latest)
-[![bio.tools](https://img.shields.io/badge/bio.tools-plantmetwiki-blue)](https://bio.tools/plantmetwiki)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18404067.svg)](https://doi.org/10.5281/zenodo.18404067)
+[![GitHub Release](https://img.shields.io/github/v/release/pathway-lod/Cyc_to_wiki?include_prereleases&sort=semver&display_name=tag&logo=github)](https://github.com/pathway-lod/Cyc_to_wiki/releases)
+[![bio.tools](https://img.shields.io/static/v1?label=bio.tools&message=plantmetwiki&color=green)](https://bio.tools/plantmetwiki)
+[![PlantMetWiki](https://img.shields.io/static/v1?label=web&message=PlantMetWiki&color=brightgreen)](https://plantmetwiki.bioinformatics.nl/)
 
 This repository contains the pipeline to transform data from BioCyc flat-file format (`.dat` files, common in PlantCyc and BioCyc repositories) to GPML2021 format [(Graphical Pathway Markup Language)](https://pathvisio.org/documentation/GPML) for upload to WikiPathways. 
 
