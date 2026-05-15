@@ -132,7 +132,7 @@ def create_species_annotation(record):
             if ncbi_id:
                 annotation_id = f"taxonomy_{ncbi_id}"
                 xref_id = ncbi_id
-                xref_source = "NCBI Taxonomy"
+                xref_source = "NCBITaxon"
             else:
                 # Fallback to internal ID if no NCBI ID available
                 annotation_id = f"taxonomy_{species_id}"
