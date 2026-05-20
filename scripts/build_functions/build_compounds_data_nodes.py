@@ -302,17 +302,21 @@ def create_enhanced_datanode_from_compound(record, citation_manager=None):
     return datanode, annotations
 
 
-def create_enhanced_datanodes_from_compounds(compounds_file, citation_manager=None):
+def create_enhanced_datanodes_from_compounds(compounds_file, citation_manager=None, organism_mapping=None):
     """
     Create comprehensive DataNodes from a compounds file with citation support.
 
     Args:
         compounds_file: Path to the compounds.dat file
         citation_manager: CitationManager instance (optional)
+        organism_mapping: Dictionary mapping ORG-IDs/TAX-IDs to Latin names (optional)
 
     Returns:
         list: List of enhanced DataNode objects
     """
+    if organism_mapping:
+        load_organism_mapping(organism_mapping)
+
     processor = parsing_utils.read_and_parse(compounds_file)
 
     datanodes = []

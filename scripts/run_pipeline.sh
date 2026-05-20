@@ -87,9 +87,29 @@ else
   echo "==> Tag created locally. (Push it with: git push origin $TAG_NAME)"
 fi
 
+# Validate PlantCyc input data before building
+echo "==> Validating PlantCyc input data ..."
+python "$REPO_ROOT/scripts/validate_plantcyc_input.py" "$PLANTCYC_DATA_DIR"
+VALIDATION_EXIT=$?
+if [[ $VALIDATION_EXIT -ne 0 ]]; then
+  echo "ERROR: Input validation failed. Fix errors above before building."
+  exit $VALIDATION_EXIT
+fi
+echo ""
+
 # Run the pipeline
 echo "==> Running: ${CMD[*]}"
 "${CMD[@]}"
 
 echo "==> Done."
 echo "==> Output: $OUT_DIR"
+
+# Generate species coverage table at project root
+echo ""
+echo "==> Generating species_coverage.tsv ..."
+python "$REPO_ROOT/scripts/utils/generate_species_coverage_table.py" \
+  --data-dir "$PLANTCYC_DATA_DIR" \
+  --gpml-dir "$OUT_DIR" \
+  --output "$OUT_DIR/species_coverage.tsv" \
+  --output-by-ncbi "$OUT_DIR/species_coverage_by_ncbi.tsv"
+echo "==> species_coverage.tsv and species_coverage_by_ncbi.tsv written to $OUT_DIR"

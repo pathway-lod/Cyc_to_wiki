@@ -82,7 +82,7 @@ class CompletePathwayBuilderWithGenes:
 
     def _load_compounds(self, compounds_file):
         """Load and process compound data with citations."""
-        self.compound_nodes, compound_annotations = create_enhanced_datanodes_from_compounds(compounds_file, self.citation_manager)
+        self.compound_nodes, compound_annotations = create_enhanced_datanodes_from_compounds(compounds_file, self.citation_manager, self.organism_mapping)
         for annotation in compound_annotations:
             self.annotation_index[annotation.elementId] = annotation
         self._register_and_map_nodes(self.compound_nodes)

@@ -63,6 +63,72 @@ Add a new release section below (copy the template from the previous release) an
 
 ---
 
+### plantcyc17.0.0-gpml2021-v1
+
+**PlantCyc version:** 17.0.0
+**GPML snapshot:** GPML2021
+**Code commit:** `3de90246` (`feat/species-plants` → `main`)
+**Build date:** 2026-05-20
+**Zenodo DOI:** [10.5281/zenodo.18404067](https://doi.org/10.5281/zenodo.18404067)
+
+#### What's new
+
+- **Fixed compound species annotations** — Metabolite DataNodes whose compounds carry a `SPECIES` field in `compounds.dat` (e.g. *Zea mays*, *Daphne odora*, *Ocimum basilicum*) now receive correctly resolved `<Annotation type="Taxonomy">` elements. Previously the pipeline omitted the `organism_mapping` dict when building compound nodes, causing all 21 compound species to appear as raw `TAX-`/`ORG-` IDs in the GPML. Unique resolved species in the GPML: **412** (down from 422 raw strings, reflecting proper name deduplication).
+- **New `species_coverage.tsv`** — Per-ORG-ID coverage table (455 rows) generated directly from PlantCyc flat files (`proteins.dat`, `compounds.dat`, `classes.dat`), cross-referenced against the actual GPML output. No longer depends on the downstream `organisms.tsv`. Columns track PlantCyc source annotations (proteins, genes, metabolites, pathways) and GPML output (node types, file count, name-resolution status).
+- **New `species_coverage_by_ncbi.tsv`** — Same data collapsed to one row per NCBI Taxonomy ID (439 unique taxa), with a `plantcyc_org_ids` column listing all contributing BioCyc ORG-codes.
+- **Both coverage files are now inside the GPML output directory**, generated automatically as the final step of `run_pipeline.sh`.
+
+#### Build statistics
+
+| Category | Count |
+|---|---|
+| Pathway files | 1,162 |
+| Reaction files | 1,316 |
+| **Total GPML files** | **2,478** |
+
+**DataNodes**
+
+| Type | Total | Unique |
+|---|---|---|
+| Metabolite | 23,449 | 4,843 |
+| Protein | 10,715 | 3,227 |
+| GeneProduct | 8,259 | 2,620 |
+| Protein Complex (Group) | 1,237 | 400 |
+
+**Interactions**
+
+| Type | Total | Unique |
+|---|---|---|
+| TranscriptionTranslation | 8,280 | 133 |
+| Catalysis | 13,853 | 7,086 |
+| Conversion | 7,772 | 5,490 |
+| Inhibition | 3,486 | 1,467 |
+| Stimulation | 865 | 383 |
+
+**Taxonomy annotation coverage**
+
+| Entity type | Total | Annotated | Coverage |
+|---|---|---|---|
+| GeneProduct | 8,259 | 8,148 | 98.7% |
+| Protein | 10,715 | 10,583 | 98.8% |
+| Metabolite | 23,449 | 33 | 0.1% |
+
+Unique species across all DataNodes: **412** (all resolved scientific names; 0 raw IDs)
+Top species (Protein nodes): *Arabidopsis thaliana* (4,117), *Glycine max* (587), *Lotus japonicus* (463), *Zea mays* (336), *Chlamydomonas reinhardtii* (318)
+
+**Species coverage (by NCBI taxon)**
+
+| | Count |
+|---|---|
+| Unique taxa in PlantCyc 17.0.0 | 439 |
+| In GPML (any DataNode type) | 425 |
+| — As Protein DataNode | 413 |
+| — As GeneProduct DataNode | 306 |
+| — As Metabolite DataNode | 24 |
+| Absent from GPML | 14 |
+
+---
+
 ### plantcyc17.0.0-gpml2021
 
 **PlantCyc version:** 17.0.0  
