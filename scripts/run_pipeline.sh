@@ -93,3 +93,12 @@ echo "==> Running: ${CMD[*]}"
 
 echo "==> Done."
 echo "==> Output: $OUT_DIR"
+
+# Generate species coverage table at project root
+echo ""
+echo "==> Generating species_coverage.tsv ..."
+python "$REPO_ROOT/scripts/utils/generate_species_coverage_table.py" \
+  --data-dir "$PLANTCYC_DATA_DIR" \
+  --gpml-dir "$OUT_DIR" \
+  --output "$REPO_ROOT/species_coverage.tsv"
+echo "==> species_coverage.tsv written to repo root."
