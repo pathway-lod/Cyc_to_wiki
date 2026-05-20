@@ -86,15 +86,21 @@ def get_ncbi_id(organism_id):
     """
     if not organism_id:
         return None
-        
-    mapping = load_organism_mapping()
+
     organism_id = str(organism_id).strip()
-    
+
+    # TAX-XXXX is BioCyc's encoding of NCBI Taxonomy IDs — extract directly
+    import re
+    tax_match = re.match(r'^TAX-(\d+)$', organism_id)
+    if tax_match:
+        return tax_match.group(1)
+
+    mapping = load_organism_mapping()
     if organism_id in mapping:
         info = mapping[organism_id]
         if isinstance(info, dict):
             return info.get('ncbi_id')
-            
+
     return None
 
 
@@ -126,7 +132,7 @@ def create_species_annotation(record):
             if ncbi_id:
                 annotation_id = f"taxonomy_{ncbi_id}"
                 xref_id = ncbi_id
-                xref_source = "NCBI Taxonomy"
+                xref_source = "NCBITaxon"
             else:
                 # Fallback to internal ID if no NCBI ID available
                 annotation_id = f"taxonomy_{species_id}"

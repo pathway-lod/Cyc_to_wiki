@@ -20,6 +20,7 @@ fi
 PLANTCYC_ROOT="${PLANTCYC_ROOT:?PLANTCYC_ROOT must be set in scripts/config.env}"
 GPML_SNAPSHOT="${GPML_SNAPSHOT:-gpml2021}"
 OUT_BASE="${OUT_BASE:-./output}"
+RELEASE_VERSION="${RELEASE_VERSION:-v1}"
 
 # Read PlantCyc version from default-version.txt (your PlantCyc layout)
 DEFAULT_VER_FILE="$PLANTCYC_ROOT/default-version"
@@ -38,11 +39,13 @@ if [[ -n "$(git status --porcelain)" ]]; then
   GIT_DIRTY="true"
 fi
 
-# Tag scheme (exactly your style)
-TAG_NAME="plantcyc${PLANTCYC_VERSION}-${GPML_SNAPSHOT}"
+# Tag scheme: plantcyc17.0.0-gpml2021-v1
+# Increment RELEASE_VERSION in config.env when re-releasing the same
+# PlantCyc+GPML version with updated code.
+TAG_NAME="plantcyc${PLANTCYC_VERSION}-${GPML_SNAPSHOT}-${RELEASE_VERSION}"
 
 # Output folder naming:
-# output_gpml/plantcyc17.0.0-gpml2021__git<shortsha>__20260128-153012
+# output_gpml/plantcyc17.0.0-gpml2021-v1__git<shortsha>__20260128-153012
 RUN_TS="$(date +%Y%m%d-%H%M%S)"
 SHORT_SHA="$(git rev-parse --short HEAD)"
 OUT_DIR="${OUT_BASE%/}/${TAG_NAME}__git${SHORT_SHA}__${RUN_TS}"
@@ -63,6 +66,7 @@ LOG_FILE="$OUT_DIR/run.metadata.txt"
   echo "plantcyc_version: $PLANTCYC_VERSION"
   echo "plantcyc_data_dir: $PLANTCYC_DATA_DIR"
   echo "gpml_snapshot: $GPML_SNAPSHOT"
+  echo "release_version: $RELEASE_VERSION"
   echo "tag_name: $TAG_NAME"
   echo "output_dir: $OUT_DIR"
   echo "command: ${CMD[*]}"
@@ -79,7 +83,7 @@ if git rev-parse -q --verify "refs/tags/$TAG_NAME" >/dev/null; then
   echo "==> Tag already exists: $TAG_NAME (leaving as-is)"
 else
   echo "==> Creating tag: $TAG_NAME"
-  git tag -a "$TAG_NAME" -m "Data build: PlantCyc ${PLANTCYC_VERSION} -> ${GPML_SNAPSHOT}"
+  git tag -a "$TAG_NAME" -m "Data build: PlantCyc ${PLANTCYC_VERSION} -> ${GPML_SNAPSHOT} (${RELEASE_VERSION})"
   echo "==> Tag created locally. (Push it with: git push origin $TAG_NAME)"
 fi
 
