@@ -69,7 +69,7 @@ Add a new release section below (copy the template from the previous release) an
 **GPML snapshot:** GPML2021
 **Code commit:** `3de90246` (`feat/species-plants` → `main`)
 **Build date:** 2026-05-20
-**Zenodo DOI:** *(pending — assigned after Zenodo archiving)*
+**Zenodo DOI:** [10.5281/zenodo.18404067](https://doi.org/10.5281/zenodo.18404067)
 
 #### What's new
 
