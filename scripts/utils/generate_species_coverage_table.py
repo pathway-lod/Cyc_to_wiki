@@ -345,6 +345,125 @@ def build_gpml_species_index(gpml_dir):
 
 
 # ---------------------------------------------------------------------------
+# Collapse rows to one per NCBI taxon ID
+# ---------------------------------------------------------------------------
+
+_GPML_FORM_RANK = {'resolved_name': 0, 'raw_id': 1, 'both': 2, 'absent': 3}
+
+
+def collapse_by_ncbi(rows):
+    """
+    Collapse the per-org_id rows to one row per NCBI taxon ID.
+
+    Aggregation rules:
+    - scientific_name : prefer the TAX-XXXX entry's name; fall back to the
+                        entry with the most proteins.
+    - plantcyc_org_ids: semicolon-separated sorted list of all org_ids.
+    - n_proteins / n_genes / n_compounds : sum across org_ids (each org_id
+                        tracks distinct proteins so the sum is additive).
+    - n_pathways_source: union is too expensive here; we take the max across
+                        org_ids (the single org_id that reaches most pathways).
+    - GPML node counts  : all org_ids for the same NCBI taxon share the same
+                        taxonomy_XXXX annotation, so take the max (not sum).
+    - gpml_name_form    : best (lowest-rank) status across all org_ids.
+    - Rows without an NCBI ID (e.g. 'ARA') are kept as-is.
+    """
+    from collections import defaultdict
+
+    groups = defaultdict(list)
+    no_ncbi = []
+    for r in rows:
+        ncbi = r['ncbi_taxon_id'].strip()
+        if ncbi:
+            groups[ncbi].append(r)
+        else:
+            no_ncbi.append(r)
+
+    collapsed = []
+    for ncbi, grp in groups.items():
+        # Canonical name: prefer TAX-XXXX entry, else entry with most proteins
+        tax_rows = [r for r in grp if r['org_id'].startswith('TAX-')]
+        if tax_rows:
+            canon = max(tax_rows, key=lambda r: int(r['n_proteins']))
+        else:
+            canon = max(grp, key=lambda r: int(r['n_proteins']))
+        sci_name = canon['scientific_name']
+
+        org_ids = sorted(r['org_id'] for r in grp)
+
+        n_proteins  = sum(int(r['n_proteins'])  for r in grp)
+        n_genes     = sum(int(r['n_genes'])     for r in grp)
+        n_compounds = sum(int(r['n_compounds']) for r in grp)
+        n_pathways  = max(int(r['n_pathways_source']) for r in grp)
+        in_prot_dat = 'yes' if any(r['in_proteins_dat'] == 'yes' for r in grp) else 'no'
+        in_cpd_dat  = 'yes' if any(r['in_compounds_dat'] == 'yes' for r in grp) else 'no'
+
+        # GPML: all org_ids share the same annotation → take max
+        n_gp   = max(int(r['n_gpml_geneproduct_nodes']) for r in grp)
+        n_prot = max(int(r['n_gpml_protein_nodes'])     for r in grp)
+        n_met  = max(int(r['n_gpml_metabolite_nodes'])  for r in grp)
+        n_files= max(int(r['n_gpml_pathway_files'])     for r in grp)
+        in_gpml = 'yes' if any(r['in_gpml'] == 'yes' for r in grp) else 'no'
+        gp_yn   = 'yes' if n_gp   > 0 else 'no'
+        pr_yn   = 'yes' if n_prot > 0 else 'no'
+        mt_yn   = 'yes' if n_met  > 0 else 'no'
+
+        # Best (lowest rank) gpml_name_form across all org_ids
+        best_form = min(grp, key=lambda r: _GPML_FORM_RANK.get(r['gpml_name_form'], 99))
+        gpml_form = best_form['gpml_name_form']
+
+        collapsed.append({
+            'ncbi_taxon_id':            ncbi,
+            'scientific_name':          sci_name,
+            'n_plantcyc_org_ids':       len(org_ids),
+            'plantcyc_org_ids':         '; '.join(org_ids),
+            'in_proteins_dat':          in_prot_dat,
+            'n_proteins':               n_proteins,
+            'in_compounds_dat':         in_cpd_dat,
+            'n_compounds':              n_compounds,
+            'n_genes':                  n_genes,
+            'n_pathways_source':        n_pathways,
+            'in_gpml':                  in_gpml,
+            'gpml_as_geneproduct':      gp_yn,
+            'gpml_as_protein':          pr_yn,
+            'gpml_as_metabolite':       mt_yn,
+            'n_gpml_geneproduct_nodes': n_gp,
+            'n_gpml_protein_nodes':     n_prot,
+            'n_gpml_metabolite_nodes':  n_met,
+            'n_gpml_pathway_files':     n_files,
+            'gpml_name_form':           gpml_form,
+        })
+
+    # Rows without NCBI ID — keep individually, fill n_plantcyc_org_ids=1
+    for r in no_ncbi:
+        collapsed.append({
+            'ncbi_taxon_id':            '',
+            'scientific_name':          r['scientific_name'],
+            'n_plantcyc_org_ids':       1,
+            'plantcyc_org_ids':         r['org_id'],
+            'in_proteins_dat':          r['in_proteins_dat'],
+            'n_proteins':               int(r['n_proteins']),
+            'in_compounds_dat':         r['in_compounds_dat'],
+            'n_compounds':              int(r['n_compounds']),
+            'n_genes':                  int(r['n_genes']),
+            'n_pathways_source':        int(r['n_pathways_source']),
+            'in_gpml':                  r['in_gpml'],
+            'gpml_as_geneproduct':      r['gpml_as_geneproduct'],
+            'gpml_as_protein':          r['gpml_as_protein'],
+            'gpml_as_metabolite':       r['gpml_as_metabolite'],
+            'n_gpml_geneproduct_nodes': int(r['n_gpml_geneproduct_nodes']),
+            'n_gpml_protein_nodes':     int(r['n_gpml_protein_nodes']),
+            'n_gpml_metabolite_nodes':  int(r['n_gpml_metabolite_nodes']),
+            'n_gpml_pathway_files':     int(r['n_gpml_pathway_files']),
+            'gpml_name_form':           r['gpml_name_form'],
+        })
+
+    # Sort: in GPML first, then by name
+    collapsed.sort(key=lambda r: (r['in_gpml'] == 'no', r['scientific_name']))
+    return collapsed
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -357,7 +476,9 @@ def main():
     parser.add_argument('--gpml-dir', required=True,
                         help='Path to GPML output directory (searched recursively)')
     parser.add_argument('--output', default='species_coverage.tsv',
-                        help='Output TSV file path')
+                        help='Output TSV file path (one row per PlantCyc ORG-ID)')
+    parser.add_argument('--output-by-ncbi', default='species_coverage_by_ncbi.tsv',
+                        help='Output TSV collapsed to one row per NCBI taxon ID')
     args = parser.parse_args()
 
     data_dir = Path(args.data_dir)
@@ -525,7 +646,52 @@ def main():
         writer.writerows(rows)
 
     # ------------------------------------------------------------------
-    # Summary
+    # Collapsed table (one row per NCBI taxon ID)
+    # ------------------------------------------------------------------
+    ncbi_rows = collapse_by_ncbi(rows)
+    ncbi_fieldnames = [
+        'ncbi_taxon_id', 'scientific_name',
+        'n_plantcyc_org_ids', 'plantcyc_org_ids',
+        'in_proteins_dat', 'n_proteins',
+        'in_compounds_dat', 'n_compounds',
+        'n_genes', 'n_pathways_source',
+        'in_gpml',
+        'gpml_as_geneproduct', 'gpml_as_protein', 'gpml_as_metabolite',
+        'n_gpml_geneproduct_nodes', 'n_gpml_protein_nodes', 'n_gpml_metabolite_nodes',
+        'n_gpml_pathway_files', 'gpml_name_form',
+    ]
+    ncbi_out = args.output_by_ncbi
+    print(f"\nWriting {len(ncbi_rows)} NCBI-collapsed rows to {ncbi_out} ...")
+    with open(ncbi_out, 'w', newline='', encoding='utf-8') as fh:
+        writer = csv.DictWriter(fh, fieldnames=ncbi_fieldnames, delimiter='\t')
+        writer.writeheader()
+        writer.writerows(ncbi_rows)
+
+    # NCBI-level summary
+    n_ncbi_total   = len(ncbi_rows)
+    n_ncbi_in_gpml = sum(1 for r in ncbi_rows if r['in_gpml'] == 'yes')
+    n_ncbi_absent  = sum(1 for r in ncbi_rows if r['gpml_name_form'] == 'absent')
+    n_ncbi_gp      = sum(1 for r in ncbi_rows if r['gpml_as_geneproduct'] == 'yes')
+    n_ncbi_prot    = sum(1 for r in ncbi_rows if r['gpml_as_protein'] == 'yes')
+    n_ncbi_met     = sum(1 for r in ncbi_rows if r['gpml_as_metabolite'] == 'yes')
+
+    print(f"\n{'='*55}")
+    print(f"Unique taxa summary (by NCBI taxon ID, {n_ncbi_total} total)")
+    print(f"{'='*55}")
+    print(f"  In GPML (any DataNode type)  : {n_ncbi_in_gpml}")
+    print(f"    As GeneProduct             : {n_ncbi_gp}")
+    print(f"    As Protein                 : {n_ncbi_prot}")
+    print(f"    As Metabolite              : {n_ncbi_met}")
+    print(f"  Absent from GPML             : {n_ncbi_absent}")
+    print(f"\n  Absent species:")
+    for r in ncbi_rows:
+        if r['gpml_name_form'] == 'absent':
+            print(f"    {r['ncbi_taxon_id']:<8}  {r['scientific_name']}")
+    print(f"{'='*55}")
+    print(f"Output: {ncbi_out}")
+
+    # ------------------------------------------------------------------
+    # Summary (per-org_id table)
     # ------------------------------------------------------------------
     n_total       = len(rows)
     n_in_gpml     = sum(1 for r in rows if r['in_gpml'] == 'yes')
