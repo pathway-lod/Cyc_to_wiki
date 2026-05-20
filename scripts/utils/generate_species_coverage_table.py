@@ -128,7 +128,10 @@ def load_org_mapping(classes_dat_path):
         if not uid:
             continue
 
-        name = strip_html(rec.get('COMMON-NAME', '')) or ''
+        # Do NOT strip_html here: angle brackets in BioCyc taxon names are
+        # disambiguation hints (e.g. "Hyssopus <wasps, ants & bees>"), not HTML.
+        # The GPML pipeline also writes the raw COMMON-NAME, so we must match exactly.
+        name = rec.get('COMMON-NAME', '').strip() or ''
 
         # Derive NCBI ID
         if uid.startswith('TAX-'):
@@ -463,10 +466,10 @@ def main():
         genes = sorted(species_genes.get(org_id, set()))
         pwys  = sorted(species_pathways.get(org_id, set()))
 
-        # GPML lookup: try resolved name first, then raw org_id
-        # (handles both pre-fix and post-fix GPML builds)
+        # GPML lookup: try resolved name first, then raw org_id.
+        # If sci_name == org_id (unresolved, e.g. "ARA"), only look up once.
         gpml_by_name   = gpml_index.get(sci_name, {})
-        gpml_by_raw_id = gpml_index.get(org_id, {})
+        gpml_by_raw_id = gpml_index.get(org_id, {}) if org_id != sci_name else {}
 
         n_gp   = gpml_by_name.get('GeneProduct', 0) + gpml_by_raw_id.get('GeneProduct', 0)
         n_prot = gpml_by_name.get('Protein', 0)     + gpml_by_raw_id.get('Protein', 0)
