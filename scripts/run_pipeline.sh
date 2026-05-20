@@ -100,6 +100,6 @@ echo "==> Generating species_coverage.tsv ..."
 python "$REPO_ROOT/scripts/utils/generate_species_coverage_table.py" \
   --data-dir "$PLANTCYC_DATA_DIR" \
   --gpml-dir "$OUT_DIR" \
-  --output "$REPO_ROOT/species_coverage.tsv" \
-  --output-by-ncbi "$REPO_ROOT/species_coverage_by_ncbi.tsv"
-echo "==> species_coverage.tsv and species_coverage_by_ncbi.tsv written to repo root."
+  --output "$OUT_DIR/species_coverage.tsv" \
+  --output-by-ncbi "$OUT_DIR/species_coverage_by_ncbi.tsv"
+echo "==> species_coverage.tsv and species_coverage_by_ncbi.tsv written to $OUT_DIR"
