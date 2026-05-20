@@ -1,0 +1,56 @@
+name: Draft GitHub Release
+
+# Triggered whenever a plantcyc* tag is pushed to the remote.
+# Creates a draft GitHub Release pre-populated from RELEASE_NOTES.md.
+# Review the draft and publish it manually when ready.
+on:
+  push:
+    tags:
+      - 'plantcyc*'
+
+jobs:
+  draft-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # needed to create a release
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Extract the release notes section for this tag from RELEASE_NOTES.md.
+      # The section header is "### <tag-name>" and ends at the next "### " header.
+      - name: Extract release notes for this tag
+        id: notes
+        shell: python
+        run: |
+          import os, re, sys
+
+          tag = os.environ["GITHUB_REF_NAME"]
+          path = "RELEASE_NOTES.md"
+
+          with open(path) as f:
+              content = f.read()
+
+          # Find the section for this tag
+          pattern = rf"###\s+{re.escape(tag)}\s*\n(.*?)(?=\n###\s|\Z)"
+          m = re.search(pattern, content, re.DOTALL)
+          if not m:
+              print(f"Warning: no section found for tag '{tag}' in {path}", file=sys.stderr)
+              body = f"See RELEASE_NOTES.md for details."
+          else:
+              body = m.group(1).strip()
+
+          # Write to $GITHUB_OUTPUT (multiline)
+          with open(os.environ["GITHUB_OUTPUT"], "a") as out:
+              out.write("body<<ENDOFBODY\n")
+              out.write(body)
+              out.write("\nENDOFBODY\n")
+
+      - name: Create draft GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          draft: true
+          name: ${{ github.ref_name }}
+          tag_name: ${{ github.ref_name }}
+          body: ${{ steps.notes.outputs.body }}
