@@ -333,6 +333,17 @@ def create_complex_group(record, citation_manager=None):
     if citation_manager:
         citation_refs = create_citation_refs_from_record(record, citation_manager)
 
+    # Handle species annotations for monomer propagation only.
+    # GPML2021 XSD does NOT allow <AnnotationRef> on <Group> elements — only
+    # CitationRef and EvidenceRef are permitted.  We therefore do NOT annotate
+    # the Group element itself.  The annotationRefs are held on the Python object
+    # solely so that _propagate_protein_species_to_genes() can copy them to
+    # component monomer DataNodes that DO appear as standalone DataNodes.
+    # Taxa whose proteins are exclusively CPLX-type (and whose monomers never
+    # appear as standalone DataNodes) will be absent from the taxonomy annotation;
+    # they are documented as 'only_complex' in species_coverage_summary.tsv.
+    annotations, annotation_refs = create_species_annotation(record)
+
     # Create graphics for the group
     graphics = standard_graphics.create_complex_group_graphics(0.0, 0.0, 200.0, 100.0)
 
@@ -344,10 +355,15 @@ def create_complex_group(record, citation_manager=None):
         graphics=graphics,
         comments=comments,
         properties=properties,
-        citationRefs=citation_refs
+        citationRefs=citation_refs,
+        # annotationRefs NOT passed to GPML: XSD forbids AnnotationRef on Group
     )
 
-    return group
+    # Attach annotation_refs to the Python object for monomer propagation only.
+    # This is not written to GPML XML (see gpml_writer.write_group).
+    group.annotationRefs = annotation_refs
+
+    return group, annotations
 
 
 def create_monomer_datanode(monomer_id, parent_complex_id, monomer_records=None):
@@ -682,9 +698,11 @@ def create_enhanced_datanodes_from_proteins(proteins_file, citation_manager=None
         processed_protein_ids.add(unique_id)
 
         if is_protein_complex(record):
-            # Create a Group for the complex
-            complex_group = create_complex_group(record, citation_manager)
+            # Create a Group for the complex (also returns species annotations)
+            complex_group, complex_annotations = create_complex_group(record, citation_manager)
             groups.append(complex_group)
+            if complex_annotations:
+                all_annotations.extend(complex_annotations)
 
             # Create DataNodes for each component
             component_ids = parse_complex_components(record)
@@ -695,6 +713,20 @@ def create_enhanced_datanodes_from_proteins(proteins_file, citation_manager=None
                         complex_group.elementId,
                         protein_records
                     )
+
+                    # If the monomer has no species annotation of its own, inherit
+                    # the parent complex's annotations.  The complex's SPECIES field
+                    # implies all subunits are from the same organism — PlantCyc
+                    # just doesn't duplicate the tag on every monomer entry.
+                    if not monomer_node.annotationRefs and complex_group.annotationRefs:
+                        existing = {r.elementRef for r in monomer_node.annotationRefs}
+                        for ref in complex_group.annotationRefs:
+                            if ref.elementRef not in existing:
+                                monomer_node.annotationRefs.append(ref)
+                        # Ensure the pathway Annotations section also registers them
+                        if complex_annotations:
+                            all_annotations.extend(complex_annotations)
+
                     datanodes.append(monomer_node)
                     processed_monomers.add(comp_id)
                     if annotations:

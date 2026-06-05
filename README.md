@@ -125,9 +125,67 @@ Cyc_to_wiki/
 └── environment.yml
 ```
 
-## Validation 
+## Validation
 
-A GitHub Action (`.github/workflows/validate.yml`) runs on every push/PR to `main` and validates all `.gpml` files against the GPML2021 XSD schema from [PathVisio/GPML](https://github.com/PathVisio/GPML/blob/master/GPML2021/GPML2021.xsd).
+The pipeline has **two layers of validation** — one on the PlantCyc input files before the build, and one on the generated GPML output files afterwards. A GitHub Actions workflow runs the output check automatically on every push.
+
+---
+
+### Layer 1 — Input validation (PlantCyc flat files)
+
+Run `validate_plantcyc_input.py` on the PlantCyc `data_dir` **before** building GPML to catch data-consistency issues that would produce silent errors or ambiguous species annotations downstream.
+
+```bash
+python scripts/validate_plantcyc_input.py <data_dir>
+```
+
+`<data_dir>` must contain at minimum `genes.dat` and `proteins.dat`.
+
+Exit code: `0` if no ERRORs (warnings are acceptable), `1` if at least one ERROR is found.
+
+#### Checks performed
+
+| Check ID | Level | What it checks | Impact if not fixed |
+|---|---|---|---|
+| `protein-multi-species` | ⚠ WARNING | Proteins in `proteins.dat` that carry **more than one `SPECIES` value** | **All** listed taxa are annotated on the protein DataNode and propagated to encoding genes (one `AnnotationRef` per taxon). Biologically valid in plants where the same enzyme has been characterised across species — review each case to confirm intent |
+| `gene-cross-species-products` | ✗ ERROR | Genes whose protein products are annotated to **genuinely different NCBI taxa** (distinct `TAX-XXXX` identifiers) | **Taxonomy annotation is SKIPPED** for these genes during the build (the correct species cannot be determined without manual curation of `proteins.dat`). Flagged in `VALIDATION_REPORT.txt` and `VALIDATION_SUMMARY.tsv` in the output directory |
+| `gene-multi-orgid-products` | ⚠ WARNING | Genes whose products use **different BioCyc ORG-codes** that resolve to the same NCBI taxon | No data loss — see resolution pipeline below |
+| `gene-multiple-products` | ℹ INFO | Genes encoding **multiple protein products** (isoforms) | No data loss. `_propagate_protein_species_to_genes()` iterates over **all** isoform protein nodes, gathers their `annotationRefs`, and merges them into the gene DataNode (deduplicated by `elementRef`). Every distinct taxon across all isoforms is preserved |
+| `protein-multiple-genes` | ℹ INFO | Proteins listing **more than one `GENE` entry** (enzyme complexes, duplicate gene models) | No data loss provided `genes.dat` ↔ `proteins.dat` cross-references are consistent. The propagation is gene-centric: each gene node's `Product` property is looked up, so all genes that correctly reference the shared protein receive the same taxon annotation |
+| `cplx-only-species` | ℹ INFO | Taxa annotated **exclusively via protein-complex** (`CPLX-type`) records. These appear as `<Group type="Complex">` in GPML (not as DataNodes) | **Annotation is lost for these 12 taxa.** GPML2021 XSD forbids `<AnnotationRef>` on `<Group>` elements, so the species cannot be stored in the GPML file. The CPLX species annotation is propagated to component monomer DataNodes at build time, but those monomers never appear as standalone DataNodes (they are not direct reaction catalysts), so no `wp:organism` triple is generated. The `gpml_name_form = 'only_complex'` label in the species coverage table flags these taxa for manual review; see `species_coverage_summary.tsv` Section 3 for the list with CPLX IDs and component IDs |
+
+#### ORG-code to NCBI taxon resolution
+
+BioCyc uses two kinds of organism identifier in `.dat` files:
+
+- **`TAX-XXXX`** — direct encoding of an NCBI Taxonomy ID (e.g. `TAX-3702` = *Arabidopsis thaliana*).
+- **`ORG-XXXX`** — a BioCyc-internal ID for a specific database, strain, or cultivar. Each ORG-code carries a `TYPES - TAX-XXXX` entry in `classes.dat` pointing to its parent NCBI taxon.
+
+Sub-species and cultivar ORG-codes that share the same parent NCBI taxon (e.g. `ORG-5993` and `TAX-3702` both map to NCBI:3702) are **collapsed to a single species annotation** by the pipeline:
+
+1. **Build stage** (`scripts/utils/organism_utils.py` → `get_ncbi_id()`): every ORG-XXXX is resolved to its NCBI taxon number via `org_id_mapping_v2.tsv`; TAX-XXXX codes are resolved directly. `create_species_annotation()` uses this NCBI ID as the Annotation `elementId` (e.g. `taxonomy_3702`), so two products with different BioCyc ORG-codes for the same taxon produce the *same* elementId.
+2. **Propagation stage** (`pathway_builder_core.py` → `_propagate_protein_species_to_genes()`): deduplication by `elementRef` ensures the gene DataNode receives exactly **one** `AnnotationRef` per unique NCBI taxon, even if multiple products used different ORG-codes.
+3. **RDF stage** (`gpml-to-rdf` → `create_gpml_taxonomy_extra_rdf.py`): the annotation elementId is converted to an NCBITaxon IRI (`ncbi:3702`), completing the normalisation.
+
+The `gene-multi-orgid-products` WARNING flags cases where this collapse occurs — no data is lost and no manual fix is required unless the ORG-code assignment in `proteins.dat` is itself incorrect.
+
+#### Interpreting the report
+
+```
+[ERROR] ✗ gene-cross-species-products
+  5 gene(s) have products annotated to different NCBI species.
+    G-5223 (CYP71D18): products=['MONOMER-15424', 'MONOMER-6743'] → species=['TAX-29719', 'TAX-34256']
+```
+
+- **ERRORs** must be resolved before a release — they indicate that the source data contains cross-species protein assignments that make the species annotation in the resulting GPML non-deterministic.
+- **WARNINGs** should be reviewed but do not block the build.
+- **INFO** entries are informational only.
+
+---
+
+### Layer 2 — Output validation (GPML files)
+
+After the build, validate the generated `.gpml` files against the GPML2021 XSD schema. A GitHub Action (`.github/workflows/validate.yml`) runs this automatically on every push/PR to `main`.
 
 To run the same checks locally before merging:
 
@@ -139,15 +197,27 @@ python scripts/test_gpml_files.py output_gpml/<your-run-directory>
 python scripts/test_gpml_files.py path/to/pathway.gpml
 ```
 
-The script checks for:
-- XML well-formedness and schema compliance
-- Duplicate element IDs
+Checks performed:
+- XML well-formedness and schema compliance (GPML2021 XSD)
+- Duplicate element IDs within a pathway
 - Invalid ID characters
-- Missing cross-references (groupRef, citationRef, elementRef)
+- Missing cross-references (`groupRef`, `citationRef`, `elementRef`)
 - Missing required fields and attributes
 - Circular group references
 
 It prints a per-file report and a summary at the end (`Total files / Valid / Invalid / Errors / Warnings`). Exit code is `0` if all files are valid, `1` otherwise.
+
+---
+
+### Recommended workflow
+
+```
+1. python scripts/validate_plantcyc_input.py <data_dir>   # check input
+2. python scripts/build_pathways.py <data_dir> <out_dir>  # build GPML
+3. python scripts/test_gpml_files.py <out_dir>            # check output
+```
+
+Resolve all input ERRORs before running the build. Resolve all output validation errors before tagging a release.
 
 ---
 
@@ -350,6 +420,89 @@ git push origin plantcyc17.0.0-gpml2021
 - WikiPathways (Agrawal et al. 2024): [https://doi.org/10.1093/nar/gkad960](https://doi.org/10.1093/nar/gkad960)
 - PathVisio: [pathvisio.org/](https://pathvisio.org/)
 - Plant Metabolic Network 16 (Hawkins et al. 2025) : [https://doi.org/10.1093/nar/gkae991](https://doi.org/10.1093/nar/gkae991)
+
+---
+
+## Validation is integrated into the main pipeline
+
+`scripts/validate_plantcyc_input.py` runs automatically at the start of every
+`build_pathways.py` invocation. Findings are printed to the console and two
+files are written to the output directory:
+
+| File | Content |
+|---|---|
+| `VALIDATION_REPORT.txt` | Human-readable log of all ERROR / WARNING / INFO findings |
+| `VALIDATION_SUMMARY.tsv` | Machine-readable table (UTF-8 BOM, Excel-ready) with columns: check_id, severity, gene_id, gene_symbol, protein_id, protein_name, species_1_taxid, species_1_name, species_2_taxid, species_2_name, taxonomy_skipped_in_build, short_note, publication_pmid, publication_reference |
+
+**Handling of ERRORs during the build:** genes flagged by `gene-cross-species-products`
+have their taxonomy annotation **skipped** — the GeneProduct DataNode is still
+created but carries no `<AnnotationRef>` for species. This prevents non-deterministic
+annotations without discarding the gene from the pathway. Manual curation of the
+relevant `proteins.dat` entries is required to resolve the underlying issue.
+
+---
+
+## Repository overview
+
+```mermaid
+flowchart TD
+    A[("PlantCyc flat files\ncompounds.dat · genes.dat\nproteins.dat · reactions.dat\npathways.dat · regulation.dat\npubs.dat · classes.dat")] --> MAIN
+
+    subgraph MAIN ["build_pathways.py  (single entry point)"]
+        V["1. validate_plantcyc_input.py\n───────────────────────\n✗ ERROR gene-cross-species → taxonomy skipped\n⚠ WARNING protein-multi-species → all taxa annotated\nℹ cplx-only-species → documented, annotation lost\n   (GPML2021 XSD forbids AnnotationRef on Groups)\nWrites VALIDATION_REPORT.txt + VALIDATION_SUMMARY.tsv"]
+        B["2. Build organism mappings\nbuild_org_mapping.py · classes.dat · species.dat"]
+        C["3. CompletePathwayBuilderWithGenes\n───────────────────────\nFor each pathway:\n  Expand sub-pathways\n  Collect reactions/compounds/proteins/genes\n  Propagate species to genes (skip cross-species ERROR genes)\n  For CPLX proteins: propagate species to component\n  monomers where they appear as standalone DataNodes\n  Lay out nodes · Create DataNodes + Interactions"]
+        D["4. gpml_writer.py\n───────────────────────\nPython objects → GPML2021 XML\nDataNode (GeneProduct/Protein/Metabolite) · Group (Complex)\nAnnotationRef on DataNodes only — Groups: XSD forbids it"]
+        S["5. Post-build scripts\n───────────────────────\nanalyze_gpml_stats.py → GPML_STATISTICS_REPORT.txt\ngenerate_species_coverage_table.py →\n  species_coverage_by_ncbi.tsv (Table S1)\n  species_coverage_by_plantcyc_orgid.tsv (Table S2)\n  species_coverage_summary.tsv (incl. only_complex list)\nrun.metadata.txt"]
+        V --> B --> C --> D --> S
+    end
+
+    A --> MAIN
+
+    MAIN -->|"Output directory\nplantcyc{ver}-gpml2021__git{sha}__{ts}"| OUT
+
+    OUT[("individual_pathways/*.gpml  (1,162)\nindividual_reactions/*.gpml  (1,316)\nGPML_STATISTICS_REPORT.txt\nrun.metadata.txt\nVALIDATION_REPORT.txt\nVALIDATION_SUMMARY.tsv  ← Table S3\nspecies_coverage_by_ncbi.tsv  ← Table S1\nspecies_coverage_by_plantcyc_orgid.tsv  ← Table S2\nspecies_coverage_summary.tsv")]
+
+    OUT -->|"aggregate + RDF conversion"| E["gpml-to-rdf repo\n───────────────────────\ncreate_gpml_taxonomy_extra_rdf.py\n  DataNode AnnotationRef → wp:organism triples\n  Group type=Complex: NOT annotated (XSD limitation)\n  12 CPLX-only taxa lose annotation (see only_complex)\ngraph/pathways + graph/gpml-taxonomy-extra"]
+
+    style A fill:#dbe9f4,stroke:#2980b9
+    style OUT fill:#d5f5e3,stroke:#27ae60
+    style E fill:#e8daef,stroke:#8e44ad
+    style MAIN fill:#fefefe,stroke:#555
+```
+
+---
+
+## Supplementary tables
+
+The following tables are generated by the pipeline and included as supplementary
+material in the associated publication:
+
+**Table S1 — Species coverage by NCBI taxon ID** (`species_coverage_by_ncbi.tsv`)  
+One row per unique NCBI Taxonomy identifier (439 rows for PlantCyc 17.0.0). Reports presence
+in `proteins.dat`, `compounds.dat`, and GPML output (as GeneProduct, Protein, Metabolite, or
+Complex Group), the name form used in GPML annotations, and the PlantCyc ORG-ID(s) that map
+to each taxon. The `gpml_name_form` column distinguishes `resolved_name`, `raw_id`,
+`only_complex` (annotated via Complex Group), and `absent`.
+
+**Table S2 — Species coverage by PlantCyc ORG-ID** (`species_coverage_by_plantcyc_orgid.tsv`)  
+One row per BioCyc ORG-ID (455 rows). Detailed breakdown of protein, gene, compound, and
+pathway counts from the source flat files and the resulting GPML node counts. Use this table
+when tracing a specific PlantCyc database entry to its GPML representation.
+
+**Table S2b — Species coverage summary** (`species_coverage_summary.tsv`)  
+Concise human-readable summary with three sections: (1) total counts by GPML node type,
+(2) the absent taxa with per-taxon reason for absence (compound-only annotation, proteins
+not linked to GPML pathways, or unresolved taxon ID), (3) taxa annotated only via
+Complex Group elements (`only_complex`).
+
+**Table S3 — Validation log** (`VALIDATION_SUMMARY.tsv`)  
+Machine-readable table of all validation findings (ERROR, WARNING, INFO) generated during
+the build. Includes check ID, severity, affected gene/protein IDs, species names, the
+`taxonomy_skipped_in_build` flag (yes/no), and publication references from `pubs.dat`
+where available. Suitable for supplementary material documenting data quality decisions.
+
+---
 
 ## Contact / Maintainer 
 

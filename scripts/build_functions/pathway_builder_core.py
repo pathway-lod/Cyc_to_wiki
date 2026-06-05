@@ -49,13 +49,19 @@ class CompletePathwayBuilderWithGenes:
     """
 
     def __init__(self, compounds_file, genes_file, proteins_file, reactions_file, pathways_file, pubs_file="pubs.dat",
-                 regulation_file="regulation.dat", version=None, organism_mapping=None):
+                 regulation_file="regulation.dat", version=None, organism_mapping=None,
+                 cross_species_genes=None):
         """
         Initialize builder by loading all BioCyc data files.
+
+        cross_species_genes: optional set of gene IDs whose taxonomy annotation
+            should be SKIPPED because their products span different NCBI taxa.
+            These genes require manual curation of the source proteins.dat.
         """
         self.id_manager = IDManager()
         self.version = version
         self.organism_mapping = organism_mapping
+        self.cross_species_genes: set = set(cross_species_genes) if cross_species_genes else set()
 
         # Initialize CitationManager
         self.citation_manager = CitationManager(pubs_file)
@@ -149,7 +155,19 @@ class CompletePathwayBuilderWithGenes:
         copies its annotationRefs (and the corresponding Annotation objects) to the gene.
         """
         propagated = 0
+        skipped_cross_species = 0
         for gene_node in self.gene_nodes:
+            gene_id = gene_node.elementId
+
+            # Skip genes whose products span different NCBI taxa — the correct
+            # species annotation is undefined and requires manual curation of
+            # proteins.dat.  Flagged as ERROR by validate_plantcyc_input.py.
+            if gene_id in self.cross_species_genes:
+                print(f"  [SKIP] {gene_id}: taxonomy annotation skipped "
+                      f"(cross-species products — see VALIDATION_REPORT.txt)")
+                skipped_cross_species += 1
+                continue
+
             # Collect protein IDs from gene's Property elements
             product_ids = []
             for prop in gene_node.properties:
@@ -180,6 +198,9 @@ class CompletePathwayBuilderWithGenes:
             propagated += 1
 
         print(f"  Species annotations propagated to {propagated} gene DataNodes from their protein products.")
+        if skipped_cross_species:
+            print(f"  Taxonomy annotation SKIPPED for {skipped_cross_species} gene(s) "
+                  f"with cross-species products (ERROR — manual curation required).")
 
     def _load_reactions(self, reactions_file):
         """Load and process reaction data with citations."""
