@@ -703,6 +703,20 @@ def create_enhanced_datanodes_from_proteins(proteins_file, citation_manager=None
                         complex_group.elementId,
                         protein_records
                     )
+
+                    # If the monomer has no species annotation of its own, inherit
+                    # the parent complex's annotations.  The complex's SPECIES field
+                    # implies all subunits are from the same organism — PlantCyc
+                    # just doesn't duplicate the tag on every monomer entry.
+                    if not monomer_node.annotationRefs and complex_group.annotationRefs:
+                        existing = {r.elementRef for r in monomer_node.annotationRefs}
+                        for ref in complex_group.annotationRefs:
+                            if ref.elementRef not in existing:
+                                monomer_node.annotationRefs.append(ref)
+                        # Ensure the pathway Annotations section also registers them
+                        if complex_annotations:
+                            all_annotations.extend(complex_annotations)
+
                     datanodes.append(monomer_node)
                     processed_monomers.add(comp_id)
                     if annotations:
