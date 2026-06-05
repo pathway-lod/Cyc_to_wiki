@@ -1,115 +1,76 @@
 #!/usr/bin/env bash
+# run_pipeline.sh — thin config wrapper around build_pathways.py
+#
+# All build logic (output naming, validation, metadata, species coverage,
+# GPML statistics) lives in build_pathways.py. This script only:
+#   1. Reads config.env for machine-local paths
+#   2. Resolves the PlantCyc version
+#   3. Optionally creates a git tag for the release
+#   4. Calls build_pathways.py with the right arguments
+#
+# Usage:
+#   ./scripts/run_pipeline.sh
+#   RELEASE_VERSION=v2 ./scripts/run_pipeline.sh   # override release tag
 set -euo pipefail
 
-# Run from repo root no matter where invoked from
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$REPO_ROOT"
 
-# Load machine-local config (not committed)
+# ── Load machine-local config ─────────────────────────────────────────────────
 CONFIG_FILE="${CONFIG_FILE:-scripts/config.env}"
 if [[ -f "$CONFIG_FILE" ]]; then
   # shellcheck disable=SC1090
   source "$CONFIG_FILE"
 else
   echo "ERROR: Missing config file: $CONFIG_FILE"
-  echo "Create it from scripts/config.example.env (or your own) and re-run."
+  echo "Create it from scripts/config.example.env and re-run."
   exit 1
 fi
 
-# Defaults if not set in config
+# ── Resolve PlantCyc paths ────────────────────────────────────────────────────
 PLANTCYC_ROOT="${PLANTCYC_ROOT:?PLANTCYC_ROOT must be set in scripts/config.env}"
-GPML_SNAPSHOT="${GPML_SNAPSHOT:-gpml2021}"
-OUT_BASE="${OUT_BASE:-./output}"
+OUT_BASE="${OUT_BASE:-./output_gpml}"
 RELEASE_VERSION="${RELEASE_VERSION:-v1}"
 
-# Read PlantCyc version from default-version.txt (your PlantCyc layout)
 DEFAULT_VER_FILE="$PLANTCYC_ROOT/default-version"
 [[ -f "$DEFAULT_VER_FILE" ]] || { echo "ERROR: Not found: $DEFAULT_VER_FILE"; exit 1; }
 PLANTCYC_VERSION="$(tr -d '[:space:]' < "$DEFAULT_VER_FILE")"
-[[ -n "$PLANTCYC_VERSION" ]] || { echo "ERROR: Empty PlantCyc version in $DEFAULT_VER_FILE"; exit 1; }
+[[ -n "$PLANTCYC_VERSION" ]] || { echo "ERROR: Empty version in $DEFAULT_VER_FILE"; exit 1; }
 
 PLANTCYC_DATA_DIR="$PLANTCYC_ROOT/$PLANTCYC_VERSION/data"
-[[ -d "$PLANTCYC_DATA_DIR" ]] || { echo "ERROR: PlantCyc data dir not found: $PLANTCYC_DATA_DIR"; exit 1; }
+[[ -d "$PLANTCYC_DATA_DIR" ]] || { echo "ERROR: Data dir not found: $PLANTCYC_DATA_DIR"; exit 1; }
 
-# Git metadata for traceability
-GIT_COMMIT="$(git rev-parse HEAD)"
-GIT_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
-GIT_DIRTY="false"
-if [[ -n "$(git status --porcelain)" ]]; then
-  GIT_DIRTY="true"
-fi
-
+# ── Optional release tag ──────────────────────────────────────────────────────
 # Tag scheme: plantcyc17.0.0-gpml2021-v1
 # Increment RELEASE_VERSION in config.env when re-releasing the same
-# PlantCyc+GPML version with updated code.
-TAG_NAME="plantcyc${PLANTCYC_VERSION}-${GPML_SNAPSHOT}-${RELEASE_VERSION}"
+# PlantCyc+GPML version with updated pipeline code.
+TAG_NAME="plantcyc${PLANTCYC_VERSION}-gpml2021-${RELEASE_VERSION}"
 
-# Output folder naming:
-# output_gpml/plantcyc17.0.0-gpml2021-v1__git<shortsha>__20260128-153012
-RUN_TS="$(date +%Y%m%d-%H%M%S)"
-SHORT_SHA="$(git rev-parse --short HEAD)"
-OUT_DIR="${OUT_BASE%/}/${TAG_NAME}__git${SHORT_SHA}__${RUN_TS}"
-mkdir -p "$OUT_DIR"
-
-# Hardcoded: include reactions
-CMD=(python "$REPO_ROOT/scripts/build_pathways.py" "$PLANTCYC_DATA_DIR" "$OUT_DIR" --include-reactions --db-version "$PLANTCYC_VERSION" --no-timestamp-subdir)
-
-# Write metadata log (super useful later)
-LOG_FILE="$OUT_DIR/run.metadata.txt"
-{
-  echo "run_timestamp: $(date -Is)"
-  echo "repo: $(basename "$REPO_ROOT")"
-  echo "git_branch: $GIT_BRANCH"
-  echo "git_commit: $GIT_COMMIT"
-  echo "git_dirty: $GIT_DIRTY"
-  echo "plantcyc_root: $PLANTCYC_ROOT"
-  echo "plantcyc_version: $PLANTCYC_VERSION"
-  echo "plantcyc_data_dir: $PLANTCYC_DATA_DIR"
-  echo "gpml_snapshot: $GPML_SNAPSHOT"
-  echo "release_version: $RELEASE_VERSION"
-  echo "tag_name: $TAG_NAME"
-  echo "output_dir: $OUT_DIR"
-  echo "command: ${CMD[*]}"
-  echo "python: $(python --version 2>&1)"
-} > "$LOG_FILE"
-
-echo "==> PlantCyc version: $PLANTCYC_VERSION"
-echo "==> GPML snapshot:   $GPML_SNAPSHOT"
-echo "==> Output dir:      $OUT_DIR"
-echo "==> Log:             $LOG_FILE"
-
-# Create tag if it doesn't exist (do nothing if it does)
 if git rev-parse -q --verify "refs/tags/$TAG_NAME" >/dev/null; then
   echo "==> Tag already exists: $TAG_NAME (leaving as-is)"
 else
   echo "==> Creating tag: $TAG_NAME"
-  git tag -a "$TAG_NAME" -m "Data build: PlantCyc ${PLANTCYC_VERSION} -> ${GPML_SNAPSHOT} (${RELEASE_VERSION})"
-  echo "==> Tag created locally. (Push it with: git push origin $TAG_NAME)"
+  git tag -a "$TAG_NAME" -m "Data build: PlantCyc ${PLANTCYC_VERSION} -> gpml2021 (${RELEASE_VERSION})"
+  echo "==> Tag created locally. Push with: git push origin $TAG_NAME"
 fi
 
-# Validate PlantCyc input data before building
-echo "==> Validating PlantCyc input data ..."
-python "$REPO_ROOT/scripts/validate_plantcyc_input.py" "$PLANTCYC_DATA_DIR"
-VALIDATION_EXIT=$?
-if [[ $VALIDATION_EXIT -ne 0 ]]; then
-  echo "ERROR: Input validation failed. Fix errors above before building."
-  exit $VALIDATION_EXIT
-fi
+# ── Run the pipeline ──────────────────────────────────────────────────────────
+# build_pathways.py handles:
+#   - input validation (validate_plantcyc_input.py)
+#   - output directory naming: plantcyc{version}-gpml2021__git{sha}__{ts}
+#   - run.metadata.txt
+#   - GPML_STATISTICS_REPORT.txt
+#   - VALIDATION_REPORT.txt + VALIDATION_SUMMARY.tsv
+#   - species_coverage.tsv + species_coverage_by_ncbi.tsv
+echo "==> PlantCyc version : $PLANTCYC_VERSION"
+echo "==> Output base dir  : $OUT_BASE"
 echo ""
 
-# Run the pipeline
-echo "==> Running: ${CMD[*]}"
-"${CMD[@]}"
+python "$REPO_ROOT/scripts/build_pathways.py" \
+  "$PLANTCYC_DATA_DIR" \
+  "$OUT_BASE" \
+  --include-reactions \
+  --db-version "$PLANTCYC_VERSION"
 
+echo ""
 echo "==> Done."
-echo "==> Output: $OUT_DIR"
-
-# Generate species coverage table at project root
-echo ""
-echo "==> Generating species_coverage.tsv ..."
-python "$REPO_ROOT/scripts/utils/generate_species_coverage_table.py" \
-  --data-dir "$PLANTCYC_DATA_DIR" \
-  --gpml-dir "$OUT_DIR" \
-  --output "$OUT_DIR/species_coverage.tsv" \
-  --output-by-ncbi "$OUT_DIR/species_coverage_by_ncbi.tsv"
-echo "==> species_coverage.tsv and species_coverage_by_ncbi.tsv written to $OUT_DIR"

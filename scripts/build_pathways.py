@@ -338,12 +338,15 @@ def _write_run_metadata(output_dir, data_dir, db_version, timestamp, include_rea
             return "unknown"
 
     meta_path = os.path.join(output_dir, "run.metadata.txt")
+    git_commit = _git(['git','rev-parse','HEAD'])
+    git_branch = _git(['git','rev-parse','--abbrev-ref','HEAD'])
+    git_dirty  = str(bool(_git(['git','status','--porcelain']))).lower()
     with open(meta_path, "w", encoding="utf-8") as f:
         f.write(f"run_timestamp: {datetime.now().isoformat()}\n")
         f.write(f"repo: Cyc_to_wiki\n")
-        f.write(f"git_branch: {_git(['git','rev-parse','--abbrev-ref','HEAD'])}\n")
-        f.write(f"git_commit: {_git(['git','rev-parse','HEAD'])}\n")
-        f.write(f"git_dirty: {bool(_git(['git','status','--porcelain']))}\n")
+        f.write(f"git_branch: {git_branch}\n")
+        f.write(f"git_commit: {git_commit}\n")
+        f.write(f"git_dirty: {git_dirty}\n")
         f.write(f"plantcyc_data_dir: {os.path.abspath(data_dir)}\n")
         f.write(f"plantcyc_version: {db_version or 'unknown'}\n")
         f.write(f"include_reactions: {include_reactions}\n")
@@ -597,8 +600,30 @@ def main():
             print(f"  Warning: Could not extract version from header: {e}")
 
     # Create output directory (optionally without timestamp subdir)
-    timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
-    output_dir = output_base_dir if no_timestamp_subdir else os.path.join(output_base_dir, f"biocyc_pathways_{timestamp}")
+    timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
+
+    # Output directory naming:
+    #   With --db-version : plantcyc{version}-gpml2021__git{sha7}__{timestamp}
+    #   Without           : biocyc_pathways_{timestamp}  (generic fallback)
+    # Pass --no-timestamp-subdir (e.g. from run_pipeline.sh) to use output_base_dir directly.
+    if no_timestamp_subdir:
+        output_dir = output_base_dir
+    elif db_version:
+        import subprocess as _sp
+        try:
+            short_sha = _sp.check_output(
+                ["git", "rev-parse", "--short", "HEAD"],
+                cwd=os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                stderr=_sp.DEVNULL
+            ).decode().strip()
+        except Exception:
+            short_sha = "unknown"
+        output_dir = os.path.join(
+            output_base_dir,
+            f"plantcyc{db_version}-gpml2021__git{short_sha}__{timestamp}"
+        )
+    else:
+        output_dir = os.path.join(output_base_dir, f"biocyc_pathways_{timestamp}")
 
     individual_pathways_dir = os.path.join(output_dir, "individual_pathways")
     os.makedirs(individual_pathways_dir, exist_ok=True)
