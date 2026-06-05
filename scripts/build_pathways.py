@@ -366,15 +366,17 @@ def _generate_species_coverage(data_dir, output_dir, gpml_dir):
         print(f"  WARNING: {script} not found — skipping species coverage tables.")
         return
 
-    cov_out      = os.path.join(output_dir, "species_coverage.tsv")
-    cov_ncbi_out = os.path.join(output_dir, "species_coverage_by_ncbi.tsv")
+    cov_orgid_out  = os.path.join(output_dir, "species_coverage_by_plantcyc_orgid.tsv")
+    cov_ncbi_out   = os.path.join(output_dir, "species_coverage_by_ncbi.tsv")
+    cov_summary_out= os.path.join(output_dir, "species_coverage_summary.tsv")
 
     cmd = [
         sys.executable, script,
         "--data-dir",       os.path.abspath(data_dir),
         "--gpml-dir",       os.path.abspath(gpml_dir),
-        "--output",         os.path.abspath(cov_out),
+        "--output",         os.path.abspath(cov_orgid_out),
         "--output-by-ncbi", os.path.abspath(cov_ncbi_out),
+        "--output-summary", os.path.abspath(cov_summary_out),
     ]
     try:
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
@@ -385,8 +387,9 @@ def _generate_species_coverage(data_dir, output_dir, gpml_dir):
             print(f"  WARNING: species coverage script exited {result.returncode}")
             print(f"  {result.stderr[:300]}")
         else:
-            print(f"  species_coverage.tsv         (Table S2 — per ORG-ID)")
-            print(f"  species_coverage_by_ncbi.tsv (Table S1 — per NCBI taxon)")
+            print(f"  species_coverage_by_plantcyc_orgid.tsv  (Table S2 — per ORG-ID)")
+            print(f"  species_coverage_by_ncbi.tsv            (Table S1 — per NCBI taxon)")
+            print(f"  species_coverage_summary.tsv            (summary + absent taxa)")
     except Exception as e:
         print(f"  WARNING: could not generate species coverage tables: {e}")
 
@@ -867,9 +870,10 @@ def main():
     if cross_species_genes:
         print(f"  ⚠ {len(cross_species_genes)} gene(s) had taxonomy skipped (cross-species products)")
     print(f"Output files:")
-    print(f"  run.metadata.txt        VALIDATION_REPORT.txt   VALIDATION_SUMMARY.tsv")
-    print(f"  GPML_STATISTICS_REPORT.txt")
-    print(f"  species_coverage.tsv    species_coverage_by_ncbi.tsv")
+    print(f"  run.metadata.txt                       GPML_STATISTICS_REPORT.txt")
+    print(f"  VALIDATION_REPORT.txt                  VALIDATION_SUMMARY.tsv")
+    print(f"  species_coverage_by_ncbi.tsv           species_coverage_summary.tsv")
+    print(f"  species_coverage_by_plantcyc_orgid.tsv")
     print("="*60)
 
     # Run analysis script automatically

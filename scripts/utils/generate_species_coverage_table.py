@@ -496,10 +496,12 @@ def main():
                         help='Path to PlantCyc data directory (contains *.dat files)')
     parser.add_argument('--gpml-dir', required=True,
                         help='Path to GPML output directory (searched recursively)')
-    parser.add_argument('--output', default='species_coverage.tsv',
+    parser.add_argument('--output', default='species_coverage_by_plantcyc_orgid.tsv',
                         help='Output TSV file path (one row per PlantCyc ORG-ID)')
     parser.add_argument('--output-by-ncbi', default='species_coverage_by_ncbi.tsv',
                         help='Output TSV collapsed to one row per NCBI taxon ID')
+    parser.add_argument('--output-summary', default='species_coverage_summary.tsv',
+                        help='Output TSV with summary counts and absent-taxa table')
     args = parser.parse_args()
 
     data_dir = Path(args.data_dir)
@@ -677,6 +679,27 @@ def main():
     # Collapsed table (one row per NCBI taxon ID)
     # ------------------------------------------------------------------
     ncbi_rows = collapse_by_ncbi(rows)
+    # Build CPLX lookup: org_id -> {cplx_id: [component_ids]}
+    cplx_lookup: dict[str, dict[str, list]] = {}
+    for pid, rec in protein_records.items():
+        types = _as_list(rec.get('TYPES', []))
+        if not any('Complex' in t for t in types):
+            continue
+        comps = [c.strip() for c in _as_list(rec.get('COMPONENTS', [])) if c.strip()]
+        for sp in _as_list(rec.get('SPECIES', [])):
+            org_id = sp.strip()
+            if org_id:
+                cplx_lookup.setdefault(org_id, {})[pid] = comps
+
+    def _cplx_info_for_ncbi(ncbi_row):
+        org_ids = [o.strip() for o in ncbi_row.get('plantcyc_org_ids', '').split(';') if o.strip()]
+        all_cplx: dict[str, list] = {}
+        for oid in org_ids:
+            all_cplx.update(cplx_lookup.get(oid, {}))
+        cplx_ids = '; '.join(sorted(all_cplx.keys()))
+        comp_ids = '; '.join(sorted({c for comps in all_cplx.values() for c in comps}))
+        return cplx_ids, comp_ids
+
     ncbi_fieldnames = [
         'ncbi_taxon_id', 'scientific_name',
         'n_plantcyc_org_ids', 'plantcyc_org_ids',
@@ -687,7 +710,14 @@ def main():
         'gpml_as_geneproduct', 'gpml_as_protein', 'gpml_as_metabolite', 'gpml_as_complex',
         'n_gpml_geneproduct_nodes', 'n_gpml_protein_nodes', 'n_gpml_metabolite_nodes',
         'n_gpml_complex_groups', 'n_gpml_pathway_files', 'gpml_name_form',
+        'cplx_protein_ids', 'cplx_component_ids',
     ]
+    # Enrich NCBI rows with CPLX protein and component IDs
+    for r in ncbi_rows:
+        cplx_ids, comp_ids = _cplx_info_for_ncbi(r)
+        r['cplx_protein_ids']  = cplx_ids
+        r['cplx_component_ids'] = comp_ids
+
     ncbi_out = args.output_by_ncbi
     print(f"\nWriting {len(ncbi_rows)} NCBI-collapsed rows to {ncbi_out} ...")
     with open(ncbi_out, 'w', newline='', encoding='utf-8') as fh:
@@ -725,6 +755,91 @@ def main():
             print(f"    {r['ncbi_taxon_id']:<8}  {r['scientific_name']}")
     print(f"{'='*60}")
     print(f"Output: {ncbi_out}")
+
+    # ------------------------------------------------------------------
+    # Summary TSV (Table S — counts + absent taxa)
+    # ------------------------------------------------------------------
+    def _absence_reason(r):
+        n_prot = int(r.get('n_proteins', 0))
+        n_gene = int(r.get('n_genes', 0))
+        n_cpd  = int(r.get('n_compounds', 0))
+        ncbi   = r.get('ncbi_taxon_id', '').strip()
+        if n_prot == 0 and n_gene == 0 and n_cpd > 0:
+            # Compound exists in compounds.dat with this species annotation,
+            # but the compound itself is not included in any GPML pathway file
+            # (e.g. it appears in a reaction not covered by any pathway).
+            reason = "Species annotates a compound in compounds.dat, but that compound " \
+                     "is not part of any generated GPML pathway file"
+        elif n_prot > 0 or n_gene > 0:
+            reason = "Proteins/genes not linked to any GPML pathway"
+        else:
+            reason = "No protein, gene, or compound annotation found"
+        if not ncbi:
+            reason += " — unresolved taxon ID (no NCBI mapping)"
+        return reason
+
+    absent_rows  = [r for r in ncbi_rows if r['gpml_name_form'] == 'absent']
+    complex_rows = [r for r in ncbi_rows if r['gpml_name_form'] == 'only_complex']
+    n_ncbi_cplx_only = len(complex_rows)
+
+    summary_path = args.output_summary
+    print(f"\nWriting summary to {summary_path} ...")
+    with open(summary_path, 'w', newline='', encoding='utf-8') as fh:
+        w = csv.writer(fh, delimiter='\t')
+
+        # Section 1: summary counts
+        w.writerow(['Metric', 'Count'])
+        w.writerow(['Total unique taxa (NCBI IDs)', n_ncbi_total])
+        w.writerow(['In GPML (any node type)', n_ncbi_in_gpml])
+        w.writerow(['  → As Protein DataNode', n_ncbi_prot])
+        w.writerow(['  → As GeneProduct DataNode', n_ncbi_gp])
+        w.writerow(['  → As Metabolite DataNode', n_ncbi_met])
+        w.writerow(['  → Via Complex Group only (CPLX-type proteins)', n_ncbi_cplx_only])
+        w.writerow(['Absent from GPML', n_ncbi_absent])
+        w.writerow([])
+
+        # Section 2: absent taxa details
+        if absent_rows:
+            w.writerow([f'The {n_ncbi_absent} absent taxa '
+                        '(proteins/compounds exist in PlantCyc but never reach a GPML DataNode):'])
+            w.writerow(['NCBI taxon ID', 'Species', 'n_proteins', 'n_genes', 'n_compounds', 'Reason'])
+            for r in sorted(absent_rows, key=lambda x: x.get('scientific_name', '')):
+                w.writerow([
+                    r.get('ncbi_taxon_id', '—'),
+                    r.get('scientific_name', '?'),
+                    r.get('n_proteins', 0),
+                    r.get('n_genes', 0),
+                    r.get('n_compounds', 0),
+                    _absence_reason(r),
+                ])
+            w.writerow([])
+
+        # Section 3: complex-group-only taxa (new in v2)
+        if complex_rows:
+            w.writerow([f'The {n_ncbi_cplx_only} taxa annotated only via Complex Groups '
+                        '(wp:organism on Group element, not on individual DataNodes):'])
+            w.writerow(['NCBI taxon ID', 'Species', 'n_proteins', 'n_gpml_complex_groups',
+                        'cplx_protein_ids', 'complex_component_ids'])
+            for r in sorted(complex_rows, key=lambda x: x.get('scientific_name', '')):
+                cplx_ids, comp_ids = _cplx_info_for_ncbi(r)
+                w.writerow([
+                    r.get('ncbi_taxon_id', '—'),
+                    r.get('scientific_name', '?'),
+                    r.get('n_proteins', 0),
+                    r.get('n_gpml_complex_groups', 0),
+                    cplx_ids,
+                    comp_ids,
+                ])
+            w.writerow([])
+
+        # Note about ORG-ID level
+        n_org_absent = sum(1 for r in rows if r['gpml_name_form'] == 'absent')
+        n_org_total  = len(rows)
+        w.writerow([f'Note: at the PlantCyc ORG-ID level, {n_org_absent} of {n_org_total} '
+                    'ORG-IDs are absent from GPML. Some of these collapse into taxa that are '
+                    'present via another ORG-ID for the same NCBI taxon.'])
+
+    print(f"Output: {summary_path}")
 
     # ------------------------------------------------------------------
     # Summary (per-org_id table)
