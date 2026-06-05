@@ -395,11 +395,10 @@ class GPMLWriter:
                 ref_id = getattr(citation_ref, 'elementRef', '')
                 gpml_output += f'      <CitationRef elementRef="{self.escape_xml(ref_id)}" />\n'
 
-        # AnnotationRefs — species annotations on complex Groups
-        if hasattr(group, 'annotationRefs') and group.annotationRefs:
-            for annotation_ref in group.annotationRefs:
-                ref_id = getattr(annotation_ref, 'elementRef', '')
-                gpml_output += f'      <AnnotationRef elementRef="{self.escape_xml(ref_id)}" />\n'
+        # NOTE: AnnotationRef is NOT written on Group elements.
+        # The GPML2021 XSD only allows CitationRef and EvidenceRef on Groups.
+        # Species information is stored instead as Property(key='TaxonomyAnnotation')
+        # and read by create_gpml_taxonomy_extra_rdf.py.
 
         gpml_output += '    </Group>\n'
         return gpml_output

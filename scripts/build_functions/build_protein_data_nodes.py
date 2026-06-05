@@ -334,9 +334,20 @@ def create_complex_group(record, citation_manager=None):
         citation_refs = create_citation_refs_from_record(record, citation_manager)
 
     # Handle species annotations — CPLX records may carry a SPECIES field.
-    # Annotating the Group ensures that complex-annotated species produce
-    # wp:organism triples in the taxonomy-extra RDF (via gpml-to-rdf).
-    annotations, annotation_refs = create_species_annotation(record)
+    # GPML2021 XSD does NOT allow <AnnotationRef> on <Group> elements (only on
+    # DataNodes/Interactions). Instead, store the NCBI taxon ID(s) as a
+    # <Property key="TaxonomyAnnotation" value="XXXX"/> on the Group.
+    # create_gpml_taxonomy_extra_rdf.py reads this property to emit wp:organism triples.
+    _, annotation_refs = create_species_annotation(record)  # refs kept for monomer propagation
+    annotations = []   # not registered as pathway-level Annotations (not needed for Property path)
+
+    # Build TaxonomyAnnotation properties from the same species data
+    from scripts.utils.organism_utils import get_ncbi_id as _get_ncbi_id
+    for sp in as_list(record.get('SPECIES')):
+        sp_id = str(sp).strip()
+        ncbi_id = _get_ncbi_id(sp_id)
+        if ncbi_id:
+            properties.append(Property(key='TaxonomyAnnotation', value=ncbi_id))
 
     # Create graphics for the group
     graphics = standard_graphics.create_complex_group_graphics(0.0, 0.0, 200.0, 100.0)
@@ -350,8 +361,12 @@ def create_complex_group(record, citation_manager=None):
         comments=comments,
         properties=properties,
         citationRefs=citation_refs,
-        annotationRefs=annotation_refs,
+        # annotationRefs intentionally omitted: GPML2021 XSD forbids AnnotationRef on Group
     )
+
+    # Keep annotation_refs on the group object for monomer propagation only
+    # (used in _propagate to copy refs to monomer DataNodes, not written to GPML)
+    group.annotationRefs = annotation_refs
 
     return group, annotations
 
