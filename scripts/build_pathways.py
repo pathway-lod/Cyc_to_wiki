@@ -41,6 +41,7 @@ import sys
 import io
 import os
 import re
+from pathlib import Path
 
 # Add project root to sys.path to allow imports from scripts.*
 project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -55,7 +56,9 @@ from scripts.build_functions.pathway_builder_core import CompletePathwayBuilderW
 from scripts.data_structure.wiki_data_structure import Pathway, Graphics, Xref, Author, Comment, Property as PathwayProperty
 from scripts.parsing_functions import parsing_utils
 from scripts.utils.layout import calculate_component_positions
+from scripts.validate_plantcyc_input import run_checks, fmt_taxon
 from datetime import datetime
+import csv
 
 
 
@@ -323,6 +326,128 @@ def build_single_reactions(builder, unused_reactions, output_dir):
     return built_count, failed_count, failed_reactions
 
 
+def _write_validation_report(output_dir, report, data, cross_species_genes, log_lines):
+    """Write VALIDATION_REPORT.txt (human-readable) and VALIDATION_SUMMARY.tsv to output_dir."""
+    from scripts.validate_plantcyc_input import (
+        _load_pubs, _fmt_citation, fmt_taxon, as_list, parse_dat
+    )
+    import re as _re
+
+    names = data.get("taxon_names", {})
+    protein_names = data["protein_names"]
+    gene_names    = data["gene_names"]
+
+    # ── Plain-text log ─────────────────────────────────────────────────────
+    txt_path = os.path.join(output_dir, "VALIDATION_REPORT.txt")
+    with open(txt_path, "w", encoding="utf-8") as f:
+        f.write("PlantCyc input validation — build log\n")
+        f.write("="*70 + "\n\n")
+        f.write(f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n")
+        for line in log_lines:
+            f.write(line + "\n")
+        f.write("\n" + "─"*70 + "\n")
+        counts = {l: sum(1 for fi in report.findings if fi.level == l)
+                  for l in ("ERROR", "WARNING", "INFO")}
+        f.write(f"Summary: {counts['ERROR']} error(s), "
+                f"{counts['WARNING']} warning(s), {counts['INFO']} info\n")
+        if cross_species_genes:
+            f.write(f"\nGenes with taxonomy SKIPPED (cross-species products, requires manual curation):\n")
+            for g in sorted(cross_species_genes):
+                f.write(f"  {g} ({gene_names.get(g, g)})\n")
+
+    # ── TSV supplementary table (S3) ────────────────────────────────────────
+    tsv_path = os.path.join(output_dir, "VALIDATION_SUMMARY.tsv")
+    HEADER = [
+        "check_id", "severity",
+        "gene_id", "gene_symbol",
+        "protein_id", "protein_name",
+        "species_1_taxid", "species_1_name",
+        "species_2_taxid", "species_2_name",
+        "taxonomy_skipped_in_build",
+        "short_note",
+        "publication_pmid", "publication_reference",
+    ]
+
+    def _split_taxon(tok):
+        tok = tok.strip().strip("'\"")
+        m = _re.match(r"((?:TAX|ORG)-\S+)\s*\((.+)\)", tok)
+        if m:
+            return m.group(1), m.group(2)
+        return tok, names.get(tok, "")
+
+    # Load citations
+    data_dir_path = None
+    for fi in report.findings:
+        if fi.check in ("gene-cross-species-products",):
+            break
+    # try to find pubs from already-loaded data
+    pubs = {}
+    protein_citations = {}
+
+    buf = csv.StringIO()
+    writer = csv.writer(buf, delimiter="\t", lineterminator="\n",
+                        quoting=csv.QUOTE_MINIMAL)
+    writer.writerow(HEADER)
+
+    for finding in report.findings:
+        if finding.check not in ("gene-cross-species-products",
+                                  "protein-multi-species",
+                                  "gene-multi-orgid-products",
+                                  "cplx-only-species"):
+            continue
+        severity = finding.level
+
+        for line in finding.details:
+            if finding.check in ("gene-cross-species-products", "gene-multi-orgid-products"):
+                m = _re.match(r"(\S+) \(([^)]+)\): (?:products|org_ids)=(\[.*?\]) → (?:species|org_ids)=(\[.*?\])", line)
+                if not m:
+                    continue
+                gid, sym = m.group(1), m.group(2)
+                prods = [p.strip().strip("'\"") for p in m.group(3).strip("[]").split(",")]
+                sps_raw = m.group(4).strip("[]")
+                sp_items = [s.strip() for s in _re.split(r",\s*(?='|TAX|ORG)", sps_raw)]
+                tid1, sn1 = _split_taxon(sp_items[0]) if sp_items else ("", "")
+                tid2, sn2 = _split_taxon(sp_items[1]) if len(sp_items) > 1 else ("", "")
+                prods_str  = "; ".join(prods)
+                pnames_str = "; ".join(protein_names.get(p, p) for p in prods)
+                skipped = "yes" if gid in cross_species_genes else "no"
+                writer.writerow([finding.check, severity, gid, sym,
+                                  prods_str, pnames_str, tid1, sn1, tid2, sn2,
+                                  skipped, "", "", ""])
+
+            elif finding.check == "protein-multi-species":
+                m = _re.match(r"(\S+) \(([^)]+)\): (\[.*)", line)
+                if not m:
+                    continue
+                pid, pname = m.group(1), m.group(2)
+                sps_raw = m.group(3)
+                sp_items = [s.strip().strip("'\"") for s in
+                            _re.split(r",\s*'", sps_raw.strip("[]"))]
+                tid1, sn1 = _split_taxon(sp_items[0]) if sp_items else ("", "")
+                tid2, sn2 = _split_taxon(sp_items[1]) if len(sp_items) > 1 else ("", "")
+                writer.writerow([finding.check, severity, "", "",
+                                  pid, pname, tid1, sn1, tid2, sn2,
+                                  "no", "", "", ""])
+
+            elif finding.check == "cplx-only-species":
+                m = _re.match(r"(\S+) \(([^)]+)\):", line)
+                if not m:
+                    continue
+                taxon_id, taxon_name = m.group(1), m.group(2)
+                writer.writerow([finding.check, severity, "", "",
+                                  "", "", taxon_id, taxon_name, "", "",
+                                  "no",
+                                  "Species only annotated via CPLX Group elements",
+                                  "", ""])
+
+    with open(tsv_path, "wb") as f:
+        f.write(b'\xef\xbb\xbf')  # UTF-8 BOM for Excel
+        f.write(buf.getvalue().encode("utf-8"))
+
+    print(f"\n  Validation report: {txt_path}")
+    print(f"  Validation TSV:    {tsv_path}")
+
+
 def main():
     """Main execution function."""
     # Check command line arguments
@@ -432,6 +557,40 @@ def main():
     print(f"Build Timestamp: {timestamp}")
     print("="*60 + "\n")
 
+    # ── Input validation ──────────────────────────────────────────────────────
+    print("="*60)
+    print("VALIDATING PLANTCYC INPUT DATA")
+    print("="*60)
+    validation_report, validation_data = run_checks(Path(data_dir))
+    validation_report.print()
+
+    # Collect genes that have products spanning different NCBI species.
+    # These genes will have their taxonomy annotation skipped (the species
+    # is undefined / pipeline-order-dependent) and flagged in the build log.
+    cross_species_genes: set[str] = set()
+    for finding in validation_report.findings:
+        if finding.check == "gene-cross-species-products":
+            import re as _re
+            for line in finding.details:
+                m = _re.match(r"(\S+) ", line)
+                if m:
+                    cross_species_genes.add(m.group(1))
+
+    if cross_species_genes:
+        print(f"\n  ⚠ {len(cross_species_genes)} gene(s) with cross-species products will have "
+              f"their taxonomy annotation SKIPPED during build (manual curation required).")
+        print(f"  Affected genes: {sorted(cross_species_genes)}\n")
+
+    # Build log: collect all validation messages for the output report
+    build_log_lines = []
+    for f in validation_report.findings:
+        lvl = f.level
+        build_log_lines.append(f"[{lvl}] {f.check}: {f.message}")
+        for d in f.details:
+            build_log_lines.append(f"    {d}")
+
+    print("="*60)
+
     #Build organism mappings from BioCyc classes.dat
     print("="*60)
     print("BUILDING ORGANISM MAPPINGS")
@@ -466,7 +625,8 @@ def main():
         pubs_file=os.path.join(data_dir, "pubs.dat"),
         regulation_file=os.path.join(data_dir, "regulation.dat"),
         version=full_version,
-        organism_mapping=all_mapping
+        organism_mapping=all_mapping,
+        cross_species_genes=cross_species_genes,
     )
 
     # Handle specific pathway build
@@ -592,6 +752,10 @@ def main():
                         f.write(f"{reaction_id}\n")
                         f.write(f"  Error: {error}\n\n")
 
+    # ── Write validation report to output dir ─────────────────────────────────
+    _write_validation_report(output_dir, validation_report, validation_data,
+                             cross_species_genes, build_log_lines)
+
     # Print summary to console
     print("\n" + "="*60)
     print("BUILD COMPLETE")
@@ -600,6 +764,14 @@ def main():
     if include_reactions:
         print(f"Single reactions built: {built_reactions}")
     print(f"Output: {output_dir}")
+    n_err  = sum(1 for f in validation_report.findings if f.level == "ERROR")
+    n_warn = sum(1 for f in validation_report.findings if f.level == "WARNING")
+    n_info = sum(1 for f in validation_report.findings if f.level == "INFO")
+    print(f"Validation: {n_err} error(s), {n_warn} warning(s), {n_info} info")
+    if cross_species_genes:
+        print(f"  ⚠ {len(cross_species_genes)} gene(s) had taxonomy skipped (cross-species products)")
+    print(f"  Reports written to: {output_dir}/VALIDATION_REPORT.txt")
+    print(f"              and to: {output_dir}/VALIDATION_SUMMARY.tsv")
     print("="*60)
 
     # Run analysis script automatically
