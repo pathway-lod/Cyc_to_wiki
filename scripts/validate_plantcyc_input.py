@@ -189,7 +189,11 @@ def check_protein_gene_species(data, report):
             "WARNING",
             "protein-multi-species",
             f"{len(multi_sp_proteins)} protein(s) carry more than one SPECIES value. "
-            "The first species encountered will be used for the GPML annotation.",
+            "In plants the same enzyme can be characterised across multiple species, so "
+            "ALL listed taxa are annotated on the protein DataNode and propagated to "
+            "encoding gene DataNodes (one AnnotationRef per taxon in the GPML output). "
+            "Review each case to confirm the multi-species annotation is intentional "
+            "and not a data-entry error in proteins.dat.",
             details,
         )
     else:

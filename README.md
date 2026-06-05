@@ -147,7 +147,7 @@ Exit code: `0` if no ERRORs (warnings are acceptable), `1` if at least one ERROR
 
 | Check ID | Level | What it checks | Impact if not fixed |
 |---|---|---|---|
-| `protein-multi-species` | ⚠ WARNING | Proteins in `proteins.dat` that carry **more than one `SPECIES` value** | The first species value encountered is used; remaining species are silently dropped from the GPML annotation |
+| `protein-multi-species` | ⚠ WARNING | Proteins in `proteins.dat` that carry **more than one `SPECIES` value** | **All** listed taxa are annotated on the protein DataNode and propagated to encoding genes (one `AnnotationRef` per taxon). Biologically valid in plants where the same enzyme has been characterised across species — review each case to confirm intent |
 | `gene-cross-species-products` | ✗ ERROR | Genes whose protein products are annotated to **genuinely different NCBI taxa** (distinct `TAX-XXXX` identifiers) | The species propagated to the `GeneProduct` DataNode is undefined and depends on processing order — reproducible builds are not guaranteed |
 | `gene-multi-orgid-products` | ⚠ WARNING | Genes whose products use **different BioCyc ORG-codes** that resolve to the same NCBI taxon | Functionally correct but creates duplicate species annotations for the same gene |
 | `gene-multiple-products` | ℹ INFO | Genes encoding **multiple protein products** (isoforms) | Each product's species is propagated independently; only the last one written appears on the `GeneProduct` DataNode — earlier isoforms are overwritten |
