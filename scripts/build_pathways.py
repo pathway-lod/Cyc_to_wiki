@@ -371,10 +371,10 @@ def _generate_species_coverage(data_dir, output_dir, gpml_dir):
 
     cmd = [
         sys.executable, script,
-        "--data-dir",   data_dir,
-        "--gpml-dir",   gpml_dir,
-        "--output",     cov_out,
-        "--output-by-ncbi", cov_ncbi_out,
+        "--data-dir",       os.path.abspath(data_dir),
+        "--gpml-dir",       os.path.abspath(gpml_dir),
+        "--output",         os.path.abspath(cov_out),
+        "--output-by-ncbi", os.path.abspath(cov_ncbi_out),
     ]
     try:
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)

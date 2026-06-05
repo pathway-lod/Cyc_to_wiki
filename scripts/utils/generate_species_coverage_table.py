@@ -684,9 +684,9 @@ def main():
         'in_compounds_dat', 'n_compounds',
         'n_genes', 'n_pathways_source',
         'in_gpml',
-        'gpml_as_geneproduct', 'gpml_as_protein', 'gpml_as_metabolite',
+        'gpml_as_geneproduct', 'gpml_as_protein', 'gpml_as_metabolite', 'gpml_as_complex',
         'n_gpml_geneproduct_nodes', 'n_gpml_protein_nodes', 'n_gpml_metabolite_nodes',
-        'n_gpml_pathway_files', 'gpml_name_form',
+        'n_gpml_complex_groups', 'n_gpml_pathway_files', 'gpml_name_form',
     ]
     ncbi_out = args.output_by_ncbi
     print(f"\nWriting {len(ncbi_rows)} NCBI-collapsed rows to {ncbi_out} ...")

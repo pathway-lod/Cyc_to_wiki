@@ -94,35 +94,41 @@ Add a new release section below (copy the template from the previous release) an
 
 #### Build statistics
 
-*(To be filled from `GPML_STATISTICS_REPORT.txt` after build completes)*
-
 | Category | Count |
 |---|---|
 | Pathway files (PC*) | 1,162 |
 | Reaction files (RC*) | 1,316 |
 | **Total GPML files** | **2,478** |
 
-**Taxonomy annotation changes vs v1**
+**DataNodes**
 
-| Change | Detail |
-|---|---|
-| Genes with taxonomy SKIPPED | 5 (cross-species products — deterministic build) |
-| CPLX-only taxa now annotated | 23 (via Complex Group AnnotationRef) |
-| Genes annotated | *(from GPML_STATISTICS_REPORT.txt)* |
-| Proteins annotated | *(from GPML_STATISTICS_REPORT.txt)* |
+| Type | Total | Unique |
+|---|---|---|
+| Metabolite | 23,449 | 4,843 |
+| Protein | 10,715 | 3,227 |
+| GeneProduct | 8,259 | 2,620 |
+| Protein Complex (Group) | 1,237 | 400 |
 
-**Species coverage (by NCBI taxon)**
+**Taxonomy annotation coverage**
 
-*(To be filled from `species_coverage_by_ncbi.tsv` after build completes)*
+| Entity type | Total | Annotated | Coverage | Change vs v1 |
+|---|---|---|---|---|
+| GeneProduct | 8,259 | 8,148 | 98.7% | 5 genes now skip annotation (cross-species ERROR) |
+| Protein | 10,715 | 10,583 | 98.8% | — |
+| Metabolite | 23,449 | 33 | 0.1% | — |
+| Complex Group | 1,237 | *(annotated via AnnotationRef)* | — | New in v2 |
 
-| | Count |
-|---|---|
-| Unique taxa in PlantCyc 17.0.0 | 439 |
-| In GPML as GeneProduct DataNode | *(fill)* |
-| In GPML as Protein DataNode | *(fill)* |
-| In GPML as Metabolite DataNode | *(fill)* |
-| In GPML via Complex Group only | 23 (new in v2) |
-| Absent from GPML | *(fill)* |
+**Species coverage (by NCBI taxon, from `species_coverage_by_ncbi.tsv`)**
+
+| | Count | vs v1 |
+|---|---|---|
+| Unique taxa in PlantCyc 17.0.0 | **439** | — |
+| In GPML (any node type) | **427** | +12 (Complex Groups now counted) |
+| — As GeneProduct DataNode | 303 | — |
+| — As Protein DataNode | 409 | — |
+| — As Metabolite DataNode | 18 | — |
+| — Via Complex Group only (`only_complex`) | **12** | New in v2 |
+| Absent from GPML | **12** | -11 (was 23: 12 now annotated as CPLX-only, 11 remain absent) |
 
 ---
 
