@@ -67,10 +67,26 @@ Add a new release section below (copy the template from the previous release) an
 
 **PlantCyc version:** 17.0.0
 **GPML snapshot:** GPML2021
-**Code commit:** `3c453f77` (`fix/plantcyc-validation` → `main`)
+**GPML build commit:** `e64760f3` (monomer annotation propagation — the commit used to generate GPML files)
+**Pipeline commit (merged):** *(fill in the merge commit SHA after merging `fix/plantcyc-validation` → `main`)*
 **Build date:** 2026-06-05
-**Zenodo DOI:** *(to be filled after Zenodo upload)*
-**Output directory:** `plantcyc17.0.0-gpml2021__git3c453f77__20260605-154745`
+**Zenodo DOI:** *(fill after Zenodo upload)*
+**Output directory:** `plantcyc17.0.0-gpml2021__gite64760f3__20260605-162619`
+
+#### To tag and release after merging
+
+```bash
+# Set version in config (only needed if using run_pipeline.sh)
+# Edit scripts/config.env: RELEASE_VERSION=v2
+
+# Tag on main after merging
+git checkout main
+git pull
+git tag -a plantcyc17.0.0-gpml2021-v2 -m "PlantCyc 17.0.0 → GPML2021 (v2)"
+git push origin plantcyc17.0.0-gpml2021-v2
+# → GitHub Action auto-creates release draft
+# → Upload output_gpml/plantcyc17.0.0-gpml2021__gite64760f3__*/ to Zenodo
+```
 
 #### What's new
 

@@ -1,0 +1,92 @@
+PlantCyc input validation — build log
+======================================================================
+
+Generated: 2026-06-05 16:26:19
+
+[WARNING] protein-multi-species: 10 protein(s) carry more than one SPECIES value. In plants the same enzyme can be characterised across multiple species, so ALL listed taxa are annotated on the protein DataNode and propagated to encoding gene DataNodes (one AnnotationRef per taxon in the GPML output). Review each case to confirm the multi-species annotation is intentional and not a data-entry error in proteins.dat.
+    MONOMER-11863 (flavone synthase II): ['TAX-46348 (Glycyrrhiza echinata)', 'TAX-18101 (Gerbera hybrid cultivar)']
+    MONOMER-12444 (tropinone reductase (TR-I)): ['TAX-397412 (Coptis japonica)', 'TAX-4079 (Hyoscyamus niger)']
+    MONOMER-12564 (flavone synthase I): ['TAX-46348 (Glycyrrhiza echinata)', 'TAX-4043 (Petroselinum crispum)']
+    MONOMER-13854 (MONOMER-13854): ['TAX-397412 (Coptis japonica)', 'TAX-3467 (Eschscholzia californica)']
+    MONOMER-4681 (MONOMER-4681): ['TAX-46348 (Glycyrrhiza echinata)', 'TAX-3893 (Pueraria montana)']
+    MONOMER-5149 (MONOMER-5149): ['TAX-46348 (Glycyrrhiza echinata)', 'TAX-49827 (Glycyrrhiza glabra)']
+    MONOMER-5151 (MONOMER-5151): ['TAX-46348 (Glycyrrhiza echinata)', 'TAX-3879 (Medicago sativa)']
+    MONOMER-5153 (MONOMER-5153): ['TAX-46348 (Glycyrrhiza echinata)', 'TAX-3827 (Cicer arietinum)']
+    MONOMER-5323 (MONOMER-5323): ['TAX-46348 (Glycyrrhiza echinata)', 'TAX-3827 (Cicer arietinum)']
+    MONOMER-7523 (MONOMER-7523): ['TAX-46348 (Glycyrrhiza echinata)', 'TAX-49827 (Glycyrrhiza glabra)']
+[ERROR] gene-cross-species-products: 5 gene(s) have products annotated to different NCBI species. The species propagated to the GeneProduct DataNode is undefined (pipeline-order-dependent).
+    G-27160 (SARED1): products=['MONOMER-13854'] → species=['TAX-3467 (Eschscholzia californica)', 'TAX-397412 (Coptis japonica)']
+    G-5223 (CYP71D18): products=['MONOMER-15424', 'MONOMER-6743'] → species=['TAX-29719 (Mentha spicata)', 'TAX-34256 (Mentha x piperita)']
+    G-5703 (HIDM): products=['MONOMER-5149'] → species=['TAX-46348 (Glycyrrhiza echinata)', 'TAX-49827 (Glycyrrhiza glabra)']
+    G-9216 (CYP93B2): products=['MONOMER-11863'] → species=['TAX-18101 (Gerbera hybrid cultivar)', 'TAX-46348 (Glycyrrhiza echinata)']
+    G-9647 (PcFSI): products=['MONOMER-12564'] → species=['TAX-4043 (Petroselinum crispum)', 'TAX-46348 (Glycyrrhiza echinata)']
+[WARNING] gene-multi-orgid-products: 1 gene(s) have products with different BioCyc ORG-codes that all resolve to the same NCBI taxon. Resolution pipeline: (1) Cyc_to_wiki build — scripts/utils/organism_utils.py get_ncbi_id() maps each ORG-XXXX to an NCBI taxon ID via org_id_mapping_v2.tsv (TAX-XXXX codes are resolved directly). create_species_annotation() uses the NCBI ID as the Annotation elementId (e.g. 'taxonomy_3702'), so two products with ORG-5993 and TAX-3702 both produce elementId='taxonomy_3702'. (2) _propagate_protein_species_to_genes() deduplicates by elementRef, so the gene DataNode receives only ONE annotation for that NCBI taxon — no duplication in the GPML output. (3) gpml-to-rdf converts the annotation elementId to an NCBITaxon IRI (ncbi:3702), completing the normalisation. No action required — the annotation is correct. Review only if you suspect the ORG-code assignment in proteins.dat is wrong.
+    G-15543 (PK): products=['AT5G37850-MONOMER', 'MONOMER-17906'] → org_ids=['ORG-5993 (Arabidopsis thaliana)', 'TAX-3702 (Arabidopsis thaliana)'] (same NCBI taxon)
+[INFO] gene-multiple-products: 28 gene(s) encode multiple protein products (isoforms). Propagation: pathway_builder_core._propagate_protein_species_to_genes() collects Product/Products properties from the gene DataNode, iterates over ALL linked protein nodes, and merges their annotationRefs into the gene DataNode — deduplicated by elementRef. Every distinct taxon across all isoforms is therefore represented on the gene. No data loss.
+    AT1G62800: ['AT1G62800.1', 'AT1G62800.2']
+    AT1G67740: ['AT1G67740-MONOMER-Y2', 'AT1G67740-MONOMER']
+    AT1G72330: ['AT1G72330.1', 'AT1G72330.3']
+    AT2G13810: ['AT2G13810.1', 'AT2G13810-MONOMER']
+    AT2G22250: ['AT2G22250.1', 'AT2G22250-MONOMER']
+    AT2G38400: ['AT2G38400.1', 'AT2G38400.2']
+    AT3G02470: ['AT3G02470-MONOMER-BETA', 'AT3G02470-MONOMER']
+    AT3G22200: ['AT3G22200.1', 'AT3G22200-MONOMER']
+    G-11413: ['MONOMER-17637', 'MONOMER-14965']
+    G-15543: ['AT5G37850-MONOMER', 'MONOMER-17906']
+    G-18047: ['MONOMER-18582', 'MONOMER-18580']
+    G-5223: ['MONOMER-15424', 'MONOMER-6743']
+    PAVIR.3KG443800: ['PAVIR.3KG443800.1.P', 'PAVIR.3KG443800.2.P']
+    PAVIR.3KG444700: ['PAVIR.3KG444700.1.P', 'PAVIR.3KG444700.4.P']
+    PAVIR.7NG404900: ['PAVIR.7NG404900.1.P', 'PAVIR.7NG404900.2.P']
+    SOLTU.DM.06G013670: ['SOLTU.DM.06G013670.1', 'SOLTU.DM.06G013670.2']
+    SOLTU.DM.06G018370: ['SOLTU.DM.06G018370.1', 'SOLTU.DM.06G018370.2']
+    SOLTU.DM.07G001250: ['SOLTU.DM.07G001250.1', 'SOLTU.DM.07G001250.2']
+    SOLTU.DM.07G014190: ['SOLTU.DM.07G014190.1', 'SOLTU.DM.07G014190.2', 'SOLTU.DM.07G014190.3']
+    SOLTU.DM.07G021470: ['SOLTU.DM.07G021470.1', 'SOLTU.DM.07G021470.2', 'SOLTU.DM.07G021470.3', 'SOLTU.DM.07G021470.4', 'SOLTU.DM.07G021470.5', 'SOLTU.DM.07G021470.6', 'SOLTU.DM.07G021470.7', 'SOLTU.DM.07G021470.8']
+    SOLTU.DM.07G021480: ['SOLTU.DM.07G021480.1', 'SOLTU.DM.07G021480.2']
+    SOLTU.DM.07G021500: ['SOLTU.DM.07G021500.1', 'SOLTU.DM.07G021500.2']
+    SOLTU.DM.07G023660: ['SOLTU.DM.07G023660.1', 'SOLTU.DM.07G023660.2']
+    SOLTU.DM.09G025360: ['SOLTU.DM.09G025360.1', 'SOLTU.DM.09G025360.2']
+    SOLTU.DM.09G025370: ['SOLTU.DM.09G025370.1', 'SOLTU.DM.09G025370.2', 'SOLTU.DM.09G025370.3']
+    SOLTU.DM.09G025380: ['SOLTU.DM.09G025380.1', 'SOLTU.DM.09G025380.2']
+    SOLTU.DM.10G003690: ['SOLTU.DM.10G003690.1', 'SOLTU.DM.10G003690.2']
+    SOLTU.DM.10G015470: ['SOLTU.DM.10G015470.1', 'SOLTU.DM.10G015470.2']
+[INFO] protein-multiple-genes: 4 protein(s) list more than one GENE entry (e.g. enzyme complexes or duplicate gene models). _propagate_protein_species_to_genes() is gene-centric: it reads each gene node's Product/Products properties to locate linked proteins. All genes that correctly list this protein in their PRODUCT field in genes.dat will therefore receive the same taxon annotation. No data loss provided genes.dat and proteins.dat cross-references are consistent (i.e. every gene listed in the protein's GENE field also carries the protein in its own PRODUCT field).
+    AT1G80230-MONOMER (complex IV subunit 5b): genes=['AT1G80230', 'AT3G15640']
+    ATMG00513-MONOMER (ATMG00513-MONOMER): genes=['ATMG00060', 'ATMG00665', 'ATMG00513']
+    ATMG01120-MONOMER (ATMG01120-MONOMER): genes=['ATMG00516', 'ATMG01120']
+    MONOMER-12340 (MONOMER-12340): genes=['G-15450', 'G4FS-21']
+[INFO] cplx-only-species: 23 taxon/taxa are annotated exclusively via protein-complex (CPLX-type) entries. Before the fix that annotates Complex Group elements, these species were silently absent from GPML taxonomy output. After the fix (create_complex_group adds annotationRefs; gpml_writer writes them; create_gpml_taxonomy_extra_rdf processes Group elements), each CPLX Group now carries wp:organism triples in the RDF. Use --report to get a full table of affected taxa and their complex components.
+    ORG-5912 (Manihot esculenta): cplx_proteins=['CPLX-4482', 'MONOMER-6903']
+    TAX-137221 (Rheum palmatum): cplx_proteins=['CPLX-7227', 'CPLX-6601', 'MONOMER-12713', 'MONOMER-11264']
+    TAX-150094 (Thalictrum flavum): cplx_proteins=['MONOMER-8422', 'CPLX-5002']
+    TAX-205071 (Rheum tataricum): cplx_proteins=['CPLX-234', 'MONOMER-233']
+    TAX-218620 (Phlebodium aureum): cplx_proteins=['CPLX-8545', 'MONOMER-17613']
+    TAX-227291 (Limonium latifolium): cplx_proteins=['MONOMER-9602', 'CPLX-5701']
+    TAX-260674 (Citrullus lanatus): cplx_proteins=['MONOMER-11327', 'CPLX-6681']
+    TAX-3240 (Psilotum nudum): cplx_proteins=['MONOMER-11738', 'MONOMER-11737', 'CPLX-6970', 'CPLX-6971']
+    TAX-3316 (Thuja plicata): cplx_proteins=['MONOMER-12935', 'CPLX-7301']
+    TAX-3435 (Persea americana): cplx_proteins=['MONOMER-12077', 'CPLX-7072']
+    TAX-3634 (Gossypium barbadense): cplx_proteins=['CPLX-7570', 'MONOMER-13699']
+    TAX-3710 (Brassica nigra): cplx_proteins=['MONOMER-2442', 'CPLX-2142', 'MONOMER-2441']
+    TAX-3721 (Crambe hispanica): cplx_proteins=['MONOMER-12262', 'CPLX-7120']
+    TAX-3767 (Pyrus pyrifolia): cplx_proteins=['MONOMER-11718', 'CPLX-6953']
+    TAX-3818 (Arachis hypogaea): cplx_proteins=['MONOMER-235', 'CPLX-236']
+    TAX-3866 (Leucaena leucocephala): cplx_proteins=['CPLX-6721', 'MONOMER-11365']
+    TAX-4472 (Lemna minor): cplx_proteins=['MONOMER-12494', 'CPLX-7175']
+    TAX-4686 (Asparagus officinalis): cplx_proteins=['MONOMER-19154', 'CPLX-8967', 'MONOMER-19155', 'CPLX-8966', 'CPLX-8968']
+    TAX-55183 (Forsythia x intermedia): cplx_proteins=['CPLX-7303', 'MONOMER-12936', 'CPLX-7300', 'MONOMER-12932', 'CPLX-7298', 'MONOMER-12934']
+    TAX-59689 (Arabidopsis lyrata): cplx_proteins=['MONOMER-10582', 'CPLX-6222']
+    TAX-59777 (Selaginella lepidophylla): cplx_proteins=['CPLX4FS-4', 'MONOMER4FS-27']
+    TAX-77912 (Pinus densiflora): cplx_proteins=['MONOMER-11831', 'MONOMER-11735', 'CPLX-7003', 'CPLX-6967', 'CPLX-6968', 'CPLX-6969', 'MONOMER-11734', 'MONOMER-11736']
+    TAX-89630 (Anchusa officinalis): cplx_proteins=['MONOMER-11762', 'MONOMER-11761', 'CPLX-6980', 'CPLX-6979']
+
+──────────────────────────────────────────────────────────────────────
+Summary: 1 error(s), 2 warning(s), 3 info
+
+Genes with taxonomy SKIPPED (cross-species products, requires manual curation):
+  G-27160 (SARED1)
+  G-5223 (CYP71D18)
+  G-5703 (HIDM)
+  G-9216 (CYP93B2)
+  G-9647 (PcFSI)
