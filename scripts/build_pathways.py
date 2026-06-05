@@ -326,6 +326,68 @@ def build_single_reactions(builder, unused_reactions, output_dir):
     return built_count, failed_count, failed_reactions
 
 
+def _write_run_metadata(output_dir, data_dir, db_version, timestamp, include_reactions):
+    """Write run.metadata.txt with build provenance."""
+    import subprocess
+
+    def _git(cmd):
+        try:
+            return subprocess.check_output(cmd, cwd=os.path.dirname(os.path.dirname(
+                os.path.abspath(__file__))), stderr=subprocess.DEVNULL).decode().strip()
+        except Exception:
+            return "unknown"
+
+    meta_path = os.path.join(output_dir, "run.metadata.txt")
+    with open(meta_path, "w", encoding="utf-8") as f:
+        f.write(f"run_timestamp: {datetime.now().isoformat()}\n")
+        f.write(f"repo: Cyc_to_wiki\n")
+        f.write(f"git_branch: {_git(['git','rev-parse','--abbrev-ref','HEAD'])}\n")
+        f.write(f"git_commit: {_git(['git','rev-parse','HEAD'])}\n")
+        f.write(f"git_dirty: {bool(_git(['git','status','--porcelain']))}\n")
+        f.write(f"plantcyc_data_dir: {os.path.abspath(data_dir)}\n")
+        f.write(f"plantcyc_version: {db_version or 'unknown'}\n")
+        f.write(f"include_reactions: {include_reactions}\n")
+        f.write(f"output_dir: {os.path.abspath(output_dir)}\n")
+        f.write(f"python: {sys.version.split()[0]}\n")
+        f.write(f"command: {' '.join(sys.argv)}\n")
+    print(f"  run.metadata.txt written.")
+
+
+def _generate_species_coverage(data_dir, output_dir, gpml_dir):
+    """Run generate_species_coverage_table.py and write both TSV outputs."""
+    import subprocess
+
+    script = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                          "utils", "generate_species_coverage_table.py")
+    if not os.path.exists(script):
+        print(f"  WARNING: {script} not found — skipping species coverage tables.")
+        return
+
+    cov_out      = os.path.join(output_dir, "species_coverage.tsv")
+    cov_ncbi_out = os.path.join(output_dir, "species_coverage_by_ncbi.tsv")
+
+    cmd = [
+        sys.executable, script,
+        "--data-dir",   data_dir,
+        "--gpml-dir",   gpml_dir,
+        "--output",     cov_out,
+        "--output-by-ncbi", cov_ncbi_out,
+    ]
+    try:
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=300)
+        if result.stdout:
+            for line in result.stdout.strip().splitlines():
+                print(f"  {line}")
+        if result.returncode != 0 and result.stderr:
+            print(f"  WARNING: species coverage script exited {result.returncode}")
+            print(f"  {result.stderr[:300]}")
+        else:
+            print(f"  species_coverage.tsv         (Table S2 — per ORG-ID)")
+            print(f"  species_coverage_by_ncbi.tsv (Table S1 — per NCBI taxon)")
+    except Exception as e:
+        print(f"  WARNING: could not generate species coverage tables: {e}")
+
+
 def _write_validation_report(output_dir, report, data, cross_species_genes, log_lines):
     """Write VALIDATION_REPORT.txt (human-readable) and VALIDATION_SUMMARY.tsv to output_dir."""
     from scripts.validate_plantcyc_input import (
@@ -756,6 +818,15 @@ def main():
                         f.write(f"{reaction_id}\n")
                         f.write(f"  Error: {error}\n\n")
 
+    # ── run.metadata.txt ─────────────────────────────────────────────────────
+    _write_run_metadata(output_dir, data_dir, db_version, timestamp, include_reactions)
+
+    # ── Species coverage tables (S1 + S2) ────────────────────────────────────
+    print("\n" + "="*60)
+    print("GENERATING SPECIES COVERAGE TABLES")
+    print("="*60)
+    _generate_species_coverage(data_dir, output_dir, individual_pathways_dir)
+
     # Print summary to console
     print("\n" + "="*60)
     print("BUILD COMPLETE")
@@ -770,8 +841,10 @@ def main():
     print(f"Validation: {n_err} error(s), {n_warn} warning(s), {n_info} info")
     if cross_species_genes:
         print(f"  ⚠ {len(cross_species_genes)} gene(s) had taxonomy skipped (cross-species products)")
-    print(f"  Reports written to: {output_dir}/VALIDATION_REPORT.txt")
-    print(f"              and to: {output_dir}/VALIDATION_SUMMARY.tsv")
+    print(f"Output files:")
+    print(f"  run.metadata.txt        VALIDATION_REPORT.txt   VALIDATION_SUMMARY.tsv")
+    print(f"  GPML_STATISTICS_REPORT.txt")
+    print(f"  species_coverage.tsv    species_coverage_by_ncbi.tsv")
     print("="*60)
 
     # Run analysis script automatically
