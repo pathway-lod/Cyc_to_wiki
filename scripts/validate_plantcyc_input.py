@@ -122,9 +122,38 @@ def as_list(val):
 # Data loader
 # ---------------------------------------------------------------------------
 
+def load_taxon_names(data_dir: Path) -> dict:
+    """Build taxon_id -> common name from classes.dat (optional, best-effort).
+
+    Both TAX-XXXX and ORG-XXXX entries are indexed.  Returns an empty dict if
+    classes.dat is absent or cannot be parsed.
+    """
+    classes_file = data_dir / "classes.dat"
+    if not classes_file.exists():
+        return {}
+    names = {}
+    try:
+        for r in parse_dat(classes_file):
+            uid  = r.get("UNIQUE-ID", "")
+            name = r.get("COMMON-NAME", "")
+            if uid and name:
+                names[uid] = name
+    except Exception:
+        pass
+    return names
+
+
+def fmt_taxon(taxon_id: str, names: dict) -> str:
+    """Return 'TAX-XXXX (Species name)' when a name is available."""
+    name = names.get(taxon_id, "")
+    return f"{taxon_id} ({name})" if name else taxon_id
+
+
 def load_data(data_dir: Path):
-    """Load genes.dat and proteins.dat into convenient dicts."""
+    """Load genes.dat, proteins.dat (and optionally classes.dat) into dicts."""
     data = {}
+
+    data["taxon_names"] = load_taxon_names(data_dir)
 
     genes = parse_dat(data_dir / "genes.dat")
     data["gene_products"] = {}       # gene_id -> [protein_ids]
@@ -169,8 +198,9 @@ def check_protein_gene_species(data, report):
 
     Also flag proteins that carry more than one SPECIES value.
     """
-    gene_products  = data["gene_products"]
+    gene_products   = data["gene_products"]
     protein_species = data["protein_species"]
+    names           = data.get("taxon_names", {})
     gene_names     = data["gene_names"]
     protein_names  = data["protein_names"]
 
@@ -182,7 +212,8 @@ def check_protein_gene_species(data, report):
     }
     if multi_sp_proteins:
         details = [
-            f"{pid} ({protein_names.get(pid, pid)}): {sps}"
+            f"{pid} ({protein_names.get(pid, pid)}): "
+            f"{[fmt_taxon(s, names) for s in sps]}"
             for pid, sps in sorted(multi_sp_proteins.items())
         ]
         report.add(
@@ -238,7 +269,7 @@ def check_protein_gene_species(data, report):
         if cross_species:
             details = [
                 f"{gid} ({gene_names.get(gid, gid)}): "
-                f"products={prods} → species={sorted(sps)}"
+                f"products={prods} → species={[fmt_taxon(s, names) for s in sorted(sps)]}"
                 for gid, (prods, sps) in sorted(cross_species.items())
             ]
             report.add(
@@ -253,7 +284,7 @@ def check_protein_gene_species(data, report):
         if same_taxon:
             details = [
                 f"{gid} ({gene_names.get(gid, gid)}): "
-                f"products={prods} → org_ids={sorted(sps)} (same NCBI taxon)"
+                f"products={prods} → org_ids={[fmt_taxon(s, names) for s in sorted(sps)]} (same NCBI taxon)"
                 for gid, (prods, sps) in sorted(same_taxon.items())
             ]
             report.add(
@@ -345,13 +376,167 @@ def run_checks(data_dir: Path):
 
     print(f"Loading data from: {data_dir}")
     data = load_data(data_dir)
+    n_names = len(data.get("taxon_names", {}))
     print(f"  {len(data['gene_products'])} genes, "
-          f"{len(data['protein_species'])} proteins loaded\n")
+          f"{len(data['protein_species'])} proteins loaded"
+          + (f", {n_names} taxon names from classes.dat" if n_names else "") + "\n")
 
     # --- Add new checks here as the pipeline grows ---
     check_protein_gene_species(data, report)
 
-    return report
+    return report, data
+
+
+# ---------------------------------------------------------------------------
+# Supplementary report writer
+# ---------------------------------------------------------------------------
+
+def _load_pubs(data_dir: Path) -> dict:
+    """Return pub_id -> {title, year, authors, pmid, source} from pubs.dat."""
+    pubs_file = data_dir / "pubs.dat"
+    if not pubs_file.exists():
+        return {}
+    pubs = {}
+    for r in parse_dat(pubs_file):
+        uid = r.get("UNIQUE-ID", "")
+        if uid:
+            authors = as_list(r.get("AUTHORS", []))
+            pubs[uid] = {
+                "title":   r.get("TITLE", ""),
+                "year":    r.get("YEAR", ""),
+                "pmid":    r.get("PUBMED-ID", ""),
+                "source":  r.get("SOURCE", ""),
+                "authors": authors,
+            }
+    return pubs
+
+
+def _fmt_citation(pub: dict) -> str:
+    """One-line citation string from a pubs.dat record."""
+    authors = pub.get("authors", [])
+    first = authors[0].split(";")[0].strip() if authors else "?"
+    year   = pub.get("year", "?")
+    title  = (pub.get("title") or "?")[:80]
+    source = pub.get("source", "")
+    pmid   = pub.get("pmid", "")
+    parts = [f"{first} et al. {year}.", title]
+    if source:
+        parts.append(source)
+    if pmid:
+        parts.append(f"PMID:{pmid}")
+    return " ".join(parts)
+
+
+def write_supplementary_report(data_dir: Path, data: dict, report: "Report",
+                                out_path: Path) -> None:
+    """Write a Markdown table of all ERROR/WARNING findings for supplementary use.
+
+    The table is version-specific (tied to the PlantCyc release in data_dir)
+    and is intended as supplementary material, not as part of the main README.
+    """
+    names           = data.get("taxon_names", {})
+    protein_species = data["protein_species"]
+    protein_names   = data["protein_names"]
+    gene_names      = data["gene_names"]
+    gene_products   = data["gene_products"]
+
+    # Load proteins.dat citations  and pubs.dat
+    pubs = _load_pubs(data_dir)
+    protein_citations: dict[str, list[str]] = {}
+    if (data_dir / "proteins.dat").exists():
+        for r in parse_dat(data_dir / "proteins.dat"):
+            uid = r.get("UNIQUE-ID", "")
+            cits = as_list(r.get("CITATIONS", []))
+            if uid and cits:
+                protein_citations[uid] = [
+                    c.split(":")[0].strip() for c in cits
+                ]
+
+    # Collect cross-species ERROR cases (gene-cross-species-products)
+    cross_species_rows = []
+    for finding in report.findings:
+        if finding.check == "gene-cross-species-products":
+            for line in finding.details:
+                # Parse: "G-XXXX (symbol): products=[...] → species=[...]"
+                import re
+                m = re.match(r"(\S+) \(([^)]+)\): products=(\[.*?\]) → species=(\[.*?\])", line)
+                if m:
+                    gid, sym, prods_str, sps_str = m.groups()
+                    prods = [p.strip().strip("'") for p in prods_str.strip("[]").split(",")]
+                    species_raw = [s.strip().strip("'\"") for s in
+                                   re.split(r",\s*(?='|TAX)", sps_str.strip("[]"))]
+                    cross_species_rows.append((gid, sym, prods, species_raw))
+
+    db_version = data_dir.name if data_dir.is_dir() else str(data_dir)
+
+    lines = [
+        f"# PlantCyc input validation — cross-species annotation errors",
+        f"",
+        f"**Data directory:** `{data_dir}`  ",
+        f"**Generated by:** `scripts/validate_plantcyc_input.py --report {out_path.name}`",
+        f"",
+        f"> These cases are specific to this PlantCyc release and require manual",
+        f"> review before tagging a release. Each row is a gene whose protein",
+        f"> products carry annotations pointing to different NCBI taxa.",
+        f"",
+        f"## ERROR: gene-cross-species-products",
+        f"",
+        f"| Gene ID | Gene symbol | Protein(s) | Species 1 | Species 2 | Notes |",
+        f"|---------|------------|-----------|-----------|-----------|-------|",
+    ]
+
+    # Build cross-species table from raw data
+    for finding in report.findings:
+        if finding.check != "gene-cross-species-products":
+            continue
+        for line in finding.details:
+            import re
+            m = re.match(r"(\S+) \(([^)]+)\): products=(\[.*?\]) → species=(\[.*?\])", line)
+            if not m:
+                continue
+            gid, sym = m.group(1), m.group(2)
+            prods = [p.strip().strip("'\"") for p in m.group(3).strip("[]").split(",")]
+            sps_raw = m.group(4).strip("[]")
+            sp_items = [s.strip().strip("'\"") for s in re.split(r",\s*'", sps_raw)]
+            sp1 = sp_items[0] if len(sp_items) > 0 else "?"
+            sp2 = sp_items[1] if len(sp_items) > 1 else "?"
+            prods_str = ", ".join(
+                f"{p} ({protein_names.get(p, p)})" for p in prods
+            )
+            # Collect citations from all products
+            cit_strs = []
+            for p in prods:
+                for pub_id in protein_citations.get(p, []):
+                    pub = pubs.get(pub_id) or pubs.get(f"PUB-{pub_id}")
+                    if pub:
+                        cit_strs.append(_fmt_citation(pub))
+            notes = "; ".join(dict.fromkeys(cit_strs))  # deduplicate, keep order
+            lines.append(f"| {gid} | {sym} | {prods_str} | {sp1} | {sp2} | {notes} |")
+
+    lines += [
+        f"",
+        f"## WARNING: protein-multi-species",
+        f"",
+        f"Proteins carrying more than one SPECIES value.",
+        f"All listed taxa are annotated in the GPML output — review for intent.",
+        f"",
+        f"| Protein ID | Protein name | Species |",
+        f"|-----------|-------------|---------|",
+    ]
+
+    for finding in report.findings:
+        if finding.check != "protein-multi-species":
+            continue
+        for line in finding.details:
+            import re
+            m = re.match(r"(\S+) \(([^)]+)\): (\[.*)", line)
+            if not m:
+                continue
+            pid, pname, sps = m.group(1), m.group(2), m.group(3)
+            lines.append(f"| {pid} | {pname} | {sps} |")
+
+    out_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(f"\nSupplementary report written to: {out_path}")
 
 
 # ---------------------------------------------------------------------------
@@ -365,6 +550,10 @@ def main():
     parser.add_argument("data_dir",
                         help="Path to PlantCyc data directory (must contain "
                              "genes.dat and proteins.dat)")
+    parser.add_argument("--report", metavar="FILE",
+                        help="Write a Markdown supplementary table of all "
+                             "ERROR/WARNING cases to FILE (useful as version-specific "
+                             "supplementary material)")
     args = parser.parse_args()
 
     data_dir = Path(args.data_dir)
@@ -377,8 +566,11 @@ def main():
                   file=sys.stderr)
             sys.exit(1)
 
-    report = run_checks(data_dir)
+    report, data = run_checks(data_dir)
     report.print()
+
+    if args.report:
+        write_supplementary_report(data_dir, data, report, Path(args.report))
 
     sys.exit(1 if report.has_errors() else 0)
 
