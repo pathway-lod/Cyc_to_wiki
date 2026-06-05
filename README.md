@@ -212,12 +212,14 @@ It prints a per-file report and a summary at the end (`Total files / Valid / Inv
 ### Recommended workflow
 
 ```
-1. python scripts/validate_plantcyc_input.py <data_dir>   # check input
-2. python scripts/build_pathways.py <data_dir> <out_dir>  # build GPML
-3. python scripts/test_gpml_files.py <out_dir>            # check output
+1. python scripts/validate_plantcyc_input.py <data_dir>              # check input
+2. python scripts/build_pathways.py <data_dir> <out_dir>              # build GPML
+3. python scripts/build_pathways.py <data_dir> <out_dir> --validate-gpml  # build + XSD check in one step
+   # OR separately:
+   python scripts/test_gpml_files.py <out_dir>                        # check output (XSD)
 ```
 
-Resolve all input ERRORs before running the build. Resolve all output validation errors before tagging a release.
+The `--validate-gpml` flag runs `test_gpml_files.py` automatically after the build — the same XSD check the GitHub Actions CI runs on every push. Resolve all input ERRORs before running the build. Resolve all output validation errors before tagging a release.
 
 ---
 
@@ -453,8 +455,9 @@ flowchart TD
         B["2. Build organism mappings\nbuild_org_mapping.py · classes.dat · species.dat"]
         C["3. CompletePathwayBuilderWithGenes\n───────────────────────\nFor each pathway:\n  Expand sub-pathways\n  Collect reactions/compounds/proteins/genes\n  Propagate species to genes (skip cross-species ERROR genes)\n  For CPLX proteins: propagate species to component\n  monomers where they appear as standalone DataNodes\n  Lay out nodes · Create DataNodes + Interactions"]
         D["4. gpml_writer.py\n───────────────────────\nPython objects → GPML2021 XML\nDataNode (GeneProduct/Protein/Metabolite) · Group (Complex)\nAnnotationRef on DataNodes only — Groups: XSD forbids it"]
+        XSD["4b. test_gpml_files.py  (--validate-gpml)\n───────────────────────\nGPML2021 XSD compliance · Duplicate IDs\nMissing cross-refs · Same check as GitHub CI\n✓ 0 errors in current build"]
         S["5. Post-build scripts\n───────────────────────\nanalyze_gpml_stats.py → GPML_STATISTICS_REPORT.txt\ngenerate_species_coverage_table.py →\n  species_coverage_by_ncbi.tsv (Table S1)\n  species_coverage_by_plantcyc_orgid.tsv (Table S2)\n  species_coverage_summary.tsv (incl. only_complex list)\nrun.metadata.txt"]
-        V --> B --> C --> D --> S
+        V --> B --> C --> D --> XSD --> S
     end
 
     A --> MAIN

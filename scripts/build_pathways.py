@@ -18,6 +18,8 @@ Options:
     --pathway-id <PATHWAY_ID>  : Build only a specific pathway by ID
     --reaction-id <REACTION_ID>: Build only a specific reaction by ID
     --db-version <VERSION>     : PlantCyc database version (e.g. 17.0.0)
+    --validate-gpml            : After building, run test_gpml_files.py (GPML2021 XSD
+                                 validation) on the output directory. Same check as CI.
 
 Examples:
     # Build all pathways
@@ -529,6 +531,7 @@ def main():
     output_base_dir = sys.argv[2]
     include_reactions = '--include-reactions' in sys.argv or '--include_reactions' in sys.argv
     no_timestamp_subdir = '--no-timestamp-subdir' in sys.argv or '--no_timestamp_subdir' in sys.argv
+    validate_gpml = '--validate-gpml' in sys.argv
 
     # Parse specific pathway or reaction ID
     specific_pathway_id = None
@@ -857,6 +860,30 @@ def main():
     # scans both individual_pathways/*.gpml AND individual_reactions/*.gpml recursively.
     # Species that only appear in reaction files (no full pathway) are otherwise missed.
     _generate_species_coverage(data_dir, output_dir, output_dir)
+
+    # ── Optional GPML XSD validation ─────────────────────────────────────────
+    # Runs test_gpml_files.py on the output directory when --validate-gpml is set.
+    # This is the same check the GitHub Actions CI runs on every push.
+    if validate_gpml:
+        print("\n" + "="*60)
+        print("RUNNING GPML XSD VALIDATION (test_gpml_files.py)")
+        print("="*60)
+        gpml_validator = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                       "test_gpml_files.py")
+        if os.path.exists(gpml_validator):
+            import subprocess as _sp
+            result = _sp.run([sys.executable, gpml_validator, output_dir],
+                             capture_output=True, text=True, timeout=600)
+            if result.stdout:
+                for line in result.stdout.strip().splitlines()[-20:]:
+                    print(f"  {line}")
+            if result.returncode != 0:
+                print(f"  ⚠ GPML validation found errors (exit {result.returncode}). "
+                      f"See output above.")
+            else:
+                print("  ✓ All GPML files pass XSD validation.")
+        else:
+            print(f"  WARNING: {gpml_validator} not found — skipping GPML validation")
 
     # Print summary to console
     print("\n" + "="*60)
