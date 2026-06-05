@@ -125,9 +125,51 @@ Cyc_to_wiki/
 └── environment.yml
 ```
 
-## Validation 
+## Validation
 
-A GitHub Action (`.github/workflows/validate.yml`) runs on every push/PR to `main` and validates all `.gpml` files against the GPML2021 XSD schema from [PathVisio/GPML](https://github.com/PathVisio/GPML/blob/master/GPML2021/GPML2021.xsd).
+The pipeline has **two layers of validation** — one on the PlantCyc input files before the build, and one on the generated GPML output files afterwards. A GitHub Actions workflow runs the output check automatically on every push.
+
+---
+
+### Layer 1 — Input validation (PlantCyc flat files)
+
+Run `validate_plantcyc_input.py` on the PlantCyc `data_dir` **before** building GPML to catch data-consistency issues that would produce silent errors or ambiguous species annotations downstream.
+
+```bash
+python scripts/validate_plantcyc_input.py <data_dir>
+```
+
+`<data_dir>` must contain at minimum `genes.dat` and `proteins.dat`.
+
+Exit code: `0` if no ERRORs (warnings are acceptable), `1` if at least one ERROR is found.
+
+#### Checks performed
+
+| Check ID | Level | What it checks | Impact if not fixed |
+|---|---|---|---|
+| `protein-multi-species` | ⚠ WARNING | Proteins in `proteins.dat` that carry **more than one `SPECIES` value** | The first species value encountered is used; remaining species are silently dropped from the GPML annotation |
+| `gene-cross-species-products` | ✗ ERROR | Genes whose protein products are annotated to **genuinely different NCBI taxa** (distinct `TAX-XXXX` identifiers) | The species propagated to the `GeneProduct` DataNode is undefined and depends on processing order — reproducible builds are not guaranteed |
+| `gene-multi-orgid-products` | ⚠ WARNING | Genes whose products use **different BioCyc ORG-codes** that resolve to the same NCBI taxon | Functionally correct but creates duplicate species annotations for the same gene |
+| `gene-multiple-products` | ℹ INFO | Genes encoding **multiple protein products** (isoforms) | Each product's species is propagated independently; only the last one written appears on the `GeneProduct` DataNode — earlier isoforms are overwritten |
+| `protein-multiple-genes` | ℹ INFO | Proteins listing **more than one `GENE` entry** | Species is propagated to all listed genes — this is expected for enzyme complexes and causes no data loss |
+
+#### Interpreting the report
+
+```
+[ERROR] ✗ gene-cross-species-products
+  5 gene(s) have products annotated to different NCBI species.
+    G-5223 (CYP71D18): products=['MONOMER-15424', 'MONOMER-6743'] → species=['TAX-29719', 'TAX-34256']
+```
+
+- **ERRORs** must be resolved before a release — they indicate that the source data contains cross-species protein assignments that make the species annotation in the resulting GPML non-deterministic.
+- **WARNINGs** should be reviewed but do not block the build.
+- **INFO** entries are informational only.
+
+---
+
+### Layer 2 — Output validation (GPML files)
+
+After the build, validate the generated `.gpml` files against the GPML2021 XSD schema. A GitHub Action (`.github/workflows/validate.yml`) runs this automatically on every push/PR to `main`.
 
 To run the same checks locally before merging:
 
@@ -139,15 +181,27 @@ python scripts/test_gpml_files.py output_gpml/<your-run-directory>
 python scripts/test_gpml_files.py path/to/pathway.gpml
 ```
 
-The script checks for:
-- XML well-formedness and schema compliance
-- Duplicate element IDs
+Checks performed:
+- XML well-formedness and schema compliance (GPML2021 XSD)
+- Duplicate element IDs within a pathway
 - Invalid ID characters
-- Missing cross-references (groupRef, citationRef, elementRef)
+- Missing cross-references (`groupRef`, `citationRef`, `elementRef`)
 - Missing required fields and attributes
 - Circular group references
 
 It prints a per-file report and a summary at the end (`Total files / Valid / Invalid / Errors / Warnings`). Exit code is `0` if all files are valid, `1` otherwise.
+
+---
+
+### Recommended workflow
+
+```
+1. python scripts/validate_plantcyc_input.py <data_dir>   # check input
+2. python scripts/build_pathways.py <data_dir> <out_dir>  # build GPML
+3. python scripts/test_gpml_files.py <out_dir>            # check output
+```
+
+Resolve all input ERRORs before running the build. Resolve all output validation errors before tagging a release.
 
 ---
 
