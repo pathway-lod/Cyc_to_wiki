@@ -589,6 +589,10 @@ def main():
         for d in f.details:
             build_log_lines.append(f"    {d}")
 
+    # Write validation report immediately (before building), so it is
+    # present even when using --pathway-id / --reaction-id early-exit paths.
+    _write_validation_report(output_dir, validation_report, validation_data,
+                             cross_species_genes, build_log_lines)
     print("="*60)
 
     #Build organism mappings from BioCyc classes.dat
@@ -751,10 +755,6 @@ def main():
                     for reaction_id, error in failed_reactions_list:
                         f.write(f"{reaction_id}\n")
                         f.write(f"  Error: {error}\n\n")
-
-    # ── Write validation report to output dir ─────────────────────────────────
-    _write_validation_report(output_dir, validation_report, validation_data,
-                             cross_species_genes, build_log_lines)
 
     # Print summary to console
     print("\n" + "="*60)
