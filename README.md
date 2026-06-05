@@ -150,8 +150,8 @@ Exit code: `0` if no ERRORs (warnings are acceptable), `1` if at least one ERROR
 | `protein-multi-species` | ⚠ WARNING | Proteins in `proteins.dat` that carry **more than one `SPECIES` value** | **All** listed taxa are annotated on the protein DataNode and propagated to encoding genes (one `AnnotationRef` per taxon). Biologically valid in plants where the same enzyme has been characterised across species — review each case to confirm intent |
 | `gene-cross-species-products` | ✗ ERROR | Genes whose protein products are annotated to **genuinely different NCBI taxa** (distinct `TAX-XXXX` identifiers) | The species propagated to the `GeneProduct` DataNode is undefined and depends on processing order — reproducible builds are not guaranteed |
 | `gene-multi-orgid-products` | ⚠ WARNING | Genes whose products use **different BioCyc ORG-codes** that resolve to the same NCBI taxon | No data loss — see resolution pipeline below |
-| `gene-multiple-products` | ℹ INFO | Genes encoding **multiple protein products** (isoforms) | Each product's species is propagated independently; only the last one written appears on the `GeneProduct` DataNode — earlier isoforms are overwritten |
-| `protein-multiple-genes` | ℹ INFO | Proteins listing **more than one `GENE` entry** | Species is propagated to all listed genes — this is expected for enzyme complexes and causes no data loss |
+| `gene-multiple-products` | ℹ INFO | Genes encoding **multiple protein products** (isoforms) | No data loss. `_propagate_protein_species_to_genes()` iterates over **all** isoform protein nodes, gathers their `annotationRefs`, and merges them into the gene DataNode (deduplicated by `elementRef`). Every distinct taxon across all isoforms is preserved |
+| `protein-multiple-genes` | ℹ INFO | Proteins listing **more than one `GENE` entry** (enzyme complexes, duplicate gene models) | No data loss provided `genes.dat` ↔ `proteins.dat` cross-references are consistent. The propagation is gene-centric: each gene node's `Product` property is looked up, so all genes that correctly reference the shared protein receive the same taxon annotation |
 
 #### ORG-code to NCBI taxon resolution
 

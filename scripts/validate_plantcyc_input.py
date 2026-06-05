@@ -297,8 +297,11 @@ def check_protein_gene_species(data, report):
             "INFO",
             "gene-multiple-products",
             f"{len(multi_prod)} gene(s) encode multiple protein products (isoforms). "
-            "Each product's species is propagated independently; only the last one "
-            "written will appear on the GeneProduct DataNode.",
+            "Propagation: pathway_builder_core._propagate_protein_species_to_genes() "
+            "collects Product/Products properties from the gene DataNode, iterates "
+            "over ALL linked protein nodes, and merges their annotationRefs into the "
+            "gene DataNode — deduplicated by elementRef. Every distinct taxon across "
+            "all isoforms is therefore represented on the gene. No data loss.",
             details,
         )
     else:
@@ -317,8 +320,15 @@ def check_protein_gene_species(data, report):
         report.add(
             "INFO",
             "protein-multiple-genes",
-            f"{len(multi_gene_prots)} protein(s) list more than one GENE entry. "
-            "Species will be propagated to all listed genes.",
+            f"{len(multi_gene_prots)} protein(s) list more than one GENE entry "
+            "(e.g. enzyme complexes or duplicate gene models). "
+            "_propagate_protein_species_to_genes() is gene-centric: it reads each "
+            "gene node's Product/Products properties to locate linked proteins. "
+            "All genes that correctly list this protein in their PRODUCT field in "
+            "genes.dat will therefore receive the same taxon annotation. "
+            "No data loss provided genes.dat and proteins.dat cross-references "
+            "are consistent (i.e. every gene listed in the protein's GENE field "
+            "also carries the protein in its own PRODUCT field).",
             details,
         )
     else:
