@@ -853,7 +853,10 @@ def main():
     print("\n" + "="*60)
     print("GENERATING SPECIES COVERAGE TABLES")
     print("="*60)
-    _generate_species_coverage(data_dir, output_dir, individual_pathways_dir)
+    # Pass output_dir (not just individual_pathways_dir) so generate_species_coverage_table.py
+    # scans both individual_pathways/*.gpml AND individual_reactions/*.gpml recursively.
+    # Species that only appear in reaction files (no full pathway) are otherwise missed.
+    _generate_species_coverage(data_dir, output_dir, output_dir)
 
     # Print summary to console
     print("\n" + "="*60)
