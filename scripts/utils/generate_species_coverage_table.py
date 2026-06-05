@@ -888,6 +888,56 @@ def main():
                     r.get('n_plantcyc_org_ids', '?'),
                     r.get('plantcyc_org_ids', ''),
                 ])
+        w.writerow([])
+
+        # Section 5: taxonomic rank breakdown
+        def _classify_rank(ncbi_id: str, name: str) -> str:
+            if not ncbi_id.strip():
+                return 'unresolved'
+            nl = name.lower()
+            words = name.strip().split()
+            if any(x in nl for x in ['hybrid cultivar', ' x ', 'x hybrida', 'x morifolium',
+                                      'x ananassa', 'x piperita', 'x aurantium', 'x paradisi',
+                                      'x damascena', 'x microcarpa', 'hybrid']):
+                return 'hybrid / cultivar'
+            if any(x in nl for x in ['subsp.', 'ssp.', 'var.', 'varietas', 'f.sp.',
+                                      'japonica group', 'indica group', ' group']):
+                return 'subspecies / variety'
+            if len(words) == 1:
+                return 'genus'
+            return 'species'
+
+        from collections import Counter as _Counter
+        rank_counts = _Counter(_classify_rank(r.get('ncbi_taxon_id',''), r.get('scientific_name',''))
+                               for r in ncbi_rows)
+        n_species_rank = rank_counts.get('species', 0)
+
+        w.writerow([f'Taxonomic rank of {n_ncbi_total} NCBI taxa:'])
+        w.writerow(['Rank', 'Count', 'Notes'])
+        for rank in ['species', 'hybrid / cultivar', 'subspecies / variety', 'genus', 'unresolved']:
+            n = rank_counts.get(rank, 0)
+            if n == 0:
+                continue
+            note = {
+                'species':              'Binomial scientific name',
+                'hybrid / cultivar':    'Interspecific hybrid or cultivar group',
+                'subspecies / variety': 'Infraspecific rank',
+                'genus':                'PlantCyc annotated enzyme to genus level only',
+                'unresolved':           'No NCBI ID or no name mapping available',
+            }.get(rank, '')
+            w.writerow([rank, n, note])
+        w.writerow([])
+
+        # List of non-species entries
+        non_species = [(r.get('ncbi_taxon_id','—'), r.get('scientific_name','?'),
+                        _classify_rank(r.get('ncbi_taxon_id',''), r.get('scientific_name','')))
+                       for r in ncbi_rows
+                       if _classify_rank(r.get('ncbi_taxon_id',''), r.get('scientific_name','')) != 'species']
+        if non_species:
+            w.writerow([f'Non-species entries ({len(non_species)}):'])
+            w.writerow(['NCBI taxon ID', 'Scientific name', 'Rank'])
+            for ncbi, name, rank in sorted(non_species, key=lambda x: x[2]):
+                w.writerow([ncbi, name, rank])
 
     print(f"Output: {summary_path}")
 
