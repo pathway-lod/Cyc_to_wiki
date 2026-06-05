@@ -395,6 +395,12 @@ class GPMLWriter:
                 ref_id = getattr(citation_ref, 'elementRef', '')
                 gpml_output += f'      <CitationRef elementRef="{self.escape_xml(ref_id)}" />\n'
 
+        # AnnotationRefs — species annotations on complex Groups
+        if hasattr(group, 'annotationRefs') and group.annotationRefs:
+            for annotation_ref in group.annotationRefs:
+                ref_id = getattr(annotation_ref, 'elementRef', '')
+                gpml_output += f'      <AnnotationRef elementRef="{self.escape_xml(ref_id)}" />\n'
+
         gpml_output += '    </Group>\n'
         return gpml_output
 

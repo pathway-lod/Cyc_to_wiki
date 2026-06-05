@@ -333,6 +333,11 @@ def create_complex_group(record, citation_manager=None):
     if citation_manager:
         citation_refs = create_citation_refs_from_record(record, citation_manager)
 
+    # Handle species annotations — CPLX records may carry a SPECIES field.
+    # Annotating the Group ensures that complex-annotated species produce
+    # wp:organism triples in the taxonomy-extra RDF (via gpml-to-rdf).
+    annotations, annotation_refs = create_species_annotation(record)
+
     # Create graphics for the group
     graphics = standard_graphics.create_complex_group_graphics(0.0, 0.0, 200.0, 100.0)
 
@@ -344,10 +349,11 @@ def create_complex_group(record, citation_manager=None):
         graphics=graphics,
         comments=comments,
         properties=properties,
-        citationRefs=citation_refs
+        citationRefs=citation_refs,
+        annotationRefs=annotation_refs,
     )
 
-    return group
+    return group, annotations
 
 
 def create_monomer_datanode(monomer_id, parent_complex_id, monomer_records=None):
@@ -682,9 +688,11 @@ def create_enhanced_datanodes_from_proteins(proteins_file, citation_manager=None
         processed_protein_ids.add(unique_id)
 
         if is_protein_complex(record):
-            # Create a Group for the complex
-            complex_group = create_complex_group(record, citation_manager)
+            # Create a Group for the complex (also returns species annotations)
+            complex_group, complex_annotations = create_complex_group(record, citation_manager)
             groups.append(complex_group)
+            if complex_annotations:
+                all_annotations.extend(complex_annotations)
 
             # Create DataNodes for each component
             component_ids = parse_complex_components(record)

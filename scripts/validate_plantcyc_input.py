@@ -165,17 +165,19 @@ def load_data(data_dir: Path):
             data["gene_names"][uid]    = r.get("COMMON-NAME", uid)
 
     proteins = parse_dat(data_dir / "proteins.dat")
-    data["protein_species"] = {}     # protein_id -> [org_ids]
-    data["protein_genes"]   = {}     # protein_id -> [gene_ids]
-    data["protein_names"]   = {}     # protein_id -> COMMON-NAME
-    data["protein_types"]   = {}     # protein_id -> [TYPES]
+    data["protein_species"]    = {}   # protein_id -> [org_ids]
+    data["protein_genes"]      = {}   # protein_id -> [gene_ids]
+    data["protein_names"]      = {}   # protein_id -> COMMON-NAME
+    data["protein_types"]      = {}   # protein_id -> [TYPES]
+    data["_protein_components"] = {}  # protein_id -> [component_ids] (for CPLX entries)
     for r in proteins:
         uid = r.get("UNIQUE-ID", "")
         if uid:
-            data["protein_species"][uid] = as_list(r.get("SPECIES"))
-            data["protein_genes"][uid]   = as_list(r.get("GENE"))
-            data["protein_names"][uid]   = r.get("COMMON-NAME", uid)
-            data["protein_types"][uid]   = as_list(r.get("TYPES"))
+            data["protein_species"][uid]     = as_list(r.get("SPECIES"))
+            data["protein_genes"][uid]       = as_list(r.get("GENE"))
+            data["protein_names"][uid]       = r.get("COMMON-NAME", uid)
+            data["protein_types"][uid]       = as_list(r.get("TYPES"))
+            data["_protein_components"][uid] = as_list(r.get("COMPONENTS"))
 
     # Build reverse map: gene_id -> [protein_ids that list this gene]
     data["gene_encoders"] = defaultdict(list)
@@ -368,6 +370,74 @@ def check_protein_gene_species(data, report):
 
 
 # ---------------------------------------------------------------------------
+# CHECK 2 — Species only annotated via CPLX-type proteins
+# ---------------------------------------------------------------------------
+
+def check_cplx_only_species(data, report):
+    """Find taxa whose proteins only appear in GPML inside Complex Groups.
+
+    A taxon is 'CPLX-only' if ALL its proteins in proteins.dat are either:
+      (a) a CPLX-type protein (becomes a Group element in GPML), or
+      (b) a monomer that is listed as a COMPONENT of a CPLX protein
+          (appears as a DataNode with groupRef inside the complex, not standalone).
+
+    Before the fix that annotates Complex Group elements, these taxa were
+    silently absent from GPML taxonomy annotations.  After the fix, each
+    CPLX Group carries its own wp:organism triple.
+    """
+    names           = data.get("taxon_names", {})
+    protein_species = data["protein_species"]
+    protein_types   = data["protein_types"]
+
+    def is_cplx(pid: str) -> bool:
+        return any("Complex" in t for t in protein_types.get(pid, []))
+
+    # Build set of all monomer IDs that are components of a complex
+    component_monomers: set[str] = set()
+    for pid in protein_types:
+        if is_cplx(pid):
+            for comp in as_list(data.get("_protein_components", {}).get(pid, [])):
+                component_monomers.add(comp)
+
+    # For each taxon, collect annotated proteins; mark as CPLX-only if every
+    # protein is either a CPLX itself or a component of one
+    taxon_proteins: dict[str, list] = {}
+    for pid, species_list in protein_species.items():
+        for sp in species_list:
+            taxon_proteins.setdefault(sp, []).append(pid)
+
+    cplx_only = {}
+    for taxon, pids in taxon_proteins.items():
+        if taxon in ("TAX-33090",):
+            continue
+        if all(is_cplx(p) or p in component_monomers for p in pids):
+            cplx_only[taxon] = pids
+
+    data["cplx_only_species"] = cplx_only  # store for --report
+
+    if cplx_only:
+        details = [
+            f"{fmt_taxon(taxon, names)}: cplx_proteins={pids}"
+            for taxon, pids in sorted(cplx_only.items())
+        ]
+        report.add(
+            "INFO",
+            "cplx-only-species",
+            f"{len(cplx_only)} taxon/taxa are annotated exclusively via protein-complex "
+            "(CPLX-type) entries. Before the fix that annotates Complex Group elements, "
+            "these species were silently absent from GPML taxonomy output. "
+            "After the fix (create_complex_group adds annotationRefs; gpml_writer "
+            "writes them; create_gpml_taxonomy_extra_rdf processes Group elements), "
+            "each CPLX Group now carries wp:organism triples in the RDF. "
+            "Use --report to get a full table of affected taxa and their complex components.",
+            details,
+        )
+    else:
+        report.add("INFO", "cplx-only-species",
+                   "No taxa are exclusively annotated via CPLX-type proteins.")
+
+
+# ---------------------------------------------------------------------------
 # Run all checks
 # ---------------------------------------------------------------------------
 
@@ -383,6 +453,7 @@ def run_checks(data_dir: Path):
 
     # --- Add new checks here as the pipeline grows ---
     check_protein_gene_species(data, report)
+    check_cplx_only_species(data, report)
 
     return report, data
 
@@ -569,7 +640,46 @@ def write_supplementary_report(data_dir: Path, data: dict, report: "Report",
                 "; ".join(cit_refs),
             ])
 
-    out_path.write_text(buf.getvalue(), encoding="utf-8")
+    # ── INFO rows: cplx-only-species ─────────────────────────────────────────
+    # Load proteins.dat to get component info for CPLX records
+    cplx_components: dict[str, list[str]] = {}
+    if (data_dir / "proteins.dat").exists():
+        for r in parse_dat(data_dir / "proteins.dat"):
+            uid = r.get("UNIQUE-ID", "")
+            comps = as_list(r.get("COMPONENTS", []))
+            if uid and comps:
+                cplx_components[uid] = comps
+
+    cplx_only = data.get("cplx_only_species", {})
+    for taxon, pids in sorted(cplx_only.items()):
+        tid1, sn1 = _split_taxon(taxon)
+        for pid in pids:
+            pname = protein_names.get(pid, pid)
+            comps = cplx_components.get(pid, [])
+            comps_str = "; ".join(comps)
+
+            cit_pmids, cit_refs = [], []
+            for pub_id in protein_citations.get(pid, []):
+                pub = pubs.get(pub_id) or pubs.get(f"PUB-{pub_id}")
+                if pub:
+                    pmid = pub.get("pmid", "")
+                    ref  = _fmt_citation(pub)
+                    if pmid and pmid not in cit_pmids:
+                        cit_pmids.append(pmid)
+                    if ref and ref not in cit_refs:
+                        cit_refs.append(ref)
+
+            writer.writerow([
+                "cplx-only-species", "INFO",
+                "", "",          # no gene_id / gene_symbol (CPLX not directly gene-linked)
+                pid, pname,
+                tid1, sn1, "", "",   # only one species per CPLX row
+                comps_str,           # short_note: component list
+                "; ".join(cit_pmids),
+                "; ".join(cit_refs),
+            ])
+
+    out_path.write_text(b'\xef\xbb\xbf'.decode() + buf.getvalue(), encoding="utf-8")
     print(f"\nSupplementary TSV written to: {out_path}")
 
 

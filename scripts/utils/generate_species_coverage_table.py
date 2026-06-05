@@ -299,7 +299,7 @@ def build_gpml_species_index(gpml_dir):
     scientific name or an unresolved ORG-/TAX- ID).
     """
     index = defaultdict(lambda: {
-        'GeneProduct': 0, 'Protein': 0, 'Metabolite': 0, 'files': set()
+        'GeneProduct': 0, 'Protein': 0, 'Metabolite': 0, 'Complex': 0, 'files': set()
     })
 
     gpml_files = []
@@ -341,6 +341,21 @@ def build_gpml_species_index(gpml_dir):
                         index[sp_val][node_type] += 1
                         index[sp_val]['files'].add(file_stem)
 
+        # Also scan Group type="Complex" elements for AnnotationRef taxonomy annotations.
+        # After the fix that adds species to Complex Groups, these represent taxa whose
+        # proteins only appear via protein complexes (CPLX-type in proteins.dat).
+        for grp in root_el.findall(f'.//{{{GPML_NS}}}Group'):
+            if grp.get('type', '') != 'Complex':
+                continue
+            for aref in grp.findall(f'{{{GPML_NS}}}AnnotationRef'):
+                ref_id = aref.get('elementRef', '')
+                ann = ann_index.get(ref_id, {})
+                if ann.get('type', '').lower() == 'taxonomy':
+                    sp_val = ann.get('value', '').strip()
+                    if sp_val:
+                        index[sp_val]['Complex'] += 1
+                        index[sp_val]['files'].add(file_stem)
+
     return index
 
 
@@ -348,7 +363,7 @@ def build_gpml_species_index(gpml_dir):
 # Collapse rows to one per NCBI taxon ID
 # ---------------------------------------------------------------------------
 
-_GPML_FORM_RANK = {'resolved_name': 0, 'raw_id': 1, 'both': 2, 'absent': 3}
+_GPML_FORM_RANK = {'resolved_name': 0, 'raw_id': 1, 'both': 2, 'only_complex': 3, 'absent': 4}
 
 
 def collapse_by_ncbi(rows):
@@ -402,11 +417,13 @@ def collapse_by_ncbi(rows):
         n_gp   = max(int(r['n_gpml_geneproduct_nodes']) for r in grp)
         n_prot = max(int(r['n_gpml_protein_nodes'])     for r in grp)
         n_met  = max(int(r['n_gpml_metabolite_nodes'])  for r in grp)
+        n_cplx = max(int(r.get('n_gpml_complex_groups', 0)) for r in grp)
         n_files= max(int(r['n_gpml_pathway_files'])     for r in grp)
         in_gpml = 'yes' if any(r['in_gpml'] == 'yes' for r in grp) else 'no'
         gp_yn   = 'yes' if n_gp   > 0 else 'no'
         pr_yn   = 'yes' if n_prot > 0 else 'no'
         mt_yn   = 'yes' if n_met  > 0 else 'no'
+        cx_yn   = 'yes' if n_cplx > 0 else 'no'
 
         # Best (lowest rank) gpml_name_form across all org_ids
         best_form = min(grp, key=lambda r: _GPML_FORM_RANK.get(r['gpml_name_form'], 99))
@@ -427,9 +444,11 @@ def collapse_by_ncbi(rows):
             'gpml_as_geneproduct':      gp_yn,
             'gpml_as_protein':          pr_yn,
             'gpml_as_metabolite':       mt_yn,
+            'gpml_as_complex':          cx_yn,
             'n_gpml_geneproduct_nodes': n_gp,
             'n_gpml_protein_nodes':     n_prot,
             'n_gpml_metabolite_nodes':  n_met,
+            'n_gpml_complex_groups':    n_cplx,
             'n_gpml_pathway_files':     n_files,
             'gpml_name_form':           gpml_form,
         })
@@ -451,9 +470,11 @@ def collapse_by_ncbi(rows):
             'gpml_as_geneproduct':      r['gpml_as_geneproduct'],
             'gpml_as_protein':          r['gpml_as_protein'],
             'gpml_as_metabolite':       r['gpml_as_metabolite'],
+            'gpml_as_complex':          r.get('gpml_as_complex', 'no'),
             'n_gpml_geneproduct_nodes': int(r['n_gpml_geneproduct_nodes']),
             'n_gpml_protein_nodes':     int(r['n_gpml_protein_nodes']),
             'n_gpml_metabolite_nodes':  int(r['n_gpml_metabolite_nodes']),
+            'n_gpml_complex_groups':    int(r.get('n_gpml_complex_groups', 0)),
             'n_gpml_pathway_files':     int(r['n_gpml_pathway_files']),
             'gpml_name_form':           r['gpml_name_form'],
         })
@@ -569,9 +590,11 @@ def main():
         'gpml_as_geneproduct',
         'gpml_as_protein',
         'gpml_as_metabolite',
+        'gpml_as_complex',
         'n_gpml_geneproduct_nodes',
         'n_gpml_protein_nodes',
         'n_gpml_metabolite_nodes',
+        'n_gpml_complex_groups',
         'n_gpml_pathway_files',
         'gpml_name_form',
     ]
@@ -595,19 +618,22 @@ def main():
         n_gp   = gpml_by_name.get('GeneProduct', 0) + gpml_by_raw_id.get('GeneProduct', 0)
         n_prot = gpml_by_name.get('Protein', 0)     + gpml_by_raw_id.get('Protein', 0)
         n_met  = gpml_by_name.get('Metabolite', 0)  + gpml_by_raw_id.get('Metabolite', 0)
+        n_cplx = gpml_by_name.get('Complex', 0)     + gpml_by_raw_id.get('Complex', 0)
         gpml_files = gpml_by_name.get('files', set()) | gpml_by_raw_id.get('files', set())
 
-        in_gpml = n_gp + n_prot + n_met > 0
+        in_gpml = n_gp + n_prot + n_met + n_cplx > 0
 
         # Determine how the species appears in GPML (resolved name / raw ID / both)
-        in_by_name   = bool(gpml_by_name.get('GeneProduct', 0) + gpml_by_name.get('Protein', 0) + gpml_by_name.get('Metabolite', 0))
-        in_by_raw    = bool(gpml_by_raw_id.get('GeneProduct', 0) + gpml_by_raw_id.get('Protein', 0) + gpml_by_raw_id.get('Metabolite', 0))
-        if in_by_name and in_by_raw:
+        in_direct_by_name = bool(gpml_by_name.get('GeneProduct', 0) + gpml_by_name.get('Protein', 0) + gpml_by_name.get('Metabolite', 0) + gpml_by_name.get('Complex', 0))
+        in_direct_by_raw  = bool(gpml_by_raw_id.get('GeneProduct', 0) + gpml_by_raw_id.get('Protein', 0) + gpml_by_raw_id.get('Metabolite', 0) + gpml_by_raw_id.get('Complex', 0))
+        only_via_complex  = (n_gp + n_prot + n_met == 0) and n_cplx > 0
+
+        if in_direct_by_name and in_direct_by_raw:
             gpml_name_form = 'both'
-        elif in_by_name:
-            gpml_name_form = 'resolved_name'
-        elif in_by_raw:
-            gpml_name_form = 'raw_id'
+        elif in_direct_by_name:
+            gpml_name_form = 'only_complex' if only_via_complex else 'resolved_name'
+        elif in_direct_by_raw:
+            gpml_name_form = 'only_complex' if only_via_complex else 'raw_id'
         else:
             gpml_name_form = 'absent'
 
@@ -629,9 +655,11 @@ def main():
             'gpml_as_geneproduct':      'yes' if n_gp   > 0 else 'no',
             'gpml_as_protein':          'yes' if n_prot > 0 else 'no',
             'gpml_as_metabolite':       'yes' if n_met  > 0 else 'no',
+            'gpml_as_complex':          'yes' if n_cplx > 0 else 'no',
             'n_gpml_geneproduct_nodes': n_gp,
             'n_gpml_protein_nodes':     n_prot,
             'n_gpml_metabolite_nodes':  n_met,
+            'n_gpml_complex_groups':    n_cplx,
             'n_gpml_pathway_files':     len(gpml_files),
             'gpml_name_form':           gpml_name_form,
         })
@@ -668,26 +696,34 @@ def main():
         writer.writerows(ncbi_rows)
 
     # NCBI-level summary
-    n_ncbi_total   = len(ncbi_rows)
-    n_ncbi_in_gpml = sum(1 for r in ncbi_rows if r['in_gpml'] == 'yes')
-    n_ncbi_absent  = sum(1 for r in ncbi_rows if r['gpml_name_form'] == 'absent')
-    n_ncbi_gp      = sum(1 for r in ncbi_rows if r['gpml_as_geneproduct'] == 'yes')
-    n_ncbi_prot    = sum(1 for r in ncbi_rows if r['gpml_as_protein'] == 'yes')
-    n_ncbi_met     = sum(1 for r in ncbi_rows if r['gpml_as_metabolite'] == 'yes')
+    n_ncbi_total       = len(ncbi_rows)
+    n_ncbi_in_gpml     = sum(1 for r in ncbi_rows if r['in_gpml'] == 'yes')
+    n_ncbi_absent      = sum(1 for r in ncbi_rows if r['gpml_name_form'] == 'absent')
+    n_ncbi_only_cplx   = sum(1 for r in ncbi_rows if r['gpml_name_form'] == 'only_complex')
+    n_ncbi_gp          = sum(1 for r in ncbi_rows if r['gpml_as_geneproduct'] == 'yes')
+    n_ncbi_prot        = sum(1 for r in ncbi_rows if r['gpml_as_protein'] == 'yes')
+    n_ncbi_met         = sum(1 for r in ncbi_rows if r['gpml_as_metabolite'] == 'yes')
+    n_ncbi_cplx        = sum(1 for r in ncbi_rows if r.get('gpml_as_complex') == 'yes')
 
-    print(f"\n{'='*55}")
+    print(f"\n{'='*60}")
     print(f"Unique taxa summary (by NCBI taxon ID, {n_ncbi_total} total)")
-    print(f"{'='*55}")
-    print(f"  In GPML (any DataNode type)  : {n_ncbi_in_gpml}")
-    print(f"    As GeneProduct             : {n_ncbi_gp}")
-    print(f"    As Protein                 : {n_ncbi_prot}")
-    print(f"    As Metabolite              : {n_ncbi_met}")
-    print(f"  Absent from GPML             : {n_ncbi_absent}")
+    print(f"{'='*60}")
+    print(f"  In GPML (any node type)        : {n_ncbi_in_gpml}")
+    print(f"    As GeneProduct DataNode      : {n_ncbi_gp}")
+    print(f"    As Protein DataNode          : {n_ncbi_prot}")
+    print(f"    As Metabolite DataNode       : {n_ncbi_met}")
+    print(f"    As Complex Group only        : {n_ncbi_only_cplx}  ← only via CPLX-type proteins")
+    print(f"  Absent from GPML               : {n_ncbi_absent}")
+    if n_ncbi_only_cplx:
+        print(f"\n  Taxa present only via Complex Groups (gpml_name_form='only_complex'):")
+        for r in ncbi_rows:
+            if r['gpml_name_form'] == 'only_complex':
+                print(f"    {r['ncbi_taxon_id']:<8}  {r['scientific_name']}")
     print(f"\n  Absent species:")
     for r in ncbi_rows:
         if r['gpml_name_form'] == 'absent':
             print(f"    {r['ncbi_taxon_id']:<8}  {r['scientific_name']}")
-    print(f"{'='*55}")
+    print(f"{'='*60}")
     print(f"Output: {ncbi_out}")
 
     # ------------------------------------------------------------------
@@ -698,6 +734,8 @@ def main():
     n_as_gp       = sum(1 for r in rows if r['gpml_as_geneproduct'] == 'yes')
     n_as_prot     = sum(1 for r in rows if r['gpml_as_protein'] == 'yes')
     n_as_met      = sum(1 for r in rows if r['gpml_as_metabolite'] == 'yes')
+    n_as_cplx     = sum(1 for r in rows if r.get('gpml_as_complex') == 'yes')
+    n_only_cplx   = sum(1 for r in rows if r['gpml_name_form'] == 'only_complex')
     n_resolved    = sum(1 for r in rows if r['gpml_name_form'] == 'resolved_name')
     n_raw_id      = sum(1 for r in rows if r['gpml_name_form'] == 'raw_id')
     n_both        = sum(1 for r in rows if r['gpml_name_form'] == 'both')
@@ -716,10 +754,12 @@ def main():
     print(f"    As GeneProduct DataNode      : {n_as_gp}")
     print(f"    As Protein DataNode          : {n_as_prot}")
     print(f"    As Metabolite DataNode       : {n_as_met}")
+    print(f"    As Complex Group only        : {n_only_cplx}  ← only via CPLX-type proteins (get wp:organism on the Group)")
     print(f"  Name form in GPML annotations:")
     print(f"    Resolved scientific name     : {n_resolved}")
     print(f"    Raw ORG-/TAX- ID             : {n_raw_id}")
     print(f"    Both (resolved + raw)        : {n_both}")
+    print(f"    Only via Complex Group       : {n_only_cplx}")
     print(f"    Absent from GPML             : {n_absent}")
     print(f"{'='*55}")
     print(f"Output: {args.output}")
