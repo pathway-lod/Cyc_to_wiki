@@ -152,7 +152,7 @@ Exit code: `0` if no ERRORs (warnings are acceptable), `1` if at least one ERROR
 | `gene-multi-orgid-products` | ⚠ WARNING | Genes whose products use **different BioCyc ORG-codes** that resolve to the same NCBI taxon | No data loss — see resolution pipeline below |
 | `gene-multiple-products` | ℹ INFO | Genes encoding **multiple protein products** (isoforms) | No data loss. `_propagate_protein_species_to_genes()` iterates over **all** isoform protein nodes, gathers their `annotationRefs`, and merges them into the gene DataNode (deduplicated by `elementRef`). Every distinct taxon across all isoforms is preserved |
 | `protein-multiple-genes` | ℹ INFO | Proteins listing **more than one `GENE` entry** (enzyme complexes, duplicate gene models) | No data loss provided `genes.dat` ↔ `proteins.dat` cross-references are consistent. The propagation is gene-centric: each gene node's `Product` property is looked up, so all genes that correctly reference the shared protein receive the same taxon annotation |
-| `cplx-only-species` | ℹ INFO | Taxa annotated **exclusively via protein-complex** (`CPLX-type`) records. These appear as `<Group type="Complex">` in GPML (not as DataNodes) | The Complex Group now receives its own `<AnnotationRef>` taxonomy annotation (fixed in `create_complex_group()`, `gpml_writer.py`, and `create_gpml_taxonomy_extra_rdf.py`). The `gpml_name_form` column in the species coverage table reports these as `only_complex` |
+| `cplx-only-species` | ℹ INFO | Taxa annotated **exclusively via protein-complex** (`CPLX-type`) records. These appear as `<Group type="Complex">` in GPML (not as DataNodes) | **Annotation is lost for these 12 taxa.** GPML2021 XSD forbids `<AnnotationRef>` on `<Group>` elements, so the species cannot be stored in the GPML file. The CPLX species annotation is propagated to component monomer DataNodes at build time, but those monomers never appear as standalone DataNodes (they are not direct reaction catalysts), so no `wp:organism` triple is generated. The `gpml_name_form = 'only_complex'` label in the species coverage table flags these taxa for manual review; see `species_coverage_summary.tsv` Section 3 for the list with CPLX IDs and component IDs |
 
 #### ORG-code to NCBI taxon resolution
 
@@ -449,11 +449,11 @@ flowchart TD
     A[("PlantCyc flat files\ncompounds.dat · genes.dat\nproteins.dat · reactions.dat\npathways.dat · regulation.dat\npubs.dat · classes.dat")] --> MAIN
 
     subgraph MAIN ["build_pathways.py  (single entry point)"]
-        V["1. validate_plantcyc_input.py\n───────────────────────\n✗ ERROR gene-cross-species → skip taxonomy\n⚠ WARNING → annotate all taxa\nℹ cplx-only-species → Complex Group path\nWrites VALIDATION_REPORT.txt + VALIDATION_SUMMARY.tsv"]
+        V["1. validate_plantcyc_input.py\n───────────────────────\n✗ ERROR gene-cross-species → taxonomy skipped\n⚠ WARNING protein-multi-species → all taxa annotated\nℹ cplx-only-species → documented, annotation lost\n   (GPML2021 XSD forbids AnnotationRef on Groups)\nWrites VALIDATION_REPORT.txt + VALIDATION_SUMMARY.tsv"]
         B["2. Build organism mappings\nbuild_org_mapping.py · classes.dat · species.dat"]
-        C["3. CompletePathwayBuilderWithGenes\n───────────────────────\nFor each pathway:\n  Expand sub-pathways\n  Collect reactions/compounds/proteins/genes\n  Propagate species to genes (skip ERROR genes)\n  Annotate Complex Groups with wp:organism\n  Lay out nodes · Create DataNodes + Interactions"]
-        D["4. gpml_writer.py\n───────────────────────\nPython objects → GPML2021 XML\nDataNode · Group (Complex) · Interaction\nAnnotationRef taxonomy on both DataNodes and Groups"]
-        S["5. Post-build scripts\n───────────────────────\nanalyze_gpml_stats.py → GPML_STATISTICS_REPORT.txt\ngenerate_species_coverage_table.py →\n  species_coverage_by_ncbi.tsv (Table S1)\n  species_coverage_by_plantcyc_orgid.tsv (Table S2)\n  species_coverage_summary.tsv\nrun.metadata.txt"]
+        C["3. CompletePathwayBuilderWithGenes\n───────────────────────\nFor each pathway:\n  Expand sub-pathways\n  Collect reactions/compounds/proteins/genes\n  Propagate species to genes (skip cross-species ERROR genes)\n  For CPLX proteins: propagate species to component\n  monomers where they appear as standalone DataNodes\n  Lay out nodes · Create DataNodes + Interactions"]
+        D["4. gpml_writer.py\n───────────────────────\nPython objects → GPML2021 XML\nDataNode (GeneProduct/Protein/Metabolite) · Group (Complex)\nAnnotationRef on DataNodes only — Groups: XSD forbids it"]
+        S["5. Post-build scripts\n───────────────────────\nanalyze_gpml_stats.py → GPML_STATISTICS_REPORT.txt\ngenerate_species_coverage_table.py →\n  species_coverage_by_ncbi.tsv (Table S1)\n  species_coverage_by_plantcyc_orgid.tsv (Table S2)\n  species_coverage_summary.tsv (incl. only_complex list)\nrun.metadata.txt"]
         V --> B --> C --> D --> S
     end
 
@@ -461,9 +461,9 @@ flowchart TD
 
     MAIN -->|"Output directory\nplantcyc{ver}-gpml2021__git{sha}__{ts}"| OUT
 
-    OUT[("individual_pathways/*.gpml\nindividual_reactions/*.gpml\nGPML_STATISTICS_REPORT.txt\nrun.metadata.txt\nVALIDATION_REPORT.txt\nVALIDATION_SUMMARY.tsv (Table S3)\nspecies_coverage_by_ncbi.tsv (Table S1)\nspecies_coverage_by_plantcyc_orgid.tsv (Table S2)\nspecies_coverage_summary.tsv")]
+    OUT[("individual_pathways/*.gpml  (1,162)\nindividual_reactions/*.gpml  (1,316)\nGPML_STATISTICS_REPORT.txt\nrun.metadata.txt\nVALIDATION_REPORT.txt\nVALIDATION_SUMMARY.tsv  ← Table S3\nspecies_coverage_by_ncbi.tsv  ← Table S1\nspecies_coverage_by_plantcyc_orgid.tsv  ← Table S2\nspecies_coverage_summary.tsv")]
 
-    OUT -->|"aggregate + RDF conversion"| E["gpml-to-rdf repo\n───────────────────────\ncreate_gpml_taxonomy_extra_rdf.py\n  DataNode AnnotationRef → wp:organism triples\n  Group type=Complex → wp:organism triples (new)\ngraph/pathways + graph/gpml-taxonomy-extra"]
+    OUT -->|"aggregate + RDF conversion"| E["gpml-to-rdf repo\n───────────────────────\ncreate_gpml_taxonomy_extra_rdf.py\n  DataNode AnnotationRef → wp:organism triples\n  Group type=Complex: NOT annotated (XSD limitation)\n  12 CPLX-only taxa lose annotation (see only_complex)\ngraph/pathways + graph/gpml-taxonomy-extra"]
 
     style A fill:#dbe9f4,stroke:#2980b9
     style OUT fill:#d5f5e3,stroke:#27ae60

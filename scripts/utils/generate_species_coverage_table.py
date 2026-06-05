@@ -669,6 +669,52 @@ def main():
     # Collapsed table (one row per NCBI taxon ID)
     # ------------------------------------------------------------------
     ncbi_rows = collapse_by_ncbi(rows)
+
+    # ------------------------------------------------------------------
+    # Re-classify 'absent' NCBI rows as 'only_complex' where all proteins
+    # for that taxon are CPLX-type (or CPLX component monomers).
+    # This is computed from proteins.dat — NOT from GPML — because the
+    # GPML2021 XSD forbids AnnotationRef on Group elements, so CPLX-only
+    # taxa cannot be annotated in GPML and their species annotation is lost.
+    # ------------------------------------------------------------------
+    # Build set of all component monomer IDs (part of at least one CPLX)
+    component_monomers: set[str] = set()
+    for pid, rec in protein_records.items():
+        types = _as_list(rec.get('TYPES', []))
+        if any('Complex' in t for t in types):
+            for comp in _as_list(rec.get('COMPONENTS', [])):
+                if comp.strip():
+                    component_monomers.add(comp.strip())
+
+    def _is_cplx_only_ncbi(ncbi_row: dict) -> bool:
+        """True if ALL proteins for this NCBI taxon are either CPLX-type or CPLX components."""
+        org_ids = [o.strip() for o in ncbi_row.get('plantcyc_org_ids', '').split(';') if o.strip()]
+        pids: set[str] = set()
+        for oid in org_ids:
+            pids.update(species_proteins.get(oid, []))
+        if not pids:
+            return False
+        return all(
+            any('Complex' in t for t in _as_list(protein_records.get(p, {}).get('TYPES', [])))
+            or p in component_monomers
+            for p in pids
+        )
+
+    for r in ncbi_rows:
+        if r.get('gpml_name_form') == 'absent' and _is_cplx_only_ncbi(r):
+            r['gpml_name_form'] = 'only_complex'
+    # Also update the per-org_id rows
+    for r in rows:
+        if r.get('gpml_name_form') == 'absent':
+            org_id = r.get('org_id', '')
+            pids = species_proteins.get(org_id, [])
+            if pids and all(
+                any('Complex' in t for t in _as_list(protein_records.get(p, {}).get('TYPES', [])))
+                or p in component_monomers
+                for p in pids
+            ):
+                r['gpml_name_form'] = 'only_complex'
+
     # Build CPLX lookup: org_id -> {cplx_id: [component_ids]}
     cplx_lookup: dict[str, dict[str, list]] = {}
     for pid, rec in protein_records.items():

@@ -1,0 +1,42 @@
+Metric	Count
+Total unique taxa (NCBI IDs)	439
+In GPML (any node type)	425
+  → As Protein DataNode	413
+  → As GeneProduct DataNode	306
+  → As Metabolite DataNode	24
+  → Via Complex Group only (CPLX-type proteins)	12
+Absent from GPML	2
+
+The 2 absent taxa (proteins/compounds exist in PlantCyc but never reach a GPML DataNode):
+NCBI taxon ID	Species	n_proteins	n_genes	n_compounds	Reason
+101015	Fragaria virginiana	5	0	0	Proteins/genes not linked to any GPML pathway
+	TAX-101007	5	0	0	Proteins/genes not linked to any GPML pathway — unresolved taxon ID (no NCBI mapping)
+
+The 12 taxa annotated only via Complex Groups (wp:organism on Group element, not on individual DataNodes):
+NCBI taxon ID	Species	n_proteins	n_gpml_complex_groups	cplx_protein_ids	complex_component_ids
+89630	Anchusa officinalis	4	0	CPLX-6979; CPLX-6980	MONOMER-11761; MONOMER-11762
+59689	Arabidopsis lyrata	2	0	CPLX-6222	MONOMER-10582
+3818	Arachis hypogaea	2	0	CPLX-236	MONOMER-235
+4686	Asparagus officinalis	5	0	CPLX-8966; CPLX-8967; CPLX-8968	MONOMER-19154; MONOMER-19155
+260674	Citrullus lanatus	2	0	CPLX-6681	MONOMER-11327
+3721	Crambe hispanica	2	0	CPLX-7120	MONOMER-12262
+4472	Lemna minor	2	0	CPLX-7175	MONOMER-12494
+227291	Limonium latifolium	2	0	CPLX-5701	MONOMER-9602
+3435	Persea americana	2	0	CPLX-7072	MONOMER-12077
+3240	Psilotum nudum	4	0	CPLX-6970; CPLX-6971	MONOMER-11737; MONOMER-11738
+3767	Pyrus pyrifolia	2	0	CPLX-6953	MONOMER-11718
+3316	Thuja plicata	2	0	CPLX-7301	MONOMER-12935
+
+Note: at the PlantCyc ORG-ID level, 6 of 455 ORG-IDs are absent from GPML. Some of these collapse into taxa that are present via another ORG-ID for the same NCBI taxon.
+
+ORG-IDs collapsed to the same NCBI taxon (9 taxa):
+NCBI taxon ID	Scientific name	n_org_ids	PlantCyc ORG-IDs
+3702	Arabidopsis thaliana	4	ORG-5862; ORG-5993; ORG4FS-2; TAX-3702
+22774	Berberis Wilsoniae	2	ORG-5876; ORG-5877
+3463	Corydalis vaginans	2	ORG-5892; ORG-5893
+3663	Cucurbita pepo	3	ORG-5896; ORG-5897; TAX-3663
+4236	Lactuca sativa	2	ORG-6001; TAX-4236
+3750	Malus domestica	3	ORG-6292; ORG-6293; TAX-3750
+3983	Manihot esculenta	2	ORG-5912; TAX-3983
+39947	Oryza sativa	2	ORG-6035; TAX-39947
+62890	Solanum habrochaites	5	ORG18C3-1; ORG18C3-2; ORG18C3-3; ORG18C3-4; TAX-62890
