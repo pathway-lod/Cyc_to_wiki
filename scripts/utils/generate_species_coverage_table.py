@@ -341,20 +341,10 @@ def build_gpml_species_index(gpml_dir):
                         index[sp_val][node_type] += 1
                         index[sp_val]['files'].add(file_stem)
 
-        # Also scan Group type="Complex" elements for AnnotationRef taxonomy annotations.
-        # After the fix that adds species to Complex Groups, these represent taxa whose
-        # proteins only appear via protein complexes (CPLX-type in proteins.dat).
-        for grp in root_el.findall(f'.//{{{GPML_NS}}}Group'):
-            if grp.get('type', '') != 'Complex':
-                continue
-            for aref in grp.findall(f'{{{GPML_NS}}}AnnotationRef'):
-                ref_id = aref.get('elementRef', '')
-                ann = ann_index.get(ref_id, {})
-                if ann.get('type', '').lower() == 'taxonomy':
-                    sp_val = ann.get('value', '').strip()
-                    if sp_val:
-                        index[sp_val]['Complex'] += 1
-                        index[sp_val]['files'].add(file_stem)
+        # Note: Group type="Complex" elements are NOT scanned for species annotations.
+        # GPML2021 XSD forbids AnnotationRef on Group elements, so complex species
+        # are not stored in GPML. The 'only_complex' label is instead computed from
+        # proteins.dat data in the main() function below.
 
     return index
 
