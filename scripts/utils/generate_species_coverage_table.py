@@ -838,6 +838,20 @@ def main():
         w.writerow([f'Note: at the PlantCyc ORG-ID level, {n_org_absent} of {n_org_total} '
                     'ORG-IDs are absent from GPML. Some of these collapse into taxa that are '
                     'present via another ORG-ID for the same NCBI taxon.'])
+        w.writerow([])
+
+        # Section 4: collapsed ORG-IDs (NCBI taxa with more than one PlantCyc ORG-code)
+        collapsed = [r for r in ncbi_rows if int(r.get('n_plantcyc_org_ids', 1)) > 1]
+        if collapsed:
+            w.writerow([f'ORG-IDs collapsed to the same NCBI taxon ({len(collapsed)} taxa):'])
+            w.writerow(['NCBI taxon ID', 'Scientific name', 'n_org_ids', 'PlantCyc ORG-IDs'])
+            for r in sorted(collapsed, key=lambda x: x.get('scientific_name', '')):
+                w.writerow([
+                    r.get('ncbi_taxon_id', '—'),
+                    r.get('scientific_name', '?'),
+                    r.get('n_plantcyc_org_ids', '?'),
+                    r.get('plantcyc_org_ids', ''),
+                ])
 
     print(f"Output: {summary_path}")
 
