@@ -92,7 +92,7 @@ Add a new release section below (copy the template from the previous release) an
 
 - **`--report` flag for standalone validator** — `python scripts/validate_plantcyc_input.py <data_dir> --report FILE.tsv` generates a version-specific supplementary TSV (Table S3) with all ERROR/WARNING/INFO cases, resolved species names (from `classes.dat`), and publication references from `pubs.dat`.
 
-#### Build statistics
+#### Build statistics (`gite64760f3`, final v2 build)
 
 | Category | Count |
 |---|---|
@@ -113,22 +113,26 @@ Add a new release section below (copy the template from the previous release) an
 
 | Entity type | Total | Annotated | Coverage | Change vs v1 |
 |---|---|---|---|---|
-| GeneProduct | 8,259 | 8,148 | 98.7% | 5 genes now skip annotation (cross-species ERROR) |
-| Protein | 10,715 | 10,583 | 98.8% | — |
+| GeneProduct | 8,259 | 8,148 | 98.7% | 5 genes skip annotation (cross-species ERROR) |
+| Protein | 10,715 | 10,585 | 98.8% | +2 (monomer propagation from parent complex) |
 | Metabolite | 23,449 | 33 | 0.1% | — |
-| Complex Group | 1,237 | *(annotated via AnnotationRef)* | — | New in v2 |
+| Complex Group | 1,237 | — | — | New in v2: Groups carry AnnotationRef |
 
 **Species coverage (by NCBI taxon, from `species_coverage_by_ncbi.tsv`)**
+
+Both `individual_pathways/` and `individual_reactions/` are scanned (2,478 GPML files total).
 
 | | Count | vs v1 |
 |---|---|---|
 | Unique taxa in PlantCyc 17.0.0 | **439** | — |
-| In GPML (any node type) | **427** | +12 (Complex Groups now counted) |
-| — As GeneProduct DataNode | 303 | — |
-| — As Protein DataNode | 409 | — |
-| — As Metabolite DataNode | 18 | — |
-| — Via Complex Group only (`only_complex`) | **12** | New in v2 |
-| Absent from GPML | **12** | -11 (was 23: 12 now annotated as CPLX-only, 11 remain absent) |
+| In GPML (any node type) | **437** | +11 (reactions now scanned; Complex Groups annotated) |
+| — As GeneProduct DataNode | 306 | — |
+| — As Protein DataNode | 413 | — |
+| — As Metabolite DataNode | 24 | — |
+| — Via Complex Group only (`only_complex`) | **12** | New in v2: 12 taxa documented exclusively via multi-subunit enzyme complexes |
+| Absent from GPML | **2** | Was 14 in v1 (now: reactions scanned + CPLX annotated) |
+
+Note on `only_complex` taxa: their component monomers receive the complex species annotation in the GPML DataNode objects, but since the monomers are not direct reaction catalysts they do not appear as standalone DataNodes in the pathway/reaction GPML files — only the Complex Group element itself appears. The `only_complex` label accurately reflects that these 12 taxa are documented in PlantCyc exclusively through multi-subunit enzyme complexes.
 
 ---
 
