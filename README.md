@@ -149,9 +149,24 @@ Exit code: `0` if no ERRORs (warnings are acceptable), `1` if at least one ERROR
 |---|---|---|---|
 | `protein-multi-species` | ⚠ WARNING | Proteins in `proteins.dat` that carry **more than one `SPECIES` value** | **All** listed taxa are annotated on the protein DataNode and propagated to encoding genes (one `AnnotationRef` per taxon). Biologically valid in plants where the same enzyme has been characterised across species — review each case to confirm intent |
 | `gene-cross-species-products` | ✗ ERROR | Genes whose protein products are annotated to **genuinely different NCBI taxa** (distinct `TAX-XXXX` identifiers) | The species propagated to the `GeneProduct` DataNode is undefined and depends on processing order — reproducible builds are not guaranteed |
-| `gene-multi-orgid-products` | ⚠ WARNING | Genes whose products use **different BioCyc ORG-codes** that resolve to the same NCBI taxon | Functionally correct but creates duplicate species annotations for the same gene |
+| `gene-multi-orgid-products` | ⚠ WARNING | Genes whose products use **different BioCyc ORG-codes** that resolve to the same NCBI taxon | No data loss — see resolution pipeline below |
 | `gene-multiple-products` | ℹ INFO | Genes encoding **multiple protein products** (isoforms) | Each product's species is propagated independently; only the last one written appears on the `GeneProduct` DataNode — earlier isoforms are overwritten |
 | `protein-multiple-genes` | ℹ INFO | Proteins listing **more than one `GENE` entry** | Species is propagated to all listed genes — this is expected for enzyme complexes and causes no data loss |
+
+#### ORG-code to NCBI taxon resolution
+
+BioCyc uses two kinds of organism identifier in `.dat` files:
+
+- **`TAX-XXXX`** — direct encoding of an NCBI Taxonomy ID (e.g. `TAX-3702` = *Arabidopsis thaliana*).
+- **`ORG-XXXX`** — a BioCyc-internal ID for a specific database, strain, or cultivar. Each ORG-code carries a `TYPES - TAX-XXXX` entry in `classes.dat` pointing to its parent NCBI taxon.
+
+Sub-species and cultivar ORG-codes that share the same parent NCBI taxon (e.g. `ORG-5993` and `TAX-3702` both map to NCBI:3702) are **collapsed to a single species annotation** by the pipeline:
+
+1. **Build stage** (`scripts/utils/organism_utils.py` → `get_ncbi_id()`): every ORG-XXXX is resolved to its NCBI taxon number via `org_id_mapping_v2.tsv`; TAX-XXXX codes are resolved directly. `create_species_annotation()` uses this NCBI ID as the Annotation `elementId` (e.g. `taxonomy_3702`), so two products with different BioCyc ORG-codes for the same taxon produce the *same* elementId.
+2. **Propagation stage** (`pathway_builder_core.py` → `_propagate_protein_species_to_genes()`): deduplication by `elementRef` ensures the gene DataNode receives exactly **one** `AnnotationRef` per unique NCBI taxon, even if multiple products used different ORG-codes.
+3. **RDF stage** (`gpml-to-rdf` → `create_gpml_taxonomy_extra_rdf.py`): the annotation elementId is converted to an NCBITaxon IRI (`ncbi:3702`), completing the normalisation.
+
+The `gene-multi-orgid-products` WARNING flags cases where this collapse occurs — no data is lost and no manual fix is required unless the ORG-code assignment in `proteins.dat` is itself incorrect.
 
 #### Interpreting the report
 

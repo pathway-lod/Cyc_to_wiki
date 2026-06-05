@@ -260,8 +260,22 @@ def check_protein_gene_species(data, report):
                 "WARNING",
                 "gene-multi-orgid-products",
                 f"{len(same_taxon)} gene(s) have products with different BioCyc "
-                "ORG-codes that resolve to the same NCBI taxon. Annotation is "
-                "functionally correct but duplicated.",
+                "ORG-codes that all resolve to the same NCBI taxon. "
+                "Resolution pipeline: "
+                "(1) Cyc_to_wiki build — scripts/utils/organism_utils.py "
+                "get_ncbi_id() maps each ORG-XXXX to an NCBI taxon ID via "
+                "org_id_mapping_v2.tsv (TAX-XXXX codes are resolved directly). "
+                "create_species_annotation() uses the NCBI ID as the Annotation "
+                "elementId (e.g. 'taxonomy_3702'), so two products with "
+                "ORG-5993 and TAX-3702 both produce elementId='taxonomy_3702'. "
+                "(2) _propagate_protein_species_to_genes() deduplicates by "
+                "elementRef, so the gene DataNode receives only ONE annotation "
+                "for that NCBI taxon — no duplication in the GPML output. "
+                "(3) gpml-to-rdf converts the annotation elementId to an "
+                "NCBITaxon IRI (ncbi:3702), completing the normalisation. "
+                "No action required — the annotation is correct. "
+                "Review only if you suspect the ORG-code assignment in "
+                "proteins.dat is wrong.",
                 details,
             )
 
