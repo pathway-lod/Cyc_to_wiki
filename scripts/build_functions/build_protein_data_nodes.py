@@ -343,7 +343,9 @@ def create_complex_group(record, citation_manager=None):
 
     # Build TaxonomyAnnotation properties from the same species data
     from scripts.utils.organism_utils import get_ncbi_id as _get_ncbi_id
-    for sp in as_list(record.get('SPECIES')):
+    raw_species = record.get('SPECIES')
+    species_list = raw_species if isinstance(raw_species, list) else ([raw_species] if raw_species else [])
+    for sp in species_list:
         sp_id = str(sp).strip()
         ncbi_id = _get_ncbi_id(sp_id)
         if ncbi_id:
