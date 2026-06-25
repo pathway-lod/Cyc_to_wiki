@@ -58,10 +58,13 @@ def build_individual_pathways(builder, all_pathways, individual_pathways_dir, la
             # Check organism attribute
             organism = pathway.organism if pathway.organism else ""
 
-            # Handle missing organism - set to "cellular organisms" (TAX-131567)
+            # Defensive fallback - pathway-level organism is always set to
+            # "Viridiplantae" at creation (create_enhanced_pathway_from_record),
+            # but guard against it ever being empty rather than defaulting to
+            # the generic NCBI root taxon "cellular organisms".
             if not organism or organism.strip() == "":
-                pathway.organism = "cellular organisms"
-                print(f"  Warning: {pathway_id} missing organism, setting to 'cellular organisms'")
+                pathway.organism = "Viridiplantae"
+                print(f"  Warning: {pathway_id} missing organism, defaulting to 'Viridiplantae'")
 
             # Create safe filename (just use pathway ID)
             safe_pathway_id = re.sub(r'[^a-zA-Z0-9_-]', '_', pathway_id)
